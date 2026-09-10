@@ -28,21 +28,45 @@ class ExtractBenchAdapter:
         pipeline_name: str = "tonerhound",
     ) -> dict[str, Any]:
         """Ground extracted data fields and return official ExtractBench payload dictionary."""
-        leaves = list(_flatten_leaves(extracted_data))
+        leaves = _flatten_leaves_with_context(extracted_data)
         citations: list[dict[str, Any]] = []
 
-        for path, value in leaves:
+        # Track resolved page hints per record path
+        record_page_hints: dict[str, int] = {}
+
+        # Pass 1: Resolve high-entropy string anchors to establish record page hints
+        for path, value, page_hint, context, parent_record_path in leaves:
+            if value is None:
+                continue
+            if page_hint is not None:
+                record_page_hints[parent_record_path] = page_hint
+                continue
+
+            # If it's a distinctive string (> 5 chars, not a pure number/date), try resolving page
+            val_str = str(value).strip()
+            if len(val_str) > 5 and not val_str.replace(".", "").replace(",", "").isdigit():
+                inp = ExtractionInput(
+                    field=path,
+                    value=value,
+                    field_context=context,
+                )
+                res = self.resolver.resolve(inp)
+                if res.is_grounded and res.page is not None and res.confidence >= 0.8:
+                    record_page_hints[parent_record_path] = res.page
+
+        # Pass 2: Full resolution with record page hints and enriched sibling context
+        for path, value, page_hint, context, parent_record_path in leaves:
             if value is None:
                 continue
 
-            # Context derived from path leaf name
-            field_name = path.rsplit(".", 1)[-1].split("[", 1)[0]
-            context = field_name.replace("_", " ")
+            # Inherit page hint from record if not directly present
+            effective_page_hint = page_hint or record_page_hints.get(parent_record_path)
 
             inp = ExtractionInput(
                 field=path,
                 value=value,
                 field_context=context,
+                page_hint=effective_page_hint,
             )
             res = self.resolver.resolve(inp)
 
@@ -66,22 +90,54 @@ class ExtractBenchAdapter:
         }
 
 
-def _flatten_leaves(
-    data: Any, prefix: str = ""
-) -> list[tuple[str, Any]]:
-    """Recursively flatten dictionary / array data into (path, value) pairs."""
-    items: list[tuple[str, Any]] = []
+def _flatten_leaves_with_context(
+    data: Any,
+    prefix: str = "",
+    parent_record_path: str = "",
+) -> list[tuple[str, Any, int | None, str | None, str]]:
+    """Recursively flatten data into (path, value, page_hint, context, parent_record_path)."""
+    items: list[tuple[str, Any, int | None, str | None, str]] = []
 
     if isinstance(data, Mapping):
+        # Check for explicit page hint inside the mapping
+        page_hint = None
+        for pkey in ("source_page", "page", "page_number", "page_no", "page_num"):
+            if pkey in data and isinstance(data[pkey], int):
+                page_hint = data[pkey]
+                break
+
+        # Collect salient sibling strings for context
+        salient_siblings = []
+        for k, v in data.items():
+            if k in ("source_page", "page", "page_number"):
+                continue
+            if isinstance(v, str) and 2 <= len(v) <= 40:
+                salient_siblings.append(v)
+
+        sibling_context = " ".join(salient_siblings[:3]) if salient_siblings else None
+
         for k, v in data.items():
             child_path = f"{prefix}.{k}" if prefix else str(k)
-            items.extend(_flatten_leaves(v, child_path))
+            # Derive field name context
+            field_name = k.replace("_", " ")
+            context = f"{sibling_context} {field_name}".strip() if sibling_context else field_name
+            record_path = prefix or "root"
+
+            if isinstance(v, (Mapping, Sequence)) and not isinstance(v, (str, bytes, bytearray)):
+                items.extend(_flatten_leaves_with_context(v, child_path, record_path))
+            else:
+                items.append((child_path, v, page_hint, context, record_path))
+
     elif isinstance(data, Sequence) and not isinstance(data, (str, bytes, bytearray)):
         for idx, item in enumerate(data):
             child_path = f"{prefix}[{idx}]"
-            items.extend(_flatten_leaves(item, child_path))
+            record_path = child_path
+            if isinstance(item, (Mapping, Sequence)) and not isinstance(item, (str, bytes, bytearray)):
+                items.extend(_flatten_leaves_with_context(item, child_path, record_path))
+            else:
+                items.append((child_path, item, None, None, prefix))
     else:
         if prefix:
-            items.append((prefix, data))
+            items.append((prefix, data, None, None, parent_record_path))
 
     return items
