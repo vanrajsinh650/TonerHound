@@ -31,6 +31,9 @@ class ExtractBenchAdapter:
         leaves = _flatten_leaves_with_context(extracted_data)
         citations: list[dict[str, Any]] = []
 
+        # Detect any systematic offset between logical source_page and physical PDF pages
+        doc_offset = self._detect_page_offset(leaves)
+
         # Track resolved page hints per record path
         record_page_hints: dict[str, int] = {}
 
@@ -39,7 +42,8 @@ class ExtractBenchAdapter:
             if value is None:
                 continue
             if page_hint is not None:
-                record_page_hints[parent_record_path] = page_hint
+                calibrated_page = max(1, min(len(self.index.pages), page_hint + doc_offset))
+                record_page_hints[parent_record_path] = calibrated_page
                 continue
 
             # If it's a distinctive string (> 5 chars, not a pure number/date), try resolving page
@@ -60,7 +64,11 @@ class ExtractBenchAdapter:
                 continue
 
             # Inherit page hint from record if not directly present
-            effective_page_hint = page_hint or record_page_hints.get(parent_record_path)
+            effective_page_hint = (
+                max(1, min(len(self.index.pages), page_hint + doc_offset))
+                if page_hint is not None
+                else record_page_hints.get(parent_record_path)
+            )
 
             inp = ExtractionInput(
                 field=path,
@@ -88,6 +96,35 @@ class ExtractBenchAdapter:
             "extracted_data": extracted_data,
             "field_citations": citations,
         }
+
+    def _detect_page_offset(
+        self,
+        leaves: list[tuple[str, Any, int | None, str | None, str]],
+    ) -> int:
+        """Calibrate offset between logical source_page and physical PDF pages."""
+        votes = {0: 0, 1: 0, -1: 0}
+        total_pages = len(self.index.pages)
+        checked = 0
+
+        for _path, value, page_hint, _context, _record_path in leaves:
+            if page_hint is None:
+                continue
+            val_str = str(value).strip()
+            if len(val_str) >= 4 and not val_str.replace(".", "").replace(",", "").isdigit():
+                checked += 1
+                for offset in (0, 1, -1):
+                    target_p = page_hint + offset
+                    if 1 <= target_p <= total_pages and self.index.search_exact(val_str, page=target_p):
+                        votes[offset] += 1
+                if checked >= 20:
+                    break
+
+        # If zero candidates match on nominal page, but offset +1 or -1 has strong consensus
+        if votes[0] == 0 and votes[1] >= 2 and votes[1] > votes[-1]:
+            return 1
+        if votes[0] == 0 and votes[-1] >= 2 and votes[-1] > votes[1]:
+            return -1
+        return 0
 
 
 def _flatten_leaves_with_context(

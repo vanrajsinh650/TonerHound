@@ -80,10 +80,12 @@ class EvidenceResolver:
         if not candidates and page_hint is not None:
             if evidence_text:
                 candidates.extend(self.matcher.find_exact_candidates(evidence_text, page_hint=None))
-            if not candidates and isinstance(value, (int, float, str)):
+            if not candidates and is_num:
                 candidates.extend(self.matcher.find_normalized_numeric_candidates(value, page_hint=None))
             if not candidates and isinstance(value, str):
                 candidates.extend(self.matcher.find_normalized_date_candidates(value, page_hint=None))
+            if not candidates and isinstance(value, (str, int, float)):
+                candidates.extend(self.matcher.find_exact_candidates(str(value), page_hint=None))
 
         # If zero candidates found: Check for derived vs not_found
         if not candidates:
