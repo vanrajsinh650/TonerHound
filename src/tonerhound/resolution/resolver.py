@@ -54,17 +54,22 @@ class EvidenceResolver:
         if evidence_text:
             candidates.extend(self.matcher.find_exact_candidates(evidence_text, page_hint=page_hint))
 
-        # Tier 1b: Exact match on stringified value
+        # Tier 1b: If value is numeric, prioritize normalized numeric matching over raw float str()
+        is_num = isinstance(value, (int, float)) and not isinstance(value, bool)
+        if not candidates and is_num:
+            candidates.extend(self.matcher.find_normalized_numeric_candidates(value, page_hint=page_hint))
+
+        # Tier 1c: Normalized date match
+        if not candidates and isinstance(value, str):
+            candidates.extend(self.matcher.find_normalized_date_candidates(value, page_hint=page_hint))
+
+        # Tier 1d: Exact match on stringified value
         if not candidates and isinstance(value, (str, int, float)):
             candidates.extend(self.matcher.find_exact_candidates(str(value), page_hint=page_hint))
 
-        # Tier 2a: Normalized numeric match
-        if not candidates and isinstance(value, (int, float, str)):
-            candidates.extend(self.matcher.find_normalized_numeric_candidates(value, page_hint=page_hint))
-
-        # Tier 2b: Normalized date match
+        # Tier 2: Normalized numeric match for strings that might be formatted numbers
         if not candidates and isinstance(value, str):
-            candidates.extend(self.matcher.find_normalized_date_candidates(value, page_hint=page_hint))
+            candidates.extend(self.matcher.find_normalized_numeric_candidates(value, page_hint=page_hint))
 
         # Tier 3: Fuzzy sequence alignment fallback
         if not candidates:
@@ -166,8 +171,7 @@ class EvidenceResolver:
 
                     # Euclidean distance in normalized space
                     dist = math.sqrt((cand_cx - lbl_cx) ** 2 + (cand_cy - lbl_cy) ** 2)
-                    if dist < min_dist:
-                        min_dist = dist
+                    min_dist = min(min_dist, dist)
 
                     # Check same visual horizontal band (same line)
                     if abs(cand_cy - lbl_cy) < (cand.bbox.height * 1.2):

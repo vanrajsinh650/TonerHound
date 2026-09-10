@@ -80,10 +80,10 @@ class BBox:
 
     def to_0_1000(self) -> tuple[int, int, int, int]:
         """Return (top, left, bottom, right) in 0-1000 integer space (Anchorite format)."""
-        top = int(round(self.y * 1000))
-        left = int(round(self.x * 1000))
-        bottom = int(round((self.y + self.height) * 1000))
-        right = int(round((self.x + self.width) * 1000))
+        top = round(self.y * 1000)
+        left = round(self.x * 1000)
+        bottom = round((self.y + self.height) * 1000)
+        right = round((self.x + self.width) * 1000)
         return (top, left, bottom, right)
 
     @classmethod

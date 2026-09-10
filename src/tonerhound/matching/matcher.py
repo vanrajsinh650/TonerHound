@@ -9,9 +9,8 @@ from rapidfuzz import fuzz
 
 from tonerhound.document.index import DocumentIndex
 from tonerhound.geometry.coordinates import BBox, union_bbox_list
-from tonerhound.models.types import DocumentToken, VisualLine
+from tonerhound.models.types import DocumentToken
 from tonerhound.normalization.normalizers import (
-    clean_currency_and_numbers,
     is_date_equal,
     is_number_equal,
     normalize_unicode_and_case,
@@ -178,14 +177,22 @@ class EvidenceMatcher:
                         window = line_tokens[start_i : start_i + window_size]
                         combined_text = " ".join(t.text for t in window)
                         if is_date_equal(target_date, combined_text):
-                            ub = union_bbox_list([t.bbox for t in window])
-                            if ub:
+                            # Shrink window to minimal sub-window that still matches the date
+                            sub = list(window)
+                            while len(sub) > 1 and is_date_equal(target_date, " ".join(t.text for t in sub[1:])):
+                                sub.pop(0)
+                            while len(sub) > 1 and is_date_equal(target_date, " ".join(t.text for t in sub[:-1])):
+                                sub.pop()
+
+                            min_text = " ".join(t.text for t in sub)
+                            ub = union_bbox_list([t.bbox for t in sub])
+                            if ub and not any(c.page == p_num and c.bbox.iou(ub) >= 0.95 for c in candidates):
                                 candidates.append(
                                     MatchCandidate(
                                         page=p_num,
                                         bbox=ub,
-                                        tokens=tuple(window),
-                                        matched_text=combined_text,
+                                        tokens=tuple(sub),
+                                        matched_text=min_text,
                                         match_type="normalized_date",
                                         raw_similarity=1.0,
                                         line_index=line.line_index,

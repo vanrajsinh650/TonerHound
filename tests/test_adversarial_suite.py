@@ -11,9 +11,15 @@ Verifies:
 8. Derived value -> derived
 """
 
-import pytest
 
-from tonerhound import DocumentIndex, DocumentPage, DocumentToken, ExtractionInput, ProvenanceStatus, VisualLine
+from tonerhound import (
+    DocumentIndex,
+    DocumentPage,
+    DocumentToken,
+    ExtractionInput,
+    ProvenanceStatus,
+    VisualLine,
+)
 from tonerhound.geometry.coordinates import BBox
 from tonerhound.resolution.resolver import EvidenceResolver
 

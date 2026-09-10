@@ -25,6 +25,22 @@ build-backend = "uv_build"
 
 [dependency-groups]
 dev = [
+    "apted>=1.0.3",
+    "autoevals>=0.3.0",
+    "beautifulsoup4>=4.15.0",
+    "fire>=0.7.1",
+    "fuzzysearch>=0.8.1",
+    "lxml>=6.1.3",
+    "pandas>=3.0.5",
     "pytest>=8.0",
+    "python-levenshtein>=0.27.4",
+    "rich>=15.0.0",
     "ruff>=0.4.0",
+    "tqdm>=4.70.0",
+    "unidecode>=1.4.0",
 ]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+norecursedirs = ["research", "research/reference", ".venv"]
+
