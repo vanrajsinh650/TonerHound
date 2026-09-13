@@ -34,6 +34,16 @@ def main() -> None:
         default="research/experiments/EXP-001.md",
         help="Output path for Markdown report",
     )
+    parser.add_argument(
+        "--enable-ocr",
+        action="store_true",
+        help="Enable OCR fallback on scanned/sparse pages",
+    )
+    parser.add_argument(
+        "--disable-structural-disambiguation",
+        action="store_true",
+        help="Disable two-pass structural row disambiguation",
+    )
     args = parser.parse_args()
 
     data_dir = Path(args.data_dir)
@@ -45,6 +55,8 @@ def main() -> None:
         experiment_id=args.exp_id,
         output_json=out_json,
         output_md=out_md,
+        enable_ocr=args.enable_ocr,
+        enable_structural_disambiguation=not args.disable_structural_disambiguation,
     )
 
 

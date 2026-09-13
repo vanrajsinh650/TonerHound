@@ -158,6 +158,26 @@ class BBox:
             return 0.0
         return min(1.0, inter_area / union_area)
 
+    def sub_bbox(self, start_char: int, end_char: int, total_chars: int) -> BBox:
+        """Interpolate horizontal bounding box for a character substring within a token."""
+        if total_chars <= 0 or start_char >= end_char:
+            return self
+        start_ratio = max(0.0, min(1.0, start_char / total_chars))
+        end_ratio = max(0.0, min(1.0, end_char / total_chars))
+        new_x = self.x + start_ratio * self.width
+        new_w = max(0.001, (end_ratio - start_ratio) * self.width)
+        return BBox(x=new_x, y=self.y, width=new_w, height=self.height, page=self.page)
+
+    def align_to_line_height(self, target_height: float = 0.018, max_y: float = 1.0) -> BBox:
+        """Normalize tight font glyph heights to standard visual text line boundaries."""
+        if self.height >= target_height:
+            return self
+        pad = (target_height - self.height) / 2.0
+        new_y = max(0.0, self.y - pad)
+        new_h = min(max_y - new_y, target_height)
+        return BBox(x=self.x, y=new_y, width=self.width, height=new_h, page=self.page)
+
+
 
 def union_bbox_list(boxes: list[BBox]) -> BBox | None:
     """Compute rectangular hull for a list of boxes on the same page."""

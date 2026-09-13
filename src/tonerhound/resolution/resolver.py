@@ -18,14 +18,26 @@ from tonerhound.models.types import (
     ResolutionResult,
 )
 from tonerhound.normalization.normalizers import normalize_unicode_and_case
+from tonerhound.resolution.verifier import CandidateVerifier
 
 
 class EvidenceResolver:
     """Independent evidence resolution engine."""
 
-    def __init__(self, index: DocumentIndex) -> None:
+    def __init__(
+        self,
+        index: DocumentIndex,
+        enable_verification: bool = True,
+        score_margin_threshold: float = 0.05,
+    ) -> None:
         self.index = index
         self.matcher = EvidenceMatcher(index)
+        self.enable_verification = enable_verification
+        self.verifier = (
+            CandidateVerifier(score_margin_threshold=score_margin_threshold)
+            if enable_verification
+            else None
+        )
 
     def resolve(self, extraction: ExtractionInput) -> ResolutionResult:
         """Resolve physical evidence for an extracted field."""
@@ -59,13 +71,13 @@ class EvidenceResolver:
         if not candidates and is_num:
             candidates.extend(self.matcher.find_normalized_numeric_candidates(value, page_hint=page_hint))
 
-        # Tier 1c: Normalized date match
-        if not candidates and isinstance(value, str):
-            candidates.extend(self.matcher.find_normalized_date_candidates(value, page_hint=page_hint))
-
-        # Tier 1d: Exact match on stringified value
+        # Tier 1c: Exact match on stringified value
         if not candidates and isinstance(value, (str, int, float)):
             candidates.extend(self.matcher.find_exact_candidates(str(value), page_hint=page_hint))
+
+        # Tier 1d: Normalized date match
+        if not candidates and isinstance(value, str):
+            candidates.extend(self.matcher.find_normalized_date_candidates(value, page_hint=page_hint))
 
         # Tier 2: Normalized numeric match for strings that might be formatted numbers
         if not candidates and isinstance(value, str):
@@ -82,10 +94,10 @@ class EvidenceResolver:
                 candidates.extend(self.matcher.find_exact_candidates(evidence_text, page_hint=None))
             if not candidates and is_num:
                 candidates.extend(self.matcher.find_normalized_numeric_candidates(value, page_hint=None))
-            if not candidates and isinstance(value, str):
-                candidates.extend(self.matcher.find_normalized_date_candidates(value, page_hint=None))
             if not candidates and isinstance(value, (str, int, float)):
                 candidates.extend(self.matcher.find_exact_candidates(str(value), page_hint=None))
+            if not candidates and isinstance(value, str):
+                candidates.extend(self.matcher.find_normalized_date_candidates(value, page_hint=None))
 
         # If zero candidates found: Check for derived vs not_found
         if not candidates:
@@ -100,26 +112,53 @@ class EvidenceResolver:
                 explanation=f"Evidence could not be physically sighted ({'derived calculation' if is_derived else 'not found'})",
             )
 
-        # Step 2: Spatial & Contextual Disambiguation
+        # Step 2: Candidate Ranking
         if len(candidates) == 1:
-            best_candidate = candidates[0]
-            return self._build_result(field, value, best_candidate, confidence=0.95, explanation="Single unambiguous match")
-
-        # Multi-candidate disambiguation
-        scored_candidates = self._score_candidates_with_context(candidates, context)
-        scored_candidates.sort(key=lambda item: item[1], reverse=True)
+            scored_candidates = [(candidates[0], 5.0)]
+        else:
+            scored_candidates = self._score_candidates_with_context(candidates, context)
+            scored_candidates.sort(key=lambda item: item[1], reverse=True)
 
         top_cand, top_score = scored_candidates[0]
-        second_cand, second_score = scored_candidates[1]
 
-        # Ambiguity Gating: if indistinguishable, refuse to guess!
+        # Step 3: Candidate Verification (Strict Verification Stage)
+        if self.verifier is not None:
+            decision = self.verifier.verify(
+                field=field,
+                value=value,
+                top_candidate=top_cand,
+                scored_candidates=scored_candidates,
+                field_context=context,
+                page_hint=page_hint,
+            )
+            if not decision.is_accepted:
+                return ResolutionResult(
+                    field=field,
+                    value=value,
+                    status=decision.status,
+                    page=decision.page,
+                    bbox=decision.bbox,
+                    confidence=decision.confidence,
+                    matched_text=decision.matched_text,
+                    explanation=decision.reason,
+                )
+            return self._build_result(
+                field,
+                value,
+                top_cand,
+                confidence=decision.confidence,
+                explanation=decision.reason,
+            )
+
+        # Baseline path (when verification is disabled)
+        if len(candidates) == 1:
+            return self._build_result(field, value, candidates[0], confidence=0.95, explanation="Single unambiguous match")
+
+        second_cand, second_score = scored_candidates[1]
         score_diff = top_score - second_score
         if score_diff < 0.05 and abs(top_score - second_score) < 1e-4:
-            # Check if both candidates point to essentially the same bounding box
             if top_cand.page == second_cand.page and top_cand.bbox.iou(second_cand.bbox) >= 0.8:
-                # Same physical region, take top
                 return self._build_result(field, value, top_cand, confidence=0.90, explanation="Overlapping duplicate candidates")
-
             return ResolutionResult(
                 field=field,
                 value=value,
@@ -130,7 +169,6 @@ class EvidenceResolver:
                 explanation=f"Multiple indistinguishable candidates found ({len(candidates)} occurrences)",
             )
 
-        # Calibrate confidence based on score margin
         confidence = min(0.99, max(0.60, 0.70 + (score_diff * 0.25)))
         return self._build_result(field, value, top_cand, confidence=confidence, explanation="Contextually disambiguated")
 
@@ -143,6 +181,19 @@ class EvidenceResolver:
         norm_context = normalize_unicode_and_case(context).text.strip()
         context_words = [w for w in norm_context.split() if len(w) > 1]
 
+        # Precompute context label boxes per page once
+        labels_by_page: dict[int, list[BBox]] = {}
+        target_pages = {cand.page for cand in candidates}
+        for p_num in target_pages:
+            p = self.index.get_page(p_num)
+            boxes: list[BBox] = []
+            if p and context_words:
+                for line in p.lines:
+                    line_norm = normalize_unicode_and_case(line.text).text
+                    if any(w in line_norm for w in context_words):
+                        boxes.append(line.bbox)
+            labels_by_page[p_num] = boxes
+
         scored: list[tuple[MatchCandidate, float]] = []
 
         for cand in candidates:
@@ -152,12 +203,8 @@ class EvidenceResolver:
                 scored.append((cand, score))
                 continue
 
-            # Look for context label tokens on the same page
-            context_label_boxes: list[BBox] = []
-            for line in page.lines:
-                line_norm = normalize_unicode_and_case(line.text).text
-                if any(w in line_norm for w in context_words):
-                    context_label_boxes.append(line.bbox)
+            context_label_boxes = labels_by_page.get(cand.page, [])
+
 
             if context_label_boxes:
                 # Find nearest context label

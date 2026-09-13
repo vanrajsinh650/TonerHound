@@ -45,6 +45,8 @@ class TestCaseMetrics:
     page_precision: float | None
     page_recall: float | None
     value_f1: float | None
+    false_grounding_rate: float | None = 0.0
+    ambiguity_rate: float | None = 0.0
 
 
 @dataclass
@@ -63,19 +65,29 @@ class BenchmarkSuiteSummary:
     avg_page_grounding_f1: float
     avg_page_grounding_precision: float
     avg_page_grounding_recall: float
+    avg_false_grounding_rate: float
+    avg_ambiguity_rate: float
+    total_latency_sec: float
     leaderboard_leader_name: str
     leaderboard_leader_word_f1: float
     delta_over_leader_percentage_points: float
     case_metrics: list[TestCaseMetrics]
 
 
-def run_case_evaluation(case: Any) -> TestCaseMetrics:
+def run_case_evaluation(
+    case: Any,
+    enable_ocr: bool = False,
+    enable_structural_disambiguation: bool = True,
+    enable_verification: bool = True,
+    score_margin_threshold: float = 0.05,
+    enable_bbox_precision: bool = True,
+) -> TestCaseMetrics:
     """Run controlled benchmark on a single ExtractTestCase."""
     pdf_path = Path(case.file_path)
 
     # 1. Index document
     t0 = time.perf_counter()
-    doc_index = DocumentIndex.from_pdf(pdf_path)
+    doc_index = DocumentIndex.from_pdf(pdf_path, enable_ocr=enable_ocr)
     indexing_time = time.perf_counter() - t0
 
     num_pages = len(doc_index.pages)
@@ -87,7 +99,13 @@ def run_case_evaluation(case: Any) -> TestCaseMetrics:
 
     # 2. Ground extractions with TonerHound
     t1 = time.perf_counter()
-    adapter = ExtractBenchAdapter(doc_index)
+    adapter = ExtractBenchAdapter(
+        doc_index,
+        enable_structural_disambiguation=enable_structural_disambiguation,
+        enable_verification=enable_verification,
+        score_margin_threshold=score_margin_threshold,
+        enable_bbox_precision=enable_bbox_precision,
+    )
     payload = adapter.ground_extracted_data(
         case.expected_output,
         example_id=case.test_id,
@@ -115,6 +133,10 @@ def run_case_evaluation(case: Any) -> TestCaseMetrics:
     )
     eval_time = time.perf_counter() - t2
 
+    w_prec = th_res.get("word_grounding_precision")
+    false_grounding_rate = (1.0 - w_prec) if w_prec is not None else 0.0
+    ambiguity_rate = max(0.0, 1.0 - (len(citations) / max(1, bbox_rules_count))) if bbox_rules_count > 0 else 0.0
+
     return TestCaseMetrics(
         test_id=case.test_id,
         group=case.group,
@@ -136,6 +158,8 @@ def run_case_evaluation(case: Any) -> TestCaseMetrics:
         page_precision=th_res.get("page_grounding_precision"),
         page_recall=th_res.get("page_grounding_recall"),
         value_f1=th_res.get("value_f1"),
+        false_grounding_rate=false_grounding_rate,
+        ambiguity_rate=ambiguity_rate,
     )
 
 
@@ -144,6 +168,11 @@ def run_benchmark_suite(
     experiment_id: str = "EXP-001",
     output_json: Path | None = None,
     output_md: Path | None = None,
+    enable_ocr: bool = False,
+    enable_structural_disambiguation: bool = True,
+    enable_verification: bool = True,
+    score_margin_threshold: float = 0.05,
+    enable_bbox_precision: bool = True,
 ) -> BenchmarkSuiteSummary:
     """Load test cases from data_dir and run evaluation across documents."""
     from extract_bench.test_cases.loader import load_test_cases
@@ -157,7 +186,14 @@ def run_benchmark_suite(
     for case in cases:
         print(f"Evaluating: {case.test_id} ({case.file_path.name})...")
         try:
-            m = run_case_evaluation(case)
+            m = run_case_evaluation(
+                case,
+                enable_ocr=enable_ocr,
+                enable_structural_disambiguation=enable_structural_disambiguation,
+                enable_verification=enable_verification,
+                score_margin_threshold=score_margin_threshold,
+                enable_bbox_precision=enable_bbox_precision,
+            )
             case_results.append(m)
             w_f1 = f"{m.word_f1 * 100:.2f}%" if m.word_f1 is not None else "N/A"
             p_f1 = f"{m.page_f1 * 100:.2f}%" if m.page_f1 is not None else "N/A"
@@ -175,8 +211,10 @@ def run_benchmark_suite(
         avg_word_f1 = sum(m.word_f1 for m in valid_word_cases) / len(valid_word_cases)
         avg_word_prec = sum(m.word_precision or 0.0 for m in valid_word_cases) / len(valid_word_cases)
         avg_word_rec = sum(m.word_recall or 0.0 for m in valid_word_cases) / len(valid_word_cases)
+        avg_false_grounding = sum(m.false_grounding_rate or 0.0 for m in valid_word_cases) / len(valid_word_cases)
+        avg_ambiguity = sum(m.ambiguity_rate or 0.0 for m in valid_word_cases) / len(valid_word_cases)
     else:
-        avg_word_f1 = avg_word_prec = avg_word_rec = 0.0
+        avg_word_f1 = avg_word_prec = avg_word_rec = avg_false_grounding = avg_ambiguity = 0.0
 
     valid_page_cases = [m for m in case_results if m.page_f1 is not None]
     if valid_page_cases:
@@ -186,6 +224,7 @@ def run_benchmark_suite(
     else:
         avg_page_f1 = avg_page_prec = avg_page_rec = 0.0
 
+    total_latency = sum(m.indexing_time_sec + m.grounding_time_sec for m in case_results)
     delta = (avg_word_f1 - LLAMAEXTRACT_AGENTIC_PLUS_WORD_F1) * 100.0
 
     summary = BenchmarkSuiteSummary(
@@ -203,6 +242,9 @@ def run_benchmark_suite(
         avg_page_grounding_f1=avg_page_f1,
         avg_page_grounding_precision=avg_page_prec,
         avg_page_grounding_recall=avg_page_rec,
+        avg_false_grounding_rate=avg_false_grounding,
+        avg_ambiguity_rate=avg_ambiguity,
+        total_latency_sec=total_latency,
         leaderboard_leader_name="LlamaExtract Agentic Plus",
         leaderboard_leader_word_f1=LLAMAEXTRACT_AGENTIC_PLUS_WORD_F1,
         delta_over_leader_percentage_points=delta,
@@ -232,10 +274,12 @@ def _format_markdown_report(summary: BenchmarkSuiteSummary) -> str:
         w_prec = f"{m.word_precision * 100:.2f}%" if m.word_precision is not None else "N/A"
         w_rec = f"{m.word_recall * 100:.2f}%" if m.word_recall is not None else "N/A"
         p_f1 = f"{m.page_f1 * 100:.2f}%" if m.page_f1 is not None else "N/A"
+        f_rate = f"{m.false_grounding_rate * 100:.2f}%" if m.false_grounding_rate is not None else "0.00%"
+        a_rate = f"{m.ambiguity_rate * 100:.2f}%" if m.ambiguity_rate is not None else "0.00%"
         t_total = f"{m.indexing_time_sec + m.grounding_time_sec:.2f}s"
         rows.append(
             f"| `{m.test_id}` | {m.num_pages} | {m.num_ground_truth_bboxes} | "
-            f"{m.num_citations_generated} | {w_f1} | {w_prec} | {w_rec} | {p_f1} | {t_total} |"
+            f"{m.num_citations_generated} | {w_f1} | {w_prec} | {w_rec} | {p_f1} | {f_rate} | {a_rate} | {t_total} |"
         )
 
     table_body = "\n".join(rows)
@@ -250,33 +294,30 @@ def _format_markdown_report(summary: BenchmarkSuiteSummary) -> str:
 
 ## Executive Summary
 
-| System | Word Grounding F1 | Word Grounding Precision | Word Grounding Recall | Page Grounding F1 | Delta vs Leader |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| **Native LLM / VLM Baseline** | 0.00% | 0.00% | 0.00% | 0.00% | -46.43 pp |
-| **LlamaExtract Agentic Plus (#1)** | 46.43% | - | - | 84.92% | Baseline (0.00 pp) |
-| **TonerHound (Ours)** | **{summary.avg_word_grounding_f1 * 100:.2f}%** | **{summary.avg_word_grounding_precision * 100:.2f}%** | **{summary.avg_word_grounding_recall * 100:.2f}%** | **{summary.avg_page_grounding_f1 * 100:.2f}%** | **+{summary.delta_over_leader_percentage_points:+.2f} pp** |
+| System | Word Grounding F1 | Word Precision | Word Recall | Page Grounding F1 | False-Grounding Rate | Ambiguity Rate | Latency | Delta vs Leader |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Native LLM / VLM Baseline** | 0.00% | 0.00% | 0.00% | 0.00% | 0.00% | 100.00% | 0.00s | -46.43 pp |
+| **LlamaExtract Agentic Plus (#1)** | 46.43% | - | - | 84.92% | - | - | - | Baseline (0.00 pp) |
+| **TonerHound (Ours)** | **{summary.avg_word_grounding_f1 * 100:.2f}%** | **{summary.avg_word_grounding_precision * 100:.2f}%** | **{summary.avg_word_grounding_recall * 100:.2f}%** | **{summary.avg_page_grounding_f1 * 100:.2f}%** | **{summary.avg_false_grounding_rate * 100:.2f}%** | **{summary.avg_ambiguity_rate * 100:.2f}%** | **{summary.total_latency_sec:.2f}s** | **+{summary.delta_over_leader_percentage_points:+.2f} pp** |
 
 ---
 
 ## Per-Document Test Case Breakdown
 
-| Document Test Case | Pages | GT BBoxes | Citations | Word F1 | Precision | Recall | Page F1 | Latency |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Document Test Case | Pages | GT BBoxes | Citations | Word F1 | Precision | Recall | Page F1 | False-Ground Rate | Ambiguity Rate | Latency |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 {table_body}
 
 ---
 
-## Key Diagnostic Findings
+## Diagnostic Findings
 
-1. **Material Outperformance on Word Grounding**:
-   TonerHound achieves an average Word Grounding F1 of **{summary.avg_word_grounding_f1 * 100:.2f}%** on digital PDF benchmarks with ground truth bounding boxes, materially outperforming the current public leader (**46.43%**) by **{summary.delta_over_leader_percentage_points:+.2f} percentage points**.
+1. **Overall Word Grounding Performance**:
+   TonerHound achieves an average Word Grounding F1 of **{summary.avg_word_grounding_f1 * 100:.2f}%** across all benchmark documents with ground truth bounding boxes (comparing directly against the official public leaderboard leader at **{summary.leaderboard_leader_word_f1 * 100:.2f}%**).
 
-2. **Precision vs. Recall Invariant**:
-   TonerHound maintains high precision (**{summary.avg_word_grounding_precision * 100:.2f}%**) through ambiguity gating: when identical candidates appear without disambiguating local geometry or sibling context, TonerHound refuses to guess (`ambiguous`), guaranteeing zero false groundings.
+2. **Precision vs. False Grounding Guardrails**:
+   TonerHound maintains high grounding precision (**{summary.avg_word_grounding_precision * 100:.2f}%**), limiting the average false grounding rate to **{summary.avg_false_grounding_rate * 100:.2f}%**.
 
-3. **Page Context Propagation**:
-   Record-level page inference eliminates cross-page table collisions (e.g. repeated votes or line item numbers across pages), lifting Page Grounding F1 to **{summary.avg_page_grounding_f1 * 100:.2f}%** with **{summary.avg_page_grounding_precision * 100:.2f}%** page precision.
-
-4. **Pure Raster Document Handling**:
-   Documents without embedded character streams (e.g. pure scanned raster images like `bianco-2024`) have 0 character tokens from PDFium and properly emit `not_found` citations, preventing hallucinations. When paired with OCR sidecars, TonerHound consumes word bounding boxes identically.
+3. **Spatial Row & Structural Disambiguation**:
+   Two-pass record-level row anchoring eliminates table collisions across repeated line items and records, lifting Page Grounding F1 to **{summary.avg_page_grounding_f1 * 100:.2f}%**.
 """

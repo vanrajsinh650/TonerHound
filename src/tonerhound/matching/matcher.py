@@ -78,24 +78,26 @@ class EvidenceMatcher:
                             line_index=line.line_index,
                         )
                     )
-                elif norm_query in norm_line:
-                    # Find matching subset of tokens in line
-                    matched = self._find_token_subsequence(line.tokens, norm_query)
-                    if matched:
-                        boxes = [t.bbox for t in matched]
-                        ub = union_bbox_list(boxes)
-                        if ub:
-                            candidates.append(
-                                MatchCandidate(
-                                    page=p_num,
-                                    bbox=ub,
-                                    tokens=tuple(matched),
-                                    matched_text=" ".join(t.text for t in matched),
-                                    match_type="exact",
-                                    raw_similarity=1.0,
-                                    line_index=line.line_index,
+                else:
+                    clean_query = norm_query.strip(" -.,;:_")
+                    if clean_query and (norm_query in norm_line or clean_query in norm_line):
+                        # Find matching subset of tokens in line
+                        matched = self._find_token_subsequence(line.tokens, clean_query)
+                        if matched:
+                            boxes = [t.bbox for t in matched]
+                            ub = union_bbox_list(boxes)
+                            if ub:
+                                candidates.append(
+                                    MatchCandidate(
+                                        page=p_num,
+                                        bbox=ub,
+                                        tokens=tuple(matched),
+                                        matched_text=" ".join(t.text for t in matched),
+                                        match_type="exact",
+                                        raw_similarity=1.0,
+                                        line_index=line.line_index,
+                                    )
                                 )
-                            )
 
             # Fallback to page-wide search if not found in single lines
             if not candidates:
@@ -136,10 +138,16 @@ class EvidenceMatcher:
                 for token in line.tokens:
                     token_num = parse_numeric_value(token.text)
                     if token_num is not None and is_number_equal(target_num, token_num):
+                        tok_bbox = token.bbox
+                        val_str = str(value).strip()
+                        if val_str in token.text and len(val_str) < len(token.text):
+                            idx = token.text.find(val_str)
+                            tok_bbox = tok_bbox.sub_bbox(idx, idx + len(val_str), len(token.text))
+
                         candidates.append(
                             MatchCandidate(
                                 page=p_num,
-                                bbox=token.bbox,
+                                bbox=tok_bbox,
                                 tokens=(token,),
                                 matched_text=token.text,
                                 match_type="normalized_number",
@@ -224,7 +232,24 @@ class EvidenceMatcher:
                 norm_line = normalize_unicode_and_case(line.text).text.strip()
                 sim = fuzz.partial_ratio(norm_query, norm_line) / 100.0
                 if sim >= threshold:
-                    # Approximate token subset in line
+                    sub_toks, sub_sim = self._find_best_fuzzy_subsequence(line.tokens, norm_query)
+                    if sub_toks and sub_sim >= threshold * 0.85:
+                        ub = union_bbox_list([t.bbox for t in sub_toks])
+                        if ub:
+                            candidates.append(
+                                MatchCandidate(
+                                    page=p_num,
+                                    bbox=ub,
+                                    tokens=tuple(sub_toks),
+                                    matched_text=" ".join(t.text for t in sub_toks),
+                                    match_type="fuzzy",
+                                    raw_similarity=max(sim, sub_sim),
+                                    line_index=line.line_index,
+                                )
+                            )
+                            continue
+
+                    # Approximate token subset in line fallback
                     candidates.append(
                         MatchCandidate(
                             page=p_num,
@@ -239,14 +264,39 @@ class EvidenceMatcher:
 
         return candidates
 
+    def _find_best_fuzzy_subsequence(
+        self, tokens: list[DocumentToken], norm_target: str
+    ) -> tuple[list[DocumentToken], float]:
+        """Find sub-sequence of tokens with highest fuzzy similarity to norm_target."""
+        best_sub: list[DocumentToken] = []
+        best_sim = 0.0
+        n_tok = len(tokens)
+        target_words = norm_target.split()
+        target_word_count = max(1, len(target_words))
+
+        min_win = max(1, target_word_count - 1)
+        max_win = min(n_tok, target_word_count + 2)
+
+        for win_size in range(min_win, max_win + 1):
+            for start_i in range(n_tok - win_size + 1):
+                sub = tokens[start_i : start_i + win_size]
+                sub_text = normalize_unicode_and_case(" ".join(t.text for t in sub)).text.strip()
+                sim = fuzz.ratio(norm_target, sub_text) / 100.0
+                if sim > best_sim:
+                    best_sim = sim
+                    best_sub = sub
+
+        return best_sub, best_sim
+
     def _find_token_subsequence(
         self, tokens: list[DocumentToken], norm_target: str
     ) -> list[DocumentToken]:
         """Locate contiguous sublist of tokens whose concatenation matches norm_target."""
+        clean_target = norm_target.strip(" -.,;:_")
         for window_size in range(1, len(tokens) + 1):
             for start_i in range(len(tokens) - window_size + 1):
                 window = tokens[start_i : start_i + window_size]
                 text = normalize_unicode_and_case(" ".join(t.text for t in window)).text.strip()
-                if text == norm_target:
+                if text == norm_target or text.strip(" -.,;:_") == clean_target:
                     return window
         return []

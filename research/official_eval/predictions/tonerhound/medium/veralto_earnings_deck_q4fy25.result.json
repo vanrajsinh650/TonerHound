@@ -1,0 +1,280 @@
+{
+  "request": {
+    "example_id": "medium/veralto_earnings_deck_q4fy25",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/test/medium/veralto_earnings_deck_q4fy25.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 15
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/veralto_earnings_deck_q4fy25",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "period": "FY2025",
+      "currency": "USD",
+      "fiscal_period_end_date": "2025-12-31",
+      "total_revenue": 5503.0,
+      "revenue_growth_yoy": 6.0,
+      "gross_profit": 3299.0,
+      "operating_income": 1277.0,
+      "net_income": 940.0,
+      "adjusted_ebitda": 1379.0,
+      "gaap_eps_diluted": 3.76,
+      "adjusted_eps_diluted": 3.9,
+      "gross_margin": 59.9,
+      "operating_margin": 23.2,
+      "free_cash_flow": 1014.0,
+      "segments": [
+        {
+          "segment_name": "Water Quality",
+          "segment_revenue": 3321,
+          "segment_profit": 844
+        },
+        {
+          "segment_name": "Product Quality & Innovation",
+          "segment_revenue": 2182,
+          "segment_profit": 549
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "period",
+        "page": 6,
+        "bbox": [
+          0.175031,
+          0.814451,
+          0.015714,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2025",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "fiscal_period_end_date",
+        "page": 36,
+        "bbox": [
+          0.429962,
+          0.291792,
+          0.135051,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "31, 2025 and December",
+        "confidence": 0.7622832777587407,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_revenue",
+        "page": 25,
+        "bbox": [
+          0.800922,
+          0.243786,
+          0.03048,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "5,503",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "revenue_growth_yoy",
+        "page": 22,
+        "bbox": [
+          0.724141,
+          0.472708,
+          0.016452,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "6.0",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operating_income",
+        "page": 31,
+        "bbox": [
+          0.575442,
+          0.431286,
+          0.029634,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1,277",
+        "confidence": 0.8481005018518912,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "adjusted_ebitda",
+        "page": 31,
+        "bbox": [
+          0.575442,
+          0.45457,
+          0.029646,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1,379",
+        "confidence": 0.8720891842920075,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gaap_eps_diluted",
+        "page": 34,
+        "bbox": [
+          0.923472,
+          0.225575,
+          0.023447,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3.76",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "adjusted_eps_diluted",
+        "page": 6,
+        "bbox": [
+          0.432452,
+          0.684222,
+          0.015106,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$3.90",
+        "confidence": 0.8715946728931645,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gross_margin",
+        "page": 34,
+        "bbox": [
+          0.454861,
+          0.225567,
+          0.023472,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "59.9",
+        "confidence": 0.8265796235922901,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "free_cash_flow",
+        "page": 38,
+        "bbox": [
+          0.724116,
+          0.374913,
+          0.029596,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1,014",
+        "confidence": 0.7587603554549783,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[0].segment_name",
+        "page": 25,
+        "bbox": [
+          0.071654,
+          0.197691,
+          0.075682,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Water Quality",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[0].segment_revenue",
+        "page": 25,
+        "bbox": [
+          0.800922,
+          0.197217,
+          0.028737,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3,321",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[0].segment_profit",
+        "page": 25,
+        "bbox": [
+          0.811427,
+          0.312577,
+          0.019937,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "844",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[1].segment_name",
+        "page": 5,
+        "bbox": [
+          0.769798,
+          0.877196,
+          0.104308,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Product Quality & Innovation",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[1].segment_revenue",
+        "page": 25,
+        "bbox": [
+          0.800758,
+          0.220502,
+          0.030543,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2,182",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T13:23:47.455569Z",
+  "completed_at": "2026-09-13T13:23:47.455569Z",
+  "latency_in_ms": 12094
+}

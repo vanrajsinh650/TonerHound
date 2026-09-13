@@ -159,7 +159,47 @@ def parse_numeric_value(value: Any) -> float | None:
     try:
         return float(cleaned)
     except ValueError:
-        return None
+        # Try OCR numeric repair (e.g. 'O'->'0', 'l'/'I'->'1')
+        repaired = repair_numeric_ocr(cleaned)
+        try:
+            return float(repaired)
+        except ValueError:
+            return None
+
+
+def repair_numeric_ocr(text: str) -> str:
+    """Repair common OCR character confusions in numeric strings."""
+    cleaned = text.strip()
+    # Check parenthesized negative
+    neg = cleaned.startswith("(") and cleaned.endswith(")")
+    if neg:
+        cleaned = cleaned[1:-1].strip()
+
+    # Replace O/o with 0, l/I with 1
+    repaired = cleaned.replace("O", "0").replace("o", "0")
+    repaired = repaired.replace("l", "1").replace("I", "1")
+    repaired = repaired.replace("§", "5").replace("B", "8") if re.search(r"\d", repaired) else repaired
+
+    if neg and not repaired.startswith("-"):
+        repaired = f"-{repaired}"
+    return repaired
+
+
+def repair_ocr_text(text: str) -> str:
+    """Strip common OCR noise and artifacts while preserving semantic content."""
+    cleaned = text.strip(" _|\t\r\n\x00\x01\x02\x03\x04\x05\x06\x07\x08\x0b\x0e\x0f`'\"")
+    cleaned = re.sub(r"_{2,}", " ", cleaned).strip()
+    return cleaned
+
+
+def detect_checkbox_state(text: str) -> bool | None:
+    """Detect boolean checkbox states from OCR text tokens."""
+    t = text.strip().lower()
+    if t in ("[x]", "[*]", "[v]", "☒", "■", "✔", "✓", "x", "yes", "true", "checked"):
+        return True
+    if t in ("[ ]", "☐", "no", "false", "unchecked"):
+        return False
+    return None
 
 
 def is_number_equal(v1: Any, v2: Any, rel_tol: float = 1e-6, abs_tol: float = 1e-6) -> bool:
@@ -181,6 +221,25 @@ _DATE_PATTERNS = (
 )
 
 
+def is_plausible_date_string(text: str) -> bool:
+    """Verify that a string has plausible calendar date characteristics."""
+    cleaned = text.strip()
+    # Reject common false positive labels / non-date words
+    if re.search(r"\b(?:week|table|item|step|rule|section|volume|page|no|number|district|well|acres)\b", cleaned, re.IGNORECASE):
+        return False
+    # Check for date patterns
+    has_year = bool(re.search(r"\b(19\d\d|20\d\d)\b", cleaned))
+    has_month = bool(re.search(r"\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\b", cleaned, re.IGNORECASE))
+    has_date_delims = bool(re.search(r"\b\d{1,2}[/-]\d{1,2}(?:[/-]\d{2,4})?\b", cleaned))
+    if has_year and (has_month or has_date_delims or re.search(r"\b\d{4}[-/]\d{1,2}\b", cleaned)):
+        return True
+    if has_date_delims and re.search(r"\b\d{1,2}[/-]\d{1,2}[/-]\d{2,4}\b", cleaned):
+        return True
+    if has_month and re.search(r"\d", cleaned):
+        return True
+    return False
+
+
 def parse_date_value(value: Any) -> date | None:
     """Parse date into standard datetime.date."""
     if isinstance(value, datetime):
@@ -194,8 +253,18 @@ def parse_date_value(value: Any) -> date | None:
     if not text:
         return None
 
+    # Strip OCR noise if present
+    text = repair_ocr_text(text)
+
+    # Plausibility guard: prevent arbitrary strings with numbers from parsing as dates
+    if not is_plausible_date_string(text):
+        return None
+
     try:
         parsed = date_parser.parse(text, fuzzy=True)
+        # Year sanity guard
+        if parsed.year < 1900 or parsed.year > 2100:
+            return None
         return parsed.date()
     except (ValueError, OverflowError, TypeError):
         return None
@@ -208,3 +277,4 @@ def is_date_equal(d1: Any, d2: Any) -> bool:
     if parsed1 is None or parsed2 is None:
         return False
     return parsed1 == parsed2
+

@@ -72,8 +72,14 @@ class DocumentIndex:
             self._page_normalized_text[page.page_number] = (norm_page_text, char_to_token)
 
     @classmethod
-    def from_pdf(cls, source: str | Path | bytes | BinaryIO) -> DocumentIndex:
-        """Load and index a PDF using pypdfium2."""
+    def from_pdf(
+        cls,
+        source: str | Path | bytes | BinaryIO,
+        enable_ocr: bool = False,
+        ocr_scale: float = 200.0 / 72.0,
+        ocr_token_threshold: int = 25,
+    ) -> DocumentIndex:
+        """Load and index a PDF using pypdfium2 with optional OCR fallback."""
         doc = pdfium.PdfDocument(source)
         pages: list[DocumentPage] = []
 
@@ -82,6 +88,16 @@ class DocumentIndex:
                 page_num = page_idx + 1  # 1-indexed
                 width, height = pdf_page.get_size()
                 tokens = _extract_tokens_from_page(pdf_page, page_num, width, height)
+
+                # Fallback to OCR if page has negligible native text tokens
+                if enable_ocr and len(tokens) < ocr_token_threshold:
+                    ocr_tokens = _extract_tokens_from_ocr(
+                        pdf_page,
+                        page_num=page_num,
+                        scale=ocr_scale,
+                    )
+                    if len(ocr_tokens) > len(tokens):
+                        tokens = ocr_tokens
 
                 # Cluster tokens into visual lines by vertical alignment
                 lines = _cluster_tokens_into_lines(tokens, page_num)
@@ -271,8 +287,61 @@ def _cluster_tokens_into_lines(tokens: list[DocumentToken], page: int) -> list[V
             )
 
     visual_lines.sort(key=lambda l: (l.bbox.y0, l.bbox.x0))
-    # Re-index line numbers
     for i, line in enumerate(visual_lines):
         line.line_index = i
 
     return visual_lines
+
+
+def _extract_tokens_from_ocr(
+    pdf_page: Any,
+    page_num: int,
+    scale: float = 200.0 / 72.0,
+) -> list[DocumentToken]:
+    """Render page bitmap and run Tesseract OCR to extract word bounding boxes."""
+    try:
+        import pytesseract
+        from tonerhound.normalization.normalizers import repair_ocr_text
+    except ImportError:
+        return []
+
+    bitmap = pdf_page.render(scale=scale)
+    img = bitmap.to_pil()
+    img_w, img_h = img.size
+
+    data = pytesseract.image_to_data(img, output_type=pytesseract.Output.DICT)
+    tokens: list[DocumentToken] = []
+    char_idx = 0
+
+    n_boxes = len(data.get("text", []))
+    for i in range(n_boxes):
+        raw_text = data["text"][i].strip()
+        if not raw_text:
+            continue
+
+        clean_text = repair_ocr_text(raw_text)
+        if not clean_text:
+            clean_text = raw_text
+
+        # Normalized coordinates [0, 1]
+        x = max(0.0, min(1.0, data["left"][i] / img_w))
+        y = max(0.0, min(1.0, data["top"][i] / img_h))
+        w = max(0.0, min(1.0 - x, data["width"][i] / img_w))
+        h = max(0.0, min(1.0 - y, data["height"][i] / img_h))
+
+        if w <= 0.0 or h <= 0.0:
+            continue
+
+        bbox = BBox(x=x, y=y, width=w, height=h, page=page_num)
+        tokens.append(
+            DocumentToken(
+                text=clean_text,
+                bbox=bbox,
+                page=page_num,
+                char_index_in_page=char_idx,
+            )
+        )
+        char_idx += len(clean_text) + 1
+
+    return tokens
+

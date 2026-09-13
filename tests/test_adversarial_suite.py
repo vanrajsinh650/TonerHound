@@ -207,3 +207,38 @@ def test_derived_value():
     assert res.status == ProvenanceStatus.DERIVED
     assert res.bbox is None
     assert not res.is_grounded
+
+
+def test_subtotal_tax_adjustment_adversarial():
+    """Case 8 (EXP-003 Step 5): Subtotal $50.00 / Tax $50.00 / Adjustment $50.00."""
+    t_sub = DocumentToken("Subtotal", BBox(0.1, 0.20, 0.08, 0.02, page=1), page=1, char_index_in_page=0, line_index=0)
+    v_sub = DocumentToken("$50.00", BBox(0.3, 0.20, 0.06, 0.02, page=1), page=1, char_index_in_page=9, line_index=0)
+    l0 = VisualLine([t_sub, v_sub], page=1, line_index=0, bbox=BBox(0.1, 0.20, 0.26, 0.02, page=1))
+
+    t_tax = DocumentToken("Tax", BBox(0.1, 0.25, 0.05, 0.02, page=1), page=1, char_index_in_page=16, line_index=1)
+    v_tax = DocumentToken("$50.00", BBox(0.3, 0.25, 0.06, 0.02, page=1), page=1, char_index_in_page=20, line_index=1)
+    l1 = VisualLine([t_tax, v_tax], page=1, line_index=1, bbox=BBox(0.1, 0.25, 0.26, 0.02, page=1))
+
+    t_adj = DocumentToken("Adjustment", BBox(0.1, 0.30, 0.10, 0.02, page=1), page=1, char_index_in_page=27, line_index=2)
+    v_adj = DocumentToken("$50.00", BBox(0.3, 0.30, 0.06, 0.02, page=1), page=1, char_index_in_page=38, line_index=2)
+    l2 = VisualLine([t_adj, v_adj], page=1, line_index=2, bbox=BBox(0.1, 0.30, 0.26, 0.02, page=1))
+
+    page = DocumentPage(page_number=1, width=612, height=792, tokens=[t_sub, v_sub, t_tax, v_tax, t_adj, v_adj], lines=[l0, l1, l2])
+    index = DocumentIndex.from_pages([page])
+    resolver = EvidenceResolver(index)
+
+    # 1. Tax query must ground ONLY to Tax line (y=0.25)
+    tax_res = resolver.resolve(ExtractionInput(field="tax", value=50.0, evidence_text="$50.00", field_context="Tax"))
+    assert tax_res.is_grounded
+    assert abs(tax_res.bbox.y - 0.25) < 0.01
+
+    # 2. Adjustment query must ground ONLY to Adjustment line (y=0.30)
+    adj_res = resolver.resolve(ExtractionInput(field="adjustment", value=50.0, evidence_text="$50.00", field_context="Adjustment"))
+    assert adj_res.is_grounded
+    assert abs(adj_res.bbox.y - 0.30) < 0.01
+
+    # 3. Subtotal query must ground ONLY to Subtotal line (y=0.20)
+    sub_res = resolver.resolve(ExtractionInput(field="subtotal", value=50.0, evidence_text="$50.00", field_context="Subtotal"))
+    assert sub_res.is_grounded
+    assert abs(sub_res.bbox.y - 0.20) < 0.01
+
