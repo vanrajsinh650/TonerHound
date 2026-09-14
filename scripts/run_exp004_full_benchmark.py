@@ -53,11 +53,14 @@ def process_single_case(case_info: dict[str, Any]) -> dict[str, Any]:
             try:
                 with open(out_file, encoding="utf-8") as f:
                     data = json.load(f)
+                raw = data.get("raw_output", {}) if isinstance(data.get("raw_output"), dict) else {}
                 return {
                     "test_id": test_id,
                     "group": group,
                     "success": True,
                     "cached": True,
+                    "num_pages": raw.get("num_pages", 0),
+                    "ocr_pages": raw.get("ocr_pages", 0),
                     "num_citations": len(data.get("output", {}).get("field_citations", [])),
                     "latency_sec": data.get("latency_in_ms", 0) / 1000.0,
                     "error": None,
@@ -266,11 +269,10 @@ def main():
     runner = EvaluationRunner(
         output_dir=predictions_dir,
         test_cases_dir=data_dir,
-        multi_task=True,
     )
 
     t_eval_start = time.perf_counter()
-    eval_summary = runner.run_evaluation(product_type="extract", max_workers=args.workers)
+    eval_summary = runner.run_evaluation(product_type="extract", max_workers=1)
     eval_time = time.perf_counter() - t_eval_start
     print(f"Official evaluation completed in {eval_time:.1f}s across {eval_summary.total_examples} examples "
           f"(successful: {eval_summary.successful}, failed: {eval_summary.failed}).")
@@ -439,6 +441,12 @@ def main():
         json.dump(exp004_data, f, indent=2)
     print(f"Saved: {exp004_json_path}")
 
+    official_reports_dir = root_dir / "research" / "official_eval" / "reports"
+    official_reports_dir.mkdir(parents=True, exist_ok=True)
+    with open(official_reports_dir / "EXP-004_official_evaluation.json", "w", encoding="utf-8") as f:
+        json.dump(exp004_data, f, indent=2)
+    print(f"Saved: {official_reports_dir / 'EXP-004_official_evaluation.json'}")
+
     # Generate EXP-004.md
     exp004_md_path = root_dir / "research" / "experiments" / "EXP-004.md"
     md_content = f"""# EXP-004 Full Benchmark Report: TonerHound vs ExtractBench (370 Documents)
@@ -509,6 +517,10 @@ def main():
     with open(exp004_md_path, "w", encoding="utf-8") as f:
         f.write(md_content)
     print(f"Saved: {exp004_md_path}")
+
+    with open(official_reports_dir / "EXP-004_official_evaluation.md", "w", encoding="utf-8") as f:
+        f.write(md_content)
+    print(f"Saved: {official_reports_dir / 'EXP-004_official_evaluation.md'}")
 
     # Generate EXP-004 Failure Analysis
     print("\nGenerating EXP-004 failure analysis...")

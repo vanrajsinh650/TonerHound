@@ -1,12 +1,12 @@
 {
   "experiment_id": "EXP-004",
-  "total_documents": 2,
-  "failing_documents_below_50_f1": 2,
+  "total_documents": 370,
+  "failing_documents_below_50_f1": 266,
   "category_counts": {
-    "wrong_occurrence": 0,
-    "wrong_page": 1,
+    "wrong_occurrence": 94,
+    "wrong_page": 93,
     "underwide_bbox": 0,
-    "low_iou_bbox": 1,
+    "low_iou_bbox": 79,
     "missing_candidate": 0,
     "ambiguous_candidate": 0,
     "ocr_failure": 0,
@@ -14,15 +14,1599 @@
   },
   "failures": [
     {
+      "test_id": "long/dd1155_schedule_continuation_0011",
+      "grounded_f1": 0.0,
+      "page_f1": 0.676923076923077,
+      "error": null
+    },
+    {
       "test_id": "long/dd1155_schedule_continuation_0012",
       "grounded_f1": 0.0,
       "page_f1": 0.0,
       "error": null
     },
     {
-      "test_id": "long/dd1155_schedule_continuation_0011",
+      "test_id": "long/gov_clin_schedule_0005",
       "grounded_f1": 0.0,
-      "page_f1": 0.676923076923077,
+      "page_f1": 0.6666666666666666,
+      "error": null
+    },
+    {
+      "test_id": "long/gov_clin_schedule_0031",
+      "grounded_f1": 0.0,
+      "page_f1": 0.6666666666666666,
+      "error": null
+    },
+    {
+      "test_id": "long/real_credit_strategies_full",
+      "grounded_f1": 0.418966737438075,
+      "page_f1": 0.5283217519477786,
+      "error": null
+    },
+    {
+      "test_id": "long/real_ftx_full",
+      "grounded_f1": 0.005384170538616468,
+      "page_f1": 0.9489899144722724,
+      "error": null
+    },
+    {
+      "test_id": "long/real_ftx_full_corrupted",
+      "grounded_f1": 0.002646868947708199,
+      "page_f1": 0.4791702829369901,
+      "error": null
+    },
+    {
+      "test_id": "long/real_imedia_full",
+      "grounded_f1": 0.002689571403782752,
+      "page_f1": 0.8133890242487526,
+      "error": null
+    },
+    {
+      "test_id": "long/real_imedia_full_corrupted",
+      "grounded_f1": 0.0013320309031169522,
+      "page_f1": 0.25112948027174453,
+      "error": null
+    },
+    {
+      "test_id": "long/real_ofac_ssi_full",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "long/real_oklahoma_unclaimed_2024",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "long/real_sm0801_ae_full",
+      "grounded_f1": 0.491887193355225,
+      "page_f1": 0.9232235230057174,
+      "error": null
+    },
+    {
+      "test_id": "long/real_sm0801_eco_full_corrupted",
+      "grounded_f1": 0.32507520792780037,
+      "page_f1": 0.46893353941267385,
+      "error": null
+    },
+    {
+      "test_id": "long/sf1449_supplies_services_0042",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "long/sf1449_supplies_services_0059",
+      "grounded_f1": 0.0,
+      "page_f1": 0.13333333333333333,
+      "error": null
+    },
+    {
+      "test_id": "medium/1G1PC5SB6E7111015_professional_valuation",
+      "grounded_f1": 0.0,
+      "page_f1": 0.42857142857142855,
+      "error": null
+    },
+    {
+      "test_id": "medium/1G1PC5SB6E7111015_professional_valuation_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.625,
+      "error": null
+    },
+    {
+      "test_id": "medium/arif-2023",
+      "grounded_f1": 0.2614840989399293,
+      "page_f1": 0.431095406360424,
+      "error": null
+    },
+    {
+      "test_id": "medium/baker_hughes_earnings_deck_q4fy25",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/bar-lev-2021",
+      "grounded_f1": 0.2798165137614679,
+      "page_f1": 0.5753424657534247,
+      "error": null
+    },
+    {
+      "test_id": "medium/bar-lev-2022",
+      "grounded_f1": 0.2765432098765432,
+      "page_f1": 0.4679802955665024,
+      "error": null
+    },
+    {
+      "test_id": "medium/bar-lev-2023",
+      "grounded_f1": 0.26771653543307083,
+      "page_f1": 0.5535248041775456,
+      "error": null
+    },
+    {
+      "test_id": "medium/bar-lev-2024",
+      "grounded_f1": 0.23469387755102045,
+      "page_f1": 0.520408163265306,
+      "error": null
+    },
+    {
+      "test_id": "medium/becerra-2021",
+      "grounded_f1": 0.22383720930232562,
+      "page_f1": 0.3924418604651163,
+      "error": null
+    },
+    {
+      "test_id": "medium/becerra-2022",
+      "grounded_f1": 0.29781771501925547,
+      "page_f1": 0.45454545454545453,
+      "error": null
+    },
+    {
+      "test_id": "medium/becerra-2023",
+      "grounded_f1": 0.3516174402250351,
+      "page_f1": 0.5112359550561798,
+      "error": null
+    },
+    {
+      "test_id": "medium/becerra-2024",
+      "grounded_f1": 0.22014925373134328,
+      "page_f1": 0.33955223880597013,
+      "error": null
+    },
+    {
+      "test_id": "medium/bianco-2021",
+      "grounded_f1": 0.2602739726027397,
+      "page_f1": 0.31506849315068497,
+      "error": null
+    },
+    {
+      "test_id": "medium/bianco-2022",
+      "grounded_f1": 0.21965317919075145,
+      "page_f1": 0.30057803468208094,
+      "error": null
+    },
+    {
+      "test_id": "medium/byline_bancorp_investor_deck_q2_2023",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/cabrera-2021",
+      "grounded_f1": 0.26993865030674846,
+      "page_f1": 0.49693251533742333,
+      "error": null
+    },
+    {
+      "test_id": "medium/cabrera-2022",
+      "grounded_f1": 0.17766497461928935,
+      "page_f1": 0.29441624365482233,
+      "error": null
+    },
+    {
+      "test_id": "medium/cabrera-2023",
+      "grounded_f1": 0.1003584229390681,
+      "page_f1": 0.22222222222222224,
+      "error": null
+    },
+    {
+      "test_id": "medium/ccc_online_0003_geico_ford_crown_victoria",
+      "grounded_f1": 0.0,
+      "page_f1": 1.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/ccc_online_0003_geico_ford_crown_victoria_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.5,
+      "error": null
+    },
+    {
+      "test_id": "medium/ccc_online_0004_liberty_dodge_journey",
+      "grounded_f1": 0.0,
+      "page_f1": 1.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/ccc_online_0004_liberty_dodge_journey_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.6666666666666666,
+      "error": null
+    },
+    {
+      "test_id": "medium/ccc_online_0008_state_farm_genesis_gv80",
+      "grounded_f1": 0.0,
+      "page_f1": 0.28571428571428575,
+      "error": null
+    },
+    {
+      "test_id": "medium/ccc_online_0008_state_farm_genesis_gv80_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.3333333333333333,
+      "error": null
+    },
+    {
+      "test_id": "medium/ccc_online_0009_travelers_ford_f150",
+      "grounded_f1": 0.0,
+      "page_f1": 0.6666666666666666,
+      "error": null
+    },
+    {
+      "test_id": "medium/ccc_online_0009_travelers_ford_f150_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.3333333333333333,
+      "error": null
+    },
+    {
+      "test_id": "medium/ccc_online_0010_travelers_ford_explorer",
+      "grounded_f1": 0.0,
+      "page_f1": 1.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/ccc_online_0010_travelers_ford_explorer_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/ccc_online_0011_infinity_toyota_tacoma",
+      "grounded_f1": 0.0,
+      "page_f1": 0.5,
+      "error": null
+    },
+    {
+      "test_id": "medium/ccc_online_0011_infinity_toyota_tacoma_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.5,
+      "error": null
+    },
+    {
+      "test_id": "medium/ccc_online_0012_chubb_dodge_durango",
+      "grounded_f1": 0.0,
+      "page_f1": 1.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/ccc_online_0012_chubb_dodge_durango_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.6666666666666666,
+      "error": null
+    },
+    {
+      "test_id": "medium/coreweave_earnings_deck_q4fy25",
+      "grounded_f1": 0.0,
+      "page_f1": 0.18181818181818182,
+      "error": null
+    },
+    {
+      "test_id": "medium/crh_results_deck_q4fy25",
+      "grounded_f1": 0.0,
+      "page_f1": 0.888888888888889,
+      "error": null
+    },
+    {
+      "test_id": "medium/dd1155_schedule_continuation_0007",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/erie_county_2017_single_audit",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/gov_clin_schedule_0033",
+      "grounded_f1": 0.0,
+      "page_f1": 1.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/gov_clin_schedule_0035",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/gov_clin_schedule_0038",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/gsa_mas_it_labor_0003",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/gsa_mas_it_labor_0005",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/gsa_mas_it_labor_0006",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/gsa_mas_it_labor_0007",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/gsa_mas_it_labor_0008",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/gsa_mas_it_labor_0010",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/gsa_mas_it_labor_0011",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/gsa_mas_it_labor_0014",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/gsa_mas_it_labor_0016",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/gsa_mas_it_labor_0018",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/gsa_mas_it_labor_0019",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/hpe_earnings_deck_q4fy25",
+      "grounded_f1": 0.0,
+      "page_f1": 0.25,
+      "error": null
+    },
+    {
+      "test_id": "medium/jackson_college_2024_federal_awards_audit",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/q4-2025-earnings-press-release",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/real_bbb_service_list_corrupted",
+      "grounded_f1": 0.020519835841313273,
+      "page_f1": 0.41097308488612844,
+      "error": null
+    },
+    {
+      "test_id": "medium/real_dcd_sumf_full_corrupted",
+      "grounded_f1": 0.49111470113085615,
+      "page_f1": 0.7699805068226122,
+      "error": null
+    },
+    {
+      "test_id": "medium/real_enotes_deviations_corrupted",
+      "grounded_f1": 0.2049356223175966,
+      "page_f1": 0.25625920471281294,
+      "error": null
+    },
+    {
+      "test_id": "medium/real_vg_reit_full",
+      "grounded_f1": 0.48063921327596804,
+      "page_f1": 0.46899426784783743,
+      "error": null
+    },
+    {
+      "test_id": "medium/real_wright_co_mn",
+      "grounded_f1": 0.4608648056923919,
+      "page_f1": 0.7172823084006957,
+      "error": null
+    },
+    {
+      "test_id": "medium/schwab_dana_jones_2012",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/sf1449_supplies_services_0003",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/sf1449_supplies_services_0046",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/sf1449_supplies_services_0047",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/smfg-kessan-tanshin-2024-ja",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/sunoco_investor_deck_march_2026",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/synchrony_investor_deck_q1_2026",
+      "grounded_f1": 0.0,
+      "page_f1": 0.6666666666666666,
+      "error": null
+    },
+    {
+      "test_id": "medium/sysco_earnings_deck_q2fy26",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/transunion_earnings_deck_q4fy25",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/united_way_san_antonio_fy23_single_audit",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "medium/veralto_earnings_deck_q4fy25",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/00581-2011-p0098",
+      "grounded_f1": 0.3333333333333333,
+      "page_f1": 0.5416666666666666,
+      "error": null
+    },
+    {
+      "test_id": "short/00581-2011-p0102",
+      "grounded_f1": 0.49180327868852464,
+      "page_f1": 0.819672131147541,
+      "error": null
+    },
+    {
+      "test_id": "short/02-10121 H-12 7-2-2024 F-22628",
+      "grounded_f1": 0.22727272727272727,
+      "page_f1": 0.44000000000000006,
+      "error": null
+    },
+    {
+      "test_id": "short/07021-2016-p0014",
+      "grounded_f1": 0.2777777777777778,
+      "page_f1": 0.5,
+      "error": null
+    },
+    {
+      "test_id": "short/07021-2016-p0016",
+      "grounded_f1": 0.1818181818181818,
+      "page_f1": 0.3636363636363636,
+      "error": null
+    },
+    {
+      "test_id": "short/07021-2016-p0018",
+      "grounded_f1": 0.22857142857142856,
+      "page_f1": 0.45714285714285713,
+      "error": null
+    },
+    {
+      "test_id": "short/07021-2016-p0026",
+      "grounded_f1": 0.43478260869565216,
+      "page_f1": 0.8260869565217391,
+      "error": null
+    },
+    {
+      "test_id": "short/07021-2016-p0029",
+      "grounded_f1": 0.368421052631579,
+      "page_f1": 0.5789473684210525,
+      "error": null
+    },
+    {
+      "test_id": "short/07021-2016-p0032",
+      "grounded_f1": 0.358974358974359,
+      "page_f1": 0.6153846153846153,
+      "error": null
+    },
+    {
+      "test_id": "short/07021-2016-p0074",
+      "grounded_f1": 0.15384615384615385,
+      "page_f1": 0.7692307692307693,
+      "error": null
+    },
+    {
+      "test_id": "short/07021-2016-p0078",
+      "grounded_f1": 0.21052631578947367,
+      "page_f1": 0.631578947368421,
+      "error": null
+    },
+    {
+      "test_id": "short/07021-2016-p0082",
+      "grounded_f1": 0.25,
+      "page_f1": 0.47058823529411764,
+      "error": null
+    },
+    {
+      "test_id": "short/08-15427 H-12 1-21-2003 F-01341",
+      "grounded_f1": 0.18181818181818182,
+      "page_f1": 0.3434343434343434,
+      "error": null
+    },
+    {
+      "test_id": "short/08-20813 H-12 10-17-2008 F-01094A",
+      "grounded_f1": 0.24096385542168672,
+      "page_f1": 0.3404255319148936,
+      "error": null
+    },
+    {
+      "test_id": "short/08-37943 H-12 09-25-2014 F-01249",
+      "grounded_f1": 0.1794871794871795,
+      "page_f1": 0.34408602150537637,
+      "error": null
+    },
+    {
+      "test_id": "short/08-43259 H-12 3-18-2024 F-22737",
+      "grounded_f1": 0.2962962962962963,
+      "page_f1": 0.3789473684210526,
+      "error": null
+    },
+    {
+      "test_id": "short/08-51344 H-12 10-2-2023 F-22666",
+      "grounded_f1": 0.24691358024691357,
+      "page_f1": 0.38297872340425526,
+      "error": null
+    },
+    {
+      "test_id": "short/2A-27-103150_116454",
+      "grounded_f1": 0.11111111111111112,
+      "page_f1": 0.5223880597014926,
+      "error": null
+    },
+    {
+      "test_id": "short/2A-9-136008_97695",
+      "grounded_f1": 0.16363636363636364,
+      "page_f1": 0.3448275862068966,
+      "error": null
+    },
+    {
+      "test_id": "short/2A-9-156032_107792",
+      "grounded_f1": 0.11538461538461538,
+      "page_f1": 0.4,
+      "error": null
+    },
+    {
+      "test_id": "short/2A-9-160248_109904",
+      "grounded_f1": 0.18867924528301888,
+      "page_f1": 0.34146341463414637,
+      "error": null
+    },
+    {
+      "test_id": "short/2A-9-160258_109909",
+      "grounded_f1": 0.3818181818181818,
+      "page_f1": 0.5076923076923078,
+      "error": null
+    },
+    {
+      "test_id": "short/2A-9-160266_109913",
+      "grounded_f1": 0.2828282828282829,
+      "page_f1": 0.47154471544715443,
+      "error": null
+    },
+    {
+      "test_id": "short/2A-9-160268_109914",
+      "grounded_f1": 0.27450980392156865,
+      "page_f1": 0.4838709677419355,
+      "error": null
+    },
+    {
+      "test_id": "short/2A-9-160282_109921",
+      "grounded_f1": 0.4220183486238533,
+      "page_f1": 0.4812030075187971,
+      "error": null
+    },
+    {
+      "test_id": "short/2A-9-160298_109929",
+      "grounded_f1": 0.3703703703703704,
+      "page_f1": 0.5190839694656489,
+      "error": null
+    },
+    {
+      "test_id": "short/2A-9-160318_109939",
+      "grounded_f1": 0.2912621359223301,
+      "page_f1": 0.4920634920634921,
+      "error": null
+    },
+    {
+      "test_id": "short/3N1AB7AP8FY283932_professional_valuation",
+      "grounded_f1": 0.0,
+      "page_f1": 0.5217391304347826,
+      "error": null
+    },
+    {
+      "test_id": "short/3N1AB7AP8FY283932_professional_valuation_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.4761904761904762,
+      "error": null
+    },
+    {
+      "test_id": "short/593338187_200912_990PF-p0024",
+      "grounded_f1": 0.35172413793103446,
+      "page_f1": 0.8206896551724138,
+      "error": null
+    },
+    {
+      "test_id": "short/593338187_200912_990PF-p0030",
+      "grounded_f1": 0.2677165354330709,
+      "page_f1": 0.6771653543307087,
+      "error": null
+    },
+    {
+      "test_id": "short/593338187_200912_990PF-p0032",
+      "grounded_f1": 0.2965779467680609,
+      "page_f1": 0.7832699619771863,
+      "error": null
+    },
+    {
+      "test_id": "short/593338187_200912_990PF-p0033",
+      "grounded_f1": 0.3472222222222222,
+      "page_f1": 0.7499999999999999,
+      "error": null
+    },
+    {
+      "test_id": "short/593338187_200912_990PF-p0034",
+      "grounded_f1": 0.30714285714285716,
+      "page_f1": 0.7142857142857143,
+      "error": null
+    },
+    {
+      "test_id": "short/593338187_200912_990PF-p0036",
+      "grounded_f1": 0.4,
+      "page_f1": 0.819672131147541,
+      "error": null
+    },
+    {
+      "test_id": "short/593338187_200912_990PF-p0038",
+      "grounded_f1": 0.35331230283911674,
+      "page_f1": 0.8643533123028391,
+      "error": null
+    },
+    {
+      "test_id": "short/7C-02014 H-12 5-20-2013 F-01083",
+      "grounded_f1": 0.3333333333333333,
+      "page_f1": 0.5142857142857142,
+      "error": null
+    },
+    {
+      "test_id": "short/7C-04947 H-12 12-7-2009 F-01079",
+      "grounded_f1": 0.09999999999999999,
+      "page_f1": 0.15555555555555556,
+      "error": null
+    },
+    {
+      "test_id": "short/H9-53-1621_1656",
+      "grounded_f1": 0.44776119402985076,
+      "page_f1": 0.4722222222222222,
+      "error": null
+    },
+    {
+      "test_id": "short/H9-53-2119_2144",
+      "grounded_f1": 0.26865671641791045,
+      "page_f1": 0.4324324324324324,
+      "error": null
+    },
+    {
+      "test_id": "short/H9-53-23_23",
+      "grounded_f1": 0.36363636363636365,
+      "page_f1": 0.575,
+      "error": null
+    },
+    {
+      "test_id": "short/H9-53-24_24",
+      "grounded_f1": 0.3283582089552239,
+      "page_f1": 0.4383561643835616,
+      "error": null
+    },
+    {
+      "test_id": "short/H9-53-30_30",
+      "grounded_f1": 0.2727272727272727,
+      "page_f1": 0.4225352112676056,
+      "error": null
+    },
+    {
+      "test_id": "short/H9-53-319_311",
+      "grounded_f1": 0.4285714285714285,
+      "page_f1": 0.5194805194805194,
+      "error": null
+    },
+    {
+      "test_id": "short/H9-53-31_31",
+      "grounded_f1": 0.3478260869565218,
+      "page_f1": 0.4864864864864865,
+      "error": null
+    },
+    {
+      "test_id": "short/H9-53-32_32",
+      "grounded_f1": 0.33333333333333337,
+      "page_f1": 0.5925925925925926,
+      "error": null
+    },
+    {
+      "test_id": "short/H9-53-514_1043",
+      "grounded_f1": 0.2105263157894737,
+      "page_f1": 0.39506172839506176,
+      "error": null
+    },
+    {
+      "test_id": "short/H9-53-59_60",
+      "grounded_f1": 0.4266666666666667,
+      "page_f1": 0.5384615384615384,
+      "error": null
+    },
+    {
+      "test_id": "short/H9-53-7226_7240",
+      "grounded_f1": 0.3835616438356165,
+      "page_f1": 0.5194805194805194,
+      "error": null
+    },
+    {
+      "test_id": "short/H9-53-7234_7248",
+      "grounded_f1": 0.4057971014492754,
+      "page_f1": 0.4736842105263158,
+      "error": null
+    },
+    {
+      "test_id": "short/H9-53-7239_7253",
+      "grounded_f1": 0.4722222222222222,
+      "page_f1": 0.5316455696202532,
+      "error": null
+    },
+    {
+      "test_id": "short/H9-53-9349_9509",
+      "grounded_f1": 0.21621621621621623,
+      "page_f1": 0.5316455696202532,
+      "error": null
+    },
+    {
+      "test_id": "short/H9-53-9386_9545",
+      "grounded_f1": 0.21875,
+      "page_f1": 0.34782608695652173,
+      "error": null
+    },
+    {
+      "test_id": "short/P18-28-1547",
+      "grounded_f1": 0.463768115942029,
+      "page_f1": 0.62,
+      "error": null
+    },
+    {
+      "test_id": "short/P18-28-50_51",
+      "grounded_f1": 0.24561403508771928,
+      "page_f1": 0.3146067415730337,
+      "error": null
+    },
+    {
+      "test_id": "short/P18-28-52_53",
+      "grounded_f1": 0.07017543859649122,
+      "page_f1": 0.4318181818181819,
+      "error": null
+    },
+    {
+      "test_id": "short/P18-28-55_56",
+      "grounded_f1": 0.038461538461538464,
+      "page_f1": 0.3170731707317073,
+      "error": null
+    },
+    {
+      "test_id": "short/P18-28-56_57",
+      "grounded_f1": 0.4307692307692308,
+      "page_f1": 0.577319587628866,
+      "error": null
+    },
+    {
+      "test_id": "short/P18-28-62_62",
+      "grounded_f1": 0.48484848484848486,
+      "page_f1": 0.577319587628866,
+      "error": null
+    },
+    {
+      "test_id": "short/P4-27-51022_74198",
+      "grounded_f1": 0.273972602739726,
+      "page_f1": 0.41975308641975306,
+      "error": null
+    },
+    {
+      "test_id": "short/P4-27-51094_74234",
+      "grounded_f1": 0.15151515151515152,
+      "page_f1": 0.2162162162162162,
+      "error": null
+    },
+    {
+      "test_id": "short/P4-27-51220_74625",
+      "grounded_f1": 0.12307692307692308,
+      "page_f1": 0.27027027027027023,
+      "error": null
+    },
+    {
+      "test_id": "short/P4-27-51300_74665",
+      "grounded_f1": 0.1290322580645161,
+      "page_f1": 0.14705882352941177,
+      "error": null
+    },
+    {
+      "test_id": "short/P4-27-51318_74674",
+      "grounded_f1": 0.2758620689655173,
+      "page_f1": 0.5588235294117647,
+      "error": null
+    },
+    {
+      "test_id": "short/P4-83-199_29",
+      "grounded_f1": 0.3283582089552239,
+      "page_f1": 0.6133333333333333,
+      "error": null
+    },
+    {
+      "test_id": "short/P4-83-201_30",
+      "grounded_f1": 0.26086956521739124,
+      "page_f1": 0.5384615384615384,
+      "error": null
+    },
+    {
+      "test_id": "short/P4-83-211_35",
+      "grounded_f1": 0.1846153846153846,
+      "page_f1": 0.5205479452054794,
+      "error": null
+    },
+    {
+      "test_id": "short/P4-83-433_147",
+      "grounded_f1": 0.11538461538461536,
+      "page_f1": 0.3508771929824561,
+      "error": null
+    },
+    {
+      "test_id": "short/P4-83-443_152",
+      "grounded_f1": 0.2181818181818182,
+      "page_f1": 0.45161290322580644,
+      "error": null
+    },
+    {
+      "test_id": "short/P4-83-449_155",
+      "grounded_f1": 0.0,
+      "page_f1": 0.21052631578947367,
+      "error": null
+    },
+    {
+      "test_id": "short/P4-83-457_159",
+      "grounded_f1": 0.0,
+      "page_f1": 0.08955223880597013,
+      "error": null
+    },
+    {
+      "test_id": "short/P4-83-631_246",
+      "grounded_f1": 0.2068965517241379,
+      "page_f1": 0.3125,
+      "error": null
+    },
+    {
+      "test_id": "short/P4-83-693_277",
+      "grounded_f1": 0.29508196721311475,
+      "page_f1": 0.5507246376811594,
+      "error": null
+    },
+    {
+      "test_id": "short/P4-Historical Single Signature83-10963_5480",
+      "grounded_f1": 0.15686274509803924,
+      "page_f1": 0.36666666666666664,
+      "error": null
+    },
+    {
+      "test_id": "short/P4-Historical Single Signature83-223_41",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/P4-Historical Single Signature83-257_58",
+      "grounded_f1": 0.0,
+      "page_f1": 0.3050847457627119,
+      "error": null
+    },
+    {
+      "test_id": "short/REDACTED_2007_NISSAN_MURANO_professional_valuation",
+      "grounded_f1": 0.0,
+      "page_f1": 0.38461538461538464,
+      "error": null
+    },
+    {
+      "test_id": "short/ROGER-WINFIELD-SCOTT-FOUNDATION-INC-2009-580655183-p0024",
+      "grounded_f1": 0.42704626334519574,
+      "page_f1": 0.7117437722419929,
+      "error": null
+    },
+    {
+      "test_id": "short/ROGER-WINFIELD-SCOTT-FOUNDATION-INC-2009-580655183-p0025",
+      "grounded_f1": 0.4456521739130434,
+      "page_f1": 0.6630434782608696,
+      "error": null
+    },
+    {
+      "test_id": "short/W-1-9-260_262",
+      "grounded_f1": 0.39999999999999997,
+      "page_f1": 0.6019417475728156,
+      "error": null
+    },
+    {
+      "test_id": "short/W-1-9-261_263",
+      "grounded_f1": 0.33333333333333326,
+      "page_f1": 0.6153846153846153,
+      "error": null
+    },
+    {
+      "test_id": "short/W14-52342_W14",
+      "grounded_f1": 0.016260162601626018,
+      "page_f1": 0.2818181818181818,
+      "error": null
+    },
+    {
+      "test_id": "short/W14-53632_W14 ADMIN REVIEWED",
+      "grounded_f1": 0.3220338983050847,
+      "page_f1": 0.24186046511627904,
+      "error": null
+    },
+    {
+      "test_id": "short/W14-54500_W14 admin reviewed",
+      "grounded_f1": 0.42666666666666664,
+      "page_f1": 0.4050632911392405,
+      "error": null
+    },
+    {
+      "test_id": "short/W14-55311_W14 reviewed",
+      "grounded_f1": 0.4776119402985074,
+      "page_f1": 0.3675213675213675,
+      "error": null
+    },
+    {
+      "test_id": "short/W14-55711_W14 ADMIN REVIEWED",
+      "grounded_f1": 0.35114503816793896,
+      "page_f1": 0.3391304347826087,
+      "error": null
+    },
+    {
+      "test_id": "short/W14-57728_W14_REVISED",
+      "grounded_f1": 0.13953488372093023,
+      "page_f1": 0.09282700421940929,
+      "error": null
+    },
+    {
+      "test_id": "short/W14-58025_W14 Admin Reviewed",
+      "grounded_f1": 0.14953271028037382,
+      "page_f1": 0.10101010101010102,
+      "error": null
+    },
+    {
+      "test_id": "short/W14-58549_W14",
+      "grounded_f1": 0.4444444444444444,
+      "page_f1": 0.3898916967509025,
+      "error": null
+    },
+    {
+      "test_id": "short/W14-Atascosa SWD Well No. 4 - W-14 (Updated 01.22.2025)",
+      "grounded_f1": 0.43859649122807026,
+      "page_f1": 0.2792792792792793,
+      "error": null
+    },
+    {
+      "test_id": "short/W2-27-216874_212740",
+      "grounded_f1": 0.09345794392523364,
+      "page_f1": 0.17721518987341772,
+      "error": null
+    },
+    {
+      "test_id": "short/W2-27-217184_213122",
+      "grounded_f1": 0.348993288590604,
+      "page_f1": 0.42727272727272725,
+      "error": null
+    },
+    {
+      "test_id": "short/W2-27-217314_213200",
+      "grounded_f1": 0.13043478260869565,
+      "page_f1": 0.1301775147928994,
+      "error": null
+    },
+    {
+      "test_id": "short/W2-27-217884_213729",
+      "grounded_f1": 0.1206896551724138,
+      "page_f1": 0.23728813559322035,
+      "error": null
+    },
+    {
+      "test_id": "short/WVWJK73C19P047779_professional_valuation",
+      "grounded_f1": 0.0,
+      "page_f1": 0.5454545454545454,
+      "error": null
+    },
+    {
+      "test_id": "short/WVWJK73C19P047779_professional_valuation_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.33333333333333326,
+      "error": null
+    },
+    {
+      "test_id": "short/YV4952BL2C1140915_professional_valuation",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/YV4952BL2C1140915_professional_valuation_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/aclu_cdwg_invoice",
+      "grounded_f1": 0.0,
+      "page_f1": 1.0,
+      "error": null
+    },
+    {
+      "test_id": "short/arif-2021",
+      "grounded_f1": 0.2111801242236025,
+      "page_f1": 0.33540372670807456,
+      "error": null
+    },
+    {
+      "test_id": "short/arif-2022",
+      "grounded_f1": 0.19480519480519481,
+      "page_f1": 0.37662337662337664,
+      "error": null
+    },
+    {
+      "test_id": "short/arif-2024",
+      "grounded_f1": 0.16494845360824742,
+      "page_f1": 0.29896907216494845,
+      "error": null
+    },
+    {
+      "test_id": "short/bianco-2024",
+      "grounded_f1": 0.20714285714285713,
+      "page_f1": 0.39999999999999997,
+      "error": null
+    },
+    {
+      "test_id": "short/brand_price_list_lifescience_2024",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/brand_price_list_lifescience_2024_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/budget_appendix_doe",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/budget_appendix_legis",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/ca_rad_crossover_inpatient_p5",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/ca_rad_crossover_inpatient_p5_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/ca_rad_crossover_outpatient_p5",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/ca_rad_crossover_outpatient_p5_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/caterpillar_spec_sheet_312c_excavator",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/caterpillar_spec_sheet_312c_excavator_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/caterpillar_spec_sheet_330_excavator",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/caterpillar_spec_sheet_330_excavator_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/cbp_7501_continuation_0001",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/cbp_7501_continuation_0002",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/cbp_7501_continuation_0007",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/cbp_7501_continuation_0016",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/cbp_7501_continuation_0018",
+      "grounded_f1": 0.0,
+      "page_f1": 0.7375886524822695,
+      "error": null
+    },
+    {
+      "test_id": "short/ccc_online_0005_american_family_chevrolet_sonic",
+      "grounded_f1": 0.0,
+      "page_f1": 1.0,
+      "error": null
+    },
+    {
+      "test_id": "short/ccc_online_0005_american_family_chevrolet_sonic_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.8,
+      "error": null
+    },
+    {
+      "test_id": "short/ccc_online_0006_esurance_toyota_rav4",
+      "grounded_f1": 0.0,
+      "page_f1": 0.4,
+      "error": null
+    },
+    {
+      "test_id": "short/ccc_online_0006_esurance_toyota_rav4_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.8,
+      "error": null
+    },
+    {
+      "test_id": "short/census_statab",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/census_statab_12s0035",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/census_statab_12s0711",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/census_statab_employment",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/census_statab_income_by_state",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/cfpb_closing-disclosure_H25E",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/cfpb_closing-disclosure_H25E_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/cfpb_closing-disclosure_H25F",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/cfpb_closing-disclosure_H25F_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/cfpb_closing-disclosure_filled-sample",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/cfpb_closing-disclosure_filled-sample_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/dc-pepco-residential-bill",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/dd1155_schedule_continuation_0002",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/dd1155_schedule_continuation_0008",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/fidelity_0002_sample",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/fort_bend_operativeiq_invoice",
+      "grounded_f1": 0.0,
+      "page_f1": 1.0,
+      "error": null
+    },
+    {
+      "test_id": "short/golden_corral_receipt_refugio_county_auditor",
+      "grounded_f1": 0.0,
+      "page_f1": 0.5,
+      "error": null
+    },
+    {
+      "test_id": "short/grafton_isotrope_invoice_19503",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/gsa_mas_it_labor_0004",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/gsa_mas_it_labor_0020",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/hingham-grainger-invoice",
+      "grounded_f1": 0.0,
+      "page_f1": 1.0,
+      "error": null
+    },
+    {
+      "test_id": "short/hingham-wbmason-invoice",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/hingham_lowes_receipt",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/lancaster_county_ne_requisition_po_husker_steel",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/lancaster_county_ne_requisition_po_husker_steel_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/mcdonalds_receipt_chicago_documentcloud",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/mission-tx-tyler-invoice",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/ms_medicaid_ra_adjustments",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/ms_medicaid_ra_adjustments_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/ms_medicaid_ra_paid_denied_claims",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/ms_medicaid_ra_paid_denied_claims_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/oklahoma_county_purchase_order_avl_systems",
+      "grounded_f1": 0.0,
+      "page_f1": 0.6666666666666666,
+      "error": null
+    },
+    {
+      "test_id": "short/oklahoma_county_purchase_order_avl_systems_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.4,
+      "error": null
+    },
+    {
+      "test_id": "short/passcoag-2020-w2-p0002-r2",
+      "grounded_f1": 0.38095238095238104,
+      "page_f1": 0.8095238095238095,
+      "error": null
+    },
+    {
+      "test_id": "short/passcoag-2020-w2-p0002-r4",
+      "grounded_f1": 0.358974358974359,
+      "page_f1": 0.6153846153846153,
+      "error": null
+    },
+    {
+      "test_id": "short/passcoag-2020-w2-p0003-r2",
+      "grounded_f1": 0.45454545454545453,
+      "page_f1": 0.7727272727272727,
+      "error": null
+    },
+    {
+      "test_id": "short/passcoag-2020-w2-p0003-r4",
+      "grounded_f1": 0.4897959183673469,
+      "page_f1": 0.8163265306122449,
+      "error": null
+    },
+    {
+      "test_id": "short/passcoag-2020-w2-p0005-r1",
+      "grounded_f1": 0.3333333333333333,
+      "page_f1": 0.6190476190476191,
+      "error": null
+    },
+    {
+      "test_id": "short/passcoag-2020-w2-p0006-r1",
+      "grounded_f1": 0.48000000000000004,
+      "page_f1": 0.8400000000000001,
+      "error": null
+    },
+    {
+      "test_id": "short/passcoag-2020-w2-p0006-r2",
+      "grounded_f1": 0.4444444444444445,
+      "page_f1": 0.7111111111111111,
+      "error": null
+    },
+    {
+      "test_id": "short/passcoag-2020-w2-p0006-r4",
+      "grounded_f1": 0.4444444444444445,
+      "page_f1": 0.7111111111111111,
+      "error": null
+    },
+    {
+      "test_id": "short/pershing_0001",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/ppl-two-bill-example",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/real_clinton_property_25_11073",
+      "grounded_f1": 0.4368932038834951,
+      "page_f1": 0.4473684210526315,
+      "error": null
+    },
+    {
+      "test_id": "short/real_clinton_property_25_11073_corrupted",
+      "grounded_f1": 0.1407035175879397,
+      "page_f1": 0.20535714285714288,
+      "error": null
+    },
+    {
+      "test_id": "short/southampton-ny-york-env-invoice",
+      "grounded_f1": 0.0,
+      "page_f1": 0.6666666666666666,
+      "error": null
+    },
+    {
+      "test_id": "short/stephenville-axon-invoice",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/texas_facilities_commission_purchase_order_shelton-keller",
+      "grounded_f1": 0.0,
+      "page_f1": 1.0,
+      "error": null
+    },
+    {
+      "test_id": "short/texas_facilities_commission_purchase_order_shelton-keller_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 1.0,
+      "error": null
+    },
+    {
+      "test_id": "short/ti_spec_sheet_ne555_timer",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/ti_spec_sheet_ne555_timer_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/uillinois_rate_card_carpool_2024",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/uillinois_rate_card_carpool_2024_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/utah_fleet_rate_schedule_fy2024",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/utah_fleet_rate_schedule_fy2024_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/viega_price_list_propress_2026",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/viega_price_list_propress_2026_corrupted",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
+      "error": null
+    },
+    {
+      "test_id": "short/we-energies-sample-bill",
+      "grounded_f1": 0.0,
+      "page_f1": 0.0,
       "error": null
     }
   ]
