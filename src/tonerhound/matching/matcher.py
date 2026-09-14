@@ -43,6 +43,20 @@ class EvidenceMatcher:
 
     def __init__(self, index: DocumentIndex) -> None:
         self.index = index
+        self._numeric_cache: dict[int, list[tuple[DocumentToken, float, int]]] = {}
+
+    def _get_page_numeric_tokens(self, page_num: int) -> list[tuple[DocumentToken, float, int]]:
+        if page_num not in self._numeric_cache:
+            page = self.index.get_page(page_num)
+            cached: list[tuple[DocumentToken, float, int]] = []
+            if page:
+                for line in page.lines:
+                    for token in line.tokens:
+                        num = parse_numeric_value(token.text)
+                        if num is not None:
+                            cached.append((token, num, line.line_index))
+            self._numeric_cache[page_num] = cached
+        return self._numeric_cache[page_num]
 
     def find_exact_candidates(
         self,
@@ -54,8 +68,14 @@ class EvidenceMatcher:
             return []
 
         norm_query = normalize_unicode_and_case(query).text.strip()
-        candidates: list[MatchCandidate] = []
+        if not norm_query:
+            return []
 
+        # Prevent scanning whole document for short 1-2 char queries without page hint
+        if len(norm_query) <= 2 and page_hint is None and len(self.index.pages) > 1:
+            return []
+
+        candidates: list[MatchCandidate] = []
         pages = [page_hint] if (page_hint and self.index.get_page(page_hint)) else [p.page_number for p in self.index.pages]
 
         for p_num in pages:
@@ -65,7 +85,7 @@ class EvidenceMatcher:
 
             # Check exact matches on visual lines first
             for line in page.lines:
-                norm_line = normalize_unicode_and_case(line.text).text.strip()
+                norm_line = line.norm_text
                 if norm_query == norm_line:
                     candidates.append(
                         MatchCandidate(
@@ -101,18 +121,33 @@ class EvidenceMatcher:
 
             # Fallback to page-wide search if not found in single lines
             if not candidates:
-                page_matches = self.index.search_exact(query, page=p_num)
-                for box, text in page_matches:
-                    candidates.append(
-                        MatchCandidate(
-                            page=p_num,
-                            bbox=box,
-                            tokens=(),
-                            matched_text=text,
-                            match_type="exact",
-                            raw_similarity=1.0,
+                if len(norm_query) <= 2:
+                    matching_tokens = [t for t in self.index._token_index.get(norm_query, []) if t.page == p_num]
+                    for t in matching_tokens:
+                        candidates.append(
+                            MatchCandidate(
+                                page=p_num,
+                                bbox=t.bbox,
+                                tokens=(t,),
+                                matched_text=t.text,
+                                match_type="exact",
+                                raw_similarity=1.0,
+                                line_index=t.line_index,
+                            )
                         )
-                    )
+                else:
+                    page_matches = self.index.search_exact(query, page=p_num)
+                    for box, text in page_matches:
+                        candidates.append(
+                            MatchCandidate(
+                                page=p_num,
+                                bbox=box,
+                                tokens=(),
+                                matched_text=text,
+                                match_type="exact",
+                                raw_similarity=1.0,
+                            )
+                        )
 
         return candidates
 
@@ -126,35 +161,33 @@ class EvidenceMatcher:
         if target_num is None:
             return []
 
+        # Prevent full document scan for numbers without page hint on large docs
+        if page_hint is None and len(self.index.pages) > 10:
+            return []
+
         candidates: list[MatchCandidate] = []
         pages = [page_hint] if (page_hint and self.index.get_page(page_hint)) else [p.page_number for p in self.index.pages]
 
+        val_str = str(value).strip()
         for p_num in pages:
-            page = self.index.get_page(p_num)
-            if not page:
-                continue
+            for token, token_num, line_idx in self._get_page_numeric_tokens(p_num):
+                if is_number_equal(target_num, token_num):
+                    tok_bbox = token.bbox
+                    if val_str in token.text and len(val_str) < len(token.text):
+                        idx = token.text.find(val_str)
+                        tok_bbox = tok_bbox.sub_bbox(idx, idx + len(val_str), len(token.text))
 
-            for line in page.lines:
-                for token in line.tokens:
-                    token_num = parse_numeric_value(token.text)
-                    if token_num is not None and is_number_equal(target_num, token_num):
-                        tok_bbox = token.bbox
-                        val_str = str(value).strip()
-                        if val_str in token.text and len(val_str) < len(token.text):
-                            idx = token.text.find(val_str)
-                            tok_bbox = tok_bbox.sub_bbox(idx, idx + len(val_str), len(token.text))
-
-                        candidates.append(
-                            MatchCandidate(
-                                page=p_num,
-                                bbox=tok_bbox,
-                                tokens=(token,),
-                                matched_text=token.text,
-                                match_type="normalized_number",
-                                raw_similarity=1.0,
-                                line_index=line.line_index,
-                            )
+                    candidates.append(
+                        MatchCandidate(
+                            page=p_num,
+                            bbox=tok_bbox,
+                            tokens=(token,),
+                            matched_text=token.text,
+                            match_type="normalized_number",
+                            raw_similarity=1.0,
+                            line_index=line_idx,
                         )
+                    )
 
         return candidates
 
@@ -166,6 +199,10 @@ class EvidenceMatcher:
         """Tier 2b: Locate date values across varied surface calendar formats."""
         target_date = parse_date_value(value)
         if target_date is None:
+            return []
+
+        # Prevent full document scan for dates without page hint on large docs
+        if page_hint is None and len(self.index.pages) > 10:
             return []
 
         candidates: list[MatchCandidate] = []
@@ -216,7 +253,11 @@ class EvidenceMatcher:
         page_hint: int | None = None,
     ) -> list[MatchCandidate]:
         """Tier 3: Fuzzy sequence alignment for OCR errors or minor textual drift."""
-        if not query or len(query.strip()) < 3:
+        if not query or len(query.strip()) < 4:
+            return []
+
+        # Prevent catastrophic O(N_fields * N_lines) scans on large docs without a page hint
+        if page_hint is None and len(self.index.pages) > 10:
             return []
 
         norm_query = normalize_unicode_and_case(query).text.strip()
@@ -229,7 +270,7 @@ class EvidenceMatcher:
                 continue
 
             for line in page.lines:
-                norm_line = normalize_unicode_and_case(line.text).text.strip()
+                norm_line = line.norm_text
                 sim = fuzz.partial_ratio(norm_query, norm_line) / 100.0
                 if sim >= threshold:
                     sub_toks, sub_sim = self._find_best_fuzzy_subsequence(line.tokens, norm_query)

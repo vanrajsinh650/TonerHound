@@ -45,10 +45,19 @@ class VisualLine:
     page: int
     line_index: int
     bbox: BBox
+    _norm_text: str | None = None
 
     @property
     def text(self) -> str:
         return " ".join(t.text for t in self.tokens)
+
+    @property
+    def norm_text(self) -> str:
+        if self._norm_text is None:
+            from tonerhound.normalization.normalizers import normalize_unicode_and_case
+
+            self._norm_text = normalize_unicode_and_case(self.text).text.strip()
+        return self._norm_text
 
 
 @dataclass(slots=True)

@@ -83,13 +83,13 @@ class EvidenceResolver:
         if not candidates and isinstance(value, str):
             candidates.extend(self.matcher.find_normalized_numeric_candidates(value, page_hint=page_hint))
 
-        # Tier 3: Fuzzy sequence alignment fallback
-        if not candidates:
+        # Tier 3: Fuzzy sequence alignment fallback (only for text strings)
+        if not candidates and isinstance(value, str) and not is_num:
             query = evidence_text if evidence_text else str(value)
             candidates.extend(self.matcher.find_fuzzy_candidates(query, threshold=0.82, page_hint=page_hint))
 
-        # If still no candidates found on page_hint, relax page_hint to search all pages
-        if not candidates and page_hint is not None:
+        # If still no candidates found on page_hint, relax page_hint to search all pages on small documents
+        if not candidates and page_hint is not None and len(self.matcher.index.pages) <= 10:
             if evidence_text:
                 candidates.extend(self.matcher.find_exact_candidates(evidence_text, page_hint=None))
             if not candidates and is_num:

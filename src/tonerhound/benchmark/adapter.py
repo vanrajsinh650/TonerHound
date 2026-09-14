@@ -80,7 +80,7 @@ class ExtractBenchAdapter:
                     )
                     # Salient anchor candidate
                     is_anchor_cand = (
-                        any(kw in path.lower() for kw in ("number", "name", "subject", "id", "code", "desc", "title"))
+                        any(kw in path.lower() for kw in ("issuer", "owner", "entity", "company", "name", "number", "subject", "id", "code", "desc", "title", "item"))
                         or (len(val_str) >= 4 and not val_str.replace(".", "").replace(",", "").isdigit())
                     )
                     if is_anchor_cand:
@@ -247,7 +247,8 @@ class ExtractBenchAdapter:
         leaves: list[tuple[str, Any, int | None, str | None, str]],
     ) -> int:
         """Calibrate offset between logical source_page and physical PDF pages."""
-        votes = {0: 0, 1: 0, -1: 0}
+        offsets_to_test = range(-2, 5)
+        votes = {o: 0 for o in offsets_to_test}
         total_pages = len(self.index.pages)
         checked = 0
 
@@ -255,20 +256,18 @@ class ExtractBenchAdapter:
             if page_hint is None:
                 continue
             val_str = str(value).strip()
-            if len(val_str) >= 4 and not val_str.replace(".", "").replace(",", "").isdigit():
+            if len(val_str) >= 5 and not val_str.replace(".", "").replace(",", "").isdigit():
                 checked += 1
-                for offset in (0, 1, -1):
+                for offset in offsets_to_test:
                     target_p = page_hint + offset
                     if 1 <= target_p <= total_pages and self.index.search_exact(val_str, page=target_p):
                         votes[offset] += 1
                 if checked >= 20:
                     break
 
-        # If zero candidates match on nominal page, but offset +1 or -1 has strong consensus
-        if votes[0] == 0 and votes[1] >= 2 and votes[1] > votes[-1]:
-            return 1
-        if votes[0] == 0 and votes[-1] >= 2 and votes[-1] > votes[1]:
-            return -1
+        best_offset, best_votes = max(votes.items(), key=lambda x: x[1])
+        if best_votes >= 2 and best_votes > votes.get(0, 0):
+            return best_offset
         return 0
 
 
@@ -276,6 +275,7 @@ def _flatten_leaves_with_context(
     data: Any,
     prefix: str = "",
     parent_record_path: str = "",
+    parent_page_hint: int | None = None,
 ) -> list[tuple[str, Any, int | None, str | None, str]]:
     """Recursively flatten data into (path, value, page_hint, context, parent_record_path)."""
     items: list[tuple[str, Any, int | None, str | None, str]] = []
@@ -287,11 +287,13 @@ def _flatten_leaves_with_context(
             if pkey in data and isinstance(data[pkey], int):
                 page_hint = data[pkey]
                 break
+        if page_hint is None:
+            page_hint = parent_page_hint
 
         # Collect salient sibling strings for context
         salient_siblings = []
         for k, v in data.items():
-            if k in ("source_page", "page", "page_number"):
+            if k in ("source_page", "page", "page_number", "page_no", "page_num"):
                 continue
             if isinstance(v, str) and 2 <= len(v) <= 40:
                 salient_siblings.append(v)
@@ -306,20 +308,20 @@ def _flatten_leaves_with_context(
             record_path = prefix or "root"
 
             if isinstance(v, (Mapping, Sequence)) and not isinstance(v, (str, bytes, bytearray)):
-                items.extend(_flatten_leaves_with_context(v, child_path, record_path))
+                items.extend(_flatten_leaves_with_context(v, child_path, record_path, page_hint))
             else:
                 items.append((child_path, v, page_hint, context, record_path))
 
     elif isinstance(data, Sequence) and not isinstance(data, (str, bytes, bytearray)):
         for idx, item in enumerate(data):
             child_path = f"{prefix}[{idx}]"
-            record_path = child_path
+            record_path = parent_record_path if parent_record_path not in ("", "root") else child_path
             if isinstance(item, (Mapping, Sequence)) and not isinstance(item, (str, bytes, bytearray)):
-                items.extend(_flatten_leaves_with_context(item, child_path, record_path))
+                items.extend(_flatten_leaves_with_context(item, child_path, record_path, parent_page_hint))
             else:
-                items.append((child_path, item, None, None, prefix))
+                items.append((child_path, item, parent_page_hint, None, record_path))
     else:
         if prefix:
-            items.append((prefix, data, None, None, parent_record_path))
+            items.append((prefix, data, parent_page_hint, None, parent_record_path))
 
     return items
