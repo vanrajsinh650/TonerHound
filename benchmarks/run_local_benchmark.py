@@ -24,6 +24,7 @@ if _REF_EXTRACTBENCH.exists() and str(_REF_EXTRACTBENCH) not in sys.path:
     sys.path.insert(0, str(_REF_EXTRACTBENCH))
 
 from extract_bench.test_cases.loader import load_test_case
+
 from tonerhound.benchmark.adapter import ExtractBenchAdapter
 from tonerhound.benchmark.evaluator import evaluate_prediction
 from tonerhound.document.index import DocumentIndex
@@ -60,7 +61,7 @@ def run_local_benchmark(
     enable_ocr: bool = False,
     enable_structural_disambiguation: bool = True,
     enable_verification: bool = True,
-    score_margin_threshold: float = 0.05,
+    score_margin_threshold: float = 0.01,
     enable_bbox_precision: bool = True,
     limit: int | None = None,
     verbose: bool = True,
@@ -82,10 +83,10 @@ def run_local_benchmark(
     doc_results: list[LocalDocResult] = []
 
     if verbose:
-        print(f"\n=======================================================")
+        print("\n=======================================================")
         print(f"RUNNING EXP-005 LOCAL BENCHMARK: {experiment_id}")
         print(f"Split Filter: {split_filter} | Total Documents: {len(docs)}")
-        print(f"=======================================================\n")
+        print("=======================================================\n")
 
     suite_start = time.perf_counter()
 
@@ -238,10 +239,10 @@ def run_local_benchmark(
         print(f"Overall Word Recall:         {overall_agg.get('mean_word_recall', 0)*100:.2f}%")
         print(f"Overall Page Grounding F1:   {overall_agg.get('mean_page_grounding_f1', 0)*100:.2f}%")
         print(f"Overall False Grounding Rate:{overall_agg.get('mean_false_grounding_rate', 0)*100:.2f}%\n")
-        print(f"--- By Split ---")
+        print("--- By Split ---")
         print(f"Train/Dev F1 (20 docs):      {train_dev_agg.get('mean_word_grounding_f1', 0)*100:.2f}% (EXP-004 base: 37.87%)")
         print(f"Local Val F1 (12 docs):      {local_val_agg.get('mean_word_grounding_f1', 0)*100:.2f}% (EXP-004 base: 44.30%)\n")
-        print(f"--- By Length Slice ---")
+        print("--- By Length Slice ---")
         print(f"Short Documents F1:          {short_agg.get('mean_word_grounding_f1', 0)*100:.2f}%")
         print(f"Medium Documents F1:         {medium_agg.get('mean_word_grounding_f1', 0)*100:.2f}%")
         print(f"Long Documents F1:           {long_agg.get('mean_word_grounding_f1', 0)*100:.2f}%\n")
@@ -290,6 +291,7 @@ if __name__ == "__main__":
     parser.add_argument("--manifest", default="benchmarks/exp005_local_manifest.json")
     parser.add_argument("--split", default="all", choices=["all", "train_dev", "local_validation"])
     parser.add_argument("--id", default="EXP-005-baseline")
+    parser.add_argument("--score-margin", type=float, default=0.01, help="Score margin threshold for verifier")
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--no-ocr", action="store_true")
     parser.add_argument("--save", action="store_true", help="Save summary JSON to experiments/")
@@ -300,6 +302,7 @@ if __name__ == "__main__":
         split_filter=args.split,
         experiment_id=args.id,
         enable_ocr=not args.no_ocr,
+        score_margin_threshold=args.score_margin,
         limit=args.limit,
     )
 
@@ -310,4 +313,4 @@ if __name__ == "__main__":
             json.dump(summary, f, indent=2)
         print(f"Saved results to {out_json}")
         update_leaderboard(summary)
-        print(f"Updated leaderboard: experiments/EXP-005-leaderboard.csv")
+        print("Updated leaderboard: experiments/EXP-005-leaderboard.csv")
