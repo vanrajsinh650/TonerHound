@@ -1,0 +1,633 @@
+{
+  "manifest_version": "EXP-005-LOCAL-v1.0",
+  "status": "FROZEN",
+  "creation_timestamp": "2026-09-14T14:20:00Z",
+  "description": "Stratified, representative, frozen 32-document local benchmark subset of ExtractBench for iterative TonerHound algorithmic progression.",
+  "summary": {
+    "total_documents": 32,
+    "train_dev_count": 20,
+    "local_validation_count": 12,
+    "short_count": 14,
+    "medium_count": 12,
+    "long_count": 6,
+    "total_pages": 881,
+    "train_dev_pages": 584,
+    "local_validation_pages": 297,
+    "exp004_train_dev_mean_grounded_f1": 0.3787,
+    "exp004_local_val_mean_grounded_f1": 0.443,
+    "exp004_total_mean_grounded_f1": 0.4028
+  },
+  "documents": [
+    {
+      "test_id": "short/00581-2011-p0050",
+      "split": "train_dev",
+      "length_class": "short",
+      "domain": "tax_form",
+      "challenge_tags": [
+        "form_1065_k1",
+        "checkboxes",
+        "ein",
+        "multi_line_address",
+        "sparse_tax_grid"
+      ],
+      "why_included": "IRS Schedule K-1 tax form testing checkbox resolution, partner identification, and monetary box numbers.",
+      "num_pages": 1,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.5490196078431373,
+        "page_grounding_f1": 0.8235294117647058,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "short/07021-2016-p0014",
+      "split": "train_dev",
+      "length_class": "short",
+      "domain": "tax_form",
+      "challenge_tags": [
+        "form_1065_k1",
+        "checkboxes",
+        "low_baseline_f1",
+        "percentage_shares"
+      ],
+      "why_included": "Hard tax form failure case from EXP-004 (27.78% F1) with booleans and delicate percentage values.",
+      "num_pages": 1,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.2777777777777778,
+        "page_grounding_f1": 0.5,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "short/08-15427 H-12 1-21-2003 F-01341",
+      "split": "train_dev",
+      "length_class": "short",
+      "domain": "regulatory_form",
+      "challenge_tags": [
+        "texas_rrc_h12",
+        "70_plus_fields",
+        "boolean_flags",
+        "technical_numeric",
+        "low_baseline_f1"
+      ],
+      "why_included": "Severely degraded in EXP-004 (18.18% F1) due to dense checkbox flags and technical oil/gas parameters.",
+      "num_pages": 2,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.18181818181818182,
+        "page_grounding_f1": 0.3434343434343434,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "short/13f__sl_advisors_llc",
+      "split": "train_dev",
+      "length_class": "short",
+      "domain": "financial_holdings",
+      "challenge_tags": [
+        "sec_13f",
+        "dense_tables",
+        "cusip",
+        "market_values",
+        "repeating_rows"
+      ],
+      "why_included": "Tabular SEC 13F filing testing high-precision table cell alignment across CUSIPs and share counts.",
+      "num_pages": 2,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.7746170678336981,
+        "page_grounding_f1": 0.8905908096280087,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "short/nport__bullfinch_fund_inc",
+      "split": "train_dev",
+      "length_class": "short",
+      "domain": "financial_holdings",
+      "challenge_tags": [
+        "sec_nport",
+        "mutual_fund_holdings",
+        "coupons",
+        "maturity_dates"
+      ],
+      "why_included": "SEC Form N-PORT bond schedule testing date normalization and financial instrument grounding.",
+      "num_pages": 3,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.519774011299435,
+        "page_grounding_f1": 0.7593220338983051,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "short/real_clinton_property_25_11073",
+      "split": "train_dev",
+      "length_class": "short",
+      "domain": "property_deed",
+      "challenge_tags": [
+        "real_estate",
+        "parcel_id",
+        "legal_description",
+        "digital_pdf"
+      ],
+      "why_included": "Real property deed testing parcel number identification and multi-line legal boundaries.",
+      "num_pages": 9,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.4368932038834951,
+        "page_grounding_f1": 0.4473684210526315,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "short/real_clinton_property_25_11073_corrupted",
+      "split": "train_dev",
+      "length_class": "short",
+      "domain": "property_deed",
+      "challenge_tags": [
+        "corrupted_text",
+        "ocr_noise",
+        "scanned_artifacts",
+        "paired_control"
+      ],
+      "why_included": "Direct corrupted pair to clinton_property, testing OCR fallback and fuzzy alignment under character errors.",
+      "num_pages": 9,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.1407035175879397,
+        "page_grounding_f1": 0.20535714285714288,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "short/sched_i__rotary_club_ty2024",
+      "split": "train_dev",
+      "length_class": "short",
+      "domain": "grant_schedule",
+      "challenge_tags": [
+        "form_990_sched_i",
+        "grant_table",
+        "multi_line_recipient",
+        "dollar_amounts"
+      ],
+      "why_included": "IRS Form 990 Schedule I grant schedule testing multi-column table row-alignment and non-profit grants.",
+      "num_pages": 1,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.8695652173913043,
+        "page_grounding_f1": 0.9855072463768115,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "short/sec_13f_0009_coatue_management",
+      "split": "train_dev",
+      "length_class": "short",
+      "domain": "financial_holdings",
+      "challenge_tags": [
+        "sec_13f",
+        "institutional_portfolio",
+        "repeated_issuers",
+        "table_disambiguation"
+      ],
+      "why_included": "Institutional hedge fund 13F with repeated issuers (common vs call/put options) testing structural disambiguation.",
+      "num_pages": 7,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.524554183813443,
+        "page_grounding_f1": 0.8173340647284695,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "medium/cabrera-2023",
+      "split": "train_dev",
+      "length_class": "medium",
+      "domain": "insurance_valuation",
+      "challenge_tags": [
+        "auto_valuation",
+        "extreme_failure_case",
+        "dense_option_tables",
+        "competing_numbers"
+      ],
+      "why_included": "Extreme failure case from EXP-004 (10.04% F1) with multi-page automobile total loss calculations and identical currency amounts.",
+      "num_pages": 28,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.1003584229390681,
+        "page_grounding_f1": 0.22222222222222224,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "medium/becerra-2024",
+      "split": "train_dev",
+      "length_class": "medium",
+      "domain": "insurance_valuation",
+      "challenge_tags": [
+        "auto_valuation",
+        "low_baseline_f1",
+        "vin_numbers",
+        "vehicle_conditions",
+        "multi_page"
+      ],
+      "why_included": "Underperforming medium auto valuation report (22.01% F1) requiring row/column tabular reasoning.",
+      "num_pages": 27,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.22014925373134328,
+        "page_grounding_f1": 0.33955223880597013,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "medium/bar-lev-2022",
+      "split": "train_dev",
+      "length_class": "medium",
+      "domain": "insurance_valuation",
+      "challenge_tags": [
+        "auto_valuation",
+        "repeated_dates",
+        "part_cost_tables",
+        "salient_anchors"
+      ],
+      "why_included": "Vehicle loss report with repeated component line items testing row anchor constraints.",
+      "num_pages": 25,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.2765432098765432,
+        "page_grounding_f1": 0.4679802955665024,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "medium/13f__leonteq_securities_2025q4",
+      "split": "train_dev",
+      "length_class": "medium",
+      "domain": "financial_holdings",
+      "challenge_tags": [
+        "sec_13f",
+        "20_plus_pages",
+        "dense_records",
+        "cusip_matching"
+      ],
+      "why_included": "Multi-page 13F table testing monotonic table sequence assignment across 20+ pages.",
+      "num_pages": 31,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.6556917110203407,
+        "page_grounding_f1": 0.9167801295539877,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "medium/real_bbb_service_list_corrupted",
+      "split": "train_dev",
+      "length_class": "medium",
+      "domain": "bankruptcy_claims",
+      "challenge_tags": [
+        "corrupted_text",
+        "creditor_service_list",
+        "severe_failure",
+        "multi_page_corrupted"
+      ],
+      "why_included": "Severest corrupted failure from EXP-004 (2.05% F1) testing heavy OCR noise on legal service lists.",
+      "num_pages": 17,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.020519835841313273,
+        "page_grounding_f1": 0.41097308488612844,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "medium/real_enotes_deviations",
+      "split": "train_dev",
+      "length_class": "medium",
+      "domain": "financial_holdings",
+      "challenge_tags": [
+        "financial_notes",
+        "interest_rates",
+        "multi_line_descriptions"
+      ],
+      "why_included": "Multi-page promissory note schedule testing rate and maturity date grounding.",
+      "num_pages": 26,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.5011520737327189,
+        "page_grounding_f1": 0.5157037611477316,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "medium/real_vg_reit_full",
+      "split": "train_dev",
+      "length_class": "medium",
+      "domain": "financial_holdings",
+      "challenge_tags": [
+        "vanguard_portfolio",
+        "40_plus_pages",
+        "reit_holdings",
+        "long_medium"
+      ],
+      "why_included": "Vanguard REIT portfolio across 40 pages testing scalable candidate retrieval on medium-to-long documents.",
+      "num_pages": 27,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.48063921327596804,
+        "page_grounding_f1": 0.46899426784783743,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "long/real_ftx_full",
+      "split": "train_dev",
+      "length_class": "long",
+      "domain": "bankruptcy_claims",
+      "challenge_tags": [
+        "100_plus_pages",
+        "bankruptcy_schedules",
+        "extreme_failure",
+        "page_pass_box_fail"
+      ],
+      "why_included": "High page F1 (94.90%) but 0.54% Grounded F1 in EXP-004; prime target for coordinate precision and local alignment.",
+      "num_pages": 114,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.005384170538616468,
+        "page_grounding_f1": 0.9489899144722724,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "long/real_credit_strategies_full",
+      "split": "train_dev",
+      "length_class": "long",
+      "domain": "financial_holdings",
+      "challenge_tags": [
+        "long_document",
+        "credit_holdings",
+        "sparse_pages",
+        "hierarchical_routing"
+      ],
+      "why_included": "Long document with 41.90% F1 testing BM25 page prior routing across complex investment strategies.",
+      "num_pages": 59,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.418966737438075,
+        "page_grounding_f1": 0.5283217519477786,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "long/real_imedia_full",
+      "split": "train_dev",
+      "length_class": "long",
+      "domain": "bankruptcy_claims",
+      "challenge_tags": [
+        "long_document",
+        "corporate_bankruptcy",
+        "page_pass_box_fail",
+        "extreme_failure"
+      ],
+      "why_included": "81.34% Page F1 but 0.27% Grounded F1 in EXP-004; proves bounding box IoU failure on long claims schedules.",
+      "num_pages": 114,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.002689571403782752,
+        "page_grounding_f1": 0.8133890242487526,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "long/sec_13f_0010_renaissance_technologies",
+      "split": "train_dev",
+      "length_class": "long",
+      "domain": "financial_holdings",
+      "challenge_tags": [
+        "long_document",
+        "thousands_of_records",
+        "renaissance_hedge_fund",
+        "dense_tables"
+      ],
+      "why_included": "Massive institutional 13F holding schedule testing inverted index throughput and monotonic table alignment.",
+      "num_pages": 81,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.6174324981537187,
+        "page_grounding_f1": 0.726300052236252,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "short/07021-2016-p0026",
+      "split": "local_validation",
+      "length_class": "short",
+      "domain": "tax_form",
+      "challenge_tags": [
+        "form_1065_k1",
+        "held_out_tax_form",
+        "partner_percentages",
+        "loss_allocations"
+      ],
+      "why_included": "Held-out K-1 tax form validating generalization of checkbox and tax grid alignment.",
+      "num_pages": 1,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.43478260869565216,
+        "page_grounding_f1": 0.8260869565217391,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "short/08-43259 H-12 3-18-2024 F-22737",
+      "split": "local_validation",
+      "length_class": "short",
+      "domain": "regulatory_form",
+      "challenge_tags": [
+        "texas_rrc_h12",
+        "held_out_regulatory",
+        "2024_filing",
+        "dense_numbers"
+      ],
+      "why_included": "Held-out Form H-12 regulatory test case (29.63% baseline) checking anti-overfitting on booleans.",
+      "num_pages": 1,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.2962962962962963,
+        "page_grounding_f1": 0.3789473684210526,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "short/13f__audent_global_2025q4",
+      "split": "local_validation",
+      "length_class": "short",
+      "domain": "financial_holdings",
+      "challenge_tags": [
+        "sec_13f",
+        "held_out_holdings",
+        "recent_q4_2025",
+        "table_grid"
+      ],
+      "why_included": "Held-out 13F stock schedule to verify table cell precision without parameter tuning bias.",
+      "num_pages": 2,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.7566462167689163,
+        "page_grounding_f1": 0.9222903885480572,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "short/sched_i__the_women_s_foundation_of_colorado_inc_ty2024",
+      "split": "local_validation",
+      "length_class": "short",
+      "domain": "grant_schedule",
+      "challenge_tags": [
+        "form_990_sched_i",
+        "held_out_grants",
+        "multi_line_grantees",
+        "charity_tables"
+      ],
+      "why_included": "Held-out non-profit grant schedule verifying multi-line organization name resolution.",
+      "num_pages": 7,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.7718277066356227,
+        "page_grounding_f1": 0.9010477299185099,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "short/sec_13f_0019_soros_fund_management",
+      "split": "local_validation",
+      "length_class": "short",
+      "domain": "financial_holdings",
+      "challenge_tags": [
+        "sec_13f",
+        "soros_fund",
+        "held_out_holdings",
+        "call_put_options"
+      ],
+      "why_included": "Held-out Soros 13F portfolio testing derivative and share quantity disambiguation.",
+      "num_pages": 7,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.5753158406219631,
+        "page_grounding_f1": 0.79067055393586,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "medium/cabrera-2022",
+      "split": "local_validation",
+      "length_class": "medium",
+      "domain": "insurance_valuation",
+      "challenge_tags": [
+        "auto_valuation",
+        "held_out_auto_report",
+        "low_baseline_f1",
+        "valuation_grid"
+      ],
+      "why_included": "Held-out vehicle total loss report (17.77% baseline) validating structural table disambiguation.",
+      "num_pages": 28,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.17766497461928935,
+        "page_grounding_f1": 0.29441624365482233,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "medium/bar-lev-2023",
+      "split": "local_validation",
+      "length_class": "medium",
+      "domain": "insurance_valuation",
+      "challenge_tags": [
+        "auto_valuation",
+        "held_out_auto_report",
+        "odometer_readings",
+        "part_discounts"
+      ],
+      "why_included": "Held-out valuation report verifying generalization of vehicle damage and option matrices.",
+      "num_pages": 19,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.26771653543307083,
+        "page_grounding_f1": 0.5535248041775456,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "medium/bianco-2022",
+      "split": "local_validation",
+      "length_class": "medium",
+      "domain": "insurance_valuation",
+      "challenge_tags": [
+        "auto_valuation",
+        "held_out_valuation",
+        "21_percent_baseline",
+        "settlement_totals"
+      ],
+      "why_included": "Held-out valuation case (21.97% baseline) confirming no memorization of table layout parameters.",
+      "num_pages": 20,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.21965317919075145,
+        "page_grounding_f1": 0.30057803468208094,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "medium/real_bbb_service_list",
+      "split": "local_validation",
+      "length_class": "medium",
+      "domain": "bankruptcy_claims",
+      "challenge_tags": [
+        "service_list",
+        "digital_baseline",
+        "clean_pair_to_corrupted",
+        "party_addresses"
+      ],
+      "why_included": "Clean digital counterpart to corrupted BBB service list, testing uncorrupted multi-page legal lists.",
+      "num_pages": 17,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.6111845002201672,
+        "page_grounding_f1": 0.9476723204619271,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "medium/sched_i__akron_community_foundation_ty2024",
+      "split": "local_validation",
+      "length_class": "medium",
+      "domain": "grant_schedule",
+      "challenge_tags": [
+        "form_990_sched_i",
+        "held_out_foundation",
+        "dozens_of_grants",
+        "multi_page_table"
+      ],
+      "why_included": "Held-out 15-page foundation grant schedule testing multi-page tabular row chaining.",
+      "num_pages": 26,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.5637065637065637,
+        "page_grounding_f1": 0.6907979407979409,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "long/real_ftx_full_corrupted",
+      "split": "local_validation",
+      "length_class": "long",
+      "domain": "bankruptcy_claims",
+      "challenge_tags": [
+        "long_corrupted",
+        "100_plus_pages",
+        "severe_noise",
+        "0_26_percent_baseline"
+      ],
+      "why_included": "Extreme held-out long corrupted case (0.26% baseline) testing robust OCR and alignment on large docs.",
+      "num_pages": 114,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.002646868947708199,
+        "page_grounding_f1": 0.4791702829369901,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "long/sec_13f_0026_brown_brothers_harriman",
+      "split": "local_validation",
+      "length_class": "long",
+      "domain": "financial_holdings",
+      "challenge_tags": [
+        "long_document",
+        "held_out_massive_13f",
+        "institutional_custodian",
+        "50_plus_pages"
+      ],
+      "why_included": "Held-out 50+ page institutional holdings report validating long document scaling and accuracy.",
+      "num_pages": 55,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.6389785130775039,
+        "page_grounding_f1": 0.8059312143886868,
+        "value_f1": 1.0
+      }
+    }
+  ]
+}
