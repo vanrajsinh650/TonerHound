@@ -1,0 +1,598 @@
+{
+  "request": {
+    "example_id": "short/sched_i__idaho_humanities_council_inc_ty2023",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/sched_i__idaho_humanities_council_inc_ty2023.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 34,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/sched_i__idaho_humanities_council_inc_ty2023",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "filer_ein": "820315902",
+      "filer_name": "IDAHO HUMANITIES COUNCIL INC",
+      "tax_year": 2023,
+      "tax_period_end_date": "2024-10-31",
+      "grant_records_maintained": true,
+      "total_501c3_org_count": 3,
+      "total_other_org_count": 0,
+      "grants": [
+        {
+          "recipient_name": "CITY CLUB OF BOISE",
+          "recipient_name_continuation": null,
+          "address_line1": "PO BOX 6521",
+          "address_line2": null,
+          "city": "BOISE",
+          "state": "ID",
+          "zip_code": "83707",
+          "recipient_ein": "820478972",
+          "irc_section": "501(C)(3)",
+          "cash_grant_amount": 5500,
+          "noncash_assistance_amount": 0,
+          "valuation_method": null,
+          "noncash_assistance_description": "CITY OF CLUB OF BOISE 2025 FORUM SERIES: NONPARTISAN, INCLUSIVE COMMUNITY CO",
+          "purpose_of_grant": "THE WOOD RIVER MUSEUM'S SHOSHONE-BANNOCK TRIBES OUTREACH INITIATIVE"
+        },
+        {
+          "recipient_name": "TERRAGRAPHICS INTERNATIONAL FOUNDATION",
+          "recipient_name_continuation": null,
+          "address_line1": "121 S JACKSON ST",
+          "address_line2": null,
+          "city": "MOSCOW",
+          "state": "ID",
+          "zip_code": "83843",
+          "recipient_ein": "454007725",
+          "irc_section": "501(C)(3)",
+          "cash_grant_amount": 6000,
+          "noncash_assistance_amount": 0,
+          "valuation_method": null,
+          "noncash_assistance_description": "DIGGING FOR THE UNTOLD STORY IN THE TRAGEDY AT BUNKER HILL: ARCHIVE ORGANIZA",
+          "purpose_of_grant": "WESTERN LITERATURE ASSOCIATION CONFERENCE: HOME ON THE REZ: SOVEREIGNTY AND SUSTAINABILITY"
+        },
+        {
+          "recipient_name": "FRIENDS OF IDAHO STATE PARKS",
+          "recipient_name_continuation": null,
+          "address_line1": "11544 W JENILYN CT",
+          "address_line2": null,
+          "city": "BOISE",
+          "state": "ID",
+          "zip_code": "83713",
+          "recipient_ein": "461911747",
+          "irc_section": "501(C)(3)",
+          "cash_grant_amount": 7000,
+          "noncash_assistance_amount": 0,
+          "valuation_method": null,
+          "noncash_assistance_description": "TACTILE MODEL AT THREE ISLAND CROSSING STATE PARK",
+          "purpose_of_grant": "WASSMUTH CENTER EXPANSION STRATEGIC PLANNING PROJECT"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "filer_ein",
+        "page": 1,
+        "bbox": [
+          0.601947,
+          0.14306,
+          0.059818,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "82-0315902",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "filer_name",
+        "page": 1,
+        "bbox": [
+          0.217347,
+          0.142803,
+          0.184241,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "IDAHO HUMANITIES COUNCIL INC",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "tax_year",
+        "page": 1,
+        "bbox": [
+          0.126126,
+          0.166746,
+          0.024432,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2023",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "tax_period_end_date",
+        "page": 1,
+        "bbox": [
+          0.511442,
+          0.166746,
+          0.055466,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2024-10-31",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_501c3_org_count",
+        "page": 1,
+        "bbox": [
+          0.053293,
+          0.548333,
+          0.003737,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3.",
+        "confidence": 0.7745966265025406,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_other_org_count",
+        "page": 1,
+        "bbox": [
+          0.22833,
+          0.54832,
+          0.004939,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.8415478650877943,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].recipient_name",
+        "page": 1,
+        "bbox": [
+          0.089432,
+          0.327673,
+          0.095767,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "CITY CLUB OF BOISE",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].address_line1",
+        "page": 1,
+        "bbox": [
+          0.08982,
+          0.339928,
+          0.057292,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "PO BOX 6521",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].city",
+        "page": 1,
+        "bbox": [
+          0.157434,
+          0.327673,
+          0.027765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "BOISE",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].state",
+        "page": 1,
+        "bbox": [
+          0.124157,
+          0.49679,
+          0.008078,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "ID",
+        "confidence": 0.9128257108746631,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].zip_code",
+        "page": 1,
+        "bbox": [
+          0.135634,
+          0.352403,
+          0.02571,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "83707",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].recipient_ein",
+        "page": 1,
+        "bbox": [
+          0.250824,
+          0.329088,
+          0.054612,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "82-0478972",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].irc_section",
+        "page": 1,
+        "bbox": [
+          0.171631,
+          0.53636,
+          0.039917,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "501(c)(3)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].cash_grant_amount",
+        "page": 1,
+        "bbox": [
+          0.432204,
+          0.329891,
+          0.026439,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "5,500",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].noncash_assistance_amount",
+        "page": 1,
+        "bbox": [
+          0.583077,
+          0.329088,
+          0.003561,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].noncash_assistance_description",
+        "page": 1,
+        "bbox": [
+          0.655541,
+          0.364437,
+          0.074271,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "COMMUNITY CO",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].address_line1",
+        "page": 1,
+        "bbox": [
+          0.089924,
+          0.412232,
+          0.085805,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "121 S JACKSON ST",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].city",
+        "page": 1,
+        "bbox": [
+          0.089716,
+          0.425265,
+          0.045275,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "MOSCOW,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].state",
+        "page": 1,
+        "bbox": [
+          0.139403,
+          0.424486,
+          0.008078,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "ID",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].zip_code",
+        "page": 1,
+        "bbox": [
+          0.150881,
+          0.424707,
+          0.025616,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "83843",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].recipient_ein",
+        "page": 1,
+        "bbox": [
+          0.250739,
+          0.389137,
+          0.054886,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "45-4007725",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].irc_section",
+        "page": 1,
+        "bbox": [
+          0.171631,
+          0.53636,
+          0.039917,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "501(c)(3)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].cash_grant_amount",
+        "page": 1,
+        "bbox": [
+          0.432564,
+          0.38994,
+          0.02608,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "6,000",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].noncash_assistance_amount",
+        "page": 1,
+        "bbox": [
+          0.583077,
+          0.389137,
+          0.003561,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.7622632343704634,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].purpose_of_grant",
+        "page": 1,
+        "bbox": [
+          0.793443,
+          0.436741,
+          0.075088,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "SUSTAINABILITY",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].recipient_name",
+        "page": 1,
+        "bbox": [
+          0.08982,
+          0.460026,
+          0.120432,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "FRIENDS OF IDAHO STATE",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].address_line1",
+        "page": 1,
+        "bbox": [
+          0.089924,
+          0.484523,
+          0.092307,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "11544 W JENILYN CT",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].city",
+        "page": 1,
+        "bbox": [
+          0.089716,
+          0.497569,
+          0.030028,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "BOISE,",
+        "confidence": 0.8812420883566343,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].state",
+        "page": 1,
+        "bbox": [
+          0.124157,
+          0.49679,
+          0.008078,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "ID",
+        "confidence": 0.9128257108746631,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].zip_code",
+        "page": 1,
+        "bbox": [
+          0.135634,
+          0.497011,
+          0.025616,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "83713",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].recipient_ein",
+        "page": 1,
+        "bbox": [
+          0.250739,
+          0.461441,
+          0.054688,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "46-1911747",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].irc_section",
+        "page": 1,
+        "bbox": [
+          0.171631,
+          0.53636,
+          0.039917,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "501(c)(3)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].cash_grant_amount",
+        "page": 1,
+        "bbox": [
+          0.432271,
+          0.462244,
+          0.026373,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "7,000",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].noncash_assistance_amount",
+        "page": 1,
+        "bbox": [
+          0.583077,
+          0.461441,
+          0.003561,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:35:05.514200Z",
+  "completed_at": "2026-09-13T20:35:05.514200Z",
+  "latency_in_ms": 184
+}

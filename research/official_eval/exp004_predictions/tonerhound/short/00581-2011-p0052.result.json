@@ -1,0 +1,457 @@
+{
+  "request": {
+    "example_id": "short/00581-2011-p0052",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/00581-2011-p0052.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 24,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/00581-2011-p0052",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "final_k1": false,
+      "amended_k1": false,
+      "partnership_ein": "26-1287244",
+      "partnership_name": "TELCO EXPERTS LLC",
+      "partnership_address": "38 PARK AVENUE, RUTHERFORD, NJ 07070",
+      "irs_center": "OGDEN, UT",
+      "is_publicly_traded_partnership": false,
+      "partner_id": "082-50-3812",
+      "partner_name": "ADAM GOLDBERG",
+      "partner_address": "33 WINDING WAY, WAYNE, NJ 07470",
+      "is_general_partner": true,
+      "is_domestic_partner": true,
+      "partner_entity_type": "INDIVIDUAL",
+      "profit_share_beginning": 33.3333333,
+      "profit_share_ending": 33.3333333,
+      "loss_share_beginning": 33.3333333,
+      "loss_share_ending": 33.3333333,
+      "capital_share_beginning": 33.3333333,
+      "capital_share_ending": 33.3333333,
+      "liability_nonrecourse": null,
+      "liability_qualified_nonrecourse_financing": null,
+      "liability_recourse": 22027,
+      "capital_beginning_account": 12281,
+      "capital_contributed": 15000,
+      "capital_current_year_increase_decrease": -5587,
+      "capital_withdrawals_distributions": null,
+      "capital_ending_account": 21694,
+      "capital_account_method": "Tax basis",
+      "contributed_built_in_gain_loss_property": null,
+      "box_1_ordinary_business_income": -5307,
+      "box_2_net_rental_real_estate": null,
+      "box_3_other_net_rental_income": null,
+      "box_4_guaranteed_payments": null,
+      "box_5_interest_income": null,
+      "box_6a_ordinary_dividends": null,
+      "box_6b_qualified_dividends": null,
+      "box_7_royalties": null,
+      "box_8_net_short_term_capital_gain": null,
+      "box_9a_net_long_term_capital_gain": null,
+      "box_9b_collectibles_gain": null,
+      "box_9c_unrecaptured_1250_gain": null,
+      "box_10_net_section_1231_gain": null,
+      "box_12_section_179_deduction": null,
+      "box_14_self_employment_earnings": [
+        {
+          "code": "A",
+          "amount": -5307
+        },
+        {
+          "code": "C",
+          "amount": 34200
+        }
+      ],
+      "box_11_other_income": null,
+      "box_13_other_deductions": null,
+      "box_15_credits": null,
+      "box_16_foreign_transactions": null,
+      "box_17_amt_items": null,
+      "box_18_tax_exempt_income": [
+        {
+          "code": "C*",
+          "amount": 280
+        }
+      ],
+      "box_19_distributions": null,
+      "box_20_other_information": null
+    },
+    "field_citations": [
+      {
+        "field_path": "partnership_ein",
+        "page": 1,
+        "bbox": [
+          0.083394,
+          0.221515,
+          0.113203,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "26-1287244",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partnership_name",
+        "page": 1,
+        "bbox": [
+          0.514365,
+          0.933586,
+          0.195536,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "TELCO EXPERTS LLC",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "irs_center",
+        "page": 1,
+        "bbox": [
+          0.082523,
+          0.324293,
+          0.103516,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "OGDEN, UT",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partner_id",
+        "page": 1,
+        "bbox": [
+          0.083963,
+          0.440717,
+          0.124099,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "082-50-3812",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partner_name",
+        "page": 1,
+        "bbox": [
+          0.08233,
+          0.483958,
+          0.15162,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "ADAM GOLDBERG",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partner_entity_type",
+        "page": 1,
+        "bbox": [
+          0.29382,
+          0.571479,
+          0.113759,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "INDIVIDUAL",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "profit_share_beginning",
+        "page": 1,
+        "bbox": [
+          0.19007,
+          0.629966,
+          0.110596,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "33.3333333%",
+        "confidence": 0.7727736590778699,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "profit_share_ending",
+        "page": 1,
+        "bbox": [
+          0.19007,
+          0.629966,
+          0.110596,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "33.3333333%",
+        "confidence": 0.7727736590778699,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_share_beginning",
+        "page": 1,
+        "bbox": [
+          0.411456,
+          0.644562,
+          0.110245,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "33.3333333%",
+        "confidence": 0.7654724168467675,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_share_ending",
+        "page": 1,
+        "bbox": [
+          0.411456,
+          0.644562,
+          0.110245,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "33.3333333%",
+        "confidence": 0.7654724168467675,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_share_beginning",
+        "page": 1,
+        "bbox": [
+          0.411456,
+          0.659158,
+          0.110245,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "33.3333333%",
+        "confidence": 0.7756327694521126,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_share_ending",
+        "page": 1,
+        "bbox": [
+          0.411456,
+          0.659158,
+          0.110245,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "33.3333333%",
+        "confidence": 0.7756327694521126,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "liability_recourse",
+        "page": 1,
+        "bbox": [
+          0.46899,
+          0.718018,
+          0.074305,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "22,027.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_beginning_account",
+        "page": 1,
+        "bbox": [
+          0.470607,
+          0.761199,
+          0.07284,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "12,281.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_contributed",
+        "page": 1,
+        "bbox": [
+          0.470607,
+          0.775781,
+          0.07284,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "15,000.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_current_year_increase_decrease",
+        "page": 1,
+        "bbox": [
+          0.469485,
+          0.790061,
+          0.073339,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "-5,587.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_account_method",
+        "page": 1,
+        "bbox": [
+          0.129136,
+          0.847709,
+          0.047385,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Tax basis",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_1_ordinary_business_income",
+        "page": 1,
+        "bbox": [
+          0.654169,
+          0.133634,
+          0.073723,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "-5,307.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_14_self_employment_earnings[0].code",
+        "page": 1,
+        "bbox": [
+          0.082298,
+          0.207925,
+          0.00881,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "A",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_14_self_employment_earnings[0].amount",
+        "page": 1,
+        "bbox": [
+          0.654169,
+          0.133634,
+          0.073723,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "-5,307.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_14_self_employment_earnings[1].code",
+        "page": 1,
+        "bbox": [
+          0.553545,
+          0.752584,
+          0.00685,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "c",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_14_self_employment_earnings[1].amount",
+        "page": 1,
+        "bbox": [
+          0.655413,
+          0.674545,
+          0.074026,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "34,200.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_18_tax_exempt_income[0].code",
+        "page": 1,
+        "bbox": [
+          0.746182,
+          0.36611,
+          0.019163,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "C*",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_18_tax_exempt_income[0].amount",
+        "page": 1,
+        "bbox": [
+          0.886072,
+          0.366843,
+          0.029187,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "280.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:04:53.400537Z",
+  "completed_at": "2026-09-13T20:04:53.400537Z",
+  "latency_in_ms": 394
+}

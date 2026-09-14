@@ -1,0 +1,275 @@
+{
+  "request": {
+    "example_id": "short/passcoag-2020-w2-p0005-r1",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/passcoag-2020-w2-p0005-r1.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 13,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/passcoag-2020-w2-p0005-r1",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "employee_ssn": "XXX-XX-XXXXX",
+      "employer_ein": "05-0517079",
+      "employer_name": "PASCOAG UTILITY DISTRICT",
+      "employer_address": "PO BOX 107, PASCOAG RI 02859",
+      "void": false,
+      "employee_name": "CRAIG T KOPRUSAK",
+      "employee_address": "355 RESERVOIR RD, PASCOAG RI 02859",
+      "box_1_wages": 93512.26,
+      "box_2_federal_income_tax_withheld": 13724.96,
+      "box_3_social_security_wages": 96447.04,
+      "box_4_social_security_tax_withheld": 5979.72,
+      "box_5_medicare_wages_and_tips": 96447.04,
+      "box_6_medicare_tax_withheld": 1398.48,
+      "box_7_social_security_tips": null,
+      "box_8_allocated_tips": null,
+      "box_10_dependent_care_benefits": null,
+      "box_11_nonqualified_plans": null,
+      "box_12": [
+        {
+          "code": "C",
+          "amount": 96.2
+        },
+        {
+          "code": "D",
+          "amount": 2934.78
+        }
+      ],
+      "box_13_statutory_employee": false,
+      "box_13_retirement_plan": true,
+      "box_13_third_party_sick_pay": false,
+      "box_13_subtotal": false,
+      "box_14_other": [
+        {
+          "description": "RISDI",
+          "amount": 939.9
+        }
+      ],
+      "state_local_row_1": {
+        "state": "RI",
+        "employer_state_id": "05051707900",
+        "state_wages": 93512.26,
+        "state_income_tax": 3691.3,
+        "local_wages": null,
+        "local_income_tax": null,
+        "locality_name": null
+      },
+      "state_local_row_2": null,
+      "control_number_line1": "0012-0012N426",
+      "control_number_line2": "0000000181-ELECTR"
+    },
+    "field_citations": [
+      {
+        "field_path": "employer_ein",
+        "page": 1,
+        "bbox": [
+          0.099858,
+          0.84,
+          0.089943,
+          0.028889
+        ],
+        "polygon": null,
+        "reference_text": "05051707900",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "employee_name",
+        "page": 1,
+        "bbox": [
+          0.347734,
+          0.5,
+          0.134561,
+          0.028889
+        ],
+        "polygon": null,
+        "reference_text": "CRAIG T KOPRUSAK",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "employee_address",
+        "page": 1,
+        "bbox": [
+          0.348442,
+          0.508889,
+          0.473796,
+          0.077778
+        ],
+        "polygon": null,
+        "reference_text": "355 RESERVOIR RD |",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_1_wages",
+        "page": 1,
+        "bbox": [
+          0.333569,
+          0.842222,
+          0.065156,
+          0.028889
+        ],
+        "polygon": null,
+        "reference_text": "93512.26",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_3_social_security_wages",
+        "page": 1,
+        "bbox": [
+          0.752125,
+          0.46,
+          0.065156,
+          0.028889
+        ],
+        "polygon": null,
+        "reference_text": "96447.04",
+        "confidence": 0.7527445449368129,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_4_social_security_tax_withheld",
+        "page": 1,
+        "bbox": [
+          0.918555,
+          0.368889,
+          0.056657,
+          0.028889
+        ],
+        "polygon": null,
+        "reference_text": "5979.72",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_5_medicare_wages_and_tips",
+        "page": 1,
+        "bbox": [
+          0.752125,
+          0.46,
+          0.065156,
+          0.028889
+        ],
+        "polygon": null,
+        "reference_text": "96447.04",
+        "confidence": 0.7527445449368129,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_6_medicare_tax_withheld",
+        "page": 1,
+        "bbox": [
+          0.917847,
+          0.46,
+          0.058074,
+          0.028889
+        ],
+        "polygon": null,
+        "reference_text": "1398.48",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_12[1].code",
+        "page": 1,
+        "bbox": [
+          0.191218,
+          0.773333,
+          0.008499,
+          0.026667
+        ],
+        "polygon": null,
+        "reference_text": "D",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "state_local_row_1.state",
+        "page": 1,
+        "bbox": [
+          0.415722,
+          0.595556,
+          0.014873,
+          0.026667
+        ],
+        "polygon": null,
+        "reference_text": "RI",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "state_local_row_1.employer_state_id",
+        "page": 1,
+        "bbox": [
+          0.099858,
+          0.84,
+          0.089943,
+          0.028889
+        ],
+        "polygon": null,
+        "reference_text": "05051707900",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "state_local_row_1.state_wages",
+        "page": 1,
+        "bbox": [
+          0.333569,
+          0.842222,
+          0.065156,
+          0.028889
+        ],
+        "polygon": null,
+        "reference_text": "93512.26",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "state_local_row_1.state_income_tax",
+        "page": 1,
+        "bbox": [
+          0.48796,
+          0.842222,
+          0.04917,
+          0.028889
+        ],
+        "polygon": null,
+        "reference_text": "3691.30",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:34:34.746524Z",
+  "completed_at": "2026-09-13T20:34:34.746524Z",
+  "latency_in_ms": 11539
+}

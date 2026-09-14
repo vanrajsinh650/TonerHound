@@ -1,0 +1,345 @@
+{
+  "request": {
+    "example_id": "short/H9-53-514_1043",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/H9-53-514_1043.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 16,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/H9-53-514_1043",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "operator": "CHESAPEAKE OPERATING, INC.",
+      "operator_number": "147715",
+      "rrc_district": "01",
+      "street_or_po_box": "P.O. BOX 18496",
+      "city": "OKLAHOMA CITY",
+      "state": "OK",
+      "zip_code": "73154-0496",
+      "lease_facility_operation_name": "LAZY A COTULLA",
+      "field_or_area_name": "BRISCOE RANCH (EAGLEFORD)",
+      "county": "DIMMIT",
+      "optype_a_oil_field": false,
+      "optype_b_gas_field": false,
+      "optype_c_pipeline_gathering": false,
+      "optype_d_gasoline_plant": false,
+      "optype_e_drilling_workover": true,
+      "optype_f_sweetening_unit": false,
+      "optype_g_combination": false,
+      "optype_h_other": false,
+      "operation_type_other_explanation": "DATA IS BASED ON OFFSET WELL W/H2S IN GAS STREAM. SAME FORMATION THIS WELL IS TO PRODUCE",
+      "h2s_concentration": "3000PPM",
+      "maximum_escape_volume": "1045 MCF/Day",
+      "roe_100ppm": "206 Ft.",
+      "roe_500ppm": "94 Ft.",
+      "operation_existing": false,
+      "operation_new": true,
+      "modification_cert_change_yes": false,
+      "modification_cert_change_no": true,
+      "workover_100ppm_3000ft_yes": false,
+      "workover_100ppm_3000ft_no": true,
+      "previous_certificate_number": "N/A",
+      "roe_100ppm_public_area_yes": false,
+      "roe_100ppm_public_area_no": true,
+      "roe_500ppm_public_road_yes": false,
+      "roe_500ppm_public_road_no": true,
+      "injection_h2s_fluid_yes": false,
+      "injection_h2s_fluid_no": true,
+      "compliance_date_mo": null,
+      "compliance_date_day": null,
+      "compliance_date_year": null,
+      "depth_of_compliance_drilling": "4000 Ft. From Surface",
+      "contingency_plan_prepared_yes": false,
+      "contingency_plan_prepared_no": true,
+      "contingency_plan_location": "N/A; WELL READINESS AND MONITORING FOR H2S WILL BE IN PLACE AT DEPTH OF COMPLIANCE NOTED ABOVE FOR DRILLING OPERATIONS.",
+      "data_location": "6100 N. WESTERN AVE. OKLAHOMA CITY, OK 73118",
+      "signature_present": true,
+      "representative_of_company": null,
+      "title": "REGULATORY SPECIALIST II",
+      "phone_no": "(405) 935-3782",
+      "certificate_date": "JUN 26 2012",
+      "approved_by": "Wesley",
+      "rrc_use_date": "10.5.12",
+      "remarks": null,
+      "certification_number": "070844",
+      "exempt_stamp_present": false,
+      "operations_covered": [
+        {
+          "rrc_id": "739387",
+          "type_id_code": "5",
+          "storage_yes": false,
+          "storage_no": true
+        },
+        {
+          "rrc_id": "739388",
+          "type_id_code": "5",
+          "storage_yes": false,
+          "storage_no": true
+        },
+        {
+          "rrc_id": "739385",
+          "type_id_code": "5",
+          "storage_yes": false,
+          "storage_no": true
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "operator",
+        "page": 1,
+        "bbox": [
+          0.089676,
+          0.141591,
+          0.242478,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "HESAPEAKE OPERATING, INC.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district",
+        "page": 1,
+        "bbox": [
+          0.064307,
+          0.131127,
+          0.00826,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1.",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "street_or_po_box",
+        "page": 1,
+        "bbox": [
+          0.079056,
+          0.175031,
+          0.136283,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "P.O. BOX 18496",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "city",
+        "page": 1,
+        "bbox": [
+          0.080236,
+          0.660245,
+          0.134513,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "OKLAHOMA CITY,",
+        "confidence": 0.8414899769345086,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "state",
+        "page": 1,
+        "bbox": [
+          0.748673,
+          0.172529,
+          0.020649,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "OK",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operation_type_other_explanation",
+        "page": 1,
+        "bbox": [
+          0.476106,
+          0.236223,
+          0.40354,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "DATA IS BASED ON OFFSET WELL W/H2S IN GAS",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "previous_certificate_number",
+        "page": 1,
+        "bbox": [
+          0.829499,
+          0.401373,
+          0.030088,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "N/A",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "contingency_plan_location",
+        "page": 1,
+        "bbox": [
+          0.079646,
+          0.594731,
+          0.703245,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "N/A; WELL READINESS AND MONITORING FOR H2S WILL BE IN PLACE AT DEPTH OF",
+        "confidence": 0.8039104549295711,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "data_location",
+        "page": 1,
+        "bbox": [
+          0.064307,
+          0.660245,
+          0.241888,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "~ OKLAHOMA CITY, OK 73118",
+        "confidence": 0.7530513776618821,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "title",
+        "page": 1,
+        "bbox": [
+          0.40295,
+          0.766478,
+          0.236578,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "REGULATORY SPECIALIST II",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "phone_no",
+        "page": 1,
+        "bbox": [
+          0.648378,
+          0.758872,
+          0.20118,
+          0.025933
+        ],
+        "polygon": null,
+        "reference_text": "(405) 935-3735):\"'“”98",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[0].rrc_id",
+        "page": 1,
+        "bbox": [
+          0.083186,
+          0.359744,
+          0.056637,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "739387",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[0].type_id_code",
+        "page": 1,
+        "bbox": [
+          0.471976,
+          0.162747,
+          0.00885,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "5.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[1].rrc_id",
+        "page": 1,
+        "bbox": [
+          0.083186,
+          0.390227,
+          0.057227,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "739388",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[1].type_id_code",
+        "page": 1,
+        "bbox": [
+          0.471976,
+          0.162747,
+          0.00885,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "5.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[2].type_id_code",
+        "page": 1,
+        "bbox": [
+          0.471976,
+          0.162747,
+          0.00885,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "5.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:17:00.303759Z",
+  "completed_at": "2026-09-13T20:17:00.303759Z",
+  "latency_in_ms": 9215
+}

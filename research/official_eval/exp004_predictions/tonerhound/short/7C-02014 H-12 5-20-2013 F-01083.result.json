@@ -1,0 +1,514 @@
+{
+  "request": {
+    "example_id": "short/7C-02014 H-12 5-20-2013 F-01083",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/7C-02014 H-12 5-20-2013 F-01083.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 27,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/7C-02014 H-12 5-20-2013 F-01083",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "operator_name": "O'Ryan Oil and Gas",
+      "operator_p5_no": "617042",
+      "rrc_district_no_and_county": "7C Crockett",
+      "mailing_address": "PO Box 14821  Odessa, TX 79768",
+      "recovery_waterflood": false,
+      "recovery_co2_augmented_waterflooding": false,
+      "recovery_polymer_augmented_waterflooding": false,
+      "recovery_immiscible_co2_displacement": false,
+      "recovery_steam_drive_injection": false,
+      "recovery_gas_injection": false,
+      "recovery_microemulsion_micellar_flooding": true,
+      "recovery_alkaline_caustic_flooding": false,
+      "recovery_cyclic_steam_injection": false,
+      "recovery_in_situ_combustion": false,
+      "recovery_miscible_fluid_displacement": false,
+      "recovery_other": false,
+      "recovery_other_specify": null,
+      "new_initial_secondary": false,
+      "new_initial_tertiary": false,
+      "new_tertiary_superseding_secondary": true,
+      "exp_different_secondary_method": false,
+      "exp_expansion_secondary": false,
+      "exp_different_tertiary_method": false,
+      "exp_expansion_tertiary": false,
+      "change_previous_method": "Waterflood",
+      "change_previous_fluid": "Saltwater",
+      "fluid_brackish_water": false,
+      "fluid_saltwater": true,
+      "fluid_natural_gas": false,
+      "fluid_fresh_water": false,
+      "fluid_air": false,
+      "fluid_polymer": false,
+      "fluid_nitrogen": false,
+      "fluid_lpg": false,
+      "fluid_co2": false,
+      "fluid_other": true,
+      "fluid_other_specify": "Surfactant Producing Microbes",
+      "est_avg_volume_fluid_injected": "31,000 BBL/D",
+      "est_avg_injection_pressure": "1500",
+      "est_ult_additional_production_oil": "271,000 BBLS",
+      "est_ult_additional_production_gas": "195,900 MCF",
+      "est_total_value_oil": "$25,745,000",
+      "est_total_value_gas": "$783,700",
+      "est_cost_machinery": null,
+      "est_cost_project_total": "$2,275,000",
+      "anticipated_date_injection_begin": "May 15, 2013",
+      "multiple_lease_yes": false,
+      "multiple_lease_no": true,
+      "total_anticipated_leases": "1",
+      "total_anticipated_producing_wells": "27",
+      "total_anticipated_injection_wells": "16",
+      "field_name": "TODD, DEEP (CRINOIDAL)",
+      "lease_or_unit_name": "TODD CRINOIDAL UNIT",
+      "lease_no": "02014",
+      "unitization_approved_yes": true,
+      "unitization_approved_no": false,
+      "unitization_order_no_and_date": "#7-17,709, FEB 27, 1950",
+      "unitization_needed_yes": false,
+      "unitization_needed_no": false,
+      "inj_auth_a_granted": true,
+      "inj_auth_a_project_no": "1083",
+      "inj_auth_a_authority_date": "12/08/1949",
+      "inj_auth_a_wells": "1, 2W, 6, 11W, 13, 15, 18W, 23, 26, 35W, 46, 48, 49, 50, 51, 53.",
+      "inj_auth_b_applied": false,
+      "inj_auth_b_applied_date": null,
+      "inj_auth_b_project_no": null,
+      "inj_auth_b_wells": null,
+      "inj_auth_c_anticipated": false,
+      "inj_auth_c_wells": null,
+      "signature_present": true,
+      "title": "PRESIDENT",
+      "name_print_or_type": "Ryan C. Hoerauf",
+      "certificate_date": "May 15, 2013",
+      "phone": "(432) 550-2112",
+      "rrc_approved": true,
+      "rrc_denied": false,
+      "rrc_technical_examiner": "SJR (300)",
+      "rrc_action_date": "05/20/2013"
+    },
+    "field_citations": [
+      {
+        "field_path": "operator_name",
+        "page": 1,
+        "bbox": [
+          0.105882,
+          0.120773,
+          0.122941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "O'Ryan Oil and Gas",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_p5_no",
+        "page": 1,
+        "bbox": [
+          0.504706,
+          0.118273,
+          0.045882,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "617042",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district_no_and_county",
+        "page": 1,
+        "bbox": [
+          0.296471,
+          0.159636,
+          0.014118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "C",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_previous_method",
+        "page": 1,
+        "bbox": [
+          0.335882,
+          0.375545,
+          0.067059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Waterflood",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_previous_fluid",
+        "page": 1,
+        "bbox": [
+          0.154706,
+          0.410773,
+          0.049412,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "saltwater",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "fluid_other_specify",
+        "page": 1,
+        "bbox": [
+          0.67,
+          0.406909,
+          0.19,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Surfactant Producing Microbes",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "est_avg_volume_fluid_injected",
+        "page": 1,
+        "bbox": [
+          0.395882,
+          0.436455,
+          0.085294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "31,000 BBL/D",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "est_avg_injection_pressure",
+        "page": 1,
+        "bbox": [
+          0.817647,
+          0.432818,
+          0.028824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1500",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "est_ult_additional_production_oil",
+        "page": 1,
+        "bbox": [
+          0.242353,
+          0.463727,
+          0.092353,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "271,000 BBLS,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "est_ult_additional_production_gas",
+        "page": 1,
+        "bbox": [
+          0.340588,
+          0.4635,
+          0.082941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "195,900 MCF",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "est_total_value_gas",
+        "page": 1,
+        "bbox": [
+          0.852941,
+          0.461909,
+          0.048824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "783,700",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "est_cost_project_total",
+        "page": 1,
+        "bbox": [
+          0.556471,
+          0.493045,
+          0.061765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2,275,000",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "anticipated_date_injection_begin",
+        "page": 1,
+        "bbox": [
+          0.538824,
+          0.835545,
+          0.083529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "May 15, 2013",
+        "confidence": 0.8391437143011082,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_anticipated_leases",
+        "page": 1,
+        "bbox": [
+          0.089412,
+          0.110318,
+          0.008235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_anticipated_producing_wells",
+        "page": 1,
+        "bbox": [
+          0.570588,
+          0.576682,
+          0.018235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "27,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_anticipated_injection_wells",
+        "page": 1,
+        "bbox": [
+          0.504118,
+          0.509636,
+          0.015882,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "16.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "field_name",
+        "page": 1,
+        "bbox": [
+          0.087647,
+          0.550091,
+          0.173529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "TODD, DEEP (CRINOIDAL)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_or_unit_name",
+        "page": 1,
+        "bbox": [
+          0.449412,
+          0.549409,
+          0.155882,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "TODD CRINOIDAL UNIT",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_no",
+        "page": 1,
+        "bbox": [
+          0.818824,
+          0.548727,
+          0.037059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "02014",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "unitization_order_no_and_date",
+        "page": 1,
+        "bbox": [
+          0.444706,
+          0.577364,
+          0.179412,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "date#7-17,709, FEB 27, 1950",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "inj_auth_a_project_no",
+        "page": 1,
+        "bbox": [
+          0.411176,
+          0.615318,
+          0.041765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "F-1083",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "inj_auth_a_authority_date",
+        "page": 1,
+        "bbox": [
+          0.622941,
+          0.609636,
+          0.067059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "12/08/1949",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "inj_auth_a_wells",
+        "page": 1,
+        "bbox": [
+          0.151176,
+          0.634636,
+          0.399412,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1,2W, 6, 11W, 13, 15, 18W, 23, 26, 35W, 46, 48, 49, 50, 51, 53.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "title",
+        "page": 1,
+        "bbox": [
+          0.532353,
+          0.817591,
+          0.079412,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "PRESIDENT",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "name_print_or_type",
+        "page": 1,
+        "bbox": [
+          0.202353,
+          0.836682,
+          0.104118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Ryan C. Hoerauf",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "certificate_date",
+        "page": 1,
+        "bbox": [
+          0.538824,
+          0.835545,
+          0.083529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "May 15, 2013",
+        "confidence": 0.8403439363327674,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "phone",
+        "page": 1,
+        "bbox": [
+          0.738824,
+          0.836,
+          0.112941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "(432 ) 550-2112",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:14:48.765536Z",
+  "completed_at": "2026-09-13T20:14:48.765536Z",
+  "latency_in_ms": 14286
+}

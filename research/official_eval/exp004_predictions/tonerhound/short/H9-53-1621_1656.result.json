@@ -1,0 +1,348 @@
+{
+  "request": {
+    "example_id": "short/H9-53-1621_1656",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/H9-53-1621_1656.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 17,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/H9-53-1621_1656",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "operator": "EOG Resources, Inc.",
+      "operator_number": "253162",
+      "rrc_district": "02",
+      "street_or_po_box": "19100 Ridgwood Pkwy., Bldg. 2",
+      "city": "San Antonio",
+      "state": "TX",
+      "zip_code": "78259-1828",
+      "lease_facility_operation_name": "Duncan Unit 4H",
+      "field_or_area_name": "Eagleville (Eagle Ford-2)",
+      "county": "Karnes",
+      "optype_a_oil_field": false,
+      "optype_b_gas_field": false,
+      "optype_c_pipeline_gathering": false,
+      "optype_d_gasoline_plant": false,
+      "optype_e_drilling_workover": true,
+      "optype_f_sweetening_unit": false,
+      "optype_g_combination": false,
+      "optype_h_other": false,
+      "operation_type_other_explanation": null,
+      "h2s_concentration": "7000 PPM",
+      "maximum_escape_volume": "100 MCF/Day",
+      "roe_100ppm": "81 Ft.",
+      "roe_500ppm": "37 Ft.",
+      "operation_existing": false,
+      "operation_new": true,
+      "modification_cert_change_yes": false,
+      "modification_cert_change_no": true,
+      "workover_100ppm_3000ft_yes": false,
+      "workover_100ppm_3000ft_no": true,
+      "previous_certificate_number": null,
+      "roe_100ppm_public_area_yes": false,
+      "roe_100ppm_public_area_no": true,
+      "roe_500ppm_public_road_yes": false,
+      "roe_500ppm_public_road_no": true,
+      "injection_h2s_fluid_yes": false,
+      "injection_h2s_fluid_no": true,
+      "compliance_date_mo": null,
+      "compliance_date_day": null,
+      "compliance_date_year": "2014",
+      "depth_of_compliance_drilling": "8000'",
+      "contingency_plan_prepared_yes": false,
+      "contingency_plan_prepared_no": true,
+      "contingency_plan_location": null,
+      "data_location": "19100 Ridgewood Pkwy. Bldg. 2, San antonio, Texas 78259-1828",
+      "signature_present": true,
+      "representative_of_company": null,
+      "title": "S & E Manager",
+      "phone_no": "(210) 403-7822",
+      "certificate_date": "3/25/2014",
+      "approved_by": "Wesley Dresc",
+      "rrc_use_date": "3-26-2014",
+      "remarks": null,
+      "certification_number": "079730",
+      "exempt_stamp_present": false,
+      "operations_covered": [
+        {
+          "rrc_id": "780596",
+          "type_id_code": "5",
+          "storage_yes": false,
+          "storage_no": true
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "operator",
+        "page": 1,
+        "bbox": [
+          0.141003,
+          0.113727,
+          0.128614,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "EOG Resources, Inc.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_number",
+        "page": 1,
+        "bbox": [
+          0.512684,
+          0.126227,
+          0.044838,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "253162",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district",
+        "page": 1,
+        "bbox": [
+          0.771681,
+          0.127364,
+          0.014749,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "02",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "street_or_po_box",
+        "page": 1,
+        "bbox": [
+          0.214159,
+          0.153045,
+          0.1941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "19100 Ridgwood Pkwy., Bldg. 2",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "city",
+        "page": 1,
+        "bbox": [
+          0.489086,
+          0.164864,
+          0.077876,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "San Antonio",
+        "confidence": 0.9200912155956162,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "zip_code",
+        "page": 1,
+        "bbox": [
+          0.786431,
+          0.166455,
+          0.071386,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "78259-1828",
+        "confidence": 0.7740274854454217,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_facility_operation_name",
+        "page": 1,
+        "bbox": [
+          0.073156,
+          0.191682,
+          0.108555,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Duncan Unit 4H",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "field_or_area_name",
+        "page": 1,
+        "bbox": [
+          0.482006,
+          0.194864,
+          0.155752,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Eagleville (Eagle Ford-2)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.693215,
+          0.194636,
+          0.043658,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Karnes",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "h2s_concentration",
+        "page": 1,
+        "bbox": [
+          0.574041,
+          0.286455,
+          0.063717,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "7000 PPM",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "maximum_escape_volume",
+        "page": 1,
+        "bbox": [
+          0.702065,
+          0.288045,
+          0.087906,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "100 MCF/Day",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "compliance_date_year",
+        "page": 1,
+        "bbox": [
+          0.324484,
+          0.760091,
+          0.513864,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "S & E Manager (210) 403-7822 312512014",
+        "confidence": 0.7882648459406696,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "data_location",
+        "page": 1,
+        "bbox": [
+          0.067257,
+          0.655545,
+          0.309145,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "19100 Ridgewood Pkwy. Bldg. 2, San antonio, Texas 78259-1828",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "title",
+        "page": 1,
+        "bbox": [
+          0.324484,
+          0.759864,
+          0.081416,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "S & E Manager",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "phone_no",
+        "page": 1,
+        "bbox": [
+          0.579941,
+          0.760545,
+          0.080236,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "(210) 403-7822",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[0].rrc_id",
+        "page": 1,
+        "bbox": [
+          0.072566,
+          0.360545,
+          0.043658,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "780596",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[0].type_id_code",
+        "page": 1,
+        "bbox": [
+          0.286136,
+          0.361,
+          0.00767,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "5",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:15:50.220038Z",
+  "completed_at": "2026-09-13T20:15:50.220038Z",
+  "latency_in_ms": 7259
+}

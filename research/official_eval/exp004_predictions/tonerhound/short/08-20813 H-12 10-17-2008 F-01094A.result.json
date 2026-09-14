@@ -1,0 +1,349 @@
+{
+  "request": {
+    "example_id": "short/08-20813 H-12 10-17-2008 F-01094A",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/08-20813 H-12 10-17-2008 F-01094A.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 16,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/08-20813 H-12 10-17-2008 F-01094A",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "operator_name": "Fasken Oil and Ranch, Ltd.",
+      "operator_p5_no": "263696",
+      "rrc_district_no_and_county": "08, Crane County",
+      "mailing_address": "303 W. Wall St., Ste. 1800 Midland, TX 79701",
+      "recovery_waterflood": false,
+      "recovery_co2_augmented_waterflooding": true,
+      "recovery_polymer_augmented_waterflooding": false,
+      "recovery_immiscible_co2_displacement": false,
+      "recovery_steam_drive_injection": false,
+      "recovery_gas_injection": false,
+      "recovery_microemulsion_micellar_flooding": false,
+      "recovery_alkaline_caustic_flooding": false,
+      "recovery_cyclic_steam_injection": false,
+      "recovery_in_situ_combustion": false,
+      "recovery_miscible_fluid_displacement": false,
+      "recovery_other": false,
+      "recovery_other_specify": null,
+      "new_initial_secondary": false,
+      "new_initial_tertiary": true,
+      "new_tertiary_superseding_secondary": false,
+      "exp_different_secondary_method": false,
+      "exp_expansion_secondary": false,
+      "exp_different_tertiary_method": false,
+      "exp_expansion_tertiary": false,
+      "change_previous_method": null,
+      "change_previous_fluid": null,
+      "fluid_brackish_water": false,
+      "fluid_saltwater": true,
+      "fluid_natural_gas": false,
+      "fluid_fresh_water": false,
+      "fluid_air": false,
+      "fluid_polymer": false,
+      "fluid_nitrogen": false,
+      "fluid_lpg": false,
+      "fluid_co2": true,
+      "fluid_other": false,
+      "fluid_other_specify": null,
+      "est_avg_volume_fluid_injected": "Saltwater - 4,000 bbl/day; CO2 - 14,000 mcf/day",
+      "est_avg_injection_pressure": "See Attached",
+      "est_ult_additional_production_oil": "2,603,000",
+      "est_ult_additional_production_gas": "-0-",
+      "est_total_value_oil": "$14,290,000",
+      "est_total_value_gas": "-0-",
+      "est_cost_machinery": "$8,996,400",
+      "est_cost_project_total": "$35,845,268",
+      "anticipated_date_injection_begin": "11-1-08",
+      "multiple_lease_yes": false,
+      "multiple_lease_no": true,
+      "total_anticipated_leases": "1",
+      "total_anticipated_producing_wells": "18",
+      "total_anticipated_injection_wells": "24",
+      "field_name": "Abell (Devonian)",
+      "lease_or_unit_name": "Abell Devonian Unit",
+      "lease_no": "20813",
+      "unitization_approved_yes": true,
+      "unitization_approved_no": false,
+      "unitization_order_no_and_date": "2-5-1968 08-58,078",
+      "unitization_needed_yes": false,
+      "unitization_needed_no": false,
+      "inj_auth_a_granted": false,
+      "inj_auth_a_project_no": null,
+      "inj_auth_a_authority_date": null,
+      "inj_auth_a_wells": null,
+      "inj_auth_b_applied": true,
+      "inj_auth_b_applied_date": "5-7-08",
+      "inj_auth_b_project_no": "F-01094A",
+      "inj_auth_b_wells": "Abell Devonian Unit",
+      "inj_auth_c_anticipated": false,
+      "inj_auth_c_wells": null,
+      "signature_present": true,
+      "title": "Regulatory Analyst",
+      "name_print_or_type": "Kim Tyson",
+      "certificate_date": "10-14-08",
+      "phone": "(432) 687-1777",
+      "rrc_approved": true,
+      "rrc_denied": false,
+      "rrc_technical_examiner": "Joe SJR",
+      "rrc_action_date": "10/17/08"
+    },
+    "field_citations": [
+      {
+        "field_path": "est_ult_additional_production_oil",
+        "page": 1,
+        "bbox": [
+          0.266471,
+          0.487364,
+          0.086471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2,603,000",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "est_ult_additional_production_gas",
+        "page": 1,
+        "bbox": [
+          0.423529,
+          0.484864,
+          0.027647,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "—-0-",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "est_total_value_gas",
+        "page": 1,
+        "bbox": [
+          0.423529,
+          0.484864,
+          0.027647,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "—-0-",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "est_cost_machinery",
+        "page": 1,
+        "bbox": [
+          0.394706,
+          0.515773,
+          0.095882,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$8,996,400",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "est_cost_project_total",
+        "page": 1,
+        "bbox": [
+          0.551765,
+          0.516455,
+          0.095294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "35,845,268",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "anticipated_date_injection_begin",
+        "page": 1,
+        "bbox": [
+          0.718824,
+          0.515318,
+          0.065882,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "11-1-08",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_anticipated_leases",
+        "page": 1,
+        "bbox": [
+          0.081765,
+          0.123273,
+          0.008235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1.",
+        "confidence": 0.7532194805911251,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_anticipated_producing_wells",
+        "page": 1,
+        "bbox": [
+          0.447647,
+          0.561909,
+          0.015294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "18.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "field_name",
+        "page": 1,
+        "bbox": [
+          0.105294,
+          0.576909,
+          0.154118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Abell (Devonian)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_or_unit_name",
+        "page": 1,
+        "bbox": [
+          0.148824,
+          0.708727,
+          0.184706,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Abell Devonian Unit",
+        "confidence": 0.8510179254343511,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_no",
+        "page": 1,
+        "bbox": [
+          0.831765,
+          0.575545,
+          0.047647,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "20813",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "inj_auth_b_applied_date",
+        "page": 1,
+        "bbox": [
+          0.257059,
+          0.685091,
+          0.057647,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "5-7-08",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "inj_auth_b_wells",
+        "page": 1,
+        "bbox": [
+          0.148824,
+          0.708727,
+          0.184706,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Abell Devonian Unit",
+        "confidence": 0.7535231879511765,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "title",
+        "page": 1,
+        "bbox": [
+          0.553529,
+          0.8485,
+          0.174706,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Regulatory Analyst",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "name_print_or_type",
+        "page": 1,
+        "bbox": [
+          0.22,
+          0.867136,
+          0.088235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Kim Tyson",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "phone",
+        "page": 1,
+        "bbox": [
+          0.75,
+          0.866455,
+          0.145294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "(432 ) 687-1777",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:05:36.231881Z",
+  "completed_at": "2026-09-13T20:05:36.231881Z",
+  "latency_in_ms": 11052
+}

@@ -1,0 +1,106 @@
+{
+  "request": {
+    "example_id": "medium/q4-2025-earnings-press-release",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/q4-2025-earnings-press-release.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 4,
+    "ocr_pages": 0,
+    "num_pages": 15
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/q4-2025-earnings-press-release",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "period": "Q4 FY2025",
+      "currency": "USD",
+      "fiscal_period_end_date": "2025-12-31",
+      "total_revenue": 685.25,
+      "revenue_growth_yoy": 4.0,
+      "gross_profit": null,
+      "operating_income": 96.181,
+      "net_income": 144.554,
+      "adjusted_ebitda": 390.538,
+      "gaap_eps_diluted": 0.24,
+      "adjusted_eps_diluted": null,
+      "gross_margin": null,
+      "operating_margin": 14.0,
+      "free_cash_flow": null,
+      "segments": []
+    },
+    "field_citations": [
+      {
+        "field_path": "fiscal_period_end_date",
+        "page": 4,
+        "bbox": [
+          0.200668,
+          0.859985,
+          0.130984,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "December 31, 2025,",
+        "confidence": 0.8270644615193286,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "revenue_growth_yoy",
+        "page": 5,
+        "bbox": [
+          0.457319,
+          0.394482,
+          0.024839,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "4.0%",
+        "confidence": 0.7832462071694296,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gaap_eps_diluted",
+        "page": 2,
+        "bbox": [
+          0.449754,
+          0.540566,
+          0.026159,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$0.24,",
+        "confidence": 0.7900580481088945,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operating_margin",
+        "page": 4,
+        "bbox": [
+          0.507359,
+          0.474005,
+          0.017804,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "14,",
+        "confidence": 0.7979406268153404,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T17:11:14.895397Z",
+  "completed_at": "2026-09-13T17:11:14.895397Z",
+  "latency_in_ms": 1532
+}

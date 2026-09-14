@@ -1,0 +1,544 @@
+{
+  "request": {
+    "example_id": "medium/sf1449_supplies_services_0047",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/sf1449_supplies_services_0047.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 27,
+    "ocr_pages": 0,
+    "num_pages": 30
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/sf1449_supplies_services_0047",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "contract_number": null,
+      "solicitation_number": "DE-SOL-0011826",
+      "requisition_number": null,
+      "issue_date": "09/26/2017",
+      "award_effective_date": null,
+      "total_award_amount": null,
+      "clin_items": [
+        {
+          "item_no": "001",
+          "parent_item_no": null,
+          "supplies_services": "Joule High Performance Computing (HPC) System Requirement (3-year lease)",
+          "description": "$(TBD)/Month",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": null
+        },
+        {
+          "item_no": "002",
+          "parent_item_no": null,
+          "supplies_services": "Backup Storage Requirement (single purchase during year 1)",
+          "description": "$(TBD)",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": null
+        },
+        {
+          "item_no": "003",
+          "parent_item_no": null,
+          "supplies_services": "Warranty/Maintenance/Service Agreement – Joule HPC and Backup Storage equipment",
+          "description": "$(TBD)/Month",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": null
+        },
+        {
+          "item_no": "004",
+          "parent_item_no": null,
+          "supplies_services": "Prefabricated Data Center/Modular Data Center Infrastructure (Optional lease item)",
+          "description": "$(TBD)/Month",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": null
+        },
+        {
+          "item_no": "004",
+          "parent_item_no": null,
+          "supplies_services": "Viewing/Visualization Requirement (Optional lease item)",
+          "description": "$(TBD)/Month",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": null
+        },
+        {
+          "item_no": "005",
+          "parent_item_no": null,
+          "supplies_services": "Warranty/Maintenance/Service Agreement – PDC/MDC (Optional lease item)",
+          "description": "$(TBD)/Month",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": null
+        },
+        {
+          "item_no": "006",
+          "parent_item_no": null,
+          "supplies_services": "Application Software Support (Annual License/Subscription)",
+          "description": "(See Price listing appendix for item pricing)",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": null
+        },
+        {
+          "item_no": "007",
+          "parent_item_no": null,
+          "supplies_services": "Data Destruction/Wiping (Optional single purchase during year 1)",
+          "description": "$(TBD)",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": null
+        },
+        {
+          "item_no": "008",
+          "parent_item_no": null,
+          "supplies_services": "Purchase price at end of lease for HPC",
+          "description": "$(TBD)",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": null
+        },
+        {
+          "item_no": "009",
+          "parent_item_no": null,
+          "supplies_services": "SEWP – Z Handling Fees",
+          "description": "$(TBD)",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": null
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "solicitation_number",
+        "page": 1,
+        "bbox": [
+          0.669722,
+          0.064471,
+          0.125828,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "DE-SOL-0011826",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "issue_date",
+        "page": 1,
+        "bbox": [
+          0.879979,
+          0.077002,
+          0.088107,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "09/26/2017",
+        "confidence": 0.9352995165174655,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[0].item_no",
+        "page": 4,
+        "bbox": [
+          0.204526,
+          0.371669,
+          0.021928,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "001",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[0].supplies_services",
+        "page": 4,
+        "bbox": [
+          0.245131,
+          0.372843,
+          0.516074,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Joule High Performance Computing (HPC) System Requirement (3-year lease)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[0].description",
+        "page": 4,
+        "bbox": [
+          0.162631,
+          0.387198,
+          0.102908,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$ (TBD)/Month",
+        "confidence": 0.7574676159844927,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[1].item_no",
+        "page": 4,
+        "bbox": [
+          0.204526,
+          0.415226,
+          0.023235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "002",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[1].supplies_services",
+        "page": 4,
+        "bbox": [
+          0.245065,
+          0.4164,
+          0.398601,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Backup Storage Requirement (single purchase during year 1)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[1].description",
+        "page": 4,
+        "bbox": [
+          0.162631,
+          0.387198,
+          0.102908,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$ (TBD)/Month",
+        "confidence": 0.7533090114137998,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[2].item_no",
+        "page": 4,
+        "bbox": [
+          0.204526,
+          0.458783,
+          0.022565,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "003",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[2].description",
+        "page": 4,
+        "bbox": [
+          0.162631,
+          0.474312,
+          0.102908,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$ (TBD)/Month",
+        "confidence": 0.7531008816397841,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[3].item_no",
+        "page": 4,
+        "bbox": [
+          0.204526,
+          0.560415,
+          0.02335,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "004",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[3].supplies_services",
+        "page": 4,
+        "bbox": [
+          0.245065,
+          0.561577,
+          0.546696,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Prefabricated Data Center/Modular Data Center Infrastructure (Optional lease item)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[4].item_no",
+        "page": 4,
+        "bbox": [
+          0.229951,
+          0.603972,
+          0.02335,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "004",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[4].supplies_services",
+        "page": 4,
+        "bbox": [
+          0.270359,
+          0.605146,
+          0.377539,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Viewing/Visualization Requirement (Optional lease item)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[5].item_no",
+        "page": 4,
+        "bbox": [
+          0.204526,
+          0.647529,
+          0.022843,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "005",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[5].supplies_services",
+        "page": 4,
+        "bbox": [
+          0.245,
+          0.648703,
+          0.511307,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Warranty/Maintenance/Service Agreement PDC/MDC (Optional lease item)",
+        "confidence": 0.7896770317024984,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[6].item_no",
+        "page": 4,
+        "bbox": [
+          0.204526,
+          0.691086,
+          0.023284,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "006",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[6].supplies_services",
+        "page": 4,
+        "bbox": [
+          0.244918,
+          0.692247,
+          0.400198,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Application Software Support (Annual License/Subscription)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[6].description",
+        "page": 4,
+        "bbox": [
+          0.162435,
+          0.706779,
+          0.286078,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "(See Price listing appendix for item pricing)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[7].item_no",
+        "page": 4,
+        "bbox": [
+          0.204526,
+          0.734655,
+          0.023203,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "007",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[7].supplies_services",
+        "page": 4,
+        "bbox": [
+          0.245065,
+          0.735817,
+          0.432333,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Data Destruction/Wiping (Optional single purchase during year 1)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[7].description",
+        "page": 4,
+        "bbox": [
+          0.162631,
+          0.663058,
+          0.102908,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$ (TBD)/Month",
+        "confidence": 0.7554610103031631,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[8].item_no",
+        "page": 4,
+        "bbox": [
+          0.204526,
+          0.778199,
+          0.022974,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "008",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[8].supplies_services",
+        "page": 4,
+        "bbox": [
+          0.245065,
+          0.779361,
+          0.251832,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Purchase price at end of lease for HPC",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[8].description",
+        "page": 4,
+        "bbox": [
+          0.162631,
+          0.663058,
+          0.102908,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$ (TBD)/Month",
+        "confidence": 0.768279902448725,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[9].item_no",
+        "page": 4,
+        "bbox": [
+          0.204526,
+          0.821769,
+          0.023219,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "009",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[9].description",
+        "page": 5,
+        "bbox": [
+          0.644722,
+          0.154895,
+          0.050163,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$(TBD)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:03:43.015366Z",
+  "completed_at": "2026-09-13T20:03:43.015366Z",
+  "latency_in_ms": 4250
+}

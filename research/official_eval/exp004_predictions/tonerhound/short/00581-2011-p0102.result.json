@@ -1,0 +1,477 @@
+{
+  "request": {
+    "example_id": "short/00581-2011-p0102",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/00581-2011-p0102.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 25,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/00581-2011-p0102",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "final_k1": false,
+      "amended_k1": false,
+      "partnership_ein": "26-1287244",
+      "partnership_name": "TELCO EXPERTS LLC",
+      "partnership_address": "38 PARK AVENUE, RUTHERFORD, NJ 07070",
+      "irs_center": "OGDEN, UT",
+      "is_publicly_traded_partnership": false,
+      "partner_id": "082-50-3829",
+      "partner_name": "PETER GOLDBERG",
+      "partner_address": "1520 YORK AVENUE, NEW YORK, NY 10028",
+      "is_general_partner": true,
+      "is_domestic_partner": true,
+      "partner_entity_type": "INDIVIDUAL",
+      "profit_share_beginning": 33.3333334,
+      "profit_share_ending": 33.3333334,
+      "loss_share_beginning": 33.3333334,
+      "loss_share_ending": 33.3333334,
+      "capital_share_beginning": 33.3333334,
+      "capital_share_ending": 33.3333334,
+      "liability_nonrecourse": null,
+      "liability_qualified_nonrecourse_financing": null,
+      "liability_recourse": 66238,
+      "capital_beginning_account": 21693,
+      "capital_contributed": null,
+      "capital_current_year_increase_decrease": 650,
+      "capital_withdrawals_distributions": null,
+      "capital_ending_account": 22343,
+      "capital_account_method": "Tax basis",
+      "contributed_built_in_gain_loss_property": false,
+      "box_1_ordinary_business_income": 3101,
+      "box_2_net_rental_real_estate": null,
+      "box_3_other_net_rental_income": null,
+      "box_4_guaranteed_payments": 155000,
+      "box_5_interest_income": null,
+      "box_6a_ordinary_dividends": null,
+      "box_6b_qualified_dividends": null,
+      "box_7_royalties": null,
+      "box_8_net_short_term_capital_gain": null,
+      "box_9a_net_long_term_capital_gain": null,
+      "box_9b_collectibles_gain": null,
+      "box_9c_unrecaptured_1250_gain": null,
+      "box_10_net_section_1231_gain": null,
+      "box_12_section_179_deduction": 520,
+      "box_14_self_employment_earnings": [
+        {
+          "code": "A",
+          "amount": 158101
+        },
+        {
+          "code": "C",
+          "amount": 268533
+        }
+      ],
+      "box_11_other_income": null,
+      "box_13_other_deductions": [
+        {
+          "code": "A",
+          "amount": 800
+        }
+      ],
+      "box_15_credits": null,
+      "box_16_foreign_transactions": null,
+      "box_17_amt_items": null,
+      "box_18_tax_exempt_income": [
+        {
+          "code": "C*",
+          "amount": null
+        }
+      ],
+      "box_19_distributions": null,
+      "box_20_other_information": null
+    },
+    "field_citations": [
+      {
+        "field_path": "partnership_ein",
+        "page": 1,
+        "bbox": [
+          0.076781,
+          0.223175,
+          0.112592,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "26-1287244",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partnership_name",
+        "page": 1,
+        "bbox": [
+          0.075368,
+          0.267073,
+          0.196188,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "TELCO EXPERTS LLC",
+        "confidence": 0.8301946230183894,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partnership_address",
+        "page": 1,
+        "bbox": [
+          0.145134,
+          0.017726,
+          0.007123,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "irs_center",
+        "page": 1,
+        "bbox": [
+          0.076436,
+          0.326174,
+          0.10358,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "OGDEN, UT",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partner_id",
+        "page": 1,
+        "bbox": [
+          0.077749,
+          0.427721,
+          0.123323,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "082-50 3829",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partner_name",
+        "page": 1,
+        "bbox": [
+          0.077477,
+          0.471316,
+          0.160568,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "PETER GOLDBERG",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partner_address",
+        "page": 1,
+        "bbox": [
+          0.078914,
+          0.485962,
+          0.181587,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1520 YORK AVENUE",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "profit_share_beginning",
+        "page": 1,
+        "bbox": [
+          0.403976,
+          0.617928,
+          0.112272,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "33.3333334%",
+        "confidence": 0.8252983816201833,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "profit_share_ending",
+        "page": 1,
+        "bbox": [
+          0.403976,
+          0.617928,
+          0.112272,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "33.3333334%",
+        "confidence": 0.8252983816201833,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_share_beginning",
+        "page": 1,
+        "bbox": [
+          0.404375,
+          0.632569,
+          0.111557,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "33.3333334%",
+        "confidence": 0.77035378167379,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_share_ending",
+        "page": 1,
+        "bbox": [
+          0.404375,
+          0.632569,
+          0.111557,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "33.3333334%",
+        "confidence": 0.77035378167379,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_share_beginning",
+        "page": 1,
+        "bbox": [
+          0.404361,
+          0.647216,
+          0.111914,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "33.3333334%",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_share_ending",
+        "page": 1,
+        "bbox": [
+          0.404361,
+          0.647216,
+          0.111914,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "33.3333334%",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_beginning_account",
+        "page": 1,
+        "bbox": [
+          0.462147,
+          0.748867,
+          0.073447,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "21,693.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_account_method",
+        "page": 1,
+        "bbox": [
+          0.122456,
+          0.835032,
+          0.047158,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Tax basis",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_1_ordinary_business_income",
+        "page": 1,
+        "bbox": [
+          0.657883,
+          0.134826,
+          0.062702,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3/101",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_4_guaranteed_payments",
+        "page": 1,
+        "bbox": [
+          0.635912,
+          0.222995,
+          0.085452,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "155/000.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_12_section_179_deduction",
+        "page": 1,
+        "bbox": [
+          0.682375,
+          0.573996,
+          0.029215,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "520.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_14_self_employment_earnings[0].code",
+        "page": 1,
+        "bbox": [
+          0.199556,
+          0.355507,
+          0.006802,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "a",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_14_self_employment_earnings[0].amount",
+        "page": 1,
+        "bbox": [
+          0.637071,
+          0.662288,
+          0.085962,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "158/101",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_14_self_employment_earnings[1].code",
+        "page": 1,
+        "bbox": [
+          0.076311,
+          0.311168,
+          0.009024,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "C",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_14_self_employment_earnings[1].amount",
+        "page": 1,
+        "bbox": [
+          0.636011,
+          0.677491,
+          0.085732,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "268,533.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_13_other_deductions[0].code",
+        "page": 1,
+        "bbox": [
+          0.199556,
+          0.355507,
+          0.006802,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "a",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_13_other_deductions[0].amount",
+        "page": 1,
+        "bbox": [
+          0.682494,
+          0.603289,
+          0.029139,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "800.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_18_tax_exempt_income[0].code",
+        "page": 1,
+        "bbox": [
+          0.739539,
+          0.369119,
+          0.019184,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "C*",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:04:54.254316Z",
+  "completed_at": "2026-09-13T20:04:54.254316Z",
+  "latency_in_ms": 539
+}

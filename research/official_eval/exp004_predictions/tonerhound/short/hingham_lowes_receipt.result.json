@@ -1,0 +1,550 @@
+{
+  "request": {
+    "example_id": "short/hingham_lowes_receipt",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/hingham_lowes_receipt.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 31,
+    "ocr_pages": 0,
+    "num_pages": 4
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/hingham_lowes_receipt",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "merchant_name": "LOWE'S HOME CENTERS, LLC",
+      "store_number": "1618",
+      "merchant_address": {
+        "street": "729 BRIDGE STREET",
+        "city": "Weymouth",
+        "state": "MA",
+        "zip_code": "02191"
+      },
+      "merchant_phone": "(781) 340-5964",
+      "transaction_date": "2026-01-21",
+      "transaction_time": "08:13",
+      "transaction_id": "11847985",
+      "line_items": [
+        {
+          "line_no": 1,
+          "description": "PS 6-IN JR HACKSAW",
+          "quantity": 1,
+          "unit_price": 8.98,
+          "item_total": 8.98,
+          "sku": "587724"
+        },
+        {
+          "line_no": 2,
+          "description": "GORILLA WALL REPAIR FAST",
+          "quantity": 1,
+          "unit_price": 7.48,
+          "item_total": 7.48,
+          "sku": "6843097"
+        },
+        {
+          "line_no": 3,
+          "description": "PROJECT SOURCE 2-IN BRUSH",
+          "quantity": 1,
+          "unit_price": 3.98,
+          "item_total": 3.98,
+          "sku": "253307"
+        },
+        {
+          "line_no": 4,
+          "description": "SAT NIC 1.875IN X 36IN FL",
+          "quantity": 1,
+          "unit_price": 17.58,
+          "item_total": 17.58,
+          "sku": "574846"
+        }
+      ],
+      "subtotal": 38.02,
+      "tax": 2.38,
+      "total": 40.4,
+      "payment_method": "VISA",
+      "card_last4": "3954",
+      "auth_code": "05391D",
+      "amount_paid": 40.4,
+      "currency": "USD"
+    },
+    "field_citations": [
+      {
+        "field_path": "transaction_time",
+        "page": 1,
+        "bbox": [
+          0.410972,
+          0.499436,
+          0.064866,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "08:13:57",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "transaction_id",
+        "page": 1,
+        "bbox": [
+          0.359983,
+          0.467446,
+          0.073287,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "11847985",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].line_no",
+        "page": 1,
+        "bbox": [
+          0.272939,
+          0.725201,
+          0.004501,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.8286496585519005,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].description",
+        "page": 1,
+        "bbox": [
+          0.248034,
+          0.664978,
+          0.174686,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "PS 6-IN JR HACKSAW",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].quantity",
+        "page": 1,
+        "bbox": [
+          0.272939,
+          0.725201,
+          0.004501,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.8286496585519005,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].unit_price",
+        "page": 1,
+        "bbox": [
+          0.706186,
+          0.674452,
+          0.031725,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "8.98",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].item_total",
+        "page": 1,
+        "bbox": [
+          0.706186,
+          0.674452,
+          0.031725,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "8.98",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].sku",
+        "page": 1,
+        "bbox": [
+          0.328651,
+          0.699863,
+          0.055336,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "587724",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].line_no",
+        "page": 1,
+        "bbox": [
+          0.409185,
+          0.888913,
+          0.030311,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2-IN",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].description",
+        "page": 1,
+        "bbox": [
+          0.247625,
+          0.776948,
+          0.240336,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "GORILLA WALL REPAIR FAST",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].quantity",
+        "page": 1,
+        "bbox": [
+          0.272939,
+          0.837173,
+          0.004501,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.790901436631763,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].unit_price",
+        "page": 1,
+        "bbox": [
+          0.706288,
+          0.786424,
+          0.031623,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "7.48",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].item_total",
+        "page": 1,
+        "bbox": [
+          0.706288,
+          0.786424,
+          0.031623,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "7.48",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].sku",
+        "page": 1,
+        "bbox": [
+          0.328583,
+          0.811841,
+          0.064934,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "6843097",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].description",
+        "page": 1,
+        "bbox": [
+          0.248034,
+          0.88892,
+          0.255901,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "PROJECT SOURCE 2-IN BRUSH",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].quantity",
+        "page": 1,
+        "bbox": [
+          0.272939,
+          0.837173,
+          0.004501,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.80139754743962,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].unit_price",
+        "page": 1,
+        "bbox": [
+          0.706203,
+          0.898402,
+          0.031708,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3.98",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].item_total",
+        "page": 1,
+        "bbox": [
+          0.706203,
+          0.898402,
+          0.031708,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3.98",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].sku",
+        "page": 2,
+        "bbox": [
+          0.328423,
+          0.067553,
+          0.055609,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "253307",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[3].line_no",
+        "page": 2,
+        "bbox": [
+          0.607576,
+          0.425031,
+          0.008762,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "4",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[3].description",
+        "page": 2,
+        "bbox": [
+          0.247489,
+          0.144651,
+          0.211816,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "SAT NIC 1.875IN X 36IN FL",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[3].quantity",
+        "page": 2,
+        "bbox": [
+          0.272937,
+          0.204863,
+          0.004501,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.7866887343993303,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[3].unit_price",
+        "page": 2,
+        "bbox": [
+          0.697864,
+          0.154113,
+          0.040045,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "17.58",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[3].item_total",
+        "page": 2,
+        "bbox": [
+          0.697864,
+          0.154113,
+          0.040045,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "17.58",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[3].sku",
+        "page": 2,
+        "bbox": [
+          0.328648,
+          0.179524,
+          0.05537,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "574846",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "tax",
+        "page": 2,
+        "bbox": [
+          0.712074,
+          0.340437,
+          0.03193,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2.38",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total",
+        "page": 2,
+        "bbox": [
+          0.702322,
+          0.365841,
+          0.03329,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "40.40",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "payment_method",
+        "page": 4,
+        "bbox": [
+          0.334385,
+          0.115042,
+          0.040022,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "VISA",
+        "confidence": 0.9153275709513963,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "card_last4",
+        "page": 2,
+        "bbox": [
+          0.459972,
+          0.508853,
+          0.036874,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3954",
+        "confidence": 0.8557373554939504,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "auth_code",
+        "page": 2,
+        "bbox": [
+          0.685767,
+          0.559675,
+          0.058081,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "05391D",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "amount_paid",
+        "page": 2,
+        "bbox": [
+          0.70232,
+          0.508847,
+          0.03329,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "40.40",
+        "confidence": 0.7805351876492708,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:32:37.923317Z",
+  "completed_at": "2026-09-13T20:32:37.923317Z",
+  "latency_in_ms": 253
+}

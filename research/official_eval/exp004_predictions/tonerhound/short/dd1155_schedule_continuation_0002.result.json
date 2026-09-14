@@ -1,0 +1,136 @@
+{
+  "request": {
+    "example_id": "short/dd1155_schedule_continuation_0002",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/dd1155_schedule_continuation_0002.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 6,
+    "ocr_pages": 0,
+    "num_pages": 7
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/dd1155_schedule_continuation_0002",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "contract_purchase_order_number": "SPE4A7-17-P-5525",
+      "delivery_order_call_number": null,
+      "date_of_order": "2017 FEB 17",
+      "requisition_purchase_request_number": "0065228382",
+      "total_award_amount": null,
+      "line_items": [
+        {
+          "item_number": "0001",
+          "description": "1650-00-993-7386\nVALVE,LINEAR,DIRECTIONAL CONTROL\nHYDRO-AIRE INC., DBA CRANE HYDRO-AIRE CAGE 81982\nP/N: 80791",
+          "quantity_ordered": 3.0,
+          "unit": "EA",
+          "unit_price": null,
+          "amount": null
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "date_of_order",
+        "page": 1,
+        "bbox": [
+          0.520248,
+          0.094741,
+          0.065917,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2017 FEB 17",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "requisition_purchase_request_number",
+        "page": 1,
+        "bbox": [
+          0.640198,
+          0.091354,
+          0.062508,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0065228382",
+        "confidence": 0.8035589930270127,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].item_number",
+        "page": 5,
+        "bbox": [
+          0.060284,
+          0.622109,
+          0.028412,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0001",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].description",
+        "page": 5,
+        "bbox": [
+          0.184339,
+          0.634492,
+          0.09383,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "VALVE,LINEAR",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].quantity_ordered",
+        "page": 5,
+        "bbox": [
+          0.334538,
+          0.622109,
+          0.021882,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3.000",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].unit",
+        "page": 5,
+        "bbox": [
+          0.474931,
+          0.622325,
+          0.015008,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "EA",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:31:59.394667Z",
+  "completed_at": "2026-09-13T20:31:59.394667Z",
+  "latency_in_ms": 759
+}

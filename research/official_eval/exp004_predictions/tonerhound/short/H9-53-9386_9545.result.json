@@ -1,0 +1,273 @@
+{
+  "request": {
+    "example_id": "short/H9-53-9386_9545",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/H9-53-9386_9545.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 12,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/H9-53-9386_9545",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "operator": "Pioneer Natural Resources USA, Inc.",
+      "operator_number": "665748",
+      "rrc_district": "02",
+      "street_or_po_box": "5205 N. O'Connor Blvd. Suite 200",
+      "city": "Irving",
+      "state": "TX",
+      "zip_code": "75039-3746",
+      "lease_facility_operation_name": "Three Rivers Amine Plant",
+      "field_or_area_name": "Three Rivers (Edwards)",
+      "county": "Live Oak",
+      "optype_a_oil_field": false,
+      "optype_b_gas_field": false,
+      "optype_c_pipeline_gathering": true,
+      "optype_d_gasoline_plant": false,
+      "optype_e_drilling_workover": false,
+      "optype_f_sweetening_unit": true,
+      "optype_g_combination": false,
+      "optype_h_other": false,
+      "operation_type_other_explanation": null,
+      "h2s_concentration": "800 PPM",
+      "maximum_escape_volume": "5,000 MCF/Day",
+      "roe_100ppm": "240 Ft.",
+      "roe_500ppm": "123 Ft.",
+      "operation_existing": false,
+      "operation_new": true,
+      "modification_cert_change_yes": false,
+      "modification_cert_change_no": true,
+      "workover_100ppm_3000ft_yes": false,
+      "workover_100ppm_3000ft_no": true,
+      "previous_certificate_number": null,
+      "roe_100ppm_public_area_yes": true,
+      "roe_100ppm_public_area_no": false,
+      "roe_500ppm_public_road_yes": true,
+      "roe_500ppm_public_road_no": false,
+      "injection_h2s_fluid_yes": true,
+      "injection_h2s_fluid_no": false,
+      "compliance_date_mo": "07",
+      "compliance_date_day": "01",
+      "compliance_date_year": "1977",
+      "depth_of_compliance_drilling": null,
+      "contingency_plan_prepared_yes": true,
+      "contingency_plan_prepared_no": false,
+      "contingency_plan_location": "Pioneer Natural Resources USA, Inc. Pawnee Plant 2 mi. S FM 673 Pawnee, TX 78145",
+      "data_location": "Pioneer Natural Resources USA, Inc. Pawnee Plant 2 mi. S FM 673 Pawnee, Texas 78145",
+      "signature_present": true,
+      "representative_of_company": null,
+      "title": "Sr. Engineering Tech",
+      "phone_no": "972-969-3958",
+      "certificate_date": "02/14/07",
+      "approved_by": null,
+      "rrc_use_date": "02-20-07",
+      "remarks": null,
+      "certification_number": "055665",
+      "exempt_stamp_present": false,
+      "operations_covered": [
+        {
+          "rrc_id": "02-0953",
+          "type_id_code": "4",
+          "storage_yes": false,
+          "storage_no": true
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "operator_number",
+        "page": 1,
+        "bbox": [
+          0.534747,
+          0.151018,
+          0.04947,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "665748",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district",
+        "page": 1,
+        "bbox": [
+          0.912839,
+          0.148955,
+          0.015901,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "02",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "state",
+        "page": 1,
+        "bbox": [
+          0.76914,
+          0.179904,
+          0.019435,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "TX",
+        "confidence": 0.7749884758753314,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "zip_code",
+        "page": 1,
+        "bbox": [
+          0.872203,
+          0.17807,
+          0.081861,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "75039-3746",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_facility_operation_name",
+        "page": 1,
+        "bbox": [
+          0.079505,
+          0.213375,
+          0.180212,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "hree Rivers Amine Plan",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "h2s_concentration",
+        "page": 1,
+        "bbox": [
+          0.512367,
+          0.299803,
+          0.051237,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "100 PPM",
+        "confidence": 0.8885141770517653,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "compliance_date_mo",
+        "page": 1,
+        "bbox": [
+          0.789753,
+          0.515759,
+          0.067727,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "07/",
+        "confidence": 0.8157250070678828,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "compliance_date_day",
+        "page": 1,
+        "bbox": [
+          0.871614,
+          0.516906,
+          0.097173,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "01/191977",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "compliance_date_year",
+        "page": 1,
+        "bbox": [
+          0.492933,
+          0.515759,
+          0.475854,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "24. Date (or Depth) of Compliance with all 07/ 01/191977",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "phone_no",
+        "page": 1,
+        "bbox": [
+          0.732038,
+          0.769313,
+          0.09894,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "972-969-3958",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[0].rrc_id",
+        "page": 1,
+        "bbox": [
+          0.068905,
+          0.402279,
+          0.056537,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "02-0953",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[0].type_id_code",
+        "page": 1,
+        "bbox": [
+          0.067138,
+          0.166608,
+          0.010012,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "4.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:17:49.073298Z",
+  "completed_at": "2026-09-13T20:17:49.073298Z",
+  "latency_in_ms": 6980
+}

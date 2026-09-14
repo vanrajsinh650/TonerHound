@@ -1,0 +1,136 @@
+{
+  "request": {
+    "example_id": "medium/byline_bancorp_investor_deck_q2_2023",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/byline_bancorp_investor_deck_q2_2023.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 6,
+    "ocr_pages": 0,
+    "num_pages": 24
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/byline_bancorp_investor_deck_q2_2023",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "period": "Q2 FY2023",
+      "currency": "USD",
+      "fiscal_period_end_date": "2023-06-30",
+      "total_revenue": 90.457,
+      "revenue_growth_yoy": 19.0,
+      "gross_profit": null,
+      "operating_income": 35.339,
+      "net_income": 26.107,
+      "adjusted_ebitda": null,
+      "gaap_eps_diluted": 0.7,
+      "adjusted_eps_diluted": 0.73,
+      "gross_margin": null,
+      "operating_margin": 39.1,
+      "free_cash_flow": null,
+      "segments": []
+    },
+    "field_citations": [
+      {
+        "field_path": "period",
+        "page": 8,
+        "bbox": [
+          0.478028,
+          0.895539,
+          0.03463,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Q2 2023",
+        "confidence": 0.7790813244869936,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "currency",
+        "page": 8,
+        "bbox": [
+          0.782835,
+          0.928364,
+          0.018262,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "USDA",
+        "confidence": 0.888628720323726,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "fiscal_period_end_date",
+        "page": 5,
+        "bbox": [
+          0.758071,
+          0.243053,
+          0.063841,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "June 30, 2023",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "revenue_growth_yoy",
+        "page": 11,
+        "bbox": [
+          0.428504,
+          0.941302,
+          0.006924,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "19",
+        "confidence": 0.9622873109865491,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gaap_eps_diluted",
+        "page": 19,
+        "bbox": [
+          0.475365,
+          0.505491,
+          0.014105,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0.70",
+        "confidence": 0.7861104538081707,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "adjusted_eps_diluted",
+        "page": 19,
+        "bbox": [
+          0.475365,
+          0.625948,
+          0.018521,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0.73",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T16:44:37.249674Z",
+  "completed_at": "2026-09-13T16:44:37.249674Z",
+  "latency_in_ms": 8106
+}

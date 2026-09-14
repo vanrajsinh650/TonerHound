@@ -1,0 +1,91 @@
+{
+  "request": {
+    "example_id": "medium/sunoco_investor_deck_march_2026",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/sunoco_investor_deck_march_2026.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 3,
+    "ocr_pages": 0,
+    "num_pages": 36
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/sunoco_investor_deck_march_2026",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "period": "FY2025",
+      "currency": "USD",
+      "fiscal_period_end_date": "2025-12-31",
+      "total_revenue": 42000.0,
+      "revenue_growth_yoy": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 527.0,
+      "adjusted_ebitda": 2100,
+      "gaap_eps_diluted": null,
+      "adjusted_eps_diluted": null,
+      "gross_margin": null,
+      "operating_margin": null,
+      "free_cash_flow": null,
+      "segments": []
+    },
+    "field_citations": [
+      {
+        "field_path": "period",
+        "page": 3,
+        "bbox": [
+          0.604757,
+          0.605647,
+          0.004731,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.8571645704407113,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "fiscal_period_end_date",
+        "page": 8,
+        "bbox": [
+          0.185871,
+          0.984531,
+          0.032832,
+          0.015469
+        ],
+        "polygon": null,
+        "reference_text": "12/31/25",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "net_income",
+        "page": 35,
+        "bbox": [
+          0.605844,
+          0.181149,
+          0.019394,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "527",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:03:54.591034Z",
+  "completed_at": "2026-09-13T20:03:54.591034Z",
+  "latency_in_ms": 10317
+}

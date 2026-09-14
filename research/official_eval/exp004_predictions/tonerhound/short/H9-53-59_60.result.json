@@ -1,0 +1,408 @@
+{
+  "request": {
+    "example_id": "short/H9-53-59_60",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/H9-53-59_60.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 21,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/H9-53-59_60",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "operator": "Anadarko E&P Onshore LLC",
+      "operator_number": "020528",
+      "rrc_district": "1",
+      "street_or_po_box": "P.O.Box 1330",
+      "city": "Houston",
+      "state": "TX",
+      "zip_code": "77251",
+      "lease_facility_operation_name": "Briscoe Cochina West Ranch 28H",
+      "field_or_area_name": "Briscoe Ranch Eagle Ford",
+      "county": "Dimmit",
+      "optype_a_oil_field": false,
+      "optype_b_gas_field": true,
+      "optype_c_pipeline_gathering": false,
+      "optype_d_gasoline_plant": false,
+      "optype_e_drilling_workover": false,
+      "optype_f_sweetening_unit": false,
+      "optype_g_combination": false,
+      "optype_h_other": false,
+      "operation_type_other_explanation": "Single well",
+      "h2s_concentration": "6.00 PPM",
+      "maximum_escape_volume": "1442.00 MCF/Day",
+      "roe_100ppm": "0 Ft.",
+      "roe_500ppm": "0 Ft.",
+      "operation_existing": true,
+      "operation_new": false,
+      "modification_cert_change_yes": false,
+      "modification_cert_change_no": true,
+      "workover_100ppm_3000ft_yes": false,
+      "workover_100ppm_3000ft_no": true,
+      "previous_certificate_number": null,
+      "roe_100ppm_public_area_yes": false,
+      "roe_100ppm_public_area_no": true,
+      "roe_500ppm_public_road_yes": false,
+      "roe_500ppm_public_road_no": true,
+      "injection_h2s_fluid_yes": false,
+      "injection_h2s_fluid_no": true,
+      "compliance_date_mo": "09",
+      "compliance_date_day": "24",
+      "compliance_date_year": "2013",
+      "depth_of_compliance_drilling": null,
+      "contingency_plan_prepared_yes": false,
+      "contingency_plan_prepared_no": true,
+      "contingency_plan_location": "N/A",
+      "data_location": "1201 Lake Robbins Drive, The Woodlands, TX 77380; and/or 4674 U.S. Hwy. 277, Carrizo Springs, TX 78834",
+      "signature_present": true,
+      "representative_of_company": null,
+      "title": "EHS Manager",
+      "phone_no": "(832) 636-2508",
+      "certificate_date": "09/24/13",
+      "approved_by": "Wesley Dresch",
+      "rrc_use_date": "10-31-2013",
+      "remarks": null,
+      "certification_number": "078116",
+      "exempt_stamp_present": true,
+      "operations_covered": [
+        {
+          "rrc_id": "269524",
+          "type_id_code": "2",
+          "storage_yes": false,
+          "storage_no": true
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "operator",
+        "page": 1,
+        "bbox": [
+          0.138115,
+          0.213727,
+          0.19265,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Anadarko E&P Onshore LLC",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_number",
+        "page": 1,
+        "bbox": [
+          0.516894,
+          0.213727,
+          0.0492,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "020528",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district",
+        "page": 1,
+        "bbox": [
+          0.127445,
+          0.2035,
+          0.009484,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1,",
+        "confidence": 0.8089835348989066,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "street_or_po_box",
+        "page": 1,
+        "bbox": [
+          0.147599,
+          0.238727,
+          0.092472,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "P.0.Box 1330",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "city",
+        "page": 1,
+        "bbox": [
+          0.480735,
+          0.240545,
+          0.049793,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Houston",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "state",
+        "page": 1,
+        "bbox": [
+          0.415531,
+          0.638727,
+          0.019561,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "TX",
+        "confidence": 0.7661160876275945,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "zip_code",
+        "page": 1,
+        "bbox": [
+          0.795495,
+          0.239864,
+          0.039123,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "77251",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_facility_operation_name",
+        "page": 1,
+        "bbox": [
+          0.12626,
+          0.265773,
+          0.22703,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Briscoe Cochina West Ranch 28H",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "field_or_area_name",
+        "page": 1,
+        "bbox": [
+          0.46473,
+          0.264864,
+          0.174274,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Briscoe Ranch Eagle Ford",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.728512,
+          0.265773,
+          0.046829,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Dimmit",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operation_type_other_explanation",
+        "page": 1,
+        "bbox": [
+          0.480735,
+          0.295545,
+          0.070539,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Single well",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "maximum_escape_volume",
+        "page": 1,
+        "bbox": [
+          0.698874,
+          0.329636,
+          0.16479,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1442.00 MCF/Day",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "compliance_date_mo",
+        "page": 1,
+        "bbox": [
+          0.718435,
+          0.524636,
+          0.03853,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "09",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "compliance_date_day",
+        "page": 1,
+        "bbox": [
+          0.474807,
+          0.521,
+          0.015412,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "24,",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "compliance_date_year",
+        "page": 1,
+        "bbox": [
+          0.736218,
+          0.104545,
+          0.033788,
+          0.018636
+        ],
+        "polygon": null,
+        "reference_text": "2013",
+        "confidence": 0.7609612138077032,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "contingency_plan_location",
+        "page": 1,
+        "bbox": [
+          0.123889,
+          0.605091,
+          0.025489,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "N/A",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "data_location",
+        "page": 1,
+        "bbox": [
+          0.125074,
+          0.640318,
+          0.407825,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1201 Lake Robbins Drive, The Woodlands, TX 77380; and/or",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "title",
+        "page": 1,
+        "bbox": [
+          0.381743,
+          0.736227,
+          0.09425,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "EHS Manager",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "phone_no",
+        "page": 1,
+        "bbox": [
+          0.650267,
+          0.734636,
+          0.102549,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "(832) 636-2508",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "certificate_date",
+        "page": 1,
+        "bbox": [
+          0.780083,
+          0.7335,
+          0.058091,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "09/24/13",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[0].type_id_code",
+        "page": 1,
+        "bbox": [
+          0.497925,
+          0.202136,
+          0.008892,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:17:08.020231Z",
+  "completed_at": "2026-09-13T20:17:08.020231Z",
+  "latency_in_ms": 7715
+}

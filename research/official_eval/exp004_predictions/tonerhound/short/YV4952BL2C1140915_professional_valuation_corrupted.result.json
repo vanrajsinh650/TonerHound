@@ -1,0 +1,810 @@
+{
+  "request": {
+    "example_id": "short/YV4952BL2C1140915_professional_valuation_corrupted",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/YV4952BL2C1140915_professional_valuation_corrupted.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 44,
+    "ocr_pages": 0,
+    "num_pages": 7
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/YV4952BL2C1140915_professional_valuation_corrupted",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "claim_number": "22-5056549-01",
+      "policy_number": null,
+      "loss_type": "UNKNOWN",
+      "loss_date": "01/21/2022",
+      "reported_date": "01/25/2022",
+      "valuation_report_date": "02/17/2022",
+      "valuation_report_id": "1014377008",
+      "version_number": 4,
+      "prepared_for": "Progressive Group of Insurance Companies",
+      "prepared_for_phone": "(800) 321-9843",
+      "owner": {
+        "name": "SCOTT THURSTON",
+        "address": "2304 FAIRWAY DR BATON ROUGE, LA 70809",
+        "phone": null,
+        "email": null
+      },
+      "loss_vehicle": {
+        "year": 2012,
+        "make": "Volvo",
+        "model": "XC70",
+        "trim": null,
+        "body_style": "4 Door Wagon",
+        "engine": "3.2L 6 Cyl Gas A",
+        "drivetrain": "FWD",
+        "vin": "YV4952BL2C1140915",
+        "mileage": 55374,
+        "location": "LA 70809",
+        "ext_color": "Twilight Bronze Metallic",
+        "license": "WDD885, Maine",
+        "title_history": "No"
+      },
+      "valuation_summary": {
+        "base_value": 13231.8,
+        "condition_adjustment": -462.43,
+        "prior_damage_adjustment": 0.0,
+        "aftermarket_parts_adjustment": 55.0,
+        "refurbishment_adjustment": 0.0,
+        "market_value": 12824.37,
+        "taxes": null,
+        "fees": null,
+        "deductible": null,
+        "settlement_adjustment_post_tax": null,
+        "settlement_value": 12824.37
+      },
+      "search_radius_miles": 350,
+      "typical_mileage_for_this_vehicle": 113000,
+      "overall_condition": "2.65-Good",
+      "typical_vehicle_condition": "3.00",
+      "comparable_vehicles": [
+        {
+          "row_number": 1,
+          "vehicle_description": "2012 VOLVO XC70 PREMIER PLUS 4D WGN 6 3.2NORMAL GAS A 2WD",
+          "vin": "YV4952BLXC1143836",
+          "stock_no": "MBEdeG1A",
+          "listing_date": "10/05/2021",
+          "zip_postal_code": "77015",
+          "distance_from_loss_vehicle_miles": 249,
+          "source": "DEALER WEB LISTING - AUTOTRADER.COM",
+          "dealer_name": "PRIVATE OWNER VIA TRED.COM APPOINTMENT ONLY",
+          "dealer_address": "HOUSTON TX 77015",
+          "dealer_phone": "206-471-6212",
+          "price": 11569.0,
+          "price_type": "List Price",
+          "adjusted_value": 11764.92,
+          "total_adjustments": 195.92,
+          "loss_vehicle_mileage_displayed": 55374,
+          "this_vehicle_mileage": 125000,
+          "mileage_adjustment_amount": 2364.71,
+          "vehicle_configuration_adjustment_amount": -1264.41,
+          "projected_sold_adjustment_amount": -398.0,
+          "comparable_vehicle_option_details": "BLIND SPOT INFORMATION SYSTEM (BLIS)"
+        },
+        {
+          "row_number": 2,
+          "vehicle_description": "2012 VOLVO XC70 PREMIER PLUS 4D WGN 6 3.2NORMAL GAS A 2WD",
+          "vin": "YV4952BL1C1142834",
+          "stock_no": "VV2231A",
+          "listing_date": "11/03/2021",
+          "zip_postal_code": "36117",
+          "distance_from_loss_vehicle_miles": 322,
+          "source": "DEALER WEB LISTING - CARS.COM",
+          "dealer_name": "JACK INGRAM MOTORS",
+          "dealer_address": "235 EASTERN BLVD MONTGOMERY AL 36117",
+          "dealer_phone": "334-277-5700",
+          "price": 15991.0,
+          "price_type": "List Price",
+          "adjusted_value": 14712.02,
+          "total_adjustments": -1278.98,
+          "loss_vehicle_mileage_displayed": 55374,
+          "this_vehicle_mileage": 82089,
+          "mileage_adjustment_amount": 1007.21,
+          "vehicle_configuration_adjustment_amount": -1749.19,
+          "projected_sold_adjustment_amount": -537.0,
+          "comparable_vehicle_option_details": null
+        },
+        {
+          "row_number": 3,
+          "vehicle_description": "2012 VOLVO XC70 PREMIER 4D WGN 6 3.2NORMAL GAS A 2WD",
+          "vin": "YV4952BL9C1125148",
+          "stock_no": "M76456A",
+          "listing_date": "02/02/2022",
+          "zip_postal_code": "35244",
+          "distance_from_loss_vehicle_miles": 323,
+          "source": "DEALER WEB LISTING - VAST.COM",
+          "dealer_name": "HENDRICKSUBARU USED",
+          "dealer_address": "2929 JOHN HAWKINS PARKWAY HOOVER AL 35244",
+          "dealer_phone": "770-232-0099",
+          "price": 12700.0,
+          "price_type": "List Price",
+          "adjusted_value": 13218.45,
+          "total_adjustments": 518.45,
+          "loss_vehicle_mileage_displayed": 55374,
+          "this_vehicle_mileage": 105350,
+          "mileage_adjustment_amount": 1837.72,
+          "vehicle_configuration_adjustment_amount": -892.27,
+          "projected_sold_adjustment_amount": -427.0,
+          "comparable_vehicle_option_details": null
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "claim_number",
+        "page": 7,
+        "bbox": [
+          0.527647,
+          0.944864,
+          0.072941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "22-5056549-01",
+        "confidence": 0.8248603229902336,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "version_number",
+        "page": 4,
+        "bbox": [
+          0.918235,
+          0.948955,
+          0.004706,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "4",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "owner.name",
+        "page": 2,
+        "bbox": [
+          0.068235,
+          0.922136,
+          0.067059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "s",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle.year",
+        "page": 3,
+        "bbox": [
+          0.145294,
+          0.627727,
+          0.034706,
+          0.024545
+        ],
+        "polygon": null,
+        "reference_text": "2012",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle.make",
+        "page": 3,
+        "bbox": [
+          0.187647,
+          0.627727,
+          0.04,
+          0.024545
+        ],
+        "polygon": null,
+        "reference_text": "Volvo",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle.model",
+        "page": 3,
+        "bbox": [
+          0.235294,
+          0.627727,
+          0.034706,
+          0.024545
+        ],
+        "polygon": null,
+        "reference_text": "XC70",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle.body_style",
+        "page": 3,
+        "bbox": [
+          0.288235,
+          0.627727,
+          0.103529,
+          0.024545
+        ],
+        "polygon": null,
+        "reference_text": "4 Door Wagon",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle.engine",
+        "page": 3,
+        "bbox": [
+          0.41,
+          0.627727,
+          0.121176,
+          0.024545
+        ],
+        "polygon": null,
+        "reference_text": "3.2L 6 Cyl Gas A",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle.drivetrain",
+        "page": 3,
+        "bbox": [
+          0.542353,
+          0.627727,
+          0.031765,
+          0.024545
+        ],
+        "polygon": null,
+        "reference_text": "FWD",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle.mileage",
+        "page": 6,
+        "bbox": [
+          0.608824,
+          0.221364,
+          0.045294,
+          0.02
+        ],
+        "polygon": null,
+        "reference_text": "55374",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "valuation_summary.condition_adjustment",
+        "page": 4,
+        "bbox": [
+          0.191176,
+          0.078273,
+          0.057647,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "-$462.43",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "valuation_summary.prior_damage_adjustment",
+        "page": 4,
+        "bbox": [
+          0.537176,
+          0.157364,
+          0.023294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$0.00",
+        "confidence": 0.7655534184846312,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "valuation_summary.refurbishment_adjustment",
+        "page": 4,
+        "bbox": [
+          0.537176,
+          0.157364,
+          0.023294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$0.00",
+        "confidence": 0.7655534184846312,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "search_radius_miles",
+        "page": 3,
+        "bbox": [
+          0.341765,
+          0.355,
+          0.025882,
+          0.021364
+        ],
+        "polygon": null,
+        "reference_text": "350",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "typical_mileage_for_this_vehicle",
+        "page": 3,
+        "bbox": [
+          0.341176,
+          0.375,
+          0.058824,
+          0.02
+        ],
+        "polygon": null,
+        "reference_text": "113,000",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "overall_condition",
+        "page": 4,
+        "bbox": [
+          0.472353,
+          0.081682,
+          0.070588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2.65-Good",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "typical_vehicle_condition",
+        "page": 7,
+        "bbox": [
+          0.082353,
+          0.412818,
+          0.008824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].vehicle_description",
+        "page": 6,
+        "bbox": [
+          0.037059,
+          0.481818,
+          0.618824,
+          0.020909
+        ],
+        "polygon": null,
+        "reference_text": "2012 VOLVO XC70 PREMIER PLUS 4D WGN 6 3.2 NORMAL GAS A 2WD",
+        "confidence": 0.7560856324004915,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].source",
+        "page": 6,
+        "bbox": [
+          0.086471,
+          0.931909,
+          0.067059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "T",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].dealer_name",
+        "page": 6,
+        "bbox": [
+          0.855294,
+          0.146455,
+          0.006471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "p",
+        "confidence": 0.8102415841110696,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].dealer_address",
+        "page": 6,
+        "bbox": [
+          0.086471,
+          0.931909,
+          0.067059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "T",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].price_type",
+        "page": 6,
+        "bbox": [
+          0.855294,
+          0.146455,
+          0.006471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "p",
+        "confidence": 0.9311255954083316,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].loss_vehicle_mileage_displayed",
+        "page": 6,
+        "bbox": [
+          0.608824,
+          0.221364,
+          0.045294,
+          0.02
+        ],
+        "polygon": null,
+        "reference_text": "55374",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].this_vehicle_mileage",
+        "page": 3,
+        "bbox": [
+          0.414706,
+          0.442136,
+          0.047647,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "125000",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].comparable_vehicle_option_details",
+        "page": 6,
+        "bbox": [
+          0.855294,
+          0.146455,
+          0.006471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "p",
+        "confidence": 0.8067595832369328,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].row_number",
+        "page": 4,
+        "bbox": [
+          0.360588,
+          0.581909,
+          0.004118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].vehicle_description",
+        "page": 4,
+        "bbox": [
+          0.651176,
+          0.982136,
+          0.007647,
+          0.017864
+        ],
+        "polygon": null,
+        "reference_text": "L",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].vin",
+        "page": 4,
+        "bbox": [
+          0.651176,
+          0.982136,
+          0.007647,
+          0.017864
+        ],
+        "polygon": null,
+        "reference_text": "L",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].source",
+        "page": 4,
+        "bbox": [
+          0.651176,
+          0.982136,
+          0.007647,
+          0.017864
+        ],
+        "polygon": null,
+        "reference_text": "L",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].dealer_address",
+        "page": 4,
+        "bbox": [
+          0.651176,
+          0.982136,
+          0.007647,
+          0.017864
+        ],
+        "polygon": null,
+        "reference_text": "L",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].price_type",
+        "page": 4,
+        "bbox": [
+          0.651176,
+          0.982136,
+          0.007647,
+          0.017864
+        ],
+        "polygon": null,
+        "reference_text": "L",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].loss_vehicle_mileage_displayed",
+        "page": 6,
+        "bbox": [
+          0.608824,
+          0.221364,
+          0.045294,
+          0.02
+        ],
+        "polygon": null,
+        "reference_text": "55374",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].row_number",
+        "page": 4,
+        "bbox": [
+          0.297059,
+          0.280091,
+          0.006471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].vehicle_description",
+        "page": 4,
+        "bbox": [
+          0.651176,
+          0.982136,
+          0.007647,
+          0.017864
+        ],
+        "polygon": null,
+        "reference_text": "L",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].vin",
+        "page": 4,
+        "bbox": [
+          0.651176,
+          0.982136,
+          0.007647,
+          0.017864
+        ],
+        "polygon": null,
+        "reference_text": "L",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].zip_postal_code",
+        "page": 6,
+        "bbox": [
+          0.592353,
+          0.112273,
+          0.047059,
+          0.022727
+        ],
+        "polygon": null,
+        "reference_text": "35244",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].source",
+        "page": 4,
+        "bbox": [
+          0.651176,
+          0.982136,
+          0.007647,
+          0.017864
+        ],
+        "polygon": null,
+        "reference_text": "L",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].dealer_address",
+        "page": 4,
+        "bbox": [
+          0.651176,
+          0.982136,
+          0.007647,
+          0.017864
+        ],
+        "polygon": null,
+        "reference_text": "L",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].price",
+        "page": 3,
+        "bbox": [
+          0.675882,
+          0.494864,
+          0.066471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$12,700.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].price_type",
+        "page": 4,
+        "bbox": [
+          0.651176,
+          0.982136,
+          0.007647,
+          0.017864
+        ],
+        "polygon": null,
+        "reference_text": "L",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].adjusted_value",
+        "page": 6,
+        "bbox": [
+          0.854118,
+          0.262818,
+          0.075294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$13,218.45",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].total_adjustments",
+        "page": 6,
+        "bbox": [
+          0.887479,
+          0.245545,
+          0.041345,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$518.45",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].loss_vehicle_mileage_displayed",
+        "page": 6,
+        "bbox": [
+          0.608824,
+          0.221364,
+          0.045294,
+          0.02
+        ],
+        "polygon": null,
+        "reference_text": "55374",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].this_vehicle_mileage",
+        "page": 6,
+        "bbox": [
+          0.726471,
+          0.219545,
+          0.051765,
+          0.02
+        ],
+        "polygon": null,
+        "reference_text": "105,350",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:23:01.552274Z",
+  "completed_at": "2026-09-13T20:23:01.552274Z",
+  "latency_in_ms": 48142
+}

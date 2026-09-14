@@ -1,0 +1,216 @@
+{
+  "request": {
+    "example_id": "short/07021-2016-p0039",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/07021-2016-p0039.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 10,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/07021-2016-p0039",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "final_k1": false,
+      "amended_k1": false,
+      "corporation_ein": "26-3839121",
+      "corporation_name": "Pine Harbour Water Utilities LLC",
+      "corporation_address": "P O BOX 447, Fruitland Park FL 34731",
+      "irs_center": "Ogden, UT 84201",
+      "shareholder_id": "334-50-8852",
+      "shareholder_name": "Madeline Lipsky",
+      "shareholder_address": "P.O. Box 447, Fruitland Park FL 34731",
+      "shareholder_stock_ownership_pct": 33.3333,
+      "box_1_ordinary_business_income": -9821,
+      "box_2_net_rental_real_estate": null,
+      "box_3_other_net_rental_income": null,
+      "box_4_interest_income": null,
+      "box_5a_ordinary_dividends": null,
+      "box_5b_qualified_dividends": null,
+      "box_6_royalties": null,
+      "box_7_net_short_term_capital_gain": null,
+      "box_8a_net_long_term_capital_gain": null,
+      "box_8b_collectibles_gain": null,
+      "box_8c_unrecaptured_1250_gain": null,
+      "box_9_net_section_1231_gain": null,
+      "box_11_section_179_deduction": null,
+      "box_10_other_income": null,
+      "box_12_other_deductions": null,
+      "box_13_credits": null,
+      "box_14_foreign_transactions": null,
+      "box_15_amt_items": [
+        {
+          "code": "A",
+          "amount": 1721
+        }
+      ],
+      "box_16_items_affecting_shareholder_basis": null,
+      "box_17_other_information": null
+    },
+    "field_citations": [
+      {
+        "field_path": "corporation_ein",
+        "page": 1,
+        "bbox": [
+          0.057917,
+          0.251834,
+          0.115024,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "26-3839121",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "corporation_name",
+        "page": 1,
+        "bbox": [
+          0.061019,
+          0.281369,
+          0.377583,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Pine Harbour Water Utilities LLC",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "irs_center",
+        "page": 1,
+        "bbox": [
+          0.144122,
+          0.375548,
+          0.104446,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "UT 84201",
+        "confidence": 0.8581788792668413,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "shareholder_id",
+        "page": 1,
+        "bbox": [
+          0.059495,
+          0.436373,
+          0.12682,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "334-50-8852",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "shareholder_name",
+        "page": 1,
+        "bbox": [
+          0.06138,
+          0.467745,
+          0.178634,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Madeline Lipsky",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "shareholder_address",
+        "page": 1,
+        "bbox": [
+          0.062792,
+          0.512596,
+          0.33666,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Fruitland Park FL 34731",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "shareholder_stock_ownership_pct",
+        "page": 1,
+        "bbox": [
+          0.350868,
+          0.561576,
+          0.082597,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "33.333300%",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_1_ordinary_business_income",
+        "page": 1,
+        "bbox": [
+          0.592749,
+          0.124855,
+          0.065783,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "-9,821",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_15_amt_items[0].code",
+        "page": 1,
+        "bbox": [
+          0.720496,
+          0.493801,
+          0.010996,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "A",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_15_amt_items[0].amount",
+        "page": 1,
+        "bbox": [
+          0.839863,
+          0.493698,
+          0.053946,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1,721",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:05:10.091235Z",
+  "completed_at": "2026-09-13T20:05:10.091235Z",
+  "latency_in_ms": 147
+}

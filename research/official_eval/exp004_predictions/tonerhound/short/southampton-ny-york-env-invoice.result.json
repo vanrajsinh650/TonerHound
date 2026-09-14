@@ -1,0 +1,550 @@
+{
+  "request": {
+    "example_id": "short/southampton-ny-york-env-invoice",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/southampton-ny-york-env-invoice.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 29,
+    "ocr_pages": 0,
+    "num_pages": 2
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/southampton-ny-york-env-invoice",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "invoice_number": "2105629",
+      "invoice_type": "standard",
+      "original_invoice_number": null,
+      "date": "2021-04-30",
+      "due_date": null,
+      "purchase_order_number": null,
+      "order_number": null,
+      "vendor": {
+        "name": "York Analytical Laboratories, Inc.",
+        "address": {
+          "street": "120 Research Drive",
+          "city": "Stratford",
+          "state": "CT",
+          "zip_code": "06615",
+          "country": null
+        },
+        "phone": "(203) 325-1371",
+        "email": null,
+        "tax_id": "06-1332045"
+      },
+      "customer": {
+        "name": "Hampton Bays Water District",
+        "address": {
+          "street": "18B Ponquoque Ave",
+          "city": "Hampton Bays",
+          "state": "NY",
+          "zip_code": "11946",
+          "country": null
+        },
+        "phone": null,
+        "email": null,
+        "account_number": null
+      },
+      "line_items": [
+        {
+          "line_no": 1,
+          "item_code": null,
+          "description": "1,4-Dioxane by GC/MS/SIM EPA 522",
+          "quantity": 8.0,
+          "unit_price": 95.0,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 760.0
+        },
+        {
+          "line_no": 2,
+          "item_code": null,
+          "description": "PFAS, EPA 537.1 List",
+          "quantity": 12.0,
+          "unit_price": 275.0,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 3300.0
+        },
+        {
+          "line_no": 3,
+          "item_code": null,
+          "description": "Sample Disposal Fee",
+          "quantity": 20.0,
+          "unit_price": 1.5,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 30.0
+        },
+        {
+          "line_no": 4,
+          "item_code": null,
+          "description": "Surcharge",
+          "quantity": 1.0,
+          "unit_price": null,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 101.5
+        }
+      ],
+      "subtotal": 4191.5,
+      "discount_total": null,
+      "tax_total": null,
+      "shipping": null,
+      "total_amount": 4191.5,
+      "payment_terms": "NET 30 DAYS",
+      "bank_details": null,
+      "currency": "USD",
+      "notes": null
+    },
+    "field_citations": [
+      {
+        "field_path": "invoice_number",
+        "page": 2,
+        "bbox": [
+          0.842641,
+          0.176614,
+          0.069418,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2105629",
+        "confidence": 0.9056551045063943,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.name",
+        "page": 2,
+        "bbox": [
+          0.071562,
+          0.080879,
+          0.25386,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "York Analytical Laboratories, Inc.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.phone",
+        "page": 2,
+        "bbox": [
+          0.504209,
+          0.257348,
+          0.093405,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "(203) 325-1371.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.tax_id",
+        "page": 2,
+        "bbox": [
+          0.665519,
+          0.257348,
+          0.074422,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "06-1332045)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.name",
+        "page": 1,
+        "bbox": [
+          0.069483,
+          0.229112,
+          0.220639,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Hampton Bays Water District",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.address.street",
+        "page": 1,
+        "bbox": [
+          0.070266,
+          0.248556,
+          0.147064,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "18B Ponquoque Ave",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.address.city",
+        "page": 1,
+        "bbox": [
+          0.069483,
+          0.266341,
+          0.114122,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Hampton Bays,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.address.state",
+        "page": 1,
+        "bbox": [
+          0.188774,
+          0.264989,
+          0.024693,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "NY",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.address.zip_code",
+        "page": 1,
+        "bbox": [
+          0.218496,
+          0.264888,
+          0.04086,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "11946",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].line_no",
+        "page": 1,
+        "bbox": [
+          0.492561,
+          0.591347,
+          0.003817,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].description",
+        "page": 1,
+        "bbox": [
+          0.061678,
+          0.509569,
+          0.222551,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1,4-Dioxane by GC/MS/SIM EPA 522",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].quantity",
+        "page": 1,
+        "bbox": [
+          0.491885,
+          0.508518,
+          0.005572,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "8",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].unit_price",
+        "page": 1,
+        "bbox": [
+          0.578421,
+          0.507821,
+          0.025943,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$95.00",
+        "confidence": 0.8413800734611225,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].amount",
+        "page": 1,
+        "bbox": [
+          0.881807,
+          0.508263,
+          0.033019,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$760.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].description",
+        "page": 1,
+        "bbox": [
+          0.060216,
+          0.53082,
+          0.129278,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "PFAS, EPA 537.1 List",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].quantity",
+        "page": 1,
+        "bbox": [
+          0.489027,
+          0.529983,
+          0.012299,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "12",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].unit_price",
+        "page": 1,
+        "bbox": [
+          0.571186,
+          0.529349,
+          0.033019,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$275.00",
+        "confidence": 0.8413896871424823,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].amount",
+        "page": 1,
+        "bbox": [
+          0.864174,
+          0.530305,
+          0.057195,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$3,300.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].line_no",
+        "page": 1,
+        "bbox": [
+          0.344207,
+          0.410343,
+          0.007413,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].description",
+        "page": 1,
+        "bbox": [
+          0.092915,
+          0.57534,
+          0.122156,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Sample Disposal Fee",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].quantity",
+        "page": 1,
+        "bbox": [
+          0.483804,
+          0.574301,
+          0.013791,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "20",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].unit_price",
+        "page": 1,
+        "bbox": [
+          0.745821,
+          0.574425,
+          0.018962,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$1.50",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].amount",
+        "page": 1,
+        "bbox": [
+          0.887408,
+          0.574425,
+          0.025943,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$30.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[3].description",
+        "page": 1,
+        "bbox": [
+          0.092915,
+          0.59246,
+          0.057634,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Surcharge",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[3].quantity",
+        "page": 1,
+        "bbox": [
+          0.492561,
+          0.591347,
+          0.003817,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[3].amount",
+        "page": 1,
+        "bbox": [
+          0.880173,
+          0.591534,
+          0.033019,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$101.50",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "subtotal",
+        "page": 2,
+        "bbox": [
+          0.852966,
+          0.218027,
+          0.068285,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$4,191.50",
+        "confidence": 0.7824283190827387,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_amount",
+        "page": 1,
+        "bbox": [
+          0.864092,
+          0.61629,
+          0.057195,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$4,191.50",
+        "confidence": 0.779994780363657,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "payment_terms",
+        "page": 2,
+        "bbox": [
+          0.473492,
+          0.287417,
+          0.123524,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "NET 30 DAYS",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:36:34.789612Z",
+  "completed_at": "2026-09-13T20:36:34.789612Z",
+  "latency_in_ms": 144
+}

@@ -1,0 +1,303 @@
+{
+  "request": {
+    "example_id": "long/dd1155_schedule_continuation_0012",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/long/dd1155_schedule_continuation_0012.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 15,
+    "ocr_pages": 0,
+    "num_pages": 68
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "long/dd1155_schedule_continuation_0012",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "contract_purchase_order_number": "H94003-04-D-0004",
+      "delivery_order_call_number": "0290",
+      "date_of_order": "2014 Oct 23",
+      "requisition_purchase_request_number": "4DF48001",
+      "total_award_amount": "$31,696,101.00",
+      "line_items": [
+        {
+          "item_number": "0001",
+          "description": "DATA IAW EXHIBIT \"A\"\nCPFF\nBASIC CONTRACT ITEM NO. 0007\nDD FORM 1423, AS REQUIRED BY DMEA CET 14-480 IN DIRECT\nSUPPORT OF CLIN 0002.\nNOTE: THE USE OF DD FORM 1423 EQUIVALENTS AS SHOWN IN THE\nCET ARE APPROVED FOR USE ON THIS DELIVERY ORDER.\nFOB: Destination\nPURCHASE REQUEST NUMBER: 4DF48001",
+          "quantity_ordered": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "NSP"
+        },
+        {
+          "item_number": "0002",
+          "description": "ENGINEERING SERVICES\nCPFF\nBASIC CONTRACT ITEM NO. 0008\nENGINEERING SERVICES IN SUPPORT OF ADVANCED TECHNOLOGY\nSUPPORT PROGRAM III (ATSP3) IN ACCORDANCE WITH TECHNICAL\nREQUIREMENTS DOCUMENT (11 MAR 04) AND DMEA CET 14-480.\nFOB: Destination\nPURCHASE REQUEST NUMBER: 4DF48001",
+          "quantity_ordered": 1.0,
+          "unit": "Lot",
+          "unit_price": null,
+          "amount": "$31,696,101.00"
+        },
+        {
+          "item_number": "000201",
+          "description": "ACRN AA FUND CITE\\nCPFF\\nFUNDING INFORMATION FOR ACRN AA\\nMIPR NO. F3YCAL4226G003\\nFOB: Destination\\nPURCHASE REQUEST NUMBER: 4DF48001",
+          "quantity_ordered": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "$0.00"
+        },
+        {
+          "item_number": "000202",
+          "description": "ACRN AB FUND CITE\\nCPFF\\nFUNDING INFORMATION FOR ACRN AB\\nMIPR NO. F3YCAL4189G002\\nFOB: Destination\\nPURCHASE REQUEST NUMBER: 4DF48001",
+          "quantity_ordered": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "$0.00"
+        },
+        {
+          "item_number": "000203",
+          "description": "ACRN AC FUND CITE\nCPFF\nFUNDING INFORMATION FOR ACRN AC\nMIPR NO. F3YCAL4227G001\nFOB: Destination\nPURCHASE REQUEST NUMBER: 4DF48001",
+          "quantity_ordered": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "$0.00"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "requisition_purchase_request_number",
+        "page": 2,
+        "bbox": [
+          0.410319,
+          0.345151,
+          0.066627,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "4DF48001",
+        "confidence": 0.8131765716833861,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_award_amount",
+        "page": 2,
+        "bbox": [
+          0.829469,
+          0.543188,
+          0.102502,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$31,696,101.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].item_number",
+        "page": 5,
+        "bbox": [
+          0.11786,
+          0.274255,
+          0.029672,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0001",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].item_number",
+        "page": 2,
+        "bbox": [
+          0.308448,
+          0.270618,
+          0.034174,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0002.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].description",
+        "page": 2,
+        "bbox": [
+          0.164898,
+          0.237272,
+          0.251727,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "BASIC CONTRACT ITEM NO. 0007",
+        "confidence": 0.7672733310922686,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].quantity_ordered",
+        "page": 2,
+        "bbox": [
+          0.393359,
+          0.543267,
+          0.004439,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].unit",
+        "page": 2,
+        "bbox": [
+          0.483244,
+          0.543406,
+          0.022011,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Lot",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].amount",
+        "page": 2,
+        "bbox": [
+          0.829469,
+          0.543188,
+          0.102502,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$31,696,101.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].item_number",
+        "page": 3,
+        "bbox": [
+          0.074727,
+          0.117836,
+          0.046907,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "000201",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].amount",
+        "page": 3,
+        "bbox": [
+          0.895368,
+          0.117971,
+          0.036195,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$0.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[3].item_number",
+        "page": 3,
+        "bbox": [
+          0.074727,
+          0.452988,
+          0.048975,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "000202",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[3].amount",
+        "page": 3,
+        "bbox": [
+          0.895356,
+          0.453121,
+          0.036277,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$0.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[4].item_number",
+        "page": 4,
+        "bbox": [
+          0.074727,
+          0.117836,
+          0.047494,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "000203",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[4].description",
+        "page": 4,
+        "bbox": [
+          0.164828,
+          0.16997,
+          0.303736,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "FUNDING INFORMATION FOR ACRN AC",
+        "confidence": 0.759076309318703,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[4].amount",
+        "page": 4,
+        "bbox": [
+          0.895368,
+          0.117971,
+          0.036195,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$0.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T14:05:41.962633Z",
+  "completed_at": "2026-09-13T14:05:41.962633Z",
+  "latency_in_ms": 4581
+}

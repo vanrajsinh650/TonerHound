@@ -1,0 +1,719 @@
+{
+  "request": {
+    "example_id": "short/2A-9-160248_109904",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/2A-9-160248_109904.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 40,
+    "ocr_pages": 0,
+    "num_pages": 2
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/2A-9-160248_109904",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "p1_file_no": null,
+      "p1_district_no": null,
+      "p1_company": "R. L. Underwood",
+      "p1_address": "420 Oil & Gas Bldg Wichita Falls, Texas",
+      "p1_sec_no": null,
+      "p1_block_no": "1374",
+      "p1_survey": "TE&L",
+      "p1_county": "Archer",
+      "p1_well_no": "Z-18",
+      "p1_name_of_lease": "Campbell \"Z\"",
+      "p1_no_of_acres": "400",
+      "p1_elev": "1203 gnd.",
+      "p1_name_of_field": "Archer County Regular",
+      "p1_located_miles": "6",
+      "p1_located_direction": "NE",
+      "p1_located_from": "Olney, Texas",
+      "p1_form1_filed_in_name_of": "R. L. Underwood",
+      "p1_drilling_commenced": "Aug. 30, 1955",
+      "p1_drilling_completed": "Aug. 31, 1955",
+      "p1_ever_produced_oil": "No",
+      "p1_ever_produced_gas": "No",
+      "p1_character_of_well": "Dry",
+      "p1_total_depth": "1042'",
+      "p1_date_wish_to_plug": "Nov. 18, 1955",
+      "p1_party_plugging_well": "B. C. Gilliam, Jr",
+      "p1_party_plugging_address": "Olney, Texas",
+      "p1_correspondence_name": "R. L. Underwood",
+      "p1_correspondence_address": "420 Oil & Gas Bldg, Wichita Falls, Texas",
+      "p1_init_prod_gas_volume": null,
+      "p1_init_prod_gas_pressure": null,
+      "p1_init_prod_oil_barrels": "nil",
+      "p1_general_remarks": null,
+      "p2_file_no": null,
+      "p2_district_no": null,
+      "p2_company": "R.L.Underwood",
+      "p2_address": "420 Oil & Gas Bldg Wichita Falls, Texas",
+      "p2_sec_no": null,
+      "p2_block_no": "1374",
+      "p2_survey": "TE&L Co",
+      "p2_county": "Archer",
+      "p2_well_no": "Z-18",
+      "p2_name_of_lease": "Campbell \"Z\"",
+      "p2_no_of_acres": "400",
+      "p2_elev": null,
+      "p2_name_of_field": "Archer County Regular",
+      "p2_form1_filed_in_name_of": "R. L. Underwood",
+      "p2_date_well_plugged": "Nov. 18, 1955",
+      "p2_completion_oil": null,
+      "p2_completion_gas": null,
+      "p2_completion_dry": "Dry",
+      "p2_amount_plugged_oil": null,
+      "p2_amount_plugged_gas": null,
+      "p2_amount_plugged_water": null,
+      "p2_ever_produced_oil_or_gas": "No",
+      "p2_total_depth": "1042'",
+      "p2_top_of_producing_sand": "See log",
+      "p2_filled_with_mud_laden_fluid": "Yes",
+      "p2_how_mud_applied": "Pumped in with mud pump",
+      "p2_were_plugs_used": "No",
+      "p2_was_well_shot": null,
+      "p2_plugs_detail": null,
+      "p2_depth_thickness_formations": "See log",
+      "p2_abandoned_wells_plugged": "Yes",
+      "p2_manner_of_confining": "No water",
+      "p2_adjacent_owners": "R. Campbell Estate - North, East, South & West",
+      "p2_notice_given_adjacent_owners": "Yes",
+      "p2_affiant_name": "R. L. Underwood",
+      "p2_affiant_signature_name": "R. L. Underwood",
+      "p2_affiant_title": "Operator",
+      "p2_sworn_day": "23rd",
+      "p2_sworn_month": "December",
+      "p2_sworn_year": "55",
+      "p2_notary_signature": true,
+      "p2_notary_county": "Wichita",
+      "p2_correspondence_name": "R. L. Underwood",
+      "p2_correspondence_address": "420 Oil & Gas Bldg Wichita Falls, Tex",
+      "casing_tubing_records": [
+        {
+          "size_pipe": "7\"",
+          "put_in_well_ft": "997",
+          "put_in_well_in": "0",
+          "pulled_out_ft": "607",
+          "pulled_out_in": null,
+          "left_in_well_ft": "390",
+          "left_in_well_in": "0",
+          "packers_and_shoes": "Cemented string with 30 sacks"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "p1_company",
+        "page": 2,
+        "bbox": [
+          0.167354,
+          0.136096,
+          0.147908,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "R. L. Underwood",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_address",
+        "page": 2,
+        "bbox": [
+          0.671184,
+          0.892254,
+          0.070124,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Wichita",
+        "confidence": 0.9293240603491603,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_block_no",
+        "page": 2,
+        "bbox": [
+          0.351208,
+          0.157368,
+          0.038892,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1374",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_county",
+        "page": 1,
+        "bbox": [
+          0.366098,
+          0.283639,
+          0.077104,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Archer",
+        "confidence": 0.7876728526288679,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_located_direction",
+        "page": 1,
+        "bbox": [
+          0.230724,
+          0.257607,
+          0.118305,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Miles...NE",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_located_from",
+        "page": 2,
+        "bbox": [
+          0.844431,
+          0.90233,
+          0.096641,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "County, Texas",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_form1_filed_in_name_of",
+        "page": 2,
+        "bbox": [
+          0.167354,
+          0.136096,
+          0.147908,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "R. L. Underwood",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_drilling_commenced",
+        "page": 2,
+        "bbox": [
+          0.928108,
+          0.836275,
+          0.018268,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "55",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_drilling_completed",
+        "page": 2,
+        "bbox": [
+          0.928108,
+          0.836275,
+          0.018268,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "55",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_ever_produced_oil",
+        "page": 2,
+        "bbox": [
+          0.397761,
+          0.276938,
+          0.019446,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "No",
+        "confidence": 0.7535027580610498,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_ever_produced_gas",
+        "page": 2,
+        "bbox": [
+          0.397761,
+          0.276938,
+          0.019446,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "No",
+        "confidence": 0.7535027580610498,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_character_of_well",
+        "page": 2,
+        "bbox": [
+          0.803771,
+          0.239097,
+          0.021214,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "“Dry",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_party_plugging_address",
+        "page": 2,
+        "bbox": [
+          0.844431,
+          0.90233,
+          0.096641,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "County, Texas",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_correspondence_name",
+        "page": 2,
+        "bbox": [
+          0.167354,
+          0.136096,
+          0.147908,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "R. L. Underwood",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_correspondence_address",
+        "page": 2,
+        "bbox": [
+          0.671184,
+          0.892254,
+          0.070124,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Wichita",
+        "confidence": 0.9293240603491603,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_company",
+        "page": 2,
+        "bbox": [
+          0.167354,
+          0.136096,
+          0.147908,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "R. L. Underwood",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_address",
+        "page": 2,
+        "bbox": [
+          0.671184,
+          0.892254,
+          0.070124,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Wichita",
+        "confidence": 0.9293240603491603,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_block_no",
+        "page": 2,
+        "bbox": [
+          0.351208,
+          0.157368,
+          0.038892,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1374",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_survey",
+        "page": 2,
+        "bbox": [
+          0.547437,
+          0.152666,
+          0.068356,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "TE¥L Co",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_county",
+        "page": 1,
+        "bbox": [
+          0.366098,
+          0.283639,
+          0.077104,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Archer",
+        "confidence": 0.7876728526288679,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_form1_filed_in_name_of",
+        "page": 2,
+        "bbox": [
+          0.167354,
+          0.136096,
+          0.147908,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "R. L. Underwood",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_completion_dry",
+        "page": 2,
+        "bbox": [
+          0.803771,
+          0.239097,
+          0.021214,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "“Dry",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_ever_produced_oil_or_gas",
+        "page": 2,
+        "bbox": [
+          0.397761,
+          0.276938,
+          0.019446,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "No",
+        "confidence": 0.7928871480667519,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_filled_with_mud_laden_fluid",
+        "page": 2,
+        "bbox": [
+          0.800236,
+          0.301836,
+          0.035357,
+          0.020152
+        ],
+        "polygon": null,
+        "reference_text": "Yes",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_were_plugs_used",
+        "page": 2,
+        "bbox": [
+          0.397761,
+          0.276938,
+          0.019446,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "No",
+        "confidence": 0.7535027580610498,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_abandoned_wells_plugged",
+        "page": 2,
+        "bbox": [
+          0.800236,
+          0.301836,
+          0.035357,
+          0.020152
+        ],
+        "polygon": null,
+        "reference_text": "Yes",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_manner_of_confining",
+        "page": 2,
+        "bbox": [
+          0.515027,
+          0.592209,
+          0.078963,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "No water",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_notice_given_adjacent_owners",
+        "page": 2,
+        "bbox": [
+          0.800236,
+          0.301836,
+          0.035357,
+          0.020152
+        ],
+        "polygon": null,
+        "reference_text": "Yes",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_affiant_name",
+        "page": 2,
+        "bbox": [
+          0.167354,
+          0.136096,
+          0.147908,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "R. L. Underwood",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_affiant_signature_name",
+        "page": 2,
+        "bbox": [
+          0.167354,
+          0.136096,
+          0.147908,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "R. L. Underwood",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_affiant_title",
+        "page": 1,
+        "bbox": [
+          0.225427,
+          0.171431,
+          0.071807,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Operator....",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_sworn_day",
+        "page": 2,
+        "bbox": [
+          0.415439,
+          0.851321,
+          0.038892,
+          0.021048
+        ],
+        "polygon": null,
+        "reference_text": "23rd",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_sworn_year",
+        "page": 2,
+        "bbox": [
+          0.928108,
+          0.836275,
+          0.018268,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "55",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_notary_county",
+        "page": 2,
+        "bbox": [
+          0.671184,
+          0.892254,
+          0.070124,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Wichita",
+        "confidence": 0.9369961216428677,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_correspondence_name",
+        "page": 2,
+        "bbox": [
+          0.167354,
+          0.136096,
+          0.147908,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "R. L. Underwood",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_correspondence_address",
+        "page": 2,
+        "bbox": [
+          0.671184,
+          0.892254,
+          0.070124,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Wichita",
+        "confidence": 0.9293240603491603,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "casing_tubing_records[0].put_in_well_ft",
+        "page": 2,
+        "bbox": [
+          0.192693,
+          0.482491,
+          0.034767,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "997",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "casing_tubing_records[0].put_in_well_in",
+        "page": 2,
+        "bbox": [
+          0.482616,
+          0.478013,
+          0.010018,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "casing_tubing_records[0].pulled_out_ft",
+        "page": 1,
+        "bbox": [
+          0.386698,
+          0.602759,
+          0.02884,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "607",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "casing_tubing_records[0].left_in_well_in",
+        "page": 2,
+        "bbox": [
+          0.482616,
+          0.478013,
+          0.010018,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:07:40.614478Z",
+  "completed_at": "2026-09-13T20:07:40.614478Z",
+  "latency_in_ms": 18013
+}

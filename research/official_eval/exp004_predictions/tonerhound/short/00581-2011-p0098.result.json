@@ -1,0 +1,297 @@
+{
+  "request": {
+    "example_id": "short/00581-2011-p0098",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/00581-2011-p0098.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 13,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/00581-2011-p0098",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "final_k1": false,
+      "amended_k1": false,
+      "partnership_ein": "26-1287244",
+      "partnership_name": "TELCO EXPERTS LLC",
+      "partnership_address": "38 PARK AVENUE, RUTHERFORD, NJ 07070",
+      "irs_center": "OGDEN, UT",
+      "is_publicly_traded_partnership": false,
+      "partner_id": "20-2113320",
+      "partner_name": "ESK CONSULTANTS LLC",
+      "partner_address": "237 MAYFAIR DRIVE, BROOKLYN, NY 11234",
+      "is_general_partner": true,
+      "is_domestic_partner": true,
+      "partner_entity_type": "DISREGARDED ENTITY",
+      "profit_share_beginning": 33.3333333,
+      "profit_share_ending": 33.3333333,
+      "loss_share_beginning": 33.3333333,
+      "loss_share_ending": 33.3333333,
+      "capital_share_beginning": 33.3333333,
+      "capital_share_ending": 33.3333333,
+      "liability_nonrecourse": null,
+      "liability_qualified_nonrecourse_financing": null,
+      "liability_recourse": 66238,
+      "capital_beginning_account": 21693,
+      "capital_contributed": null,
+      "capital_current_year_increase_decrease": 650,
+      "capital_withdrawals_distributions": null,
+      "capital_ending_account": 22343,
+      "capital_account_method": "Tax basis",
+      "contributed_built_in_gain_loss_property": false,
+      "box_1_ordinary_business_income": 3101,
+      "box_2_net_rental_real_estate": null,
+      "box_3_other_net_rental_income": null,
+      "box_4_guaranteed_payments": 229000,
+      "box_5_interest_income": null,
+      "box_6a_ordinary_dividends": null,
+      "box_6b_qualified_dividends": null,
+      "box_7_royalties": null,
+      "box_8_net_short_term_capital_gain": null,
+      "box_9a_net_long_term_capital_gain": null,
+      "box_9b_collectibles_gain": null,
+      "box_9c_unrecaptured_1250_gain": null,
+      "box_10_net_section_1231_gain": null,
+      "box_12_section_179_deduction": 520,
+      "box_14_self_employment_earnings": [
+        {
+          "code": "A",
+          "amount": 232101
+        },
+        {
+          "code": "C",
+          "amount": 268533
+        }
+      ],
+      "box_11_other_income": null,
+      "box_13_other_deductions": [
+        {
+          "code": "A",
+          "amount": 800
+        }
+      ],
+      "box_15_credits": null,
+      "box_16_foreign_transactions": null,
+      "box_17_amt_items": null,
+      "box_18_tax_exempt_income": [
+        {
+          "code": "C*",
+          "amount": null
+        }
+      ],
+      "box_19_distributions": null,
+      "box_20_other_information": null
+    },
+    "field_citations": [
+      {
+        "field_path": "partnership_ein",
+        "page": 1,
+        "bbox": [
+          0.079804,
+          0.221222,
+          0.112967,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "26 1287244",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partnership_name",
+        "page": 1,
+        "bbox": [
+          0.077902,
+          0.264997,
+          0.196708,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "TELCO EXPERTS LLC",
+        "confidence": 0.9068199868052214,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partnership_address",
+        "page": 1,
+        "bbox": [
+          0.07797,
+          0.295167,
+          0.242603,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "RUTHERFORD, NJ 07070",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "irs_center",
+        "page": 1,
+        "bbox": [
+          0.07855,
+          0.323987,
+          0.103148,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "OGDEN UT",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partner_id",
+        "page": 1,
+        "bbox": [
+          0.080591,
+          0.426449,
+          0.112158,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "20 2113320",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partner_name",
+        "page": 1,
+        "bbox": [
+          0.079039,
+          0.469921,
+          0.219645,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "ESK CONSULTANTS LLC",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partner_address",
+        "page": 1,
+        "bbox": [
+          0.080591,
+          0.484517,
+          0.195652,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "237 MAYFAIR DRIVE",
+        "confidence": 0.7668817143967767,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_account_method",
+        "page": 1,
+        "bbox": [
+          0.125576,
+          0.835234,
+          0.04739,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Tax basis",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_4_guaranteed_payments",
+        "page": 1,
+        "bbox": [
+          0.637807,
+          0.220059,
+          0.085474,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "229 000.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_14_self_employment_earnings[0].code",
+        "page": 1,
+        "bbox": [
+          0.078348,
+          0.208228,
+          0.00881,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "A",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_14_self_employment_earnings[1].code",
+        "page": 1,
+        "bbox": [
+          0.079196,
+          0.310992,
+          0.009023,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "C",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_13_other_deductions[0].code",
+        "page": 1,
+        "bbox": [
+          0.078348,
+          0.208228,
+          0.00881,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "A",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_13_other_deductions[0].amount",
+        "page": 1,
+        "bbox": [
+          0.685921,
+          0.601575,
+          0.029016,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "800.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:04:53.713983Z",
+  "completed_at": "2026-09-13T20:04:53.713983Z",
+  "latency_in_ms": 312
+}

@@ -1,0 +1,151 @@
+{
+  "request": {
+    "example_id": "medium/synchrony_investor_deck_q1_2026",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/synchrony_investor_deck_q1_2026.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 7,
+    "ocr_pages": 0,
+    "num_pages": 14
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/synchrony_investor_deck_q1_2026",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "period": "Q1 FY2026",
+      "currency": "USD",
+      "fiscal_period_end_date": "2026-03-31",
+      "total_revenue": 5603.0,
+      "revenue_growth_yoy": 1.0,
+      "gross_profit": null,
+      "operating_income": 1047.0,
+      "net_income": 805.0,
+      "adjusted_ebitda": null,
+      "gaap_eps_diluted": 2.27,
+      "adjusted_eps_diluted": null,
+      "gross_margin": null,
+      "operating_margin": null,
+      "free_cash_flow": null,
+      "segments": []
+    },
+    "field_citations": [
+      {
+        "field_path": "period",
+        "page": 6,
+        "bbox": [
+          0.983229,
+          0.946311,
+          0.005875,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "6",
+        "confidence": 0.9041742538724395,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "fiscal_period_end_date",
+        "page": 4,
+        "bbox": [
+          0.611437,
+          0.970722,
+          0.024363,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "March 31,",
+        "confidence": 0.7730886478186333,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_revenue",
+        "page": 5,
+        "bbox": [
+          0.302042,
+          0.250267,
+          0.042802,
+          0.0238
+        ],
+        "polygon": null,
+        "reference_text": "$5,603",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "revenue_growth_yoy",
+        "page": 4,
+        "bbox": [
+          0.815781,
+          0.200922,
+          0.00366,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.9172127589707093,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operating_income",
+        "page": 5,
+        "bbox": [
+          0.305852,
+          0.600133,
+          0.034985,
+          0.022037
+        ],
+        "polygon": null,
+        "reference_text": "1,047",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "net_income",
+        "page": 5,
+        "bbox": [
+          0.310698,
+          0.69943,
+          0.024996,
+          0.01807
+        ],
+        "polygon": null,
+        "reference_text": "805",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gaap_eps_diluted",
+        "page": 4,
+        "bbox": [
+          0.581117,
+          0.669163,
+          0.05621,
+          0.046563
+        ],
+        "polygon": null,
+        "reference_text": "$2.27",
+        "confidence": 0.7788834509224281,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:03:58.070220Z",
+  "completed_at": "2026-09-13T20:03:58.070220Z",
+  "latency_in_ms": 3474
+}

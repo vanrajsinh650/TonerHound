@@ -1,0 +1,393 @@
+{
+  "request": {
+    "example_id": "short/H9-53-7226_7240",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/H9-53-7226_7240.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 20,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/H9-53-7226_7240",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "operator": "Penn Virginia Oil & Gas, L.P.",
+      "operator_number": "651780",
+      "rrc_district": "02",
+      "street_or_po_box": "840 Gessner Suite 800",
+      "city": "Houston",
+      "state": "TX",
+      "zip_code": "77024",
+      "lease_facility_operation_name": "Rhino Hunter",
+      "field_or_area_name": "Eagleville ( Eagle Ford-2)",
+      "county": "Lavaca",
+      "optype_a_oil_field": true,
+      "optype_b_gas_field": false,
+      "optype_c_pipeline_gathering": false,
+      "optype_d_gasoline_plant": false,
+      "optype_e_drilling_workover": false,
+      "optype_f_sweetening_unit": false,
+      "optype_g_combination": false,
+      "optype_h_other": false,
+      "operation_type_other_explanation": "Gas stream has increased above 100 ppm",
+      "h2s_concentration": "200 PPM",
+      "maximum_escape_volume": "350 MCF/Day",
+      "roe_100ppm": "20 Ft.",
+      "roe_500ppm": "3 Ft.",
+      "operation_existing": true,
+      "operation_new": false,
+      "modification_cert_change_yes": false,
+      "modification_cert_change_no": false,
+      "workover_100ppm_3000ft_yes": false,
+      "workover_100ppm_3000ft_no": true,
+      "previous_certificate_number": "071166",
+      "roe_100ppm_public_area_yes": false,
+      "roe_100ppm_public_area_no": true,
+      "roe_500ppm_public_road_yes": false,
+      "roe_500ppm_public_road_no": true,
+      "injection_h2s_fluid_yes": false,
+      "injection_h2s_fluid_no": true,
+      "compliance_date_mo": null,
+      "compliance_date_day": null,
+      "compliance_date_year": null,
+      "depth_of_compliance_drilling": "1000 Ft. from Surface",
+      "contingency_plan_prepared_yes": false,
+      "contingency_plan_prepared_no": true,
+      "contingency_plan_location": "N/A",
+      "data_location": "840 Gessner Suite 800 Houston Tx 77024",
+      "signature_present": true,
+      "representative_of_company": null,
+      "title": "Sr. Reg. Coordinator",
+      "phone_no": "(713) 722-6538",
+      "certificate_date": "04/21/14",
+      "approved_by": "Rick Silguero",
+      "rrc_use_date": "11-13-2014",
+      "remarks": "CHANGE OF OPERATOR",
+      "certification_number": "082747",
+      "exempt_stamp_present": false,
+      "operations_covered": [
+        {
+          "rrc_id": "10365",
+          "type_id_code": "1",
+          "storage_yes": false,
+          "storage_no": true
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "operator",
+        "page": 1,
+        "bbox": [
+          0.131563,
+          0.19653,
+          0.20059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Penn Virginia Oil & Gas, L.P.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_number",
+        "page": 1,
+        "bbox": [
+          0.526844,
+          0.196991,
+          0.051917,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "651780",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district",
+        "page": 1,
+        "bbox": [
+          0.823599,
+          0.198373,
+          0.017109,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "02",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "street_or_po_box",
+        "page": 1,
+        "bbox": [
+          0.140413,
+          0.222567,
+          0.160472,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "840 Gessner Suite 800",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "city",
+        "page": 1,
+        "bbox": [
+          0.283186,
+          0.641922,
+          0.082006,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Houston",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "state",
+        "page": 1,
+        "bbox": [
+          0.347493,
+          0.643318,
+          0.014749,
+          0.019355
+        ],
+        "polygon": null,
+        "reference_text": "Tx",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "zip_code",
+        "page": 1,
+        "bbox": [
+          0.368142,
+          0.644456,
+          0.043658,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "77024",
+        "confidence": 0.8192959595134438,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_facility_operation_name",
+        "page": 1,
+        "bbox": [
+          0.119174,
+          0.250908,
+          0.092625,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Rhino Hunter",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "field_or_area_name",
+        "page": 1,
+        "bbox": [
+          0.472566,
+          0.251138,
+          0.176991,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Eagleville ( Eagle Ford-2)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.748673,
+          0.25206,
+          0.049558,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Lavaca",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operation_type_other_explanation",
+        "page": 1,
+        "bbox": [
+          0.489086,
+          0.281323,
+          0.296755,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Gas stream - has . increased above 100 ppm",
+        "confidence": 0.8307178572268346,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "h2s_concentration",
+        "page": 1,
+        "bbox": [
+          0.587611,
+          0.317959,
+          0.092625,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "200 PPM",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "maximum_escape_volume",
+        "page": 1,
+        "bbox": [
+          0.716814,
+          0.31888,
+          0.174041,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "350 MCF/Day",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_500ppm",
+        "page": 1,
+        "bbox": [
+          0.873746,
+          0.34676,
+          0.015339,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Ft.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "previous_certificate_number",
+        "page": 1,
+        "bbox": [
+          0.745723,
+          0.419802,
+          0.052507,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "071166",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "data_location",
+        "page": 1,
+        "bbox": [
+          0.140413,
+          0.223949,
+          0.721534,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "840 Gessner Suite 800 X 77024",
+        "confidence": 0.835747392815759,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "title",
+        "page": 1,
+        "bbox": [
+          0.386431,
+          0.743074,
+          0.145133,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Sr. Reg. Coordinator",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "phone_no",
+        "page": 1,
+        "bbox": [
+          0.669027,
+          0.74123,
+          0.106785,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "(713) 722-6538",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "certificate_date",
+        "page": 1,
+        "bbox": [
+          0.80413,
+          0.740309,
+          0.060767,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "04/21/14",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[0].type_id_code",
+        "page": 1,
+        "bbox": [
+          0.135693,
+          0.693074,
+          0.00472,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:17:16.605159Z",
+  "completed_at": "2026-09-13T20:17:16.605159Z",
+  "latency_in_ms": 8583
+}

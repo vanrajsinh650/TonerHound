@@ -1,0 +1,249 @@
+{
+  "request": {
+    "example_id": "short/P4-83-457_159",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/P4-83-457_159.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 10,
+    "ocr_pages": 0,
+    "num_pages": 4
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/P4-83-457_159",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "field_name": "Pearsall (Austin Chalk)",
+      "lease_name": "McKinley, W. W. Unit 1",
+      "current_operator_name": "Kaler Energy Corp.",
+      "operator_p5_no": "450261",
+      "oil_lse_gas_id_no": "13324",
+      "county": "Frio",
+      "rrc_district": "01",
+      "operator_address": "70 NE Loop 410 Ste 810 San Antonio, TX 78216",
+      "well_nos": null,
+      "classification_oil": true,
+      "classification_gas": false,
+      "classification_other": false,
+      "effective_date": "3-1-2010",
+      "change_operator": true,
+      "change_oil_condensate_gatherer": false,
+      "change_gas_gatherer": false,
+      "change_gas_purchaser": false,
+      "change_gas_purchaser_system_code": false,
+      "change_field_name": false,
+      "change_field_name_from": null,
+      "change_field_name_docket": null,
+      "change_lease_name": false,
+      "change_lease_name_from": null,
+      "new_rrc_oil_lease": false,
+      "new_rrc_gas_well": false,
+      "new_rrc_other_well": false,
+      "new_rrc_other_well_specify": null,
+      "due_new_completion_recompletion": false,
+      "due_reclass_gas_to_oil": false,
+      "due_reclass_oil_to_gas": false,
+      "due_consolidation": false,
+      "due_unitization": false,
+      "due_field_transfer": false,
+      "due_subdivision": false,
+      "prev_operator_name": "Tiza Energy, Inc.",
+      "prev_operator_signature": false,
+      "prev_operator_name_print": null,
+      "prev_operator_title": null,
+      "prev_operator_date": null,
+      "prev_operator_phone": null,
+      "prev_operator_authorized_employee": false,
+      "prev_operator_authorized_agent": false,
+      "curr_operator_name_print": "John A. Kaler, II",
+      "curr_operator_signature": true,
+      "curr_operator_title": "President",
+      "curr_operator_email": null,
+      "curr_operator_date": "3/23/10",
+      "curr_operator_phone": "(210) 824-1361",
+      "curr_operator_authorized_employee": true,
+      "curr_operator_authorized_agent": false,
+      "reviewer_initials": null,
+      "approval_date": null,
+      "gas_gatherers_purchasers": [
+        {
+          "gatherer": false,
+          "purchaser": false,
+          "name": "N/A",
+          "system_code": null,
+          "percent_of_take": null,
+          "full_well_stream": false
+        }
+      ],
+      "oil_condensate_gatherers": [
+        {
+          "name": "N/A",
+          "percent_of_take": null
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "field_name",
+        "page": 2,
+        "bbox": [
+          0.083776,
+          0.106746,
+          0.132943,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3earsall (Austin Chalk)",
+        "confidence": 0.7524160867511899,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_name",
+        "page": 2,
+        "bbox": [
+          0.520065,
+          0.107747,
+          0.135457,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "McKinley. W. W. Unit 1",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "current_operator_name",
+        "page": 1,
+        "bbox": [
+          0.070829,
+          0.148564,
+          0.116906,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Kaler Energy Corp.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_p5_no",
+        "page": 4,
+        "bbox": [
+          0.549598,
+          0.136617,
+          0.040674,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "450261",
+        "confidence": 0.755789924913372,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_address",
+        "page": 3,
+        "bbox": [
+          0.189297,
+          0.229335,
+          0.006725,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "X",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_operator",
+        "page": 3,
+        "bbox": [
+          0.830264,
+          0.754857,
+          0.017498,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.8255763381754757,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_name",
+        "page": 2,
+        "bbox": [
+          0.080887,
+          0.669381,
+          0.001366,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "I",
+        "confidence": 0.7630694740428821,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_signature",
+        "page": 1,
+        "bbox": [
+          0.813526,
+          0.75911,
+          0.019436,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.7610337209928222,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_title",
+        "page": 4,
+        "bbox": [
+          0.095555,
+          0.840515,
+          0.055968,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "President",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_authorized_employee",
+        "page": 1,
+        "bbox": [
+          0.813526,
+          0.75911,
+          0.019436,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.7610337209928222,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:19:36.776619Z",
+  "completed_at": "2026-09-13T20:19:36.776619Z",
+  "latency_in_ms": 1319
+}

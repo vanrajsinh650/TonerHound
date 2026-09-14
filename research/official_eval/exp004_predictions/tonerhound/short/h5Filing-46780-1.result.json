@@ -1,0 +1,865 @@
+{
+  "request": {
+    "example_id": "short/h5Filing-46780-1",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/h5Filing-46780-1.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 49,
+    "ocr_pages": 0,
+    "num_pages": 2
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/h5Filing-46780-1",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "uic_no": "000031928",
+      "filing_no": "46780",
+      "submittal_date": "02/27/2023",
+      "version": "1",
+      "evaluation": "03/21/2023",
+      "test_status": "Inconclusive",
+      "preparer": "Billie Grewing",
+      "preparer_phone": "940-759-4949",
+      "preparer_email": "mdcinc@ntin.net",
+      "operator_name": "6 HESS, LLC",
+      "operator_no": "953808",
+      "operator_address_line_1": "PO BOX 53",
+      "operator_city": "MUENSTER",
+      "operator_address_line_2": null,
+      "operator_state": "TX",
+      "operator_postal_code": "76252",
+      "api": "09731455",
+      "injection_well": "Enhanced Recovery",
+      "district": "09",
+      "lease_no": "02166",
+      "well_no": "11",
+      "lease_name": "DANGLEMEYER",
+      "field_number": "20350001",
+      "field_name": "COOKE COUNTY REGULAR",
+      "county": "COOKE",
+      "reason_for": "5-Year Test as Required by Statewide Rule",
+      "date_test_performed": "02/01/2023",
+      "retest": "No",
+      "retest_date_of_previous_test": null,
+      "remedial_actions_prior_to": null,
+      "well_completion_casing": [
+        {
+          "string_type": "Long String Casing",
+          "casing_tubing_size": "4 1/2",
+          "depth_set": "884",
+          "top_of_cement": "884"
+        },
+        {
+          "string_type": "Tubing or Hanging String",
+          "casing_tubing_size": "2",
+          "depth_set": "800",
+          "top_of_cement": null
+        }
+      ],
+      "packer_make_model": "Packer - Johnson Tension",
+      "depth_packer": "800",
+      "no_packer_injection_down_casing": false,
+      "injection_intervals": [
+        {
+          "interval_type": "Permitted Injection",
+          "top": "825",
+          "bottom": "838"
+        },
+        {
+          "interval_type": "Completed Injection",
+          "top": "820",
+          "bottom": "830"
+        },
+        {
+          "interval_type": "Authorized Liquid Injection",
+          "top": "900",
+          "bottom": null
+        },
+        {
+          "interval_type": "Authorized Gas Injection",
+          "top": null,
+          "bottom": null
+        }
+      ],
+      "no_completed_intervals": false,
+      "well_status": "Shut-In",
+      "well_did_not_pressure_up": false,
+      "digital_recorder_attached": true,
+      "test_pressures": [
+        {
+          "time_point": "INITIAL",
+          "tubing_or_hanging_string": "660",
+          "casing": "660",
+          "surface_casing": null
+        },
+        {
+          "time_point": "After 15 minutes",
+          "tubing_or_hanging_string": "660",
+          "casing": "660",
+          "surface_casing": null
+        },
+        {
+          "time_point": "After 30 minutes",
+          "tubing_or_hanging_string": "660",
+          "casing": "660",
+          "surface_casing": null
+        }
+      ],
+      "test_witnessed_by_rrc": "No",
+      "name_of_rrc": null,
+      "injection_fluid_description": null,
+      "annulus_fluid_description": "Liqui Salt Water",
+      "other_tests_surveys_performed": null,
+      "operator_comments_on_test": null
+    },
+    "field_citations": [
+      {
+        "field_path": "preparer",
+        "page": 1,
+        "bbox": [
+          0.176034,
+          0.21391,
+          0.100521,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Billie Grewing",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "preparer_phone",
+        "page": 1,
+        "bbox": [
+          0.654487,
+          0.212918,
+          0.103227,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "940-759-4949",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "preparer_email",
+        "page": 1,
+        "bbox": [
+          0.175882,
+          0.236535,
+          0.123966,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "mdcinc@ntin.net",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_name",
+        "page": 1,
+        "bbox": [
+          0.200639,
+          0.288298,
+          0.098622,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "6 HESS, LLC",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_no",
+        "page": 1,
+        "bbox": [
+          0.656168,
+          0.28774,
+          0.054706,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "953808",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_address_line_1",
+        "page": 1,
+        "bbox": [
+          0.199765,
+          0.311291,
+          0.085798,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "PO BOX 53",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_city",
+        "page": 1,
+        "bbox": [
+          0.656689,
+          0.311291,
+          0.092437,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "MUENSTER",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_state",
+        "page": 1,
+        "bbox": [
+          0.201916,
+          0.358803,
+          0.020924,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "TX",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_postal_code",
+        "page": 1,
+        "bbox": [
+          0.656084,
+          0.358999,
+          0.045277,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "76252",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "api",
+        "page": 1,
+        "bbox": [
+          0.160303,
+          0.418381,
+          0.073412,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "09731455",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_well",
+        "page": 1,
+        "bbox": [
+          0.53758,
+          0.41945,
+          0.149697,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Enhanced Recovery",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "district",
+        "page": 1,
+        "bbox": [
+          0.160303,
+          0.442134,
+          0.017345,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "09",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_no",
+        "page": 1,
+        "bbox": [
+          0.536773,
+          0.442134,
+          0.045445,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "02166",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "well_no",
+        "page": 1,
+        "bbox": [
+          0.83195,
+          0.442027,
+          0.013681,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "11",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_name",
+        "page": 1,
+        "bbox": [
+          0.161025,
+          0.465685,
+          0.126874,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "DANGLEMEYER",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "field_number",
+        "page": 1,
+        "bbox": [
+          0.830689,
+          0.465887,
+          0.071008,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "20350001",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "field_name",
+        "page": 1,
+        "bbox": [
+          0.160403,
+          0.489438,
+          0.220874,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "COOKE COUNTY REGULAR",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.160403,
+          0.489438,
+          0.058555,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "COOKE",
+        "confidence": 0.768541341105105,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "reason_for",
+        "page": 1,
+        "bbox": [
+          0.187092,
+          0.568981,
+          0.321983,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "5-Year Test as Required by Statewide Rule",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "date_test_performed",
+        "page": 1,
+        "bbox": [
+          0.830891,
+          0.567823,
+          0.082891,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "02/01/2023",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "well_completion_casing[0].string_type",
+        "page": 1,
+        "bbox": [
+          0.076908,
+          0.732912,
+          0.140689,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Long String Casing",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "well_completion_casing[0].casing_tubing_size",
+        "page": 1,
+        "bbox": [
+          0.333193,
+          0.731719,
+          0.036134,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "4 1/2",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "well_completion_casing[0].depth_set",
+        "page": 1,
+        "bbox": [
+          0.501479,
+          0.73192,
+          0.02684,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "884",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "well_completion_casing[0].top_of_cement",
+        "page": 1,
+        "bbox": [
+          0.501479,
+          0.73192,
+          0.02684,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "884",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "well_completion_casing[1].string_type",
+        "page": 2,
+        "bbox": [
+          0.309479,
+          0.441938,
+          0.18563,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Tubing or Hanging String",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "well_completion_casing[1].casing_tubing_size",
+        "page": 2,
+        "bbox": [
+          0.554218,
+          0.164076,
+          0.008151,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "well_completion_casing[1].depth_set",
+        "page": 1,
+        "bbox": [
+          0.501479,
+          0.749735,
+          0.026756,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "800",
+        "confidence": 0.8278881333805954,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "packer_make_model",
+        "page": 1,
+        "bbox": [
+          0.270353,
+          0.854159,
+          0.350672,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Packer - Johnson Tension",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "depth_packer",
+        "page": 1,
+        "bbox": [
+          0.269546,
+          0.889878,
+          0.026756,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "800",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_intervals[0].interval_type",
+        "page": 2,
+        "bbox": [
+          0.050017,
+          0.248387,
+          0.148924,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Permitted Injection",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_intervals[0].top",
+        "page": 2,
+        "bbox": [
+          0.377109,
+          0.24736,
+          0.026689,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "825",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_intervals[0].bottom",
+        "page": 2,
+        "bbox": [
+          0.52837,
+          0.24736,
+          0.02674,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "838",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_intervals[1].interval_type",
+        "page": 2,
+        "bbox": [
+          0.049479,
+          0.272069,
+          0.15879,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Completed Injection",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_intervals[1].top",
+        "page": 2,
+        "bbox": [
+          0.37879,
+          0.271113,
+          0.026756,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "820",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_intervals[1].bottom",
+        "page": 2,
+        "bbox": [
+          0.52837,
+          0.271113,
+          0.026756,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "830",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_intervals[2].interval_type",
+        "page": 2,
+        "bbox": [
+          0.049076,
+          0.295893,
+          0.21521,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Authorized Liquid Injection",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_intervals[2].top",
+        "page": 2,
+        "bbox": [
+          0.377176,
+          0.294866,
+          0.026689,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "900",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_intervals[3].interval_type",
+        "page": 2,
+        "bbox": [
+          0.049076,
+          0.319646,
+          0.196555,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Authorized Gas Injection",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "well_status",
+        "page": 2,
+        "bbox": [
+          0.701664,
+          0.318417,
+          0.052269,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Shut-In",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "test_pressures[0].time_point",
+        "page": 2,
+        "bbox": [
+          0.07716,
+          0.458565,
+          0.055126,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "INITIAL",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "test_pressures[0].tubing_or_hanging_string",
+        "page": 2,
+        "bbox": [
+          0.309882,
+          0.458761,
+          0.026756,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "660",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "test_pressures[0].casing",
+        "page": 2,
+        "bbox": [
+          0.309882,
+          0.458761,
+          0.026756,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "660",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "test_pressures[1].time_point",
+        "page": 2,
+        "bbox": [
+          0.075866,
+          0.476428,
+          0.121529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "After 15 minutes",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "test_pressures[1].tubing_or_hanging_string",
+        "page": 2,
+        "bbox": [
+          0.309882,
+          0.476576,
+          0.026756,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "660",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "test_pressures[1].casing",
+        "page": 2,
+        "bbox": [
+          0.309882,
+          0.476576,
+          0.026756,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "660",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "test_pressures[2].time_point",
+        "page": 2,
+        "bbox": [
+          0.075866,
+          0.494242,
+          0.121529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "After 30 minutes",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "test_pressures[2].tubing_or_hanging_string",
+        "page": 2,
+        "bbox": [
+          0.309882,
+          0.494391,
+          0.026756,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "660",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "test_pressures[2].casing",
+        "page": 2,
+        "bbox": [
+          0.309882,
+          0.494391,
+          0.026756,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "660",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "annulus_fluid_description",
+        "page": 2,
+        "bbox": [
+          0.337412,
+          0.667514,
+          0.144387,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Liqui Salt Water",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:32:37.022878Z",
+  "completed_at": "2026-09-13T20:32:37.022878Z",
+  "latency_in_ms": 164
+}

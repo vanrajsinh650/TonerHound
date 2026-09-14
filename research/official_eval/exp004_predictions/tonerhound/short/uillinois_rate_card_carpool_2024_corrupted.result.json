@@ -1,0 +1,998 @@
+{
+  "request": {
+    "example_id": "short/uillinois_rate_card_carpool_2024_corrupted",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/uillinois_rate_card_carpool_2024_corrupted.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 53,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/uillinois_rate_card_carpool_2024_corrupted",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "issuing_org": "University of Illinois Car Pool",
+      "effective_period": "RATES EFFECTIVE January 2, 2024",
+      "items": [
+        {
+          "section": null,
+          "item_label": "Sedan – compact",
+          "rate_basis": "per mile",
+          "rate_value": "40¢"
+        },
+        {
+          "section": null,
+          "item_label": "Sedan – compact",
+          "rate_basis": "daily minimum",
+          "rate_value": "$39"
+        },
+        {
+          "section": null,
+          "item_label": "Sedan – compact",
+          "rate_basis": "weekly minimum",
+          "rate_value": "$175"
+        },
+        {
+          "section": null,
+          "item_label": "Sedan – compact",
+          "rate_basis": "monthly minimum",
+          "rate_value": "$450"
+        },
+        {
+          "section": null,
+          "item_label": "Sedan – full size",
+          "rate_basis": "per mile",
+          "rate_value": "47¢"
+        },
+        {
+          "section": null,
+          "item_label": "Sedan – full size",
+          "rate_basis": "daily minimum",
+          "rate_value": "$52"
+        },
+        {
+          "section": null,
+          "item_label": "Sedan – full size",
+          "rate_basis": "weekly minimum",
+          "rate_value": "$215"
+        },
+        {
+          "section": null,
+          "item_label": "Sedan – full size",
+          "rate_basis": "monthly minimum",
+          "rate_value": "$520"
+        },
+        {
+          "section": null,
+          "item_label": "Mini Van (7 passenger)",
+          "rate_basis": "per mile",
+          "rate_value": "65¢"
+        },
+        {
+          "section": null,
+          "item_label": "Mini Van (7 passenger)",
+          "rate_basis": "daily minimum",
+          "rate_value": "$68"
+        },
+        {
+          "section": null,
+          "item_label": "Mini Van (7 passenger)",
+          "rate_basis": "weekly minimum",
+          "rate_value": "$260"
+        },
+        {
+          "section": null,
+          "item_label": "Mini Van (7 passenger)",
+          "rate_basis": "monthly minimum",
+          "rate_value": "$680"
+        },
+        {
+          "section": null,
+          "item_label": "Sport Utility Vehicle (SUV) (8 passenger, 2WD or 4WD)",
+          "rate_basis": "per mile",
+          "rate_value": "78¢"
+        },
+        {
+          "section": null,
+          "item_label": "Sport Utility Vehicle (SUV) (8 passenger, 2WD or 4WD)",
+          "rate_basis": "daily minimum",
+          "rate_value": "$73"
+        },
+        {
+          "section": null,
+          "item_label": "Sport Utility Vehicle (SUV) (8 passenger, 2WD or 4WD)",
+          "rate_basis": "weekly minimum",
+          "rate_value": "$285"
+        },
+        {
+          "section": null,
+          "item_label": "Sport Utility Vehicle (SUV) (8 passenger, 2WD or 4WD)",
+          "rate_basis": "monthly minimum",
+          "rate_value": "$730"
+        },
+        {
+          "section": null,
+          "item_label": "Full Size Van (15 passenger & Conversion)",
+          "rate_basis": "per mile",
+          "rate_value": "$1.07"
+        },
+        {
+          "section": null,
+          "item_label": "Full Size Van (15 passenger & Conversion)",
+          "rate_basis": "daily minimum",
+          "rate_value": "$100"
+        },
+        {
+          "section": null,
+          "item_label": "Full Size Van (15 passenger & Conversion)",
+          "rate_basis": "weekly minimum",
+          "rate_value": "$410"
+        },
+        {
+          "section": null,
+          "item_label": "Full Size Van (15 passenger & Conversion)",
+          "rate_basis": "monthly minimum",
+          "rate_value": "$900"
+        },
+        {
+          "section": null,
+          "item_label": "Work trucks",
+          "rate_basis": "per mile",
+          "rate_value": "79¢"
+        },
+        {
+          "section": null,
+          "item_label": "Work trucks",
+          "rate_basis": "daily minimum",
+          "rate_value": "$73"
+        },
+        {
+          "section": null,
+          "item_label": "Work trucks",
+          "rate_basis": "weekly minimum",
+          "rate_value": "$350"
+        },
+        {
+          "section": null,
+          "item_label": "Work trucks",
+          "rate_basis": "monthly minimum",
+          "rate_value": "$730"
+        },
+        {
+          "section": null,
+          "item_label": "Compact SUV",
+          "rate_basis": "per mile",
+          "rate_value": "52¢"
+        },
+        {
+          "section": null,
+          "item_label": "Compact SUV",
+          "rate_basis": "daily minimum",
+          "rate_value": "$60"
+        },
+        {
+          "section": null,
+          "item_label": "Compact SUV",
+          "rate_basis": "weekly minimum",
+          "rate_value": "$255"
+        },
+        {
+          "section": null,
+          "item_label": "Compact SUV",
+          "rate_basis": "monthly minimum",
+          "rate_value": "$535"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "items[0].item_label",
+        "page": 1,
+        "bbox": [
+          0.146818,
+          0.324706,
+          0.131364,
+          0.040588
+        ],
+        "polygon": null,
+        "reference_text": "Sedan - compact",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[1].item_label",
+        "page": 1,
+        "bbox": [
+          0.146818,
+          0.324706,
+          0.131364,
+          0.040588
+        ],
+        "polygon": null,
+        "reference_text": "Sedan - compact",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[1].rate_basis",
+        "page": 1,
+        "bbox": [
+          0.531818,
+          0.27,
+          0.165909,
+          0.058824
+        ],
+        "polygon": null,
+        "reference_text": "Dail'yv Minimum",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[2].item_label",
+        "page": 1,
+        "bbox": [
+          0.146818,
+          0.324706,
+          0.131364,
+          0.040588
+        ],
+        "polygon": null,
+        "reference_text": "Sedan - compact",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[2].rate_basis",
+        "page": 1,
+        "bbox": [
+          0.188182,
+          0.27,
+          0.638636,
+          0.062353
+        ],
+        "polygon": null,
+        "reference_text": "‘ ,Typ.e of Velgcle Rate/mile minimum Dail'yv Minimum .Wegkly - .. Monthly Minimum",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[2].rate_value",
+        "page": 1,
+        "bbox": [
+          0.630909,
+          0.342941,
+          0.042727,
+          0.033529
+        ],
+        "polygon": null,
+        "reference_text": "$175",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[3].item_label",
+        "page": 1,
+        "bbox": [
+          0.146818,
+          0.324706,
+          0.131364,
+          0.040588
+        ],
+        "polygon": null,
+        "reference_text": "Sedan - compact",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[3].rate_basis",
+        "page": 1,
+        "bbox": [
+          0.741818,
+          0.282353,
+          0.085,
+          0.05
+        ],
+        "polygon": null,
+        "reference_text": "Monthly Minimum",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[3].rate_value",
+        "page": 1,
+        "bbox": [
+          0.767273,
+          0.348824,
+          0.035,
+          0.023529
+        ],
+        "polygon": null,
+        "reference_text": "s450",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[4].item_label",
+        "page": 1,
+        "bbox": [
+          0.145909,
+          0.371765,
+          0.126364,
+          0.038824
+        ],
+        "polygon": null,
+        "reference_text": "Sedan - full size",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[5].item_label",
+        "page": 1,
+        "bbox": [
+          0.145909,
+          0.371765,
+          0.126364,
+          0.038824
+        ],
+        "polygon": null,
+        "reference_text": "Sedan - full size",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[5].rate_basis",
+        "page": 1,
+        "bbox": [
+          0.531818,
+          0.27,
+          0.165909,
+          0.058824
+        ],
+        "polygon": null,
+        "reference_text": "Dail'yv Minimum",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[6].item_label",
+        "page": 1,
+        "bbox": [
+          0.145909,
+          0.371765,
+          0.126364,
+          0.038824
+        ],
+        "polygon": null,
+        "reference_text": "Sedan - full size",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[6].rate_basis",
+        "page": 1,
+        "bbox": [
+          0.188182,
+          0.27,
+          0.638636,
+          0.062353
+        ],
+        "polygon": null,
+        "reference_text": "‘ ,Typ.e of Velgcle Rate/mile minimum Dail'yv Minimum .Wegkly - .. Monthly Minimum",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[7].item_label",
+        "page": 1,
+        "bbox": [
+          0.145909,
+          0.371765,
+          0.126364,
+          0.038824
+        ],
+        "polygon": null,
+        "reference_text": "Sedan - full size",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[7].rate_basis",
+        "page": 1,
+        "bbox": [
+          0.741818,
+          0.282353,
+          0.085,
+          0.05
+        ],
+        "polygon": null,
+        "reference_text": "Monthly Minimum",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[9].rate_basis",
+        "page": 1,
+        "bbox": [
+          0.531818,
+          0.27,
+          0.165909,
+          0.058824
+        ],
+        "polygon": null,
+        "reference_text": "Dail'yv Minimum",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[10].rate_basis",
+        "page": 1,
+        "bbox": [
+          0.188182,
+          0.27,
+          0.638636,
+          0.062353
+        ],
+        "polygon": null,
+        "reference_text": "‘ ,Typ.e of Velgcle Rate/mile minimum Dail'yv Minimum .Wegkly - .. Monthly Minimum",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[11].rate_basis",
+        "page": 1,
+        "bbox": [
+          0.741818,
+          0.282353,
+          0.085,
+          0.05
+        ],
+        "polygon": null,
+        "reference_text": "Monthly Minimum",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[12].item_label",
+        "page": 1,
+        "bbox": [
+          0.143636,
+          0.485294,
+          0.367727,
+          0.027647
+        ],
+        "polygon": null,
+        "reference_text": "Sport Utility Vehicle (SUV) B",
+        "confidence": 0.8353369995309614,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[12].rate_value",
+        "page": 1,
+        "bbox": [
+          0.434091,
+          0.513529,
+          0.026364,
+          0.034706
+        ],
+        "polygon": null,
+        "reference_text": "78¢4",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[13].item_label",
+        "page": 1,
+        "bbox": [
+          0.143636,
+          0.485294,
+          0.367727,
+          0.027647
+        ],
+        "polygon": null,
+        "reference_text": "Sport Utility Vehicle (SUV) B",
+        "confidence": 0.8353369995309614,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[13].rate_basis",
+        "page": 1,
+        "bbox": [
+          0.531818,
+          0.27,
+          0.165909,
+          0.058824
+        ],
+        "polygon": null,
+        "reference_text": "Dail'yv Minimum",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[13].rate_value",
+        "page": 1,
+        "bbox": [
+          0.521818,
+          0.651765,
+          0.038182,
+          0.027059
+        ],
+        "polygon": null,
+        "reference_text": "$73",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[14].item_label",
+        "page": 1,
+        "bbox": [
+          0.143636,
+          0.485294,
+          0.367727,
+          0.027647
+        ],
+        "polygon": null,
+        "reference_text": "Sport Utility Vehicle (SUV) B",
+        "confidence": 0.8353369995309614,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[14].rate_basis",
+        "page": 1,
+        "bbox": [
+          0.188182,
+          0.27,
+          0.638636,
+          0.062353
+        ],
+        "polygon": null,
+        "reference_text": "‘ ,Typ.e of Velgcle Rate/mile minimum Dail'yv Minimum .Wegkly - .. Monthly Minimum",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[14].rate_value",
+        "page": 1,
+        "bbox": [
+          0.626818,
+          0.517647,
+          0.043636,
+          0.032941
+        ],
+        "polygon": null,
+        "reference_text": "i$285",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[15].item_label",
+        "page": 1,
+        "bbox": [
+          0.143636,
+          0.485294,
+          0.367727,
+          0.027647
+        ],
+        "polygon": null,
+        "reference_text": "Sport Utility Vehicle (SUV) B",
+        "confidence": 0.8353369995309614,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[15].rate_basis",
+        "page": 1,
+        "bbox": [
+          0.741818,
+          0.282353,
+          0.085,
+          0.05
+        ],
+        "polygon": null,
+        "reference_text": "Monthly Minimum",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[15].rate_value",
+        "page": 1,
+        "bbox": [
+          0.764091,
+          0.521176,
+          0.035455,
+          0.020588
+        ],
+        "polygon": null,
+        "reference_text": "$730",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[16].rate_value",
+        "page": 1,
+        "bbox": [
+          0.432273,
+          0.581176,
+          0.04,
+          0.020588
+        ],
+        "polygon": null,
+        "reference_text": "$1.07",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[17].rate_basis",
+        "page": 1,
+        "bbox": [
+          0.531818,
+          0.27,
+          0.165909,
+          0.058824
+        ],
+        "polygon": null,
+        "reference_text": "Dail'yv Minimum",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[17].rate_value",
+        "page": 1,
+        "bbox": [
+          0.535,
+          0.584118,
+          0.035,
+          0.024706
+        ],
+        "polygon": null,
+        "reference_text": "$100",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[18].rate_basis",
+        "page": 1,
+        "bbox": [
+          0.188182,
+          0.27,
+          0.638636,
+          0.062353
+        ],
+        "polygon": null,
+        "reference_text": "‘ ,Typ.e of Velgcle Rate/mile minimum Dail'yv Minimum .Wegkly - .. Monthly Minimum",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[18].rate_value",
+        "page": 1,
+        "bbox": [
+          0.634091,
+          0.587059,
+          0.035,
+          0.019412
+        ],
+        "polygon": null,
+        "reference_text": "$410",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[19].rate_basis",
+        "page": 1,
+        "bbox": [
+          0.741818,
+          0.282353,
+          0.085,
+          0.05
+        ],
+        "polygon": null,
+        "reference_text": "Monthly Minimum",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[19].rate_value",
+        "page": 1,
+        "bbox": [
+          0.763182,
+          0.590588,
+          0.035,
+          0.024118
+        ],
+        "polygon": null,
+        "reference_text": "$900",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[21].rate_basis",
+        "page": 1,
+        "bbox": [
+          0.531818,
+          0.27,
+          0.165909,
+          0.058824
+        ],
+        "polygon": null,
+        "reference_text": "Dail'yv Minimum",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[21].rate_value",
+        "page": 1,
+        "bbox": [
+          0.521818,
+          0.651765,
+          0.038182,
+          0.027059
+        ],
+        "polygon": null,
+        "reference_text": "$73",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[22].rate_basis",
+        "page": 1,
+        "bbox": [
+          0.188182,
+          0.27,
+          0.638636,
+          0.062353
+        ],
+        "polygon": null,
+        "reference_text": "‘ ,Typ.e of Velgcle Rate/mile minimum Dail'yv Minimum .Wegkly - .. Monthly Minimum",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[22].rate_value",
+        "page": 1,
+        "bbox": [
+          0.632727,
+          0.654706,
+          0.035,
+          0.02
+        ],
+        "polygon": null,
+        "reference_text": "350",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[23].rate_basis",
+        "page": 1,
+        "bbox": [
+          0.741818,
+          0.282353,
+          0.085,
+          0.05
+        ],
+        "polygon": null,
+        "reference_text": "Monthly Minimum",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[23].rate_value",
+        "page": 1,
+        "bbox": [
+          0.764091,
+          0.521176,
+          0.035455,
+          0.020588
+        ],
+        "polygon": null,
+        "reference_text": "$730",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[24].item_label",
+        "page": 1,
+        "bbox": [
+          0.14,
+          0.690588,
+          0.110909,
+          0.020588
+        ],
+        "polygon": null,
+        "reference_text": "Compact SUV",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[24].rate_value",
+        "page": 1,
+        "bbox": [
+          0.429545,
+          0.717647,
+          0.026364,
+          0.019412
+        ],
+        "polygon": null,
+        "reference_text": "52¢",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[25].item_label",
+        "page": 1,
+        "bbox": [
+          0.14,
+          0.690588,
+          0.110909,
+          0.020588
+        ],
+        "polygon": null,
+        "reference_text": "Compact SUV",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[25].rate_basis",
+        "page": 1,
+        "bbox": [
+          0.531818,
+          0.27,
+          0.165909,
+          0.058824
+        ],
+        "polygon": null,
+        "reference_text": "Dail'yv Minimum",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[25].rate_value",
+        "page": 1,
+        "bbox": [
+          0.532273,
+          0.719412,
+          0.027727,
+          0.021765
+        ],
+        "polygon": null,
+        "reference_text": "$60",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[26].item_label",
+        "page": 1,
+        "bbox": [
+          0.14,
+          0.690588,
+          0.110909,
+          0.020588
+        ],
+        "polygon": null,
+        "reference_text": "Compact SUV",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[26].rate_basis",
+        "page": 1,
+        "bbox": [
+          0.188182,
+          0.27,
+          0.638636,
+          0.062353
+        ],
+        "polygon": null,
+        "reference_text": "‘ ,Typ.e of Velgcle Rate/mile minimum Dail'yv Minimum .Wegkly - .. Monthly Minimum",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[27].item_label",
+        "page": 1,
+        "bbox": [
+          0.14,
+          0.690588,
+          0.110909,
+          0.020588
+        ],
+        "polygon": null,
+        "reference_text": "Compact SUV",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[27].rate_basis",
+        "page": 1,
+        "bbox": [
+          0.741818,
+          0.282353,
+          0.085,
+          0.05
+        ],
+        "polygon": null,
+        "reference_text": "Monthly Minimum",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "items[27].rate_value",
+        "page": 1,
+        "bbox": [
+          0.760455,
+          0.725882,
+          0.035,
+          0.020588
+        ],
+        "polygon": null,
+        "reference_text": "$535",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:36:56.387349Z",
+  "completed_at": "2026-09-13T20:36:56.387349Z",
+  "latency_in_ms": 10245
+}

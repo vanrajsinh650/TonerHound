@@ -1,0 +1,384 @@
+{
+  "request": {
+    "example_id": "short/P4-83-211_35",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/P4-83-211_35.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 19,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/P4-83-211_35",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "field_name": "FASHING (EDWARDS LIME-A)",
+      "lease_name": "WEDDINGTON, ADELINE",
+      "current_operator_name": "CRIMSON EXPLORATION OPER., INC.",
+      "operator_p5_no": "190005",
+      "oil_lse_gas_id_no": "02683",
+      "county": "ATASCOSA",
+      "rrc_district": "01",
+      "operator_address": "717 TEXAS AVE. SUITE 2900 HOUSTON, TX 77002",
+      "well_nos": "1 (API: 013-80381) 255-00812",
+      "classification_oil": false,
+      "classification_gas": false,
+      "classification_other": true,
+      "effective_date": "10/01/2011",
+      "change_operator": true,
+      "change_oil_condensate_gatherer": false,
+      "change_gas_gatherer": false,
+      "change_gas_purchaser": false,
+      "change_gas_purchaser_system_code": false,
+      "change_field_name": false,
+      "change_field_name_from": null,
+      "change_field_name_docket": null,
+      "change_lease_name": false,
+      "change_lease_name_from": null,
+      "new_rrc_oil_lease": false,
+      "new_rrc_gas_well": false,
+      "new_rrc_other_well": false,
+      "new_rrc_other_well_specify": null,
+      "due_new_completion_recompletion": false,
+      "due_reclass_gas_to_oil": false,
+      "due_reclass_oil_to_gas": false,
+      "due_consolidation": false,
+      "due_unitization": false,
+      "due_field_transfer": false,
+      "due_subdivision": false,
+      "prev_operator_name": "TENNECO OIL CO.",
+      "prev_operator_signature": false,
+      "prev_operator_name_print": null,
+      "prev_operator_title": null,
+      "prev_operator_date": null,
+      "prev_operator_phone": null,
+      "prev_operator_authorized_employee": false,
+      "prev_operator_authorized_agent": false,
+      "curr_operator_name_print": "ALISON DENNER",
+      "curr_operator_signature": true,
+      "curr_operator_title": "PRODUCTION ANALYST",
+      "curr_operator_email": "adenner@crimsonxp.com",
+      "curr_operator_date": "10/06/2011",
+      "curr_operator_phone": "713-236-7456",
+      "curr_operator_authorized_employee": true,
+      "curr_operator_authorized_agent": false,
+      "reviewer_initials": null,
+      "approval_date": null,
+      "gas_gatherers_purchasers": [
+        {
+          "gatherer": false,
+          "purchaser": false,
+          "name": "SWD",
+          "system_code": null,
+          "percent_of_take": null,
+          "full_well_stream": false
+        }
+      ],
+      "oil_condensate_gatherers": [
+        {
+          "name": "SWD",
+          "percent_of_take": null
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "lease_name",
+        "page": 1,
+        "bbox": [
+          0.532701,
+          0.844882,
+          0.002088,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "I",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "current_operator_name",
+        "page": 1,
+        "bbox": [
+          0.532701,
+          0.844882,
+          0.002088,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "I",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_p5_no",
+        "page": 1,
+        "bbox": [
+          0.498959,
+          0.17107,
+          0.043455,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "190005",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "oil_lse_gas_id_no",
+        "page": 1,
+        "bbox": [
+          0.644808,
+          0.170564,
+          0.03818,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "02683",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district",
+        "page": 1,
+        "bbox": [
+          0.856735,
+          0.172045,
+          0.013658,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "01",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_address",
+        "page": 1,
+        "bbox": [
+          0.532701,
+          0.844882,
+          0.002088,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "I",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "classification_other",
+        "page": 1,
+        "bbox": [
+          0.811776,
+          0.800092,
+          0.018667,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "effective_date",
+        "page": 1,
+        "bbox": [
+          0.791134,
+          0.232591,
+          0.073793,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "10/01/2011",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_operator",
+        "page": 1,
+        "bbox": [
+          0.811776,
+          0.800092,
+          0.018667,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_name",
+        "page": 1,
+        "bbox": [
+          0.532701,
+          0.844882,
+          0.002088,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "I",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_name_print",
+        "page": 1,
+        "bbox": [
+          0.532701,
+          0.844882,
+          0.002088,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "I",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_signature",
+        "page": 1,
+        "bbox": [
+          0.811776,
+          0.800092,
+          0.018667,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_title",
+        "page": 1,
+        "bbox": [
+          0.532701,
+          0.844882,
+          0.002088,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "I",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_email",
+        "page": 1,
+        "bbox": [
+          0.532701,
+          0.844882,
+          0.002088,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "I",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_date",
+        "page": 1,
+        "bbox": [
+          0.516427,
+          0.924452,
+          0.074502,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "10/06/2011",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_phone",
+        "page": 1,
+        "bbox": [
+          0.772701,
+          0.92303,
+          0.092772,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "713-236-7456",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_authorized_employee",
+        "page": 1,
+        "bbox": [
+          0.811776,
+          0.800092,
+          0.018667,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gas_gatherers_purchasers[0].name",
+        "page": 1,
+        "bbox": [
+          0.029124,
+          0.603888,
+          0.02418,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "SWD",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "oil_condensate_gatherers[0].name",
+        "page": 1,
+        "bbox": [
+          0.029124,
+          0.603888,
+          0.02418,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "SWD",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:19:35.164884Z",
+  "completed_at": "2026-09-13T20:19:35.164884Z",
+  "latency_in_ms": 365
+}

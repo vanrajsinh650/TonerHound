@@ -1,0 +1,156 @@
+{
+  "request": {
+    "example_id": "short/07021-2016-p0078",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/07021-2016-p0078.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 6,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/07021-2016-p0078",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "final_k1": false,
+      "amended_k1": false,
+      "corporation_ein": "26-3839121",
+      "corporation_name": "Pine Harbour Water Utilities LLC",
+      "corporation_address": "101 Satellite Court, Leesburg FL 34748",
+      "irs_center": "Ogden, UT 84201-0013",
+      "shareholder_id": "334-50-8852",
+      "shareholder_name": "Madeline J Lipsky",
+      "shareholder_address": "PO Box 447, Fruitland Park, FL 34741",
+      "shareholder_stock_ownership_pct": 33.333333,
+      "box_1_ordinary_business_income": -3248,
+      "box_2_net_rental_real_estate": null,
+      "box_3_other_net_rental_income": null,
+      "box_4_interest_income": null,
+      "box_5a_ordinary_dividends": null,
+      "box_5b_qualified_dividends": null,
+      "box_6_royalties": null,
+      "box_7_net_short_term_capital_gain": null,
+      "box_8a_net_long_term_capital_gain": null,
+      "box_8b_collectibles_gain": null,
+      "box_8c_unrecaptured_1250_gain": null,
+      "box_9_net_section_1231_gain": null,
+      "box_11_section_179_deduction": null,
+      "box_10_other_income": null,
+      "box_12_other_deductions": null,
+      "box_13_credits": null,
+      "box_14_foreign_transactions": null,
+      "box_15_amt_items": [
+        {
+          "code": "A",
+          "amount": 78
+        }
+      ],
+      "box_16_items_affecting_shareholder_basis": null,
+      "box_17_other_information": null
+    },
+    "field_citations": [
+      {
+        "field_path": "corporation_name",
+        "page": 1,
+        "bbox": [
+          0.103757,
+          0.314399,
+          0.176535,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Harbour Water Utilities LLC",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "corporation_address",
+        "page": 1,
+        "bbox": [
+          0.35506,
+          0.343962,
+          0.098387,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "F 34748",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "irs_center",
+        "page": 1,
+        "bbox": [
+          0.073482,
+          0.806685,
+          0.004532,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "shareholder_id",
+        "page": 1,
+        "bbox": [
+          0.073482,
+          0.806685,
+          0.004532,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "shareholder_stock_ownership_pct",
+        "page": 1,
+        "bbox": [
+          0.411207,
+          0.556552,
+          0.071458,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "33.333333%",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_15_amt_items[0].amount",
+        "page": 1,
+        "bbox": [
+          0.912862,
+          0.494215,
+          0.013883,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "78",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:05:10.820549Z",
+  "completed_at": "2026-09-13T20:05:10.820549Z",
+  "latency_in_ms": 131
+}

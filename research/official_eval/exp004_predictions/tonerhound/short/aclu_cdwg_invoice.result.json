@@ -1,0 +1,539 @@
+{
+  "request": {
+    "example_id": "short/aclu_cdwg_invoice",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/aclu_cdwg_invoice.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 30,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/aclu_cdwg_invoice",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "invoice_number": "NF67652",
+      "invoice_type": "standard",
+      "original_invoice_number": null,
+      "date": "2014-07-19",
+      "due_date": "2014-08-18",
+      "purchase_order_number": "95055",
+      "order_number": "FLDQ324",
+      "vendor": {
+        "name": "CDW Government",
+        "address": {
+          "street": "75 Remittance Drive, Suite 1515",
+          "city": "Chicago",
+          "state": "IL",
+          "zip_code": "60675-1515",
+          "country": null
+        },
+        "phone": null,
+        "email": "gachremittance@cdw.com",
+        "tax_id": "36-4230110"
+      },
+      "customer": {
+        "name": "SUDBURY PUBLIC SCHOOLS",
+        "address": {
+          "street": "40 FAIRBANK RD STE C",
+          "city": "SUDBURY",
+          "state": "MA",
+          "zip_code": "01776-5609",
+          "country": null
+        },
+        "phone": null,
+        "email": null,
+        "account_number": "1095519"
+      },
+      "line_items": [
+        {
+          "line_no": 1,
+          "item_code": "2856676",
+          "description": "ACAD GOOGLE CHROME OS MGT LIC+SUP 5Y Manufacturer Part Number: CROSSWDNEDU Electronic distribution - NO MEDIA",
+          "quantity": 455.0,
+          "unit_price": 26.35,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 11989.25
+        }
+      ],
+      "subtotal": 11989.25,
+      "discount_total": null,
+      "tax_total": 0.0,
+      "shipping": 0.0,
+      "total_amount": 11989.25,
+      "payment_terms": "Net 30 Days",
+      "bank_details": {
+        "bank_name": "THE NORTHERN TRUST",
+        "account_number": "91057",
+        "routing_number": "071000152"
+      },
+      "currency": "USD",
+      "notes": null
+    },
+    "field_citations": [
+      {
+        "field_path": "invoice_number",
+        "page": 1,
+        "bbox": [
+          0.287059,
+          0.348727,
+          0.045882,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "NF67652",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "invoice_type",
+        "page": 1,
+        "bbox": [
+          0.745294,
+          0.820545,
+          0.01,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "T",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_date",
+        "page": 1,
+        "bbox": [
+          0.891176,
+          0.346,
+          0.044706,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "08/18/14",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "purchase_order_number",
+        "page": 1,
+        "bbox": [
+          0.657059,
+          0.375773,
+          0.03,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "95055",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "order_number",
+        "page": 1,
+        "bbox": [
+          0.178235,
+          0.905545,
+          0.055294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "FLDQ324",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.name",
+        "page": 1,
+        "bbox": [
+          0.820588,
+          0.0435,
+          0.095294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "CDW GOVERNMENT",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.address.street",
+        "page": 1,
+        "bbox": [
+          0.230588,
+          0.081909,
+          0.206471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "75 Remittance Drive, Suite 1515",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.address.city",
+        "page": 1,
+        "bbox": [
+          0.230588,
+          0.094409,
+          0.055294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Chicago,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.address.state",
+        "page": 1,
+        "bbox": [
+          0.288824,
+          0.557273,
+          0.125294,
+          0.033636
+        ],
+        "polygon": null,
+        "reference_text": "il",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.address.zip_code",
+        "page": 1,
+        "bbox": [
+          0.307647,
+          0.092818,
+          0.076471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "60675-1515",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.email",
+        "page": 1,
+        "bbox": [
+          0.839412,
+          0.025545,
+          0.121765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "gachremittance@cdw.com",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.tax_id",
+        "page": 1,
+        "bbox": [
+          0.565294,
+          0.9685,
+          0.06,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "36-4230110",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.name",
+        "page": 1,
+        "bbox": [
+          0.123529,
+          0.251455,
+          0.156471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "SUDBURY PUBLIC SCHOOLS",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.address.street",
+        "page": 1,
+        "bbox": [
+          0.123529,
+          0.281682,
+          0.128235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "40 FAIRBANK RD STE C",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.address.city",
+        "page": 1,
+        "bbox": [
+          0.123529,
+          0.292136,
+          0.056471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "SUDBURY",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.address.state",
+        "page": 1,
+        "bbox": [
+          0.183529,
+          0.291909,
+          0.016471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "MA",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.address.zip_code",
+        "page": 1,
+        "bbox": [
+          0.202941,
+          0.291455,
+          0.059412,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "01776-5609",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.account_number",
+        "page": 1,
+        "bbox": [
+          0.885882,
+          0.0835,
+          0.049412,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1095519",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].line_no",
+        "page": 1,
+        "bbox": [
+          0.461176,
+          0.054545,
+          0.002353,
+          0.029091
+        ],
+        "polygon": null,
+        "reference_text": "l",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].item_code",
+        "page": 1,
+        "bbox": [
+          0.084118,
+          0.415773,
+          0.049412,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2856676",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].quantity",
+        "page": 1,
+        "bbox": [
+          0.621176,
+          0.411682,
+          0.021765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "455",
+        "confidence": 0.7870039775603862,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].unit_price",
+        "page": 1,
+        "bbox": [
+          0.811176,
+          0.411,
+          0.035294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "26.35",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].amount",
+        "page": 1,
+        "bbox": [
+          0.924706,
+          0.411455,
+          0.055882,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "11,989.25",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "subtotal",
+        "page": 1,
+        "bbox": [
+          0.841765,
+          0.150091,
+          0.072353,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$11,989.25",
+        "confidence": 0.8624158653595666,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "tax_total",
+        "page": 1,
+        "bbox": [
+          0.963059,
+          0.878273,
+          0.018,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$0.00",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "shipping",
+        "page": 1,
+        "bbox": [
+          0.962588,
+          0.856909,
+          0.018353,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$0.00",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_amount",
+        "page": 1,
+        "bbox": [
+          0.925294,
+          0.900091,
+          0.062353,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$11,989.25",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "payment_terms",
+        "page": 1,
+        "bbox": [
+          0.613529,
+          0.347364,
+          0.061176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Net 30 Days",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "bank_details.bank_name",
+        "page": 1,
+        "bbox": [
+          0.574706,
+          0.036909,
+          0.111765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "THE NORTHERN TRUST",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "bank_details.routing_number",
+        "page": 1,
+        "bbox": [
+          0.807647,
+          0.036227,
+          0.048235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "071000152",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:23:00.017359Z",
+  "completed_at": "2026-09-13T20:23:00.017359Z",
+  "latency_in_ms": 11993
+}

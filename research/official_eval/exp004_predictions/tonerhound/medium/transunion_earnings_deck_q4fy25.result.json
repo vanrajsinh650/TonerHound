@@ -1,0 +1,222 @@
+{
+  "request": {
+    "example_id": "medium/transunion_earnings_deck_q4fy25",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/transunion_earnings_deck_q4fy25.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 11,
+    "ocr_pages": 0,
+    "num_pages": 41
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/transunion_earnings_deck_q4fy25",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "period": "Q4 FY2025",
+      "currency": "USD",
+      "fiscal_period_end_date": "2025-12-31",
+      "total_revenue": 1171.0,
+      "revenue_growth_yoy": 13.0,
+      "gross_profit": null,
+      "operating_income": 193.2,
+      "net_income": 101.2,
+      "adjusted_ebitda": 417.0,
+      "gaap_eps_diluted": 0.52,
+      "adjusted_eps_diluted": 1.07,
+      "gross_margin": null,
+      "operating_margin": 16.5,
+      "free_cash_flow": null,
+      "segments": [
+        {
+          "segment_name": "U.S. Markets",
+          "segment_revenue": 919.0,
+          "segment_profit": 348.0
+        },
+        {
+          "segment_name": "International",
+          "segment_revenue": 256.0,
+          "segment_profit": 110.0
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "period",
+        "page": 33,
+        "bbox": [
+          0.799502,
+          0.472004,
+          0.047174,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Q4 2025",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_revenue",
+        "page": 13,
+        "bbox": [
+          0.420081,
+          0.408293,
+          0.053488,
+          0.031067
+        ],
+        "polygon": null,
+        "reference_text": "$1,171",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "revenue_growth_yoy",
+        "page": 13,
+        "bbox": [
+          0.545794,
+          0.409793,
+          0.035053,
+          0.0252
+        ],
+        "polygon": null,
+        "reference_text": "13%",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "adjusted_ebitda",
+        "page": 13,
+        "bbox": [
+          0.427958,
+          0.569626,
+          0.040079,
+          0.029067
+        ],
+        "polygon": null,
+        "reference_text": "$417",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "adjusted_eps_diluted",
+        "page": 13,
+        "bbox": [
+          0.43438,
+          0.731659,
+          0.036264,
+          0.029067
+        ],
+        "polygon": null,
+        "reference_text": "$1.07",
+        "confidence": 0.8034389837576802,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[0].segment_name",
+        "page": 4,
+        "bbox": [
+          0.446148,
+          0.432102,
+          0.11006,
+          0.024667
+        ],
+        "polygon": null,
+        "reference_text": "U.S. Markets",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[0].segment_revenue",
+        "page": 14,
+        "bbox": [
+          0.228355,
+          0.420507,
+          0.031338,
+          0.022672
+        ],
+        "polygon": null,
+        "reference_text": "$919",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[0].segment_profit",
+        "page": 14,
+        "bbox": [
+          0.228369,
+          0.772157,
+          0.031352,
+          0.022672
+        ],
+        "polygon": null,
+        "reference_text": "$348",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[1].segment_name",
+        "page": 7,
+        "bbox": [
+          0.412734,
+          0.292495,
+          0.085594,
+          0.018902
+        ],
+        "polygon": null,
+        "reference_text": "International",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[1].segment_revenue",
+        "page": 15,
+        "bbox": [
+          0.230507,
+          0.377379,
+          0.027094,
+          0.019378
+        ],
+        "polygon": null,
+        "reference_text": "$256",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[1].segment_profit",
+        "page": 15,
+        "bbox": [
+          0.230882,
+          0.78329,
+          0.026294,
+          0.019378
+        ],
+        "polygon": null,
+        "reference_text": "$110",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:04:27.833558Z",
+  "completed_at": "2026-09-13T20:04:27.833558Z",
+  "latency_in_ms": 22088
+}

@@ -1,0 +1,365 @@
+{
+  "request": {
+    "example_id": "short/passcoag-2020-w2-p0003-r1",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/passcoag-2020-w2-p0003-r1.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 19,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/passcoag-2020-w2-p0003-r1",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "employee_ssn": "XXX-XX-XXXXX",
+      "employer_ein": "05-0517079",
+      "employer_name": "PASCOAG UTILITY DISTRICT",
+      "employer_address": "PO BOX 107, PASCOAG RI 02859",
+      "void": false,
+      "employee_name": "DESARAE DOLAN",
+      "employee_address": "615 CENTRAL ST, MAPLEVILLE RI 02839",
+      "box_1_wages": 76377.31,
+      "box_2_federal_income_tax_withheld": 11636.1,
+      "box_3_social_security_wages": 78798.27,
+      "box_4_social_security_tax_withheld": 4885.49,
+      "box_5_medicare_wages_and_tips": 78798.27,
+      "box_6_medicare_tax_withheld": 1142.57,
+      "box_7_social_security_tips": null,
+      "box_8_allocated_tips": null,
+      "box_10_dependent_care_benefits": null,
+      "box_11_nonqualified_plans": null,
+      "box_12": [
+        {
+          "code": "C",
+          "amount": 108.16
+        },
+        {
+          "code": "D",
+          "amount": 2420.96
+        }
+      ],
+      "box_13_statutory_employee": false,
+      "box_13_retirement_plan": true,
+      "box_13_third_party_sick_pay": false,
+      "box_13_subtotal": false,
+      "box_14_other": [
+        {
+          "description": "RISDI",
+          "amount": 939.9
+        }
+      ],
+      "state_local_row_1": {
+        "state": "RI",
+        "employer_state_id": "05051707900",
+        "state_wages": 76377.31,
+        "state_income_tax": 2957.82,
+        "local_wages": null,
+        "local_income_tax": null,
+        "locality_name": null
+      },
+      "state_local_row_2": null,
+      "control_number_line1": "0012-0012N426",
+      "control_number_line2": "0000000160-ELECTR"
+    },
+    "field_citations": [
+      {
+        "field_path": "employer_ein",
+        "page": 1,
+        "bbox": [
+          0.05466,
+          0.261062,
+          0.080589,
+          0.028761
+        ],
+        "polygon": null,
+        "reference_text": "05-0517079",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "employee_name",
+        "page": 1,
+        "bbox": [
+          0.323055,
+          0.497788,
+          0.108619,
+          0.028761
+        ],
+        "polygon": null,
+        "reference_text": "DESARAE DOLAN",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "employee_address",
+        "page": 1,
+        "bbox": [
+          0.323756,
+          0.544248,
+          0.116328,
+          0.028761
+        ],
+        "polygon": null,
+        "reference_text": "615 CENTRAL ST",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_1_wages",
+        "page": 1,
+        "bbox": [
+          0.722495,
+          0.285398,
+          0.065872,
+          0.028761
+        ],
+        "polygon": null,
+        "reference_text": "76377.31",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_3_social_security_wages",
+        "page": 1,
+        "bbox": [
+          0.722495,
+          0.460177,
+          0.065172,
+          0.026549
+        ],
+        "polygon": null,
+        "reference_text": "78798.27",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_4_social_security_tax_withheld",
+        "page": 1,
+        "bbox": [
+          0.887877,
+          0.369469,
+          0.056062,
+          0.028761
+        ],
+        "polygon": null,
+        "reference_text": "4885.49",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_5_medicare_wages_and_tips",
+        "page": 1,
+        "bbox": [
+          0.722495,
+          0.460177,
+          0.065172,
+          0.026549
+        ],
+        "polygon": null,
+        "reference_text": "78798.27",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_6_medicare_tax_withheld",
+        "page": 1,
+        "bbox": [
+          0.887877,
+          0.460177,
+          0.055361,
+          0.026549
+        ],
+        "polygon": null,
+        "reference_text": "1142.57",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_12[0].code",
+        "page": 1,
+        "bbox": [
+          0.033637,
+          0.464602,
+          0.007708,
+          0.026549
+        ],
+        "polygon": null,
+        "reference_text": "c",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_12[0].amount",
+        "page": 1,
+        "bbox": [
+          0.103013,
+          0.462389,
+          0.046952,
+          0.030973
+        ],
+        "polygon": null,
+        "reference_text": "108.16",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_12[1].code",
+        "page": 1,
+        "bbox": [
+          0.67274,
+          0.188053,
+          0.004905,
+          0.019912
+        ],
+        "polygon": null,
+        "reference_text": "d",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_12[1].amount",
+        "page": 1,
+        "bbox": [
+          0.094604,
+          0.504425,
+          0.055361,
+          0.028761
+        ],
+        "polygon": null,
+        "reference_text": "2420.96",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_14_other[0].description",
+        "page": 1,
+        "bbox": [
+          0.161878,
+          0.464602,
+          0.039944,
+          0.028761
+        ],
+        "polygon": null,
+        "reference_text": "RISDI",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "state_local_row_1.state",
+        "page": 1,
+        "bbox": [
+          0.415557,
+          0.59292,
+          0.014716,
+          0.026549
+        ],
+        "polygon": null,
+        "reference_text": "RI",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "state_local_row_1.employer_state_id",
+        "page": 1,
+        "bbox": [
+          0.078486,
+          0.836283,
+          0.088998,
+          0.028761
+        ],
+        "polygon": null,
+        "reference_text": "05051707900",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "state_local_row_1.state_wages",
+        "page": 1,
+        "bbox": [
+          0.308339,
+          0.838496,
+          0.065872,
+          0.026549
+        ],
+        "polygon": null,
+        "reference_text": "76377.31",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "state_local_row_1.state_income_tax",
+        "page": 1,
+        "bbox": [
+          0.461808,
+          0.838496,
+          0.056062,
+          0.028761
+        ],
+        "polygon": null,
+        "reference_text": "2957.82",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "control_number_line1",
+        "page": 1,
+        "bbox": [
+          0.130343,
+          0.123894,
+          0.105116,
+          0.030973
+        ],
+        "polygon": null,
+        "reference_text": "0012 -0012N426",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "control_number_line2",
+        "page": 1,
+        "bbox": [
+          0.130343,
+          0.165929,
+          0.139453,
+          0.057522
+        ],
+        "polygon": null,
+        "reference_text": "0000000160-ELECTR",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:33:58.364051Z",
+  "completed_at": "2026-09-13T20:33:58.364051Z",
+  "latency_in_ms": 5988
+}

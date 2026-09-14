@@ -1,0 +1,180 @@
+{
+  "request": {
+    "example_id": "short/P4-83-449_155",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/P4-83-449_155.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 6,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/P4-83-449_155",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "field_name": "Nixon",
+      "lease_name": "Posey",
+      "current_operator_name": "John Posey",
+      "operator_p5_no": "671869",
+      "oil_lse_gas_id_no": "15193",
+      "county": "Wilson",
+      "rrc_district": "01",
+      "operator_address": "PO Box 37 Stockdale, TX 78160",
+      "well_nos": "1 A",
+      "classification_oil": true,
+      "classification_gas": false,
+      "classification_other": false,
+      "effective_date": "8/11/10",
+      "change_operator": true,
+      "change_oil_condensate_gatherer": true,
+      "change_gas_gatherer": false,
+      "change_gas_purchaser": false,
+      "change_gas_purchaser_system_code": false,
+      "change_field_name": false,
+      "change_field_name_from": null,
+      "change_field_name_docket": null,
+      "change_lease_name": false,
+      "change_lease_name_from": null,
+      "new_rrc_oil_lease": false,
+      "new_rrc_gas_well": false,
+      "new_rrc_other_well": false,
+      "new_rrc_other_well_specify": null,
+      "due_new_completion_recompletion": false,
+      "due_reclass_gas_to_oil": false,
+      "due_reclass_oil_to_gas": false,
+      "due_consolidation": false,
+      "due_unitization": false,
+      "due_field_transfer": false,
+      "due_subdivision": false,
+      "prev_operator_name": "BJR Oil Company, Inc.",
+      "prev_operator_signature": true,
+      "prev_operator_name_print": "CARTER HILL",
+      "prev_operator_title": "PRESIDENT",
+      "prev_operator_date": "8-31-2010",
+      "prev_operator_phone": "512 923 4748",
+      "prev_operator_authorized_employee": false,
+      "prev_operator_authorized_agent": false,
+      "curr_operator_name_print": "John Posey",
+      "curr_operator_signature": true,
+      "curr_operator_title": "Owner",
+      "curr_operator_email": "jp4posey@yahoo.com",
+      "curr_operator_date": "8/11/10",
+      "curr_operator_phone": "830-391-1426",
+      "curr_operator_authorized_employee": false,
+      "curr_operator_authorized_agent": false,
+      "reviewer_initials": "CD",
+      "approval_date": "8/31/10",
+      "gas_gatherers_purchasers": null,
+      "oil_condensate_gatherers": [
+        {
+          "name": "Shell",
+          "percent_of_take": "100%"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "rrc_district",
+        "page": 1,
+        "bbox": [
+          0.578236,
+          0.135975,
+          0.003,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "l",
+        "confidence": 0.878836907569377,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "classification_oil",
+        "page": 1,
+        "bbox": [
+          0.845344,
+          0.789593,
+          0.018439,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_operator",
+        "page": 1,
+        "bbox": [
+          0.845344,
+          0.789593,
+          0.018439,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_oil_condensate_gatherer",
+        "page": 1,
+        "bbox": [
+          0.845344,
+          0.789593,
+          0.018439,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_signature",
+        "page": 1,
+        "bbox": [
+          0.845344,
+          0.789593,
+          0.018439,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_signature",
+        "page": 1,
+        "bbox": [
+          0.845344,
+          0.789593,
+          0.018439,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:19:35.549702Z",
+  "completed_at": "2026-09-13T20:19:35.549702Z",
+  "latency_in_ms": 304
+}

@@ -1,0 +1,53 @@
+{
+  "request": {
+    "example_id": "medium/sf1449_supplies_services_0046",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/sf1449_supplies_services_0046.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 1,
+    "ocr_pages": 0,
+    "num_pages": 31
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/sf1449_supplies_services_0046",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "contract_number": "TOFS-12-B-0005/ 0353/12/201160",
+      "solicitation_number": null,
+      "requisition_number": null,
+      "issue_date": null,
+      "award_effective_date": null,
+      "total_award_amount": "$0.00",
+      "clin_items": []
+    },
+    "field_citations": [
+      {
+        "field_path": "total_award_amount",
+        "page": 1,
+        "bbox": [
+          0.708765,
+          0.747769,
+          0.040593,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$0.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:03:38.758673Z",
+  "completed_at": "2026-09-13T20:03:38.758673Z",
+  "latency_in_ms": 1988
+}

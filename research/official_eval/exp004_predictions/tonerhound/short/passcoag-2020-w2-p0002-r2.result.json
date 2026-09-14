@@ -1,0 +1,326 @@
+{
+  "request": {
+    "example_id": "short/passcoag-2020-w2-p0002-r2",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/passcoag-2020-w2-p0002-r2.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 17,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/passcoag-2020-w2-p0002-r2",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "box_10_dependent_care_benefits": null,
+      "box_11_nonqualified_plans": null,
+      "box_12": null,
+      "box_13_retirement_plan": true,
+      "box_13_statutory_employee": false,
+      "box_13_subtotal": false,
+      "box_13_third_party_sick_pay": false,
+      "box_14_other": [
+        {
+          "description": "RISDI",
+          "amount": 17.24
+        }
+      ],
+      "box_1_wages": 1325,
+      "box_2_federal_income_tax_withheld": 63.65,
+      "box_3_social_security_wages": 1325,
+      "box_4_social_security_tax_withheld": 82.15,
+      "box_5_medicare_wages_and_tips": 1325,
+      "box_6_medicare_tax_withheld": 19.21,
+      "box_7_social_security_tips": null,
+      "box_8_allocated_tips": null,
+      "control_number_line1": "0012-0012N426",
+      "control_number_line2": "0000000023-ELECTR",
+      "employee_address": "636 CAMP DIXIE ROAD, PASCOAG RI 02859",
+      "employee_name": "JOHN BLODGETT",
+      "employee_ssn": "XXX-XX-XXXXX",
+      "employer_address": "PO BOX 107, PASCOAG RI 02859",
+      "employer_ein": "05-0517079",
+      "employer_name": "PASCOAG UTILITY DISTRICT",
+      "state_local_row_1": {
+        "employer_state_id": "05051707900",
+        "local_income_tax": null,
+        "local_wages": null,
+        "locality_name": null,
+        "state": "RI",
+        "state_income_tax": 49.7,
+        "state_wages": 1325
+      },
+      "state_local_row_2": null,
+      "void": false
+    },
+    "field_citations": [
+      {
+        "field_path": "box_14_other[0].description",
+        "page": 1,
+        "bbox": [
+          0.15859,
+          0.471239,
+          0.04185,
+          0.026549
+        ],
+        "polygon": null,
+        "reference_text": "RISDI",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_1_wages",
+        "page": 1,
+        "bbox": [
+          0.754038,
+          0.278761,
+          0.033564,
+          0.028761
+        ],
+        "polygon": null,
+        "reference_text": "1325.00",
+        "confidence": 0.7762035983859279,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_2_federal_income_tax_withheld",
+        "page": 1,
+        "bbox": [
+          0.933921,
+          0.278761,
+          0.041116,
+          0.028761
+        ],
+        "polygon": null,
+        "reference_text": "63.65",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_3_social_security_wages",
+        "page": 1,
+        "bbox": [
+          0.754038,
+          0.278761,
+          0.033564,
+          0.028761
+        ],
+        "polygon": null,
+        "reference_text": "1325.00",
+        "confidence": 0.7762035983859279,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_4_social_security_tax_withheld",
+        "page": 1,
+        "bbox": [
+          0.934655,
+          0.369469,
+          0.040382,
+          0.026549
+        ],
+        "polygon": null,
+        "reference_text": "82.15",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_5_medicare_wages_and_tips",
+        "page": 1,
+        "bbox": [
+          0.754038,
+          0.278761,
+          0.033564,
+          0.028761
+        ],
+        "polygon": null,
+        "reference_text": "1325.00",
+        "confidence": 0.7762035983859279,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "control_number_line1",
+        "page": 1,
+        "bbox": [
+          0.118209,
+          0.126106,
+          0.111601,
+          0.028761
+        ],
+        "polygon": null,
+        "reference_text": "0012-0012N426",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "control_number_line2",
+        "page": 1,
+        "bbox": [
+          0.793686,
+          0.123894,
+          0.00514,
+          0.05531
+        ],
+        "polygon": null,
+        "reference_text": "-",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "employee_address",
+        "page": 1,
+        "bbox": [
+          0.328928,
+          0.544248,
+          0.164464,
+          0.028761
+        ],
+        "polygon": null,
+        "reference_text": "636 CAMP DIXIE ROAD",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "employee_name",
+        "page": 1,
+        "bbox": [
+          0.328194,
+          0.497788,
+          0.113069,
+          0.026549
+        ],
+        "polygon": null,
+        "reference_text": "JOHN BLODGETT",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "employee_ssn",
+        "page": 1,
+        "bbox": [
+          0.793686,
+          0.123894,
+          0.00514,
+          0.05531
+        ],
+        "polygon": null,
+        "reference_text": "-",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "employer_ein",
+        "page": 1,
+        "bbox": [
+          0.045521,
+          0.261062,
+          0.085169,
+          0.030973
+        ],
+        "polygon": null,
+        "reference_text": "05-0517079",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "employer_name",
+        "page": 1,
+        "bbox": [
+          0.328928,
+          0.192478,
+          0.209985,
+          0.028761
+        ],
+        "polygon": null,
+        "reference_text": "pascoac urILITY DISTRICT",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "state_local_row_1.employer_state_id",
+        "page": 1,
+        "bbox": [
+          0.070485,
+          0.836283,
+          0.093979,
+          0.028761
+        ],
+        "polygon": null,
+        "reference_text": "05051707900",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "state_local_row_1.state",
+        "page": 1,
+        "bbox": [
+          0.398678,
+          0.289823,
+          0.015419,
+          0.026549
+        ],
+        "polygon": null,
+        "reference_text": "RI",
+        "confidence": 0.7891658084177315,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "state_local_row_1.state_income_tax",
+        "page": 1,
+        "bbox": [
+          0.491189,
+          0.836283,
+          0.03348,
+          0.028761
+        ],
+        "polygon": null,
+        "reference_text": "49.70",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "state_local_row_1.state_wages",
+        "page": 1,
+        "bbox": [
+          0.323054,
+          0.836283,
+          0.033564,
+          0.028761
+        ],
+        "polygon": null,
+        "reference_text": "1325.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:33:41.729203Z",
+  "completed_at": "2026-09-13T20:33:41.729203Z",
+  "latency_in_ms": 7633
+}

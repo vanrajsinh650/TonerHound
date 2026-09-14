@@ -1,0 +1,363 @@
+{
+  "request": {
+    "example_id": "short/H9-53-7234_7248",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/H9-53-7234_7248.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 18,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/H9-53-7234_7248",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "operator": "BHP Billiton (TX LA OP) CO",
+      "operator_number": "068596",
+      "rrc_district": "2",
+      "street_or_po_box": "1000 Louisiana Street Suite 5600",
+      "city": "Houston",
+      "state": "TX",
+      "zip_code": "77002",
+      "lease_facility_operation_name": "Schendel A' Schendel BSA 4H",
+      "field_or_area_name": "Eagleville (Eagleford-2)",
+      "county": "Dewitt",
+      "optype_a_oil_field": false,
+      "optype_b_gas_field": false,
+      "optype_c_pipeline_gathering": false,
+      "optype_d_gasoline_plant": false,
+      "optype_e_drilling_workover": true,
+      "optype_f_sweetening_unit": false,
+      "optype_g_combination": false,
+      "optype_h_other": false,
+      "operation_type_other_explanation": "Based off field concentration TRRC",
+      "h2s_concentration": "10000 PPM",
+      "maximum_escape_volume": "1000 MCF/Day",
+      "roe_100ppm": "426 Ft.",
+      "roe_500ppm": "195 Ft.",
+      "operation_existing": false,
+      "operation_new": true,
+      "modification_cert_change_yes": false,
+      "modification_cert_change_no": false,
+      "workover_100ppm_3000ft_yes": false,
+      "workover_100ppm_3000ft_no": true,
+      "previous_certificate_number": null,
+      "roe_100ppm_public_area_yes": false,
+      "roe_100ppm_public_area_no": true,
+      "roe_500ppm_public_road_yes": false,
+      "roe_500ppm_public_road_no": true,
+      "injection_h2s_fluid_yes": false,
+      "injection_h2s_fluid_no": true,
+      "compliance_date_mo": null,
+      "compliance_date_day": null,
+      "compliance_date_year": null,
+      "depth_of_compliance_drilling": "800 Ft. from Surface",
+      "contingency_plan_prepared_yes": true,
+      "contingency_plan_prepared_no": false,
+      "contingency_plan_location": "Rig Site/ 6825 Hwy 87, San Antonio, Tx, In Process with RRC SWR 36",
+      "data_location": "TRRC, BHP Billiton, 6825 Hwy 87, Suite 06, San Antonio, Tx",
+      "signature_present": true,
+      "representative_of_company": null,
+      "title": "Safety Automation Pres",
+      "phone_no": "432.631.7775",
+      "certificate_date": "10/21/2014",
+      "approved_by": "Wesley Dresch",
+      "rrc_use_date": "10-23-2014",
+      "remarks": null,
+      "certification_number": "082473",
+      "exempt_stamp_present": false,
+      "operations_covered": [
+        {
+          "rrc_id": "797567",
+          "type_id_code": "05",
+          "storage_yes": false,
+          "storage_no": true
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "operator",
+        "page": 1,
+        "bbox": [
+          0.149853,
+          0.199122,
+          0.165782,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "BHP Billiton (TX LA OP) CO",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_number",
+        "page": 1,
+        "bbox": [
+          0.497345,
+          0.19843,
+          0.045428,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "068596",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district",
+        "page": 1,
+        "bbox": [
+          0.702655,
+          0.073603,
+          0.00826,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2",
+        "confidence": 0.7675774173071068,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "state",
+        "page": 1,
+        "bbox": [
+          0.467257,
+          0.640977,
+          0.015339,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Tx",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_facility_operation_name",
+        "page": 1,
+        "bbox": [
+          0.139233,
+          0.249422,
+          0.184661,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Schendel A Schendel BSA 4H",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "field_or_area_name",
+        "page": 1,
+        "bbox": [
+          0.519174,
+          0.250806,
+          0.139823,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Eagleville (Eagleford-2)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.80354,
+          0.249883,
+          0.037758,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Dewitt",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operation_type_other_explanation",
+        "page": 1,
+        "bbox": [
+          0.471386,
+          0.288877,
+          0.20295,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "ased off field concentration TRRC",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "h2s_concentration",
+        "page": 1,
+        "bbox": [
+          0.580531,
+          0.317257,
+          0.078466,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "40000 pPM",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "maximum_escape_volume",
+        "page": 1,
+        "bbox": [
+          0.745723,
+          0.317488,
+          0.114454,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1000 MCF/Day",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_500ppm",
+        "page": 1,
+        "bbox": [
+          0.118584,
+          0.33964,
+          0.742183,
+          0.021228
+        ],
+        "polygon": null,
+        "reference_text": "T2 RRC D! ot {Type H 1D T H Jndicate 110! If Filing Exposure (ROE) 426 ., | Exposure (ROE) 195 .",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "depth_of_compliance_drilling",
+        "page": 1,
+        "bbox": [
+          0.732743,
+          0.543146,
+          0.086726,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Ft, from Surface",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "contingency_plan_location",
+        "page": 1,
+        "bbox": [
+          0.146313,
+          0.585832,
+          0.431858,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Rig Site/ 6825 Hwy 87, San Antonio, Tx, In Process with RRC SWR 36",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "data_location",
+        "page": 1,
+        "bbox": [
+          0.117994,
+          0.642131,
+          0.364602,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "TRRC, BHP Billiton, 6825 Hwy 87, Suite 06, San Antonio, Tx",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "title",
+        "page": 1,
+        "bbox": [
+          0.383481,
+          0.720349,
+          0.141593,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Safety Automation Pres",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "phone_no",
+        "page": 1,
+        "bbox": [
+          0.639528,
+          0.715735,
+          0.083186,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "432.631.7775",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "certificate_date",
+        "page": 1,
+        "bbox": [
+          0.742773,
+          0.715273,
+          0.066077,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "10/21/2014",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "certification_number",
+        "page": 1,
+        "bbox": [
+          0.712684,
+          0.81795,
+          0.089086,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "082473",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:17:22.969868Z",
+  "completed_at": "2026-09-13T20:17:22.969868Z",
+  "latency_in_ms": 6363
+}

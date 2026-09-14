@@ -1,0 +1,1211 @@
+{
+  "request": {
+    "example_id": "medium/jackson_college_2024_federal_awards_audit",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/jackson_college_2024_federal_awards_audit.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 71,
+    "ocr_pages": 0,
+    "num_pages": 16
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/jackson_college_2024_federal_awards_audit",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "auditee_name": "JACKSON COLLEGE",
+      "fiscal_year_end": "2024-06-30",
+      "total_federal_expenditures": 20627577.0,
+      "awards": [
+        {
+          "federal_agency": "U.S. Department of Education",
+          "cluster_name": "Student Financial Assistance Cluster",
+          "program_title": "Federal Supplemental Educational Opportunity Grants",
+          "assistance_listing_number": "84.007",
+          "pass_through_entity": "Direct",
+          "pass_through_or_grantor_number": "P007A232021",
+          "federal_expenditures": 257723.0,
+          "passed_through_to_subrecipients": null
+        },
+        {
+          "federal_agency": "U.S. Department of Education",
+          "cluster_name": "Student Financial Assistance Cluster",
+          "program_title": "Federal Work-Study Program",
+          "assistance_listing_number": "84.033",
+          "pass_through_entity": "Direct",
+          "pass_through_or_grantor_number": "P033A232021",
+          "federal_expenditures": 231205.0,
+          "passed_through_to_subrecipients": null
+        },
+        {
+          "federal_agency": "U.S. Department of Education",
+          "cluster_name": "Student Financial Assistance Cluster",
+          "program_title": "Federal Pell Grant Program",
+          "assistance_listing_number": "84.063",
+          "pass_through_entity": "Direct",
+          "pass_through_or_grantor_number": "P063P231638",
+          "federal_expenditures": 12166856.0,
+          "passed_through_to_subrecipients": null
+        },
+        {
+          "federal_agency": "U.S. Department of Education",
+          "cluster_name": "Student Financial Assistance Cluster",
+          "program_title": "Federal Direct Student Loans",
+          "assistance_listing_number": "84.268",
+          "pass_through_entity": "Direct",
+          "pass_through_or_grantor_number": "P268K241638",
+          "federal_expenditures": 6035275.0,
+          "passed_through_to_subrecipients": null
+        },
+        {
+          "federal_agency": "U.S. Department of Education",
+          "cluster_name": "TRIO Cluster",
+          "program_title": "TRIO - Student Support Services",
+          "assistance_listing_number": "84.042A",
+          "pass_through_entity": "Direct",
+          "pass_through_or_grantor_number": "P042A200068",
+          "federal_expenditures": 266348.0,
+          "passed_through_to_subrecipients": null
+        },
+        {
+          "federal_agency": "U.S. Department of Education",
+          "cluster_name": "COVID-19 - Education Stabilization Fund",
+          "program_title": "COVID-19 - Reimagine Workforce Preparation",
+          "assistance_listing_number": "84.425G",
+          "pass_through_entity": "MiLEAP",
+          "pass_through_or_grantor_number": "MiLEAP_SEMCA023",
+          "federal_expenditures": 75917.0,
+          "passed_through_to_subrecipients": null
+        },
+        {
+          "federal_agency": "U.S. Department of Education",
+          "cluster_name": null,
+          "program_title": "Regional Allocation",
+          "assistance_listing_number": "84.048A",
+          "pass_through_entity": "MDE",
+          "pass_through_or_grantor_number": "243510-2421",
+          "federal_expenditures": 596359.0,
+          "passed_through_to_subrecipients": null
+        },
+        {
+          "federal_agency": "U.S. Department of Education",
+          "cluster_name": null,
+          "program_title": "Perkins Local Leadership",
+          "assistance_listing_number": "84.048A",
+          "pass_through_entity": "MDE",
+          "pass_through_or_grantor_number": "233250-2525-10",
+          "federal_expenditures": 9200.0,
+          "passed_through_to_subrecipients": null
+        },
+        {
+          "federal_agency": "U.S. Department of Education",
+          "cluster_name": null,
+          "program_title": "Astronomy & Astrophysics Program",
+          "assistance_listing_number": "84.116Z",
+          "pass_through_entity": "Direct",
+          "pass_through_or_grantor_number": "P116Z230241",
+          "federal_expenditures": 294092.0,
+          "passed_through_to_subrecipients": null
+        },
+        {
+          "federal_agency": "U.S. Department of Labor",
+          "cluster_name": "Workforce Innovation and Opportunity Act (WIOA) Cluster",
+          "program_title": "Michigan Electric Vehicle Jobs Academy",
+          "assistance_listing_number": "17.258",
+          "pass_through_entity": "MDL",
+          "pass_through_or_grantor_number": "MSC 221030-CV",
+          "federal_expenditures": 61580.0,
+          "passed_through_to_subrecipients": null
+        },
+        {
+          "federal_agency": "U.S. Department of Treasury",
+          "cluster_name": null,
+          "program_title": "Michigan Reconnect Age Expansion Grant",
+          "assistance_listing_number": "21.027",
+          "pass_through_entity": "MiLEAP",
+          "pass_through_or_grantor_number": "SLFRP0127",
+          "federal_expenditures": 633022.0,
+          "passed_through_to_subrecipients": null
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "fiscal_year_end",
+        "page": 4,
+        "bbox": [
+          0.236862,
+          0.11475,
+          0.084235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "June 30, 2024",
+        "confidence": 0.8208017658609913,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_federal_expenditures",
+        "page": 6,
+        "bbox": [
+          0.696957,
+          0.361821,
+          0.07526,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "20,627,577",
+        "confidence": 0.7836069182708784,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[0].federal_agency",
+        "page": 4,
+        "bbox": [
+          0.117205,
+          0.199637,
+          0.170859,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "U.S. Department of Education",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[0].cluster_name",
+        "page": 4,
+        "bbox": [
+          0.126156,
+          0.212697,
+          0.204884,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Student Financial Assistance Cluster:",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[0].program_title",
+        "page": 4,
+        "bbox": [
+          0.13625,
+          0.227698,
+          0.305088,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Federal Supplemental Educational Opportunity Grants",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[0].assistance_listing_number",
+        "page": 4,
+        "bbox": [
+          0.503129,
+          0.24108,
+          0.037588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "84.007",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[0].pass_through_entity",
+        "page": 4,
+        "bbox": [
+          0.18168,
+          0.311505,
+          0.032479,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Direct",
+        "confidence": 0.8262076698198688,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[0].pass_through_or_grantor_number",
+        "page": 4,
+        "bbox": [
+          0.68434,
+          0.24108,
+          0.076861,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "P007A232021",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[0].federal_expenditures",
+        "page": 4,
+        "bbox": [
+          0.855944,
+          0.241795,
+          0.044201,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "257,723",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[1].federal_agency",
+        "page": 4,
+        "bbox": [
+          0.117205,
+          0.199637,
+          0.170859,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "U.S. Department of Education",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[1].cluster_name",
+        "page": 4,
+        "bbox": [
+          0.126156,
+          0.212697,
+          0.204884,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Student Financial Assistance Cluster:",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[1].program_title",
+        "page": 4,
+        "bbox": [
+          0.136268,
+          0.255872,
+          0.162158,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Federal Work-Study Program",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[1].assistance_listing_number",
+        "page": 4,
+        "bbox": [
+          0.503143,
+          0.269265,
+          0.037393,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "84.033",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[1].pass_through_entity",
+        "page": 4,
+        "bbox": [
+          0.18168,
+          0.311505,
+          0.032479,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Direct",
+        "confidence": 0.8262021082306852,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[1].pass_through_or_grantor_number",
+        "page": 4,
+        "bbox": [
+          0.684353,
+          0.269265,
+          0.076861,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "P033A232021",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[1].federal_expenditures",
+        "page": 4,
+        "bbox": [
+          0.855958,
+          0.26998,
+          0.044229,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "231,205",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[2].federal_agency",
+        "page": 4,
+        "bbox": [
+          0.117205,
+          0.199637,
+          0.170859,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "U.S. Department of Education",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[2].cluster_name",
+        "page": 4,
+        "bbox": [
+          0.126156,
+          0.212697,
+          0.204884,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Student Financial Assistance Cluster:",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[2].program_title",
+        "page": 4,
+        "bbox": [
+          0.136268,
+          0.284057,
+          0.150938,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Federal Pell Grant Program",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[2].assistance_listing_number",
+        "page": 4,
+        "bbox": [
+          0.503129,
+          0.29745,
+          0.037393,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "84.063",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[2].pass_through_entity",
+        "page": 4,
+        "bbox": [
+          0.18168,
+          0.311505,
+          0.032479,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Direct",
+        "confidence": 0.8260844915479284,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[2].pass_through_or_grantor_number",
+        "page": 4,
+        "bbox": [
+          0.684731,
+          0.29745,
+          0.076179,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "P063P231638",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[2].federal_expenditures",
+        "page": 4,
+        "bbox": [
+          0.838695,
+          0.298165,
+          0.061686,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "12,166,856",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[3].federal_agency",
+        "page": 4,
+        "bbox": [
+          0.117205,
+          0.199637,
+          0.170859,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "U.S. Department of Education",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[3].cluster_name",
+        "page": 4,
+        "bbox": [
+          0.126156,
+          0.212697,
+          0.204884,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Student Financial Assistance Cluster:",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[3].program_title",
+        "page": 4,
+        "bbox": [
+          0.136254,
+          0.311332,
+          0.161267,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Federal Direct Student Loans",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[3].assistance_listing_number",
+        "page": 4,
+        "bbox": [
+          0.503116,
+          0.325635,
+          0.037672,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "84.268",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[3].pass_through_entity",
+        "page": 4,
+        "bbox": [
+          0.18168,
+          0.311505,
+          0.032479,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Direct",
+        "confidence": 0.8260728152935055,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[3].pass_through_or_grantor_number",
+        "page": 4,
+        "bbox": [
+          0.684717,
+          0.325635,
+          0.076221,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "P268K241638",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[3].federal_expenditures",
+        "page": 4,
+        "bbox": [
+          0.84528,
+          0.32635,
+          0.054823,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "6,035,275",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[4].federal_agency",
+        "page": 4,
+        "bbox": [
+          0.117205,
+          0.199637,
+          0.170859,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "U.S. Department of Education",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[4].cluster_name",
+        "page": 4,
+        "bbox": [
+          0.12578,
+          0.381783,
+          0.072629,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "TRIO Cluster:",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[4].program_title",
+        "page": 4,
+        "bbox": [
+          0.135191,
+          0.396796,
+          0.178934,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "TRIO - Student Support Services",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[4].assistance_listing_number",
+        "page": 4,
+        "bbox": [
+          0.498976,
+          0.410178,
+          0.046066,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "84.042A",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[4].pass_through_entity",
+        "page": 4,
+        "bbox": [
+          0.18168,
+          0.311505,
+          0.032479,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Direct",
+        "confidence": 0.8260728152935055,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[4].pass_through_or_grantor_number",
+        "page": 4,
+        "bbox": [
+          0.68431,
+          0.410178,
+          0.077042,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "P042A200068",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[4].federal_expenditures",
+        "page": 4,
+        "bbox": [
+          0.855869,
+          0.411044,
+          0.044479,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "266,348",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[5].federal_agency",
+        "page": 4,
+        "bbox": [
+          0.117205,
+          0.199637,
+          0.170859,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "U.S. Department of Education",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[5].cluster_name",
+        "page": 4,
+        "bbox": [
+          0.126337,
+          0.438002,
+          0.22791,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "COVID-19 - Education Stabilization Fund:",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[5].program_title",
+        "page": 4,
+        "bbox": [
+          0.135748,
+          0.453133,
+          0.256797,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "COVID-19 - Reimagine Workforce Preparation",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[5].assistance_listing_number",
+        "page": 4,
+        "bbox": [
+          0.498593,
+          0.452455,
+          0.046025,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "84.425G",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[5].pass_through_entity",
+        "page": 4,
+        "bbox": [
+          0.578624,
+          0.452385,
+          0.041194,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "MiLEAP",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[5].pass_through_or_grantor_number",
+        "page": 4,
+        "bbox": [
+          0.667246,
+          0.453176,
+          0.109646,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "MiLEAP_SEMCA023",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[5].federal_expenditures",
+        "page": 4,
+        "bbox": [
+          0.86283,
+          0.453171,
+          0.037449,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "75,917",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[6].federal_agency",
+        "page": 4,
+        "bbox": [
+          0.117205,
+          0.199637,
+          0.170859,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "U.S. Department of Education",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[6].program_title",
+        "page": 4,
+        "bbox": [
+          0.145688,
+          0.509524,
+          0.106542,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Regional Allocation",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[6].pass_through_or_grantor_number",
+        "page": 4,
+        "bbox": [
+          0.685848,
+          0.508825,
+          0.073311,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "243510-2421",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[6].federal_expenditures",
+        "page": 4,
+        "bbox": [
+          0.855786,
+          0.509691,
+          0.044438,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "596,359",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[7].federal_agency",
+        "page": 4,
+        "bbox": [
+          0.117205,
+          0.199637,
+          0.170859,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "U.S. Department of Education",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[7].program_title",
+        "page": 4,
+        "bbox": [
+          0.145688,
+          0.523617,
+          0.136473,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Perkins Local Leadership",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[7].pass_through_or_grantor_number",
+        "page": 4,
+        "bbox": [
+          0.676653,
+          0.522917,
+          0.091952,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "233250-2525-10",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[7].federal_expenditures",
+        "page": 4,
+        "bbox": [
+          0.869777,
+          0.523783,
+          0.030669,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "9,200",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[8].federal_agency",
+        "page": 4,
+        "bbox": [
+          0.117205,
+          0.199637,
+          0.170859,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "U.S. Department of Education",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[8].program_title",
+        "page": 4,
+        "bbox": [
+          0.135345,
+          0.579986,
+          0.199983,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Astronomy & Astrophysics Program",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[8].assistance_listing_number",
+        "page": 4,
+        "bbox": [
+          0.499788,
+          0.579287,
+          0.044466,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "84.116Z",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[8].pass_through_entity",
+        "page": 4,
+        "bbox": [
+          0.583173,
+          0.269227,
+          0.032479,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Direct",
+        "confidence": 0.7550968145064726,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[8].pass_through_or_grantor_number",
+        "page": 4,
+        "bbox": [
+          0.685112,
+          0.579287,
+          0.075316,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "P116Z230241",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[8].federal_expenditures",
+        "page": 4,
+        "bbox": [
+          0.855883,
+          0.580153,
+          0.044271,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "294,092",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[9].federal_agency",
+        "page": 4,
+        "bbox": [
+          0.117233,
+          0.63648,
+          0.146497,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "U.S. Department of Labor",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[9].cluster_name",
+        "page": 4,
+        "bbox": [
+          0.126114,
+          0.650378,
+          0.33306,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Workforce Innovation and Opportunity Act (WIOA) Cluster:",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[9].program_title",
+        "page": 4,
+        "bbox": [
+          0.136277,
+          0.664541,
+          0.222769,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Michigan Electric Vehicle Jobs Academy",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[9].assistance_listing_number",
+        "page": 4,
+        "bbox": [
+          0.503732,
+          0.663807,
+          0.037045,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "17.258",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[9].pass_through_entity",
+        "page": 4,
+        "bbox": [
+          0.587057,
+          0.691992,
+          0.025031,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "MDL",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[9].pass_through_or_grantor_number",
+        "page": 4,
+        "bbox": [
+          0.678225,
+          0.691992,
+          0.08939,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "MSC 221030-CV",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[9].federal_expenditures",
+        "page": 4,
+        "bbox": [
+          0.862881,
+          0.692858,
+          0.03756,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "61,580",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[10].federal_agency",
+        "page": 4,
+        "bbox": [
+          0.117228,
+          0.721,
+          0.164149,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "U.S. Department of Treasury",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[10].program_title",
+        "page": 4,
+        "bbox": [
+          0.145684,
+          0.763154,
+          0.234056,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Michigan Reconnect Age Expansion Grant",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[10].assistance_listing_number",
+        "page": 4,
+        "bbox": [
+          0.503329,
+          0.762444,
+          0.037365,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "21.027",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[10].pass_through_entity",
+        "page": 4,
+        "bbox": [
+          0.578626,
+          0.762374,
+          0.041194,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "MiLEAP",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[10].pass_through_or_grantor_number",
+        "page": 4,
+        "bbox": [
+          0.692049,
+          0.762444,
+          0.060475,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "SLFRP0127",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "awards[10].federal_expenditures",
+        "page": 4,
+        "bbox": [
+          0.855809,
+          0.76331,
+          0.044326,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "633,022",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T17:10:52.010340Z",
+  "completed_at": "2026-09-13T17:10:52.010340Z",
+  "latency_in_ms": 2104
+}

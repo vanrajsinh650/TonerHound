@@ -1,0 +1,363 @@
+{
+  "request": {
+    "example_id": "short/H9-53-31_31",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/H9-53-31_31.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 18,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/H9-53-31_31",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "operator": "EXCO Operating Company, LP",
+      "operator_number": "256915",
+      "rrc_district": "01",
+      "street_or_po_box": "12377 Merit Drive, Suite 1700",
+      "city": "Dallas",
+      "state": "TX",
+      "zip_code": "75251",
+      "lease_facility_operation_name": "Holdsworth Nelson Trust ZAV",
+      "field_or_area_name": "Briscoe Ranch (Eagle Ford)",
+      "county": "Zavala",
+      "optype_a_oil_field": true,
+      "optype_b_gas_field": false,
+      "optype_c_pipeline_gathering": false,
+      "optype_d_gasoline_plant": false,
+      "optype_e_drilling_workover": false,
+      "optype_f_sweetening_unit": false,
+      "optype_g_combination": false,
+      "optype_h_other": false,
+      "operation_type_other_explanation": "H2S determined fromproduction stream",
+      "h2s_concentration": "2400 PPM",
+      "maximum_escape_volume": "20 MCF/Day",
+      "roe_100ppm": "15.07 Ft.",
+      "roe_500ppm": "6.88 Ft.",
+      "operation_existing": false,
+      "operation_new": true,
+      "modification_cert_change_yes": false,
+      "modification_cert_change_no": true,
+      "workover_100ppm_3000ft_yes": false,
+      "workover_100ppm_3000ft_no": true,
+      "previous_certificate_number": null,
+      "roe_100ppm_public_area_yes": false,
+      "roe_100ppm_public_area_no": true,
+      "roe_500ppm_public_road_yes": false,
+      "roe_500ppm_public_road_no": true,
+      "injection_h2s_fluid_yes": false,
+      "injection_h2s_fluid_no": true,
+      "compliance_date_mo": null,
+      "compliance_date_day": null,
+      "compliance_date_year": null,
+      "depth_of_compliance_drilling": "4000 Ft. From Surface",
+      "contingency_plan_prepared_yes": true,
+      "contingency_plan_prepared_no": false,
+      "contingency_plan_location": "12377 Merit Drive; Suite 1700; Dallas, TX 75251",
+      "data_location": "12377 Merit Drive; Suite 1700; Dallas, TX 75251",
+      "signature_present": true,
+      "representative_of_company": null,
+      "title": "Regulatory Analyst",
+      "phone_no": "(214)368-2084",
+      "certificate_date": "10/03/2013",
+      "approved_by": "Wesley Dresch",
+      "rrc_use_date": "11-5-2013",
+      "remarks": null,
+      "certification_number": "078186",
+      "exempt_stamp_present": false,
+      "operations_covered": [
+        {
+          "rrc_id": "16889 #A 1H",
+          "type_id_code": "1",
+          "storage_yes": true,
+          "storage_no": false
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "rrc_district",
+        "page": 1,
+        "bbox": [
+          0.836578,
+          0.152364,
+          0.017699,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "01",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "street_or_po_box",
+        "page": 1,
+        "bbox": [
+          0.075516,
+          0.190773,
+          0.277286,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "12377 Merit Drive, Suite 1700",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "city",
+        "page": 1,
+        "bbox": [
+          0.470206,
+          0.188182,
+          0.058407,
+          0.018182
+        ],
+        "polygon": null,
+        "reference_text": "Dallas",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "state",
+        "page": 1,
+        "bbox": [
+          0.456637,
+          0.641227,
+          0.020059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "TX",
+        "confidence": 0.7720966365789412,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "zip_code",
+        "page": 1,
+        "bbox": [
+          0.835398,
+          0.182591,
+          0.046018,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "75251",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_facility_operation_name",
+        "page": 1,
+        "bbox": [
+          0.536873,
+          0.365545,
+          0.010619,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "or",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "field_or_area_name",
+        "page": 1,
+        "bbox": [
+          0.536873,
+          0.365545,
+          0.010619,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "or",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.463127,
+          0.395773,
+          0.231858,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "20. Previous Certificate Number if Available",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operation_type_other_explanation",
+        "page": 1,
+        "bbox": [
+          0.461357,
+          0.246,
+          0.355752,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "H2S determined from production stream",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "h2s_concentration",
+        "page": 1,
+        "bbox": [
+          0.59469,
+          0.290318,
+          0.082006,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2400 ppm",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "maximum_escape_volume",
+        "page": 1,
+        "bbox": [
+          0.771681,
+          0.289636,
+          0.133923,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "20 MCE/Day",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_500ppm",
+        "page": 1,
+        "bbox": [
+          0.837758,
+          0.318727,
+          0.070796,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "6.88 Ft.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "contingency_plan_location",
+        "page": 1,
+        "bbox": [
+          0.082596,
+          0.642364,
+          0.449558,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "12377 Merit Drive; Suite 1700; Dallas, TX 75251",
+        "confidence": 0.7587543991249136,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "data_location",
+        "page": 1,
+        "bbox": [
+          0.082596,
+          0.642364,
+          0.449558,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "12377 Merit Drive; Suite 1700; Dallas, TX 75251",
+        "confidence": 0.7587543991249136,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "title",
+        "page": 1,
+        "bbox": [
+          0.39587,
+          0.756909,
+          0.173451,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Regulatory Analyst",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "phone_no",
+        "page": 1,
+        "bbox": [
+          0.634218,
+          0.757136,
+          0.120354,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "(214) 368-2084",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "certificate_date",
+        "page": 1,
+        "bbox": [
+          0.777581,
+          0.755773,
+          0.094395,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "10/03/2013",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[0].type_id_code",
+        "page": 1,
+        "bbox": [
+          0.082596,
+          0.704182,
+          0.00354,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:16:39.846668Z",
+  "completed_at": "2026-09-13T20:16:39.846668Z",
+  "latency_in_ms": 8614
+}

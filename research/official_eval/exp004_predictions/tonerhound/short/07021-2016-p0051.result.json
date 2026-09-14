@@ -1,0 +1,231 @@
+{
+  "request": {
+    "example_id": "short/07021-2016-p0051",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/07021-2016-p0051.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 11,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/07021-2016-p0051",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "final_k1": false,
+      "amended_k1": false,
+      "corporation_ein": "26-3839121",
+      "corporation_name": "Pine Harbour Water Utilities LLC",
+      "corporation_address": "101 Satellite Court, Leesburg FL 34748",
+      "irs_center": "Ogden, UT 84201",
+      "shareholder_id": "288-56-3387",
+      "shareholder_name": "Robert Stewart",
+      "shareholder_address": "P.O. Box 447, Fruitland Park FL 34731",
+      "shareholder_stock_ownership_pct": 33.3333,
+      "box_1_ordinary_business_income": -5615,
+      "box_2_net_rental_real_estate": null,
+      "box_3_other_net_rental_income": null,
+      "box_4_interest_income": null,
+      "box_5a_ordinary_dividends": null,
+      "box_5b_qualified_dividends": null,
+      "box_6_royalties": null,
+      "box_7_net_short_term_capital_gain": null,
+      "box_8a_net_long_term_capital_gain": null,
+      "box_8b_collectibles_gain": null,
+      "box_8c_unrecaptured_1250_gain": null,
+      "box_9_net_section_1231_gain": null,
+      "box_11_section_179_deduction": null,
+      "box_10_other_income": null,
+      "box_12_other_deductions": null,
+      "box_13_credits": null,
+      "box_14_foreign_transactions": null,
+      "box_15_amt_items": [
+        {
+          "code": "A",
+          "amount": 790
+        }
+      ],
+      "box_16_items_affecting_shareholder_basis": null,
+      "box_17_other_information": null
+    },
+    "field_citations": [
+      {
+        "field_path": "corporation_ein",
+        "page": 1,
+        "bbox": [
+          0.06634,
+          0.246765,
+          0.116921,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "26-3839121",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "corporation_name",
+        "page": 1,
+        "bbox": [
+          0.068264,
+          0.277905,
+          0.380474,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Pine Harbour Water Utilities LLC",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "corporation_address",
+        "page": 1,
+        "bbox": [
+          0.070135,
+          0.308629,
+          0.22418,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "101 Satellite Court",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "irs_center",
+        "page": 1,
+        "bbox": [
+          0.067631,
+          0.370745,
+          0.188019,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Ogden, UT 84201",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "shareholder_id",
+        "page": 1,
+        "bbox": [
+          0.063771,
+          0.431383,
+          0.128678,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "288-56-3387",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "shareholder_name",
+        "page": 1,
+        "bbox": [
+          0.066501,
+          0.462205,
+          0.165417,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Robert Stewart",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "shareholder_address",
+        "page": 1,
+        "bbox": [
+          0.06594,
+          0.508776,
+          0.338595,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Fruitland Park FL 34731",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "shareholder_stock_ownership_pct",
+        "page": 1,
+        "bbox": [
+          0.354972,
+          0.559701,
+          0.082565,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "33.333300%",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_1_ordinary_business_income",
+        "page": 1,
+        "bbox": [
+          0.606018,
+          0.125782,
+          0.066848,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "-5,615",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_15_amt_items[0].code",
+        "page": 1,
+        "bbox": [
+          0.725931,
+          0.495859,
+          0.011177,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "A",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_15_amt_items[0].amount",
+        "page": 1,
+        "bbox": [
+          0.867927,
+          0.496367,
+          0.032135,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "790",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:05:10.394180Z",
+  "completed_at": "2026-09-13T20:05:10.394180Z",
+  "latency_in_ms": 157
+}

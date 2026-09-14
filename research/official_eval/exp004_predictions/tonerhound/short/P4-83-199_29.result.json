@@ -1,0 +1,435 @@
+{
+  "request": {
+    "example_id": "short/P4-83-199_29",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/P4-83-199_29.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 23,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/P4-83-199_29",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "field_name": "NIXON",
+      "lease_name": "DAVENPORT UNIT",
+      "current_operator_name": "TIMBERWOLF E&P LLC",
+      "operator_p5_no": "860552",
+      "oil_lse_gas_id_no": "13503",
+      "county": "GUADALUPE",
+      "rrc_district": "01",
+      "operator_address": "4115 GREENWING TEAL CT. GALVESTON, TEXAS 77554",
+      "well_nos": "ALL",
+      "classification_oil": true,
+      "classification_gas": false,
+      "classification_other": false,
+      "effective_date": "03/01/11",
+      "change_operator": true,
+      "change_oil_condensate_gatherer": true,
+      "change_gas_gatherer": false,
+      "change_gas_purchaser": false,
+      "change_gas_purchaser_system_code": false,
+      "change_field_name": false,
+      "change_field_name_from": null,
+      "change_field_name_docket": null,
+      "change_lease_name": false,
+      "change_lease_name_from": null,
+      "new_rrc_oil_lease": false,
+      "new_rrc_gas_well": false,
+      "new_rrc_other_well": false,
+      "new_rrc_other_well_specify": null,
+      "due_new_completion_recompletion": false,
+      "due_reclass_gas_to_oil": false,
+      "due_reclass_oil_to_gas": false,
+      "due_consolidation": false,
+      "due_unitization": false,
+      "due_field_transfer": false,
+      "due_subdivision": false,
+      "prev_operator_name": "TEXAS LAND OPERATING LLC",
+      "prev_operator_signature": true,
+      "prev_operator_name_print": null,
+      "prev_operator_title": null,
+      "prev_operator_date": "05/25/11",
+      "prev_operator_phone": null,
+      "prev_operator_authorized_employee": false,
+      "prev_operator_authorized_agent": false,
+      "curr_operator_name_print": "ADRIAN R. BAKER",
+      "curr_operator_signature": true,
+      "curr_operator_title": "MANAGING MEMBER",
+      "curr_operator_email": "kentsingleton@,yahoo.com",
+      "curr_operator_date": "3/15/11",
+      "curr_operator_phone": "(713) 816-2810",
+      "curr_operator_authorized_employee": true,
+      "curr_operator_authorized_agent": false,
+      "reviewer_initials": null,
+      "approval_date": null,
+      "gas_gatherers_purchasers": null,
+      "oil_condensate_gatherers": [
+        {
+          "name": "SHELL TRADING",
+          "percent_of_take": "100%"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "field_name",
+        "page": 1,
+        "bbox": [
+          0.052838,
+          0.093368,
+          0.043746,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "NIXON",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_name",
+        "page": 1,
+        "bbox": [
+          0.508745,
+          0.091415,
+          0.12333,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "DAVENPORT UNIT",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "current_operator_name",
+        "page": 1,
+        "bbox": [
+          0.053712,
+          0.127838,
+          0.156699,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "TIMBERWOLF E&P LLC",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "oil_lse_gas_id_no",
+        "page": 1,
+        "bbox": [
+          0.655924,
+          0.12676,
+          0.034838,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "13503",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.740203,
+          0.126984,
+          0.07605,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "GUADALUPE",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district",
+        "page": 1,
+        "bbox": [
+          0.864875,
+          0.127219,
+          0.011629,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "01",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_address",
+        "page": 1,
+        "bbox": [
+          0.507992,
+          0.11874,
+          0.010503,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "g",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "well_nos",
+        "page": 1,
+        "bbox": [
+          0.657055,
+          0.757494,
+          0.010726,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "all",
+        "confidence": 0.7663192121863678,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "classification_oil",
+        "page": 1,
+        "bbox": [
+          0.813228,
+          0.758216,
+          0.018586,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "effective_date",
+        "page": 1,
+        "bbox": [
+          0.807881,
+          0.193697,
+          0.050881,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "03/01/11",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_operator",
+        "page": 1,
+        "bbox": [
+          0.813228,
+          0.758216,
+          0.018586,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_oil_condensate_gatherer",
+        "page": 1,
+        "bbox": [
+          0.813228,
+          0.758216,
+          0.018586,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_name",
+        "page": 1,
+        "bbox": [
+          0.058066,
+          0.659291,
+          0.204226,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "TEXAS LAND OPERATING LLC",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_signature",
+        "page": 1,
+        "bbox": [
+          0.813228,
+          0.758216,
+          0.018586,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_name_print",
+        "page": 1,
+        "bbox": [
+          0.058423,
+          0.805424,
+          0.123564,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "ADRIAN R. BAKER",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_signature",
+        "page": 1,
+        "bbox": [
+          0.813228,
+          0.758216,
+          0.018586,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_title",
+        "page": 1,
+        "bbox": [
+          0.060364,
+          0.850907,
+          0.14257,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "MANAGING MEMBER",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_email",
+        "page": 1,
+        "bbox": [
+          0.507992,
+          0.11874,
+          0.010503,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "g",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_date",
+        "page": 1,
+        "bbox": [
+          0.478241,
+          0.881618,
+          0.041734,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3/15/11",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_phone",
+        "page": 1,
+        "bbox": [
+          0.725125,
+          0.883412,
+          0.094871,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "(713)816-2810",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_authorized_employee",
+        "page": 1,
+        "bbox": [
+          0.813228,
+          0.758216,
+          0.018586,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "oil_condensate_gatherers[0].name",
+        "page": 1,
+        "bbox": [
+          0.063969,
+          0.55716,
+          0.111084,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "SHELL TRADING",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "oil_condensate_gatherers[0].percent_of_take",
+        "page": 1,
+        "bbox": [
+          0.587354,
+          0.557312,
+          0.030481,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "100%",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:19:34.397709Z",
+  "completed_at": "2026-09-13T20:19:34.397709Z",
+  "latency_in_ms": 427
+}

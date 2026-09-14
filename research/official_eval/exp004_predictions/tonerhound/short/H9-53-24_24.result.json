@@ -1,0 +1,333 @@
+{
+  "request": {
+    "example_id": "short/H9-53-24_24",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/H9-53-24_24.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 16,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/H9-53-24_24",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "operator": "ANADARKO E&P ONSHORE LLC",
+      "operator_number": "020528",
+      "rrc_district": "01",
+      "street_or_po_box": "P.O. BOX 1330",
+      "city": "HOUSTON",
+      "state": "TX",
+      "zip_code": "77251",
+      "lease_facility_operation_name": "BRISCOE COCHINA EAST RANCH 57H",
+      "field_or_area_name": "BRISCOE RANCH (EAGLEFORD)",
+      "county": "LA SALLE",
+      "optype_a_oil_field": false,
+      "optype_b_gas_field": false,
+      "optype_c_pipeline_gathering": false,
+      "optype_d_gasoline_plant": false,
+      "optype_e_drilling_workover": true,
+      "optype_f_sweetening_unit": false,
+      "optype_g_combination": false,
+      "optype_h_other": false,
+      "operation_type_other_explanation": null,
+      "h2s_concentration": "4 PPM",
+      "maximum_escape_volume": "3300 MCF/Day",
+      "roe_100ppm": "0 Ft.",
+      "roe_500ppm": "0 Ft.",
+      "operation_existing": false,
+      "operation_new": true,
+      "modification_cert_change_yes": false,
+      "modification_cert_change_no": true,
+      "workover_100ppm_3000ft_yes": false,
+      "workover_100ppm_3000ft_no": true,
+      "previous_certificate_number": null,
+      "roe_100ppm_public_area_yes": false,
+      "roe_100ppm_public_area_no": true,
+      "roe_500ppm_public_road_yes": false,
+      "roe_500ppm_public_road_no": true,
+      "injection_h2s_fluid_yes": false,
+      "injection_h2s_fluid_no": true,
+      "compliance_date_mo": null,
+      "compliance_date_day": null,
+      "compliance_date_year": null,
+      "depth_of_compliance_drilling": "9200 Ft. from Surface",
+      "contingency_plan_prepared_yes": false,
+      "contingency_plan_prepared_no": true,
+      "contingency_plan_location": "1201 LAKE ROBBINS DR., THE WOODLANDS, TX 77380 - DRILLING RIG",
+      "data_location": "1201 LAKE ROBBINS DR., THE WOODLANDS, TX 77380",
+      "signature_present": true,
+      "representative_of_company": null,
+      "title": "EHS Southern Region Drilling",
+      "phone_no": "(832) 636-7047",
+      "certificate_date": "10/02/13",
+      "approved_by": "Wesley Dresch",
+      "rrc_use_date": "10-31-2013",
+      "remarks": null,
+      "certification_number": "078153",
+      "exempt_stamp_present": true,
+      "operations_covered": [
+        {
+          "rrc_id": "770597",
+          "type_id_code": "5",
+          "storage_yes": false,
+          "storage_no": true
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "operator",
+        "page": 1,
+        "bbox": [
+          0.138053,
+          0.216828,
+          0.231268,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "ANADARKO E&P ONSHORE LLC",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_number",
+        "page": 1,
+        "bbox": [
+          0.515044,
+          0.214105,
+          0.040708,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "20528",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district",
+        "page": 1,
+        "bbox": [
+          0.79587,
+          0.211608,
+          0.014159,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "01",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "city",
+        "page": 1,
+        "bbox": [
+          0.479646,
+          0.239071,
+          0.066077,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "HOUSTON",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "state",
+        "page": 1,
+        "bbox": [
+          0.459587,
+          0.635576,
+          0.019469,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "TX",
+        "confidence": 0.7619539748746174,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "zip_code",
+        "page": 1,
+        "bbox": [
+          0.79115,
+          0.237028,
+          0.038938,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "77251",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_facility_operation_name",
+        "page": 1,
+        "bbox": [
+          0.128024,
+          0.267895,
+          0.272566,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "BRISCOE COCHINA EAST RANCH 57H",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "field_or_area_name",
+        "page": 1,
+        "bbox": [
+          0.464307,
+          0.262902,
+          0.229499,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "BRISCOE RANCH (EAGLEFORD)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.726254,
+          0.262448,
+          0.067257,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "LA SALLE",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "maximum_escape_volume",
+        "page": 1,
+        "bbox": [
+          0.461947,
+          0.307841,
+          0.00236,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "f",
+        "confidence": 0.919131713906507,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_100ppm",
+        "page": 1,
+        "bbox": [
+          0.461947,
+          0.307841,
+          0.00236,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "f",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_500ppm",
+        "page": 1,
+        "bbox": [
+          0.461947,
+          0.307841,
+          0.00236,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "f",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "depth_of_compliance_drilling",
+        "page": 1,
+        "bbox": [
+          0.461947,
+          0.307841,
+          0.00236,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "f",
+        "confidence": 0.7687854119971529,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "contingency_plan_location",
+        "page": 1,
+        "bbox": [
+          0.135693,
+          0.601453,
+          0.499705,
+          0.018611
+        ],
+        "polygon": null,
+        "reference_text": "1201 LAKE ROBBINS DR., THE WOODLANDS, TX 77380 - DRILLING RIG",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "data_location",
+        "page": 1,
+        "bbox": [
+          0.136873,
+          0.638072,
+          0.387021,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1201 LAKE ROBBINS DR., THE WOODLANDS, TX 77380",
+        "confidence": 0.7893089349599378,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "phone_no",
+        "page": 1,
+        "bbox": [
+          0.656637,
+          0.727496,
+          0.102065,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "(832)636-7047",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:16:14.341346Z",
+  "completed_at": "2026-09-13T20:16:14.341346Z",
+  "latency_in_ms": 7598
+}

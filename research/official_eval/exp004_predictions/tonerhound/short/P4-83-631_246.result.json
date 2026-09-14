@@ -1,0 +1,310 @@
+{
+  "request": {
+    "example_id": "short/P4-83-631_246",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/P4-83-631_246.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 15,
+    "ocr_pages": 0,
+    "num_pages": 2
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/P4-83-631_246",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "field_name": "Comanche-Halsell (6500)",
+      "lease_name": "Briscoe Ranch etal Section 63",
+      "current_operator_name": "Peregrine Petroleum, LLC",
+      "operator_p5_no": "653272",
+      "oil_lse_gas_id_no": "14874",
+      "county": "Maverick",
+      "rrc_district": "01",
+      "operator_address": "10333 Richmond, Suite 225 Houston, TX 77042",
+      "well_nos": "163H",
+      "classification_oil": true,
+      "classification_gas": false,
+      "classification_other": false,
+      "effective_date": "06/08/2010",
+      "change_operator": true,
+      "change_oil_condensate_gatherer": false,
+      "change_gas_gatherer": false,
+      "change_gas_purchaser": false,
+      "change_gas_purchaser_system_code": false,
+      "change_field_name": false,
+      "change_field_name_from": null,
+      "change_field_name_docket": null,
+      "change_lease_name": true,
+      "change_lease_name_from": "Cage-West \"C\" 163H Unit",
+      "new_rrc_oil_lease": false,
+      "new_rrc_gas_well": false,
+      "new_rrc_other_well": false,
+      "new_rrc_other_well_specify": null,
+      "due_new_completion_recompletion": false,
+      "due_reclass_gas_to_oil": false,
+      "due_reclass_oil_to_gas": false,
+      "due_consolidation": false,
+      "due_unitization": false,
+      "due_field_transfer": false,
+      "due_subdivision": false,
+      "prev_operator_name": "TXCO Resources, Inc.",
+      "prev_operator_signature": true,
+      "prev_operator_name_print": null,
+      "prev_operator_title": null,
+      "prev_operator_date": "09/07/10",
+      "prev_operator_phone": null,
+      "prev_operator_authorized_employee": false,
+      "prev_operator_authorized_agent": false,
+      "curr_operator_name_print": "Tamara L. Gannon",
+      "curr_operator_signature": true,
+      "curr_operator_title": "VP, Engineering",
+      "curr_operator_email": "tgannon@peregrinepetroleum.com",
+      "curr_operator_date": "6/29/10",
+      "curr_operator_phone": "713-630-8966",
+      "curr_operator_authorized_employee": true,
+      "curr_operator_authorized_agent": false,
+      "reviewer_initials": null,
+      "approval_date": null,
+      "gas_gatherers_purchasers": null,
+      "oil_condensate_gatherers": null
+    },
+    "field_citations": [
+      {
+        "field_path": "field_name",
+        "page": 1,
+        "bbox": [
+          0.043836,
+          0.128112,
+          0.201947,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Comanche-Halsell (6500)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_name",
+        "page": 2,
+        "bbox": [
+          0.521769,
+          0.105614,
+          0.232159,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Briscoe Ranch etal Section 63",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "current_operator_name",
+        "page": 1,
+        "bbox": [
+          0.043991,
+          0.161408,
+          0.206778,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Peregrine Petroleum, LLC",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_p5_no",
+        "page": 1,
+        "bbox": [
+          0.517563,
+          0.161406,
+          0.055752,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "653272",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "oil_lse_gas_id_no",
+        "page": 1,
+        "bbox": [
+          0.638348,
+          0.161093,
+          0.045935,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "14874.",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.753876,
+          0.160945,
+          0.075266,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Maverick",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district",
+        "page": 2,
+        "bbox": [
+          0.85985,
+          0.138727,
+          0.012554,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "01",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_address",
+        "page": 1,
+        "bbox": [
+          0.04683,
+          0.194626,
+          0.215314,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "10333 Richmond, Suite 225",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "classification_oil",
+        "page": 2,
+        "bbox": [
+          0.838413,
+          0.793618,
+          0.018718,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.8692888241115997,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "effective_date",
+        "page": 2,
+        "bbox": [
+          0.785978,
+          0.209749,
+          0.086488,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "06/08/2010",
+        "confidence": 0.7994399452758721,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_operator",
+        "page": 1,
+        "bbox": [
+          0.840791,
+          0.816359,
+          0.020715,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_name",
+        "page": 1,
+        "bbox": [
+          0.048738,
+          0.716959,
+          0.177721,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "TXCO Resources, Inc.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_signature",
+        "page": 1,
+        "bbox": [
+          0.840791,
+          0.816359,
+          0.020715,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_name_print",
+        "page": 2,
+        "bbox": [
+          0.049913,
+          0.853299,
+          0.147101,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Tamara L. Gannon",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_title",
+        "page": 1,
+        "bbox": [
+          0.049498,
+          0.92298,
+          0.129901,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "VP, Engineering",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:19:35.946462Z",
+  "completed_at": "2026-09-13T20:19:35.946462Z",
+  "latency_in_ms": 395
+}

@@ -1,0 +1,454 @@
+{
+  "request": {
+    "example_id": "short/08-15427 H-12 1-21-2003 F-01341",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/08-15427 H-12 1-21-2003 F-01341.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 23,
+    "ocr_pages": 0,
+    "num_pages": 2
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/08-15427 H-12 1-21-2003 F-01341",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "operator_name": "OXY USA WTP LP",
+      "operator_p5_no": "630555",
+      "rrc_district_no_and_county": "08 Ector",
+      "mailing_address": "P.O. Box 4294 Houston, TX 77210-4294",
+      "recovery_waterflood": true,
+      "recovery_co2_augmented_waterflooding": false,
+      "recovery_polymer_augmented_waterflooding": false,
+      "recovery_immiscible_co2_displacement": false,
+      "recovery_steam_drive_injection": false,
+      "recovery_gas_injection": false,
+      "recovery_microemulsion_micellar_flooding": false,
+      "recovery_alkaline_caustic_flooding": false,
+      "recovery_cyclic_steam_injection": false,
+      "recovery_in_situ_combustion": false,
+      "recovery_miscible_fluid_displacement": false,
+      "recovery_other": false,
+      "recovery_other_specify": null,
+      "new_initial_secondary": false,
+      "new_initial_tertiary": false,
+      "new_tertiary_superseding_secondary": false,
+      "exp_different_secondary_method": false,
+      "exp_expansion_secondary": true,
+      "exp_different_tertiary_method": false,
+      "exp_expansion_tertiary": false,
+      "change_previous_method": null,
+      "change_previous_fluid": null,
+      "fluid_brackish_water": false,
+      "fluid_saltwater": true,
+      "fluid_natural_gas": false,
+      "fluid_fresh_water": false,
+      "fluid_air": false,
+      "fluid_polymer": false,
+      "fluid_nitrogen": false,
+      "fluid_lpg": false,
+      "fluid_co2": false,
+      "fluid_other": false,
+      "fluid_other_specify": null,
+      "est_avg_volume_fluid_injected": "16,500 BW",
+      "est_avg_injection_pressure": "2000",
+      "est_ult_additional_production_oil": "113MBO",
+      "est_ult_additional_production_gas": null,
+      "est_total_value_oil": "$ 3MM",
+      "est_total_value_gas": null,
+      "est_cost_machinery": null,
+      "est_cost_project_total": "$ 278M",
+      "anticipated_date_injection_begin": "ASAP",
+      "multiple_lease_yes": false,
+      "multiple_lease_no": true,
+      "total_anticipated_leases": "1",
+      "total_anticipated_producing_wells": "17",
+      "total_anticipated_injection_wells": "11",
+      "field_name": "Johnson 47007001",
+      "lease_or_unit_name": "Johnson Grayburg - San Andres",
+      "lease_no": "15427",
+      "unitization_approved_yes": true,
+      "unitization_approved_no": false,
+      "unitization_order_no_and_date": "8-44,420 9/26/60",
+      "unitization_needed_yes": false,
+      "unitization_needed_no": false,
+      "inj_auth_a_granted": true,
+      "inj_auth_a_project_no": "F-1341",
+      "inj_auth_a_authority_date": "8-44,536 9/26/60",
+      "inj_auth_a_wells": null,
+      "inj_auth_b_applied": true,
+      "inj_auth_b_applied_date": null,
+      "inj_auth_b_project_no": "F-1341",
+      "inj_auth_b_wells": null,
+      "inj_auth_c_anticipated": true,
+      "inj_auth_c_wells": "all wells listed as proposed injectors",
+      "signature_present": true,
+      "title": "Tax Incentive Analyst - Regulatory Affairs",
+      "name_print_or_type": "Karen Ellis",
+      "certificate_date": "11/4/02",
+      "phone": "(281)552-1161",
+      "rrc_approved": true,
+      "rrc_denied": false,
+      "rrc_technical_examiner": "McMains P.E.",
+      "rrc_action_date": "JAN 2 1 2003"
+    },
+    "field_citations": [
+      {
+        "field_path": "operator_name",
+        "page": 2,
+        "bbox": [
+          0.165294,
+          0.137364,
+          0.002941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "LP",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_p5_no",
+        "page": 1,
+        "bbox": [
+          0.52,
+          0.107136,
+          0.047647,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "630555",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district_no_and_county",
+        "page": 1,
+        "bbox": [
+          0.654118,
+          0.105318,
+          0.181765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "08 Ector",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "mailing_address",
+        "page": 2,
+        "bbox": [
+          0.055294,
+          0.195091,
+          0.188235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Houston, TX 77210-4294",
+        "confidence": 0.7608112351875993,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "est_avg_volume_fluid_injected",
+        "page": 1,
+        "bbox": [
+          0.405294,
+          0.446227,
+          0.072353,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "16,500 BW",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "est_ult_additional_production_oil",
+        "page": 1,
+        "bbox": [
+          0.308824,
+          0.476682,
+          0.048235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "113MBO",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "est_total_value_oil",
+        "page": 1,
+        "bbox": [
+          0.744118,
+          0.4735,
+          0.033529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$ 3MM",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "anticipated_date_injection_begin",
+        "page": 1,
+        "bbox": [
+          0.821765,
+          0.502591,
+          0.032353,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "ASAP",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_anticipated_leases",
+        "page": 2,
+        "bbox": [
+          0.280588,
+          0.3585,
+          0.006471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_anticipated_producing_wells",
+        "page": 1,
+        "bbox": [
+          0.069412,
+          0.553955,
+          0.011765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "17.",
+        "confidence": 0.785782056484764,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_anticipated_injection_wells",
+        "page": 1,
+        "bbox": [
+          0.068824,
+          0.465773,
+          0.012353,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "11.",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "field_name",
+        "page": 2,
+        "bbox": [
+          0.055882,
+          0.390318,
+          0.390588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Johnson (47007001)",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_or_unit_name",
+        "page": 1,
+        "bbox": [
+          0.901765,
+          0.781227,
+          0.021765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "S",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "unitization_order_no_and_date",
+        "page": 1,
+        "bbox": [
+          0.502353,
+          0.591,
+          0.130588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "8-44.420 9/26/6",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "inj_auth_a_project_no",
+        "page": 2,
+        "bbox": [
+          0.782353,
+          0.168727,
+          0.047059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "F-1341",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "inj_auth_b_project_no",
+        "page": 2,
+        "bbox": [
+          0.782353,
+          0.168727,
+          0.047059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "F-1341",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "inj_auth_c_wells",
+        "page": 1,
+        "bbox": [
+          0.497647,
+          0.741909,
+          0.063529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "proposed",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "title",
+        "page": 1,
+        "bbox": [
+          0.514706,
+          0.845455,
+          0.343529,
+          0.019545
+        ],
+        "polygon": null,
+        "reference_text": "Tax_Incentive Analyst - Regulatory Affairs",
+        "confidence": 0.816423806029335,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "name_print_or_type",
+        "page": 1,
+        "bbox": [
+          0.901765,
+          0.781227,
+          0.021765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "S",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "certificate_date",
+        "page": 1,
+        "bbox": [
+          0.517647,
+          0.867818,
+          0.055294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "11/4/02",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "phone",
+        "page": 1,
+        "bbox": [
+          0.771176,
+          0.865773,
+          0.105294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "281 ) 552-1161",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_technical_examiner",
+        "page": 1,
+        "bbox": [
+          0.901765,
+          0.781227,
+          0.021765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "S",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_action_date",
+        "page": 1,
+        "bbox": [
+          0.801765,
+          0.926909,
+          0.068235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "JAN 2 1",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:05:25.178455Z",
+  "completed_at": "2026-09-13T20:05:25.178455Z",
+  "latency_in_ms": 14238
+}

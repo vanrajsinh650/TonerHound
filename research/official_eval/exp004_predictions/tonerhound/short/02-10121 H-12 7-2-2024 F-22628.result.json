@@ -1,0 +1,439 @@
+{
+  "request": {
+    "example_id": "short/02-10121 H-12 7-2-2024 F-22628",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/02-10121 H-12 7-2-2024 F-22628.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 22,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/02-10121 H-12 7-2-2024 F-22628",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "operator_name": "Devon Energy Production Co., L.P.",
+      "operator_p5_no": "216378",
+      "rrc_district_no_and_county": "02 - De Witt / Gonzales Counties",
+      "mailing_address": "333 W. Sheridan Avenue Oklahoma City, OK 73102",
+      "recovery_waterflood": false,
+      "recovery_co2_augmented_waterflooding": false,
+      "recovery_polymer_augmented_waterflooding": false,
+      "recovery_immiscible_co2_displacement": false,
+      "recovery_steam_drive_injection": false,
+      "recovery_gas_injection": false,
+      "recovery_microemulsion_micellar_flooding": false,
+      "recovery_alkaline_caustic_flooding": false,
+      "recovery_cyclic_steam_injection": false,
+      "recovery_in_situ_combustion": false,
+      "recovery_miscible_fluid_displacement": true,
+      "recovery_other": false,
+      "recovery_other_specify": null,
+      "new_initial_secondary": false,
+      "new_initial_tertiary": true,
+      "new_tertiary_superseding_secondary": false,
+      "exp_different_secondary_method": false,
+      "exp_expansion_secondary": false,
+      "exp_different_tertiary_method": false,
+      "exp_expansion_tertiary": false,
+      "change_previous_method": "N/A",
+      "change_previous_fluid": null,
+      "fluid_brackish_water": false,
+      "fluid_saltwater": true,
+      "fluid_natural_gas": true,
+      "fluid_fresh_water": true,
+      "fluid_air": false,
+      "fluid_polymer": false,
+      "fluid_nitrogen": false,
+      "fluid_lpg": false,
+      "fluid_co2": false,
+      "fluid_other": true,
+      "fluid_other_specify": "Surfactant",
+      "est_avg_volume_fluid_injected": "3,000 - 40,000",
+      "est_avg_injection_pressure": "5,000",
+      "est_ult_additional_production_oil": "85,000 bbls / well",
+      "est_ult_additional_production_gas": null,
+      "est_total_value_oil": "$ 44,200,000",
+      "est_total_value_gas": null,
+      "est_cost_machinery": "$ 7,000,000",
+      "est_cost_project_total": "$30,000,000",
+      "anticipated_date_injection_begin": "02/01/2025",
+      "multiple_lease_yes": false,
+      "multiple_lease_no": true,
+      "total_anticipated_leases": "1",
+      "total_anticipated_producing_wells": "13",
+      "total_anticipated_injection_wells": "11",
+      "field_name": "Eagleville (Eagle Ford-2)",
+      "lease_or_unit_name": "Zgabay A",
+      "lease_no": "10121",
+      "unitization_approved_yes": false,
+      "unitization_approved_no": true,
+      "unitization_order_no_and_date": null,
+      "unitization_needed_yes": false,
+      "unitization_needed_no": true,
+      "inj_auth_a_granted": true,
+      "inj_auth_a_project_no": "22628",
+      "inj_auth_a_authority_date": "06/15/2023",
+      "inj_auth_a_wells": "1W, 2W, 3W, 4W, 5W, 6W, 8W, 9W, 11W, 12W, 13W",
+      "inj_auth_b_applied": false,
+      "inj_auth_b_applied_date": null,
+      "inj_auth_b_project_no": null,
+      "inj_auth_b_wells": null,
+      "inj_auth_c_anticipated": false,
+      "inj_auth_c_wells": null,
+      "signature_present": true,
+      "title": "Regulatory Compliance",
+      "name_print_or_type": "Amy A. Brown",
+      "certificate_date": "6/05/24",
+      "phone": "(405) 552-6137",
+      "rrc_approved": true,
+      "rrc_denied": false,
+      "rrc_technical_examiner": "JX",
+      "rrc_action_date": "July 2 2024"
+    },
+    "field_citations": [
+      {
+        "field_path": "operator_name",
+        "page": 1,
+        "bbox": [
+          0.086457,
+          0.135568,
+          0.197098,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Devon Energy Production Co., L.P.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_p5_no",
+        "page": 1,
+        "bbox": [
+          0.47763,
+          0.135996,
+          0.041112,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "216378",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district_no_and_county",
+        "page": 1,
+        "bbox": [
+          0.620919,
+          0.138134,
+          0.184401,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "02 - De Witt / Gonzales Counties",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "mailing_address",
+        "page": 1,
+        "bbox": [
+          0.891778,
+          0.066724,
+          0.024788,
+          0.021814
+        ],
+        "polygon": null,
+        "reference_text": "3",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_previous_method",
+        "page": 1,
+        "bbox": [
+          0.365175,
+          0.384285,
+          0.019952,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "N/A",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "fluid_other_specify",
+        "page": 1,
+        "bbox": [
+          0.717654,
+          0.415722,
+          0.057437,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Surfactant",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "est_avg_volume_fluid_injected",
+        "page": 1,
+        "bbox": [
+          0.408102,
+          0.440102,
+          0.081016,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3.000 - 40,000",
+        "confidence": 0.9385477834037095,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "est_ult_additional_production_oil",
+        "page": 1,
+        "bbox": [
+          0.2763,
+          0.465551,
+          0.09734,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "85,000 bbls / well",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "est_total_value_oil",
+        "page": 1,
+        "bbox": [
+          0.724909,
+          0.46384,
+          0.07497,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$ 44 200,000",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "est_cost_machinery",
+        "page": 1,
+        "bbox": [
+          0.374244,
+          0.489075,
+          0.071947,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$ 7,000,000",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "est_cost_project_total",
+        "page": 1,
+        "bbox": [
+          0.534462,
+          0.490145,
+          0.062878,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "30,000,000",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "anticipated_date_injection_begin",
+        "page": 1,
+        "bbox": [
+          0.726723,
+          0.492283,
+          0.063482,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "02/01/2025",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_anticipated_leases",
+        "page": 1,
+        "bbox": [
+          0.063482,
+          0.121667,
+          0.008464,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_anticipated_producing_wells",
+        "page": 1,
+        "bbox": [
+          0.05925,
+          0.477099,
+          0.015719,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "13.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_anticipated_injection_wells",
+        "page": 1,
+        "bbox": [
+          0.059855,
+          0.449725,
+          0.015115,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "11.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "field_name",
+        "page": 1,
+        "bbox": [
+          0.081016,
+          0.547459,
+          0.139057,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Eagleville (Eagle Ford-2)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_or_unit_name",
+        "page": 1,
+        "bbox": [
+          0.467956,
+          0.550025,
+          0.053809,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Zgabay A",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_no",
+        "page": 1,
+        "bbox": [
+          0.826481,
+          0.55088,
+          0.032044,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "10121",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "inj_auth_a_project_no",
+        "page": 1,
+        "bbox": [
+          0.391173,
+          0.609477,
+          0.057437,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "F- 22628",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "inj_auth_a_authority_date",
+        "page": 1,
+        "bbox": [
+          0.622733,
+          0.61183,
+          0.062273,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "06/15/2023",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "inj_auth_a_wells",
+        "page": 1,
+        "bbox": [
+          0.145103,
+          0.629366,
+          0.301693,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1W, 2W, 3W, 4W, 5W, 6W, 8W, 9W, 11W, 12W, 13W",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "phone",
+        "page": 1,
+        "bbox": [
+          0.891778,
+          0.066724,
+          0.024788,
+          0.021814
+        ],
+        "polygon": null,
+        "reference_text": "3",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:05:07.344299Z",
+  "completed_at": "2026-09-13T20:05:07.344299Z",
+  "latency_in_ms": 13088
+}

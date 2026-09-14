@@ -1,0 +1,734 @@
+{
+  "request": {
+    "example_id": "short/2A-9-156032_107792",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/2A-9-156032_107792.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 41,
+    "ocr_pages": 0,
+    "num_pages": 2
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/2A-9-156032_107792",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "p1_file_no": null,
+      "p1_district_no": null,
+      "p1_company": "CONSOLIDATED OIL COMPANY",
+      "p1_address": "620 HAMILTON BLDG., WICHITA FALLS, TEXAS",
+      "p1_sec_no": "1573",
+      "p1_block_no": null,
+      "p1_survey": "T.E.&L. Co.",
+      "p1_county": "Baylor",
+      "p1_well_no": "Z-5",
+      "p1_name_of_lease": "W. H. Portwood",
+      "p1_no_of_acres": "80",
+      "p1_elev": null,
+      "p1_name_of_field": "Baylor",
+      "p1_located_miles": "5",
+      "p1_located_direction": "SW",
+      "p1_located_from": "Megargel",
+      "p1_form1_filed_in_name_of": null,
+      "p1_drilling_commenced": "5-29-43",
+      "p1_drilling_completed": "6-3-43",
+      "p1_ever_produced_oil": "No",
+      "p1_ever_produced_gas": "No",
+      "p1_character_of_well": "Dry",
+      "p1_total_depth": "1395",
+      "p1_date_wish_to_plug": "June 17, 1943",
+      "p1_party_plugging_well": "Great Northern Pipe & Sup. Co.",
+      "p1_party_plugging_address": "Wichita Falls, Texas.",
+      "p1_correspondence_name": "Consolidated Oil Company",
+      "p1_correspondence_address": "620 Hamilton Bldg., Wichita Falls, Texas.",
+      "p1_init_prod_gas_volume": "None",
+      "p1_init_prod_gas_pressure": null,
+      "p1_init_prod_oil_barrels": "None",
+      "p1_general_remarks": "Casing cemented with 35 sacks. Will pull as much of it as possible.",
+      "p2_file_no": null,
+      "p2_district_no": null,
+      "p2_company": "CONSOLISDATED OIL COMPANY",
+      "p2_address": "620 HAMILTON BLDG., WICHITA FALLS, TEXAS.",
+      "p2_sec_no": "1573",
+      "p2_block_no": null,
+      "p2_survey": "T.E.&.L.Co.",
+      "p2_county": "Baylor",
+      "p2_well_no": "Z-5",
+      "p2_name_of_lease": "W. H. Portwood",
+      "p2_no_of_acres": "80",
+      "p2_elev": null,
+      "p2_name_of_field": "Baylor",
+      "p2_form1_filed_in_name_of": null,
+      "p2_date_well_plugged": "June 17, 1943",
+      "p2_completion_oil": "Dry",
+      "p2_completion_gas": "None",
+      "p2_completion_dry": "Yes",
+      "p2_amount_plugged_oil": "None",
+      "p2_amount_plugged_gas": null,
+      "p2_amount_plugged_water": null,
+      "p2_ever_produced_oil_or_gas": "No",
+      "p2_total_depth": "1395",
+      "p2_top_of_producing_sand": "None",
+      "p2_filled_with_mud_laden_fluid": "Yes",
+      "p2_how_mud_applied": "Pump",
+      "p2_were_plugs_used": "No",
+      "p2_was_well_shot": "No",
+      "p2_plugs_detail": null,
+      "p2_depth_thickness_formations": "None",
+      "p2_abandoned_wells_plugged": "Yes",
+      "p2_manner_of_confining": null,
+      "p2_adjacent_owners": "None",
+      "p2_notice_given_adjacent_owners": "No offset operators",
+      "p2_affiant_name": "S. V. White",
+      "p2_affiant_signature_name": "S. V. White",
+      "p2_affiant_title": "Vice President",
+      "p2_sworn_day": "17th",
+      "p2_sworn_month": "June",
+      "p2_sworn_year": "43",
+      "p2_notary_signature": true,
+      "p2_notary_county": "Wichita",
+      "p2_correspondence_name": "Consolidated Oil Company",
+      "p2_correspondence_address": "620 Hamilton Bldg., Wichita Falls, Texas",
+      "casing_tubing_records": [
+        {
+          "size_pipe": "7\"",
+          "put_in_well_ft": "1354",
+          "put_in_well_in": null,
+          "pulled_out_ft": null,
+          "pulled_out_in": null,
+          "left_in_well_ft": null,
+          "left_in_well_in": null,
+          "packers_and_shoes": "35 sacks cement"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "p1_company",
+        "page": 1,
+        "bbox": [
+          0.658392,
+          0.10021,
+          0.002955,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "i",
+        "confidence": 0.9313762083437384,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_address",
+        "page": 1,
+        "bbox": [
+          0.658392,
+          0.10021,
+          0.002955,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "i",
+        "confidence": 0.7817995331523735,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_county",
+        "page": 2,
+        "bbox": [
+          0.741726,
+          0.207384,
+          0.060284,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Baylor",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_no_of_acres",
+        "page": 2,
+        "bbox": [
+          0.851064,
+          0.226669,
+          0.020686,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "80",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_name_of_field",
+        "page": 2,
+        "bbox": [
+          0.741726,
+          0.207384,
+          0.060284,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Baylor",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_ever_produced_oil",
+        "page": 1,
+        "bbox": [
+          0.143026,
+          0.717359,
+          0.015957,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "no",
+        "confidence": 0.7647833368568998,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_ever_produced_gas",
+        "page": 1,
+        "bbox": [
+          0.143026,
+          0.717359,
+          0.015957,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "no",
+        "confidence": 0.7647833368568998,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_character_of_well",
+        "page": 2,
+        "bbox": [
+          0.815012,
+          0.268955,
+          0.060875,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Dry.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_party_plugging_well",
+        "page": 1,
+        "bbox": [
+          0.658392,
+          0.10021,
+          0.002955,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "i",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_party_plugging_address",
+        "page": 2,
+        "bbox": [
+          0.798463,
+          0.920406,
+          0.1974,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Wichita Falls, Texas",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_correspondence_name",
+        "page": 1,
+        "bbox": [
+          0.658392,
+          0.10021,
+          0.002955,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "i",
+        "confidence": 0.9313762083437384,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_correspondence_address",
+        "page": 1,
+        "bbox": [
+          0.154255,
+          0.432249,
+          0.400709,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "620 Hamilton Bld‘.. Wichita Falls, T.nl.",
+        "confidence": 0.7775864759065094,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_init_prod_gas_volume",
+        "page": 2,
+        "bbox": [
+          0.612884,
+          0.4818,
+          0.040189,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "None",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_init_prod_oil_barrels",
+        "page": 2,
+        "bbox": [
+          0.612884,
+          0.4818,
+          0.040189,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "None",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_general_remarks",
+        "page": 1,
+        "bbox": [
+          0.658392,
+          0.10021,
+          0.002955,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "i",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_company",
+        "page": 1,
+        "bbox": [
+          0.658392,
+          0.10021,
+          0.002955,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "i",
+        "confidence": 0.9313762083437384,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_address",
+        "page": 1,
+        "bbox": [
+          0.154255,
+          0.432249,
+          0.400709,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "620 Hamilton Bld‘.. Wichita Falls, T.nl.",
+        "confidence": 0.7775864759065094,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_county",
+        "page": 2,
+        "bbox": [
+          0.741726,
+          0.207384,
+          0.060284,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Baylor",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_no_of_acres",
+        "page": 2,
+        "bbox": [
+          0.851064,
+          0.226669,
+          0.020686,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "80",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_name_of_field",
+        "page": 2,
+        "bbox": [
+          0.741726,
+          0.207384,
+          0.060284,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Baylor",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_completion_oil",
+        "page": 2,
+        "bbox": [
+          0.815012,
+          0.268955,
+          0.060875,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Dry.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_completion_gas",
+        "page": 2,
+        "bbox": [
+          0.612884,
+          0.4818,
+          0.040189,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "None",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_completion_dry",
+        "page": 2,
+        "bbox": [
+          0.877069,
+          0.26807,
+          0.031324,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Yes",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_amount_plugged_oil",
+        "page": 2,
+        "bbox": [
+          0.612884,
+          0.4818,
+          0.040189,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "None",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_ever_produced_oil_or_gas",
+        "page": 1,
+        "bbox": [
+          0.143026,
+          0.717359,
+          0.015957,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "no",
+        "confidence": 0.7647833368568998,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_top_of_producing_sand",
+        "page": 2,
+        "bbox": [
+          0.612884,
+          0.4818,
+          0.040189,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "None",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_filled_with_mud_laden_fluid",
+        "page": 2,
+        "bbox": [
+          0.877069,
+          0.26807,
+          0.031324,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Yes",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_were_plugs_used",
+        "page": 2,
+        "bbox": [
+          0.229314,
+          0.390328,
+          0.04078,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "No",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_was_well_shot",
+        "page": 2,
+        "bbox": [
+          0.73227,
+          0.228438,
+          0.022459,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "No.",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_depth_thickness_formations",
+        "page": 2,
+        "bbox": [
+          0.612884,
+          0.4818,
+          0.040189,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "None",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_abandoned_wells_plugged",
+        "page": 2,
+        "bbox": [
+          0.877069,
+          0.26807,
+          0.031324,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Yes",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_adjacent_owners",
+        "page": 2,
+        "bbox": [
+          0.612884,
+          0.4818,
+          0.040189,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "None",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_affiant_name",
+        "page": 1,
+        "bbox": [
+          0.658392,
+          0.10021,
+          0.002955,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "i",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_affiant_signature_name",
+        "page": 1,
+        "bbox": [
+          0.658392,
+          0.10021,
+          0.002955,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "i",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_affiant_title",
+        "page": 1,
+        "bbox": [
+          0.658392,
+          0.10021,
+          0.002955,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "i",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_sworn_day",
+        "page": 2,
+        "bbox": [
+          0.981087,
+          0.199953,
+          0.005319,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_sworn_month",
+        "page": 2,
+        "bbox": [
+          0.750591,
+          0.243831,
+          0.039007,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "June",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_notary_county",
+        "page": 1,
+        "bbox": [
+          0.349291,
+          0.431543,
+          0.070922,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Wichita",
+        "confidence": 0.9370189787410045,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_correspondence_name",
+        "page": 1,
+        "bbox": [
+          0.658392,
+          0.10021,
+          0.002955,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "i",
+        "confidence": 0.9313762083437384,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_correspondence_address",
+        "page": 1,
+        "bbox": [
+          0.658392,
+          0.10021,
+          0.002955,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "i",
+        "confidence": 0.7817995331523735,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "casing_tubing_records[0].packers_and_shoes",
+        "page": 1,
+        "bbox": [
+          0.744681,
+          0.522404,
+          0.146572,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "35 sacks cement",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:07:22.598546Z",
+  "completed_at": "2026-09-13T20:07:22.598546Z",
+  "latency_in_ms": 23789
+}

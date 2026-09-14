@@ -1,0 +1,281 @@
+{
+  "request": {
+    "example_id": "short/ppl-two-bill-example",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/ppl-two-bill-example.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 15,
+    "ocr_pages": 0,
+    "num_pages": 3
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/ppl-two-bill-example",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "utility_provider": "PPL Electric Utilities",
+      "account_number": "00001-00001",
+      "invoice_number": null,
+      "service_number": null,
+      "customer_name": "JOHN DOE",
+      "service_address": "123 SERVICE RD ALLENTOWN PA 18100",
+      "bill_date": null,
+      "billing_period_start": "May 2",
+      "billing_period_end": "Jun 3",
+      "payment_due_date": "6/19/24",
+      "amount_due": 3133.19,
+      "previous_balance": 3179.22,
+      "total_current_charges": null,
+      "total_delivery_charges": 3133.19,
+      "total_supply_charges": 0.0,
+      "meters": [
+        {
+          "meter_number": "300000000",
+          "service_type": "electric",
+          "current_reading": 37014.0,
+          "previous_reading": 36515.0,
+          "usage_quantity": 598800.0,
+          "usage_unit": "kWh"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "utility_provider",
+        "page": 2,
+        "bbox": [
+          0.573706,
+          0.812727,
+          0.127755,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "PPL Electric Utilities",
+        "confidence": 0.7582149090924595,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "account_number",
+        "page": 1,
+        "bbox": [
+          0.132912,
+          0.344603,
+          0.068275,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "00001-00001",
+        "confidence": 0.7807065513100024,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer_name",
+        "page": 1,
+        "bbox": [
+          0.080732,
+          0.843271,
+          0.062928,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "JOHN DOE",
+        "confidence": 0.7940240211727383,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "billing_period_start",
+        "page": 1,
+        "bbox": [
+          0.488497,
+          0.200381,
+          0.045376,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "May 2",
+        "confidence": 0.9310706672641766,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "billing_period_end",
+        "page": 1,
+        "bbox": [
+          0.548612,
+          0.19922,
+          0.042239,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Jun 3",
+        "confidence": 0.872776151527414,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "payment_due_date",
+        "page": 3,
+        "bbox": [
+          0.726886,
+          0.076664,
+          0.061524,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "6/19/24",
+        "confidence": 0.7793985798462337,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "previous_balance",
+        "page": 2,
+        "bbox": [
+          0.816696,
+          0.074322,
+          0.0605,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$3,179.22",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_delivery_charges",
+        "page": 1,
+        "bbox": [
+          0.642647,
+          0.206626,
+          0.097245,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$3,133.19",
+        "confidence": 0.7880707624588897,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_supply_charges",
+        "page": 1,
+        "bbox": [
+          0.299947,
+          0.206299,
+          0.036606,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$0.00",
+        "confidence": 0.7634694220864923,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "meters[0].meter_number",
+        "page": 1,
+        "bbox": [
+          0.665405,
+          0.037443,
+          0.07966,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "300000000",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "meters[0].service_type",
+        "page": 1,
+        "bbox": [
+          0.631745,
+          0.846301,
+          0.064461,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "ELECTRIC",
+        "confidence": 0.7951254234648861,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "meters[0].current_reading",
+        "page": 2,
+        "bbox": [
+          0.201945,
+          0.091576,
+          0.032941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "37014",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "meters[0].previous_reading",
+        "page": 2,
+        "bbox": [
+          0.201163,
+          0.109152,
+          0.033804,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "36515",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "meters[0].usage_quantity",
+        "page": 1,
+        "bbox": [
+          0.582324,
+          0.58684,
+          0.039473,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "598800",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "meters[0].usage_unit",
+        "page": 1,
+        "bbox": [
+          0.030654,
+          0.564304,
+          0.011542,
+          0.023131
+        ],
+        "polygon": null,
+        "reference_text": "(kWh)",
+        "confidence": 0.8425179249763645,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:34:47.492491Z",
+  "completed_at": "2026-09-13T20:34:47.492491Z",
+  "latency_in_ms": 234
+}

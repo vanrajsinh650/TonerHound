@@ -1,0 +1,560 @@
+{
+  "request": {
+    "example_id": "short/fort_bend_operativeiq_invoice",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/fort_bend_operativeiq_invoice.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 31,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/fort_bend_operativeiq_invoice",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "invoice_number": "44920",
+      "invoice_type": "standard",
+      "original_invoice_number": null,
+      "date": "2022-05-18",
+      "due_date": "2022-07-02",
+      "purchase_order_number": "212706",
+      "order_number": null,
+      "vendor": {
+        "name": "EMS Technology Solutions LLC",
+        "address": {
+          "street": "3781 TRAMORE POINTE PKWY",
+          "city": "AUSTELL",
+          "state": "GA",
+          "zip_code": "30106",
+          "country": null
+        },
+        "phone": "877-217-3707",
+        "email": "accounting@operativeiq.com",
+        "tax_id": null
+      },
+      "customer": {
+        "name": "FORT BEND COUNTY EMS",
+        "address": {
+          "street": "301 JACKSON, SUITE 701",
+          "city": "RICHMOND",
+          "state": "TX",
+          "zip_code": "77469",
+          "country": null
+        },
+        "phone": null,
+        "email": null,
+        "account_number": null
+      },
+      "line_items": [
+        {
+          "line_no": 1,
+          "item_code": "IQ10183",
+          "description": "ANNUAL SANDBOX MAINTENANCE",
+          "quantity": 1.0,
+          "unit_price": 1800.0,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 1800.0
+        },
+        {
+          "line_no": 2,
+          "item_code": "IQ10182",
+          "description": "IQ SANDBOX ENVIRONMENT SETUP",
+          "quantity": 1.0,
+          "unit_price": 350.0,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 350.0
+        }
+      ],
+      "subtotal": 2150.0,
+      "discount_total": null,
+      "tax_total": 0.0,
+      "shipping": null,
+      "total_amount": 2150.0,
+      "payment_terms": "NET 45",
+      "bank_details": null,
+      "currency": "USD",
+      "notes": null
+    },
+    "field_citations": [
+      {
+        "field_path": "invoice_number",
+        "page": 1,
+        "bbox": [
+          0.770047,
+          0.115316,
+          0.037146,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "44920",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "date",
+        "page": 1,
+        "bbox": [
+          0.770637,
+          0.13288,
+          0.051887,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "05/18/22",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_date",
+        "page": 1,
+        "bbox": [
+          0.149175,
+          0.292323,
+          0.416863,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "07/02/22 NET 45 212706",
+        "confidence": 0.8483097658530353,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "purchase_order_number",
+        "page": 1,
+        "bbox": [
+          0.521816,
+          0.291867,
+          0.044222,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "212706",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.name",
+        "page": 1,
+        "bbox": [
+          0.150354,
+          0.042551,
+          0.20342,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "EMS Technology Solutions LLC",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.address.street",
+        "page": 1,
+        "bbox": [
+          0.149764,
+          0.054412,
+          0.198703,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3781 TRAMORE POINTE PKWY",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.address.city",
+        "page": 1,
+        "bbox": [
+          0.149175,
+          0.068099,
+          0.06309,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "AUSTELL,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.address.state",
+        "page": 1,
+        "bbox": [
+          0.217571,
+          0.067414,
+          0.018868,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "GA",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.address.zip_code",
+        "page": 1,
+        "bbox": [
+          0.240566,
+          0.067414,
+          0.036557,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "30106",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.phone",
+        "page": 1,
+        "bbox": [
+          0.149764,
+          0.080416,
+          0.083137,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "877-217-3707",
+        "confidence": 0.8858771914807271,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.email",
+        "page": 1,
+        "bbox": [
+          0.397406,
+          0.605507,
+          0.178066,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "accounting@operativeig.com.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.name",
+        "page": 1,
+        "bbox": [
+          0.150354,
+          0.182378,
+          0.170991,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "FORT BEND COUNTY EMS",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.address.street",
+        "page": 1,
+        "bbox": [
+          0.149764,
+          0.221383,
+          0.161557,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "301 JACKSON, SUITE 701",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.address.city",
+        "page": 1,
+        "bbox": [
+          0.149764,
+          0.234385,
+          0.077241,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "RICHMOND,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.address.state",
+        "page": 1,
+        "bbox": [
+          0.740566,
+          0.220471,
+          0.017099,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "TX",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.address.zip_code",
+        "page": 1,
+        "bbox": [
+          0.252948,
+          0.233701,
+          0.036557,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "77469",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].line_no",
+        "page": 1,
+        "bbox": [
+          0.679835,
+          0.37444,
+          0.004127,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].item_code",
+        "page": 1,
+        "bbox": [
+          0.149764,
+          0.37558,
+          0.050708,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1Q10183",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].description",
+        "page": 1,
+        "bbox": [
+          0.300118,
+          0.374668,
+          0.227594,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "ANNUAL SANDBOX MAINTENANCE",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].quantity",
+        "page": 1,
+        "bbox": [
+          0.679835,
+          0.37444,
+          0.004127,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].unit_price",
+        "page": 1,
+        "bbox": [
+          0.727005,
+          0.37444,
+          0.059552,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$1,800.00",
+        "confidence": 0.7841479563340373,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].amount",
+        "page": 1,
+        "bbox": [
+          0.727005,
+          0.37444,
+          0.059552,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$1,800.00",
+        "confidence": 0.7565694957982203,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].item_code",
+        "page": 1,
+        "bbox": [
+          0.149764,
+          0.417551,
+          0.050708,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1Q10182",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].description",
+        "page": 1,
+        "bbox": [
+          0.301297,
+          0.416867,
+          0.236439,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1Q SANDBOX ENVIRONMENT SETUP",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].quantity",
+        "page": 1,
+        "bbox": [
+          0.679835,
+          0.416182,
+          0.004127,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].unit_price",
+        "page": 1,
+        "bbox": [
+          0.745115,
+          0.416182,
+          0.034535,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$350.00",
+        "confidence": 0.78344982813583,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].amount",
+        "page": 1,
+        "bbox": [
+          0.745115,
+          0.416182,
+          0.034535,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$350.00",
+        "confidence": 0.7638082452990899,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "subtotal",
+        "page": 1,
+        "bbox": [
+          0.830189,
+          0.48256,
+          0.058962,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$2,150.00",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "tax_total",
+        "page": 1,
+        "bbox": [
+          0.863679,
+          0.498071,
+          0.020873,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$0.00",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_amount",
+        "page": 1,
+        "bbox": [
+          0.829599,
+          0.510617,
+          0.059552,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$2,150.00",
+        "confidence": 0.7594105708006081,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "payment_terms",
+        "page": 1,
+        "bbox": [
+          0.335495,
+          0.292095,
+          0.044811,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "NET 45",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:32:18.720262Z",
+  "completed_at": "2026-09-13T20:32:18.720262Z",
+  "latency_in_ms": 12741
+}

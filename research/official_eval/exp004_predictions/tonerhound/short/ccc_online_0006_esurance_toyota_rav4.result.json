@@ -1,0 +1,1638 @@
+{
+  "request": {
+    "example_id": "short/ccc_online_0006_esurance_toyota_rav4",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/ccc_online_0006_esurance_toyota_rav4.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 96,
+    "ocr_pages": 0,
+    "num_pages": 7
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/ccc_online_0006_esurance_toyota_rav4",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "report_reference_number": "80742624",
+      "claim_reference": "WIS-0076822-01",
+      "insurance_company": "ESURANCE",
+      "owner_name": "Nash, Vickie",
+      "owner_address": "Saint Louis, MO 63125",
+      "loss_vehicle_vin": "JTEHH20V326066668",
+      "loss_vehicle_year": 2002,
+      "loss_vehicle_make": "Toyota",
+      "loss_vehicle_model": "RAV4",
+      "loss_vehicle_trim": null,
+      "loss_vehicle_body_type": "Sports Utility",
+      "loss_vehicle_odometer": 138866,
+      "loss_incident_date": "03/30/2016",
+      "claim_reported_date": "04/06/2016",
+      "base_vehicle_value": 6284.0,
+      "condition_adjustment": -496.0,
+      "adjusted_vehicle_value": 5788.0,
+      "vehicular_tax": 411.7,
+      "title_registration_fees": null,
+      "deductible": -500.0,
+      "total_settlement": 5699.7,
+      "comparable_vehicles": [
+        {
+          "comp_label": "Comp 1",
+          "vin": "JTEHH20V320179409",
+          "year": 2002,
+          "make": "Toyota",
+          "model": "Rav4",
+          "trim": null,
+          "odometer": 148939,
+          "list_price": 6495.0,
+          "adjusted_comparable_value": 6316.0,
+          "source": "Autotrader",
+          "dealer_name": "Jerry Ackerman",
+          "dealer_city": "Saint Louis",
+          "dealer_state": "MO",
+          "distance_from_loss_miles": 4,
+          "stock_number": "29082A",
+          "updated_date": "01/11/2016",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": null,
+          "adjustment_options": null,
+          "adjustment_package": null,
+          "adjustment_condition": null
+        },
+        {
+          "comp_label": "Comp 2",
+          "vin": "JTEHH20V620175953",
+          "year": 2002,
+          "make": "Toyota",
+          "model": "Rav4",
+          "trim": null,
+          "odometer": 71618,
+          "list_price": 7990.0,
+          "adjusted_comparable_value": 5936.0,
+          "source": "Autotrader",
+          "dealer_name": "Bommarito West County",
+          "dealer_city": "Ballwin",
+          "dealer_state": "MO",
+          "distance_from_loss_miles": 14,
+          "stock_number": "94384C",
+          "updated_date": "03/16/2016",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": null,
+          "adjustment_options": null,
+          "adjustment_package": null,
+          "adjustment_condition": null
+        },
+        {
+          "comp_label": "Comp 3",
+          "vin": "JTEHH20V426056134",
+          "year": 2002,
+          "make": "Toyota",
+          "model": "Rav4",
+          "trim": null,
+          "odometer": 138294,
+          "list_price": 6961.0,
+          "adjusted_comparable_value": 6075.0,
+          "source": "Autotrader",
+          "dealer_name": "Mnm Auto Sales",
+          "dealer_city": "Jefferson City",
+          "dealer_state": "MO",
+          "distance_from_loss_miles": 105,
+          "stock_number": "26056134",
+          "updated_date": "01/23/2016",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": null,
+          "adjustment_options": null,
+          "adjustment_package": null,
+          "adjustment_condition": null
+        }
+      ],
+      "component_conditions": [
+        {
+          "component_name": "Seats",
+          "condition_rating": "FAIR",
+          "inspection_notes": "Back row seats and driver head rest missing. Staining on driver's seat bottom and passenger seat bottom.",
+          "value_impact": -78
+        },
+        {
+          "component_name": "Carpets",
+          "condition_rating": "FAIR",
+          "inspection_notes": "Staining in driver's area at right side near gas pedal. Both front door panels and left rear have staining. Left rear area is stained.",
+          "value_impact": -72
+        },
+        {
+          "component_name": "Dashboard",
+          "condition_rating": "NORMAL",
+          "inspection_notes": "No visible damage to components.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Headliner",
+          "condition_rating": "FAIR",
+          "inspection_notes": "Numerous spots on headliner toward right rear.",
+          "value_impact": -84
+        },
+        {
+          "component_name": "Sheet Metal",
+          "condition_rating": "NORMAL",
+          "inspection_notes": "No visible dents, dings, or rust.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Trim",
+          "condition_rating": "FAIR",
+          "inspection_notes": "Sun damaged headlamps and left side body side moldings are scratched.",
+          "value_impact": -156
+        },
+        {
+          "component_name": "Paint",
+          "condition_rating": "FAIR",
+          "inspection_notes": "Scratches on left quarter panel and driver's side front and rear doors.",
+          "value_impact": -117
+        },
+        {
+          "component_name": "Glass",
+          "condition_rating": "NORMAL",
+          "inspection_notes": "No visible scratches, pitting or chips.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Engine",
+          "condition_rating": "NORMAL",
+          "inspection_notes": "Significant dirt and grease in engine compartment.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Transmission",
+          "condition_rating": "NORMAL",
+          "inspection_notes": "No photos to confirm condition.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Front Tires",
+          "condition_rating": "NORMAL",
+          "inspection_notes": "41%-68% 5/32-9/32",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Rear Tires",
+          "condition_rating": "ABOVE AVERAGE",
+          "inspection_notes": "Both tires 10/32",
+          "value_impact": 11
+        }
+      ],
+      "nhtsa_recalls": []
+    },
+    "field_citations": [
+      {
+        "field_path": "report_reference_number",
+        "page": 1,
+        "bbox": [
+          0.396964,
+          0.369469,
+          0.064368,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "80742624",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claim_reference",
+        "page": 1,
+        "bbox": [
+          0.396641,
+          0.389478,
+          0.108029,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "WIS-0076822-01",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "insurance_company",
+        "page": 1,
+        "bbox": [
+          0.851797,
+          0.09751,
+          0.090931,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "ESURANCE",
+        "confidence": 0.8696238889073518,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "owner_name",
+        "page": 1,
+        "bbox": [
+          0.397523,
+          0.213164,
+          0.080015,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Nash, Vickie",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "owner_address",
+        "page": 3,
+        "bbox": [
+          0.32327,
+          0.180199,
+          0.175206,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "SAINT LOUIS, MO 63125",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle_vin",
+        "page": 3,
+        "bbox": [
+          0.322799,
+          0.199782,
+          0.146309,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "JTEHH20V326066668",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle_year",
+        "page": 7,
+        "bbox": [
+          0.270971,
+          0.521965,
+          0.031603,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2002",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle_make",
+        "page": 3,
+        "bbox": [
+          0.322755,
+          0.241294,
+          0.044368,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Toyota",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle_model",
+        "page": 3,
+        "bbox": [
+          0.323843,
+          0.260285,
+          0.036632,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "RAV4",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle_body_type",
+        "page": 3,
+        "bbox": [
+          0.32327,
+          0.301792,
+          0.081647,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Sports Utility",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle_odometer",
+        "page": 1,
+        "bbox": [
+          0.397891,
+          0.430802,
+          0.051103,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "138,866",
+        "confidence": 0.7764987728999969,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_incident_date",
+        "page": 1,
+        "bbox": [
+          0.396964,
+          0.269147,
+          0.072471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "03/30/2016",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claim_reported_date",
+        "page": 1,
+        "bbox": [
+          0.396964,
+          0.289349,
+          0.072471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "04/06/2016",
+        "confidence": 0.7744972337836089,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "base_vehicle_value",
+        "page": 1,
+        "bbox": [
+          0.494291,
+          0.534758,
+          0.068822,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "6,284.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "adjusted_vehicle_value",
+        "page": 1,
+        "bbox": [
+          0.494219,
+          0.576622,
+          0.068894,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "5,788.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vehicular_tax",
+        "page": 1,
+        "bbox": [
+          0.519085,
+          0.592578,
+          0.036703,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "411.70",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_settlement",
+        "page": 1,
+        "bbox": [
+          0.456327,
+          0.706149,
+          0.106472,
+          0.018996
+        ],
+        "polygon": null,
+        "reference_text": "5,699.70",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].vin",
+        "page": 7,
+        "bbox": [
+          0.303529,
+          0.321122,
+          0.146265,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "JTEHH20V320179409",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].odometer",
+        "page": 7,
+        "bbox": [
+          0.345632,
+          0.305521,
+          0.051044,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "148,939",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].list_price",
+        "page": 7,
+        "bbox": [
+          0.510824,
+          0.272693,
+          0.035618,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "6,495",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].adjusted_comparable_value",
+        "page": 7,
+        "bbox": [
+          0.610824,
+          0.272693,
+          0.035676,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "6,316",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].dealer_name",
+        "page": 7,
+        "bbox": [
+          0.064956,
+          0.289402,
+          0.10175,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Jerry Ackerman",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].dealer_city",
+        "page": 7,
+        "bbox": [
+          0.154485,
+          0.338156,
+          0.074824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Saint Louis,",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].dealer_state",
+        "page": 7,
+        "bbox": [
+          0.120529,
+          0.4296,
+          0.022044,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "MO",
+        "confidence": 0.7858884608471017,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].distance_from_loss_miles",
+        "page": 7,
+        "bbox": [
+          0.065074,
+          0.33752,
+          0.007324,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "4",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].stock_number",
+        "page": 7,
+        "bbox": [
+          0.328191,
+          0.337537,
+          0.050118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "29082A",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].updated_date",
+        "page": 7,
+        "bbox": [
+          0.370059,
+          0.353843,
+          0.072471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "01/11/2016",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].comp_label",
+        "page": 7,
+        "bbox": [
+          0.064373,
+          0.381426,
+          0.052618,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Comp 2",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].vin",
+        "page": 7,
+        "bbox": [
+          0.303529,
+          0.446122,
+          0.146382,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "JTEHH20V620175953",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].year",
+        "page": 7,
+        "bbox": [
+          0.270971,
+          0.396965,
+          0.031603,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2002",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].make",
+        "page": 7,
+        "bbox": [
+          0.307588,
+          0.397988,
+          0.044368,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Toyota",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].model",
+        "page": 7,
+        "bbox": [
+          0.357721,
+          0.396857,
+          0.032544,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Rav4",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].odometer",
+        "page": 7,
+        "bbox": [
+          0.344691,
+          0.430521,
+          0.043853,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "71,618",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].list_price",
+        "page": 7,
+        "bbox": [
+          0.510809,
+          0.397693,
+          0.035691,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "7,990",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].adjusted_comparable_value",
+        "page": 7,
+        "bbox": [
+          0.610735,
+          0.397693,
+          0.035765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "5,936",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].source",
+        "page": 7,
+        "bbox": [
+          0.119676,
+          0.396857,
+          0.068441,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Autotrader",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].dealer_name",
+        "page": 7,
+        "bbox": [
+          0.065794,
+          0.414294,
+          0.158103,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Bommarito West County",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].dealer_city",
+        "page": 7,
+        "bbox": [
+          0.065794,
+          0.430436,
+          0.048279,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Ballwin,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].dealer_state",
+        "page": 7,
+        "bbox": [
+          0.120529,
+          0.4296,
+          0.022044,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "MO",
+        "confidence": 0.7858884608471017,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].distance_from_loss_miles",
+        "page": 7,
+        "bbox": [
+          0.066191,
+          0.46252,
+          0.014382,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "14",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].stock_number",
+        "page": 7,
+        "bbox": [
+          0.328426,
+          0.462429,
+          0.050279,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "94384C",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].updated_date",
+        "page": 7,
+        "bbox": [
+          0.370059,
+          0.478843,
+          0.072471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "03/16/2016",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].comp_label",
+        "page": 7,
+        "bbox": [
+          0.064373,
+          0.506426,
+          0.052691,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Comp 3",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].vin",
+        "page": 7,
+        "bbox": [
+          0.303529,
+          0.571122,
+          0.146397,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "JTEHH20V426056134",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].year",
+        "page": 7,
+        "bbox": [
+          0.270971,
+          0.521965,
+          0.031603,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2002",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].make",
+        "page": 7,
+        "bbox": [
+          0.307588,
+          0.522988,
+          0.044368,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Toyota",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].model",
+        "page": 7,
+        "bbox": [
+          0.357721,
+          0.521857,
+          0.032544,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Rav4",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].odometer",
+        "page": 7,
+        "bbox": [
+          0.345632,
+          0.555521,
+          0.051176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "138,294",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].list_price",
+        "page": 7,
+        "bbox": [
+          0.510824,
+          0.522693,
+          0.033338,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "6,961",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].adjusted_comparable_value",
+        "page": 7,
+        "bbox": [
+          0.610824,
+          0.522693,
+          0.035618,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "6,075",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].source",
+        "page": 7,
+        "bbox": [
+          0.119676,
+          0.521857,
+          0.068441,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Autotrader",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].dealer_name",
+        "page": 7,
+        "bbox": [
+          0.065779,
+          0.538186,
+          0.106279,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Mnm Auto Sales",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].dealer_city",
+        "page": 7,
+        "bbox": [
+          0.064956,
+          0.555708,
+          0.092441,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Jefferson City,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].dealer_state",
+        "page": 7,
+        "bbox": [
+          0.120529,
+          0.4296,
+          0.022044,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "MO",
+        "confidence": 0.7858884608471017,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].distance_from_loss_miles",
+        "page": 7,
+        "bbox": [
+          0.066191,
+          0.587622,
+          0.022426,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "105",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].stock_number",
+        "page": 7,
+        "bbox": [
+          0.328191,
+          0.587622,
+          0.064544,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "26056134",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].updated_date",
+        "page": 7,
+        "bbox": [
+          0.370059,
+          0.603843,
+          0.072471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "01/23/2016",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[0].component_name",
+        "page": 4,
+        "bbox": [
+          0.295843,
+          0.590602,
+          0.036353,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Seats",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[0].value_impact",
+        "page": 4,
+        "bbox": [
+          0.987451,
+          0.203468,
+          0.001471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "-",
+        "confidence": 0.7544910068554085,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[1].component_name",
+        "page": 6,
+        "bbox": [
+          0.064373,
+          0.2866,
+          0.050309,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Carpets",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[1].condition_rating",
+        "page": 6,
+        "bbox": [
+          0.167278,
+          0.285538,
+          0.031676,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "FAIR",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[2].component_name",
+        "page": 6,
+        "bbox": [
+          0.064917,
+          0.357587,
+          0.069897,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Dashboard",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[2].condition_rating",
+        "page": 6,
+        "bbox": [
+          0.167131,
+          0.357502,
+          0.061515,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "NORMAL",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[2].inspection_notes",
+        "page": 6,
+        "bbox": [
+          0.291314,
+          0.358752,
+          0.223191,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "No visible damage to components.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[2].value_impact",
+        "page": 6,
+        "bbox": [
+          0.623101,
+          0.357695,
+          0.007059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[3].component_name",
+        "page": 6,
+        "bbox": [
+          0.064858,
+          0.380314,
+          0.061779,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Headliner",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[3].condition_rating",
+        "page": 6,
+        "bbox": [
+          0.167278,
+          0.380235,
+          0.031676,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "FAIR",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[3].inspection_notes",
+        "page": 6,
+        "bbox": [
+          0.291314,
+          0.381081,
+          0.318435,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Numerous spots on headliner toward - $",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[4].component_name",
+        "page": 6,
+        "bbox": [
+          0.064446,
+          0.442098,
+          0.076765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Sheet Metal",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[4].condition_rating",
+        "page": 6,
+        "bbox": [
+          0.167131,
+          0.442098,
+          0.061515,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "NORMAL",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[4].inspection_notes",
+        "page": 6,
+        "bbox": [
+          0.291314,
+          0.443348,
+          0.198662,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "No visible dents, dings, or rust.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[4].value_impact",
+        "page": 6,
+        "bbox": [
+          0.623101,
+          0.442291,
+          0.007059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[5].component_name",
+        "page": 6,
+        "bbox": [
+          0.063931,
+          0.464831,
+          0.02825,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Trim",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[5].condition_rating",
+        "page": 6,
+        "bbox": [
+          0.167278,
+          0.464831,
+          0.031676,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "FAIR",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[5].inspection_notes",
+        "page": 6,
+        "bbox": [
+          0.291049,
+          0.482489,
+          0.221,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "body side moldings are scratched.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[6].component_name",
+        "page": 4,
+        "bbox": [
+          0.064843,
+          0.841171,
+          0.138103,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Exterior/Paint/Glass",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[6].value_impact",
+        "page": 4,
+        "bbox": [
+          0.987451,
+          0.203468,
+          0.001471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "-",
+        "confidence": 0.7533647215777552,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[7].component_name",
+        "page": 4,
+        "bbox": [
+          0.299078,
+          0.909508,
+          0.036353,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Glass",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[7].inspection_notes",
+        "page": 6,
+        "bbox": [
+          0.291314,
+          0.544358,
+          0.235426,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "No visible scratches, pitting or chips.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[7].value_impact",
+        "page": 6,
+        "bbox": [
+          0.623101,
+          0.357695,
+          0.007059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.843395336992734,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[8].component_name",
+        "page": 6,
+        "bbox": [
+          0.06499,
+          0.589813,
+          0.043926,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Engine",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[8].condition_rating",
+        "page": 6,
+        "bbox": [
+          0.167131,
+          0.588563,
+          0.061515,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "NORMAL",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[8].inspection_notes",
+        "page": 6,
+        "bbox": [
+          0.290917,
+          0.589489,
+          0.327008,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Significant dirt and grease in engine $",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[8].value_impact",
+        "page": 6,
+        "bbox": [
+          0.623101,
+          0.588756,
+          0.007059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[9].component_name",
+        "page": 6,
+        "bbox": [
+          0.063931,
+          0.627789,
+          0.086265,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Transmission",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[9].condition_rating",
+        "page": 6,
+        "bbox": [
+          0.167131,
+          0.627704,
+          0.061515,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "NORMAL",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[9].inspection_notes",
+        "page": 6,
+        "bbox": [
+          0.291314,
+          0.628823,
+          0.200309,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "No photos to confirm condition.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[9].value_impact",
+        "page": 6,
+        "bbox": [
+          0.623101,
+          0.627897,
+          0.007059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[10].component_name",
+        "page": 6,
+        "bbox": [
+          0.06499,
+          0.673244,
+          0.069294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Front Tires",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[10].condition_rating",
+        "page": 6,
+        "bbox": [
+          0.167131,
+          0.673158,
+          0.061515,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "NORMAL",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[10].inspection_notes",
+        "page": 6,
+        "bbox": [
+          0.290564,
+          0.673158,
+          0.128882,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "41%-68% 5/32-9/32",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[10].value_impact",
+        "page": 6,
+        "bbox": [
+          0.623101,
+          0.673352,
+          0.007059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[11].component_name",
+        "page": 6,
+        "bbox": [
+          0.06502,
+          0.695971,
+          0.066809,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Rear Tires",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[11].condition_rating",
+        "page": 6,
+        "bbox": [
+          0.166219,
+          0.7123,
+          0.069662,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "AVERAGE",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[11].inspection_notes",
+        "page": 6,
+        "bbox": [
+          0.291284,
+          0.695886,
+          0.101191,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Both tires 10/32",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[11].value_impact",
+        "page": 6,
+        "bbox": [
+          0.615851,
+          0.695977,
+          0.011971,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "11",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:29:51.880961Z",
+  "completed_at": "2026-09-13T20:29:51.880961Z",
+  "latency_in_ms": 915
+}

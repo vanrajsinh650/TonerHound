@@ -1,0 +1,490 @@
+{
+  "request": {
+    "example_id": "short/hingham-grainger-invoice",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/hingham-grainger-invoice.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 27,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/hingham-grainger-invoice",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "invoice_number": "9823373304",
+      "invoice_type": "standard",
+      "original_invoice_number": null,
+      "date": "2023-08-30",
+      "due_date": "2023-09-29",
+      "purchase_order_number": "WEB2454487473",
+      "order_number": "1491364305",
+      "vendor": {
+        "name": "GRAINGER",
+        "address": {
+          "street": "428 UNIVERSITY AVE.",
+          "city": "NORWOOD",
+          "state": "MA",
+          "zip_code": "02062-2638",
+          "country": null
+        },
+        "phone": "1-800-472-4643",
+        "email": null,
+        "tax_id": "36-1150280"
+      },
+      "customer": {
+        "name": "HINGHAM TOWN HALL SELECTMEN",
+        "address": {
+          "street": "210 CENTRAL ST",
+          "city": "HINGHAM",
+          "state": "MA",
+          "zip_code": "02043-1955",
+          "country": null
+        },
+        "phone": "(781) 741-1400",
+        "email": null,
+        "account_number": "838233708"
+      },
+      "line_items": [
+        {
+          "line_no": 1,
+          "item_code": "61DE01",
+          "description": "OFFICE DEHUMID,229CFM,16.9PT,WHITE MANUFACTURER # FFAP5033W1",
+          "quantity": 1.0,
+          "unit_price": 392.07,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 392.07
+        }
+      ],
+      "subtotal": 392.07,
+      "discount_total": null,
+      "tax_total": null,
+      "shipping": null,
+      "total_amount": 392.07,
+      "payment_terms": "NET 30 DAYS AFTER INVOICE DATE",
+      "bank_details": null,
+      "currency": "USD",
+      "notes": null
+    },
+    "field_citations": [
+      {
+        "field_path": "invoice_number",
+        "page": 1,
+        "bbox": [
+          0.593733,
+          0.939033,
+          0.103417,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "9823373304",
+        "confidence": 0.8227228717668458,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "date",
+        "page": 1,
+        "bbox": [
+          0.396006,
+          0.940489,
+          0.092459,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "08/30/2023",
+        "confidence": 0.8328403710115813,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_date",
+        "page": 1,
+        "bbox": [
+          0.85549,
+          0.067458,
+          0.076301,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "09/29/2023",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "purchase_order_number",
+        "page": 1,
+        "bbox": [
+          0.748045,
+          0.108247,
+          0.098037,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "WEB2454487473",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "order_number",
+        "page": 1,
+        "bbox": [
+          0.749537,
+          0.136808,
+          0.069819,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1491364305",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.name",
+        "page": 1,
+        "bbox": [
+          0.530886,
+          0.034124,
+          0.075401,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "GRAINGER",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.address.street",
+        "page": 1,
+        "bbox": [
+          0.082341,
+          0.063303,
+          0.128918,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "428 UNIVERSrTY AVE.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.address.city",
+        "page": 1,
+        "bbox": [
+          0.083648,
+          0.074146,
+          0.066051,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "NORWOOD,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.address.state",
+        "page": 1,
+        "bbox": [
+          0.157327,
+          0.073585,
+          0.016594,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "MA",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.address.zip_code",
+        "page": 1,
+        "bbox": [
+          0.185967,
+          0.07373,
+          0.065999,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "02062-2638",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.phone",
+        "page": 1,
+        "bbox": [
+          0.840086,
+          0.294125,
+          0.088852,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1 -800-472-4643",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.name",
+        "page": 1,
+        "bbox": [
+          0.161823,
+          0.188038,
+          0.228351,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "HINGHAM TOWN HALL SELECTMEN",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.address.street",
+        "page": 1,
+        "bbox": [
+          0.218012,
+          0.364515,
+          0.097804,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "210 CENTRAL ST",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.address.city",
+        "page": 1,
+        "bbox": [
+          0.218632,
+          0.374818,
+          0.058522,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "HINGHAM",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.address.state",
+        "page": 1,
+        "bbox": [
+          0.280558,
+          0.374823,
+          0.01841,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "MA",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.address.zip_code",
+        "page": 1,
+        "bbox": [
+          0.264475,
+          0.212386,
+          0.076613,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "02043-1955",
+        "confidence": 0.7681005281898937,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.phone",
+        "page": 1,
+        "bbox": [
+          0.749199,
+          0.127909,
+          0.089464,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "(781) 741-1400",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.account_number",
+        "page": 1,
+        "bbox": [
+          0.573164,
+          0.792913,
+          0.079782,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "838233708",
+        "confidence": 0.7548333298637759,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].line_no",
+        "page": 1,
+        "bbox": [
+          0.120894,
+          0.400984,
+          0.008292,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "000001",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].item_code",
+        "page": 1,
+        "bbox": [
+          0.154692,
+          0.400899,
+          0.051067,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "61DE01",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].description",
+        "page": 1,
+        "bbox": [
+          0.218519,
+          0.411788,
+          0.187991,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "MANUFACTURER # FFAP5033W1",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].quantity",
+        "page": 1,
+        "bbox": [
+          0.079433,
+          0.400984,
+          0.049753,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "000001",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].unit_price",
+        "page": 1,
+        "bbox": [
+          0.883992,
+          0.396742,
+          0.042466,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "392.07",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].amount",
+        "page": 1,
+        "bbox": [
+          0.883992,
+          0.396742,
+          0.042466,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "392.07",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "subtotal",
+        "page": 1,
+        "bbox": [
+          0.887906,
+          0.079166,
+          0.042859,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "392.07",
+        "confidence": 0.825071863551742,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_amount",
+        "page": 1,
+        "bbox": [
+          0.902273,
+          0.596694,
+          0.029821,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "392.07",
+        "confidence": 0.8250850981439651,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "payment_terms",
+        "page": 1,
+        "bbox": [
+          0.329599,
+          0.685552,
+          0.191515,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "NET 30 DAYS AFTER INVOICE DATE",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:32:37.625709Z",
+  "completed_at": "2026-09-13T20:32:37.625709Z",
+  "latency_in_ms": 121
+}

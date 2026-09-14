@@ -1,0 +1,414 @@
+{
+  "request": {
+    "example_id": "short/P4-83-201_30",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/P4-83-201_30.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 21,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/P4-83-201_30",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "field_name": "Marcelina Creek (Buda) Field",
+      "lease_name": "Kruse, Rose M. (12290)",
+      "current_operator_name": "Nordstrand Engineering, Inc.",
+      "operator_p5_no": "612858",
+      "oil_lse_gas_id_no": "12290",
+      "county": "Wilson",
+      "rrc_district": "01",
+      "operator_address": "3229 D'Amico Street, Suite 200, Houston, TX 77019",
+      "well_nos": "2",
+      "classification_oil": true,
+      "classification_gas": false,
+      "classification_other": false,
+      "effective_date": "05/20/2011",
+      "change_operator": true,
+      "change_oil_condensate_gatherer": false,
+      "change_gas_gatherer": false,
+      "change_gas_purchaser": false,
+      "change_gas_purchaser_system_code": false,
+      "change_field_name": false,
+      "change_field_name_from": null,
+      "change_field_name_docket": null,
+      "change_lease_name": false,
+      "change_lease_name_from": null,
+      "new_rrc_oil_lease": false,
+      "new_rrc_gas_well": false,
+      "new_rrc_other_well": false,
+      "new_rrc_other_well_specify": null,
+      "due_new_completion_recompletion": false,
+      "due_reclass_gas_to_oil": false,
+      "due_reclass_oil_to_gas": false,
+      "due_consolidation": false,
+      "due_unitization": false,
+      "due_field_transfer": false,
+      "due_subdivision": false,
+      "prev_operator_name": "Texas Land Operating, LLC",
+      "prev_operator_signature": false,
+      "prev_operator_name_print": null,
+      "prev_operator_title": null,
+      "prev_operator_date": null,
+      "prev_operator_phone": null,
+      "prev_operator_authorized_employee": false,
+      "prev_operator_authorized_agent": false,
+      "curr_operator_name_print": "Carl H. Nordstrand",
+      "curr_operator_signature": true,
+      "curr_operator_title": "President",
+      "curr_operator_email": "NordstrandEngineering@comcast.net",
+      "curr_operator_date": "05-20-2011",
+      "curr_operator_phone": "(713)203-6913",
+      "curr_operator_authorized_employee": false,
+      "curr_operator_authorized_agent": false,
+      "reviewer_initials": null,
+      "approval_date": null,
+      "gas_gatherers_purchasers": [
+        {
+          "gatherer": false,
+          "purchaser": true,
+          "name": "Gulf Coast Pipeline",
+          "system_code": null,
+          "percent_of_take": "100",
+          "full_well_stream": false
+        }
+      ],
+      "oil_condensate_gatherers": [
+        {
+          "name": "Shell Oil Co.",
+          "percent_of_take": "100"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "field_name",
+        "page": 1,
+        "bbox": [
+          0.796042,
+          0.336059,
+          0.013484,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "A",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "current_operator_name",
+        "page": 1,
+        "bbox": [
+          0.061604,
+          0.144577,
+          0.202831,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Nordstrand Engineering, Inc.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_p5_no",
+        "page": 1,
+        "bbox": [
+          0.542605,
+          0.14386,
+          0.045825,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "612858",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "oil_lse_gas_id_no",
+        "page": 1,
+        "bbox": [
+          0.647163,
+          0.144227,
+          0.037229,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "12290",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.778514,
+          0.14421,
+          0.046104,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Wilson",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district",
+        "page": 1,
+        "bbox": [
+          0.047074,
+          0.096469,
+          0.006669,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "I.",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "well_nos",
+        "page": 1,
+        "bbox": [
+          0.515904,
+          0.095669,
+          0.007793,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2.",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "classification_oil",
+        "page": 1,
+        "bbox": [
+          0.835658,
+          0.802248,
+          0.018718,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "effective_date",
+        "page": 1,
+        "bbox": [
+          0.491133,
+          0.937422,
+          0.072149,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "05-20-2011",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_operator",
+        "page": 1,
+        "bbox": [
+          0.835658,
+          0.802248,
+          0.018718,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_name",
+        "page": 1,
+        "bbox": [
+          0.796042,
+          0.336059,
+          0.013484,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "A",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_name_print",
+        "page": 1,
+        "bbox": [
+          0.049296,
+          0.863108,
+          0.135742,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Carl H. Nordstrand",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_signature",
+        "page": 1,
+        "bbox": [
+          0.835658,
+          0.802248,
+          0.018718,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_title",
+        "page": 1,
+        "bbox": [
+          0.049862,
+          0.901028,
+          0.063826,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "President",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_email",
+        "page": 1,
+        "bbox": [
+          0.050181,
+          0.939256,
+          0.259934,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "NordstrandEngineeringgazeomcastmet",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_date",
+        "page": 1,
+        "bbox": [
+          0.491133,
+          0.937422,
+          0.072149,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "05-20-2011",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gas_gatherers_purchasers[0].purchaser",
+        "page": 1,
+        "bbox": [
+          0.835658,
+          0.802248,
+          0.018718,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gas_gatherers_purchasers[0].name",
+        "page": 1,
+        "bbox": [
+          0.796042,
+          0.336059,
+          0.013484,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "A",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gas_gatherers_purchasers[0].percent_of_take",
+        "page": 1,
+        "bbox": [
+          0.606828,
+          0.594374,
+          0.02395,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "100",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "oil_condensate_gatherers[0].name",
+        "page": 1,
+        "bbox": [
+          0.074143,
+          0.594928,
+          0.084322,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Shell Oil",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "oil_condensate_gatherers[0].percent_of_take",
+        "page": 1,
+        "bbox": [
+          0.606828,
+          0.594374,
+          0.02395,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "100",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:19:34.846472Z",
+  "completed_at": "2026-09-13T20:19:34.846472Z",
+  "latency_in_ms": 447
+}

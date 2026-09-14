@@ -1,0 +1,490 @@
+{
+  "request": {
+    "example_id": "short/hingham-wbmason-invoice",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/hingham-wbmason-invoice.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 27,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/hingham-wbmason-invoice",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "invoice_number": "253661463",
+      "invoice_type": "standard",
+      "original_invoice_number": null,
+      "date": "2025-04-16",
+      "due_date": "2025-05-16",
+      "purchase_order_number": null,
+      "order_number": "S151787147",
+      "vendor": {
+        "name": "W.B. MASON CO., INC.",
+        "address": {
+          "street": "59 Centre St",
+          "city": "Brockton",
+          "state": "MA",
+          "zip_code": "02301",
+          "country": null
+        },
+        "phone": "888-WB-MASON",
+        "email": null,
+        "tax_id": "04-2455641"
+      },
+      "customer": {
+        "name": "HINGHAM-ZONING DEPT.",
+        "address": {
+          "street": "210 CENTRAL ST",
+          "city": "HINGHAM",
+          "state": "MA",
+          "zip_code": "02043-2756",
+          "country": null
+        },
+        "phone": null,
+        "email": null,
+        "account_number": "C2588144"
+      },
+      "line_items": [
+        {
+          "line_no": 1,
+          "item_code": "KID21005779",
+          "description": "EXTINGUISHER FIRE 4# ABC",
+          "quantity": 1.0,
+          "unit_price": 47.29,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 47.29
+        }
+      ],
+      "subtotal": 47.29,
+      "discount_total": null,
+      "tax_total": 0.0,
+      "shipping": null,
+      "total_amount": 47.29,
+      "payment_terms": "Net 30",
+      "bank_details": null,
+      "currency": "USD",
+      "notes": null
+    },
+    "field_citations": [
+      {
+        "field_path": "invoice_number",
+        "page": 1,
+        "bbox": [
+          0.86465,
+          0.06105,
+          0.063917,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "253661463",
+        "confidence": 0.7546589782863137,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "date",
+        "page": 1,
+        "bbox": [
+          0.865169,
+          0.090462,
+          0.060054,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "04/16/2025",
+        "confidence": 0.7531176130000727,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_date",
+        "page": 1,
+        "bbox": [
+          0.865169,
+          0.105614,
+          0.060054,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "05/16/2025",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "order_number",
+        "page": 1,
+        "bbox": [
+          0.856293,
+          0.134705,
+          0.069187,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "S151787147",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.name",
+        "page": 1,
+        "bbox": [
+          0.597092,
+          0.888791,
+          0.156051,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "W.B, MASON CO., INC.",
+        "confidence": 0.8455268294602266,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.address.street",
+        "page": 1,
+        "bbox": [
+          0.101953,
+          0.105701,
+          0.06317,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "59 Centre St",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.address.city",
+        "page": 1,
+        "bbox": [
+          0.102767,
+          0.116048,
+          0.044277,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Brockton,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.address.state",
+        "page": 1,
+        "bbox": [
+          0.154597,
+          0.115403,
+          0.016885,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "MA",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.address.zip_code",
+        "page": 1,
+        "bbox": [
+          0.174108,
+          0.115549,
+          0.025645,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "02301",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.phone",
+        "page": 1,
+        "bbox": [
+          0.102022,
+          0.145309,
+          0.089388,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "888-WB-MASON",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.tax_id",
+        "page": 1,
+        "bbox": [
+          0.838128,
+          0.302263,
+          0.064625,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "04-2455641",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.name",
+        "page": 1,
+        "bbox": [
+          0.10745,
+          0.846852,
+          0.174495,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "HINGHAM-ZONING DEPT.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.address.street",
+        "page": 1,
+        "bbox": [
+          0.10629,
+          0.859579,
+          0.118576,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "210 CENTRAL ST",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.address.city",
+        "page": 1,
+        "bbox": [
+          0.107452,
+          0.872306,
+          0.06994,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "HINGHAM",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.address.state",
+        "page": 1,
+        "bbox": [
+          0.180788,
+          0.872312,
+          0.022853,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "MA",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.address.zip_code",
+        "page": 1,
+        "bbox": [
+          0.206042,
+          0.872499,
+          0.076439,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "02043-2756",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.account_number",
+        "page": 1,
+        "bbox": [
+          0.870341,
+          0.075917,
+          0.055393,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "C2588144",
+        "confidence": 0.7560738292814909,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].line_no",
+        "page": 1,
+        "bbox": [
+          0.685729,
+          0.543566,
+          0.001612,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].item_code",
+        "page": 1,
+        "bbox": [
+          0.027485,
+          0.54821,
+          0.064546,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "KID21005779",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].description",
+        "page": 1,
+        "bbox": [
+          0.215086,
+          0.546307,
+          0.153477,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "EXTINGUISHER FIRE 4# ABC",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].quantity",
+        "page": 1,
+        "bbox": [
+          0.685729,
+          0.543566,
+          0.001612,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].unit_price",
+        "page": 1,
+        "bbox": [
+          0.835563,
+          0.542263,
+          0.027628,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "47.29",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].amount",
+        "page": 1,
+        "bbox": [
+          0.835563,
+          0.542263,
+          0.027628,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "47.29",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "subtotal",
+        "page": 1,
+        "bbox": [
+          0.835563,
+          0.542263,
+          0.027628,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "47.29",
+        "confidence": 0.8695444793855183,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "tax_total",
+        "page": 1,
+        "bbox": [
+          0.94114,
+          0.572518,
+          0.006634,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0.",
+        "confidence": 0.7622945322077074,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_amount",
+        "page": 1,
+        "bbox": [
+          0.918778,
+          0.777954,
+          0.034899,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "47.29",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "payment_terms",
+        "page": 1,
+        "bbox": [
+          0.913756,
+          0.761505,
+          0.040088,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Net 30",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:32:37.755469Z",
+  "completed_at": "2026-09-13T20:32:37.755469Z",
+  "latency_in_ms": 129
+}

@@ -1,0 +1,1452 @@
+{
+  "request": {
+    "example_id": "short/ccc_online_0005_american_family_chevrolet_sonic",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/ccc_online_0005_american_family_chevrolet_sonic.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 86,
+    "ocr_pages": 0,
+    "num_pages": 7
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/ccc_online_0005_american_family_chevrolet_sonic",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "report_reference_number": "101042591",
+      "claim_reference": "01003114989-1",
+      "insurance_company": "AMERICAN FAMILY - AMERICAN STANDARD INS. CO. OF OHIO",
+      "owner_name": "Duckworth, Jonathan",
+      "owner_address": "508a Plainville Rd Sw Plainville, GA 30733-9638",
+      "loss_vehicle_vin": "1G1JC5SH1G4162873",
+      "loss_vehicle_year": 2016,
+      "loss_vehicle_make": "Chevrolet",
+      "loss_vehicle_model": "Sonic",
+      "loss_vehicle_trim": "LT",
+      "loss_vehicle_body_type": "Sedan",
+      "loss_vehicle_odometer": 88745,
+      "loss_incident_date": "02/17/2021",
+      "claim_reported_date": "03/04/2021",
+      "base_vehicle_value": 7689.0,
+      "condition_adjustment": 0.0,
+      "adjusted_vehicle_value": 7689.0,
+      "vehicular_tax": null,
+      "title_registration_fees": null,
+      "deductible": null,
+      "total_settlement": 7689.0,
+      "comparable_vehicles": [
+        {
+          "comp_label": "Comp 1",
+          "vin": "1G1JC5SH2G4114086",
+          "year": 2016,
+          "make": "Chevrolet",
+          "model": "Sonic",
+          "trim": "Lt",
+          "odometer": 110804,
+          "list_price": 7975.0,
+          "adjusted_comparable_value": 7729.0,
+          "source": "Autotrader",
+          "dealer_name": "Rick Hendrick Chevrolet-duluth",
+          "dealer_city": "Duluth",
+          "dealer_state": "GA",
+          "distance_from_loss_miles": 58,
+          "stock_number": "SA10691A",
+          "updated_date": "02/14/2021",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": null,
+          "adjustment_options": null,
+          "adjustment_package": null,
+          "adjustment_condition": null
+        },
+        {
+          "comp_label": "Comp 2",
+          "vin": "1G1JC5SH4G4106880",
+          "year": 2016,
+          "make": "Chevrolet",
+          "model": "Sonic",
+          "trim": "Lt",
+          "odometer": 67054,
+          "list_price": 9950.0,
+          "adjusted_comparable_value": 7877.0,
+          "source": "Autotrader",
+          "dealer_name": "Hardy Chevrolet",
+          "dealer_city": "Gainesville",
+          "dealer_state": "GA",
+          "distance_from_loss_miles": 69,
+          "stock_number": "10583UP",
+          "updated_date": "02/21/2021",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": null,
+          "adjustment_options": null,
+          "adjustment_package": null,
+          "adjustment_condition": null
+        },
+        {
+          "comp_label": "Comp 3",
+          "vin": "1G1JC5SH8G4128011",
+          "year": 2016,
+          "make": "Chevrolet",
+          "model": "Sonic",
+          "trim": "Lt",
+          "odometer": 63329,
+          "list_price": 9991.0,
+          "adjusted_comparable_value": 7952.0,
+          "source": "Autotrader",
+          "dealer_name": "Southtowne Chevrolet Buick Gmc Cadillac",
+          "dealer_city": "Newnan",
+          "dealer_state": "GA",
+          "distance_from_loss_miles": 72,
+          "stock_number": "2Z20051A",
+          "updated_date": "02/21/2021",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": null,
+          "adjustment_options": null,
+          "adjustment_package": null,
+          "adjustment_condition": null
+        }
+      ],
+      "component_conditions": [
+        {
+          "component_name": "Mechanical",
+          "condition_rating": "GOOD",
+          "inspection_notes": "Belts and hoses firm, show minimal wear. Minimal dirt and grease in engine compartment.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Tires",
+          "condition_rating": "GOOD",
+          "inspection_notes": "Based on documentation provided tires appear to be in good condition.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Paint",
+          "condition_rating": "GOOD",
+          "inspection_notes": "Few small deep chips and/or scratches front sheet metal. Based on documentation provided paint appears in good condtition.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Body",
+          "condition_rating": "GOOD",
+          "inspection_notes": "Based on documentation provided body of vehicle in good condition.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Glass",
+          "condition_rating": "GOOD",
+          "inspection_notes": "Light surface scratches and/or pitting. Few chips.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Interior",
+          "condition_rating": "GOOD",
+          "inspection_notes": "Headliner moderate soiling. Light soiling front seat/carpet. Few light burns from cigarette ash driver carpet. Light soiling rear seat/carpet.",
+          "value_impact": 0
+        }
+      ],
+      "nhtsa_recalls": []
+    },
+    "field_citations": [
+      {
+        "field_path": "report_reference_number",
+        "page": 1,
+        "bbox": [
+          0.398008,
+          0.385755,
+          0.069247,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "101042591",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "insurance_company",
+        "page": 2,
+        "bbox": [
+          0.279993,
+          0.223643,
+          0.438995,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "AMERICAN FAMILY - AMERICAN STANDARD INS. CO. OF OHIO",
+        "confidence": 0.7751124466629953,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "owner_address",
+        "page": 1,
+        "bbox": [
+          0.397023,
+          0.228755,
+          0.141379,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "508a Plainville Rd Sw",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle_vin",
+        "page": 3,
+        "bbox": [
+          0.32414,
+          0.199691,
+          0.148906,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1G1JC5SH1G4162873",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle_year",
+        "page": 1,
+        "bbox": [
+          0.396805,
+          0.265422,
+          0.031594,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2016",
+        "confidence": 0.858096157186879,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle_make",
+        "page": 1,
+        "bbox": [
+          0.433903,
+          0.265371,
+          0.062065,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Chevrolet",
+        "confidence": 0.8040805504277635,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle_model",
+        "page": 1,
+        "bbox": [
+          0.500823,
+          0.265371,
+          0.035974,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Sonic",
+        "confidence": 0.7553883454869759,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle_trim",
+        "page": 3,
+        "bbox": [
+          0.323614,
+          0.2805,
+          0.015791,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "LT",
+        "confidence": 0.7528915117982928,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle_body_type",
+        "page": 3,
+        "bbox": [
+          0.323202,
+          0.3209,
+          0.040832,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Sedan",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle_odometer",
+        "page": 4,
+        "bbox": [
+          0.246682,
+          0.192899,
+          0.043765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "88,745",
+        "confidence": 0.7735354606763372,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_incident_date",
+        "page": 1,
+        "bbox": [
+          0.396988,
+          0.285573,
+          0.070253,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "02/17/2021",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claim_reported_date",
+        "page": 1,
+        "bbox": [
+          0.396991,
+          0.305781,
+          0.070253,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "03/04/2021",
+        "confidence": 0.862792313046539,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "base_vehicle_value",
+        "page": 1,
+        "bbox": [
+          0.456751,
+          0.611181,
+          0.105544,
+          0.018846
+        ],
+        "polygon": null,
+        "reference_text": "7,689.00",
+        "confidence": 0.7951064300781976,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "condition_adjustment",
+        "page": 6,
+        "bbox": [
+          0.623163,
+          0.530547,
+          0.006838,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.9490871044066818,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "adjusted_vehicle_value",
+        "page": 1,
+        "bbox": [
+          0.456751,
+          0.611181,
+          0.105544,
+          0.018846
+        ],
+        "polygon": null,
+        "reference_text": "7,689.00",
+        "confidence": 0.7951064300781976,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_settlement",
+        "page": 1,
+        "bbox": [
+          0.456751,
+          0.611181,
+          0.105544,
+          0.018846
+        ],
+        "polygon": null,
+        "reference_text": "7,689.00",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].comp_label",
+        "page": 7,
+        "bbox": [
+          0.064417,
+          0.25642,
+          0.050865,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Comp 1",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].vin",
+        "page": 7,
+        "bbox": [
+          0.304877,
+          0.337433,
+          0.148894,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1G1JC5SH2G4114086",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].year",
+        "page": 7,
+        "bbox": [
+          0.270957,
+          0.271831,
+          0.031824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2016",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].make",
+        "page": 7,
+        "bbox": [
+          0.30808,
+          0.27178,
+          0.066956,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Chevrolet",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].model",
+        "page": 7,
+        "bbox": [
+          0.379836,
+          0.271786,
+          0.039147,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Sonic",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].trim",
+        "page": 7,
+        "bbox": [
+          0.424577,
+          0.271882,
+          0.012574,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Lt",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].odometer",
+        "page": 7,
+        "bbox": [
+          0.345743,
+          0.32181,
+          0.050829,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "110,804",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].list_price",
+        "page": 7,
+        "bbox": [
+          0.510968,
+          0.272565,
+          0.035515,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "7,975",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].adjusted_comparable_value",
+        "page": 7,
+        "bbox": [
+          0.610967,
+          0.272565,
+          0.03545,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "7,729",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].source",
+        "page": 7,
+        "bbox": [
+          0.119449,
+          0.271852,
+          0.068848,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Autotrader",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].dealer_name",
+        "page": 7,
+        "bbox": [
+          0.065868,
+          0.288198,
+          0.200432,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Rick Hendrick Chevrolet-duluth",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].dealer_city",
+        "page": 7,
+        "bbox": [
+          0.065839,
+          0.305417,
+          0.044147,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Duluth,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].dealer_state",
+        "page": 7,
+        "bbox": [
+          0.127607,
+          0.603835,
+          0.020493,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "GA",
+        "confidence": 0.8136728124161122,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].distance_from_loss_miles",
+        "page": 7,
+        "bbox": [
+          0.065324,
+          0.337488,
+          0.015087,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "58",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].stock_number",
+        "page": 7,
+        "bbox": [
+          0.328473,
+          0.353847,
+          0.069659,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "SA10691A",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].updated_date",
+        "page": 7,
+        "bbox": [
+          0.370095,
+          0.370261,
+          0.070253,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "02/14/2021",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].comp_label",
+        "page": 7,
+        "bbox": [
+          0.064416,
+          0.397826,
+          0.052512,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Comp 2",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].vin",
+        "page": 7,
+        "bbox": [
+          0.304876,
+          0.478841,
+          0.148865,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1G1JC5SH4G4106880",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].year",
+        "page": 7,
+        "bbox": [
+          0.270956,
+          0.413237,
+          0.031824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2016",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].make",
+        "page": 7,
+        "bbox": [
+          0.308079,
+          0.413185,
+          0.066956,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Chevrolet",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].model",
+        "page": 7,
+        "bbox": [
+          0.379835,
+          0.413191,
+          0.039147,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Sonic",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].trim",
+        "page": 7,
+        "bbox": [
+          0.424576,
+          0.413288,
+          0.012574,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Lt",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].odometer",
+        "page": 7,
+        "bbox": [
+          0.344698,
+          0.463216,
+          0.043699,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "67,054",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].list_price",
+        "page": 7,
+        "bbox": [
+          0.510894,
+          0.413971,
+          0.035471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "9,950",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].adjusted_comparable_value",
+        "page": 7,
+        "bbox": [
+          0.610966,
+          0.413971,
+          0.035435,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "7,877",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].source",
+        "page": 7,
+        "bbox": [
+          0.119448,
+          0.413257,
+          0.068848,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Autotrader",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].dealer_name",
+        "page": 7,
+        "bbox": [
+          0.065882,
+          0.430728,
+          0.104924,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Hardy Chevrolet",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].dealer_city",
+        "page": 7,
+        "bbox": [
+          0.065485,
+          0.446754,
+          0.073912,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Gainesville,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].dealer_state",
+        "page": 7,
+        "bbox": [
+          0.127607,
+          0.603835,
+          0.020493,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "GA",
+        "confidence": 0.8136728124161122,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].distance_from_loss_miles",
+        "page": 7,
+        "bbox": [
+          0.065264,
+          0.478893,
+          0.015146,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "69",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].stock_number",
+        "page": 7,
+        "bbox": [
+          0.329413,
+          0.49531,
+          0.059065,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "10583UP",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].updated_date",
+        "page": 7,
+        "bbox": [
+          0.370093,
+          0.653073,
+          0.070253,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "02/21/2021",
+        "confidence": 0.7933668093481714,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].comp_label",
+        "page": 7,
+        "bbox": [
+          0.064415,
+          0.539232,
+          0.052615,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Comp 3",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].vin",
+        "page": 7,
+        "bbox": [
+          0.304875,
+          0.620247,
+          0.146879,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1G1JC5SH8G4128011",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].year",
+        "page": 7,
+        "bbox": [
+          0.270955,
+          0.554643,
+          0.031824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2016",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].make",
+        "page": 7,
+        "bbox": [
+          0.308078,
+          0.554592,
+          0.066956,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Chevrolet",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].model",
+        "page": 7,
+        "bbox": [
+          0.379834,
+          0.554597,
+          0.039147,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Sonic",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].trim",
+        "page": 7,
+        "bbox": [
+          0.424575,
+          0.554694,
+          0.012574,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Lt",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].odometer",
+        "page": 7,
+        "bbox": [
+          0.344697,
+          0.604622,
+          0.043757,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "63,329",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].list_price",
+        "page": 7,
+        "bbox": [
+          0.510893,
+          0.555378,
+          0.033485,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "9,991",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].adjusted_comparable_value",
+        "page": 7,
+        "bbox": [
+          0.610965,
+          0.555378,
+          0.035318,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "7,952",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].source",
+        "page": 7,
+        "bbox": [
+          0.119447,
+          0.554663,
+          0.068848,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Autotrader",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].dealer_name",
+        "page": 7,
+        "bbox": [
+          0.065366,
+          0.571009,
+          0.27675,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Southtowne Chevrolet Buick Automatic",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].dealer_city",
+        "page": 7,
+        "bbox": [
+          0.065822,
+          0.604642,
+          0.055603,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Newnan,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].dealer_state",
+        "page": 7,
+        "bbox": [
+          0.127607,
+          0.603835,
+          0.020493,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "GA",
+        "confidence": 0.8030947084491388,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].distance_from_loss_miles",
+        "page": 7,
+        "bbox": [
+          0.065396,
+          0.636651,
+          0.014881,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "72",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].stock_number",
+        "page": 7,
+        "bbox": [
+          0.328235,
+          0.63671,
+          0.067438,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2Z20051A",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].updated_date",
+        "page": 7,
+        "bbox": [
+          0.370093,
+          0.653073,
+          0.070253,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "02/21/2021",
+        "confidence": 0.7933668093481714,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[0].component_name",
+        "page": 6,
+        "bbox": [
+          0.064814,
+          0.207329,
+          0.072224,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Mechanical",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[0].condition_rating",
+        "page": 6,
+        "bbox": [
+          0.166792,
+          0.207255,
+          0.0434,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "GOOD",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[0].inspection_notes",
+        "page": 6,
+        "bbox": [
+          0.29077,
+          0.24131,
+          0.088044,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "compartment.",
+        "confidence": 0.7959035295253579,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[0].value_impact",
+        "page": 6,
+        "bbox": [
+          0.623163,
+          0.207312,
+          0.006853,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[1].component_name",
+        "page": 6,
+        "bbox": [
+          0.064064,
+          0.262884,
+          0.031753,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Tires",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[1].condition_rating",
+        "page": 6,
+        "bbox": [
+          0.166792,
+          0.262811,
+          0.0434,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "GOOD",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[1].inspection_notes",
+        "page": 6,
+        "bbox": [
+          0.291167,
+          0.352391,
+          0.117068,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "in good condtition.",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[1].value_impact",
+        "page": 6,
+        "bbox": [
+          0.62316,
+          0.262867,
+          0.006853,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[2].component_name",
+        "page": 5,
+        "bbox": [
+          0.314205,
+          0.459215,
+          0.032268,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Paint",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[2].condition_rating",
+        "page": 6,
+        "bbox": [
+          0.306196,
+          0.352391,
+          0.031168,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "good",
+        "confidence": 0.776383601499492,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[2].value_impact",
+        "page": 6,
+        "bbox": [
+          0.62316,
+          0.262867,
+          0.006853,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.755220818895855,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[3].component_name",
+        "page": 6,
+        "bbox": [
+          0.0648,
+          0.375123,
+          0.032291,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Body",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[3].condition_rating",
+        "page": 6,
+        "bbox": [
+          0.306196,
+          0.352391,
+          0.031168,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "good",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[3].inspection_notes",
+        "page": 6,
+        "bbox": [
+          0.291167,
+          0.352391,
+          0.117068,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "in good condtition.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[3].value_impact",
+        "page": 6,
+        "bbox": [
+          0.62316,
+          0.262867,
+          0.006853,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.755220818895855,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[4].component_name",
+        "page": 5,
+        "bbox": [
+          0.291802,
+          0.436368,
+          0.036224,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Glass",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[4].condition_rating",
+        "page": 6,
+        "bbox": [
+          0.306196,
+          0.352391,
+          0.031168,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "good",
+        "confidence": 0.776383601499492,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[4].value_impact",
+        "page": 6,
+        "bbox": [
+          0.62316,
+          0.262867,
+          0.006853,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.755220818895855,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[5].component_name",
+        "page": 6,
+        "bbox": [
+          0.065094,
+          0.452281,
+          0.044582,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Interior",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[5].condition_rating",
+        "page": 6,
+        "bbox": [
+          0.166792,
+          0.452207,
+          0.0434,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "GOOD",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[5].inspection_notes",
+        "page": 6,
+        "bbox": [
+          0.065094,
+          0.453031,
+          0.564923,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Interior GOOD Headliner moderate soiling. Light soiling $ 0",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[5].value_impact",
+        "page": 6,
+        "bbox": [
+          0.623163,
+          0.452264,
+          0.006853,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:29:36.406570Z",
+  "completed_at": "2026-09-13T20:29:36.406570Z",
+  "latency_in_ms": 1037
+}

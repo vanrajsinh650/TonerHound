@@ -1,0 +1,379 @@
+{
+  "request": {
+    "example_id": "short/08-43259 H-12 3-18-2024 F-22737",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/08-43259 H-12 3-18-2024 F-22737.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 18,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/08-43259 H-12 3-18-2024 F-22737",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "operator_name": "CHEVRON U.S.A. Inc.",
+      "operator_p5_no": "148113",
+      "rrc_district_no_and_county": "08",
+      "mailing_address": "6301 Deauville BLVD Midland, TX 79706",
+      "recovery_waterflood": false,
+      "recovery_co2_augmented_waterflooding": false,
+      "recovery_polymer_augmented_waterflooding": false,
+      "recovery_immiscible_co2_displacement": false,
+      "recovery_steam_drive_injection": false,
+      "recovery_gas_injection": true,
+      "recovery_microemulsion_micellar_flooding": false,
+      "recovery_alkaline_caustic_flooding": false,
+      "recovery_cyclic_steam_injection": false,
+      "recovery_in_situ_combustion": false,
+      "recovery_miscible_fluid_displacement": false,
+      "recovery_other": false,
+      "recovery_other_specify": null,
+      "new_initial_secondary": false,
+      "new_initial_tertiary": true,
+      "new_tertiary_superseding_secondary": false,
+      "exp_different_secondary_method": false,
+      "exp_expansion_secondary": false,
+      "exp_different_tertiary_method": false,
+      "exp_expansion_tertiary": false,
+      "change_previous_method": null,
+      "change_previous_fluid": null,
+      "fluid_brackish_water": true,
+      "fluid_saltwater": false,
+      "fluid_natural_gas": true,
+      "fluid_fresh_water": false,
+      "fluid_air": false,
+      "fluid_polymer": false,
+      "fluid_nitrogen": false,
+      "fluid_lpg": false,
+      "fluid_co2": false,
+      "fluid_other": false,
+      "fluid_other_specify": null,
+      "est_avg_volume_fluid_injected": "see injection schedule",
+      "est_avg_injection_pressure": "4500",
+      "est_ult_additional_production_oil": "800,000",
+      "est_ult_additional_production_gas": null,
+      "est_total_value_oil": "$32,000,000",
+      "est_total_value_gas": null,
+      "est_cost_machinery": null,
+      "est_cost_project_total": "$6,000,000",
+      "anticipated_date_injection_begin": "6/1/2024",
+      "multiple_lease_yes": false,
+      "multiple_lease_no": true,
+      "total_anticipated_leases": "1",
+      "total_anticipated_producing_wells": "4",
+      "total_anticipated_injection_wells": "4",
+      "field_name": "PARKS (CONSOLIDATED)",
+      "lease_or_unit_name": "SCHARBAUER, C.",
+      "lease_no": "43259",
+      "unitization_approved_yes": false,
+      "unitization_approved_no": true,
+      "unitization_order_no_and_date": null,
+      "unitization_needed_yes": false,
+      "unitization_needed_no": true,
+      "inj_auth_a_granted": true,
+      "inj_auth_a_project_no": "22737",
+      "inj_auth_a_authority_date": "Jan 10, 2024",
+      "inj_auth_a_wells": "0021WB, 0023WB, 0031WB, 0033WB",
+      "inj_auth_b_applied": false,
+      "inj_auth_b_applied_date": null,
+      "inj_auth_b_project_no": null,
+      "inj_auth_b_wells": null,
+      "inj_auth_c_anticipated": false,
+      "inj_auth_c_wells": null,
+      "signature_present": true,
+      "title": "Production Engineer, Pilots",
+      "name_print_or_type": "Kelly Krezinski",
+      "certificate_date": "6/1/2024",
+      "phone": "(713) 372-2430",
+      "rrc_approved": true,
+      "rrc_denied": false,
+      "rrc_technical_examiner": "JH",
+      "rrc_action_date": "March 18, 2024"
+    },
+    "field_citations": [
+      {
+        "field_path": "operator_name",
+        "page": 1,
+        "bbox": [
+          0.055623,
+          0.120384,
+          0.150544,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "CHEVRON U.S.A. Inc.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_p5_no",
+        "page": 1,
+        "bbox": [
+          0.489117,
+          0.116962,
+          0.048972,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "148113",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district_no_and_county",
+        "page": 1,
+        "bbox": [
+          0.616082,
+          0.116107,
+          0.007255,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "8",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "est_avg_volume_fluid_injected",
+        "page": 1,
+        "bbox": [
+          0.374244,
+          0.436894,
+          0.146917,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "gee injection schedule",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "est_avg_injection_pressure",
+        "page": 1,
+        "bbox": [
+          0.828295,
+          0.430906,
+          0.033253,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "4500",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "est_ult_additional_production_oil",
+        "page": 1,
+        "bbox": [
+          0.209794,
+          0.465765,
+          0.053204,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "800,000",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "est_cost_project_total",
+        "page": 1,
+        "bbox": [
+          0.549577,
+          0.492497,
+          0.066505,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "6,000,000",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "anticipated_date_injection_begin",
+        "page": 1,
+        "bbox": [
+          0.538089,
+          0.833601,
+          0.058041,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "6/1/2024",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_anticipated_leases",
+        "page": 1,
+        "bbox": [
+          0.038694,
+          0.110974,
+          0.009069,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1.",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_anticipated_producing_wells",
+        "page": 1,
+        "bbox": [
+          0.038089,
+          0.144336,
+          0.010278,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "4.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_anticipated_injection_wells",
+        "page": 1,
+        "bbox": [
+          0.038089,
+          0.144336,
+          0.010278,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "4.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "field_name",
+        "page": 1,
+        "bbox": [
+          0.044135,
+          0.552163,
+          0.183192,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "PARKS (CONSOLIDATED)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_or_unit_name",
+        "page": 1,
+        "bbox": [
+          0.434704,
+          0.550025,
+          0.12636,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "SCHARBAUER, C.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "inj_auth_a_project_no",
+        "page": 1,
+        "bbox": [
+          0.39601,
+          0.615679,
+          0.051995,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "F-22737",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "inj_auth_a_wells",
+        "page": 1,
+        "bbox": [
+          0.113059,
+          0.635568,
+          0.255139,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0021WB, 0023WB, 0031WB, 0033WB",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "title",
+        "page": 1,
+        "bbox": [
+          0.529625,
+          0.816706,
+          0.181378,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Production Engineer, Pliots",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "certificate_date",
+        "page": 1,
+        "bbox": [
+          0.538089,
+          0.833601,
+          0.058041,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "6/1/2024",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "phone",
+        "page": 1,
+        "bbox": [
+          0.747279,
+          0.833173,
+          0.126965,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "(713 ) 372-2430",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:05:57.763995Z",
+  "completed_at": "2026-09-13T20:05:57.763995Z",
+  "latency_in_ms": 11382
+}

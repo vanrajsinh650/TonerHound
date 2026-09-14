@@ -1,0 +1,4008 @@
+{
+  "request": {
+    "example_id": "medium/ccc_online_0003_geico_ford_crown_victoria_corrupted",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/ccc_online_0003_geico_ford_crown_victoria_corrupted.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 241,
+    "ocr_pages": 0,
+    "num_pages": 19
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/ccc_online_0003_geico_ford_crown_victoria_corrupted",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "report_reference_number": "88515283",
+      "claim_reference": "0603405890107107-01",
+      "insurance_company": "GEICO",
+      "owner_name": "Wingo, Sharon",
+      "owner_address": "144 Kristie Ln Kings Mtn, NC 28086",
+      "loss_vehicle_vin": "2FAFP74W9WX138696",
+      "loss_vehicle_year": 1998,
+      "loss_vehicle_make": "Ford",
+      "loss_vehicle_model": "Crown Victoria",
+      "loss_vehicle_trim": "LX",
+      "loss_vehicle_body_type": "Sedan",
+      "loss_vehicle_odometer": 113444,
+      "loss_incident_date": "05/03/2018",
+      "claim_reported_date": "05/04/2018",
+      "base_vehicle_value": 3952.0,
+      "condition_adjustment": -145.0,
+      "adjusted_vehicle_value": 3807.0,
+      "vehicular_tax": 114.21,
+      "title_registration_fees": null,
+      "deductible": -500.0,
+      "total_settlement": 3421.21,
+      "comparable_vehicles": [
+        {
+          "comp_label": "Comp 1",
+          "vin": "2FAFP74W9WX182844",
+          "year": 1998,
+          "make": "Ford",
+          "model": "Crown Victoria",
+          "trim": "Lx",
+          "odometer": 139014,
+          "list_price": 4029.0,
+          "adjusted_comparable_value": 4215.0,
+          "source": "Dealer Ad",
+          "dealer_name": "Everybody Rides",
+          "dealer_city": "Sevierville",
+          "dealer_state": "TN",
+          "distance_from_loss_miles": 127,
+          "stock_number": "P1769",
+          "updated_date": "04/25/2018",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": 388.0,
+          "adjustment_options": 148.0,
+          "adjustment_package": null,
+          "adjustment_condition": -350.0
+        },
+        {
+          "comp_label": "Comp 2",
+          "vin": "2FAFP74W6XX119413",
+          "year": 1999,
+          "make": "Ford",
+          "model": "Crown Victoria",
+          "trim": "Lx",
+          "odometer": 106865,
+          "list_price": 3299.0,
+          "adjusted_comparable_value": 2910.0,
+          "source": "Autotrader",
+          "dealer_name": "Flywheel Auto Sales",
+          "dealer_city": "Woodstock",
+          "dealer_state": "GA",
+          "distance_from_loss_miles": 197,
+          "stock_number": null,
+          "updated_date": "04/27/2018",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": -81.0,
+          "adjustment_options": 42.0,
+          "adjustment_package": null,
+          "adjustment_condition": -350.0
+        },
+        {
+          "comp_label": "Comp 3",
+          "vin": "2FAFP74W8XX107201",
+          "year": 1999,
+          "make": "Ford",
+          "model": "Crown Victoria",
+          "trim": "Lx",
+          "odometer": 143137,
+          "list_price": 4975.0,
+          "adjusted_comparable_value": 5135.0,
+          "source": "Dealer Ad",
+          "dealer_name": "Childre Ford Inc",
+          "dealer_city": "Sandersville",
+          "dealer_state": "GA",
+          "distance_from_loss_miles": 176,
+          "stock_number": "107201",
+          "updated_date": "03/09/2018",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": 468.0,
+          "adjustment_options": 42.0,
+          "adjustment_package": null,
+          "adjustment_condition": -350.0
+        },
+        {
+          "comp_label": "Comp 4",
+          "vin": "2FAFP74W6XX209953",
+          "year": 1999,
+          "make": "Ford",
+          "model": "Crown Victoria",
+          "trim": "Lx",
+          "odometer": 133971,
+          "list_price": 3300.0,
+          "adjusted_comparable_value": 3321.0,
+          "source": "Dealer Ad",
+          "dealer_name": "Lap Of Luxury Motors",
+          "dealer_city": "Goldsboro",
+          "dealer_state": "NC",
+          "distance_from_loss_miles": 188,
+          "stock_number": null,
+          "updated_date": "03/09/2018",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": 329.0,
+          "adjustment_options": 42.0,
+          "adjustment_package": null,
+          "adjustment_condition": -350.0
+        },
+        {
+          "comp_label": "Comp 5",
+          "vin": "2FAFP74W6XX185346",
+          "year": 1999,
+          "make": "Ford",
+          "model": "Crown Victoria",
+          "trim": "Lx",
+          "odometer": 118788,
+          "list_price": 2995.0,
+          "adjusted_comparable_value": 2765.0,
+          "source": "Autotrader",
+          "dealer_name": "Hrm Auto Sales",
+          "dealer_city": "Macon",
+          "dealer_state": "GA",
+          "distance_from_loss_miles": 211,
+          "stock_number": null,
+          "updated_date": "03/28/2018",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": 99.0,
+          "adjustment_options": 21.0,
+          "adjustment_package": null,
+          "adjustment_condition": -350.0
+        },
+        {
+          "comp_label": "Comp 6",
+          "vin": "2FAFP74W8XX123429",
+          "year": 1999,
+          "make": "Ford",
+          "model": "Crown Victoria",
+          "trim": "Lx",
+          "odometer": 127356,
+          "list_price": 3995.0,
+          "adjusted_comparable_value": 3916.0,
+          "source": "Autotrader",
+          "dealer_name": "Capital Ford Lincoln Rock",
+          "dealer_city": "Rocky Mount",
+          "dealer_state": "NC",
+          "distance_from_loss_miles": 204,
+          "stock_number": "RP7687",
+          "updated_date": "02/27/2018",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": 229.0,
+          "adjustment_options": 42.0,
+          "adjustment_package": null,
+          "adjustment_condition": -350.0
+        },
+        {
+          "comp_label": "Comp 7",
+          "vin": "2FAFP73W4XX188747",
+          "year": 1999,
+          "make": "Ford",
+          "model": "Crown Victoria",
+          "trim": null,
+          "odometer": 152872,
+          "list_price": 4900.0,
+          "adjusted_comparable_value": 5261.0,
+          "source": "Autotrader",
+          "dealer_name": "Sanders Ford",
+          "dealer_city": "Jacksonville",
+          "dealer_state": "NC",
+          "distance_from_loss_miles": 222,
+          "stock_number": "T27454A",
+          "updated_date": "04/17/2018",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": null,
+          "adjustment_options": null,
+          "adjustment_package": null,
+          "adjustment_condition": null
+        },
+        {
+          "comp_label": "Comp 8",
+          "vin": "2FAFP74W4XX121757",
+          "year": 1999,
+          "make": "Ford",
+          "model": "Crown Victoria",
+          "trim": "Lx",
+          "odometer": 165681,
+          "list_price": 3995.0,
+          "adjusted_comparable_value": 4509.0,
+          "source": "Autotrader",
+          "dealer_name": "John Sang Ford Lincoln Me",
+          "dealer_city": "Gallipolis",
+          "dealer_state": "OH",
+          "distance_from_loss_miles": 251,
+          "stock_number": "S01732",
+          "updated_date": "02/22/2018",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": null,
+          "adjustment_options": null,
+          "adjustment_package": null,
+          "adjustment_condition": null
+        },
+        {
+          "comp_label": "Comp 9",
+          "vin": "2FAFP74W3XX211658",
+          "year": 1999,
+          "make": "Ford",
+          "model": "Crown Victoria",
+          "trim": "Lx",
+          "odometer": 106451,
+          "list_price": 4995.0,
+          "adjusted_comparable_value": 4599.0,
+          "source": "Dealer Ad",
+          "dealer_name": "Auto Save",
+          "dealer_city": "Opelika",
+          "dealer_state": "AL",
+          "distance_from_loss_miles": 292,
+          "stock_number": "P211658_1",
+          "updated_date": "03/09/2018",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": null,
+          "adjustment_options": null,
+          "adjustment_package": null,
+          "adjustment_condition": null
+        },
+        {
+          "comp_label": "Comp 10",
+          "vin": "2FAFP74W5XX191123",
+          "year": 1999,
+          "make": "Ford",
+          "model": "Crown Victoria",
+          "trim": "Lx",
+          "odometer": 86228,
+          "list_price": 4995.0,
+          "adjusted_comparable_value": 4251.0,
+          "source": "Autotrader",
+          "dealer_name": "Vallery Ford",
+          "dealer_city": "Waverly",
+          "dealer_state": "OH",
+          "distance_from_loss_miles": 283,
+          "stock_number": "P5547",
+          "updated_date": "04/11/2018",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": null,
+          "adjustment_options": null,
+          "adjustment_package": null,
+          "adjustment_condition": null
+        },
+        {
+          "comp_label": "Comp 11",
+          "vin": "2FAFP74W4XX230817",
+          "year": 1999,
+          "make": "Ford",
+          "model": "Crown Victoria",
+          "trim": "Lx",
+          "odometer": 166875,
+          "list_price": 3000.0,
+          "adjusted_comparable_value": 3534.0,
+          "source": "Dealer Ad",
+          "dealer_name": "Don Franklin Campbellsvil",
+          "dealer_city": "Campbellsville",
+          "dealer_state": "KY",
+          "distance_from_loss_miles": 266,
+          "stock_number": "XX230817",
+          "updated_date": "04/11/2018",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": null,
+          "adjustment_options": null,
+          "adjustment_package": null,
+          "adjustment_condition": null
+        },
+        {
+          "comp_label": "Comp 12",
+          "vin": "2FAFP74W7XX189096",
+          "year": 1999,
+          "make": "Ford",
+          "model": "Crown Victoria",
+          "trim": "Lx",
+          "odometer": 163248,
+          "list_price": 2988.0,
+          "adjusted_comparable_value": 3461.0,
+          "source": "Autotrader",
+          "dealer_name": "Autonation Chrysler Dodge",
+          "dealer_city": "Columbus",
+          "dealer_state": "GA",
+          "distance_from_loss_miles": 282,
+          "stock_number": "XX189096",
+          "updated_date": "04/09/2018",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": null,
+          "adjustment_options": null,
+          "adjustment_package": null,
+          "adjustment_condition": null
+        }
+      ],
+      "component_conditions": [
+        {
+          "component_name": "Mechanical",
+          "condition_rating": "AVERAGE PRIVATE",
+          "inspection_notes": "Notes: DIRT/GREASE Guideline: Transmission: Fluid slightly discolored. A few areas of seepage. Engine: Few small leaks. Belts and hoses firm, show minimal wear. Significant dirt and grease in engine compartment.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Tires",
+          "condition_rating": "ROUGH",
+          "inspection_notes": "Notes: Passenger Tires: Rt Frt Tire-4/32; Lt Frt Tire-4/32; Rt Rr Tire-1/32; Lt Rr Tire-2/32. % of Tread Wear-0.25. Condition Rating-Rough. Guideline: Rear Tires: 40% or less of new. Example: Typical new car tires are 11/32, loss measures at 3/32 = 28% (3/11) Front Tires: 40% or less of new. Example: Typical new car tires are 11/32, loss measures at 3/32 = 28% (3/11)",
+          "value_impact": -24
+        },
+        {
+          "component_name": "Paint",
+          "condition_rating": "ROUGH",
+          "inspection_notes": "Notes: PAINT ON RT QTR HEAVILY FADED, SCRATCHES ON TRUNK, SCRATCHES REAR BUMPER, HOOD MISSING CLEAR Guideline: Numerous large deep chips and/or scratches. Heavy peeling, flaking, fading and/or mismatched panels. Significant fading.",
+          "value_impact": -60
+        },
+        {
+          "component_name": "Body",
+          "condition_rating": "AVERAGE PRIVATE",
+          "inspection_notes": "Notes: REAR BUMPER CRACKED, DAMAGE TO RT FRONT DOOR, DENT HOOD Guideline: Sheet Metal: Few dents and/or numerous dings. No significant surface rust. Trim: Minimal damage to components. Few dents and/or numerous dings.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Glass",
+          "condition_rating": "AVERAGE PRIVATE",
+          "inspection_notes": "Notes: W/S CHIPPED Guideline: Light surface scratches and/or pitting. Few chips.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Seats",
+          "condition_rating": "ROUGH",
+          "inspection_notes": "Notes: LARGE TEARS IN PASSENGER SEAT, DRIVERS SEAT HEAVILY WORN Guideline: Heavily soiled, faded and/or discolored. Numerous large tears, holes and/or burn marks. Heavily worn and bare spots.",
+          "value_impact": -43
+        },
+        {
+          "component_name": "Carpets",
+          "condition_rating": "AVERAGE PRIVATE",
+          "inspection_notes": "Notes: SOILED/STAINED Guideline: Lightly soiled and/or stained. Few small tears, holes and/or burn marks. No significant bare spots.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Dashboard",
+          "condition_rating": "AVERAGE PRIVATE",
+          "inspection_notes": "Notes: STEERING WHEEL HEAVILY WORN Guideline: Significant scratches and/or gouges. Components damaged and/or cracked. Significant wear.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Headliner",
+          "condition_rating": "ROUGH",
+          "inspection_notes": "Notes: LOOSE, SCUFFED/STAINED Guideline: Numerous large holes and/or burn marks. Heavily scuffed.",
+          "value_impact": -18
+        }
+      ],
+      "nhtsa_recalls": [
+        {
+          "campaign_id": "98V322",
+          "component": null,
+          "mfg_report_date": null
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "report_reference_number",
+        "page": 1,
+        "bbox": [
+          0.393529,
+          0.387089,
+          0.064706,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "88515283",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "insurance_company",
+        "page": 15,
+        "bbox": [
+          0.761176,
+          0.131291,
+          0.038235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "GEICO",
+        "confidence": 0.7965395918197407,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "owner_address",
+        "page": 1,
+        "bbox": [
+          0.392353,
+          0.24748,
+          0.138824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Kings Mtn, NC 28086",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle_vin",
+        "page": 15,
+        "bbox": [
+          0.771765,
+          0.161759,
+          0.138235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "(2FAFP74W9WX138696).",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle_year",
+        "page": 15,
+        "bbox": [
+          0.824118,
+          0.145843,
+          0.025294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1998",
+        "confidence": 0.7730241432032923,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle_make",
+        "page": 1,
+        "bbox": [
+          0.43,
+          0.266807,
+          0.028235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Ford",
+        "confidence": 0.8102269358839184,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle_trim",
+        "page": 1,
+        "bbox": [
+          0.563529,
+          0.265443,
+          0.017059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "LX",
+        "confidence": 0.8346469011974001,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle_body_type",
+        "page": 3,
+        "bbox": [
+          0.318235,
+          0.302505,
+          0.041176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Sedan",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle_odometer",
+        "page": 8,
+        "bbox": [
+          0.307647,
+          0.209508,
+          0.051176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "113,444",
+        "confidence": 0.7828002609965644,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_incident_date",
+        "page": 1,
+        "bbox": [
+          0.392353,
+          0.287271,
+          0.072941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "05/03/2018",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claim_reported_date",
+        "page": 1,
+        "bbox": [
+          0.392941,
+          0.307508,
+          0.072353,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "05/04/2018",
+        "confidence": 0.7536913317085758,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "base_vehicle_value",
+        "page": 1,
+        "bbox": [
+          0.493529,
+          0.551482,
+          0.068824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3,952.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "condition_adjustment",
+        "page": 1,
+        "bbox": [
+          0.497647,
+          0.56808,
+          0.065294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "- $145.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "adjusted_vehicle_value",
+        "page": 1,
+        "bbox": [
+          0.493529,
+          0.593547,
+          0.069412,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3,807.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "deductible",
+        "page": 1,
+        "bbox": [
+          0.498824,
+          0.688135,
+          0.065294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "- $500.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_settlement",
+        "page": 1,
+        "bbox": [
+          0.433529,
+          0.716235,
+          0.127647,
+          0.02683
+        ],
+        "polygon": null,
+        "reference_text": "$3,421.21",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].comp_label",
+        "page": 8,
+        "bbox": [
+          0.392941,
+          0.168581,
+          0.056471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Comp 1",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].year",
+        "page": 8,
+        "bbox": [
+          0.698824,
+          0.197912,
+          0.027647,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1998",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].make",
+        "page": 8,
+        "bbox": [
+          0.730588,
+          0.19814,
+          0.028235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Ford",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].model",
+        "page": 8,
+        "bbox": [
+          0.762941,
+          0.199504,
+          0.091176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Crown Victoria",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].trim",
+        "page": 8,
+        "bbox": [
+          0.858824,
+          0.200186,
+          0.014118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Lx",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].odometer",
+        "page": 8,
+        "bbox": [
+          0.395882,
+          0.210873,
+          0.051176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "139,014",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].list_price",
+        "page": 9,
+        "bbox": [
+          0.412353,
+          0.169718,
+          0.048824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$4,029",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].adjusted_comparable_value",
+        "page": 9,
+        "bbox": [
+          0.411176,
+          0.279995,
+          0.048235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$4,215",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].source",
+        "page": 11,
+        "bbox": [
+          0.126471,
+          0.77522,
+          0.064118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Dealer Ad",
+        "confidence": 0.754049837561103,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].dealer_city",
+        "page": 8,
+        "bbox": [
+          0.761765,
+          0.32115,
+          0.061765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Sevierville,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].dealer_state",
+        "page": 8,
+        "bbox": [
+          0.828235,
+          0.32115,
+          0.016471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "TN",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].distance_from_loss_miles",
+        "page": 8,
+        "bbox": [
+          0.695882,
+          0.319331,
+          0.02,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "127",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].stock_number",
+        "page": 8,
+        "bbox": [
+          0.745882,
+          0.289545,
+          0.036471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "P1769",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].updated_date",
+        "page": 8,
+        "bbox": [
+          0.869412,
+          0.186089,
+          0.064706,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "04/25/2018",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].adjustment_mileage",
+        "page": 9,
+        "bbox": [
+          0.412353,
+          0.229063,
+          0.051176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "+$388",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].adjustment_options",
+        "page": 9,
+        "bbox": [
+          0.412353,
+          0.21201,
+          0.048235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "+$148",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].adjustment_condition",
+        "page": 10,
+        "bbox": [
+          0.406471,
+          0.450527,
+          0.045294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "-$350",
+        "confidence": 0.8243743039214075,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].comp_label",
+        "page": 8,
+        "bbox": [
+          0.486471,
+          0.169945,
+          0.058824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Comp 2",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].vin",
+        "page": 8,
+        "bbox": [
+          0.718235,
+          0.38095,
+          0.134706,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2FAFP74W6XX119413",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].year",
+        "page": 8,
+        "bbox": [
+          0.694118,
+          0.349572,
+          0.028235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1999",
+        "confidence": 0.7688255701724336,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].make",
+        "page": 8,
+        "bbox": [
+          0.730588,
+          0.19814,
+          0.028235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Ford",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].model",
+        "page": 8,
+        "bbox": [
+          0.762941,
+          0.199504,
+          0.091176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Crown Victoria",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].trim",
+        "page": 8,
+        "bbox": [
+          0.858824,
+          0.200186,
+          0.014118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Lx",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].odometer",
+        "page": 8,
+        "bbox": [
+          0.49,
+          0.213146,
+          0.05,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "106,865",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].list_price",
+        "page": 9,
+        "bbox": [
+          0.507059,
+          0.170627,
+          0.048824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$3,299",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].adjusted_comparable_value",
+        "page": 9,
+        "bbox": [
+          0.505294,
+          0.280905,
+          0.048235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$2910",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].source",
+        "page": 8,
+        "bbox": [
+          0.739412,
+          0.426198,
+          0.060588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Autotrader",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].dealer_city",
+        "page": 8,
+        "bbox": [
+          0.757647,
+          0.457576,
+          0.067059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Woodstock,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].dealer_state",
+        "page": 8,
+        "bbox": [
+          0.828824,
+          0.457803,
+          0.018824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "GA",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].distance_from_loss_miles",
+        "page": 8,
+        "bbox": [
+          0.691765,
+          0.455757,
+          0.020588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "197",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].updated_date",
+        "page": 8,
+        "bbox": [
+          0.865294,
+          0.337521,
+          0.064118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "04/27/2018",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].adjustment_mileage",
+        "page": 9,
+        "bbox": [
+          0.518235,
+          0.228835,
+          0.033529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "-$81",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].adjustment_options",
+        "page": 9,
+        "bbox": [
+          0.608824,
+          0.213146,
+          0.040588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "+$42",
+        "confidence": 0.7754066719245454,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].adjustment_condition",
+        "page": 10,
+        "bbox": [
+          0.406471,
+          0.450527,
+          0.045294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "-$350",
+        "confidence": 0.8243743039214075,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].comp_label",
+        "page": 8,
+        "bbox": [
+          0.58,
+          0.171537,
+          0.058824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Comp 3",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].vin",
+        "page": 8,
+        "bbox": [
+          0.714118,
+          0.517603,
+          0.132941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2FAFP74WBXX107201",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].year",
+        "page": 8,
+        "bbox": [
+          0.694118,
+          0.349572,
+          0.028235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1999",
+        "confidence": 0.7688255701724336,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].make",
+        "page": 8,
+        "bbox": [
+          0.730588,
+          0.19814,
+          0.028235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Ford",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].model",
+        "page": 8,
+        "bbox": [
+          0.762941,
+          0.199504,
+          0.091176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Crown Victoria",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].trim",
+        "page": 8,
+        "bbox": [
+          0.858824,
+          0.200186,
+          0.014118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Lx",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].odometer",
+        "page": 8,
+        "bbox": [
+          0.583529,
+          0.214738,
+          0.050588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "143,137",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].list_price",
+        "page": 9,
+        "bbox": [
+          0.601176,
+          0.171309,
+          0.048235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$4975",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].adjusted_comparable_value",
+        "page": 9,
+        "bbox": [
+          0.599412,
+          0.281814,
+          0.048235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$5,135",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].source",
+        "page": 11,
+        "bbox": [
+          0.126471,
+          0.77522,
+          0.064118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Dealer Ad",
+        "confidence": 0.754049837561103,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].dealer_city",
+        "page": 8,
+        "bbox": [
+          0.753529,
+          0.609008,
+          0.073529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Sandersville,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].dealer_state",
+        "page": 8,
+        "bbox": [
+          0.828824,
+          0.457803,
+          0.018824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "GA",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].distance_from_loss_miles",
+        "page": 8,
+        "bbox": [
+          0.687647,
+          0.607189,
+          0.02,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "176",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].stock_number",
+        "page": 8,
+        "bbox": [
+          0.738235,
+          0.577403,
+          0.04,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "107201",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].updated_date",
+        "page": 8,
+        "bbox": [
+          0.861176,
+          0.473947,
+          0.064706,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "03/09/2018",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].adjustment_mileage",
+        "page": 9,
+        "bbox": [
+          0.600588,
+          0.229518,
+          0.048235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "+$468",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].adjustment_options",
+        "page": 9,
+        "bbox": [
+          0.608824,
+          0.213146,
+          0.040588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "+$42",
+        "confidence": 0.7754066719245454,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[2].adjustment_condition",
+        "page": 10,
+        "bbox": [
+          0.406471,
+          0.450527,
+          0.045294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "-$350",
+        "confidence": 0.8243743039214075,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[3].comp_label",
+        "page": 9,
+        "bbox": [
+          0.695294,
+          0.327744,
+          0.047059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Comp 4",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[3].vin",
+        "page": 9,
+        "bbox": [
+          0.72,
+          0.373447,
+          0.135882,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2FAFP74W6XX209953",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[3].year",
+        "page": 9,
+        "bbox": [
+          0.695294,
+          0.342296,
+          0.028235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1999",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[3].make",
+        "page": 9,
+        "bbox": [
+          0.727647,
+          0.342296,
+          0.028824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Ford",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[3].model",
+        "page": 9,
+        "bbox": [
+          0.76,
+          0.342751,
+          0.091765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Crown Victoria",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[3].trim",
+        "page": 9,
+        "bbox": [
+          0.856471,
+          0.343206,
+          0.014706,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Lx",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[3].odometer",
+        "page": 9,
+        "bbox": [
+          0.391765,
+          0.358667,
+          0.048824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "133,971",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[3].list_price",
+        "page": 10,
+        "bbox": [
+          0.414118,
+          0.375948,
+          0.035882,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3,300",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[3].adjusted_comparable_value",
+        "page": 10,
+        "bbox": [
+          0.403529,
+          0.486225,
+          0.047059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$3,321",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[3].source",
+        "page": 9,
+        "bbox": [
+          0.742353,
+          0.418467,
+          0.037647,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Dealer",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[3].dealer_city",
+        "page": 9,
+        "bbox": [
+          0.760588,
+          0.449845,
+          0.062941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Goldsboro,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[3].dealer_state",
+        "page": 9,
+        "bbox": [
+          0.828824,
+          0.450072,
+          0.018235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "NC",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[3].distance_from_loss_miles",
+        "page": 9,
+        "bbox": [
+          0.694706,
+          0.448708,
+          0.020588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "188",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[3].updated_date",
+        "page": 9,
+        "bbox": [
+          0.867059,
+          0.328653,
+          0.065294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "03/09/2018",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[3].adjustment_mileage",
+        "page": 10,
+        "bbox": [
+          0.402941,
+          0.434156,
+          0.048235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "+$329",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[3].adjustment_options",
+        "page": 9,
+        "bbox": [
+          0.608824,
+          0.213146,
+          0.040588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "+$42",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[3].adjustment_condition",
+        "page": 9,
+        "bbox": [
+          0.509412,
+          0.246116,
+          0.047059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "-$350",
+        "confidence": 0.8033913875843854,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[4].comp_label",
+        "page": 11,
+        "bbox": [
+          0.064706,
+          0.509417,
+          0.053529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Comp 9",
+        "confidence": 0.7679775280898877,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[4].year",
+        "page": 11,
+        "bbox": [
+          0.272941,
+          0.522378,
+          0.031176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1999",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[4].make",
+        "page": 11,
+        "bbox": [
+          0.31,
+          0.521696,
+          0.030588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Ford",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[4].model",
+        "page": 11,
+        "bbox": [
+          0.345882,
+          0.521014,
+          0.103529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Crown Victoria",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[4].trim",
+        "page": 11,
+        "bbox": [
+          0.275294,
+          0.664261,
+          0.016471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Lx",
+        "confidence": 0.8568568646180319,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[4].odometer",
+        "page": 9,
+        "bbox": [
+          0.485294,
+          0.358799,
+          0.051765,
+          0.018645
+        ],
+        "polygon": null,
+        "reference_text": "118,788",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[4].list_price",
+        "page": 10,
+        "bbox": [
+          0.495882,
+          0.374583,
+          0.048824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$2,995",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[4].adjusted_comparable_value",
+        "page": 10,
+        "bbox": [
+          0.510588,
+          0.484633,
+          0.035294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2,765",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[4].source",
+        "page": 11,
+        "bbox": [
+          0.122941,
+          0.649709,
+          0.068824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Autotrader",
+        "confidence": 0.81087137702017,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[4].dealer_city",
+        "page": 9,
+        "bbox": [
+          0.758824,
+          0.586043,
+          0.041765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Macon,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[4].dealer_state",
+        "page": 12,
+        "bbox": [
+          0.129412,
+          0.232019,
+          0.020588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "GA",
+        "confidence": 0.8266099728501202,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[4].distance_from_loss_miles",
+        "page": 11,
+        "bbox": [
+          0.067059,
+          0.589226,
+          0.336471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "292 Miles From Kings Stock #: P211658_1",
+        "confidence": 0.8048177856779428,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[4].updated_date",
+        "page": 9,
+        "bbox": [
+          0.864706,
+          0.465079,
+          0.065294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "03/28/2018",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[4].adjustment_mileage",
+        "page": 10,
+        "bbox": [
+          0.505294,
+          0.432792,
+          0.04,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "+$99",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[4].adjustment_options",
+        "page": 11,
+        "bbox": [
+          0.788235,
+          0.949618,
+          0.020588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "21",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[4].adjustment_condition",
+        "page": 10,
+        "bbox": [
+          0.406471,
+          0.450527,
+          0.045294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "-$350",
+        "confidence": 0.8243743039214075,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[5].comp_label",
+        "page": 11,
+        "bbox": [
+          0.064706,
+          0.509417,
+          0.053529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Comp 9",
+        "confidence": 0.7679775280898877,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[5].year",
+        "page": 11,
+        "bbox": [
+          0.272941,
+          0.522378,
+          0.031176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1999",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[5].make",
+        "page": 11,
+        "bbox": [
+          0.31,
+          0.521696,
+          0.030588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Ford",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[5].model",
+        "page": 11,
+        "bbox": [
+          0.345882,
+          0.521014,
+          0.103529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Crown Victoria",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[5].trim",
+        "page": 11,
+        "bbox": [
+          0.275294,
+          0.664261,
+          0.016471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Lx",
+        "confidence": 0.8568568646180319,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[5].odometer",
+        "page": 9,
+        "bbox": [
+          0.58,
+          0.360164,
+          0.051176,
+          0.018645
+        ],
+        "polygon": null,
+        "reference_text": "127,356",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[5].list_price",
+        "page": 11,
+        "bbox": [
+          0.51,
+          0.394138,
+          0.035882,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3,995",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[5].adjusted_comparable_value",
+        "page": 10,
+        "bbox": [
+          0.592353,
+          0.483042,
+          0.048235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$3,916",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[5].source",
+        "page": 11,
+        "bbox": [
+          0.122941,
+          0.649709,
+          0.068824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Autotrader",
+        "confidence": 0.81087137702017,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[5].distance_from_loss_miles",
+        "page": 9,
+        "bbox": [
+          0.688235,
+          0.737021,
+          0.021765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "204",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[5].stock_number",
+        "page": 9,
+        "bbox": [
+          0.74,
+          0.707007,
+          0.046471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "RP7687",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[5].adjustment_mileage",
+        "page": 10,
+        "bbox": [
+          0.591176,
+          0.4312,
+          0.048235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "+$229",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[5].adjustment_options",
+        "page": 9,
+        "bbox": [
+          0.608824,
+          0.213146,
+          0.040588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "+$42",
+        "confidence": 0.7754066719245454,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[5].adjustment_condition",
+        "page": 10,
+        "bbox": [
+          0.406471,
+          0.450527,
+          0.045294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "-$350",
+        "confidence": 0.8243743039214075,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[6].comp_label",
+        "page": 11,
+        "bbox": [
+          0.06,
+          0.259531,
+          0.053529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Comp 7",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[6].vin",
+        "page": 11,
+        "bbox": [
+          0.301176,
+          0.320241,
+          0.151765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2FAFP73W4XX188747",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[6].year",
+        "page": 11,
+        "bbox": [
+          0.267647,
+          0.272037,
+          0.031176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1999",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[6].make",
+        "page": 11,
+        "bbox": [
+          0.304706,
+          0.271809,
+          0.031176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Ford",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[6].model",
+        "page": 11,
+        "bbox": [
+          0.341176,
+          0.270673,
+          0.102941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Crown Victoria",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[6].odometer",
+        "page": 11,
+        "bbox": [
+          0.342353,
+          0.304097,
+          0.051765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "152,872",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[6].list_price",
+        "page": 11,
+        "bbox": [
+          0.494706,
+          0.269308,
+          0.048235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$4,900",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[6].adjusted_comparable_value",
+        "page": 11,
+        "bbox": [
+          0.594118,
+          0.268171,
+          0.046471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$5,261",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[6].source",
+        "page": 11,
+        "bbox": [
+          0.115882,
+          0.274083,
+          0.068235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Autotrader",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[6].dealer_name",
+        "page": 11,
+        "bbox": [
+          0.061765,
+          0.291136,
+          0.088235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Sanders Ford",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[6].dealer_city",
+        "page": 11,
+        "bbox": [
+          0.061765,
+          0.307508,
+          0.082353,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Jacksonville,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[6].distance_from_loss_miles",
+        "page": 11,
+        "bbox": [
+          0.062353,
+          0.340477,
+          0.024118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "222",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[6].stock_number",
+        "page": 11,
+        "bbox": [
+          0.325882,
+          0.336612,
+          0.058824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "T27454A",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[6].updated_date",
+        "page": 11,
+        "bbox": [
+          0.367647,
+          0.352755,
+          0.072941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "04/17/2018",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[7].comp_label",
+        "page": 11,
+        "bbox": [
+          0.062353,
+          0.384133,
+          0.053529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Comp 8",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[7].vin",
+        "page": 11,
+        "bbox": [
+          0.303529,
+          0.44507,
+          0.151765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2FAFP74W4XX121757",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[7].year",
+        "page": 11,
+        "bbox": [
+          0.270588,
+          0.397094,
+          0.031176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1999",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[7].make",
+        "page": 11,
+        "bbox": [
+          0.307059,
+          0.396639,
+          0.031176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Ford",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[7].model",
+        "page": 11,
+        "bbox": [
+          0.343529,
+          0.395729,
+          0.102941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Crown Victoria",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[7].trim",
+        "page": 11,
+        "bbox": [
+          0.275294,
+          0.664261,
+          0.016471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Lx",
+        "confidence": 0.7680495404503332,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[7].odometer",
+        "page": 11,
+        "bbox": [
+          0.345294,
+          0.429154,
+          0.048824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "165,681",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[7].list_price",
+        "page": 11,
+        "bbox": [
+          0.51,
+          0.394138,
+          0.035882,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3,995",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[7].adjusted_comparable_value",
+        "page": 11,
+        "bbox": [
+          0.597647,
+          0.392774,
+          0.047647,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$4,509",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[7].source",
+        "page": 11,
+        "bbox": [
+          0.118235,
+          0.39914,
+          0.068824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Autotrader",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[7].dealer_name",
+        "page": 11,
+        "bbox": [
+          0.063529,
+          0.416193,
+          0.18,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "John Sang Ford Lincoln Me",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[7].dealer_city",
+        "page": 11,
+        "bbox": [
+          0.064118,
+          0.433474,
+          0.062941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Gallipolis,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[7].dealer_state",
+        "page": 11,
+        "bbox": [
+          0.13,
+          0.682905,
+          0.021176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "OH",
+        "confidence": 0.77931013481804,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[7].distance_from_loss_miles",
+        "page": 11,
+        "bbox": [
+          0.064706,
+          0.465761,
+          0.021765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "251",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[7].stock_number",
+        "page": 11,
+        "bbox": [
+          0.328824,
+          0.461896,
+          0.049412,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "S01732",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[7].updated_date",
+        "page": 11,
+        "bbox": [
+          0.37,
+          0.477585,
+          0.073529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "02/22/2018",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[8].comp_label",
+        "page": 11,
+        "bbox": [
+          0.064706,
+          0.509417,
+          0.053529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Comp 9",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[8].vin",
+        "page": 11,
+        "bbox": [
+          0.305882,
+          0.570354,
+          0.152353,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2FAFP74W3XX211658",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[8].year",
+        "page": 11,
+        "bbox": [
+          0.272941,
+          0.522378,
+          0.031176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1999",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[8].make",
+        "page": 11,
+        "bbox": [
+          0.31,
+          0.521696,
+          0.030588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Ford",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[8].model",
+        "page": 11,
+        "bbox": [
+          0.345882,
+          0.521014,
+          0.103529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Crown Victoria",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[8].trim",
+        "page": 11,
+        "bbox": [
+          0.275294,
+          0.664261,
+          0.016471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Lx",
+        "confidence": 0.8568568646180319,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[8].odometer",
+        "page": 11,
+        "bbox": [
+          0.347647,
+          0.554211,
+          0.049412,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "106,451",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[8].list_price",
+        "page": 11,
+        "bbox": [
+          0.5,
+          0.519649,
+          0.048824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$4,995",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[8].source",
+        "page": 11,
+        "bbox": [
+          0.121765,
+          0.524197,
+          0.064118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Dealer Ad",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[8].dealer_name",
+        "page": 11,
+        "bbox": [
+          0.066471,
+          0.541477,
+          0.067059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Auto Save",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[8].dealer_city",
+        "page": 11,
+        "bbox": [
+          0.066471,
+          0.559213,
+          0.052941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Opelika,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[8].dealer_state",
+        "page": 11,
+        "bbox": [
+          0.124706,
+          0.557394,
+          0.017647,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "AL",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[8].distance_from_loss_miles",
+        "page": 11,
+        "bbox": [
+          0.067059,
+          0.591045,
+          0.024118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "292",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[8].stock_number",
+        "page": 11,
+        "bbox": [
+          0.331765,
+          0.587407,
+          0.071765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "P211658_1",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[8].updated_date",
+        "page": 11,
+        "bbox": [
+          0.372941,
+          0.602869,
+          0.073529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "03/09/2018",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[9].comp_label",
+        "page": 11,
+        "bbox": [
+          0.067059,
+          0.634702,
+          0.061765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Comp 10",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[9].vin",
+        "page": 11,
+        "bbox": [
+          0.308235,
+          0.695638,
+          0.152941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2FAFP74W5XX191123",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[9].year",
+        "page": 11,
+        "bbox": [
+          0.275294,
+          0.647435,
+          0.031765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1999",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[9].make",
+        "page": 11,
+        "bbox": [
+          0.312353,
+          0.647207,
+          0.030588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Ford",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[9].model",
+        "page": 11,
+        "bbox": [
+          0.348824,
+          0.64607,
+          0.102941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Crown Victoria",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[9].trim",
+        "page": 11,
+        "bbox": [
+          0.275294,
+          0.664261,
+          0.016471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Lx",
+        "confidence": 0.8568568646180319,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[9].odometer",
+        "page": 11,
+        "bbox": [
+          0.348824,
+          0.67995,
+          0.045294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "86,228",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[9].list_price",
+        "page": 11,
+        "bbox": [
+          0.502353,
+          0.644706,
+          0.048824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$4,995",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[9].adjusted_comparable_value",
+        "page": 11,
+        "bbox": [
+          0.602353,
+          0.643569,
+          0.046471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$4,251",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[9].source",
+        "page": 11,
+        "bbox": [
+          0.122941,
+          0.649709,
+          0.068824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Autotrader",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[9].dealer_name",
+        "page": 11,
+        "bbox": [
+          0.068824,
+          0.667671,
+          0.078824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Vallery Ford",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[9].dealer_city",
+        "page": 11,
+        "bbox": [
+          0.068824,
+          0.684042,
+          0.057059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Waverly,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[9].dealer_state",
+        "page": 11,
+        "bbox": [
+          0.13,
+          0.682905,
+          0.021176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "OH",
+        "confidence": 0.77931013481804,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[9].distance_from_loss_miles",
+        "page": 11,
+        "bbox": [
+          0.07,
+          0.716557,
+          0.024118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "283",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[9].stock_number",
+        "page": 11,
+        "bbox": [
+          0.334118,
+          0.712692,
+          0.041765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "P5547",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[9].updated_date",
+        "page": 11,
+        "bbox": [
+          0.377647,
+          0.85412,
+          0.073529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "04/11/2018",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[10].comp_label",
+        "page": 11,
+        "bbox": [
+          0.07,
+          0.760668,
+          0.059412,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Comp 11",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[10].vin",
+        "page": 11,
+        "bbox": [
+          0.310588,
+          0.821832,
+          0.152941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2FAFP74W4XX230817",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[10].year",
+        "page": 11,
+        "bbox": [
+          0.277647,
+          0.773401,
+          0.031765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1999",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[10].make",
+        "page": 11,
+        "bbox": [
+          0.314706,
+          0.772719,
+          0.031176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Ford",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[10].model",
+        "page": 11,
+        "bbox": [
+          0.351176,
+          0.771582,
+          0.103529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Crown Victoria",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[10].trim",
+        "page": 11,
+        "bbox": [
+          0.275294,
+          0.664261,
+          0.016471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Lx",
+        "confidence": 0.8568568646180319,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[10].odometer",
+        "page": 11,
+        "bbox": [
+          0.352941,
+          0.805461,
+          0.051765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "166,875",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[10].list_price",
+        "page": 11,
+        "bbox": [
+          0.517647,
+          0.770445,
+          0.036471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3,000",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[10].adjusted_comparable_value",
+        "page": 11,
+        "bbox": [
+          0.605294,
+          0.768854,
+          0.048824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$3,534",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[10].source",
+        "page": 11,
+        "bbox": [
+          0.126471,
+          0.77522,
+          0.064118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Dealer Ad",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[10].dealer_name",
+        "page": 11,
+        "bbox": [
+          0.071765,
+          0.792046,
+          0.17,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Don Franklin Campbelisvil",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[10].dealer_city",
+        "page": 11,
+        "bbox": [
+          0.071765,
+          0.810009,
+          0.097647,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Campbellsville,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[10].dealer_state",
+        "page": 11,
+        "bbox": [
+          0.175294,
+          0.807962,
+          0.018824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "KY",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[10].distance_from_loss_miles",
+        "page": 11,
+        "bbox": [
+          0.071765,
+          0.842296,
+          0.024706,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "266",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[10].stock_number",
+        "page": 11,
+        "bbox": [
+          0.336471,
+          0.837976,
+          0.067647,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "XX230817",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[10].updated_date",
+        "page": 11,
+        "bbox": [
+          0.377647,
+          0.85412,
+          0.073529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "04/11/2018",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[11].comp_label",
+        "page": 11,
+        "bbox": [
+          0.071765,
+          0.886407,
+          0.061765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Comp 12",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[11].vin",
+        "page": 12,
+        "bbox": [
+          0.294118,
+          0.243387,
+          0.151765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2FAFP74W7XX189096",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[11].year",
+        "page": 11,
+        "bbox": [
+          0.275294,
+          0.647435,
+          0.031765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1999",
+        "confidence": 0.7930712964063373,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[11].make",
+        "page": 11,
+        "bbox": [
+          0.312353,
+          0.647207,
+          0.030588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Ford",
+        "confidence": 0.7607850274226016,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[11].model",
+        "page": 11,
+        "bbox": [
+          0.341176,
+          0.270673,
+          0.102941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Crown Victoria",
+        "confidence": 0.7530111946174618,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[11].trim",
+        "page": 11,
+        "bbox": [
+          0.275294,
+          0.664261,
+          0.016471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Lx",
+        "confidence": 0.7680495404503332,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[11].odometer",
+        "page": 12,
+        "bbox": [
+          0.335294,
+          0.227698,
+          0.051176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "163,248",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[11].list_price",
+        "page": 12,
+        "bbox": [
+          0.486471,
+          0.191773,
+          0.048824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$2,988",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[11].adjusted_comparable_value",
+        "page": 12,
+        "bbox": [
+          0.598824,
+          0.189499,
+          0.034118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3,461",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[11].source",
+        "page": 11,
+        "bbox": [
+          0.122941,
+          0.649709,
+          0.068824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Autotrader",
+        "confidence": 0.8047208599222957,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[11].dealer_name",
+        "page": 12,
+        "bbox": [
+          0.054706,
+          0.215875,
+          0.175294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Autonation Chrysler Dodge",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[11].dealer_city",
+        "page": 12,
+        "bbox": [
+          0.055294,
+          0.23361,
+          0.068824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Columbus,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[11].dealer_state",
+        "page": 12,
+        "bbox": [
+          0.129412,
+          0.232019,
+          0.020588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "GA",
+        "confidence": 0.8266099728501202,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[11].distance_from_loss_miles",
+        "page": 12,
+        "bbox": [
+          0.056471,
+          0.26658,
+          0.023529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "282",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[11].stock_number",
+        "page": 12,
+        "bbox": [
+          0.319412,
+          0.260213,
+          0.067059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "XX189096",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[0].component_name",
+        "page": 6,
+        "bbox": [
+          0.070588,
+          0.199504,
+          0.072941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Mechanical",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[0].condition_rating",
+        "page": 6,
+        "bbox": [
+          0.768824,
+          0.365716,
+          0.092941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Average Private",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[0].inspection_notes",
+        "page": 6,
+        "bbox": [
+          0.284706,
+          0.763851,
+          0.070588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Guideline:",
+        "confidence": 0.7944503552161051,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[0].value_impact",
+        "page": 6,
+        "bbox": [
+          0.627059,
+          0.209281,
+          0.01,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$0",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[1].component_name",
+        "page": 6,
+        "bbox": [
+          0.332353,
+          0.489636,
+          0.039412,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Tires:",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[1].condition_rating",
+        "page": 6,
+        "bbox": [
+          0.165294,
+          0.558531,
+          0.053529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "ROUGH",
+        "confidence": 0.7722241236498604,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[1].value_impact",
+        "page": 6,
+        "bbox": [
+          0.597647,
+          0.347526,
+          0.035882,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "-$24",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[2].component_name",
+        "page": 5,
+        "bbox": [
+          0.307647,
+          0.233383,
+          0.032941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Paint",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[2].condition_rating",
+        "page": 7,
+        "bbox": [
+          0.165294,
+          0.279995,
+          0.052941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "ROUGH",
+        "confidence": 0.7690532342531998,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[2].value_impact",
+        "page": 6,
+        "bbox": [
+          0.591765,
+          0.566944,
+          0.036471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "-$60",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[3].component_name",
+        "page": 5,
+        "bbox": [
+          0.24,
+          0.189954,
+          0.032353,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Body",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[3].condition_rating",
+        "page": 6,
+        "bbox": [
+          0.768824,
+          0.365716,
+          0.092941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Average Private",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[3].value_impact",
+        "page": 5,
+        "bbox": [
+          0.475882,
+          0.209054,
+          0.011176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "O",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[4].component_name",
+        "page": 7,
+        "bbox": [
+          0.059412,
+          0.210873,
+          0.041765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Glass",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[4].condition_rating",
+        "page": 6,
+        "bbox": [
+          0.768824,
+          0.365716,
+          0.092941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Average Private",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[4].inspection_notes",
+        "page": 7,
+        "bbox": [
+          0.291176,
+          0.626516,
+          0.071176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Guideline:",
+        "confidence": 0.7576144683579427,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[4].value_impact",
+        "page": 7,
+        "bbox": [
+          0.616765,
+          0.205416,
+          0.010294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$0",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[5].component_name",
+        "page": 7,
+        "bbox": [
+          0.060588,
+          0.282496,
+          0.038824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Seats",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[5].condition_rating",
+        "page": 7,
+        "bbox": [
+          0.165294,
+          0.279995,
+          0.052941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "ROUGH",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[5].inspection_notes",
+        "page": 7,
+        "bbox": [
+          0.291176,
+          0.626516,
+          0.071176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Guideline:",
+        "confidence": 0.7542198123623787,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[5].value_impact",
+        "page": 7,
+        "bbox": [
+          0.591176,
+          0.277266,
+          0.036471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "-$43",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[6].component_name",
+        "page": 7,
+        "bbox": [
+          0.063529,
+          0.419604,
+          0.050588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Carpets",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[6].condition_rating",
+        "page": 6,
+        "bbox": [
+          0.768824,
+          0.365716,
+          0.092941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Average Private",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[6].inspection_notes",
+        "page": 7,
+        "bbox": [
+          0.290588,
+          0.449845,
+          0.255294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Lightly soiled and/or stained. Few small",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[6].value_impact",
+        "page": 7,
+        "bbox": [
+          0.618824,
+          0.414602,
+          0.01,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$0",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[7].component_name",
+        "page": 7,
+        "bbox": [
+          0.064706,
+          0.507144,
+          0.070588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Dashboard",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[7].condition_rating",
+        "page": 6,
+        "bbox": [
+          0.768824,
+          0.365716,
+          0.092941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Average Private",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[7].inspection_notes",
+        "page": 7,
+        "bbox": [
+          0.291176,
+          0.588544,
+          0.106471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Significant wear.",
+        "confidence": 0.7589245020845831,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[7].value_impact",
+        "page": 7,
+        "bbox": [
+          0.619412,
+          0.502596,
+          0.01,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$0",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[8].component_name",
+        "page": 7,
+        "bbox": [
+          0.065294,
+          0.611964,
+          0.062353,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Headliner",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[8].condition_rating",
+        "page": 7,
+        "bbox": [
+          0.167647,
+          0.611055,
+          0.052941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "ROUGH",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[8].inspection_notes",
+        "page": 7,
+        "bbox": [
+          0.291176,
+          0.626516,
+          0.071176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Guideline:",
+        "confidence": 0.7681967342068349,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[8].value_impact",
+        "page": 7,
+        "bbox": [
+          0.594118,
+          0.607871,
+          0.036471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "-$18",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "nhtsa_recalls[0].campaign_id",
+        "page": 19,
+        "bbox": [
+          0.214118,
+          0.194274,
+          0.050588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "98V322",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T16:57:57.435054Z",
+  "completed_at": "2026-09-13T16:57:57.435054Z",
+  "latency_in_ms": 230129
+}

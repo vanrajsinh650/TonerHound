@@ -1,0 +1,329 @@
+{
+  "request": {
+    "example_id": "long/sf1449_supplies_services_0042",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/long/sf1449_supplies_services_0042.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 16,
+    "ocr_pages": 0,
+    "num_pages": 77
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "long/sf1449_supplies_services_0042",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "contract_number": "TOFS-16-D-0004",
+      "solicitation_number": null,
+      "requisition_number": null,
+      "issue_date": null,
+      "award_effective_date": "01/14/2016",
+      "total_award_amount": "$0.00",
+      "clin_items": [
+        {
+          "item_no": "0001",
+          "parent_item_no": null,
+          "supplies_services": "Legal Support Services - Base Year",
+          "description": "Base Year Fully Burdened Labor Rates: Partner: per Hour Associate: per Hour Paralegal: per Hour Obligated Amount: $0.00 Delivery: 01/14/2016",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": null
+        },
+        {
+          "item_no": "0002",
+          "parent_item_no": null,
+          "supplies_services": "Legal Support Services - Option Year 1",
+          "description": "Option Year 1 Fully Burdened Labor Rates: Partner: per Hour Associate: per Hour Paralegal: per Hour Amount: $0.00 (Option Line Item) Delivery: 01/14/2017 Continued ...",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "0.00"
+        },
+        {
+          "item_no": "0003",
+          "parent_item_no": null,
+          "supplies_services": "Legal Support Services - Option Year 2",
+          "description": "Option Year 2 Fully Burdened Labor Rates: Partner: per Hour Associate: per Hour Paralegal: per Hour Amount: $0.00 (Option Line Item) Delivery: 01/14/2018",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "0.00"
+        },
+        {
+          "item_no": "0004",
+          "parent_item_no": null,
+          "supplies_services": "Legal Support Services - Option Year 3",
+          "description": "Option Year 3 Fully Burdened Labor Rates: Partner: per Hour Associate: per Hour Paralegal: per Hour Amount: $0.00 (Option Line Item) Delivery: 01/14/2019",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "0.00"
+        },
+        {
+          "item_no": "0005",
+          "parent_item_no": null,
+          "supplies_services": "Legal Support Services - Option Year 4",
+          "description": "Option Year 4 Fully Burdened Labor Rates: Partner: per Hour Associate: per Hour Paralegal: per Hour Amount: $0.00 (Option Line Item) Delivery: 01/14/2020 The total amount of award: $0.00. The obligation for this award is shown in box 26.",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "0.00"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "award_effective_date",
+        "page": 1,
+        "bbox": [
+          0.254706,
+          0.705091,
+          0.086471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "01/14/2016",
+        "confidence": 0.8176608433080176,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_award_amount",
+        "page": 3,
+        "bbox": [
+          0.356598,
+          0.547151,
+          0.049867,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$0.00.",
+        "confidence": 0.7821851439468034,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[0].item_no",
+        "page": 2,
+        "bbox": [
+          0.035943,
+          0.296662,
+          0.033244,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0001",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[0].supplies_services",
+        "page": 2,
+        "bbox": [
+          0.108528,
+          0.297648,
+          0.309849,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Legal Support Services - Base Year",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[1].item_no",
+        "page": 2,
+        "bbox": [
+          0.035943,
+          0.467116,
+          0.033122,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0002",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[1].supplies_services",
+        "page": 2,
+        "bbox": [
+          0.108528,
+          0.468102,
+          0.34566,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Legal Support Services - Option Year 1",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[1].amount",
+        "page": 2,
+        "bbox": [
+          0.906775,
+          0.467116,
+          0.033244,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[2].item_no",
+        "page": 3,
+        "bbox": [
+          0.03578,
+          0.141611,
+          0.033428,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0003",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[2].supplies_services",
+        "page": 3,
+        "bbox": [
+          0.108364,
+          0.142597,
+          0.345538,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Legal Support Services - Option Year 2",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[2].amount",
+        "page": 3,
+        "bbox": [
+          0.906612,
+          0.141611,
+          0.033244,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[3].item_no",
+        "page": 3,
+        "bbox": [
+          0.03578,
+          0.276712,
+          0.033122,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0004",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[3].supplies_services",
+        "page": 3,
+        "bbox": [
+          0.108364,
+          0.277698,
+          0.345843,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Legal Support Services - Option Year 3",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[3].amount",
+        "page": 3,
+        "bbox": [
+          0.906612,
+          0.276712,
+          0.033244,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[4].item_no",
+        "page": 3,
+        "bbox": [
+          0.03578,
+          0.411813,
+          0.033428,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0005",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[4].supplies_services",
+        "page": 3,
+        "bbox": [
+          0.108364,
+          0.412799,
+          0.345538,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Legal Support Services - Option Year 4",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_items[4].amount",
+        "page": 3,
+        "bbox": [
+          0.906612,
+          0.411813,
+          0.033244,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T16:05:43.353701Z",
+  "completed_at": "2026-09-13T16:05:43.353701Z",
+  "latency_in_ms": 62083
+}

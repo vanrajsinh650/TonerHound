@@ -1,0 +1,166 @@
+{
+  "request": {
+    "example_id": "medium/dd1155_schedule_continuation_0007",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/dd1155_schedule_continuation_0007.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 8,
+    "ocr_pages": 0,
+    "num_pages": 13
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/dd1155_schedule_continuation_0007",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "contract_purchase_order_number": "FA868423DB074",
+      "delivery_order_call_number": "FA868423FB061",
+      "date_of_order": null,
+      "requisition_purchase_request_number": "A025532",
+      "total_award_amount": "USD 1,000.00",
+      "line_items": [
+        {
+          "item_number": "0001",
+          "description": "The contractor shall develop and deliver a post-award presentation within 15 calendar days of the effective contract date in accordance with CDRL A001 (Exhibit A). For briefing materials with a security classification higher than CUI, the Contractor shall follow security procedures as outlined in paragraph 5.3.1 of the SOW prior to submission.\n\nData Category Code: MGMT\nPurchase Requisition Number: F4FDAT2262A038\nProduct Service Code: AC13\nPricing Arrangement: Firm Fixed Price\nCIN: F4FDAT2262A0380000AA\nACRN: AA",
+          "quantity_ordered": 1.0,
+          "unit": "Each",
+          "unit_price": "USD 1,000.00",
+          "amount": "USD 1,000.00"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "contract_purchase_order_number",
+        "page": 1,
+        "bbox": [
+          0.073708,
+          0.090661,
+          0.205785,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "FA868423DB074",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "requisition_purchase_request_number",
+        "page": 1,
+        "bbox": [
+          0.690247,
+          0.090616,
+          0.064911,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "A025532",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_award_amount",
+        "page": 1,
+        "bbox": [
+          0.841453,
+          0.666401,
+          0.084318,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "USD 1,000.00",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].item_number",
+        "page": 6,
+        "bbox": [
+          0.072228,
+          0.141116,
+          0.0275,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0001",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].quantity_ordered",
+        "page": 6,
+        "bbox": [
+          0.072228,
+          0.141116,
+          0.0275,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0001",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].unit",
+        "page": 3,
+        "bbox": [
+          0.654588,
+          0.386744,
+          0.029029,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Each",
+        "confidence": 0.8308198571042051,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].unit_price",
+        "page": 3,
+        "bbox": [
+          0.715892,
+          0.381184,
+          0.084,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "USD 1,000.00",
+        "confidence": 0.7907823105397336,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].amount",
+        "page": 3,
+        "bbox": [
+          0.832314,
+          0.406562,
+          0.084,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "USD 1,000.00",
+        "confidence": 0.7675073155834056,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T17:06:32.029966Z",
+  "completed_at": "2026-09-13T17:06:32.029966Z",
+  "latency_in_ms": 6829
+}

@@ -1,0 +1,332 @@
+{
+  "request": {
+    "example_id": "medium/crh_results_deck_q4fy25",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/crh_results_deck_q4fy25.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 18,
+    "ocr_pages": 0,
+    "num_pages": 42
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/crh_results_deck_q4fy25",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "period": "FY2025",
+      "currency": "USD",
+      "fiscal_period_end_date": "2025-12-31",
+      "total_revenue": 37447.0,
+      "revenue_growth_yoy": 5.27,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 3730.0,
+      "adjusted_ebitda": 7681.0,
+      "gaap_eps_diluted": 5.51,
+      "adjusted_eps_diluted": 5.57,
+      "gross_margin": null,
+      "operating_margin": null,
+      "free_cash_flow": 4969.0,
+      "segments": [
+        {
+          "segment_name": "Americas Materials Solutions",
+          "segment_revenue": 17029,
+          "segment_profit": 4002
+        },
+        {
+          "segment_name": "Americas Building Solutions",
+          "segment_revenue": 7122,
+          "segment_profit": 1474
+        },
+        {
+          "segment_name": "International Solutions",
+          "segment_revenue": 13296,
+          "segment_profit": 2205
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "period",
+        "page": 42,
+        "bbox": [
+          0.786059,
+          0.399905,
+          0.040227,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "FY 2025",
+        "confidence": 0.7988317444869449,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "currency",
+        "page": 36,
+        "bbox": [
+          0.061695,
+          0.4398,
+          0.346897,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1. U.S. Department of Transportation (USDOT) proposed Fiscal Year 2026 budgets.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "fiscal_period_end_date",
+        "page": 35,
+        "bbox": [
+          0.43631,
+          0.594206,
+          0.081368,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "December 31, 2025",
+        "confidence": 0.8060116001571259,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_revenue",
+        "page": 39,
+        "bbox": [
+          0.771904,
+          0.692125,
+          0.030732,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "37,447",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "net_income",
+        "page": 41,
+        "bbox": [
+          0.700292,
+          0.66808,
+          0.02654,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3,730",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "adjusted_ebitda",
+        "page": 39,
+        "bbox": [
+          0.777652,
+          0.668073,
+          0.02377,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "7,681",
+        "confidence": 0.783812949681767,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gaap_eps_diluted",
+        "page": 41,
+        "bbox": [
+          0.773175,
+          0.666965,
+          0.020273,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$5.51",
+        "confidence": 0.7967505036990881,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "adjusted_eps_diluted",
+        "page": 41,
+        "bbox": [
+          0.773446,
+          0.807687,
+          0.021312,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$5.57",
+        "confidence": 0.7874634021242312,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "free_cash_flow",
+        "page": 42,
+        "bbox": [
+          0.802238,
+          0.540954,
+          0.026782,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "4,969",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[0].segment_name",
+        "page": 32,
+        "bbox": [
+          0.058984,
+          0.129654,
+          0.405571,
+          0.038316
+        ],
+        "polygon": null,
+        "reference_text": "Americas Materials Solutions",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[0].segment_revenue",
+        "page": 32,
+        "bbox": [
+          0.759429,
+          0.662182,
+          0.033692,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "17,029",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[0].segment_profit",
+        "page": 32,
+        "bbox": [
+          0.765099,
+          0.714315,
+          0.027965,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "4,002",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[1].segment_name",
+        "page": 33,
+        "bbox": [
+          0.058984,
+          0.129654,
+          0.395526,
+          0.048516
+        ],
+        "polygon": null,
+        "reference_text": "Americas Building Solutions",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[1].segment_revenue",
+        "page": 33,
+        "bbox": [
+          0.765375,
+          0.662182,
+          0.0277,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "7,122",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[1].segment_profit",
+        "page": 33,
+        "bbox": [
+          0.765789,
+          0.714315,
+          0.027585,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1,474",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[2].segment_name",
+        "page": 34,
+        "bbox": [
+          0.060965,
+          0.129654,
+          0.312569,
+          0.038316
+        ],
+        "polygon": null,
+        "reference_text": "International Solutions",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[2].segment_revenue",
+        "page": 34,
+        "bbox": [
+          0.759406,
+          0.662182,
+          0.033817,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "13,296",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[2].segment_profit",
+        "page": 34,
+        "bbox": [
+          0.765157,
+          0.714315,
+          0.028126,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2,205",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T17:06:25.196810Z",
+  "completed_at": "2026-09-13T17:06:25.196810Z",
+  "latency_in_ms": 19031
+}

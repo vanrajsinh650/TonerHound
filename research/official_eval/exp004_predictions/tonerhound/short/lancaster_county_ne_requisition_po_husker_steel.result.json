@@ -1,0 +1,397 @@
+{
+  "request": {
+    "example_id": "short/lancaster_county_ne_requisition_po_husker_steel",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/lancaster_county_ne_requisition_po_husker_steel.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 21,
+    "ocr_pages": 0,
+    "num_pages": 6
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/lancaster_county_ne_requisition_po_husker_steel",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "po_number": null,
+      "requisition_number": null,
+      "po_date": "2025-10-29",
+      "buyer": {
+        "name": "LANCASTER COUNTY, NEBRASKA",
+        "department": null
+      },
+      "requisitioner": "Kurtis Hunt",
+      "buyer_contact": "Ron Bohaty",
+      "vendor": {
+        "name": "Husker Steel Inc",
+        "address": null,
+        "vendor_number": null,
+        "contact": null
+      },
+      "ship_to": "Lancaster County Engineer, 444 Cherrycreek Rd, Building B, Lincoln, NE 68528",
+      "bill_to": "Lancaster County Engineer, 444 Cherrycreek Rd, Building B, Lincoln, NE 68528",
+      "line_items": [
+        {
+          "line_no": 1,
+          "description": "Steel Sheet Piling, 7GA. 10' x 18\" sheets",
+          "quantity": 75.0,
+          "unit_of_measure": "Each",
+          "unit_price": 128.0,
+          "start_date": null,
+          "end_date": null,
+          "extended_price": 9600.0
+        },
+        {
+          "line_no": 2,
+          "description": "Steel Sheet Piling, 7GA. 15' x 18\" sheets",
+          "quantity": 75.0,
+          "unit_of_measure": "Each",
+          "unit_price": 192.0,
+          "start_date": null,
+          "end_date": null,
+          "extended_price": 14400.0
+        },
+        {
+          "line_no": 3,
+          "description": "Steel Sheet Piling, 7GA. 20' x 18\" sheets",
+          "quantity": 60.0,
+          "unit_of_measure": "Each",
+          "unit_price": 256.0,
+          "start_date": null,
+          "end_date": null,
+          "extended_price": 15360.0
+        }
+      ],
+      "total_amount": 39360.0,
+      "currency": "USD"
+    },
+    "field_citations": [
+      {
+        "field_path": "buyer.name",
+        "page": 5,
+        "bbox": [
+          0.097465,
+          0.179961,
+          0.008238,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "t",
+        "confidence": 0.7709542814661873,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "requisitioner",
+        "page": 1,
+        "bbox": [
+          0.138034,
+          0.631752,
+          0.009144,
+          0.080482
+        ],
+        "polygon": null,
+        "reference_text": "Kurtis Hunt",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "buyer_contact",
+        "page": 5,
+        "bbox": [
+          0.097465,
+          0.179961,
+          0.008238,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "t",
+        "confidence": 0.7873077685734348,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.name",
+        "page": 3,
+        "bbox": [
+          0.041127,
+          0.076485,
+          0.011458,
+          0.040413
+        ],
+        "polygon": null,
+        "reference_text": "Steel,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].line_no",
+        "page": 3,
+        "bbox": [
+          0.143104,
+          0.948683,
+          0.008865,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].description",
+        "page": 3,
+        "bbox": [
+          0.041127,
+          0.076485,
+          0.011458,
+          0.040413
+        ],
+        "polygon": null,
+        "reference_text": "Steel,",
+        "confidence": 0.7664935458391898,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].unit_of_measure",
+        "page": 1,
+        "bbox": [
+          0.35911,
+          0.062498,
+          0.00959,
+          0.031899
+        ],
+        "polygon": null,
+        "reference_text": "Each",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].unit_price",
+        "page": 3,
+        "bbox": [
+          0.115438,
+          0.125355,
+          0.008593,
+          0.058251
+        ],
+        "polygon": null,
+        "reference_text": "$128.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].extended_price",
+        "page": 3,
+        "bbox": [
+          0.113719,
+          0.0,
+          0.012336,
+          0.068328
+        ],
+        "polygon": null,
+        "reference_text": "$9,600.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].line_no",
+        "page": 3,
+        "bbox": [
+          0.216367,
+          0.948967,
+          0.008935,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].description",
+        "page": 3,
+        "bbox": [
+          0.041127,
+          0.076485,
+          0.011458,
+          0.040413
+        ],
+        "polygon": null,
+        "reference_text": "Steel,",
+        "confidence": 0.7664935458391898,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].unit_of_measure",
+        "page": 1,
+        "bbox": [
+          0.35911,
+          0.062498,
+          0.00959,
+          0.031899
+        ],
+        "polygon": null,
+        "reference_text": "Each",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].unit_price",
+        "page": 3,
+        "bbox": [
+          0.188771,
+          0.125359,
+          0.008593,
+          0.058251
+        ],
+        "polygon": null,
+        "reference_text": "$192.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].extended_price",
+        "page": 3,
+        "bbox": [
+          0.187053,
+          0.0,
+          0.012336,
+          0.077547
+        ],
+        "polygon": null,
+        "reference_text": "$14,400.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].line_no",
+        "page": 3,
+        "bbox": [
+          0.289701,
+          0.949066,
+          0.009047,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].description",
+        "page": 3,
+        "bbox": [
+          0.041127,
+          0.076485,
+          0.011458,
+          0.040413
+        ],
+        "polygon": null,
+        "reference_text": "Steel,",
+        "confidence": 0.7664935458391898,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].quantity",
+        "page": 3,
+        "bbox": [
+          0.261822,
+          0.327347,
+          0.009047,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "60",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].unit_of_measure",
+        "page": 1,
+        "bbox": [
+          0.35911,
+          0.062498,
+          0.00959,
+          0.031899
+        ],
+        "polygon": null,
+        "reference_text": "Each",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].unit_price",
+        "page": 3,
+        "bbox": [
+          0.262105,
+          0.125359,
+          0.008593,
+          0.058251
+        ],
+        "polygon": null,
+        "reference_text": "$256.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].extended_price",
+        "page": 3,
+        "bbox": [
+          0.260386,
+          0.0,
+          0.012336,
+          0.077547
+        ],
+        "polygon": null,
+        "reference_text": "$15,360.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_amount",
+        "page": 3,
+        "bbox": [
+          0.058706,
+          0.0,
+          0.012364,
+          0.07827
+        ],
+        "polygon": null,
+        "reference_text": "$39,360.00",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:32:38.790402Z",
+  "completed_at": "2026-09-13T20:32:38.790402Z",
+  "latency_in_ms": 1034
+}

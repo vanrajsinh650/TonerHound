@@ -1,0 +1,296 @@
+{
+  "request": {
+    "example_id": "short/dc-pepco-residential-bill",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/dc-pepco-residential-bill.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 16,
+    "ocr_pages": 0,
+    "num_pages": 3
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/dc-pepco-residential-bill",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "utility_provider": "Pepco",
+      "account_number": "0123 4567 890",
+      "invoice_number": "200000088589",
+      "service_number": "0012 3456 7890 7001 6762 64",
+      "customer_name": "PEPCO CUSTOMER",
+      "service_address": "123 9TH ST NW WASHINGTON DC 20012",
+      "bill_date": "May 11, 2015",
+      "billing_period_start": "April 4, 2015",
+      "billing_period_end": "May 5, 2015",
+      "payment_due_date": "Jun 1, 2015",
+      "amount_due": 176.31,
+      "previous_balance": 287.32,
+      "total_current_charges": null,
+      "total_delivery_charges": 21.01,
+      "total_supply_charges": 155.3,
+      "meters": [
+        {
+          "meter_number": "1ND344415274",
+          "service_type": "electric",
+          "current_reading": 57043,
+          "previous_reading": 55628,
+          "usage_quantity": 1415.0,
+          "usage_unit": "kWh"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "utility_provider",
+        "page": 1,
+        "bbox": [
+          0.316405,
+          0.399946,
+          0.039706,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Pepco",
+        "confidence": 0.7878482370092739,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "invoice_number",
+        "page": 1,
+        "bbox": [
+          0.721789,
+          0.679907,
+          0.10732,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "200000088589",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_number",
+        "page": 2,
+        "bbox": [
+          0.251515,
+          0.125023,
+          0.199221,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0012 3456 7890 7001 6762 64",
+        "confidence": 0.8457253392288724,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer_name",
+        "page": 1,
+        "bbox": [
+          0.060044,
+          0.878404,
+          0.125,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "PEPCO CUSTOMER",
+        "confidence": 0.8170870963121859,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_address",
+        "page": 1,
+        "bbox": [
+          0.545926,
+          0.31621,
+          0.244647,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1333 H St NW, Washington DC 20005,",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "bill_date",
+        "page": 1,
+        "bbox": [
+          0.188431,
+          0.305546,
+          0.095588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "May 11, 2015",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "billing_period_start",
+        "page": 1,
+        "bbox": [
+          0.468578,
+          0.07889,
+          0.095327,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "April 4, 2015",
+        "confidence": 0.8253745354241673,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "payment_due_date",
+        "page": 1,
+        "bbox": [
+          0.727695,
+          0.743285,
+          0.08134,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Jun 1, 2015",
+        "confidence": 0.7732069976873946,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "amount_due",
+        "page": 1,
+        "bbox": [
+          0.439581,
+          0.42939,
+          0.048169,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$176.31",
+        "confidence": 0.7750380257979106,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "previous_balance",
+        "page": 1,
+        "bbox": [
+          0.440028,
+          0.351751,
+          0.048207,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$287.32",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_delivery_charges",
+        "page": 1,
+        "bbox": [
+          0.448584,
+          0.398847,
+          0.03753,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$21.01",
+        "confidence": 0.7751832244745515,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_supply_charges",
+        "page": 1,
+        "bbox": [
+          0.440121,
+          0.413872,
+          0.04064,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$155.30",
+        "confidence": 0.7550874668625867,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "meters[0].meter_number",
+        "page": 3,
+        "bbox": [
+          0.124304,
+          0.359777,
+          0.066108,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1ND344415274",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "meters[0].service_type",
+        "page": 3,
+        "bbox": [
+          0.546144,
+          0.035212,
+          0.047876,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "electric",
+        "confidence": 0.764103820419909,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "meters[0].previous_reading",
+        "page": 2,
+        "bbox": [
+          0.313228,
+          0.197785,
+          0.040037,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "055628",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "meters[0].usage_quantity",
+        "page": 3,
+        "bbox": [
+          0.162735,
+          0.674068,
+          0.029912,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1415",
+        "confidence": 0.7633522671787993,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:31:58.632747Z",
+  "completed_at": "2026-09-13T20:31:58.632747Z",
+  "latency_in_ms": 676
+}

@@ -1,0 +1,317 @@
+{
+  "request": {
+    "example_id": "short/oklahoma_county_purchase_order_avl_systems",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/oklahoma_county_purchase_order_avl_systems.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 17,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/oklahoma_county_purchase_order_avl_systems",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "po_number": "22601904",
+      "requisition_number": "12602080",
+      "po_date": "2025-08-28",
+      "buyer": {
+        "name": "Oklahoma County",
+        "department": "Emergency Management"
+      },
+      "requisitioner": "Nick Rutledge",
+      "buyer_contact": "Nick Rutledge",
+      "vendor": {
+        "name": "AVL SYSTEMS DESIGN LLC",
+        "address": "14901 BRISTOL PARK BLVD EDMOND, OK 73013",
+        "vendor_number": "5421",
+        "contact": "405-749-1866"
+      },
+      "ship_to": "OK CO EMERGENCY MANAGEMENT 320 ROBERT S KERR ROOM 101 OKLAHOMA CITY, OK 73102",
+      "bill_to": "OK CO EMERGENCY MANAGEMENT 320 ROBERT S KERR ROOM 101 OKLAHOMA CITY, OK 73102",
+      "line_items": [
+        {
+          "line_no": 1,
+          "description": "Statewide Contract # SW1021AV - Emergency Operations Center (EOC) audio-visual equipment",
+          "quantity": 1.0,
+          "unit_of_measure": "EACH",
+          "unit_price": 6721.8,
+          "start_date": null,
+          "end_date": null,
+          "extended_price": 6721.8
+        }
+      ],
+      "total_amount": 6721.8,
+      "currency": "USD"
+    },
+    "field_citations": [
+      {
+        "field_path": "po_number",
+        "page": 1,
+        "bbox": [
+          0.880902,
+          0.087664,
+          0.086289,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "22601904",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "requisition_number",
+        "page": 1,
+        "bbox": [
+          0.477508,
+          0.334967,
+          0.04909,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "12602080",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "po_date",
+        "page": 1,
+        "bbox": [
+          0.910884,
+          0.112078,
+          0.05642,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "08/28/2025",
+        "confidence": 0.804739549930743,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "buyer.name",
+        "page": 1,
+        "bbox": [
+          0.20276,
+          0.025318,
+          0.155791,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Oklahoma County",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "buyer.department",
+        "page": 1,
+        "bbox": [
+          0.833725,
+          0.137244,
+          0.133786,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Emergency Management",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "requisitioner",
+        "page": 1,
+        "bbox": [
+          0.59874,
+          0.335855,
+          0.069859,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Nick Rutledge",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "buyer_contact",
+        "page": 1,
+        "bbox": [
+          0.59874,
+          0.335855,
+          0.069859,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Nick Rutledge",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.name",
+        "page": 1,
+        "bbox": [
+          0.082353,
+          0.215135,
+          0.214569,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "AVL SYSTEMS DESIGN LLC",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.vendor_number",
+        "page": 1,
+        "bbox": [
+          0.299154,
+          0.201129,
+          0.022869,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "5421",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.contact",
+        "page": 1,
+        "bbox": [
+          0.035443,
+          0.334967,
+          0.070549,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "405-749-1866",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].line_no",
+        "page": 1,
+        "bbox": [
+          0.036541,
+          0.440853,
+          0.00302,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.7769350088318845,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].description",
+        "page": 1,
+        "bbox": [
+          0.095809,
+          0.440343,
+          0.431603,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Statewide Contract # SW1021AV - Emergency Operations Center (EOC) audio-visual",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].quantity",
+        "page": 1,
+        "bbox": [
+          0.606108,
+          0.440902,
+          0.016591,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1.0000",
+        "confidence": 0.883935455149641,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].unit_of_measure",
+        "page": 1,
+        "bbox": [
+          0.689132,
+          0.440862,
+          0.029957,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "EACH",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].unit_price",
+        "page": 1,
+        "bbox": [
+          0.916,
+          0.912536,
+          0.04991,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$6,721.80",
+        "confidence": 0.8327520691116381,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].extended_price",
+        "page": 1,
+        "bbox": [
+          0.916,
+          0.912536,
+          0.04991,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$6,721.80",
+        "confidence": 0.8327520691116381,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_amount",
+        "page": 1,
+        "bbox": [
+          0.916,
+          0.912536,
+          0.04991,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$6,721.80",
+        "confidence": 0.7526035954745918,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:33:24.456796Z",
+  "completed_at": "2026-09-13T20:33:24.456796Z",
+  "latency_in_ms": 129
+}

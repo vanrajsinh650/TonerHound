@@ -1,0 +1,235 @@
+{
+  "request": {
+    "example_id": "short/P4-83-433_147",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/P4-83-433_147.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 10,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/P4-83-433_147",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "field_name": "Pleasanton (Edwards Lime)",
+      "lease_name": "L.S.U. Leal",
+      "current_operator_name": "SNG Operating, LLC",
+      "operator_p5_no": "797970",
+      "oil_lse_gas_id_no": "14068",
+      "county": "Atascosa",
+      "rrc_district": "01",
+      "operator_address": "1714 Fortview Road, #106 Austin, Texas 78704",
+      "well_nos": "1",
+      "classification_oil": false,
+      "classification_gas": false,
+      "classification_other": false,
+      "effective_date": "May 1, 2010",
+      "change_operator": true,
+      "change_oil_condensate_gatherer": false,
+      "change_gas_gatherer": false,
+      "change_gas_purchaser": false,
+      "change_gas_purchaser_system_code": false,
+      "change_field_name": false,
+      "change_field_name_from": null,
+      "change_field_name_docket": null,
+      "change_lease_name": false,
+      "change_lease_name_from": null,
+      "new_rrc_oil_lease": false,
+      "new_rrc_gas_well": false,
+      "new_rrc_other_well": false,
+      "new_rrc_other_well_specify": null,
+      "due_new_completion_recompletion": false,
+      "due_reclass_gas_to_oil": false,
+      "due_reclass_oil_to_gas": false,
+      "due_consolidation": false,
+      "due_unitization": false,
+      "due_field_transfer": false,
+      "due_subdivision": false,
+      "prev_operator_name": "Tandem Energy Corporation",
+      "prev_operator_signature": true,
+      "prev_operator_name_print": null,
+      "prev_operator_title": null,
+      "prev_operator_date": "08/18/10",
+      "prev_operator_phone": null,
+      "prev_operator_authorized_employee": false,
+      "prev_operator_authorized_agent": false,
+      "curr_operator_name_print": "RICHARD MICHAEL",
+      "curr_operator_signature": true,
+      "curr_operator_title": "MEMBER",
+      "curr_operator_email": "RICK.MICHAEL@SBCGLOBAL.NET",
+      "curr_operator_date": "6/3/2010",
+      "curr_operator_phone": "512 442 4151",
+      "curr_operator_authorized_employee": true,
+      "curr_operator_authorized_agent": false,
+      "reviewer_initials": null,
+      "approval_date": null,
+      "gas_gatherers_purchasers": null,
+      "oil_condensate_gatherers": null
+    },
+    "field_citations": [
+      {
+        "field_path": "current_operator_name",
+        "page": 1,
+        "bbox": [
+          0.061347,
+          0.152128,
+          0.111111,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "SNG Operating. LLC",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_p5_no",
+        "page": 1,
+        "bbox": [
+          0.525762,
+          0.151999,
+          0.037221,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "797970",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.760398,
+          0.153572,
+          0.046417,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Atascosa",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district",
+        "page": 1,
+        "bbox": [
+          0.529647,
+          0.185644,
+          0.003497,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "I",
+        "confidence": 0.8590993022799652,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_address",
+        "page": 1,
+        "bbox": [
+          0.073975,
+          0.19687,
+          0.107442,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Austin. Texas 78704",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_operator",
+        "page": 1,
+        "bbox": [
+          0.83847,
+          0.809664,
+          0.019413,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_name",
+        "page": 1,
+        "bbox": [
+          0.041601,
+          0.709396,
+          0.160751,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "_'l'andem Energy Corporation",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_signature",
+        "page": 1,
+        "bbox": [
+          0.83847,
+          0.809664,
+          0.019413,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_signature",
+        "page": 1,
+        "bbox": [
+          0.83847,
+          0.809664,
+          0.019413,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_authorized_employee",
+        "page": 1,
+        "bbox": [
+          0.83847,
+          0.809664,
+          0.019413,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:19:35.244729Z",
+  "completed_at": "2026-09-13T20:19:35.244729Z",
+  "latency_in_ms": 396
+}

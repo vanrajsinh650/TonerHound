@@ -1,0 +1,272 @@
+{
+  "request": {
+    "example_id": "short/oklahoma_county_purchase_order_avl_systems_corrupted",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/oklahoma_county_purchase_order_avl_systems_corrupted.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 14,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/oklahoma_county_purchase_order_avl_systems_corrupted",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "po_number": "22601904",
+      "requisition_number": "12602080",
+      "po_date": "2025-08-28",
+      "buyer": {
+        "name": "Oklahoma County",
+        "department": "Emergency Management"
+      },
+      "requisitioner": "Nick Rutledge",
+      "buyer_contact": "Nick Rutledge",
+      "vendor": {
+        "name": "AVL SYSTEMS DESIGN LLC",
+        "address": "14901 BRISTOL PARK BLVD EDMOND, OK 73013",
+        "vendor_number": "5421",
+        "contact": "405-749-1866"
+      },
+      "ship_to": "OK CO EMERGENCY MANAGEMENT 320 ROBERT S KERR ROOM 101 OKLAHOMA CITY, OK 73102",
+      "bill_to": "OK CO EMERGENCY MANAGEMENT 320 ROBERT S KERR ROOM 101 OKLAHOMA CITY, OK 73102",
+      "line_items": [
+        {
+          "line_no": 1,
+          "description": "Statewide Contract # SW1021AV - Emergency Operations Center (EOC) audio-visual equipment",
+          "quantity": 1.0,
+          "unit_of_measure": "EACH",
+          "unit_price": 6721.8,
+          "start_date": null,
+          "end_date": null,
+          "extended_price": 6721.8
+        }
+      ],
+      "total_amount": 6721.8,
+      "currency": "USD"
+    },
+    "field_citations": [
+      {
+        "field_path": "po_number",
+        "page": 1,
+        "bbox": [
+          0.87,
+          0.081455,
+          0.085882,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "22601904",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "requisition_number",
+        "page": 1,
+        "bbox": [
+          0.46,
+          0.331,
+          0.062941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "12602080",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "po_date",
+        "page": 1,
+        "bbox": [
+          0.538235,
+          0.883727,
+          0.057647,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "08/28/2025",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "buyer.name",
+        "page": 1,
+        "bbox": [
+          0.094118,
+          0.942364,
+          0.090588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Oklahoma County",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "buyer.department",
+        "page": 1,
+        "bbox": [
+          0.824118,
+          0.114091,
+          0.133529,
+          0.030455
+        ],
+        "polygon": null,
+        "reference_text": "Eme.rgency ot Management",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "requisitioner",
+        "page": 1,
+        "bbox": [
+          0.582353,
+          0.330773,
+          0.084706,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Nick Rutletige:",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "buyer_contact",
+        "page": 1,
+        "bbox": [
+          0.582353,
+          0.330773,
+          0.084706,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Nick Rutletige:",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.vendor_number",
+        "page": 1,
+        "bbox": [
+          0.292353,
+          0.204182,
+          0.024118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "5421",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].line_no",
+        "page": 1,
+        "bbox": [
+          0.604706,
+          0.436682,
+          0.005588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1.0000",
+        "confidence": 0.7646027439027335,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].quantity",
+        "page": 1,
+        "bbox": [
+          0.265882,
+          0.852818,
+          0.005294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "I",
+        "confidence": 0.7926292014571626,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].unit_of_measure",
+        "page": 1,
+        "bbox": [
+          0.211765,
+          0.814864,
+          0.018235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "each",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].unit_price",
+        "page": 1,
+        "bbox": [
+          0.93,
+          0.931227,
+          0.05,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$6,721.80",
+        "confidence": 0.8432476782533082,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].extended_price",
+        "page": 1,
+        "bbox": [
+          0.93,
+          0.931227,
+          0.05,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$6,721.80",
+        "confidence": 0.8432476782533082,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_amount",
+        "page": 1,
+        "bbox": [
+          0.93,
+          0.931227,
+          0.05,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$6,721.80",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:33:52.375073Z",
+  "completed_at": "2026-09-13T20:33:52.375073Z",
+  "latency_in_ms": 27917
+}

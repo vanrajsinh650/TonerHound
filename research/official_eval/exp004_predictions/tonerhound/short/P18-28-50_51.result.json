@@ -1,0 +1,322 @@
+{
+  "request": {
+    "example_id": "short/P18-28-50_51",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/P18-28-50_51.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 14,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/P18-28-50_51",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "reporting_period": "JANUARY, 2013",
+      "operator": "KEY ENERGY SERVICES, LLC",
+      "operator_no": "458534",
+      "address_street_or_box": "P. O. BOX 1327",
+      "address_city": "GRAHAM",
+      "address_state": "TEXAS",
+      "address_zip_code": "76450",
+      "purpose_monthly_report": null,
+      "purpose_corrected_report": false,
+      "purpose_initial_report": null,
+      "purpose_final_report": null,
+      "consolidated_p18_yes": null,
+      "consolidated_p18_no": null,
+      "system_serial_no": "09-0419",
+      "district_and_lease_no": "30446",
+      "gathering_system_facility_name": "BANDERA DISPOSAL SYSTEM",
+      "county": "MONTAGUE",
+      "rrc_district_no": "09",
+      "distance_from_nearest_town": "3 MILES",
+      "direction_from_nearest_town": "NW",
+      "nearest_town": "SUNSET",
+      "survey": "PANOLA CST",
+      "section": null,
+      "block": null,
+      "abstract_no": "587",
+      "township": null,
+      "league": null,
+      "labor": null,
+      "porcion": null,
+      "share": null,
+      "tract": null,
+      "lot": "91",
+      "disposal_api_numbers": null,
+      "disposal_well_lease_and_well_no": "BANDERA DISPOSAL SYSTEM #1WD",
+      "disposal_well_uic_no": "F-16731",
+      "disposal_method_recycling": null,
+      "disposal_method_land_application": null,
+      "disposal_method_discharge": null,
+      "disposal_method_other": null,
+      "disposal_method_other_text": null,
+      "disposal_method_permit_no": null,
+      "sec3_l1_num_oil_gas_wells": null,
+      "sec3_l2_water_from_producing": "49412",
+      "sec3_l3_water_from_nonproducing": "11510",
+      "sec3_l4_total_texas_water": "60922",
+      "sec3_l5_state_ok": null,
+      "sec3_l5_state_la": null,
+      "sec3_l5_state_nm": null,
+      "sec3_l5_state_other": null,
+      "sec3_l5_state_other_text": null,
+      "sec3_l5_out_of_state_water": null,
+      "sec3_l6_skimmed_total": "17",
+      "sec3_l7_tolerance": "25",
+      "sec3_l8_excess_to_leases": "0",
+      "sec3_l9_slugs_credited": "0",
+      "sec3_l10_excess_not_credited": "0",
+      "sec4_l1_storage_beginning": "2",
+      "sec4_l2_skimmed_not_allocated": "17",
+      "sec4_l3_sold": "0",
+      "sec4_l4_transferred": null,
+      "sec4_l5_bsw_collected": null,
+      "sec4_l6_storage_end": "19",
+      "signature_present": true,
+      "print_name": "KELLY HUNTER",
+      "certificate_date": "02/08/2013",
+      "title": "AGENT",
+      "telephone_area_code": "940",
+      "telephone_number": "549-3280",
+      "email_optional": null,
+      "gatherer_entries": [
+        {
+          "name": "BARGAS, INC.",
+          "amt": null,
+          "rrc_id_no": "T1052079"
+        },
+        {
+          "name": "TRANSOIL MARKETING INC.",
+          "amt": null,
+          "rrc_id_no": "T17B0842"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "address_state",
+        "page": 1,
+        "bbox": [
+          0.355752,
+          0.885918,
+          0.037168,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Texas",
+        "confidence": 0.7716934072445423,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gathering_system_facility_name",
+        "page": 1,
+        "bbox": [
+          0.235988,
+          0.365771,
+          0.306785,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Wels)IBANDERA DISPOSAL SYSTEM",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district_no",
+        "page": 1,
+        "bbox": [
+          0.360472,
+          0.571128,
+          0.00944,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "9,",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "disposal_well_lease_and_well_no",
+        "page": 1,
+        "bbox": [
+          0.235988,
+          0.366,
+          0.365782,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Wels)IBANDERA DISPOSAL SYSTEM #1WD",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l2_water_from_producing",
+        "page": 1,
+        "bbox": [
+          0.853097,
+          0.460322,
+          0.048378,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "49412",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l8_excess_to_leases",
+        "page": 1,
+        "bbox": [
+          0.323894,
+          0.911101,
+          0.012979,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "O.",
+        "confidence": 0.8318259093560154,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l9_slugs_credited",
+        "page": 1,
+        "bbox": [
+          0.323894,
+          0.911101,
+          0.012979,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "O.",
+        "confidence": 0.7750350593829609,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec4_l1_storage_beginning",
+        "page": 1,
+        "bbox": [
+          0.446608,
+          0.677584,
+          0.00708,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec4_l3_sold",
+        "page": 1,
+        "bbox": [
+          0.323894,
+          0.911101,
+          0.012979,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "O.",
+        "confidence": 0.8295343322165548,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "print_name",
+        "page": 1,
+        "bbox": [
+          0.667847,
+          0.790451,
+          0.139823,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "KELLY HUNTER",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "certificate_date",
+        "page": 1,
+        "bbox": [
+          0.458407,
+          0.817923,
+          0.095575,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "02/08/2013",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "title",
+        "page": 1,
+        "bbox": [
+          0.715044,
+          0.819297,
+          0.057817,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "AGENT",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "telephone_number",
+        "page": 1,
+        "bbox": [
+          0.692035,
+          0.850203,
+          0.090855,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "549-3280",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gatherer_entries[0].name",
+        "page": 1,
+        "bbox": [
+          0.040708,
+          0.736879,
+          0.212979,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1.BARGAS, INC.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:18:57.460041Z",
+  "completed_at": "2026-09-13T20:18:57.460041Z",
+  "latency_in_ms": 10382
+}

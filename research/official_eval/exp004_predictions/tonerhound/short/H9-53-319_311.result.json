@@ -1,0 +1,393 @@
+{
+  "request": {
+    "example_id": "short/H9-53-319_311",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/H9-53-319_311.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 20,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/H9-53-319_311",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "operator": "ANADARKO E&P ONSHORE LLC",
+      "operator_number": "020528",
+      "rrc_district": "01",
+      "street_or_po_box": "P.O. BOX 1330",
+      "city": "HOUSTON",
+      "state": "TX",
+      "zip_code": "77251",
+      "lease_facility_operation_name": "CHAPARRAL WILDLIFE 8H",
+      "field_or_area_name": "BRISCOE RANCH (EAGLE FORD)",
+      "county": "DIMMIT",
+      "optype_a_oil_field": false,
+      "optype_b_gas_field": false,
+      "optype_c_pipeline_gathering": false,
+      "optype_d_gasoline_plant": false,
+      "optype_e_drilling_workover": true,
+      "optype_f_sweetening_unit": false,
+      "optype_g_combination": false,
+      "optype_h_other": false,
+      "operation_type_other_explanation": null,
+      "h2s_concentration": "5 PPM",
+      "maximum_escape_volume": "3,300 MCF/Day",
+      "roe_100ppm": "0 Ft.",
+      "roe_500ppm": "0 Ft.",
+      "operation_existing": false,
+      "operation_new": true,
+      "modification_cert_change_yes": false,
+      "modification_cert_change_no": true,
+      "workover_100ppm_3000ft_yes": false,
+      "workover_100ppm_3000ft_no": true,
+      "previous_certificate_number": null,
+      "roe_100ppm_public_area_yes": false,
+      "roe_100ppm_public_area_no": true,
+      "roe_500ppm_public_road_yes": false,
+      "roe_500ppm_public_road_no": true,
+      "injection_h2s_fluid_yes": false,
+      "injection_h2s_fluid_no": true,
+      "compliance_date_mo": null,
+      "compliance_date_day": null,
+      "compliance_date_year": null,
+      "depth_of_compliance_drilling": "9250 Ft. from Surface",
+      "contingency_plan_prepared_yes": false,
+      "contingency_plan_prepared_no": true,
+      "contingency_plan_location": null,
+      "data_location": "1201 LAKE ROBBINS DR., THE WOODLANDS, TX 77380",
+      "signature_present": true,
+      "representative_of_company": null,
+      "title": "EHS Southern Region Drilling",
+      "phone_no": "(832) 636-7047",
+      "certificate_date": "05/14/13",
+      "approved_by": "Wesley Dresch",
+      "rrc_use_date": "6-11-2013",
+      "remarks": null,
+      "certification_number": "075408",
+      "exempt_stamp_present": true,
+      "operations_covered": [
+        {
+          "rrc_id": "740292",
+          "type_id_code": "5",
+          "storage_yes": false,
+          "storage_no": true
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "operator",
+        "page": 1,
+        "bbox": [
+          0.149263,
+          0.212591,
+          0.229499,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "ANADARKO E&P ONSHORE LLC",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_number",
+        "page": 1,
+        "bbox": [
+          0.512094,
+          0.212364,
+          0.054277,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "020528",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district",
+        "page": 1,
+        "bbox": [
+          0.80708,
+          0.213727,
+          0.014159,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "01",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "street_or_po_box",
+        "page": 1,
+        "bbox": [
+          0.158702,
+          0.238045,
+          0.102655,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "P.0. BOX 1330",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "city",
+        "page": 1,
+        "bbox": [
+          0.490265,
+          0.2385,
+          0.065487,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "HOUSTON",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "state",
+        "page": 1,
+        "bbox": [
+          0.464307,
+          0.633955,
+          0.019469,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "TX",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "zip_code",
+        "page": 1,
+        "bbox": [
+          0.80177,
+          0.239636,
+          0.039528,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "77251",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_facility_operation_name",
+        "page": 1,
+        "bbox": [
+          0.138053,
+          0.264636,
+          0.187021,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "CHAPARRAL WILDLIFE 8H",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "field_or_area_name",
+        "page": 1,
+        "bbox": [
+          0.474926,
+          0.263955,
+          0.229499,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "BRISCOE RANCH (EAGLEFORD)",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.736283,
+          0.265091,
+          0.051917,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "DIMMIT",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "h2s_concentration",
+        "page": 1,
+        "bbox": [
+          0.584071,
+          0.327364,
+          0.087906,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "5 PPM",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "maximum_escape_volume",
+        "page": 1,
+        "bbox": [
+          0.706785,
+          0.3285,
+          0.164602,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3.300 MCF/Day",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_100ppm",
+        "page": 1,
+        "bbox": [
+          0.854867,
+          0.354864,
+          0.014749,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Ft.",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_500ppm",
+        "page": 1,
+        "bbox": [
+          0.854867,
+          0.354864,
+          0.014749,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Ft.",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "depth_of_compliance_drilling",
+        "page": 1,
+        "bbox": [
+          0.629499,
+          0.555773,
+          0.20177,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "- Ft, from Surface",
+        "confidence": 0.8481633713248271,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "data_location",
+        "page": 1,
+        "bbox": [
+          0.139823,
+          0.634864,
+          0.388791,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1201 LAKE ROBBINS DR., THE WOODLANDS, TX 77380",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "title",
+        "page": 1,
+        "bbox": [
+          0.39351,
+          0.729182,
+          0.19528,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "EHS Southem Region Drilling",
+        "confidence": 0.8478910553916614,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "phone_no",
+        "page": 1,
+        "bbox": [
+          0.660767,
+          0.728273,
+          0.100295,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "(832) 636-7047",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "certificate_date",
+        "page": 1,
+        "bbox": [
+          0.788201,
+          0.727591,
+          0.057817,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "05/14/13",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[0].type_id_code",
+        "page": 1,
+        "bbox": [
+          0.584071,
+          0.327364,
+          0.00708,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "5",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:16:31.230702Z",
+  "completed_at": "2026-09-13T20:16:31.230702Z",
+  "latency_in_ms": 7928
+}

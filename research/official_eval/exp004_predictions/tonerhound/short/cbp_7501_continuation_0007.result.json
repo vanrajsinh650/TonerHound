@@ -1,0 +1,823 @@
+{
+  "request": {
+    "example_id": "short/cbp_7501_continuation_0007",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/cbp_7501_continuation_0007.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 45,
+    "ocr_pages": 0,
+    "num_pages": 2
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/cbp_7501_continuation_0007",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "filer_code_entry_number": "9XP-1032414-2",
+      "entry_type": "01 ABI/A",
+      "summary_date": "06/09/22",
+      "surety_number": "846",
+      "bond_type": "9",
+      "port_code": "2720",
+      "entry_date": "05/29/2022",
+      "importing_carrier": "CA",
+      "mode_of_transport": "40",
+      "country_of_origin": "CN",
+      "import_date": "05/28/2022",
+      "bill_of_lading_or_awb_number": "99964822586",
+      "manufacturer_id": "CNGOOHAR1188SHA",
+      "exporting_country": "CN",
+      "export_date": "05/27/2022",
+      "it_number": null,
+      "it_date": null,
+      "missing_documents": null,
+      "foreign_port_of_lading": null,
+      "us_port_of_unlading": "2720",
+      "location_of_goods": "Z543/AIR CHINA INTERNATIONA",
+      "consignee_number": "45-356655000",
+      "importer_number": "214601-20212",
+      "reference_number": null,
+      "ultimate_consignee": {
+        "name": "OTX LOGISTICS, INC.",
+        "address": {
+          "address_line_one": "23059 INTERNATIONAL AIRPORT CENTER BLVD",
+          "address_line_two": null,
+          "city": "SPRINGFIELD GARDENS",
+          "state": "NY",
+          "zip_code": "11413"
+        }
+      },
+      "importer_of_record": {
+        "name": "ULUCK TECHNOLOGY PTE LTD",
+        "address": {
+          "address_line_one": "GOLDEN MILE COMPLEX 5001 BEACH ROAD",
+          "address_line_two": "KALLANG",
+          "city": "SINGAPORE",
+          "state": null,
+          "zip_code": "199588"
+        }
+      },
+      "total_entered_value": 72980.0,
+      "total_other_fees": 252.8,
+      "ascertained_duty": 20142.48,
+      "ascertained_tax": 0.0,
+      "ascertained_other": 252.8,
+      "ascertained_total": 20395.28,
+      "declarant_name": "OTX LOGISTICS, INC.",
+      "declarant_title": "ATTY-IN-FACT",
+      "declarant_date": "05/29/2022",
+      "broker_filer_name": "OTX LOGISTICS, INC.",
+      "broker_filer_phone": "+17187237899",
+      "broker_importer_file_number": "SLAXIA22050396 / Ref: AMS",
+      "other_fees": [
+        {
+          "fee_code": "499",
+          "fee_name": "Merchandise Processing Fee",
+          "fee_amount": 252.8
+        }
+      ],
+      "line_items": [
+        {
+          "line_number": "001",
+          "htsus_numbers": [
+            "9903.88.02",
+            "8543.70.9860"
+          ],
+          "ada_cvd_case_numbers": null,
+          "manufacturer_id_line": null,
+          "gross_weight": "645 KG",
+          "manifest_quantity": "100 PK",
+          "net_quantity_htsus_units": "100.00 NO",
+          "description_of_merchandise": "ARTICLE OF CHINA,US NTE 20(C); ELECTRIC MACHINE,APPARTUS",
+          "entered_value_dollars": 41000,
+          "chgs_codes": [
+            "C2022"
+          ],
+          "relationship_indicator": "N",
+          "htsus_rates": [
+            "25%",
+            "2.6%"
+          ],
+          "ada_cvd_rates": null,
+          "irc_rates": null,
+          "visa_number": null,
+          "duty_and_tax_amount": 11316.0
+        },
+        {
+          "line_number": "002",
+          "htsus_numbers": [
+            "9903.88.02",
+            "8543.70.9860"
+          ],
+          "ada_cvd_case_numbers": null,
+          "manufacturer_id_line": null,
+          "gross_weight": "503 KG",
+          "manifest_quantity": null,
+          "net_quantity_htsus_units": "78.00 NO",
+          "description_of_merchandise": "ARTICLE OF CHINA,US NTE 20(C); ELECTRIC MACHINE,APPARTUS",
+          "entered_value_dollars": 31980,
+          "chgs_codes": [
+            "C1578"
+          ],
+          "relationship_indicator": "N",
+          "htsus_rates": [
+            "25%",
+            "2.6%"
+          ],
+          "ada_cvd_rates": null,
+          "irc_rates": null,
+          "visa_number": null,
+          "duty_and_tax_amount": 8826.48
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "filer_code_entry_number",
+        "page": 2,
+        "bbox": [
+          0.107647,
+          0.117136,
+          0.094118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "9XP-1032414-2",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "bond_type",
+        "page": 1,
+        "bbox": [
+          0.312353,
+          0.140545,
+          0.009412,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "9.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "port_code",
+        "page": 1,
+        "bbox": [
+          0.692353,
+          0.210545,
+          0.029412,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2720",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "entry_date",
+        "page": 1,
+        "bbox": [
+          0.761765,
+          0.831682,
+          0.06,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "05/29/2022",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "importing_carrier",
+        "page": 1,
+        "bbox": [
+          0.352941,
+          0.321682,
+          0.018235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "CA",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "bill_of_lading_or_awb_number",
+        "page": 1,
+        "bbox": [
+          0.281765,
+          0.413045,
+          0.082353,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "99964822586",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "us_port_of_unlading",
+        "page": 1,
+        "bbox": [
+          0.692353,
+          0.210545,
+          0.029412,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2720",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "ultimate_consignee.name",
+        "page": 1,
+        "bbox": [
+          0.089412,
+          0.872818,
+          0.137059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "OTX LOGISTICS, INC.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "ultimate_consignee.address.address_line_one",
+        "page": 1,
+        "bbox": [
+          0.089412,
+          0.885091,
+          0.227059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "23059 INTERNATIONAL AIRPORT CENTER BLVD,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "ultimate_consignee.address.city",
+        "page": 1,
+        "bbox": [
+          0.322941,
+          0.885091,
+          0.117647,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "SPRINGFIELD GARDENS,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "ultimate_consignee.address.state",
+        "page": 1,
+        "bbox": [
+          0.444118,
+          0.885091,
+          0.013529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "NY",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "ultimate_consignee.address.zip_code",
+        "page": 1,
+        "bbox": [
+          0.461176,
+          0.885091,
+          0.026471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "11413",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "importer_of_record.name",
+        "page": 1,
+        "bbox": [
+          0.528235,
+          0.266227,
+          0.202941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "ULUCK TECHNOLOGY PTE LTD",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "importer_of_record.address.address_line_one",
+        "page": 1,
+        "bbox": [
+          0.528235,
+          0.277591,
+          0.288235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "GOLDEN MILE COMPLEX 5001 BEACH ROAD",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "importer_of_record.address.address_line_two",
+        "page": 1,
+        "bbox": [
+          0.528235,
+          0.288955,
+          0.061176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "KALLANG",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "importer_of_record.address.city",
+        "page": 1,
+        "bbox": [
+          0.543529,
+          0.307818,
+          0.079412,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "SINGAPORE",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "importer_of_record.address.zip_code",
+        "page": 1,
+        "bbox": [
+          0.851765,
+          0.306682,
+          0.034118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "199588",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_entered_value",
+        "page": 1,
+        "bbox": [
+          0.432353,
+          0.624636,
+          0.067059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$72,980.00)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_other_fees",
+        "page": 1,
+        "bbox": [
+          0.247983,
+          0.624864,
+          0.02521,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$252.80",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "ascertained_duty",
+        "page": 1,
+        "bbox": [
+          0.849412,
+          0.638727,
+          0.055882,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "20142.48",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "ascertained_tax",
+        "page": 2,
+        "bbox": [
+          0.47,
+          0.0,
+          0.005294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "o",
+        "confidence": 0.7524081057853962,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "ascertained_other",
+        "page": 1,
+        "bbox": [
+          0.247983,
+          0.624864,
+          0.02521,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$252.80",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "ascertained_total",
+        "page": 1,
+        "bbox": [
+          0.845294,
+          0.7235,
+          0.06,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "20,395.28)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "declarant_name",
+        "page": 1,
+        "bbox": [
+          0.11,
+          0.266682,
+          0.136471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "OTX LOGISTICS, INC.",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "declarant_title",
+        "page": 1,
+        "bbox": [
+          0.374706,
+          0.832591,
+          0.081765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "ATTY-IN-FACT",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "declarant_date",
+        "page": 1,
+        "bbox": [
+          0.761765,
+          0.831682,
+          0.06,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "05/29/2022",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "broker_filer_name",
+        "page": 1,
+        "bbox": [
+          0.11,
+          0.266682,
+          0.136471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "OTX LOGISTICS, INC.",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "broker_filer_phone",
+        "page": 1,
+        "bbox": [
+          0.145294,
+          0.898727,
+          0.09,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "+17187237899",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "broker_importer_file_number",
+        "page": 1,
+        "bbox": [
+          0.528824,
+          0.886227,
+          0.175882,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "SLAXIA22050396 / Ref: AMS",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "other_fees[0].fee_code",
+        "page": 1,
+        "bbox": [
+          0.175294,
+          0.517364,
+          0.022353,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "499",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "other_fees[0].fee_name",
+        "page": 1,
+        "bbox": [
+          0.202353,
+          0.517591,
+          0.222353,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "MERCHANDISE PROCESSING FEE",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "other_fees[0].fee_amount",
+        "page": 1,
+        "bbox": [
+          0.247983,
+          0.624864,
+          0.02521,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$252.80",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].line_number",
+        "page": 1,
+        "bbox": [
+          0.239412,
+          0.435545,
+          0.112353,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "001/UL20220175A",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].gross_weight",
+        "page": 1,
+        "bbox": [
+          0.346471,
+          0.462818,
+          0.045294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "645 KG",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].manifest_quantity",
+        "page": 1,
+        "bbox": [
+          0.783529,
+          0.413273,
+          0.042941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "100 PK",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].net_quantity_htsus_units",
+        "page": 1,
+        "bbox": [
+          0.435882,
+          0.504636,
+          0.063529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "100.00 NO",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].description_of_merchandise",
+        "page": 1,
+        "bbox": [
+          0.125882,
+          0.449864,
+          0.215882,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "ARTICLE OF CHINA,US NTE 20(C)",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].chgs_codes[0]",
+        "page": 1,
+        "bbox": [
+          0.088824,
+          0.832591,
+          0.732941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "[OTX LOGISTICS, INC. ATTY-IN-FACT 05/29/2022",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].htsus_rates[0]",
+        "page": 1,
+        "bbox": [
+          0.091765,
+          0.251682,
+          0.015882,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "25.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].line_number",
+        "page": 2,
+        "bbox": [
+          0.236471,
+          0.201,
+          0.111765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "002/UL202201758",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].gross_weight",
+        "page": 2,
+        "bbox": [
+          0.343529,
+          0.2285,
+          0.044706,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "503 KG",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].net_quantity_htsus_units",
+        "page": 2,
+        "bbox": [
+          0.438824,
+          0.270545,
+          0.056471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "78.00 NO",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].description_of_merchandise",
+        "page": 2,
+        "bbox": [
+          0.122941,
+          0.215545,
+          0.215294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "ARTICLE OF CHINA,US NTE 20(C)",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].entered_value_dollars",
+        "page": 2,
+        "bbox": [
+          0.436471,
+          0.315091,
+          0.058824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "31,980.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].htsus_rates[0]",
+        "page": 1,
+        "bbox": [
+          0.091765,
+          0.251682,
+          0.015882,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "25.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:29:28.288796Z",
+  "completed_at": "2026-09-13T20:29:28.288796Z",
+  "latency_in_ms": 20139
+}

@@ -1,0 +1,444 @@
+{
+  "request": {
+    "example_id": "short/P4-27-51022_74198",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/P4-27-51022_74198.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 23,
+    "ocr_pages": 0,
+    "num_pages": 2
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/P4-27-51022_74198",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "field_name": "Early (Strawn Lime)",
+      "lease_name": "Tonto North 443 B-6E",
+      "current_operator_name": "Sharp Image Energy, Inc.",
+      "operator_p5_no": "770731",
+      "oil_lse_gas_id_no": "69220",
+      "county": "Scurry",
+      "rrc_district": "8A",
+      "operator_address": "P.O. Box 1888 Big Spring, TX 79721",
+      "well_nos": "6E",
+      "classification_oil": true,
+      "classification_gas": false,
+      "classification_other": false,
+      "effective_date": "06/01/09",
+      "change_operator": false,
+      "change_oil_condensate_gatherer": false,
+      "change_gas_gatherer": false,
+      "change_gas_purchaser": false,
+      "change_gas_purchaser_system_code": false,
+      "change_field_name": false,
+      "change_field_name_from": null,
+      "change_field_name_docket": null,
+      "change_lease_name": false,
+      "change_lease_name_from": "(69220) Tonto North 443- B-3",
+      "new_rrc_oil_lease": true,
+      "new_rrc_gas_well": false,
+      "new_rrc_other_well": false,
+      "new_rrc_other_well_specify": null,
+      "due_new_completion_recompletion": false,
+      "due_reclass_gas_to_oil": false,
+      "due_reclass_oil_to_gas": false,
+      "due_consolidation": true,
+      "due_unitization": true,
+      "due_field_transfer": false,
+      "due_subdivision": true,
+      "prev_operator_name": null,
+      "prev_operator_signature": false,
+      "prev_operator_name_print": null,
+      "prev_operator_title": null,
+      "prev_operator_date": null,
+      "prev_operator_phone": null,
+      "prev_operator_authorized_employee": false,
+      "prev_operator_authorized_agent": false,
+      "curr_operator_name_print": "Sonya Bravo",
+      "curr_operator_signature": true,
+      "curr_operator_title": "Operations Analyst",
+      "curr_operator_email": "sbravo@basin-net.net",
+      "curr_operator_date": "12/02/09",
+      "curr_operator_phone": "(432) 267-3126",
+      "curr_operator_authorized_employee": true,
+      "curr_operator_authorized_agent": false,
+      "reviewer_initials": null,
+      "approval_date": null,
+      "gas_gatherers_purchasers": [
+        {
+          "gatherer": true,
+          "purchaser": true,
+          "name": "WTG",
+          "system_code": "0001",
+          "percent_of_take": "100%",
+          "full_well_stream": false
+        }
+      ],
+      "oil_condensate_gatherers": [
+        {
+          "name": "Sunoco",
+          "percent_of_take": "100%"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "field_name",
+        "page": 2,
+        "bbox": [
+          0.526312,
+          0.209588,
+          0.129424,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Early (Strawn Lime)",
+        "confidence": 0.8095651878778881,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_name",
+        "page": 1,
+        "bbox": [
+          0.519916,
+          0.122194,
+          0.142185,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Tonto North 443 B-6E",
+        "confidence": 0.8524786447308458,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "current_operator_name",
+        "page": 1,
+        "bbox": [
+          0.043534,
+          0.156287,
+          0.166553,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Sharp Image Energy, Inc.",
+        "confidence": 0.7809285206433065,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_p5_no",
+        "page": 1,
+        "bbox": [
+          0.549057,
+          0.154261,
+          0.045189,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "770731",
+        "confidence": 0.7714046991151496,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "oil_lse_gas_id_no",
+        "page": 2,
+        "bbox": [
+          0.440384,
+          0.47832,
+          0.038622,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "69220",
+        "confidence": 0.7938724844467655,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.783997,
+          0.155145,
+          0.036182,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Scurry",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district",
+        "page": 1,
+        "bbox": [
+          0.893907,
+          0.155494,
+          0.016952,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "8A",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_address",
+        "page": 1,
+        "bbox": [
+          0.048598,
+          0.18832,
+          0.698351,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "P.O. Box 1888 SE",
+        "confidence": 0.8932223982527306,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "well_nos",
+        "page": 1,
+        "bbox": [
+          0.630759,
+          0.122093,
+          0.031342,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "B-6E",
+        "confidence": 0.7639755906595326,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_name_print",
+        "page": 2,
+        "bbox": [
+          0.043117,
+          0.908294,
+          0.082835,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Sonya Bravo",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_signature",
+        "page": 1,
+        "bbox": [
+          0.83861,
+          0.809357,
+          0.019444,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_title",
+        "page": 2,
+        "bbox": [
+          0.49093,
+          0.906181,
+          0.124859,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Operations Analyst",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_email",
+        "page": 2,
+        "bbox": [
+          0.495547,
+          0.943392,
+          0.144867,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "sbravo@basin-net.net",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_date",
+        "page": 1,
+        "bbox": [
+          0.491489,
+          0.937337,
+          0.052407,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "12/02/09",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_phone",
+        "page": 2,
+        "bbox": [
+          0.048275,
+          0.944578,
+          0.098416,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "(432) 267-3126",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_authorized_employee",
+        "page": 1,
+        "bbox": [
+          0.83861,
+          0.809357,
+          0.019444,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gas_gatherers_purchasers[0].gatherer",
+        "page": 1,
+        "bbox": [
+          0.83861,
+          0.809357,
+          0.019444,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gas_gatherers_purchasers[0].purchaser",
+        "page": 1,
+        "bbox": [
+          0.83861,
+          0.809357,
+          0.019444,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "true",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gas_gatherers_purchasers[0].name",
+        "page": 1,
+        "bbox": [
+          0.102277,
+          0.417233,
+          0.034039,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "WTG",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gas_gatherers_purchasers[0].system_code",
+        "page": 1,
+        "bbox": [
+          0.77945,
+          0.41693,
+          0.028177,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0001",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gas_gatherers_purchasers[0].percent_of_take",
+        "page": 1,
+        "bbox": [
+          0.853928,
+          0.417782,
+          0.032659,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "100%",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "oil_condensate_gatherers[0].name",
+        "page": 1,
+        "bbox": [
+          0.051795,
+          0.601256,
+          0.048436,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Sunoco",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "oil_condensate_gatherers[0].percent_of_take",
+        "page": 1,
+        "bbox": [
+          0.602695,
+          0.60064,
+          0.031628,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "100%",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:19:30.562614Z",
+  "completed_at": "2026-09-13T20:19:30.562614Z",
+  "latency_in_ms": 482
+}

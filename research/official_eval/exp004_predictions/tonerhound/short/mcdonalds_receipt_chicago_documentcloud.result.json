@@ -1,0 +1,551 @@
+{
+  "request": {
+    "example_id": "short/mcdonalds_receipt_chicago_documentcloud",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/mcdonalds_receipt_chicago_documentcloud.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 30,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/mcdonalds_receipt_chicago_documentcloud",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "merchant_name": "MCDONALDS",
+      "store_number": "6676",
+      "merchant_address": {
+        "street": "600 N CLARK",
+        "city": "CHICAGO",
+        "state": "IL",
+        "zip_code": "60610"
+      },
+      "merchant_phone": "312-867-0455",
+      "transaction_date": "2012-12-08",
+      "transaction_time": "00:34",
+      "transaction_id": "84",
+      "line_items": [
+        {
+          "line_no": 1,
+          "description": "MED VANILLA SHAKE",
+          "quantity": 5,
+          "unit_price": null,
+          "item_total": 14.25,
+          "sku": null
+        },
+        {
+          "line_no": 2,
+          "description": "BIG MAC",
+          "quantity": 5,
+          "unit_price": null,
+          "item_total": 23.75,
+          "sku": null
+        },
+        {
+          "line_no": 3,
+          "description": "QTR POUNDER CHEESE",
+          "quantity": 10,
+          "unit_price": null,
+          "item_total": 45.5,
+          "sku": null
+        },
+        {
+          "line_no": 4,
+          "description": "DOUBLE CHEESEBURGER",
+          "quantity": 5,
+          "unit_price": null,
+          "item_total": 12.5,
+          "sku": null
+        },
+        {
+          "line_no": 5,
+          "description": "CHEESEBURGER",
+          "quantity": 20,
+          "unit_price": null,
+          "item_total": 34.0,
+          "sku": null
+        },
+        {
+          "line_no": 6,
+          "description": "MED FRENCH FRIES",
+          "quantity": 15,
+          "unit_price": null,
+          "item_total": 28.5,
+          "sku": null
+        }
+      ],
+      "subtotal": 158.5,
+      "tax": 17.04,
+      "total": 175.54,
+      "payment_method": "DEBIT",
+      "card_last4": "0093",
+      "auth_code": "861336",
+      "amount_paid": 175.54,
+      "currency": "USD"
+    },
+    "field_citations": [
+      {
+        "field_path": "merchant_name",
+        "page": 1,
+        "bbox": [
+          0.509412,
+          0.782364,
+          0.061176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "HCDONALDS",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "store_number",
+        "page": 1,
+        "bbox": [
+          0.577647,
+          0.779864,
+          0.027059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "6676",
+        "confidence": 0.8097836255314599,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "merchant_address.street",
+        "page": 1,
+        "bbox": [
+          0.487647,
+          0.323273,
+          0.075294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "800 N CLARK",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "merchant_address.city",
+        "page": 1,
+        "bbox": [
+          0.481765,
+          0.337591,
+          0.048235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "CHICASD",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "merchant_phone",
+        "page": 1,
+        "bbox": [
+          0.464706,
+          0.378045,
+          0.081765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "312-B67-0455",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "transaction_date",
+        "page": 1,
+        "bbox": [
+          0.522353,
+          0.416909,
+          0.061765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Dec.08'12",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "transaction_time",
+        "page": 1,
+        "bbox": [
+          0.631765,
+          0.412591,
+          0.033529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "00:34",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "transaction_id",
+        "page": 1,
+        "bbox": [
+          0.551765,
+          0.4435,
+          0.013529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "84",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].description",
+        "page": 1,
+        "bbox": [
+          0.432353,
+          0.487364,
+          0.115882,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "MED VANILLA SHAKE",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].quantity",
+        "page": 1,
+        "bbox": [
+          0.418235,
+          0.490091,
+          0.007059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "5",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].item_total",
+        "page": 1,
+        "bbox": [
+          0.637647,
+          0.481227,
+          0.032353,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "14.25",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].line_no",
+        "page": 1,
+        "bbox": [
+          0.462941,
+          0.447591,
+          0.007647,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].item_total",
+        "page": 1,
+        "bbox": [
+          0.637647,
+          0.493727,
+          0.034118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "23.75",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].description",
+        "page": 1,
+        "bbox": [
+          0.461176,
+          0.517727,
+          0.104118,
+          0.024091
+        ],
+        "polygon": null,
+        "reference_text": "POUNDER CHEESEBURGER",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].quantity",
+        "page": 1,
+        "bbox": [
+          0.415294,
+          0.517591,
+          0.012353,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "10",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].item_total",
+        "page": 1,
+        "bbox": [
+          0.639412,
+          0.507364,
+          0.026824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "45.50",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[3].description",
+        "page": 1,
+        "bbox": [
+          0.461176,
+          0.517727,
+          0.104118,
+          0.024091
+        ],
+        "polygon": null,
+        "reference_text": "POUNDER CHEESEBURGER",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[3].item_total",
+        "page": 1,
+        "bbox": [
+          0.640588,
+          0.521455,
+          0.026353,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "12.50",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[4].line_no",
+        "page": 1,
+        "bbox": [
+          0.421765,
+          0.530545,
+          0.006471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "5",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[4].description",
+        "page": 1,
+        "bbox": [
+          0.482941,
+          0.526455,
+          0.082353,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "CHEESEBURGER",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[4].quantity",
+        "page": 1,
+        "bbox": [
+          0.415882,
+          0.544182,
+          0.013529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "20",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[4].item_total",
+        "page": 1,
+        "bbox": [
+          0.640588,
+          0.534182,
+          0.027294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "34.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[5].description",
+        "page": 1,
+        "bbox": [
+          0.437647,
+          0.555091,
+          0.108824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "MED FRENCH FRIES",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[5].quantity",
+        "page": 1,
+        "bbox": [
+          0.417647,
+          0.557818,
+          0.012941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "15",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "subtotal",
+        "page": 1,
+        "bbox": [
+          0.638235,
+          0.574864,
+          0.033333,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "158.50",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "tax",
+        "page": 1,
+        "bbox": [
+          0.645882,
+          0.588045,
+          0.032941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "17.04",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total",
+        "page": 1,
+        "bbox": [
+          0.64,
+          0.601682,
+          0.039412,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "175.54",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "payment_method",
+        "page": 1,
+        "bbox": [
+          0.421176,
+          0.706455,
+          0.034118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Debit",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "card_last4",
+        "page": 1,
+        "bbox": [
+          0.606471,
+          0.700091,
+          0.028824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0093",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "amount_paid",
+        "page": 1,
+        "bbox": [
+          0.641765,
+          0.628955,
+          0.039412,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "175.54",
+        "confidence": 0.7613303301962926,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:32:43.192019Z",
+  "completed_at": "2026-09-13T20:32:43.192019Z",
+  "latency_in_ms": 4400
+}

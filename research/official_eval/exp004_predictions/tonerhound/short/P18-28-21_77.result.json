@@ -1,0 +1,482 @@
+{
+  "request": {
+    "example_id": "short/P18-28-21_77",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/P18-28-21_77.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 25,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/P18-28-21_77",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "reporting_period": "JANUARY 2013",
+      "operator": "A&R DISPOSAL OPERATING CO., LLC,",
+      "operator_no": "000129",
+      "address_street_or_box": "P.O. Box 978",
+      "address_city": "Sonora",
+      "address_state": "TX",
+      "address_zip_code": "76950",
+      "purpose_monthly_report": null,
+      "purpose_corrected_report": false,
+      "purpose_initial_report": null,
+      "purpose_final_report": null,
+      "consolidated_p18_yes": null,
+      "consolidated_p18_no": null,
+      "system_serial_no": "7C-0205",
+      "district_and_lease_no": "073210",
+      "gathering_system_facility_name": "A & R Disposal",
+      "county": "Sutton Co",
+      "rrc_district_no": "7C",
+      "distance_from_nearest_town": "12 miles",
+      "direction_from_nearest_town": "East",
+      "nearest_town": "Sonora",
+      "survey": "HE & WT RR Co",
+      "section": "42",
+      "block": "B",
+      "abstract_no": null,
+      "township": null,
+      "league": null,
+      "labor": null,
+      "porcion": null,
+      "share": null,
+      "tract": null,
+      "lot": null,
+      "disposal_api_numbers": null,
+      "disposal_well_lease_and_well_no": null,
+      "disposal_well_uic_no": "00168",
+      "disposal_method_recycling": null,
+      "disposal_method_land_application": null,
+      "disposal_method_discharge": null,
+      "disposal_method_other": null,
+      "disposal_method_other_text": null,
+      "disposal_method_permit_no": null,
+      "sec3_l1_num_oil_gas_wells": "89",
+      "sec3_l2_water_from_producing": "23514",
+      "sec3_l3_water_from_nonproducing": "5197",
+      "sec3_l4_total_texas_water": "28711",
+      "sec3_l5_state_ok": null,
+      "sec3_l5_state_la": null,
+      "sec3_l5_state_nm": null,
+      "sec3_l5_state_other": null,
+      "sec3_l5_state_other_text": null,
+      "sec3_l5_out_of_state_water": null,
+      "sec3_l6_skimmed_total": "111",
+      "sec3_l7_tolerance": "12",
+      "sec3_l8_excess_to_leases": "99",
+      "sec3_l9_slugs_credited": "0",
+      "sec3_l10_excess_not_credited": "99",
+      "sec4_l1_storage_beginning": "136",
+      "sec4_l2_skimmed_not_allocated": "111",
+      "sec4_l3_sold": "205",
+      "sec4_l4_transferred": null,
+      "sec4_l5_bsw_collected": null,
+      "sec4_l6_storage_end": "42",
+      "signature_present": true,
+      "print_name": "Rachel Randall",
+      "certificate_date": "02/10/2013",
+      "title": "Agent",
+      "telephone_area_code": "580",
+      "telephone_number": "318-1195",
+      "email_optional": null,
+      "gatherer_entries": [
+        {
+          "name": "North Concho Reclamati",
+          "amt": "205",
+          "rrc_id_no": "613770 SR-7C-0233"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "operator",
+        "page": 1,
+        "bbox": [
+          0.102065,
+          0.164595,
+          0.299115,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "A&R DISPOSAL OPERATING CO., LLC,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_no",
+        "page": 1,
+        "bbox": [
+          0.850737,
+          0.206852,
+          0.053687,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "000129",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "address_street_or_box",
+        "page": 1,
+        "bbox": [
+          0.103245,
+          0.180127,
+          0.096755,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "P.O. Box 978",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "address_city",
+        "page": 1,
+        "bbox": [
+          0.498525,
+          0.30073,
+          0.051917,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Sonora",
+        "confidence": 0.904808338292927,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "address_state",
+        "page": 1,
+        "bbox": [
+          0.164602,
+          0.19269,
+          0.021239,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "TX",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "address_zip_code",
+        "page": 1,
+        "bbox": [
+          0.2,
+          0.192919,
+          0.044838,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "76950",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "system_serial_no",
+        "page": 1,
+        "bbox": [
+          0.79292,
+          0.240657,
+          0.065487,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "7C-0205",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "district_and_lease_no",
+        "page": 1,
+        "bbox": [
+          0.8,
+          0.268752,
+          0.054277,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "073210",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gathering_system_facility_name",
+        "page": 1,
+        "bbox": [
+          0.102065,
+          0.1672,
+          0.80177,
+          0.019187
+        ],
+        "polygon": null,
+        "reference_text": "A&R DISPOSAL OPERATING CO., LLC, . JANUARY /129013 7C",
+        "confidence": 0.7807257812221409,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.461947,
+          0.269209,
+          0.072566,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Sutton Co",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district_no",
+        "page": 1,
+        "bbox": [
+          0.883776,
+          0.163225,
+          0.020059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "7C",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "direction_from_nearest_town",
+        "page": 1,
+        "bbox": [
+          0.438938,
+          0.300959,
+          0.032448,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "East",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "nearest_town",
+        "page": 1,
+        "bbox": [
+          0.498525,
+          0.30073,
+          0.051917,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Sonora",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "survey",
+        "page": 1,
+        "bbox": [
+          0.329794,
+          0.270351,
+          0.126844,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "HE & WT RR Co,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "section",
+        "page": 1,
+        "bbox": [
+          0.254277,
+          0.270808,
+          0.021239,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "42,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "block",
+        "page": 1,
+        "bbox": [
+          0.309735,
+          0.270351,
+          0.013569,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "B,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "disposal_well_uic_no",
+        "page": 1,
+        "bbox": [
+          0.776401,
+          0.401233,
+          0.044838,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "00168",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l1_num_oil_gas_wells",
+        "page": 1,
+        "bbox": [
+          0.681416,
+          0.478209,
+          0.017109,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "89",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l9_slugs_credited",
+        "page": 1,
+        "bbox": [
+          0.188791,
+          0.294792,
+          0.015929,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "o",
+        "confidence": 0.7917830313995957,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec4_l3_sold",
+        "page": 1,
+        "bbox": [
+          0.324484,
+          0.770123,
+          0.050147,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "205",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec4_l6_storage_end",
+        "page": 1,
+        "bbox": [
+          0.254277,
+          0.270808,
+          0.021239,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "42,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "telephone_number",
+        "page": 1,
+        "bbox": [
+          0.704425,
+          0.875879,
+          0.068437,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "318-1195",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gatherer_entries[0].name",
+        "page": 1,
+        "bbox": [
+          0.080826,
+          0.770123,
+          0.176991,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "North Concho Reclamati",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gatherer_entries[0].amt",
+        "page": 1,
+        "bbox": [
+          0.324484,
+          0.770123,
+          0.050147,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "205",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gatherer_entries[0].rrc_id_no",
+        "page": 1,
+        "bbox": [
+          0.441298,
+          0.770123,
+          0.161652,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "613770 SR-7C-0233",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:18:15.311238Z",
+  "completed_at": "2026-09-13T20:18:15.311238Z",
+  "latency_in_ms": 9447
+}

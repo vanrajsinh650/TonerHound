@@ -1,0 +1,394 @@
+{
+  "request": {
+    "example_id": "short/08-51344 H-12 10-2-2023 F-22666",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/08-51344 H-12 10-2-2023 F-22666.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 19,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/08-51344 H-12 10-2-2023 F-22666",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "operator_name": "Noble Energy Inc",
+      "operator_p5_no": "611665",
+      "rrc_district_no_and_county": "08 Reeves",
+      "mailing_address": "6301 DEAUVILLE BLVD Midland TX 79706",
+      "recovery_waterflood": false,
+      "recovery_co2_augmented_waterflooding": false,
+      "recovery_polymer_augmented_waterflooding": false,
+      "recovery_immiscible_co2_displacement": false,
+      "recovery_steam_drive_injection": false,
+      "recovery_gas_injection": true,
+      "recovery_microemulsion_micellar_flooding": false,
+      "recovery_alkaline_caustic_flooding": false,
+      "recovery_cyclic_steam_injection": false,
+      "recovery_in_situ_combustion": false,
+      "recovery_miscible_fluid_displacement": false,
+      "recovery_other": false,
+      "recovery_other_specify": null,
+      "new_initial_secondary": false,
+      "new_initial_tertiary": true,
+      "new_tertiary_superseding_secondary": false,
+      "exp_different_secondary_method": false,
+      "exp_expansion_secondary": false,
+      "exp_different_tertiary_method": false,
+      "exp_expansion_tertiary": false,
+      "change_previous_method": null,
+      "change_previous_fluid": null,
+      "fluid_brackish_water": true,
+      "fluid_saltwater": true,
+      "fluid_natural_gas": true,
+      "fluid_fresh_water": false,
+      "fluid_air": false,
+      "fluid_polymer": false,
+      "fluid_nitrogen": false,
+      "fluid_lpg": false,
+      "fluid_co2": false,
+      "fluid_other": false,
+      "fluid_other_specify": null,
+      "est_avg_volume_fluid_injected": "see injection schedule",
+      "est_avg_injection_pressure": "4500",
+      "est_ult_additional_production_oil": "1,000,000",
+      "est_ult_additional_production_gas": null,
+      "est_total_value_oil": "$ 50,000,000",
+      "est_total_value_gas": null,
+      "est_cost_machinery": "$ 6,000,000",
+      "est_cost_project_total": "$ 16,000,000",
+      "anticipated_date_injection_begin": "10/15/2023",
+      "multiple_lease_yes": false,
+      "multiple_lease_no": true,
+      "total_anticipated_leases": "1",
+      "total_anticipated_producing_wells": "3",
+      "total_anticipated_injection_wells": "3",
+      "field_name": "Phantom (Wolfcamp)",
+      "lease_or_unit_name": "Cole Younger State 30-23 Unit A",
+      "lease_no": "51344",
+      "unitization_approved_yes": false,
+      "unitization_approved_no": true,
+      "unitization_order_no_and_date": null,
+      "unitization_needed_yes": false,
+      "unitization_needed_no": true,
+      "inj_auth_a_granted": true,
+      "inj_auth_a_project_no": "F-22666",
+      "inj_auth_a_authority_date": "7/31/2023",
+      "inj_auth_a_wells": "3H, 32H, 5H",
+      "inj_auth_b_applied": false,
+      "inj_auth_b_applied_date": null,
+      "inj_auth_b_project_no": null,
+      "inj_auth_b_wells": null,
+      "inj_auth_c_anticipated": false,
+      "inj_auth_c_wells": null,
+      "signature_present": true,
+      "title": "Production Engineer",
+      "name_print_or_type": "Kelly Krezinski",
+      "certificate_date": "10/15/2023",
+      "phone": "( 713 ) 372-2430",
+      "rrc_approved": true,
+      "rrc_denied": false,
+      "rrc_technical_examiner": "JK",
+      "rrc_action_date": "October 2 2023"
+    },
+    "field_citations": [
+      {
+        "field_path": "operator_name",
+        "page": 1,
+        "bbox": [
+          0.078597,
+          0.121881,
+          0.086457,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Noble Energy",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_p5_no",
+        "page": 1,
+        "bbox": [
+          0.493954,
+          0.12295,
+          0.047158,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "611665",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "est_avg_volume_fluid_injected",
+        "page": 1,
+        "bbox": [
+          0.377872,
+          0.43005,
+          0.141475,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "see injection schedule",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "est_avg_injection_pressure",
+        "page": 1,
+        "bbox": [
+          0.816203,
+          0.428981,
+          0.031439,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "4500",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "est_ult_additional_production_oil",
+        "page": 1,
+        "bbox": [
+          0.219468,
+          0.455286,
+          0.062878,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1,000,000",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "est_cost_machinery",
+        "page": 1,
+        "bbox": [
+          0.376058,
+          0.48266,
+          0.078597,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$ 6,000,000",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "est_cost_project_total",
+        "page": 1,
+        "bbox": [
+          0.522975,
+          0.483301,
+          0.094317,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$ 16,000,000",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "anticipated_date_injection_begin",
+        "page": 1,
+        "bbox": [
+          0.527207,
+          0.81307,
+          0.070133,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "10/15/2023",
+        "confidence": 0.8295650325915563,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_anticipated_leases",
+        "page": 1,
+        "bbox": [
+          0.060459,
+          0.11076,
+          0.00786,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1.",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_anticipated_producing_wells",
+        "page": 1,
+        "bbox": [
+          0.601572,
+          0.113754,
+          0.009069,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3.",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_anticipated_injection_wells",
+        "page": 1,
+        "bbox": [
+          0.601572,
+          0.113754,
+          0.009069,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3.",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "field_name",
+        "page": 1,
+        "bbox": [
+          0.057437,
+          0.537621,
+          0.134825,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Phantom (Wolfcamp)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_or_unit_name",
+        "page": 1,
+        "bbox": [
+          0.434099,
+          0.540187,
+          0.214027,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Cole Younger State 30-23 Unit A",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_no",
+        "page": 1,
+        "bbox": [
+          0.818017,
+          0.540615,
+          0.039299,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "51344",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "inj_auth_a_project_no",
+        "page": 1,
+        "bbox": [
+          0.393591,
+          0.601351,
+          0.065901,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "F-F-22666",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "inj_auth_a_authority_date",
+        "page": 1,
+        "bbox": [
+          0.613664,
+          0.597074,
+          0.063482,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "7/31/2023",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "inj_auth_a_wells",
+        "page": 1,
+        "bbox": [
+          0.122733,
+          0.618673,
+          0.077993,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3H, 32H, 5H",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "certificate_date",
+        "page": 1,
+        "bbox": [
+          0.527207,
+          0.81307,
+          0.070133,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "10/15/2023",
+        "confidence": 0.8305579541316686,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "phone",
+        "page": 1,
+        "bbox": [
+          0.726723,
+          0.815423,
+          0.125151,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "(713 ) 372-2430",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:06:10.130756Z",
+  "completed_at": "2026-09-13T20:06:10.130756Z",
+  "latency_in_ms": 12365
+}

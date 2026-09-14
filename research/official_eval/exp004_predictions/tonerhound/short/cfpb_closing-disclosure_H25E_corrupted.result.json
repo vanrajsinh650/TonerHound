@@ -1,0 +1,1959 @@
+{
+  "request": {
+    "example_id": "short/cfpb_closing-disclosure_H25E_corrupted",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/cfpb_closing-disclosure_H25E_corrupted.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 108,
+    "ocr_pages": 0,
+    "num_pages": 6
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/cfpb_closing-disclosure_H25E_corrupted",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "date_issued": "4/15/2013",
+      "closing_date": "4/15/2013",
+      "disbursement_date": "4/15/2013",
+      "settlement_agent": "Zeta Title",
+      "file_number": "12-3456",
+      "property_address": "123 Anywhere Street, Anytown, ST 12345",
+      "sale_price": null,
+      "appraised_property_value": "$180,000",
+      "borrower_name": "Michael Jones and Mary Stone",
+      "seller_name": null,
+      "lender_name": "Ficus Bank",
+      "loan_term": "30 years",
+      "purpose": "Refinance",
+      "product": "Fixed Rate",
+      "loan_type": "Conventional",
+      "loan_id": "123456789",
+      "mic_number": "009874513",
+      "loan_amount": "$150,000",
+      "interest_rate": "4.25%",
+      "monthly_principal_and_interest": "$737.91",
+      "prepayment_penalty": "NO",
+      "prepayment_penalty_detail": null,
+      "balloon_payment": "NO",
+      "estimated_total_monthly_payment_first_period": "$1,026.39",
+      "estimated_total_monthly_payment_second_period": "$944.04",
+      "estimated_taxes_insurance_assessments": "$356.13",
+      "closing_costs_total": "$5,757.57",
+      "closing_costs_loan_costs_portion": "$3,495.50",
+      "closing_costs_other_costs_portion": "$2,762.07",
+      "lender_credits": "$500",
+      "cash_to_close": "$29,677.43",
+      "total_of_payments": "$273,214.50",
+      "finance_charge": "$121,029.00",
+      "amount_financed": "$148,241.94",
+      "annual_percentage_rate": "4.543%",
+      "total_interest_percentage": "77.29%",
+      "assumption": "will not allow",
+      "demand_feature": "does not have",
+      "negative_amortization": "do not have",
+      "partial_payments": "may accept",
+      "escrow_account": "will have",
+      "liability_after_foreclosure": "state law does not protect",
+      "loan_costs": [
+        {
+          "section": "A. Origination Charges",
+          "line_label": ".5 % of Loan Amount (Points)",
+          "payee": null,
+          "borrower_paid_at_closing": "$750.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "A. Origination Charges",
+          "line_label": "Application Fee",
+          "payee": null,
+          "borrower_paid_at_closing": "$250.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "A. Origination Charges",
+          "line_label": "Origination Fee",
+          "payee": null,
+          "borrower_paid_at_closing": "$450.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "A. Origination Charges",
+          "line_label": "Underwriting Fee",
+          "payee": null,
+          "borrower_paid_at_closing": "$500.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "B. Services Borrower Did Not Shop For",
+          "line_label": "Appraisal Fee",
+          "payee": "John Smith Appraisers Inc.",
+          "borrower_paid_at_closing": null,
+          "borrower_paid_before_closing": "$405.00",
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "B. Services Borrower Did Not Shop For",
+          "line_label": "Credit Report Fee",
+          "payee": "Information Inc.",
+          "borrower_paid_at_closing": null,
+          "borrower_paid_before_closing": "$30.00",
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "B. Services Borrower Did Not Shop For",
+          "line_label": "Flood Determination Fee",
+          "payee": "Info Co.",
+          "borrower_paid_at_closing": "$20.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "B. Services Borrower Did Not Shop For",
+          "line_label": "Flood Monitoring Fee",
+          "payee": "Info Co.",
+          "borrower_paid_at_closing": "$45.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "B. Services Borrower Did Not Shop For",
+          "line_label": "Tax Monitoring Fee",
+          "payee": "Info Co.",
+          "borrower_paid_at_closing": "$65.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "B. Services Borrower Did Not Shop For",
+          "line_label": "Tax Status Research Fee",
+          "payee": "Info Co.",
+          "borrower_paid_at_closing": "$45.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "C. Services Borrower Did Shop For",
+          "line_label": "Pest Inspection Fee",
+          "payee": "Pests Co.",
+          "borrower_paid_at_closing": "$85.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "C. Services Borrower Did Shop For",
+          "line_label": "Title – Insurance Binder",
+          "payee": "Epsilon Title Co.",
+          "borrower_paid_at_closing": "$50.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "C. Services Borrower Did Shop For",
+          "line_label": "Title – Lender’s Title Policy",
+          "payee": "Epsilon Title Co.",
+          "borrower_paid_at_closing": "$250.50",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "C. Services Borrower Did Shop For",
+          "line_label": "Title – Settlement Agent Fee",
+          "payee": "Epsilon Title Co.",
+          "borrower_paid_at_closing": "$350.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "C. Services Borrower Did Shop For",
+          "line_label": "Title – Title Search",
+          "payee": "Epsilon Title Co.",
+          "borrower_paid_at_closing": "$200.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        }
+      ],
+      "other_costs": [
+        {
+          "section": "E. Taxes and Other Government Fees",
+          "line_label": "Recording Fees",
+          "payee": null,
+          "borrower_paid_at_closing": "$60.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "F. Prepaids",
+          "line_label": "Homeowner’s Insurance Premium",
+          "payee": "Insurance Co.",
+          "borrower_paid_at_closing": "$1,209.96",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "F. Prepaids",
+          "line_label": "Prepaid Interest",
+          "payee": null,
+          "borrower_paid_at_closing": "$283.36",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "F. Prepaids",
+          "line_label": "Property Taxes",
+          "payee": "Any County USA",
+          "borrower_paid_at_closing": "$631.80",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "G. Initial Escrow Payment at Closing",
+          "line_label": "Homeowner’s Insurance",
+          "payee": null,
+          "borrower_paid_at_closing": "$201.66",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "G. Initial Escrow Payment at Closing",
+          "line_label": "Mortgage Insurance",
+          "payee": null,
+          "borrower_paid_at_closing": "$164.70",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "G. Initial Escrow Payment at Closing",
+          "line_label": "Property Taxes",
+          "payee": null,
+          "borrower_paid_at_closing": "$210.60",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "G. Initial Escrow Payment at Closing",
+          "line_label": "Aggregate Adjustment",
+          "payee": null,
+          "borrower_paid_at_closing": "– $0.01",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        }
+      ],
+      "cash_to_close_grid": [
+        {
+          "line_label": "Loan Amount",
+          "loan_estimate": "$150,000.00",
+          "final": "$150,000.00",
+          "did_change": "NO"
+        },
+        {
+          "line_label": "Total Closing Costs (J)",
+          "loan_estimate": "– $5,099.00",
+          "final": "– $5,757.57",
+          "did_change": "YES"
+        },
+        {
+          "line_label": "Closing Costs Paid Before Closing",
+          "loan_estimate": "$0",
+          "final": "$435.00",
+          "did_change": "YES"
+        },
+        {
+          "line_label": "Total Payoffs and Payments (K)",
+          "loan_estimate": "– $120,000.00",
+          "final": "– $115,000.00",
+          "did_change": "YES"
+        },
+        {
+          "line_label": "Cash to Close",
+          "loan_estimate": "$24,901.00",
+          "final": "$29,677.43",
+          "did_change": null
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "date_issued",
+        "page": 3,
+        "bbox": [
+          0.302941,
+          0.598727,
+          0.057059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "4/15/2013",
+        "confidence": 0.8450526465607322,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "closing_date",
+        "page": 3,
+        "bbox": [
+          0.302941,
+          0.598727,
+          0.057059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "4/15/2013",
+        "confidence": 0.8028078292427931,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "disbursement_date",
+        "page": 3,
+        "bbox": [
+          0.302941,
+          0.598727,
+          0.057059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "4/15/2013",
+        "confidence": 0.8450526465607322,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "settlement_agent",
+        "page": 2,
+        "bbox": [
+          0.183529,
+          0.169182,
+          0.061765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "ZetaTitle",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "file_number",
+        "page": 2,
+        "bbox": [
+          0.187647,
+          0.183045,
+          0.048824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "12-3456",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "property_address",
+        "page": 5,
+        "bbox": [
+          0.061765,
+          0.698727,
+          0.237059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "123 Anywhere Street, Anytown, ST 12345",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "appraised_property_value",
+        "page": 2,
+        "bbox": [
+          0.187647,
+          0.224636,
+          0.057647,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$180,000",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "borrower_name",
+        "page": 2,
+        "bbox": [
+          0.492941,
+          0.121227,
+          0.135294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Jones and Mary Stone",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lender_name",
+        "page": 2,
+        "bbox": [
+          0.443529,
+          0.163955,
+          0.064118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Ficus Bank",
+        "confidence": 0.8646828701534988,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_term",
+        "page": 2,
+        "bbox": [
+          0.775882,
+          0.118273,
+          0.049412,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "30 years",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "purpose",
+        "page": 2,
+        "bbox": [
+          0.777059,
+          0.130545,
+          0.060588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Refinance",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "product",
+        "page": 2,
+        "bbox": [
+          0.777059,
+          0.144409,
+          0.064706,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Fixed Rate",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_type",
+        "page": 2,
+        "bbox": [
+          0.791176,
+          0.171909,
+          0.083529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Conventional",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "mic_number",
+        "page": 2,
+        "bbox": [
+          0.778235,
+          0.214182,
+          0.068235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "009874513",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_amount",
+        "page": 2,
+        "bbox": [
+          0.308824,
+          0.291,
+          0.085882,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$150,000",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "interest_rate",
+        "page": 2,
+        "bbox": [
+          0.307647,
+          0.323182,
+          0.059412,
+          0.020455
+        ],
+        "polygon": null,
+        "reference_text": "4.25%",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "monthly_principal_and_interest",
+        "page": 2,
+        "bbox": [
+          0.443529,
+          0.571,
+          0.051176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$737.91",
+        "confidence": 0.8045495040965098,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prepayment_penalty",
+        "page": 2,
+        "bbox": [
+          0.489412,
+          0.437591,
+          0.026471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "NO",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "balloon_payment",
+        "page": 5,
+        "bbox": [
+          0.524118,
+          0.532818,
+          0.016471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "No",
+        "confidence": 0.8339253884596429,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "estimated_total_monthly_payment_first_period",
+        "page": 2,
+        "bbox": [
+          0.417647,
+          0.671909,
+          0.088824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$1,026.39",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "estimated_taxes_insurance_assessments",
+        "page": 2,
+        "bbox": [
+          0.322353,
+          0.737818,
+          0.073529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$356.13",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "closing_costs_total",
+        "page": 2,
+        "bbox": [
+          0.323529,
+          0.857364,
+          0.090588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$5,757.57",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "closing_costs_loan_costs_portion",
+        "page": 2,
+        "bbox": [
+          0.501765,
+          0.856,
+          0.064706,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$3495.50",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "closing_costs_other_costs_portion",
+        "page": 2,
+        "bbox": [
+          0.680588,
+          0.8535,
+          0.064706,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$2,762.07",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lender_credits",
+        "page": 2,
+        "bbox": [
+          0.861765,
+          0.850545,
+          0.032353,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$500",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close",
+        "page": 2,
+        "bbox": [
+          0.325294,
+          0.902591,
+          0.099412,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$29,677.43",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_of_payments",
+        "page": 6,
+        "bbox": [
+          0.404706,
+          0.098045,
+          0.081765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$273,214.50",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "finance_charge",
+        "page": 6,
+        "bbox": [
+          0.403529,
+          0.142136,
+          0.081765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$121,029.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "amount_financed",
+        "page": 6,
+        "bbox": [
+          0.402353,
+          0.186,
+          0.081765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$148,241.94",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "annual_percentage_rate",
+        "page": 6,
+        "bbox": [
+          0.431765,
+          0.244864,
+          0.051765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "4.543%",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "assumption",
+        "page": 5,
+        "bbox": [
+          0.078235,
+          0.170318,
+          0.081176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "will not allow",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "demand_feature",
+        "page": 5,
+        "bbox": [
+          0.078235,
+          0.257136,
+          0.099412,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "does not have",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "negative_amortization",
+        "page": 5,
+        "bbox": [
+          0.078824,
+          0.504636,
+          0.075294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "do not have",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "escrow_account",
+        "page": 5,
+        "bbox": [
+          0.535882,
+          0.141455,
+          0.054706,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "will have",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "liability_after_foreclosure",
+        "page": 6,
+        "bbox": [
+          0.528235,
+          0.362273,
+          0.161176,
+          0.018182
+        ],
+        "polygon": null,
+        "reference_text": "state law does not protect",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[0].section",
+        "page": 3,
+        "bbox": [
+          0.066471,
+          0.079864,
+          0.141765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "A. Origination Charges",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[0].line_label",
+        "page": 3,
+        "bbox": [
+          0.088824,
+          0.094636,
+          0.165294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": ".5 % of Loan Amount (Points)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[1].section",
+        "page": 3,
+        "bbox": [
+          0.066471,
+          0.079864,
+          0.141765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "A. Origination Charges",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[1].line_label",
+        "page": 3,
+        "bbox": [
+          0.085294,
+          0.106682,
+          0.088235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Application Fee",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[2].section",
+        "page": 3,
+        "bbox": [
+          0.066471,
+          0.079864,
+          0.141765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "A. Origination Charges",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[2].line_label",
+        "page": 3,
+        "bbox": [
+          0.085294,
+          0.119182,
+          0.087059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Origination Fee",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[3].section",
+        "page": 3,
+        "bbox": [
+          0.066471,
+          0.079864,
+          0.141765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "A. Origination Charges",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[3].line_label",
+        "page": 3,
+        "bbox": [
+          0.085882,
+          0.131909,
+          0.1,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Underwriting Fee",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[4].section",
+        "page": 3,
+        "bbox": [
+          0.065294,
+          0.197364,
+          0.23,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "B. Services Borrower Did Not Shop For",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[4].line_label",
+        "page": 3,
+        "bbox": [
+          0.084706,
+          0.210773,
+          0.075294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Appraisal Fee",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[4].payee",
+        "page": 3,
+        "bbox": [
+          0.287059,
+          0.212136,
+          0.151176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "John Smith Appraisers Inc.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[5].section",
+        "page": 3,
+        "bbox": [
+          0.065294,
+          0.197364,
+          0.23,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "B. Services Borrower Did Not Shop For",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[5].line_label",
+        "page": 3,
+        "bbox": [
+          0.084706,
+          0.223273,
+          0.096471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Credit Report Fee",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[5].payee",
+        "page": 3,
+        "bbox": [
+          0.290588,
+          0.223273,
+          0.088824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Information Inc.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[6].section",
+        "page": 3,
+        "bbox": [
+          0.065294,
+          0.197364,
+          0.23,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "B. Services Borrower Did Not Shop For",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[6].line_label",
+        "page": 3,
+        "bbox": [
+          0.083529,
+          0.236455,
+          0.14,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Flood Determination Fee",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[6].payee",
+        "page": 3,
+        "bbox": [
+          0.290588,
+          0.237364,
+          0.044118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Info Co.",
+        "confidence": 0.7549954624066089,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[7].section",
+        "page": 3,
+        "bbox": [
+          0.065294,
+          0.197364,
+          0.23,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "B. Services Borrower Did Not Shop For",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[7].line_label",
+        "page": 3,
+        "bbox": [
+          0.085294,
+          0.248955,
+          0.120588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Flood Monitoring Fee",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[7].payee",
+        "page": 3,
+        "bbox": [
+          0.290588,
+          0.237364,
+          0.044118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Info Co.",
+        "confidence": 0.7549954624066089,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[8].section",
+        "page": 3,
+        "bbox": [
+          0.065294,
+          0.197364,
+          0.23,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "B. Services Borrower Did Not Shop For",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[8].line_label",
+        "page": 3,
+        "bbox": [
+          0.083529,
+          0.261909,
+          0.108235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Tax Monitoring Fee",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[8].payee",
+        "page": 3,
+        "bbox": [
+          0.290588,
+          0.237364,
+          0.044118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Info Co.",
+        "confidence": 0.7549954624066089,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[9].section",
+        "page": 3,
+        "bbox": [
+          0.065294,
+          0.197364,
+          0.23,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "B. Services Borrower Did Not Shop For",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[9].line_label",
+        "page": 3,
+        "bbox": [
+          0.082353,
+          0.274636,
+          0.134118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Tax Status Research Fee",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[9].payee",
+        "page": 3,
+        "bbox": [
+          0.290588,
+          0.237364,
+          0.044118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Info Co.",
+        "confidence": 0.7549954624066089,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[10].section",
+        "page": 3,
+        "bbox": [
+          0.064118,
+          0.338955,
+          0.206471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "C. Services Borrower Did Shop For",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[10].line_label",
+        "page": 3,
+        "bbox": [
+          0.081765,
+          0.353045,
+          0.108824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Pest Inspection Fee",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[10].payee",
+        "page": 3,
+        "bbox": [
+          0.288235,
+          0.354409,
+          0.050588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Pests Co.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[11].section",
+        "page": 3,
+        "bbox": [
+          0.064118,
+          0.338955,
+          0.206471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "C. Services Borrower Did Shop For",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[11].line_label",
+        "page": 3,
+        "bbox": [
+          0.08,
+          0.364864,
+          0.134118,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Title - Insurance Binder",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[11].payee",
+        "page": 3,
+        "bbox": [
+          0.288235,
+          0.390909,
+          0.084706,
+          0.018636
+        ],
+        "polygon": null,
+        "reference_text": "Epsilon Title Co.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[12].section",
+        "page": 3,
+        "bbox": [
+          0.064118,
+          0.338955,
+          0.206471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "C. Services Borrower Did Shop For",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[12].line_label",
+        "page": 3,
+        "bbox": [
+          0.080588,
+          0.377727,
+          0.147647,
+          0.022727
+        ],
+        "polygon": null,
+        "reference_text": "Title - - Lender's Title Policy",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[12].payee",
+        "page": 3,
+        "bbox": [
+          0.288235,
+          0.390909,
+          0.084706,
+          0.018636
+        ],
+        "polygon": null,
+        "reference_text": "Epsilon Title Co.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[13].section",
+        "page": 3,
+        "bbox": [
+          0.064118,
+          0.338955,
+          0.206471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "C. Services Borrower Did Shop For",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[13].line_label",
+        "page": 3,
+        "bbox": [
+          0.081176,
+          0.390909,
+          0.243529,
+          0.018636
+        ],
+        "polygon": null,
+        "reference_text": "Title Settlement AgentFee Epsilon",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[13].payee",
+        "page": 3,
+        "bbox": [
+          0.288235,
+          0.390909,
+          0.084706,
+          0.018636
+        ],
+        "polygon": null,
+        "reference_text": "Epsilon Title Co.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[14].section",
+        "page": 3,
+        "bbox": [
+          0.064118,
+          0.338955,
+          0.206471,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "C. Services Borrower Did Shop For",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[14].line_label",
+        "page": 3,
+        "bbox": [
+          0.08,
+          0.405091,
+          0.108235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Title-Title Search _",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loan_costs[14].payee",
+        "page": 3,
+        "bbox": [
+          0.288235,
+          0.390909,
+          0.084706,
+          0.018636
+        ],
+        "polygon": null,
+        "reference_text": "Epsilon Title Co.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "other_costs[0].section",
+        "page": 3,
+        "bbox": [
+          0.06,
+          0.518955,
+          0.221765,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "E.Taxes and Other Government Fees",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "other_costs[0].line_label",
+        "page": 3,
+        "bbox": [
+          0.082353,
+          0.530455,
+          0.087647,
+          0.021364
+        ],
+        "polygon": null,
+        "reference_text": "Recording Fees",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "other_costs[0].borrower_paid_at_closing",
+        "page": 3,
+        "bbox": [
+          0.434118,
+          0.535455,
+          0.035294,
+          0.021364
+        ],
+        "polygon": null,
+        "reference_text": "$60.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "other_costs[1].section",
+        "page": 3,
+        "bbox": [
+          0.06,
+          0.558955,
+          0.067059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "F. Prepaids",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "other_costs[1].line_label",
+        "page": 3,
+        "bbox": [
+          0.081765,
+          0.5735,
+          0.184706,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Homeowner's Insurance Premium",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "other_costs[1].payee",
+        "page": 3,
+        "bbox": [
+          0.344706,
+          0.5735,
+          0.077059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Insurance Co.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "other_costs[2].section",
+        "page": 3,
+        "bbox": [
+          0.06,
+          0.558955,
+          0.067059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "F. Prepaids",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "other_costs[2].line_label",
+        "page": 3,
+        "bbox": [
+          0.08,
+          0.598273,
+          0.09,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Prepaid Interest",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "other_costs[3].section",
+        "page": 3,
+        "bbox": [
+          0.06,
+          0.558955,
+          0.067059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "F. Prepaids",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "other_costs[3].line_label",
+        "page": 3,
+        "bbox": [
+          0.081765,
+          0.611682,
+          0.081176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Property Taxes",
+        "confidence": 0.7881461306867388,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "other_costs[3].payee",
+        "page": 3,
+        "bbox": [
+          0.236471,
+          0.611682,
+          0.091176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Any County USA",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "other_costs[4].section",
+        "page": 3,
+        "bbox": [
+          0.058824,
+          0.6385,
+          0.217647,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "G. Initial Escrow Payment at Closing",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "other_costs[4].line_label",
+        "page": 3,
+        "bbox": [
+          0.080588,
+          0.651909,
+          0.128824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Homeowner’s Insurance",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "other_costs[5].section",
+        "page": 3,
+        "bbox": [
+          0.058824,
+          0.6385,
+          0.217647,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "G. Initial Escrow Payment at Closing",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "other_costs[5].line_label",
+        "page": 3,
+        "bbox": [
+          0.081765,
+          0.665091,
+          0.113529,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Mortgage Insurance",
+        "confidence": 0.7524170873152121,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "other_costs[6].section",
+        "page": 3,
+        "bbox": [
+          0.058824,
+          0.6385,
+          0.217647,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "G. Initial Escrow Payment at Closing",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "other_costs[6].line_label",
+        "page": 3,
+        "bbox": [
+          0.081765,
+          0.611682,
+          0.081176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Property Taxes",
+        "confidence": 0.7600130128918388,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "other_costs[7].section",
+        "page": 3,
+        "bbox": [
+          0.058824,
+          0.6385,
+          0.217647,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "G. Initial Escrow Payment at Closing",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "other_costs[7].line_label",
+        "page": 3,
+        "bbox": [
+          0.090588,
+          0.740091,
+          0.117647,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Aggregate Adjustment",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[0].line_label",
+        "page": 3,
+        "bbox": [
+          0.132353,
+          0.094182,
+          0.077059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Loan Amount",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[0].did_change",
+        "page": 4,
+        "bbox": [
+          0.498235,
+          0.765545,
+          0.025882,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "NO",
+        "confidence": 0.7716308635345721,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[1].line_label",
+        "page": 3,
+        "bbox": [
+          0.071176,
+          0.917136,
+          0.138235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "TOTAL CLOSING COSTS",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[1].loan_estimate",
+        "page": 3,
+        "bbox": [
+          0.059412,
+          0.312591,
+          0.037059,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "09",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[1].final",
+        "page": 2,
+        "bbox": [
+          0.323529,
+          0.857364,
+          0.090588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$5,757.57",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[1].did_change",
+        "page": 4,
+        "bbox": [
+          0.498235,
+          0.781364,
+          0.037059,
+          0.020455
+        ],
+        "polygon": null,
+        "reference_text": "YES",
+        "confidence": 0.7540666002217018,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[2].line_label",
+        "page": 4,
+        "bbox": [
+          0.065294,
+          0.803636,
+          0.192941,
+          0.024091
+        ],
+        "polygon": null,
+        "reference_text": "Closing Costs Peid Before Closing",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[2].final",
+        "page": 4,
+        "bbox": [
+          0.446471,
+          0.805545,
+          0.048235,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$435.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[2].did_change",
+        "page": 4,
+        "bbox": [
+          0.505882,
+          0.803273,
+          0.022941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "YES",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[3].line_label",
+        "page": 4,
+        "bbox": [
+          0.068824,
+          0.825,
+          0.174706,
+          0.02
+        ],
+        "polygon": null,
+        "reference_text": "Total Payoffs and Payments (K)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[3].did_change",
+        "page": 4,
+        "bbox": [
+          0.506471,
+          0.823273,
+          0.022941,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "YES",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[4].line_label",
+        "page": 2,
+        "bbox": [
+          0.080588,
+          0.905545,
+          0.100588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Cash to Close",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[4].final",
+        "page": 2,
+        "bbox": [
+          0.325294,
+          0.902591,
+          0.099412,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$29,677.43",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:32:35.399313Z",
+  "completed_at": "2026-09-13T20:32:35.399313Z",
+  "latency_in_ms": 75280
+}

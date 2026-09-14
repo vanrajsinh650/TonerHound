@@ -1,0 +1,258 @@
+{
+  "request": {
+    "example_id": "short/07021-2016-p0029",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/07021-2016-p0029.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 11,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/07021-2016-p0029",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "final_k1": false,
+      "amended_k1": true,
+      "partnership_ein": "26-3839121",
+      "partnership_name": "Pine Harbour Water Utilities LLC",
+      "partnership_address": "P O BOX 447, Fruitland Park FL 34731",
+      "irs_center": "OGDEN",
+      "is_publicly_traded_partnership": false,
+      "partner_id": "288-56-3387",
+      "partner_name": "ROBERT STEWART",
+      "partner_address": "P O BOX 447, Fruitland Park FL 34731",
+      "is_general_partner": false,
+      "is_domestic_partner": true,
+      "partner_entity_type": "INDIVIDUAL PASSIV",
+      "profit_share_beginning": 33.3333,
+      "profit_share_ending": 33.3333,
+      "loss_share_beginning": 33.3333,
+      "loss_share_ending": 33.3333,
+      "capital_share_beginning": 33.3333,
+      "capital_share_ending": 33.3333,
+      "liability_nonrecourse": null,
+      "liability_qualified_nonrecourse_financing": null,
+      "liability_recourse": null,
+      "capital_beginning_account": null,
+      "capital_contributed": 45442,
+      "capital_current_year_increase_decrease": -3186,
+      "capital_withdrawals_distributions": null,
+      "capital_ending_account": 42256,
+      "capital_account_method": null,
+      "contributed_built_in_gain_loss_property": null,
+      "box_1_ordinary_business_income": -3186,
+      "box_2_net_rental_real_estate": null,
+      "box_3_other_net_rental_income": null,
+      "box_4_guaranteed_payments": null,
+      "box_5_interest_income": null,
+      "box_6a_ordinary_dividends": null,
+      "box_6b_qualified_dividends": null,
+      "box_7_royalties": null,
+      "box_8_net_short_term_capital_gain": null,
+      "box_9a_net_long_term_capital_gain": null,
+      "box_9b_collectibles_gain": null,
+      "box_9c_unrecaptured_1250_gain": null,
+      "box_10_net_section_1231_gain": null,
+      "box_12_section_179_deduction": null,
+      "box_14_self_employment_earnings": [
+        {
+          "code": "A",
+          "amount": -3186
+        }
+      ],
+      "box_11_other_income": null,
+      "box_13_other_deductions": null,
+      "box_15_credits": null,
+      "box_16_foreign_transactions": null,
+      "box_17_amt_items": [
+        {
+          "code": "A",
+          "amount": 1150
+        }
+      ],
+      "box_18_tax_exempt_income": null,
+      "box_19_distributions": null,
+      "box_20_other_information": null
+    },
+    "field_citations": [
+      {
+        "field_path": "partnership_ein",
+        "page": 1,
+        "bbox": [
+          0.082868,
+          0.207626,
+          0.099294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "6-3839121",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partnership_name",
+        "page": 1,
+        "bbox": [
+          0.082143,
+          0.253978,
+          0.360201,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "ine Harbour Water Utilities LLC",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partnership_address",
+        "page": 1,
+        "bbox": [
+          0.09272,
+          0.269081,
+          0.102119,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0 BOX 447",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partner_address",
+        "page": 1,
+        "bbox": [
+          0.09272,
+          0.269081,
+          0.102119,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0 BOX 447",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partner_entity_type",
+        "page": 1,
+        "bbox": [
+          0.300837,
+          0.593453,
+          0.182009,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "INDIVIDUAL PASS I",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_contributed",
+        "page": 1,
+        "bbox": [
+          0.403248,
+          0.809643,
+          0.066619,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "45,442",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_current_year_increase_decrease",
+        "page": 1,
+        "bbox": [
+          0.405221,
+          0.825416,
+          0.065269,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "-3,186",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_ending_account",
+        "page": 1,
+        "bbox": [
+          0.403015,
+          0.856322,
+          0.067305,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "42,256",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_1_ordinary_business_income",
+        "page": 1,
+        "bbox": [
+          0.645663,
+          0.117364,
+          0.065269,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "-3,186",
+        "confidence": 0.9092734428747062,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_14_self_employment_earnings[0].code",
+        "page": 1,
+        "bbox": [
+          0.214685,
+          0.363316,
+          0.006324,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "a",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_17_amt_items[0].code",
+        "page": 1,
+        "bbox": [
+          0.214685,
+          0.363316,
+          0.006324,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "a",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:05:09.430259Z",
+  "completed_at": "2026-09-13T20:05:09.430259Z",
+  "latency_in_ms": 342
+}

@@ -1,0 +1,372 @@
+{
+  "request": {
+    "example_id": "medium/hpe_earnings_deck_q4fy25",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/hpe_earnings_deck_q4fy25.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 20,
+    "ocr_pages": 0,
+    "num_pages": 41
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/hpe_earnings_deck_q4fy25",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "period": "Q4 FY2025",
+      "currency": "USD",
+      "fiscal_period_end_date": "2025-10-31",
+      "total_revenue": 9679,
+      "revenue_growth_yoy": 14.0,
+      "gross_profit": 3241.0,
+      "operating_income": -8.0,
+      "net_income": 175,
+      "adjusted_ebitda": null,
+      "gaap_eps_diluted": 0.11,
+      "adjusted_eps_diluted": 0.62,
+      "gross_margin": 33.5,
+      "operating_margin": -0.08,
+      "free_cash_flow": 1900,
+      "segments": [
+        {
+          "segment_name": "Networking",
+          "segment_revenue": 2812.0,
+          "segment_profit": 648
+        },
+        {
+          "segment_name": "HPE Financial Services",
+          "segment_revenue": 889,
+          "segment_profit": 102
+        },
+        {
+          "segment_name": "Server",
+          "segment_revenue": 4457.0,
+          "segment_profit": 437
+        },
+        {
+          "segment_name": "Corporate Investments & Other",
+          "segment_revenue": 191,
+          "segment_profit": -6
+        },
+        {
+          "segment_name": "Hybrid Cloud",
+          "segment_revenue": 1412.0,
+          "segment_profit": 71
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "period",
+        "page": 29,
+        "bbox": [
+          0.032052,
+          0.069663,
+          0.037814,
+          0.044856
+        ],
+        "polygon": null,
+        "reference_text": "Q4",
+        "confidence": 0.8486818375663316,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "fiscal_period_end_date",
+        "page": 40,
+        "bbox": [
+          0.349875,
+          0.885611,
+          0.057406,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "October 31, 2025,",
+        "confidence": 0.9520731588812035,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "revenue_growth_yoy",
+        "page": 18,
+        "bbox": [
+          0.924472,
+          0.287848,
+          0.02218,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "14%",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gross_profit",
+        "page": 29,
+        "bbox": [
+          0.297107,
+          0.285327,
+          0.015935,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3,241",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operating_income",
+        "page": 29,
+        "bbox": [
+          0.306804,
+          0.485216,
+          0.007439,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "(8)",
+        "confidence": 0.8750225954622206,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "net_income",
+        "page": 29,
+        "bbox": [
+          0.304949,
+          0.717947,
+          0.010172,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "175",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gaap_eps_diluted",
+        "page": 9,
+        "bbox": [
+          0.337454,
+          0.439041,
+          0.025889,
+          0.022502
+        ],
+        "polygon": null,
+        "reference_text": "$0.11",
+        "confidence": 0.8976480383340295,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[0].segment_revenue",
+        "page": 18,
+        "bbox": [
+          0.050436,
+          0.225137,
+          0.103324,
+          0.060613
+        ],
+        "polygon": null,
+        "reference_text": "$2,812",
+        "confidence": 0.7732131462629699,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[0].segment_profit",
+        "page": 10,
+        "bbox": [
+          0.509022,
+          0.293214,
+          0.024189,
+          0.025506
+        ],
+        "polygon": null,
+        "reference_text": "$648",
+        "confidence": 0.7550977591955148,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[1].segment_name",
+        "page": 22,
+        "bbox": [
+          0.333511,
+          0.848824,
+          0.074755,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "HPE Financial Services",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[1].segment_revenue",
+        "page": 21,
+        "bbox": [
+          0.069024,
+          0.225137,
+          0.055765,
+          0.059106
+        ],
+        "polygon": null,
+        "reference_text": "$889",
+        "confidence": 0.7667062059092069,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[1].segment_profit",
+        "page": 10,
+        "bbox": [
+          0.510709,
+          0.521029,
+          0.024002,
+          0.025506
+        ],
+        "polygon": null,
+        "reference_text": "$102",
+        "confidence": 0.7536923920745793,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[2].segment_name",
+        "page": 24,
+        "bbox": [
+          0.509164,
+          0.915278,
+          0.020014,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Server,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[2].segment_revenue",
+        "page": 24,
+        "bbox": [
+          0.684695,
+          0.319291,
+          0.0207,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "4,457",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[2].segment_profit",
+        "page": 24,
+        "bbox": [
+          0.68882,
+          0.699984,
+          0.013603,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "437",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[3].segment_revenue",
+        "page": 10,
+        "bbox": [
+          0.279738,
+          0.599529,
+          0.024027,
+          0.025506
+        ],
+        "polygon": null,
+        "reference_text": "$191",
+        "confidence": 0.7619444143951786,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[3].segment_profit",
+        "page": 30,
+        "bbox": [
+          0.496957,
+          0.438769,
+          0.008492,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "(6)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[4].segment_name",
+        "page": 24,
+        "bbox": [
+          0.531935,
+          0.915258,
+          0.039052,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Hybrid Cloud,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[4].segment_revenue",
+        "page": 24,
+        "bbox": [
+          0.686901,
+          0.353944,
+          0.020034,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1,412",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[4].segment_profit",
+        "page": 24,
+        "bbox": [
+          0.692804,
+          0.734698,
+          0.00855,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "71",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T17:10:49.900070Z",
+  "completed_at": "2026-09-13T17:10:49.900070Z",
+  "latency_in_ms": 12072
+}

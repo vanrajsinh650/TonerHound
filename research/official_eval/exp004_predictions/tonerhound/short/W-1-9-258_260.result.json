@@ -1,0 +1,634 @@
+{
+  "request": {
+    "example_id": "short/W-1-9-258_260",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/W-1-9-258_260.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 35,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/W-1-9-258_260",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "api_no": "385-30123",
+      "drilling_permit_no": "552363",
+      "rrc_operator_no": "217024",
+      "operator_name": "Diamondback Operating, LP",
+      "operator_address": "6120 South Yale, Suite 810 Tulsa, OK 74136",
+      "lease_name": "Marshall",
+      "well_no": "2",
+      "purpose_new_drill": true,
+      "purpose_recompletion": false,
+      "purpose_reclass": false,
+      "purpose_field_transfer": false,
+      "purpose_re_enter": false,
+      "purpose_amended": false,
+      "purpose_amended_as_drilled": false,
+      "profile_vertical": true,
+      "profile_horizontal": false,
+      "profile_directional": false,
+      "profile_sidetrack": false,
+      "true_vertical_depth": "3,000'",
+      "rule36_hydrogen_sulfide_yes": false,
+      "rule36_hydrogen_sulfide_no": true,
+      "q11_right_to_develop_minerals_row_yes": true,
+      "q11_right_to_develop_minerals_row_no": false,
+      "rrc_district_no": "01",
+      "county": "Real",
+      "surface_land": true,
+      "surface_bay_estuary": false,
+      "surface_inland_waterway": false,
+      "surface_offshore": false,
+      "well_located_miles": "14",
+      "well_located_direction": "East",
+      "well_located_nearest_town": "Rocksprings",
+      "section": "77",
+      "block": "1",
+      "survey": "G.W.T. & P. RR. Co.",
+      "abstract_no": "370",
+      "distance_to_nearest_lease_line": "1440'",
+      "number_total_acres": "3811.5",
+      "lease_perp_1_ft": "1440",
+      "lease_perp_1_line": "North",
+      "lease_perp_2_ft": "1520",
+      "lease_perp_2_line": "East",
+      "survey_perp_1_ft": "1440",
+      "survey_perp_1_line": "North",
+      "survey_perp_2_ft": "1520",
+      "survey_perp_2_line": "East",
+      "q25_pooled_unit_yes": false,
+      "q25_pooled_unit_no": true,
+      "unitization_docket_no": null,
+      "q27_substandard_acreage_yes": false,
+      "q27_substandard_acreage_no": true,
+      "swr_exception_case_docket_no": null,
+      "remarks": "90743 203952 552363",
+      "name_of_representative": "Loren D. Schmidt",
+      "signature_present": true,
+      "certificate_date": "10/14/04",
+      "telephone": "(918) 477-7755",
+      "email_address": null,
+      "completion_fields": [
+        {
+          "rrc_district_no": "01",
+          "field_no": "00002001",
+          "field_name": "Wildcat",
+          "well_type": "B",
+          "completion_depth": "Above 3000'",
+          "distance_nearest_well": "10757'",
+          "no_wells_lease_reservoir": "3"
+        },
+        {
+          "rrc_district_no": "01",
+          "field_no": "20383475",
+          "field_name": "Cool Water Ranch (Wlfc \"A\" Coal)",
+          "well_type": "G",
+          "completion_depth": "2270'",
+          "distance_nearest_well": "10757'",
+          "no_wells_lease_reservoir": "3"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "rrc_operator_no",
+        "page": 1,
+        "bbox": [
+          0.129643,
+          0.158515,
+          0.04026,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "217024",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_name",
+        "page": 1,
+        "bbox": [
+          0.247517,
+          0.162271,
+          0.149341,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Diamondback O eratin , LP",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_name",
+        "page": 1,
+        "bbox": [
+          0.10153,
+          0.191697,
+          0.044267,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Marshall",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "well_no",
+        "page": 1,
+        "bbox": [
+          0.23603,
+          0.142894,
+          0.007225,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2.",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "true_vertical_depth",
+        "page": 1,
+        "bbox": [
+          0.075229,
+          0.367095,
+          0.034946,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3,000'",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district_no",
+        "page": 1,
+        "bbox": [
+          0.062884,
+          0.419439,
+          0.009936,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "01",
+        "confidence": 0.7989484836149543,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.202852,
+          0.419762,
+          0.020321,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Real",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "well_located_miles",
+        "page": 1,
+        "bbox": [
+          0.025303,
+          0.452238,
+          0.011789,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "14.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "well_located_direction",
+        "page": 1,
+        "bbox": [
+          0.348213,
+          0.446432,
+          0.0224,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "East",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "well_located_nearest_town",
+        "page": 1,
+        "bbox": [
+          0.556862,
+          0.448038,
+          0.061418,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Rocksprings",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "section",
+        "page": 1,
+        "bbox": [
+          0.077002,
+          0.487346,
+          0.013126,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "77",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "block",
+        "page": 1,
+        "bbox": [
+          0.192964,
+          0.487258,
+          0.002161,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.7829357934050828,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "survey",
+        "page": 1,
+        "bbox": [
+          0.333446,
+          0.4876,
+          0.115173,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "G.W.T. & P. RR. Co.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "abstract_no",
+        "page": 1,
+        "bbox": [
+          0.571131,
+          0.48739,
+          0.019574,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "370",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "distance_to_nearest_lease_line",
+        "page": 1,
+        "bbox": [
+          0.699783,
+          0.487739,
+          0.028754,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1440'",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "number_total_acres",
+        "page": 1,
+        "bbox": [
+          0.90561,
+          0.487331,
+          0.03843,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3811.5",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_perp_2_ft",
+        "page": 1,
+        "bbox": [
+          0.538549,
+          0.513757,
+          0.025504,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1520",
+        "confidence": 0.775231137878379,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_perp_2_line",
+        "page": 1,
+        "bbox": [
+          0.728031,
+          0.514132,
+          0.022198,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "East",
+        "confidence": 0.7522170737718398,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "survey_perp_2_ft",
+        "page": 1,
+        "bbox": [
+          0.538549,
+          0.513757,
+          0.025504,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "1520",
+        "confidence": 0.7677483830556294,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "survey_perp_2_line",
+        "page": 1,
+        "bbox": [
+          0.728031,
+          0.514132,
+          0.022198,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "East",
+        "confidence": 0.7522170737718398,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "name_of_representative",
+        "page": 1,
+        "bbox": [
+          0.471645,
+          0.877706,
+          0.095914,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Loren D. 5chmidt",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "certificate_date",
+        "page": 1,
+        "bbox": [
+          0.861311,
+          0.877159,
+          0.050037,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "10/14/04",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "completion_fields[0].rrc_district_no",
+        "page": 1,
+        "bbox": [
+          0.062884,
+          0.419439,
+          0.009936,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "01",
+        "confidence": 0.7989484836149543,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "completion_fields[0].field_no",
+        "page": 1,
+        "bbox": [
+          0.143498,
+          0.678416,
+          0.051535,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "00002001",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "completion_fields[0].field_name",
+        "page": 1,
+        "bbox": [
+          0.412297,
+          0.606095,
+          0.038479,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Wildcat.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "completion_fields[0].well_type",
+        "page": 1,
+        "bbox": [
+          0.620209,
+          0.678633,
+          0.00515,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "B",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "completion_fields[0].completion_depth",
+        "page": 1,
+        "bbox": [
+          0.679306,
+          0.679173,
+          0.06701,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Above 3000'",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "completion_fields[0].no_wells_lease_reservoir",
+        "page": 1,
+        "bbox": [
+          0.540072,
+          0.143011,
+          0.0061,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3.",
+        "confidence": 0.762026502756455,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "completion_fields[1].rrc_district_no",
+        "page": 1,
+        "bbox": [
+          0.052985,
+          0.707455,
+          0.009958,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "01",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "completion_fields[1].field_no",
+        "page": 1,
+        "bbox": [
+          0.143741,
+          0.707721,
+          0.053783,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "20383475",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "completion_fields[1].field_name",
+        "page": 1,
+        "bbox": [
+          0.246402,
+          0.709411,
+          0.189848,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Cool Water Ranch (Wlfc \"A\" Coal)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "completion_fields[1].well_type",
+        "page": 1,
+        "bbox": [
+          0.618737,
+          0.708544,
+          0.006715,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "G",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "completion_fields[1].completion_depth",
+        "page": 1,
+        "bbox": [
+          0.698067,
+          0.708129,
+          0.029551,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "2270'",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "completion_fields[1].distance_nearest_well",
+        "page": 1,
+        "bbox": [
+          0.793008,
+          0.708129,
+          0.03525,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "10757'",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "completion_fields[1].no_wells_lease_reservoir",
+        "page": 1,
+        "bbox": [
+          0.908786,
+          0.708188,
+          0.004798,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:19:40.374042Z",
+  "completed_at": "2026-09-13T20:19:40.374042Z",
+  "latency_in_ms": 570
+}

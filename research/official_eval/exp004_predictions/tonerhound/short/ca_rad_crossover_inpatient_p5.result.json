@@ -1,0 +1,194 @@
+{
+  "request": {
+    "example_id": "short/ca_rad_crossover_inpatient_p5",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/ca_rad_crossover_inpatient_p5.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 4,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/ca_rad_crossover_inpatient_p5",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "payments": [
+        {
+          "check_number": "39248026",
+          "check_amount": null,
+          "ra_date": "01/01/08",
+          "payer_name": "CA MEDI-CAL",
+          "payee_name": "CHILDREN'S HOSPITAL",
+          "payee_provider_number": "0123456789",
+          "payee_npi": null,
+          "claim_type": "MCARE CROSSOVER"
+        }
+      ],
+      "claims": [
+        {
+          "claim_number": "5079171505699",
+          "patient_name": "DAVIS JANE",
+          "recipient_id": "90000000A95001",
+          "patient_account_number": "039634",
+          "medical_record_number": null,
+          "claim_from_date": "060107",
+          "claim_to_date": "061107",
+          "total_submitted": null,
+          "total_paid": null,
+          "total_patient_responsibility": null,
+          "claim_status": "APPROVES",
+          "reason_codes": "0469"
+        },
+        {
+          "claim_number": "5006170703899",
+          "patient_name": "JOHNSON MA",
+          "recipient_id": "90000000A95001",
+          "patient_account_number": "039305",
+          "medical_record_number": null,
+          "claim_from_date": "040307",
+          "claim_to_date": "040707",
+          "total_submitted": null,
+          "total_paid": null,
+          "total_patient_responsibility": null,
+          "claim_status": "DENIES",
+          "reason_codes": "0036"
+        },
+        {
+          "claim_number": "5033172401899",
+          "patient_name": "JONES DAVID",
+          "recipient_id": "90000000A95001",
+          "patient_account_number": "039357",
+          "medical_record_number": null,
+          "claim_from_date": "041607",
+          "claim_to_date": "042307",
+          "total_submitted": null,
+          "total_paid": null,
+          "total_patient_responsibility": null,
+          "claim_status": "SUSPENDS",
+          "reason_codes": "0602"
+        }
+      ],
+      "service_lines": [
+        {
+          "claim_number": "5079171505699",
+          "line_number": null,
+          "date_of_service_from": "060107",
+          "date_of_service_to": "061107",
+          "procedure_code": null,
+          "modifiers": null,
+          "revenue_code": null,
+          "units": null,
+          "charge_amount": null,
+          "allowed_amount": 716,
+          "paid_amount": null,
+          "line_status": null,
+          "reason_codes": "0469"
+        },
+        {
+          "claim_number": "5006170703899",
+          "line_number": null,
+          "date_of_service_from": "040307",
+          "date_of_service_to": "040707",
+          "procedure_code": null,
+          "modifiers": null,
+          "revenue_code": null,
+          "units": null,
+          "charge_amount": null,
+          "allowed_amount": 696,
+          "paid_amount": null,
+          "line_status": null,
+          "reason_codes": "0036"
+        },
+        {
+          "claim_number": "5033172401899",
+          "line_number": null,
+          "date_of_service_from": "041607",
+          "date_of_service_to": "042307",
+          "procedure_code": null,
+          "modifiers": null,
+          "revenue_code": null,
+          "units": null,
+          "charge_amount": null,
+          "allowed_amount": 696,
+          "paid_amount": null,
+          "line_status": null,
+          "reason_codes": "0602"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "payments[0].claim_type",
+        "page": 1,
+        "bbox": [
+          0.366993,
+          0.43804,
+          0.173627,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Medicare Crossover",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[0].recipient_id",
+        "page": 1,
+        "bbox": [
+          0.891771,
+          0.063045,
+          0.009451,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "5",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[1].recipient_id",
+        "page": 1,
+        "bbox": [
+          0.891771,
+          0.063045,
+          0.009451,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "5",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[2].recipient_id",
+        "page": 1,
+        "bbox": [
+          0.891771,
+          0.063045,
+          0.009451,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "5",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-13T20:28:31.540122Z",
+  "completed_at": "2026-09-13T20:28:31.540122Z",
+  "latency_in_ms": 272
+}
