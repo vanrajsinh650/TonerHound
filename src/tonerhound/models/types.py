@@ -46,6 +46,7 @@ class VisualLine:
     line_index: int
     bbox: BBox
     _norm_text: str | None = None
+    _norm_tokens: list[str] | None = None
 
     @property
     def text(self) -> str:
@@ -58,6 +59,16 @@ class VisualLine:
 
             self._norm_text = normalize_unicode_and_case(self.text).text.strip()
         return self._norm_text
+
+    @property
+    def norm_tokens(self) -> list[str]:
+        if self._norm_tokens is None:
+            from tonerhound.normalization.normalizers import normalize_unicode_and_case
+
+            self._norm_tokens = [
+                normalize_unicode_and_case(t.text).text.strip() for t in self.tokens
+            ]
+        return self._norm_tokens
 
 
 @dataclass(slots=True)

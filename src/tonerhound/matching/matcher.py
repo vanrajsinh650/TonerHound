@@ -312,6 +312,10 @@ class EvidenceMatcher:
         best_sub: list[DocumentToken] = []
         best_sim = 0.0
         n_tok = len(tokens)
+        if n_tok == 0:
+            return [], 0.0
+
+        norm_tokens = [normalize_unicode_and_case(t.text).text.strip() for t in tokens]
         target_words = norm_target.split()
         target_word_count = max(1, len(target_words))
 
@@ -320,12 +324,11 @@ class EvidenceMatcher:
 
         for win_size in range(min_win, max_win + 1):
             for start_i in range(n_tok - win_size + 1):
-                sub = tokens[start_i : start_i + win_size]
-                sub_text = normalize_unicode_and_case(" ".join(t.text for t in sub)).text.strip()
+                sub_text = " ".join(norm_tokens[start_i : start_i + win_size])
                 sim = fuzz.ratio(norm_target, sub_text) / 100.0
                 if sim > best_sim:
                     best_sim = sim
-                    best_sub = sub
+                    best_sub = tokens[start_i : start_i + win_size]
 
         return best_sub, best_sim
 
@@ -333,11 +336,30 @@ class EvidenceMatcher:
         self, tokens: list[DocumentToken], norm_target: str
     ) -> list[DocumentToken]:
         """Locate contiguous sublist of tokens whose concatenation matches norm_target."""
+        n_tok = len(tokens)
+        if n_tok == 0:
+            return []
+
         clean_target = norm_target.strip(" -.,;:_")
-        for window_size in range(1, len(tokens) + 1):
-            for start_i in range(len(tokens) - window_size + 1):
-                window = tokens[start_i : start_i + window_size]
-                text = normalize_unicode_and_case(" ".join(t.text for t in window)).text.strip()
-                if text == norm_target or text.strip(" -.,;:_") == clean_target:
-                    return window
+        norm_tokens = [normalize_unicode_and_case(t.text).text.strip() for t in tokens]
+        target_words = norm_target.split()
+        target_word_count = max(1, len(target_words))
+
+        # Prioritize windows matching target word count +/- 2
+        min_win = max(1, target_word_count - 1)
+        max_win = min(n_tok, target_word_count + 3)
+
+        for window_size in range(min_win, max_win + 1):
+            for start_i in range(n_tok - window_size + 1):
+                sub_norm = " ".join(norm_tokens[start_i : start_i + window_size])
+                if sub_norm == norm_target or sub_norm.strip(" -.,;:_") == clean_target:
+                    return tokens[start_i : start_i + window_size]
+
+        # Secondary search for edge cases
+        for window_size in range(1, min_win):
+            for start_i in range(n_tok - window_size + 1):
+                sub_norm = " ".join(norm_tokens[start_i : start_i + window_size])
+                if sub_norm == norm_target or sub_norm.strip(" -.,;:_") == clean_target:
+                    return tokens[start_i : start_i + window_size]
+
         return []

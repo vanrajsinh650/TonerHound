@@ -189,7 +189,7 @@ class EvidenceResolver:
             boxes: list[BBox] = []
             if p and context_words:
                 for line in p.lines:
-                    line_norm = normalize_unicode_and_case(line.text).text
+                    line_norm = line.norm_text
                     if any(w in line_norm for w in context_words):
                         boxes.append(line.bbox)
             labels_by_page[p_num] = boxes
