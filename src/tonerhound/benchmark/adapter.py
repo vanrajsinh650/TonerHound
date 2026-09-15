@@ -21,6 +21,7 @@ from tonerhound.normalization.normalizers import (
     parse_numeric_value,
 )
 from tonerhound.resolution.resolver import EvidenceResolver
+from tonerhound.tax.grounder import TaxFormGrounder, is_form_1040_tax_return
 
 
 def _filter_monotonic_row_pages(candidate_map: dict[int, int]) -> dict[int, int]:
@@ -91,6 +92,21 @@ class ExtractBenchAdapter:
     ) -> dict[str, Any]:
         """Ground extracted data fields and return official ExtractBench payload dictionary."""
         leaves = _flatten_leaves_with_context(extracted_data)
+
+        # Form 1040 tax return structural grounding
+        if self.enable_structural_disambiguation and is_form_1040_tax_return(leaves):
+            tax_grounder = TaxFormGrounder(
+                self.index,
+                self.resolver,
+                enable_bbox_precision=self.enable_bbox_precision,
+            )
+            return tax_grounder.ground(
+                leaves=leaves,
+                extracted_data=extracted_data,
+                example_id=example_id,
+                pipeline_name=pipeline_name,
+            )
+
         citations: list[dict[str, Any]] = []
 
         # Detect any systematic offset between logical source_page and physical PDF pages
@@ -352,6 +368,10 @@ class ExtractBenchAdapter:
         record_page_hints: dict[str, int],
     ) -> None:
         """Resolve a single non-table record anchor using salient fields."""
+        # Safeguard: Do not lock multi-field sections/forms to a single row coordinate
+        if len(fields) > 5:
+            return
+
         for path, value, page_hint, context, _rec in fields:
             if value is None or isinstance(value, bool):
                 continue

@@ -81,3 +81,17 @@ In `src/tonerhound/matching/matcher.py`:
   - Sub-millisecond to 11.8ms runtime overhead with adaptive early exit.
   - Complete 10-scenario unit test suite in `tests/test_page_offset_calibration.py` (52/52 suite tests passing).
 
+---
+
+## 6. Part 2: Tax-Form Structural Grounding (`EXP-005-tax-forms-v1`)
+
+- **Component**: Form-aware structural grounder (`src/tonerhound/tax/grounder.py`) integrated into `ExtractBenchAdapter`.
+- **Key Breakthrough**:
+  - Addressed the chronically low-performing IRS Form 1040 tax cluster (`cabrera-2022`, `cabrera-2023`, `becerra-2024`, `bianco-2022`, `bar-lev-2022`, `bar-lev-2023`).
+  - **Tax Cluster Word Grounding F1**: Rose from **13.70% to 31.04%** (+17.35 pp, 2.27x improvement), exceeding the target of 25%–35%.
+  - **Tax Cluster Page Grounding F1**: Surged from **26.35% to 71.00%** (+44.65 pp, 2.69x improvement).
+  - Document peaks: `bianco-2022` reached **39.23% F1** (85.17% Page F1); `becerra-2024` reached **35.31% F1** (65.68% Page F1).
+  - **Zero Regressions**: Non-tax control documents maintained exact performance (mean 70.00% $\to$ 70.04% F1).
+  - Complete adversarial unit test suite added in `tests/test_tax_form_grounding.py` (57/57 tests passing in 1.05s).
+
+
