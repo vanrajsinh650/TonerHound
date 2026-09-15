@@ -48,3 +48,85 @@ def test_real_pdf_indexing():
     # Search for known text on page 1
     matches = index.search_exact("Page", page=1)
     assert len(matches) >= 1
+
+
+def test_inverted_indexes_and_caching(tmp_path):
+    # Construct a 20-page synthetic document to test multi-page scaling
+    pages = []
+    for p_num in range(1, 21):
+        t_num = DocumentToken(
+            f"${p_num * 100}.00",
+            BBox(0.2, 0.2, 0.1, 0.02, page=p_num),
+            page=p_num,
+            char_index_in_page=0,
+            line_index=0,
+        )
+        t_date = DocumentToken(
+            "2024-03-15",
+            BBox(0.4, 0.2, 0.15, 0.02, page=p_num),
+            page=p_num,
+            char_index_in_page=12,
+            line_index=0,
+        )
+        t_word = DocumentToken(
+            f"EntityName_{p_num}",
+            BBox(0.6, 0.2, 0.2, 0.02, page=p_num),
+            page=p_num,
+            char_index_in_page=25,
+            line_index=0,
+        )
+        line = VisualLine(
+            tokens=[t_num, t_date, t_word],
+            page=p_num,
+            line_index=0,
+            bbox=BBox(0.2, 0.2, 0.6, 0.02, page=p_num),
+        )
+        pages.append(
+            DocumentPage(
+                page_number=p_num,
+                width=612,
+                height=792,
+                tokens=[t_num, t_date, t_word],
+                lines=[line],
+            )
+        )
+
+    index = DocumentIndex.from_pages(pages)
+    assert index.total_pages == 20
+
+    # 1. Numeric index O(1) lookup
+    from tonerhound.matching.matcher import EvidenceMatcher
+
+    matcher = EvidenceMatcher(index)
+
+    # Search $1500 (which is on page 15) without any page hint on a 20-page document
+    cands = matcher.find_normalized_numeric_candidates(1500.0, page_hint=None)
+    assert len(cands) == 1
+    assert cands[0].page == 15
+    assert cands[0].matched_text == "$1500.00"
+
+    # Search with integer key
+    cands_int = matcher.find_normalized_numeric_candidates(700, page_hint=None)
+    assert len(cands_int) == 1
+    assert cands_int[0].page == 7
+
+    # 2. Date index O(1) lookup without page hint
+    date_cands = matcher.find_normalized_date_candidates("March 15, 2024", page_hint=None)
+    assert len(date_cands) == 20
+    assert {c.page for c in date_cands} == set(range(1, 21))
+
+    # Specific hint page
+    date_p3 = matcher.find_normalized_date_candidates("2024-03-15", page_hint=3)
+    assert len(date_p3) == 1
+    assert date_p3[0].page == 3
+
+    # 3. Exact candidate lookup on 20-page document without page hint
+    word_cands = matcher.find_exact_candidates("EntityName_12", page_hint=None)
+    assert len(word_cands) == 1
+    assert word_cands[0].page == 12
+
+    # 4. Fuzzy candidate lookup with n-gram pruning on 20-page document without page hint
+    fuzzy_cands = matcher.find_fuzzy_candidates("EntityName_18", page_hint=None)
+    assert len(fuzzy_cands) >= 1
+    assert fuzzy_cands[0].page == 18
+

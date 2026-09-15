@@ -69,3 +69,15 @@ In `src/tonerhound/matching/matcher.py`:
    - Upgrade table row anchoring to handle non-anchor-keyword fields, multi-table layouts, and monotonic sequence assignments.
 4. **Sprint 4 (Verification & Calibrated Abstention)**:
    - Fine-tune score margins and geometric plausibility gates on `train_dev` to drive False Grounding Rate toward zero.
+
+---
+
+## 5. Part 1: Production-Quality Page-Offset Calibration (`EXP-005-offset-calibration-v1`)
+
+- **Component**: Adaptive Tiered Page-Offset Calibrator in `ExtractBenchAdapter`
+- **Key Breakthrough**:
+  - `long/real_credit_strategies_full` jumped from **10.61% to 40.01% Word Grounding F1** (+29.40% absolute gain), with Precision surging to **87.48%** and Page F1 climbing from 10.03% to 54.33%.
+  - Zero regressions across existing positive (+1, +3) and zero-offset benchmark documents.
+  - Sub-millisecond to 11.8ms runtime overhead with adaptive early exit.
+  - Complete 10-scenario unit test suite in `tests/test_page_offset_calibration.py` (52/52 suite tests passing).
+

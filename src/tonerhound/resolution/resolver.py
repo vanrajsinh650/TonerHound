@@ -68,35 +68,43 @@ class EvidenceResolver:
 
         # Tier 1b: If value is numeric, prioritize normalized numeric matching over raw float str()
         is_num = isinstance(value, (int, float)) and not isinstance(value, bool)
+        is_bool = isinstance(value, bool) or (isinstance(value, str) and value.strip().lower() in ("true", "false", "yes", "no") and any(k in field.lower() for k in ("_box", "checkbox", "is_", "has_", "flag", "_yes", "_no", "final", "amended", "general", "domestic", "contributed")))
+
+        # Tier 1-bool: Checkbox candidate generation
+        if not candidates and is_bool:
+            candidates.extend(self.matcher.find_boolean_candidates(value, field_name=field, page_hint=page_hint, field_context=context))
+
         if not candidates and is_num:
             candidates.extend(self.matcher.find_normalized_numeric_candidates(value, page_hint=page_hint))
 
-        # Tier 1c: Exact match on stringified value
-        if not candidates and isinstance(value, (str, int, float)):
+        # Tier 1c: Exact match on stringified value (excluding pure booleans)
+        if not candidates and isinstance(value, (str, int, float)) and not isinstance(value, bool):
             candidates.extend(self.matcher.find_exact_candidates(str(value), page_hint=page_hint))
 
         # Tier 1d: Normalized date match
-        if not candidates and isinstance(value, str):
+        if not candidates and isinstance(value, str) and not is_bool:
             candidates.extend(self.matcher.find_normalized_date_candidates(value, page_hint=page_hint))
 
         # Tier 2: Normalized numeric match for strings that might be formatted numbers
-        if not candidates and isinstance(value, str):
+        if not candidates and isinstance(value, str) and not is_bool:
             candidates.extend(self.matcher.find_normalized_numeric_candidates(value, page_hint=page_hint))
 
         # Tier 3: Fuzzy sequence alignment fallback (only for text strings)
-        if not candidates and isinstance(value, str) and not is_num:
+        if not candidates and isinstance(value, str) and not is_num and not is_bool:
             query = evidence_text if evidence_text else str(value)
             candidates.extend(self.matcher.find_fuzzy_candidates(query, threshold=0.82, page_hint=page_hint))
 
-        # If still no candidates found on page_hint, relax page_hint to search all pages on small documents
-        if not candidates and page_hint is not None and len(self.matcher.index.pages) <= 10:
+        # If still no candidates found on page_hint, relax page_hint to search all pages
+        if not candidates and page_hint is not None:
             if evidence_text:
                 candidates.extend(self.matcher.find_exact_candidates(evidence_text, page_hint=None))
+            if not candidates and is_bool:
+                candidates.extend(self.matcher.find_boolean_candidates(value, field_name=field, page_hint=None, field_context=context))
             if not candidates and is_num:
                 candidates.extend(self.matcher.find_normalized_numeric_candidates(value, page_hint=None))
-            if not candidates and isinstance(value, (str, int, float)):
+            if not candidates and isinstance(value, (str, int, float)) and not isinstance(value, bool):
                 candidates.extend(self.matcher.find_exact_candidates(str(value), page_hint=None))
-            if not candidates and isinstance(value, str):
+            if not candidates and isinstance(value, str) and not is_bool:
                 candidates.extend(self.matcher.find_normalized_date_candidates(value, page_hint=None))
 
         # If zero candidates found: Check for derived vs not_found
@@ -179,19 +187,27 @@ class EvidenceResolver:
     ) -> list[tuple[MatchCandidate, float]]:
         """Score each candidate based on spatial proximity to context label."""
         norm_context = normalize_unicode_and_case(context).text.strip()
-        context_words = [w for w in norm_context.split() if len(w) > 1]
+        cand_texts = {normalize_unicode_and_case(c.matched_text).text.strip() for c in candidates}
+        context_words = [
+            w for w in norm_context.split()
+            if len(w) > 1 and w not in cand_texts and not any(w == ct for ct in cand_texts)
+        ]
+        if not context_words:
+            context_words = [w for w in norm_context.split() if len(w) > 1]
 
-        # Precompute context label boxes per page once
-        labels_by_page: dict[int, list[BBox]] = {}
+        # Precompute context label boxes with match weights per page once
+        # (lbox, match_count)
+        labels_by_page: dict[int, list[tuple[BBox, int]]] = {}
         target_pages = {cand.page for cand in candidates}
         for p_num in target_pages:
             p = self.index.get_page(p_num)
-            boxes: list[BBox] = []
+            boxes: list[tuple[BBox, int]] = []
             if p and context_words:
                 for line in p.lines:
                     line_norm = line.norm_text
-                    if any(w in line_norm for w in context_words):
-                        boxes.append(line.bbox)
+                    m_count = sum(1 for w in context_words if w in line_norm)
+                    if m_count > 0:
+                        boxes.append((line.bbox, m_count))
             labels_by_page[p_num] = boxes
 
         scored: list[tuple[MatchCandidate, float]] = []
@@ -205,34 +221,45 @@ class EvidenceResolver:
 
             context_label_boxes = labels_by_page.get(cand.page, [])
 
-
             if context_label_boxes:
-                # Find nearest context label
-                min_dist = float("inf")
-                same_line_bonus = 0.0
-
                 cand_cx = cand.bbox.x + cand.bbox.width / 2.0
                 cand_cy = cand.bbox.y + cand.bbox.height / 2.0
+                cand_x0 = cand.bbox.x
+                cand_x1 = cand.bbox.x + cand.bbox.width
+                best_spatial_bonus = 0.0
 
-                for lbox in context_label_boxes:
+                for lbox, m_count in context_label_boxes:
                     lbl_cx = lbox.x + lbox.width / 2.0
                     lbl_cy = lbox.y + lbox.height / 2.0
+                    lbl_weight = 1.0 + 0.5 * (m_count - 1)
 
-                    # Euclidean distance in normalized space
+                    # Euclidean distance
                     dist = math.sqrt((cand_cx - lbl_cx) ** 2 + (cand_cy - lbl_cy) ** 2)
-                    min_dist = min(min_dist, dist)
+                    dist_score = (1.0 / (1.0 + dist * 5.0)) * lbl_weight
 
-                    # Check same visual horizontal band (same line)
-                    if abs(cand_cy - lbl_cy) < (cand.bbox.height * 1.2):
-                        # Candidate is to the right of the label (standard form/invoice key-value pair)
+                    bonus = 0.0
+                    # 1. Horizontal key-value alignment (label to left of candidate on same line)
+                    if abs(cand_cy - lbl_cy) < (cand.bbox.height * 0.8):
                         if cand.bbox.x >= lbox.x:
-                            same_line_bonus = max(same_line_bonus, 3.0)
+                            bonus = max(bonus, 5.0)
                         else:
-                            same_line_bonus = max(same_line_bonus, 1.5)
+                            bonus = max(bonus, 1.5)
+                    elif abs(cand_cy - lbl_cy) < (cand.bbox.height * 1.5) and cand.bbox.x >= lbox.x:
+                        bonus = max(bonus, 3.5)
 
-                # Distance score: closer is better
-                dist_score = 1.0 / (1.0 + min_dist * 5.0)
-                score += (dist_score * 2.0) + same_line_bonus
+                    # 2. Vertical form field alignment (label directly above candidate)
+                    v_dist = cand.bbox.y - (lbox.y + lbox.height)
+                    h_overlap = (max(cand_x0, lbox.x) <= min(cand_x1, lbox.x + lbox.width) + 0.05)
+                    if 0.0 <= v_dist <= (cand.bbox.height * 2.5) and h_overlap:
+                        bonus = max(bonus, 3.0)
+
+                    combined = (dist_score * 2.0) + (bonus * lbl_weight)
+                    best_spatial_bonus = max(best_spatial_bonus, bonus)
+                    score += combined
+
+                # Deprioritize running headers at top of multi-page documents if lacking direct label
+                if cand.bbox.y < 0.055 and len(self.index.pages) > 2 and best_spatial_bonus < 2.0:
+                    score -= 2.0
 
             # Bonus for exact match type over normalized or fuzzy
             if cand.match_type == "exact":

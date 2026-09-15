@@ -211,7 +211,19 @@ class CandidateVerifier:
         # 4. Field Type Semantic Compatibility Check
         if field_type == FieldType.BOOLEAN:
             cb_state = detect_checkbox_state(top_cand.matched_text)
-            if cb_state is None and top_cand.matched_text.lower() not in ("true", "false", "yes", "no"):
+            target_bool = bool(value) if isinstance(value, bool) else (str(value).lower() in ("true", "yes", "1"))
+            if cb_state is not None:
+                if cb_state != target_bool:
+                    return VerificationDecision(
+                        is_accepted=False,
+                        status=ProvenanceStatus.NOT_FOUND,
+                        confidence=0.0,
+                        bbox=None,
+                        page=None,
+                        matched_text=None,
+                        reason=f"Boolean checkbox mismatch: target={target_bool} vs token='{top_cand.matched_text}' ({cb_state})",
+                    )
+            elif top_cand.matched_text.lower() not in ("true", "false", "yes", "no"):
                 # Candidate is arbitrary text, not a checkbox or boolean token
                 return VerificationDecision(
                     is_accepted=False,

@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import hashlib
+import pickle
 import unicodedata
 from collections import defaultdict
 from pathlib import Path
@@ -14,7 +16,10 @@ from tonerhound.models.types import DocumentPage, DocumentToken, VisualLine
 from tonerhound.normalization.normalizers import (
     _CHAR_REPLACEMENTS,
     NormalizedText,
+    is_plausible_date_string,
     normalize_unicode_and_case,
+    parse_date_value,
+    parse_numeric_value,
 )
 
 
@@ -22,13 +27,26 @@ class DocumentIndex:
     """Document index extracting word and line geometry from PDFs or in-memory pages.
 
     Constructed once per document, cached and reused for many field resolution queries.
+    Provides sublinear inverted indexes for tokens, canonical numbers, dates, and n-grams.
     """
+
+    INDEX_VERSION = "v2"
 
     def __init__(self, pages: list[DocumentPage]) -> None:
         self.pages = pages
         self._pages_by_num: dict[int, DocumentPage] = {p.page_number: p for p in pages}
         # Inverted index: normalized token text -> list of DocumentTokens
         self._token_index: dict[str, list[DocumentToken]] = defaultdict(list)
+        # Inverted index: punctuation-stripped stem -> list of DocumentTokens
+        self._stem_token_index: dict[str, list[DocumentToken]] = defaultdict(list)
+        # Inverted index: canonical numeric float -> list of (token, page_num, line_idx)
+        self._numeric_index: dict[float, list[tuple[DocumentToken, int, int]]] = defaultdict(list)
+        # Inverted index: ISO date string YYYY-MM-DD -> list of (page_num, line_idx, tokens, matched_text)
+        self._date_index: dict[str, list[tuple[int, int, tuple[DocumentToken, ...], str]]] = defaultdict(list)
+        # Inverted index: normalized word -> list of (page_num, line_idx)
+        self._lines_by_token: dict[str, list[tuple[int, int]]] = defaultdict(list)
+        # Inverted index: 3-character ngrams -> set of (page_num, line_idx)
+        self._ngram_to_lines: dict[str, set[tuple[int, int]]] = defaultdict(set)
         # Normalized full page text with char_map to tokens
         self._page_normalized_text: dict[int, tuple[NormalizedText, list[DocumentToken]]] = {}
 
@@ -44,13 +62,73 @@ class DocumentIndex:
 
     def _build_indexes(self) -> None:
         for page in self.pages:
-            # Build token index
-            for token in page.tokens:
-                norm = normalize_unicode_and_case(token.text).text.strip()
-                if norm:
-                    self._token_index[norm].append(token)
+            p_num = page.page_number
 
-            # Build full-page string by concatenating lines
+            # 1. Build line-level and token-level indexes
+            for line in page.lines:
+                line_idx = line.line_index
+                line_toks = line.tokens
+                n_toks = len(line_toks)
+
+                for token in line_toks:
+                    tok_text = token.text
+                    norm = normalize_unicode_and_case(tok_text).text.strip()
+                    if norm:
+                        self._token_index[norm].append(token)
+                        stem = norm.strip(" ,.:;-/_'\"()[]{}*&#$€£¥")
+                        if stem:
+                            if stem != norm:
+                                self._stem_token_index[stem].append(token)
+                            self._lines_by_token[stem].append((p_num, line_idx))
+                            if len(stem) >= 4:
+                                for k in range(len(stem) - 2):
+                                    self._ngram_to_lines[stem[k : k + 3]].add((p_num, line_idx))
+
+                    # Numeric indexing on atomic token
+                    parsed_num = parse_numeric_value(tok_text)
+                    if parsed_num is not None:
+                        key = round(parsed_num, 6)
+                        self._numeric_index[key].append((token, p_num, line_idx))
+
+                # Adjacent token numeric pairing (e.g. "$" + "1,200" or "-" + "500")
+                for i in range(n_toks - 1):
+                    t1, t2 = line_toks[i], line_toks[i + 1]
+                    if t1.text in ("$", "€", "£", "¥", "-", "+"):
+                        combo = t1.text + t2.text
+                        pnum = parse_numeric_value(combo)
+                        if pnum is not None:
+                            key = round(pnum, 6)
+                            ub = union_bbox_list([t1.bbox, t2.bbox])
+                            if ub:
+                                combo_tok = DocumentToken(
+                                    text=combo,
+                                    bbox=ub,
+                                    page=p_num,
+                                    char_index_in_page=t1.char_index_in_page,
+                                    line_index=line_idx,
+                                )
+                                self._numeric_index[key].append((combo_tok, p_num, line_idx))
+
+                # Date indexing on visual line windows (preferring minimal token spans)
+                if any(ch.isdigit() for ch in line.text):
+                    found_date_spans: list[tuple[int, int]] = []
+                    for w_size in range(1, min(5, n_toks + 1)):
+                        for start_i in range(n_toks - w_size + 1):
+                            end_i = start_i + w_size
+                            if any(s >= start_i and e <= end_i for s, e in found_date_spans):
+                                continue
+                            window = line_toks[start_i:end_i]
+                            w_text = " ".join(t.text for t in window)
+                            if is_plausible_date_string(w_text):
+                                d_val = parse_date_value(w_text)
+                                if d_val:
+                                    d_key = d_val.strftime("%Y-%m-%d")
+                                    found_date_spans.append((start_i, end_i))
+                                    self._date_index[d_key].append(
+                                        (p_num, line_idx, tuple(window), w_text)
+                                    )
+
+            # 2. Build full-page string by concatenating lines
             page_text_parts: list[str] = []
             char_to_token: list[DocumentToken] = []
 
@@ -78,8 +156,32 @@ class DocumentIndex:
         enable_ocr: bool = False,
         ocr_scale: float = 200.0 / 72.0,
         ocr_token_threshold: int = 25,
+        use_cache: bool = True,
+        cache_dir: Path | str = "research/cache/document_index",
     ) -> DocumentIndex:
-        """Load and index a PDF using pypdfium2 with optional OCR fallback."""
+        """Load and index a PDF using pypdfium2 with optional OCR fallback and persistent disk caching."""
+        cache_path: Path | None = None
+        if use_cache and isinstance(source, (str, Path)):
+            src_path = Path(source)
+            if src_path.exists():
+                cache_dir = Path(cache_dir)
+                cache_dir.mkdir(parents=True, exist_ok=True)
+                # Compute SHA256 of the source PDF
+                h = hashlib.sha256()
+                with open(src_path, "rb") as f:
+                    while chunk := f.read(65536):
+                        h.update(chunk)
+                file_hash = h.hexdigest()
+                cache_path = cache_dir / f"{file_hash}_{enable_ocr}_{ocr_scale:.2f}_{cls.INDEX_VERSION}.pkl"
+                if cache_path.exists():
+                    try:
+                        with open(cache_path, "rb") as f:
+                            cached_idx = pickle.load(f)
+                            if isinstance(cached_idx, DocumentIndex):
+                                return cached_idx
+                    except (pickle.PickleError, EOFError, OSError, ValueError):
+                        pass
+
         doc = pdfium.PdfDocument(source)
         pages: list[DocumentPage] = []
 
@@ -113,7 +215,19 @@ class DocumentIndex:
         finally:
             doc.close()
 
-        return cls(pages)
+        index = cls(pages)
+
+        # Write to disk cache atomically
+        if cache_path is not None:
+            try:
+                tmp_path = cache_path.with_suffix(".tmp")
+                with open(tmp_path, "wb") as f:
+                    pickle.dump(index, f, protocol=pickle.HIGHEST_PROTOCOL)
+                tmp_path.replace(cache_path)
+            except (pickle.PickleError, OSError, TypeError):
+                pass
+
+        return index
 
     @classmethod
     def from_pages(cls, pages: list[DocumentPage]) -> DocumentIndex:
@@ -301,6 +415,7 @@ def _extract_tokens_from_ocr(
     """Render page bitmap and run Tesseract OCR to extract word bounding boxes."""
     try:
         import pytesseract
+
         from tonerhound.normalization.normalizers import repair_ocr_text
     except ImportError:
         return []

@@ -195,11 +195,14 @@ def repair_ocr_text(text: str) -> str:
 def detect_checkbox_state(text: str) -> bool | None:
     """Detect boolean checkbox states from OCR text tokens."""
     t = text.strip().lower()
-    if t in ("[x]", "[*]", "[v]", "☒", "■", "✔", "✓", "x", "yes", "true", "checked"):
+    # Checked tokens (explicit checkbox glyphs, OCR artifacts like LX.J, [XJ, checked marks)
+    if t in ("[x]", "[*]", "[v]", "☒", "■", "✔", "✓", "x", "yes", "true", "checked", "lx.j", "[xj", "[x"):
         return True
-    if t in ("[ ]", "☐", "no", "false", "unchecked"):
+    # Unchecked tokens (empty brackets, empty box glyph, Dingbat 'D', OCR 'o'/'q'/'LJ')
+    if t in ("[ ]", "☐", "no", "false", "unchecked", "d", "o", "q", "lj", "[]", "[_]"):
         return False
     return None
+
 
 
 def is_number_equal(v1: Any, v2: Any, rel_tol: float = 1e-6, abs_tol: float = 1e-6) -> bool:
