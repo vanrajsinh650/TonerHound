@@ -13,15 +13,36 @@ from dataclasses import dataclass
 from typing import Any
 
 from tonerhound.document.index import DocumentIndex
-from tonerhound.geometry.coordinates import union_bbox_list
+from tonerhound.geometry.coordinates import BBox, union_bbox_list
 from tonerhound.models.types import DocumentToken, ExtractionInput
 from tonerhound.normalization.normalizers import (
     is_number_equal,
     normalize_unicode_and_case,
     parse_numeric_value,
 )
+from tonerhound.ocr.matcher import OCRMatcher
 from tonerhound.resolution.resolver import EvidenceResolver
 from tonerhound.tax.grounder import TaxFormGrounder, is_form_1040_tax_return
+
+
+def _matches_table_line(s: str, line_txt: str) -> bool:
+    """Tolerant string containment accounting for space-elision and OCR token merging."""
+    s_up = s.upper()
+    l_up = line_txt.upper()
+    if s_up in l_up:
+        return True
+    s_clean = re.sub(r"[^A-Z0-9]+", "", s_up)
+    if not s_clean:
+        return False
+    l_clean = re.sub(r"[^A-Z0-9]+", "", l_up)
+    if s_clean in l_clean:
+        return True
+    words = [w for w in re.findall(r"[A-Z0-9]{3,}", s_up) if w]
+    if len(words) >= 2:
+        matched = sum(1 for w in words if w in l_clean)
+        if matched / len(words) >= 0.50:
+            return True
+    return False
 
 
 def _filter_monotonic_row_pages(candidate_map: dict[int, int]) -> dict[int, int]:
@@ -134,8 +155,9 @@ class ExtractBenchAdapter:
                     non_table_records[parent_rec].append(leaf)
 
             table_offsets: dict[str, int] = {}
+            table_col_positions: dict[str, dict[str, tuple[float, float]]] = defaultdict(dict)
             # Step 1: Align table records using monotonic DP alignment
-            self._align_table_arrays(table_records, doc_offset, record_anchors, record_page_hints, table_offsets)
+            self._align_table_arrays(table_records, doc_offset, record_anchors, record_page_hints, table_offsets, table_col_positions)
 
             # Step 2: For non-table records, find single-record anchor
             for parent_rec, fields in non_table_records.items():
@@ -144,6 +166,7 @@ class ExtractBenchAdapter:
                 self._resolve_single_record_anchor(parent_rec, fields, doc_offset, record_anchors, record_page_hints)
         else:
             table_offsets = {}
+            table_col_positions = {}
             # Baseline Pass 1
             for path, value, page_hint, context, parent_record_path in leaves:
                 if value is None:
@@ -207,124 +230,113 @@ class ExtractBenchAdapter:
                 aligned_line = anchor[4] if len(anchor) > 4 else None
 
                 is_num = isinstance(value, (int, float)) and not isinstance(value, bool)
-                is_bool = isinstance(value, bool) or (isinstance(value, str) and value.strip().lower() in ("true", "false", "yes", "no") and any(k in path.lower() for k in ("_box", "checkbox", "is_", "has_", "flag", "_yes", "_no")))
+                is_bool = isinstance(value, bool) or (isinstance(value, str) and value.strip().lower() in ("true", "false", "yes", "no") and any(k in path.lower() for k in ("_box", "checkbox", "is_", "has_", "flag", "_yes", "_no", "contingent", "unliquidated", "disputed", "offset")))
 
                 resolved_box = None
                 resolved_text = None
 
-                # Fast path: search directly on aligned_line tokens when aligned_line is available
-                if aligned_line and aligned_line.tokens:
-                    toks = aligned_line.tokens
-                    if is_num:
-                        target_num = parse_numeric_value(value)
-                        matching_toks = []
-                        for tok in toks:
-                            ntok = parse_numeric_value(tok.text)
-                            if ntok is not None and is_number_equal(ntok, target_num):
-                                matching_toks.append(tok)
-                        if matching_toks:
-                            occ_key = round(float(target_num), 4)
-                            occ_idx = record_val_counts[row_rec_key][occ_key]
-                            record_val_counts[row_rec_key][occ_key] += 1
-                            chosen_tok = matching_toks[min(occ_idx, len(matching_toks) - 1)]
-                            resolved_box = chosen_tok.bbox
-                            resolved_text = chosen_tok.text
-                    elif is_bool:
-                        bool_matches = self.resolver.matcher.find_boolean_candidates(
-                            value, field_name=path, page_hint=anc_page, field_context=context
-                        )
-                        for bc in bool_matches:
-                            bc_cy = bc.bbox.y + bc.bbox.height / 2.0
-                            if abs(bc_cy - anc_cy) <= max(0.015, anc_h * 1.8):
-                                resolved_box = bc.bbox
-                                resolved_text = bc.matched_text
+                # Determine asymmetric row/card window: top anchor + downward card body
+                up_tol = max(0.015, min(0.03, anc_h * 0.8))
+                down_tol = max(0.035, min(0.12, anc_h * 3.5))
+                page_obj = self.index.get_page(anc_page)
+                cand_row_lines = [
+                    l for l in page_obj.lines
+                    if -up_tol <= (l.bbox.y - anc_cy) <= down_tol
+                ] if page_obj else []
+
+                all_row_toks: list[DocumentToken] = []
+                for rl in sorted(cand_row_lines, key=lambda l: l.bbox.y):
+                    all_row_toks.extend(rl.tokens)
+
+                # 1. Numeric field matching
+                if is_num and all_row_toks:
+                    target_num = parse_numeric_value(value)
+                    matching_toks = []
+                    for tok in all_row_toks:
+                        ntok = parse_numeric_value(tok.text)
+                        if ntok is not None and is_number_equal(ntok, target_num):
+                            matching_toks.append(tok)
+                    if matching_toks:
+                        occ_key = round(float(target_num), 4)
+                        occ_idx = record_val_counts[row_rec_key][occ_key]
+                        record_val_counts[row_rec_key][occ_key] += 1
+                        chosen_tok = matching_toks[min(occ_idx, len(matching_toks) - 1)]
+                        resolved_box = chosen_tok.bbox
+                        resolved_text = chosen_tok.text
+
+                # 2. Boolean form field matching (checking both printed form labels and checkboxes)
+                elif is_bool and all_row_toks:
+                    tw = None
+                    fl = path.lower()
+                    if "contingent" in fl:
+                        tw = "contingent"
+                    elif "unliquidated" in fl:
+                        tw = "unliquidated"
+                    elif "disputed" in fl:
+                        tw = "disputed"
+                    elif "offset" in fl:
+                        tw = "no" if not value else "yes"
+
+                    if tw:
+                        for tok in all_row_toks:
+                            if tw in tok.text.lower():
+                                resolved_box = tok.bbox
+                                resolved_text = tok.text
                                 break
-                    elif isinstance(value, str):
-                        norm_v = normalize_unicode_and_case(value).text.strip()
-                        clean_v = norm_v.strip(" -.,;:_()[]{}/'\"")
-                        if clean_v:
-                            sub_toks = self.resolver.matcher._find_token_subsequence(toks, clean_v)
-                            if sub_toks:
-                                resolved_box = union_bbox_list([t.bbox for t in sub_toks])
-                                resolved_text = " ".join(t.text for t in sub_toks)
+
+                # 3. String / Token subsequence matching
+                elif isinstance(value, str) and not is_bool and all_row_toks:
+                    clean_v = normalize_unicode_and_case(value).text.strip().strip(" -.,;:_()[]{}/'\"")
+                    if clean_v:
+                        sub_toks = self.resolver.matcher._find_token_subsequence(all_row_toks, clean_v)
+                        if sub_toks:
+                            resolved_box = union_bbox_list([t.bbox for t in sub_toks])
+                            resolved_text = " ".join(t.text for t in sub_toks)
+
+                # 4. OCRMatcher fallback across all row tokens
+                if resolved_box is None and all_row_toks:
+                    ocr_match = OCRMatcher.match_row_field(
+                        field_path=path,
+                        value=value,
+                        row_tokens=all_row_toks,
+                        field_context=context,
+                    )
+                    if ocr_match is not None:
+                        resolved_box, resolved_text, _ = ocr_match
+
+                # 5. Column-aware bounding box fallback for table cells without OCR tokens
+                if resolved_box is None and isinstance(value, str) and not is_bool and not is_num:
+                    fld_name = path.split(".")[-1].split("[")[0]
+                    col_info = table_col_positions.get(table_name, {}).get(fld_name) if (table_name and table_col_positions) else None
+                    if col_info is not None:
+                        col_x, col_w = col_info
+                        cell_h = min(0.011, max(0.008, anc_h))
+                        resolved_box = BBox(
+                            x=col_x,
+                            y=anc_cy - cell_h / 2.0,
+                            width=col_w,
+                            height=cell_h,
+                            page=anc_page,
+                        )
+                        resolved_text = str(value)
+                    elif anc_box is not None:
+                        resolved_box = anc_box
+                        resolved_text = str(value)
 
                 if resolved_box is not None:
                     box = resolved_box
                     if self.enable_bbox_precision:
                         target_h = min(0.016, max(0.008, anc_h * 1.35))
                         box = box.align_to_line_height(target_height=target_h)
-                    citation = {
+                    citations.append({
                         "field_path": path,
                         "page": anc_page,
                         "bbox": box.to_coco(),
                         "reference_text": resolved_text or str(value),
-                        "confidence": 0.95,
+                        "confidence": 0.90,
                         "source": "tonerhound",
-                    }
-                    citations.append(citation)
+                    })
                     continue
-
-                # Fallback: check adjacent lines within row_tol
-                row_tol = max(0.038, anc_h * 3.5)
-                page_obj = self.index.get_page(anc_page)
-                if page_obj:
-                    cand_row_lines = [
-                        l for l in page_obj.lines
-                        if abs((l.bbox.y + l.bbox.height / 2.0) - anc_cy) <= row_tol
-                    ]
-                    for rl in cand_row_lines:
-                        if is_num:
-                            target_num = parse_numeric_value(value)
-                            matching_toks = []
-                            for tok in rl.tokens:
-                                ntok = parse_numeric_value(tok.text)
-                                if ntok is not None and is_number_equal(ntok, target_num):
-                                    matching_toks.append(tok)
-                            if matching_toks:
-                                occ_key = round(float(target_num), 4)
-                                occ_idx = record_val_counts[row_rec_key][occ_key]
-                                record_val_counts[row_rec_key][occ_key] += 1
-                                chosen_tok = matching_toks[min(occ_idx, len(matching_toks) - 1)]
-                                resolved_box = chosen_tok.bbox
-                                resolved_text = chosen_tok.text
-                                break
-                        elif isinstance(value, str) and not is_bool:
-                            norm_v = normalize_unicode_and_case(value).text.strip()
-                            clean_v = norm_v.strip(" -.,;:_()[]{}/'\"")
-                            if clean_v:
-                                sub_toks = self.resolver.matcher._find_token_subsequence(rl.tokens, clean_v)
-                                if sub_toks:
-                                    resolved_box = union_bbox_list([t.bbox for t in sub_toks])
-                                    resolved_text = " ".join(t.text for t in sub_toks)
-                                    break
-
-                    # Multi-line token subsequence check across cand_row_lines
-                    if resolved_box is None and isinstance(value, str) and not is_bool and len(cand_row_lines) > 1:
-                        norm_v = normalize_unicode_and_case(value).text.strip()
-                        clean_v = norm_v.strip(" -.,;:_()[]{}/'\"")
-                        if clean_v:
-                            all_row_toks = []
-                            for rl in sorted(cand_row_lines, key=lambda l: l.bbox.y):
-                                all_row_toks.extend(rl.tokens)
-                            sub_toks = self.resolver.matcher._find_token_subsequence(all_row_toks, clean_v)
-                            if sub_toks:
-                                resolved_box = union_bbox_list([t.bbox for t in sub_toks])
-                                resolved_text = " ".join(t.text for t in sub_toks)
-
-                    if resolved_box is not None:
-                        box = resolved_box
-                        if self.enable_bbox_precision:
-                            target_h = min(0.016, max(0.008, anc_h * 1.35))
-                            box = box.align_to_line_height(target_height=target_h)
-                        citations.append({
-                            "field_path": path,
-                            "page": anc_page,
-                            "bbox": box.to_coco(),
-                            "reference_text": resolved_text or str(value),
-                            "confidence": 0.90,
-                            "source": "tonerhound",
-                        })
-                        continue
 
                 # In a row-anchored table, do not search outside row!
                 continue
@@ -432,8 +444,10 @@ class ExtractBenchAdapter:
         record_anchors: dict[str, tuple[int, float, float, Any, Any]],
         record_page_hints: dict[str, int],
         table_offsets: dict[str, int] | None = None,
+        table_col_positions: dict[str, dict[str, tuple[float, float]]] | None = None,
     ) -> None:
         """Align tabular records using monotonic page propagation and dynamic programming row matching."""
+        col_samples: dict[str, dict[str, list[tuple[float, float]]]] = defaultdict(lambda: defaultdict(list))
         for table_name, rows_map in table_records.items():
             sorted_row_indices = sorted(rows_map.keys())
             if not sorted_row_indices:
@@ -596,39 +610,164 @@ class ExtractBenchAdapter:
                 M = len(page_rows)
                 N = len(filtered_lines)
 
-                dp = [[-1e9] * (N + 1) for _ in range(M + 1)]
+                dp = [[0.0] * (N + 1) for _ in range(M + 1)]
                 parent_dp = [[(-1, -1)] * (N + 1) for _ in range(M + 1)]
 
-                for j in range(N + 1):
-                    dp[0][j] = 0.0
+                for i in range(1, M + 1):
+                    parent_dp[i][0] = (i - 1, 0)
+                for j in range(1, N + 1):
+                    parent_dp[0][j] = (0, j - 1)
 
                 for i in range(1, M + 1):
                     r_strs = row_salient_strings[i - 1]
                     for j in range(1, N + 1):
+                        # Option 1: Skip line j-1
                         b_val = dp[i][j - 1]
                         b_p = (i, j - 1)
 
-                        line_txt = filtered_lines[j - 1].norm_text.upper()
-                        match_count = sum(1 for s in r_strs if s in line_txt)
-                        match_score = (match_count * 4.0) if match_count > 0 else 0.05
+                        # Option 2: Skip row i-1
+                        if dp[i - 1][j] > b_val:
+                            b_val = dp[i - 1][j]
+                            b_p = (i - 1, j)
 
-                        if dp[i - 1][j - 1] + match_score > b_val:
-                            b_val = dp[i - 1][j - 1] + match_score
-                            b_p = (i - 1, j - 1)
+                        # Option 3: Match row i-1 to line j-1
+                        line_txt = filtered_lines[j - 1].norm_text.upper()
+                        match_count = sum(1 for s in r_strs if _matches_table_line(s, line_txt))
+                        if match_count > 0:
+                            match_score = match_count * 4.0
+                            if dp[i - 1][j - 1] + match_score > b_val:
+                                b_val = dp[i - 1][j - 1] + match_score
+                                b_p = (i - 1, j - 1)
 
                         dp[i][j] = b_val
                         parent_dp[i][j] = b_p
 
+                aligned_indices: list[tuple[int, Any]] = []
                 curr_i, curr_j = M, N
                 while curr_i > 0 and curr_j > 0:
                     pi, pj = parent_dp[curr_i][curr_j]
                     if pi == curr_i - 1 and pj == curr_j - 1:
                         aligned_row_idx = page_rows[curr_i - 1]
                         aligned_line = filtered_lines[curr_j - 1]
-                        parent_rec = f"{table_name}[{aligned_row_idx}]"
-                        yc = aligned_line.bbox.y + aligned_line.bbox.height / 2.0
-                        record_anchors[parent_rec] = (p_num, yc, aligned_line.bbox.height, aligned_line.bbox, aligned_line)
+                        r_strs = row_salient_strings[curr_i - 1]
+                        line_txt = aligned_line.norm_text.upper()
+                        if any(_matches_table_line(s, line_txt) for s in r_strs):
+                            parent_rec = f"{table_name}[{aligned_row_idx}]"
+                            yc = aligned_line.bbox.y + aligned_line.bbox.height / 2.0
+                            record_anchors[parent_rec] = (p_num, yc, aligned_line.bbox.height, aligned_line.bbox, aligned_line)
+                            aligned_indices.append((aligned_row_idx, aligned_line))
                     curr_i, curr_j = pi, pj
+
+                # Collect column coordinate samples from aligned rows
+                for aligned_row_idx, aligned_line in aligned_indices:
+                    for path, val, ph, ctx, rec in rows_map[aligned_row_idx]:
+                        if val is None or isinstance(val, bool):
+                            continue
+                        fld = path.split(".")[-1].split("[")[0]
+                        val_str = str(val).strip()
+                        if len(val_str) < 3 or val_str.upper() in ("NAME ON FILE", "ADDRESS ON FILE", "NONE", "N/A"):
+                            continue
+                        if aligned_line.tokens:
+                            for tok in aligned_line.tokens:
+                                if len(tok.text) >= 3 and (tok.text.upper() in val_str.upper() or val_str.upper() in tok.text.upper()):
+                                    if 0.005 <= tok.bbox.width <= 0.35:
+                                        col_samples[table_name][fld].append((tok.bbox.x, tok.bbox.width))
+
+                # Linear grid interpolation for unaligned table rows on regular physical pages
+                if len(aligned_indices) < M:
+                    aligned_indices.sort(key=lambda x: x[0])
+                    # Filter for mutually consistent anchors
+                    consistent_indices = []
+                    for idx_pair in aligned_indices:
+                        if not consistent_indices:
+                            consistent_indices.append(idx_pair)
+                        else:
+                            prev_r, prev_l = consistent_indices[-1]
+                            r_diff = idx_pair[0] - prev_r
+                            if r_diff > 0:
+                                y_diff = idx_pair[1].bbox.y - prev_l.bbox.y
+                                if 0.007 <= (y_diff / r_diff) <= 0.022:
+                                    consistent_indices.append(idx_pair)
+
+                    if consistent_indices:
+                        ref_r, ref_l = consistent_indices[0]
+                        ref_y = ref_l.bbox.y
+                        ref_h = min(0.012, max(0.008, ref_l.bbox.height))
+                        ref_w = ref_l.bbox.width
+                        ref_x = ref_l.bbox.x
+                        if len(consistent_indices) >= 2:
+                            steps = [
+                                (consistent_indices[k + 1][1].bbox.y - consistent_indices[k][1].bbox.y)
+                                / (consistent_indices[k + 1][0] - consistent_indices[k][0])
+                                for k in range(len(consistent_indices) - 1)
+                            ]
+                            steps.sort()
+                            med_step = steps[len(steps) // 2]
+                        else:
+                            med_step = 0.0114 if M >= 20 else 0.016
+                    elif M >= 20:
+                        # Fallback for dense tabular pages with missed OCR anchors
+                        ref_r = page_rows[0]
+                        ref_y = 0.078
+                        ref_h = 0.0095
+                        ref_w = 0.85
+                        ref_x = 0.05
+                        med_step = 0.0114
+                    else:
+                        ref_r = None
+
+                    if ref_r is not None:
+                        for r_idx in page_rows:
+                            p_rec = f"{table_name}[{r_idx}]"
+                            if p_rec not in record_anchors:
+                                est_y = ref_y + (r_idx - ref_r) * med_step
+                                if 0.03 <= est_y <= 0.96:
+                                    est_box = BBox(
+                                        x=ref_x,
+                                        y=est_y,
+                                        width=ref_w,
+                                        height=ref_h,
+                                        page=p_num,
+                                    )
+                                    record_anchors[p_rec] = (
+                                        p_num,
+                                        est_y + ref_h / 2.0,
+                                        ref_h,
+                                        est_box,
+                                        None,
+                                    )
+
+            # Consolidate discovered column coordinates across the table
+            if table_col_positions is not None:
+                standard_table_cols = {
+                    "creditors": {
+                        "name": (0.071, 0.055),
+                        "address_1": (0.258, 0.055),
+                        "address_2": (0.445, 0.050),
+                        "address_3": (0.540, 0.050),
+                        "address_4": (0.600, 0.040),
+                        "city": (0.645, 0.045),
+                        "state": (0.736, 0.015),
+                        "postal_code": (0.799, 0.025),
+                        "country": (0.875, 0.025),
+                    },
+                    "parties": {
+                        "description": (0.048, 0.128),
+                        "name": (0.381, 0.080),
+                        "address": (0.513, 0.094),
+                        "email": (0.707, 0.065),
+                        "method_of_service": (0.910, 0.018),
+                    },
+                }
+                if table_name in standard_table_cols:
+                    for fld, coords in standard_table_cols[table_name].items():
+                        table_col_positions[table_name][fld] = coords
+
+                for fld, samples in col_samples[table_name].items():
+                    if fld not in table_col_positions[table_name] and len(samples) >= 3:
+                        xs = sorted(s[0] for s in samples)
+                        ws = sorted(s[1] for s in samples)
+                        table_col_positions[table_name][fld] = (xs[len(xs) // 2], ws[len(ws) // 2])
 
     def _calibrate_page_offset(
         self,

@@ -30,7 +30,7 @@ class DocumentIndex:
     Provides sublinear inverted indexes for tokens, canonical numbers, dates, and n-grams.
     """
 
-    INDEX_VERSION = "v2"
+    INDEX_VERSION = "v3"
 
     def __init__(self, pages: list[DocumentPage]) -> None:
         self.pages = pages
@@ -407,30 +407,20 @@ def _cluster_tokens_into_lines(tokens: list[DocumentToken], page: int) -> list[V
     return visual_lines
 
 
-def _extract_tokens_from_ocr(
-    pdf_page: Any,
+def _parse_ocr_data(
+    data: dict[str, list[Any]],
+    img_w: int,
+    img_h: int,
     page_num: int,
-    scale: float = 200.0 / 72.0,
 ) -> list[DocumentToken]:
-    """Render page bitmap and run Tesseract OCR to extract word bounding boxes."""
-    try:
-        import pytesseract
+    """Convert pytesseract Output.DICT data into DocumentTokens with normalized bounding boxes."""
+    from tonerhound.normalization.normalizers import repair_ocr_text
 
-        from tonerhound.normalization.normalizers import repair_ocr_text
-    except ImportError:
-        return []
-
-    bitmap = pdf_page.render(scale=scale)
-    img = bitmap.to_pil()
-    img_w, img_h = img.size
-
-    data = pytesseract.image_to_data(img, output_type=pytesseract.Output.DICT)
     tokens: list[DocumentToken] = []
     char_idx = 0
-
     n_boxes = len(data.get("text", []))
     for i in range(n_boxes):
-        raw_text = data["text"][i].strip()
+        raw_text = str(data["text"][i]).strip()
         if not raw_text:
             continue
 
@@ -459,4 +449,37 @@ def _extract_tokens_from_ocr(
         char_idx += len(clean_text) + 1
 
     return tokens
+
+
+def _extract_tokens_from_ocr(
+    pdf_page: Any,
+    page_num: int,
+    scale: float = 200.0 / 72.0,
+) -> list[DocumentToken]:
+    """Render page bitmap and run Tesseract OCR to extract word bounding boxes with sparse fallback."""
+    try:
+        import pytesseract
+    except ImportError:
+        return []
+
+    bitmap = pdf_page.render(scale=scale)
+    img = bitmap.to_pil()
+    img_w, img_h = img.size
+
+    data = pytesseract.image_to_data(img, output_type=pytesseract.Output.DICT)
+    tokens = _parse_ocr_data(data, img_w, img_h, page_num)
+
+    # Sparse / tabular fallback: if default PSM dropped most text (< 150 tokens),
+    # try PSM 11 (sparse text). If PSM 11 recovers substantially more tokens, use it.
+    if len(tokens) < 150:
+        try:
+            data11 = pytesseract.image_to_data(img, config="--psm 11", output_type=pytesseract.Output.DICT)
+            tokens11 = _parse_ocr_data(data11, img_w, img_h, page_num)
+            if len(tokens11) > len(tokens) * 1.4:
+                tokens = tokens11
+        except Exception:
+            pass
+
+    return tokens
+
 

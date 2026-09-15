@@ -451,6 +451,20 @@ class EvidenceMatcher:
                 if len(target_digits) >= 5 and re.sub(r"\D+", "", sub_norm) == target_digits:
                     return tokens[start_i : start_i + window_size]
 
+        # Fallback pass: space-elided and merged-token comparison (e.g. TARGETEXTERMINATING, POBOX5300)
+        clean_tgt_alnum = re.sub(r"[^a-z0-9]+", "", norm_target.lower())
+        if len(clean_tgt_alnum) >= 3:
+            for window_size in range(1, min(n_tok, target_word_count + 4) + 1):
+                for start_i in range(n_tok - window_size + 1):
+                    sub = tokens[start_i : start_i + window_size]
+                    sub_alnum = re.sub(r"[^a-z0-9]+", "", "".join(t.text for t in sub).lower())
+                    if sub_alnum == clean_tgt_alnum:
+                        return sub
+                    if sub_alnum and clean_tgt_alnum:
+                        cov = min(len(sub_alnum), len(clean_tgt_alnum)) / max(len(sub_alnum), len(clean_tgt_alnum))
+                        if (clean_tgt_alnum in sub_alnum or sub_alnum in clean_tgt_alnum) and cov >= 0.70:
+                            return sub
+
         return []
 
     def _find_multiline_candidates(

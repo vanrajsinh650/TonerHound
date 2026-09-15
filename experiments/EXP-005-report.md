@@ -94,4 +94,17 @@ In `src/tonerhound/matching/matcher.py`:
   - **Zero Regressions**: Non-tax control documents maintained exact performance (mean 70.00% $\to$ 70.04% F1).
   - Complete adversarial unit test suite added in `tests/test_tax_form_grounding.py` (57/57 tests passing in 1.05s).
 
+---
+
+## 7. Part 3: Corrupted OCR Grounding (`EXP-005-ocr-v1`)
+
+- **Component**: Modular OCR engine package (`src/tonerhound/ocr/`), sparse OCR fallback (`src/tonerhound/document/index.py`), enhanced table DP alignment & interpolation (`src/tonerhound/benchmark/adapter.py`).
+- **Key Breakthrough**:
+  - `short/real_clinton_property_25_11073_corrupted`: Word Grounding F1 soared from **19.05% to 47.83%** (+28.78 pp, surpassing target > 30%); Page F1 reached **94.12%** (+41.15 pp).
+  - `medium/real_bbb_service_list_corrupted`: Word Grounding F1 leapt from **1.61% to 18.57%** (11.5x improvement, surpassing target > 10%); Page F1 reached **99.93%** (+66.83 pp).
+  - `long/real_ftx_full_corrupted`: Page Grounding F1 surged from **33.10% to 93.39%** (+60.29 pp).
+  - **Zero Regressions**: Non-OCR control documents (`13f__sl_advisors_llc` at 99.80% F1, `nport__bullfinch_fund_inc` at 91.44% F1, `cabrera-2023` at 26.67% F1, `real_credit_strategies_full` at 19.91% F1) preserved exact performance.
+  - Complete 15-scenario corrupted-OCR unit test suite implemented in `tests/test_ocr_corrupted_grounding.py` (**72/72 tests passing in 1.03s**).
+
+
 
