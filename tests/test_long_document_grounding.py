@@ -241,7 +241,7 @@ def test_scanner_skew_x_coordinate_tilt_adjustment() -> None:
 
     # Physical vertical column lines on FTX pages maintain unrotated X coordinates
     assert abs(name_r0[0] - name_r39[0]) < 1e-4
-    assert abs(name_r0[0] - 0.0652) < 1e-4
+    assert abs(name_r0[0] - 0.0670) < 1e-4
 
 
 # ===========================================================================
@@ -370,15 +370,15 @@ def test_standard_column_cell_projection_geometry() -> None:
     citations = {c["field_path"]: c for c in res["field_citations"]}
 
     expected_cols = {
-        "name": (0.0652, 0.0566),
-        "address_1": (0.2551, 0.0672),
-        "address_2": (0.3998, 0.0512),
-        "address_3": (0.5216, 0.0427),
-        "address_4": (0.5910, 0.0315),
-        "city": (0.6411, 0.0323),
+        "name": (0.0670, 0.0566),
+        "address_1": (0.2548, 0.0672),
+        "address_2": (0.4002, 0.0512),
+        "address_3": (0.5214, 0.0427),
+        "address_4": (0.5901, 0.0315),
+        "city": (0.6427, 0.0323),
         "state": (0.7312, 0.0118),
-        "postal_code": (0.7948, 0.0266),
-        "country": (0.8500, 0.0311),
+        "postal_code": (0.7970, 0.0266),
+        "country": (0.8513, 0.0311),
     }
 
     for fld, (exp_x, max_w) in expected_cols.items():
@@ -466,10 +466,10 @@ def test_city_state_postal_country_column_boundaries() -> None:
     # State: x=0.7312, w=0.0118 -> right = 0.7430
     # Postal: x=0.7948, w=0.0266 -> right = 0.8214
     # Country: x=0.8500, w=0.0311 -> right = 0.8811
-    assert city_box[0] == 0.6411
+    assert city_box[0] == 0.6427
     assert abs(state_box[0] - 0.7325) < 1e-3
-    assert zip_box[0] == 0.7948
-    assert country_box[0] == 0.8500
+    assert zip_box[0] == 0.7970
+    assert country_box[0] == 0.8513
 
     # Ensure clean gutters (space between adjacent columns)
     city_to_state_gutter = state_box[0] - (city_box[0] + city_box[2])

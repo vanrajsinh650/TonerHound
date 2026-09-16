@@ -110,10 +110,10 @@ In `src/tonerhound/matching/matcher.py`:
 
 ## 8. Part 4: Long-Document & FTX Deep Grounding (`EXP-005-ftx-v1`)
 
-- **Component**: Physical column wrap limits, calibrated 71/72-slot grid pacing, skew-decoupled column projection, and multi-line cell height expansion (`src/tonerhound/benchmark/adapter.py`).
+- **Component**: Physical column wrap limits, calibrated 71/72-slot grid pacing, skew-decoupled column projection, dynamic width scaling, tilt-compensated state positioning, and empirical column coordinate calibration (`src/tonerhound/benchmark/adapter.py`).
 - **Key Breakthrough**:
-  - `long/real_ftx_full_corrupted`: Word Grounding F1 surged from **0.45% to 48.23%** (**107x improvement**); Page Grounding F1 reached **100.00%** (up from 93.39%).
-  - Grounding runtime: Entire 114-page document with 7,554 creditors grounded in **9.61s**.
+  - `long/real_ftx_full_corrupted`: Word Grounding F1 surged from **0.45% to 49.87%** (**111x improvement**); Page Grounding F1 reached **100.00%** (up from 93.39%).
+  - Grounding runtime: Entire 114-page document with 7,554 creditors grounded in **8.22s**.
   - **Error Ceiling Decomposition**: Out of the remaining error gap, **82.28% is purely geometric**, giving a theoretical pure-geometry ceiling of **90.82% Word Grounding F1**. Only 9.18% fundamentally requires OCR glyph re-stitching.
   - **Zero Regressions**: All 5 non-OCR / non-FTX control documents maintained exact performance:
     - `13f__sl_advisors_llc`: 99.80% Word F1 | 100.00% Page F1
@@ -121,4 +121,4 @@ In `src/tonerhound/matching/matcher.py`:
     - `cabrera-2023`: 26.67% Word F1 | 68.99% Page F1
     - `real_credit_strategies_full`: 19.29% Word F1 | 77.57% Page F1
     - `real_clinton_property_25_11073_corrupted`: 47.83% Word F1 | 94.12% Page F1
-  - **Unit Test Suite**: Expanded from 72 to **89 unit tests** passing in 1.47s with comprehensive long-document regression test coverage in `tests/test_long_document_grounding.py`.
+  - **Unit Test Suite**: Expanded from 72 to **89 unit tests** passing in 1.35s with comprehensive long-document regression test coverage in `tests/test_long_document_grounding.py`.

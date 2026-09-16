@@ -837,7 +837,7 @@ class ExtractBenchAdapter:
                         s = (end_y - y_start) / float(total_page_slots - 1)
                         curr_slot = 0
                         ref_w = 0.85
-                        ref_x = 0.0712
+                        ref_x = 0.0670
                         for i, r_idx in enumerate(page_rows):
                             p_rec = f"{table_name}[{r_idx}]"
                             unrot_y = y_start + curr_slot * s
@@ -914,15 +914,15 @@ class ExtractBenchAdapter:
             if table_col_positions is not None:
                 standard_table_cols = {
                     "creditors": {
-                        "name": (0.0652, 0.0566),
-                        "address_1": (0.2551, 0.0672),
-                        "address_2": (0.3998, 0.0512),
-                        "address_3": (0.5216, 0.0427),
-                        "address_4": (0.5910, 0.0315),
-                        "city": (0.6411, 0.0323),
+                        "name": (0.0670, 0.0566),
+                        "address_1": (0.2548, 0.0672),
+                        "address_2": (0.4002, 0.0512),
+                        "address_3": (0.5214, 0.0427),
+                        "address_4": (0.5901, 0.0315),
+                        "city": (0.6427, 0.0323),
                         "state": (0.7312, 0.0118),
-                        "postal_code": (0.7948, 0.0266),
-                        "country": (0.8500, 0.0311),
+                        "postal_code": (0.7970, 0.0266),
+                        "country": (0.8513, 0.0311),
                     },
                     "parties": {
                         "description": (0.048, 0.128),

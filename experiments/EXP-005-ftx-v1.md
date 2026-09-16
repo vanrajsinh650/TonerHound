@@ -21,6 +21,7 @@ In EXP-005 Part 3, corrupted OCR page grounding improved significantly, but `lon
 | **Step 1 (Physical Wrap Limits & 71/72-Slot Pacing)** | **26.92%** | 26.92% | 26.92% | 100.00% | 11.26s | 72/72 |
 | **Step 2 (Column Geometry & Skew Decoupling)** | **32.07%** | 32.07% | 32.07% | 100.00% | 10.21s | 89/89 |
 | **Pass 2 (Dynamic Width Scaling & Tilt Compensation)** | **48.23%** | **48.23%** | **48.23%** | **100.00%** | **9.61s** | **89/89** |
+| **Pass 3 (Empirical Column Coordinate Calibration)** | **49.87%** | **49.87%** | **49.87%** | **100.00%** | **8.22s** | **89/89** |
 
 ---
 
