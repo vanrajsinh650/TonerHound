@@ -279,7 +279,7 @@ class ExtractBenchAdapter:
                             cell_y = unrot_top + page_slope * (cell_xc - 0.50)
                         else:
                             cell_w = min(0.1850, max(0.0120, 0.00335 * L))
-                            cell_h = 0.0098
+                            cell_h = 0.0101
                             cell_xc = cell_x + cell_w / 2.0
                             cell_yc = anc_cy + page_slope * (cell_xc - 0.50)
                             cell_y = cell_yc - cell_h / 2.0
@@ -302,10 +302,32 @@ class ExtractBenchAdapter:
                             unrot_top = anc_cy - 0.0098 / 2.0
                             cell_y = unrot_top + page_slope * (cell_xc - 0.50)
                         else:
+                            field_single_line_heights = {
+                                "address_1": 0.0106,
+                                "address_2": 0.0111,
+                                "address_3": 0.0110,
+                                "address_4": 0.0114,
+                                "city": 0.0099,
+                                "country": 0.0102,
+                                "postal_code": 0.0094,
+                            }
+                            cell_h = field_single_line_heights.get(fld_name, 0.0098)
+
                             char_w = 0.00325
                             text_w = max(0.0150, L * char_w)
                             cell_w = min(max_col_widths.get(fld_name, col_w), text_w)
-                            cell_h = 0.0093 if fld_name in ("city", "postal_code", "country") else 0.0098
+
+                            # Calibrated horizontal position and width adjustments
+                            if fld_name == "postal_code":
+                                cell_x = col_x - 0.00110
+                                cell_w = min(max_col_widths.get(fld_name, col_w), text_w + 0.00200)
+                            elif fld_name == "country":
+                                cell_x = col_x - 0.00040
+                                cell_w = min(max_col_widths.get(fld_name, col_w), max(0.0100, L * 0.00335 + 0.00050))
+                            elif fld_name == "city":
+                                cell_x = col_x - 0.00010
+                                cell_w = min(max_col_widths.get(fld_name, col_w), text_w + 0.00030)
+
                             cell_xc = cell_x + cell_w / 2.0
                             cell_yc = anc_cy + page_slope * (cell_xc - 0.50)
                             cell_y = cell_yc - cell_h / 2.0
@@ -799,8 +821,12 @@ class ExtractBenchAdapter:
                                     consistent_indices.append(idx_pair)
 
                     if table_name == "creditors" and (len(consistent_indices) < 5 or M >= 40):
-                        total_page_slots = 72 if p_num == 2 else 71
-                        n_two_slot = max(0, total_page_slots - M)
+                        if M >= 40:
+                            total_page_slots = 72 if p_num == 2 else 71
+                            n_two_slot = max(0, total_page_slots - M)
+                        else:
+                            total_page_slots = M
+                            n_two_slot = 0
 
                         col_limits = {
                             "name": 42,
@@ -832,9 +858,25 @@ class ExtractBenchAdapter:
                         sorted_indices = sorted(range(M), key=lambda idx: _score_ml(rows_map[page_rows[idx]]), reverse=True)
                         two_slot_set = set(sorted_indices[:n_two_slot])
 
-                        y_start = 0.08162
-                        end_y = 0.88186
-                        s = (end_y - y_start) / float(total_page_slots - 1)
+                        # Agent A: Adaptive y_start and slot-pitch calibration
+                        subhead_toks = [
+                            t for t in page_obj.tokens
+                            if 0.030 <= t.bbox.y <= 0.065 and any(k in t.text.lower() for k in ("consolid", "conso", "cornol", "comob", "cred", "crodit", "matrix"))
+                        ] if page_obj and page_obj.tokens else []
+
+                        if subhead_toks:
+                            sh_y050 = [t.bbox.y + t.bbox.height / 2.0 - page_slope * (t.bbox.x + t.bbox.width / 2.0 - 0.50) for t in subhead_toks]
+                            sh_y050.sort()
+                            y_start = sh_y050[len(sh_y050) // 2] + 0.0279
+                            y_start = max(0.065, min(0.095, y_start))
+                        else:
+                            y_start = 0.08162
+
+                        if M >= 40 and total_page_slots > 1:
+                            end_y = 0.88186 + 0.41 * (y_start - 0.08162)
+                            s = (end_y - y_start) / float(total_page_slots - 1)
+                        else:
+                            s = (0.88186 - 0.08162) / 70.0
                         curr_slot = 0
                         ref_w = 0.85
                         ref_x = 0.0670
