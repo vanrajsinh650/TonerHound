@@ -13,11 +13,12 @@ from __future__ import annotations
 import dataclasses
 import hashlib
 import pickle
+import re
 import unicodedata
 from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, BinaryIO, Sequence
+from typing import Any, BinaryIO
 
 import pypdfium2 as pdfium
 
@@ -25,13 +26,11 @@ from tonerhound.document.index import (
     DocumentIndex,
     _cluster_tokens_into_lines,
     _extract_tokens_from_ocr,
+    _extract_tokens_from_page,
 )
 from tonerhound.geometry.coordinates import BBox
 from tonerhound.models.types import DocumentPage, DocumentToken, VisualLine
-from tonerhound.normalization.normalizers import (
-    _CHAR_REPLACEMENTS,
-    repair_ocr_text,
-)
+from tonerhound.normalization.normalizers import _CHAR_REPLACEMENTS
 
 try:
     from liteparse import LiteParse
@@ -217,10 +216,13 @@ def _extract_tokens_and_blocks_from_liteparse_page(
         best_area = float("inf")
 
         for b_i, b in enumerate(layout_blocks, start=1):
-            if (b.bbox.x0 - 1e-4 <= tcx <= b.bbox.x1 + 1e-4) and (b.bbox.y0 - 1e-4 <= tcy <= b.bbox.y1 + 1e-4):
-                if b.bbox.area < best_area:
-                    best_area = b.bbox.area
-                    best_block_idx = b_i
+            if (
+                (b.bbox.x0 - 1e-4 <= tcx <= b.bbox.x1 + 1e-4)
+                and (b.bbox.y0 - 1e-4 <= tcy <= b.bbox.y1 + 1e-4)
+                and (b.bbox.area < best_area)
+            ):
+                best_area = b.bbox.area
+                best_block_idx = b_i
 
         tokens_with_block.append(dataclasses.replace(tok, block_index=best_block_idx))
 
@@ -235,6 +237,102 @@ def _extract_tokens_and_blocks_from_liteparse_page(
         final_tokens.extend(updated_line_tokens)
 
     return final_tokens, lines, layout_blocks
+
+
+def _route_page_mode(
+    pdf_page: Any,
+    page_num: int,
+    lp_page: Any | None,
+    pdfium_tokens: list[DocumentToken],
+    candidate_tokens: list[DocumentToken],
+    candidate_blocks: list[LayoutBlockHint],
+    min_digital_tokens: int = 25,
+    min_digital_char_density: float = 0.35,
+    force_ocr: bool = False,
+    force_liteparse: bool = False,
+) -> str:
+    """Determine the optimal extraction mode for a page: 'ocr', 'pdfium', or 'liteparse'."""
+    if force_ocr:
+        return "ocr"
+    if force_liteparse:
+        return "liteparse"
+
+    p_cnt = len(pdfium_tokens)
+    lp_cnt = len(candidate_tokens)
+
+    # 1. OCR / Scanned / Garbled check
+    needs_ocr = False
+    if p_cnt < min_digital_tokens and lp_cnt < min_digital_tokens:
+        needs_ocr = True
+    elif lp_page is not None:
+        complexity = getattr(lp_page, "complexity", None)
+        if complexity is not None:
+            if getattr(complexity, "is_garbled", False) or getattr(complexity, "full_page_image", False) and lp_cnt < 50:
+                needs_ocr = True
+            reasons = getattr(complexity, "reasons", []) or []
+            if "scanned" in reasons and lp_cnt < 50:
+                needs_ocr = True
+
+    if not needs_ocr and lp_cnt > 0 and lp_cnt < 50:
+        full_text = "".join(t.text for t in candidate_tokens)
+        if full_text:
+            n_alnum = sum(1 for c in full_text if c.isalnum())
+            n_non_space = sum(1 for c in full_text if not c.isspace())
+            density = n_alnum / max(1, n_non_space)
+            if density < min_digital_char_density:
+                needs_ocr = True
+
+    if needs_ocr:
+        return "ocr"
+
+    # 2. LiteParse dropped native text completely -> fallback to PDFium
+    if lp_cnt < min_digital_tokens and p_cnt >= min_digital_tokens:
+        return "pdfium"
+
+    # 3. Digital Page Quality & Fragmentation Signals
+    tok_ratio = (lp_cnt / max(1, p_cnt)) if p_cnt > 0 else 1.0
+
+    # Signal A: Split decimals (e.g. ".3333333%", ".15)", ".005)")
+    split_decimals = sum(
+        1 for t in candidate_tokens
+        if re.match(r"^[\.,]\d+", t.text)
+    )
+
+    # Signal B: Split parenthesized numbers (e.g. "$(0", "(0", "(1", "(8")
+    split_parens = sum(
+        1 for t in candidate_tokens
+        if re.match(r"^[\$\(]+\d+$", t.text)
+    )
+
+    # Signal C: Table complexity
+    total_cells = 0
+    for tb in candidate_blocks:
+        if tb.is_table and tb.rows:
+            total_cells += sum(len(r) for r in tb.rows)
+
+    # Signal D: Tax form / boxed schedule detection
+    p_text_sample = " ".join(t.text for t in pdfium_tokens[:60]).lower()
+    is_tax_form = bool(
+        re.search(
+            r"schedule\s*k-1|form\s*1065|form\s*1120-s|partner's\s*share|form\s*1040",
+            p_text_sample,
+        )
+    )
+
+    # Fine-grained routing rules:
+    # Rule 1: Fixed tax form with decimal or micro-block fragmentation
+    if is_tax_form and (split_decimals > 0 or tok_ratio > 1.01):
+        return "pdfium"
+
+    # Rule 2: Heavy decimal / financial parenthesis fragmentation
+    if (split_decimals >= 5 or (split_decimals >= 2 and split_parens >= 2)) and tok_ratio >= 1.05:
+        return "pdfium"
+
+    # Rule 3: Moderate decimal fragmentation on non-table pages
+    if split_decimals >= 2 and total_cells == 0 and tok_ratio > 1.03:
+        return "pdfium"
+
+    return "liteparse"
 
 
 def _should_fallback_to_ocr(
@@ -291,7 +389,7 @@ class HybridDocumentIndex(DocumentIndex):
       with zero changes to adapter logic.
     """
 
-    INDEX_VERSION = "hybrid_v1"
+    INDEX_VERSION = "hybrid_v2"
 
     def __init__(
         self,
@@ -378,7 +476,7 @@ class HybridDocumentIndex(DocumentIndex):
 
         if isinstance(source, (bytes, bytearray)):
             source_bytes = bytes(source)
-        elif hasattr(source, "read") and callable(getattr(source, "read")):
+        elif hasattr(source, "read") and callable(source.read):
             source_bytes = source.read()
 
         if use_cache:
@@ -458,6 +556,9 @@ class HybridDocumentIndex(DocumentIndex):
                 pdf_page = doc[page_idx]
                 width, height = pdf_page.get_size()
 
+                # Extract PDFium native tokens
+                pdfium_tokens = _extract_tokens_from_page(pdf_page, page_num, width, height)
+
                 lp_page = lp_pages_by_num.get(page_num)
                 candidate_tokens: list[DocumentToken] = []
                 candidate_lines: list[VisualLine] = []
@@ -473,17 +574,21 @@ class HybridDocumentIndex(DocumentIndex):
                         )
                     )
 
-                # 4. Decision Gate: Digital vs Corrupted OCR fallback
-                needs_ocr = _should_fallback_to_ocr(
+                # 4. Decision Gate: Tri-mode routing ('ocr', 'pdfium', 'liteparse')
+                selected_mode = _route_page_mode(
+                    pdf_page=pdf_page,
+                    page_num=page_num,
                     lp_page=lp_page,
-                    tokens=candidate_tokens,
+                    pdfium_tokens=pdfium_tokens,
+                    candidate_tokens=candidate_tokens,
+                    candidate_blocks=candidate_blocks,
                     min_digital_tokens=min_digital_tokens,
                     min_digital_char_density=min_digital_char_density,
                     force_ocr=force_ocr,
                     force_liteparse=force_liteparse,
                 )
 
-                if needs_ocr and enable_ocr:
+                if selected_mode == "ocr" and enable_ocr:
                     # OCR Fallback path (PDFium bitmap render + Tesseract + repair_ocr_text + PSM 11 fallback)
                     base_page = cached_baseline_doc.get_page(page_num) if cached_baseline_doc is not None else None
                     if base_page is not None and len(base_page.tokens) > 0:
@@ -497,26 +602,34 @@ class HybridDocumentIndex(DocumentIndex):
                         )
                         ocr_lines = _cluster_tokens_into_lines(ocr_tokens, page_num)
 
-                    final_tokens: list[DocumentToken] = []
-                    for line in ocr_lines:
-                        updated_tokens = [
-                            dataclasses.replace(t, line_index=line.line_index)
-                            for t in line.tokens
-                        ]
-                        line.tokens = updated_tokens
-                        final_tokens.extend(updated_tokens)
-
                     page_modes[page_num] = "ocr"
+                    # CRITICAL: Preserve canonical OCR token order! Never re-flatten OCR lines horizontally.
                     page_obj = DocumentPage(
                         page_number=page_num,
                         width=width,
                         height=height,
-                        tokens=final_tokens,
+                        tokens=ocr_tokens,
                         lines=ocr_lines,
                         blocks=candidate_blocks,  # retain any structural blocks if found
                     )
                     pages.append(page_obj)
                     all_layout_blocks.extend(candidate_blocks)
+
+                elif selected_mode == "pdfium":
+                    # PDFium Native path: clusters tokens into lines, preserves atomic word tokens & reading order
+                    p_lines = _cluster_tokens_into_lines(pdfium_tokens, page_num)
+                    page_modes[page_num] = "pdfium"
+                    page_obj = DocumentPage(
+                        page_number=page_num,
+                        width=width,
+                        height=height,
+                        tokens=pdfium_tokens,
+                        lines=p_lines,
+                        blocks=candidate_blocks,  # retain structural blocks if found
+                    )
+                    pages.append(page_obj)
+                    all_layout_blocks.extend(candidate_blocks)
+
                 else:
                     # LiteParse native digital path
                     page_modes[page_num] = "liteparse"
