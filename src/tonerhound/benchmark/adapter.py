@@ -24,6 +24,11 @@ from tonerhound.ocr.matcher import OCRMatcher
 from tonerhound.resolution.resolver import EvidenceResolver
 from tonerhound.tax.grounder import TaxFormGrounder, is_form_1040_tax_return
 
+# Canonical creditor-grid Y-range constants (71-slot standard page layout).
+# Exported at module level so regression tests can import and verify them.
+_Y_START: float = 0.08162
+_Y_END: float = 0.88186
+
 
 def _matches_table_line(s: str, line_txt: str) -> bool:
     """Tolerant string containment accounting for space-elision and OCR token merging."""
@@ -415,6 +420,22 @@ class ExtractBenchAdapter:
                             if sub_toks:
                                 resolved_box = union_bbox_list([t.bbox for t in sub_toks])
                                 resolved_text = " ".join(t.text for t in sub_toks)
+
+                            # Multi-line fallback: when all_row_toks spans multiple visual lines (rows),
+                            # inter-column tokens may break contiguous subsequence matching.
+                            # Retry on tokens restricted to the left column (x < 0.25) which
+                            # preserves vertical reading order across line breaks.
+                            if resolved_box is None and len(clean_v.split()) >= 3:
+                                left_toks = [
+                                    t for t in all_row_toks if t.bbox.x < 0.25
+                                ]
+                                if len(left_toks) >= len(clean_v.split()):
+                                    sub_toks_left = self.resolver.matcher._find_token_subsequence(
+                                        left_toks, clean_v
+                                    )
+                                    if sub_toks_left:
+                                        resolved_box = union_bbox_list([t.bbox for t in sub_toks_left])
+                                        resolved_text = " ".join(t.text for t in sub_toks_left)
 
                     # 4. OCRMatcher fallback across all row tokens
                     if resolved_box is None and all_row_toks:
