@@ -29,6 +29,12 @@ from tonerhound.benchmark.adapter import ExtractBenchAdapter
 from tonerhound.benchmark.evaluator import evaluate_prediction
 from tonerhound.document.index import DocumentIndex
 
+try:
+    from scratch.benchmark_hardest_backends import compute_candidate_recall_and_failures
+    _HAS_CAND_RECALL = True
+except ImportError:
+    _HAS_CAND_RECALL = False
+
 
 @dataclass
 class LocalDocResult:
@@ -50,6 +56,7 @@ class LocalDocResult:
     grounding_time_sec: float
     eval_time_sec: float
     total_time_sec: float
+    candidate_recall_at_20: float | None = None
     exp004_baseline_f1: float | None = None
     delta_vs_exp004: float | None = None
 
@@ -58,6 +65,7 @@ def run_local_benchmark(
     manifest_path: Path | str = "benchmarks/exp005_local_manifest.json",
     split_filter: str = "all",
     experiment_id: str = "EXP-005-baseline",
+    backend: str = "pdfium",
     enable_ocr: bool = False,
     enable_structural_disambiguation: bool = True,
     enable_verification: bool = True,
@@ -106,7 +114,7 @@ def run_local_benchmark(
 
         # 1. Index document
         t0 = time.perf_counter()
-        doc_index = DocumentIndex.from_pdf(pdf_path, enable_ocr=enable_ocr)
+        doc_index = DocumentIndex.from_pdf(pdf_path, enable_ocr=enable_ocr, backend=backend)
         t_index = time.perf_counter() - t0
 
         # 2. Ground extractions
@@ -147,6 +155,18 @@ def run_local_benchmark(
         false_grounding = (1.0 - w_prec) if w_prec > 0.0 else 0.0
         delta = (w_f1 - exp004_base) if exp004_base is not None else None
 
+        cand_rec_20: float | None = None
+        if _HAS_CAND_RECALL:
+            try:
+                cand_rec_20, _, _ = compute_candidate_recall_and_failures(
+                    test_case=test_case,
+                    adapter=adapter,
+                    citations=citations,
+                    doc_index=doc_index,
+                )
+            except Exception:
+                cand_rec_20 = None
+
         res = LocalDocResult(
             test_id=tid,
             split=split,
@@ -166,6 +186,7 @@ def run_local_benchmark(
             grounding_time_sec=t_ground,
             eval_time_sec=t_eval,
             total_time_sec=t_index + t_ground + t_eval,
+            candidate_recall_at_20=cand_rec_20,
             exp004_baseline_f1=exp004_base,
             delta_vs_exp004=delta,
         )
@@ -173,10 +194,12 @@ def run_local_benchmark(
 
         if verbose:
             delta_str = f"({delta*100:+5.1f}%)" if delta is not None else ""
+            cr_str = f"CR@20: {cand_rec_20*100:5.1f}% | " if cand_rec_20 is not None else ""
             print(
                 f"[{i:2d}/{len(docs):2d}] {tid:48s} | "
                 f"WF1: {w_f1*100:5.1f}% {delta_str:7s} | "
                 f"PF1: {p_f1*100:5.1f}% | "
+                f"{cr_str}"
                 f"Time: {res.total_time_sec:5.2f}s (G: {t_ground:5.2f}s)"
             )
 
@@ -186,6 +209,8 @@ def run_local_benchmark(
     def calc_agg(subset: list[LocalDocResult]) -> dict[str, float]:
         if not subset:
             return {}
+        cands = [d.candidate_recall_at_20 for d in subset if d.candidate_recall_at_20 is not None]
+        mean_cr20 = sum(cands) / len(cands) if cands else 0.0
         return {
             "count": len(subset),
             "total_pages": sum(d.num_pages for d in subset),
@@ -196,6 +221,7 @@ def run_local_benchmark(
             "mean_page_grounding_f1": sum(d.page_grounding_f1 for d in subset) / len(subset),
             "mean_page_precision": sum(d.page_grounding_precision for d in subset) / len(subset),
             "mean_page_recall": sum(d.page_grounding_recall for d in subset) / len(subset),
+            "mean_candidate_recall_at_20": mean_cr20,
             "mean_false_grounding_rate": sum(d.false_grounding_rate for d in subset) / len(subset),
             "total_index_sec": sum(d.indexing_time_sec for d in subset),
             "total_ground_sec": sum(d.grounding_time_sec for d in subset),
@@ -215,6 +241,7 @@ def run_local_benchmark(
 
     summary = {
         "experiment_id": experiment_id,
+        "backend": backend,
         "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "suite_total_time_sec": suite_total_time,
         "overall": overall_agg,
@@ -292,6 +319,7 @@ if __name__ == "__main__":
     parser.add_argument("--split", default="all", choices=["all", "train_dev", "local_validation"])
     parser.add_argument("--id", default="EXP-005-baseline")
     parser.add_argument("--score-margin", type=float, default=0.01, help="Score margin threshold for verifier")
+    parser.add_argument("--backend", default="pdfium", choices=["pdfium", "liteparse", "hybrid"], help="Document parsing backend")
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--no-ocr", action="store_true")
     parser.add_argument("--save", action="store_true", help="Save summary JSON to experiments/")
@@ -301,6 +329,7 @@ if __name__ == "__main__":
         manifest_path=args.manifest,
         split_filter=args.split,
         experiment_id=args.id,
+        backend=args.backend,
         enable_ocr=not args.no_ocr,
         score_margin_threshold=args.score_margin,
         limit=args.limit,

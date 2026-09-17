@@ -1,0 +1,695 @@
+{
+  "experiment_id": "EXP-006-step2-hardest-comparison",
+  "timestamp": "2026-09-17T10:55:18Z",
+  "target_documents": [
+    "long/real_ftx_full_corrupted",
+    "medium/real_bbb_service_list_corrupted",
+    "short/real_clinton_property_25_11073_corrupted",
+    "short/00581-2011-p0050",
+    "long/real_credit_strategies_full",
+    "long/real_imedia_full"
+  ],
+  "backends_evaluated": [
+    "current",
+    "liteparse",
+    "hybrid"
+  ],
+  "summary": {
+    "current": {
+      "count": 6,
+      "mean_word_grounding_f1": 0.4525868595382427,
+      "mean_word_precision": 0.4650285534038067,
+      "mean_word_recall": 0.44172866016073403,
+      "mean_page_grounding_f1": 0.9439235130987621,
+      "mean_page_precision": 0.9723077595737637,
+      "mean_page_recall": 0.9193070536403559,
+      "mean_candidate_recall_at_20": 0.5897044859016,
+      "total_indexing_sec": 4.122813017000226,
+      "total_grounding_sec": 209.36857334399974,
+      "total_eval_sec": 8.89350151600047,
+      "total_runtime_sec": 222.38488787700044,
+      "aggregate_failure_classes": {
+        "IOU_MISS": 10332,
+        "G1_SLOT_DRIFT": 3055,
+        "WRONG_OCCURRENCE": 12917,
+        "UNRESOLVED": 968,
+        "WRONG_PAGE": 606
+      },
+      "failure_percentages": {
+        "IOU_MISS": 37.061482172322265,
+        "G1_SLOT_DRIFT": 10.958461869574574,
+        "WRONG_OCCURRENCE": 46.33402683119306,
+        "UNRESOLVED": 3.472272042470766,
+        "WRONG_PAGE": 2.173757084439343
+      }
+    },
+    "liteparse": {
+      "count": 6,
+      "mean_word_grounding_f1": 0.4119355649355576,
+      "mean_word_precision": 0.44307204688899876,
+      "mean_word_recall": 0.38972112251252916,
+      "mean_page_grounding_f1": 0.9090886822216855,
+      "mean_page_precision": 0.9693575179441326,
+      "mean_page_recall": 0.86434500100057,
+      "mean_candidate_recall_at_20": 0.5199697364380786,
+      "total_indexing_sec": 114.88468639000166,
+      "total_grounding_sec": 189.790450649999,
+      "total_eval_sec": 8.775850735997665,
+      "total_runtime_sec": 313.4509877759983,
+      "aggregate_failure_classes": {
+        "IOU_MISS": 11420,
+        "G1_SLOT_DRIFT": 3865,
+        "WRONG_OCCURRENCE": 11161,
+        "UNRESOLVED": 999,
+        "WRONG_PAGE": 610
+      },
+      "failure_percentages": {
+        "IOU_MISS": 40.70575654963465,
+        "G1_SLOT_DRIFT": 13.776510425949029,
+        "WRONG_OCCURRENCE": 39.782569951880234,
+        "UNRESOLVED": 3.560862591338442,
+        "WRONG_PAGE": 2.1743004811976476
+      }
+    },
+    "hybrid": {
+      "count": 6,
+      "mean_word_grounding_f1": 0.4525947535382595,
+      "mean_word_precision": 0.478042663044512,
+      "mean_word_recall": 0.4336783631634445,
+      "mean_page_grounding_f1": 0.923134847491772,
+      "mean_page_precision": 0.9722701868535202,
+      "mean_page_recall": 0.8857526350944648,
+      "mean_candidate_recall_at_20": 0.5651075087631489,
+      "total_indexing_sec": 79.94734755200079,
+      "total_grounding_sec": 195.64145216499946,
+      "total_eval_sec": 7.987375726000209,
+      "total_runtime_sec": 283.57617544300047,
+      "aggregate_failure_classes": {
+        "IOU_MISS": 10429,
+        "G1_SLOT_DRIFT": 3068,
+        "WRONG_OCCURRENCE": 10693,
+        "UNRESOLVED": 981,
+        "WRONG_PAGE": 606
+      },
+      "failure_percentages": {
+        "IOU_MISS": 40.45854831826822,
+        "G1_SLOT_DRIFT": 11.902083252511929,
+        "WRONG_OCCURRENCE": 41.482717150948524,
+        "UNRESOLVED": 3.805718275982465,
+        "WRONG_PAGE": 2.350933002288862
+      }
+    }
+  },
+  "detailed_results": {
+    "current": [
+      {
+        "test_id": "long/real_ftx_full_corrupted",
+        "backend": "current",
+        "num_pages": 114,
+        "num_tokens": 79276,
+        "num_ground_truth_rules": 75543,
+        "num_ground_truth_bboxes": 26583,
+        "num_citations": 34136,
+        "word_grounding_f1": 0.534449355779178,
+        "word_grounding_precision": 0.5344594086223761,
+        "word_grounding_recall": 0.5344393033141481,
+        "page_grounding_f1": 0.9999853529213599,
+        "page_grounding_precision": 1.0,
+        "page_grounding_recall": 0.9999707062717872,
+        "candidate_recall_at_20": 0.5239062558778167,
+        "indexing_time_sec": 1.2112439470001846,
+        "grounding_time_sec": 12.168162347999896,
+        "eval_time_sec": 2.6425536290007585,
+        "total_time_sec": 16.02195992400084,
+        "failure_classes": {
+          "IOU_MISS": 7468,
+          "G1_SLOT_DRIFT": 2825,
+          "WRONG_OCCURRENCE": 2376,
+          "UNRESOLVED": 1
+        },
+        "failure_percentages": {
+          "IOU_MISS": 58.94238358326756,
+          "G1_SLOT_DRIFT": 22.296764009471193,
+          "WRONG_OCCURRENCE": 18.752959747434886,
+          "UNRESOLVED": 0.007892659826361483
+        }
+      },
+      {
+        "test_id": "medium/real_bbb_service_list_corrupted",
+        "backend": "current",
+        "num_pages": 17,
+        "num_tokens": 6051,
+        "num_ground_truth_rules": 1502,
+        "num_ground_truth_bboxes": 1207,
+        "num_citations": 1455,
+        "word_grounding_f1": 0.19154228855721395,
+        "word_grounding_precision": 0.19170124481327802,
+        "word_grounding_recall": 0.19138359569179786,
+        "page_grounding_f1": 0.9993131868131867,
+        "page_grounding_precision": 1.0,
+        "page_grounding_recall": 0.9986273164035689,
+        "candidate_recall_at_20": 0.20215410107705054,
+        "indexing_time_sec": 0.18461426700014272,
+        "grounding_time_sec": 22.97965135999948,
+        "eval_time_sec": 1.8015768059995025,
+        "total_time_sec": 24.965842432999125,
+        "failure_classes": {
+          "WRONG_OCCURRENCE": 679,
+          "G1_SLOT_DRIFT": 183,
+          "IOU_MISS": 165,
+          "UNRESOLVED": 2
+        },
+        "failure_percentages": {
+          "WRONG_OCCURRENCE": 65.98639455782312,
+          "G1_SLOT_DRIFT": 17.784256559766764,
+          "IOU_MISS": 16.034985422740526,
+          "UNRESOLVED": 0.1943634596695821
+        }
+      },
+      {
+        "test_id": "short/real_clinton_property_25_11073_corrupted",
+        "backend": "current",
+        "num_pages": 9,
+        "num_tokens": 3748,
+        "num_ground_truth_rules": 246,
+        "num_ground_truth_bboxes": 173,
+        "num_citations": 178,
+        "word_grounding_f1": 0.4782608695652174,
+        "word_grounding_precision": 0.49624060150375937,
+        "word_grounding_recall": 0.46153846153846156,
+        "page_grounding_f1": 0.9411764705882353,
+        "page_grounding_precision": 0.972972972972973,
+        "page_grounding_recall": 0.9113924050632911,
+        "candidate_recall_at_20": 0.4797687861271676,
+        "indexing_time_sec": 0.10683007699935843,
+        "grounding_time_sec": 0.9573407420002695,
+        "eval_time_sec": 0.008887215999493492,
+        "total_time_sec": 1.0730580349991214,
+        "failure_classes": {
+          "WRONG_OCCURRENCE": 46,
+          "IOU_MISS": 27,
+          "G1_SLOT_DRIFT": 12,
+          "UNRESOLVED": 10,
+          "WRONG_PAGE": 4
+        },
+        "failure_percentages": {
+          "WRONG_OCCURRENCE": 46.464646464646464,
+          "IOU_MISS": 27.27272727272727,
+          "G1_SLOT_DRIFT": 12.121212121212121,
+          "UNRESOLVED": 10.1010101010101,
+          "WRONG_PAGE": 4.040404040404041
+        }
+      },
+      {
+        "test_id": "short/00581-2011-p0050",
+        "backend": "current",
+        "num_pages": 1,
+        "num_tokens": 407,
+        "num_ground_truth_rules": 56,
+        "num_ground_truth_bboxes": 30,
+        "num_citations": 27,
+        "word_grounding_f1": 0.5614035087719299,
+        "word_grounding_precision": 0.5925925925925926,
+        "word_grounding_recall": 0.5333333333333333,
+        "page_grounding_f1": 0.9473684210526316,
+        "page_grounding_precision": 1.0,
+        "page_grounding_recall": 0.9,
+        "candidate_recall_at_20": 0.6666666666666666,
+        "indexing_time_sec": 0.0190214760004892,
+        "grounding_time_sec": 0.08533293799973762,
+        "eval_time_sec": 0.01958049699987896,
+        "total_time_sec": 0.12393491100010579,
+        "failure_classes": {
+          "IOU_MISS": 3,
+          "WRONG_OCCURRENCE": 8,
+          "UNRESOLVED": 3
+        },
+        "failure_percentages": {
+          "IOU_MISS": 21.428571428571427,
+          "WRONG_OCCURRENCE": 57.14285714285714,
+          "UNRESOLVED": 21.428571428571427
+        }
+      },
+      {
+        "test_id": "long/real_credit_strategies_full",
+        "backend": "current",
+        "num_pages": 59,
+        "num_tokens": 36233,
+        "num_ground_truth_rules": 8346,
+        "num_ground_truth_bboxes": 5049,
+        "num_citations": 4687,
+        "word_grounding_f1": 0.1990982439487423,
+        "word_grounding_precision": 0.22439154854239102,
+        "word_grounding_recall": 0.17892940925570483,
+        "page_grounding_f1": 0.7757184506455643,
+        "page_grounding_precision": 0.8608735844696094,
+        "page_grounding_recall": 0.7058935000947508,
+        "candidate_recall_at_20": 0.8061002178649237,
+        "indexing_time_sec": 0.6165164490003008,
+        "grounding_time_sec": 25.041943948999688,
+        "eval_time_sec": 0.5087369359998775,
+        "total_time_sec": 26.167197333999866,
+        "failure_classes": {
+          "WRONG_OCCURRENCE": 2543,
+          "IOU_MISS": 112,
+          "UNRESOLVED": 950,
+          "WRONG_PAGE": 602,
+          "G1_SLOT_DRIFT": 22
+        },
+        "failure_percentages": {
+          "WRONG_OCCURRENCE": 60.13241901158667,
+          "IOU_MISS": 2.6483802317332703,
+          "UNRESOLVED": 22.463939465594702,
+          "WRONG_PAGE": 14.235043745566328,
+          "G1_SLOT_DRIFT": 0.5202175455190352
+        }
+      },
+      {
+        "test_id": "long/real_imedia_full",
+        "backend": "current",
+        "num_pages": 114,
+        "num_tokens": 146460,
+        "num_ground_truth_rules": 86242,
+        "num_ground_truth_bboxes": 39446,
+        "num_citations": 48068,
+        "word_grounding_f1": 0.7507668906071746,
+        "word_grounding_precision": 0.7507859243484434,
+        "word_grounding_recall": 0.7507478578309588,
+        "page_grounding_f1": 0.9999791965715951,
+        "page_grounding_precision": 1.0,
+        "page_grounding_recall": 0.9999583940087372,
+        "candidate_recall_at_20": 0.8596308877959743,
+        "indexing_time_sec": 1.9845868009997503,
+        "grounding_time_sec": 148.13614200700067,
+        "eval_time_sec": 3.9121664320009586,
+        "total_time_sec": 154.03289524000138,
+        "failure_classes": {
+          "WRONG_OCCURRENCE": 7265,
+          "IOU_MISS": 2557,
+          "G1_SLOT_DRIFT": 13,
+          "UNRESOLVED": 2
+        },
+        "failure_percentages": {
+          "WRONG_OCCURRENCE": 73.85381722069737,
+          "IOU_MISS": 25.99369726542645,
+          "G1_SLOT_DRIFT": 0.1321541120260242,
+          "UNRESOLVED": 0.02033140185015757
+        }
+      }
+    ],
+    "liteparse": [
+      {
+        "test_id": "long/real_ftx_full_corrupted",
+        "backend": "liteparse",
+        "num_pages": 114,
+        "num_tokens": 17380,
+        "num_ground_truth_rules": 75543,
+        "num_ground_truth_bboxes": 26583,
+        "num_citations": 34132,
+        "word_grounding_f1": 0.4489757529015631,
+        "word_grounding_precision": 0.4490179847994582,
+        "word_grounding_recall": 0.44893352894707145,
+        "page_grounding_f1": 0.9998681685684571,
+        "page_grounding_precision": 0.9999414039610922,
+        "page_grounding_recall": 0.9997949439025104,
+        "candidate_recall_at_20": 0.440130910732423,
+        "indexing_time_sec": 0.4125630700000329,
+        "grounding_time_sec": 13.720686200998898,
+        "eval_time_sec": 2.589429026998914,
+        "total_time_sec": 16.722678297997845,
+        "failure_classes": {
+          "IOU_MISS": 8380,
+          "G1_SLOT_DRIFT": 3535,
+          "WRONG_OCCURRENCE": 3007,
+          "UNRESOLVED": 5,
+          "WRONG_PAGE": 2
+        },
+        "failure_percentages": {
+          "IOU_MISS": 56.13235983655972,
+          "G1_SLOT_DRIFT": 23.678746064706278,
+          "WRONG_OCCURRENCE": 20.142005492665284,
+          "UNRESOLVED": 0.03349186147766093,
+          "WRONG_PAGE": 0.013396744591064373
+        }
+      },
+      {
+        "test_id": "medium/real_bbb_service_list_corrupted",
+        "backend": "liteparse",
+        "num_pages": 17,
+        "num_tokens": 2998,
+        "num_ground_truth_rules": 1502,
+        "num_ground_truth_bboxes": 1207,
+        "num_citations": 1455,
+        "word_grounding_f1": 0.17412935323383086,
+        "word_grounding_precision": 0.17427385892116182,
+        "word_grounding_recall": 0.1739850869925435,
+        "page_grounding_f1": 0.9993131868131867,
+        "page_grounding_precision": 1.0,
+        "page_grounding_recall": 0.9986273164035689,
+        "candidate_recall_at_20": 0.164043082021541,
+        "indexing_time_sec": 0.052322682000522036,
+        "grounding_time_sec": 10.945312513999852,
+        "eval_time_sec": 1.7250773199994,
+        "total_time_sec": 12.722712515999774,
+        "failure_classes": {
+          "G1_SLOT_DRIFT": 256,
+          "WRONG_OCCURRENCE": 520,
+          "IOU_MISS": 251,
+          "UNRESOLVED": 2
+        },
+        "failure_percentages": {
+          "G1_SLOT_DRIFT": 24.87852283770651,
+          "WRONG_OCCURRENCE": 50.534499514091344,
+          "IOU_MISS": 24.392614188532555,
+          "UNRESOLVED": 0.1943634596695821
+        }
+      },
+      {
+        "test_id": "short/real_clinton_property_25_11073_corrupted",
+        "backend": "liteparse",
+        "num_pages": 9,
+        "num_tokens": 2152,
+        "num_ground_truth_rules": 246,
+        "num_ground_truth_bboxes": 173,
+        "num_citations": 165,
+        "word_grounding_f1": 0.3269961977186312,
+        "word_grounding_precision": 0.35833333333333334,
+        "word_grounding_recall": 0.3006993006993007,
+        "page_grounding_f1": 0.8805460750853243,
+        "page_grounding_precision": 0.9555555555555556,
+        "page_grounding_recall": 0.8164556962025317,
+        "candidate_recall_at_20": 0.36416184971098264,
+        "indexing_time_sec": 44.527959617000306,
+        "grounding_time_sec": 0.8171350430002349,
+        "eval_time_sec": 0.010235268000542419,
+        "total_time_sec": 45.35532992800108,
+        "failure_classes": {
+          "G1_SLOT_DRIFT": 26,
+          "WRONG_OCCURRENCE": 42,
+          "IOU_MISS": 21,
+          "UNRESOLVED": 23,
+          "WRONG_PAGE": 6
+        },
+        "failure_percentages": {
+          "G1_SLOT_DRIFT": 22.033898305084744,
+          "WRONG_OCCURRENCE": 35.59322033898305,
+          "IOU_MISS": 17.796610169491526,
+          "UNRESOLVED": 19.491525423728813,
+          "WRONG_PAGE": 5.084745762711865
+        }
+      },
+      {
+        "test_id": "short/00581-2011-p0050",
+        "backend": "liteparse",
+        "num_pages": 1,
+        "num_tokens": 433,
+        "num_ground_truth_rules": 56,
+        "num_ground_truth_bboxes": 30,
+        "num_citations": 20,
+        "word_grounding_f1": 0.5199999999999999,
+        "word_grounding_precision": 0.65,
+        "word_grounding_recall": 0.43333333333333335,
+        "page_grounding_f1": 0.8,
+        "page_grounding_precision": 1.0,
+        "page_grounding_recall": 0.6666666666666666,
+        "candidate_recall_at_20": 0.4666666666666667,
+        "indexing_time_sec": 0.012425210000401421,
+        "grounding_time_sec": 0.0705590530005793,
+        "eval_time_sec": 0.006182840999827022,
+        "total_time_sec": 0.08916710400080774,
+        "failure_classes": {
+          "IOU_MISS": 3,
+          "WRONG_OCCURRENCE": 4,
+          "UNRESOLVED": 10
+        },
+        "failure_percentages": {
+          "IOU_MISS": 17.647058823529413,
+          "WRONG_OCCURRENCE": 23.52941176470588,
+          "UNRESOLVED": 58.82352941176471
+        }
+      },
+      {
+        "test_id": "long/real_credit_strategies_full",
+        "backend": "liteparse",
+        "num_pages": 59,
+        "num_tokens": 38208,
+        "num_ground_truth_rules": 8346,
+        "num_ground_truth_bboxes": 5049,
+        "num_citations": 4680,
+        "word_grounding_f1": 0.19712623203895022,
+        "word_grounding_precision": 0.22240085744908897,
+        "word_grounding_recall": 0.17701002345915973,
+        "page_grounding_f1": 0.7748254662915495,
+        "page_grounding_precision": 0.8606481481481482,
+        "page_grounding_recall": 0.7045669888194049,
+        "candidate_recall_at_20": 0.815805109922757,
+        "indexing_time_sec": 11.664039980999405,
+        "grounding_time_sec": 27.380655072999616,
+        "eval_time_sec": 0.30023046099995554,
+        "total_time_sec": 39.34492551499898,
+        "failure_classes": {
+          "WRONG_OCCURRENCE": 2542,
+          "IOU_MISS": 113,
+          "UNRESOLVED": 957,
+          "WRONG_PAGE": 602,
+          "G1_SLOT_DRIFT": 26
+        },
+        "failure_percentages": {
+          "WRONG_OCCURRENCE": 59.95283018867924,
+          "IOU_MISS": 2.6650943396226414,
+          "UNRESOLVED": 22.57075471698113,
+          "WRONG_PAGE": 14.19811320754717,
+          "G1_SLOT_DRIFT": 0.6132075471698114
+        }
+      },
+      {
+        "test_id": "long/real_imedia_full",
+        "backend": "liteparse",
+        "num_pages": 114,
+        "num_tokens": 146464,
+        "num_ground_truth_rules": 86242,
+        "num_ground_truth_bboxes": 39446,
+        "num_citations": 48068,
+        "word_grounding_f1": 0.8043858537203702,
+        "word_grounding_precision": 0.8044062468309502,
+        "word_grounding_recall": 0.8043654616437662,
+        "page_grounding_f1": 0.9999791965715951,
+        "page_grounding_precision": 1.0,
+        "page_grounding_recall": 0.9999583940087372,
+        "candidate_recall_at_20": 0.8690107995741013,
+        "indexing_time_sec": 58.215375830000994,
+        "grounding_time_sec": 136.85610276599982,
+        "eval_time_sec": 4.1446958189990255,
+        "total_time_sec": 199.21617441499984,
+        "failure_classes": {
+          "WRONG_OCCURRENCE": 5046,
+          "IOU_MISS": 2652,
+          "G1_SLOT_DRIFT": 22,
+          "UNRESOLVED": 2
+        },
+        "failure_percentages": {
+          "WRONG_OCCURRENCE": 65.34576534576534,
+          "IOU_MISS": 34.34343434343434,
+          "G1_SLOT_DRIFT": 0.2849002849002849,
+          "UNRESOLVED": 0.0259000259000259
+        }
+      }
+    ],
+    "hybrid": [
+      {
+        "test_id": "long/real_ftx_full_corrupted",
+        "backend": "hybrid",
+        "num_pages": 114,
+        "num_tokens": 79276,
+        "num_ground_truth_rules": 75543,
+        "num_ground_truth_bboxes": 26583,
+        "num_citations": 34136,
+        "word_grounding_f1": 0.534449355779178,
+        "word_grounding_precision": 0.5344594086223761,
+        "word_grounding_recall": 0.5344393033141481,
+        "page_grounding_f1": 0.9999853529213599,
+        "page_grounding_precision": 1.0,
+        "page_grounding_recall": 0.9999707062717872,
+        "candidate_recall_at_20": 0.5239062558778167,
+        "indexing_time_sec": 3.9400596659997973,
+        "grounding_time_sec": 12.364081312998678,
+        "eval_time_sec": 2.17215345600016,
+        "total_time_sec": 18.476294434998636,
+        "failure_classes": {
+          "IOU_MISS": 7468,
+          "G1_SLOT_DRIFT": 2825,
+          "WRONG_OCCURRENCE": 2376,
+          "UNRESOLVED": 1
+        },
+        "failure_percentages": {
+          "IOU_MISS": 58.94238358326756,
+          "G1_SLOT_DRIFT": 22.296764009471193,
+          "WRONG_OCCURRENCE": 18.752959747434886,
+          "UNRESOLVED": 0.007892659826361483
+        }
+      },
+      {
+        "test_id": "medium/real_bbb_service_list_corrupted",
+        "backend": "hybrid",
+        "num_pages": 17,
+        "num_tokens": 6051,
+        "num_ground_truth_rules": 1502,
+        "num_ground_truth_bboxes": 1207,
+        "num_citations": 1455,
+        "word_grounding_f1": 0.19154228855721395,
+        "word_grounding_precision": 0.19170124481327802,
+        "word_grounding_recall": 0.19138359569179786,
+        "page_grounding_f1": 0.9993131868131867,
+        "page_grounding_precision": 1.0,
+        "page_grounding_recall": 0.9986273164035689,
+        "candidate_recall_at_20": 0.20215410107705054,
+        "indexing_time_sec": 0.8205404820000695,
+        "grounding_time_sec": 19.70335952900041,
+        "eval_time_sec": 2.095243505000326,
+        "total_time_sec": 22.619143516000804,
+        "failure_classes": {
+          "WRONG_OCCURRENCE": 679,
+          "G1_SLOT_DRIFT": 183,
+          "IOU_MISS": 165,
+          "UNRESOLVED": 2
+        },
+        "failure_percentages": {
+          "WRONG_OCCURRENCE": 65.98639455782312,
+          "G1_SLOT_DRIFT": 17.784256559766764,
+          "IOU_MISS": 16.034985422740526,
+          "UNRESOLVED": 0.1943634596695821
+        }
+      },
+      {
+        "test_id": "short/real_clinton_property_25_11073_corrupted",
+        "backend": "hybrid",
+        "num_pages": 9,
+        "num_tokens": 3748,
+        "num_ground_truth_rules": 246,
+        "num_ground_truth_bboxes": 173,
+        "num_citations": 178,
+        "word_grounding_f1": 0.4782608695652174,
+        "word_grounding_precision": 0.49624060150375937,
+        "word_grounding_recall": 0.46153846153846156,
+        "page_grounding_f1": 0.9411764705882353,
+        "page_grounding_precision": 0.972972972972973,
+        "page_grounding_recall": 0.9113924050632911,
+        "candidate_recall_at_20": 0.4797687861271676,
+        "indexing_time_sec": 0.12091050300023198,
+        "grounding_time_sec": 1.1469150619996071,
+        "eval_time_sec": 0.01327802099967812,
+        "total_time_sec": 1.2811035859995172,
+        "failure_classes": {
+          "WRONG_OCCURRENCE": 46,
+          "IOU_MISS": 27,
+          "G1_SLOT_DRIFT": 12,
+          "UNRESOLVED": 10,
+          "WRONG_PAGE": 4
+        },
+        "failure_percentages": {
+          "WRONG_OCCURRENCE": 46.464646464646464,
+          "IOU_MISS": 27.27272727272727,
+          "G1_SLOT_DRIFT": 12.121212121212121,
+          "UNRESOLVED": 10.1010101010101,
+          "WRONG_PAGE": 4.040404040404041
+        }
+      },
+      {
+        "test_id": "short/00581-2011-p0050",
+        "backend": "hybrid",
+        "num_pages": 1,
+        "num_tokens": 433,
+        "num_ground_truth_rules": 56,
+        "num_ground_truth_bboxes": 30,
+        "num_citations": 21,
+        "word_grounding_f1": 0.5098039215686274,
+        "word_grounding_precision": 0.6190476190476191,
+        "word_grounding_recall": 0.43333333333333335,
+        "page_grounding_f1": 0.8235294117647058,
+        "page_grounding_precision": 1.0,
+        "page_grounding_recall": 0.7,
+        "candidate_recall_at_20": 0.5,
+        "indexing_time_sec": 0.0222049549993244,
+        "grounding_time_sec": 0.06098717100030626,
+        "eval_time_sec": 0.0035609730002761353,
+        "total_time_sec": 0.0867530989999068,
+        "failure_classes": {
+          "IOU_MISS": 4,
+          "WRONG_OCCURRENCE": 4,
+          "UNRESOLVED": 9
+        },
+        "failure_percentages": {
+          "IOU_MISS": 23.52941176470588,
+          "WRONG_OCCURRENCE": 23.52941176470588,
+          "UNRESOLVED": 52.94117647058824
+        }
+      },
+      {
+        "test_id": "long/real_credit_strategies_full",
+        "backend": "hybrid",
+        "num_pages": 59,
+        "num_tokens": 38205,
+        "num_ground_truth_rules": 8346,
+        "num_ground_truth_bboxes": 5049,
+        "num_citations": 4680,
+        "word_grounding_f1": 0.19712623203895022,
+        "word_grounding_precision": 0.22240085744908897,
+        "word_grounding_recall": 0.17701002345915973,
+        "page_grounding_f1": 0.7748254662915495,
+        "page_grounding_precision": 0.8606481481481482,
+        "page_grounding_recall": 0.7045669888194049,
+        "candidate_recall_at_20": 0.815805109922757,
+        "indexing_time_sec": 9.665778950999993,
+        "grounding_time_sec": 24.737916437999957,
+        "eval_time_sec": 0.5077225519999047,
+        "total_time_sec": 34.911417940999854,
+        "failure_classes": {
+          "WRONG_OCCURRENCE": 2542,
+          "IOU_MISS": 113,
+          "UNRESOLVED": 957,
+          "WRONG_PAGE": 602,
+          "G1_SLOT_DRIFT": 26
+        },
+        "failure_percentages": {
+          "WRONG_OCCURRENCE": 59.95283018867924,
+          "IOU_MISS": 2.6650943396226414,
+          "UNRESOLVED": 22.57075471698113,
+          "WRONG_PAGE": 14.19811320754717,
+          "G1_SLOT_DRIFT": 0.6132075471698114
+        }
+      },
+      {
+        "test_id": "long/real_imedia_full",
+        "backend": "hybrid",
+        "num_pages": 114,
+        "num_tokens": 146464,
+        "num_ground_truth_rules": 86242,
+        "num_ground_truth_bboxes": 39446,
+        "num_citations": 48068,
+        "word_grounding_f1": 0.8043858537203702,
+        "word_grounding_precision": 0.8044062468309502,
+        "word_grounding_recall": 0.8043654616437662,
+        "page_grounding_f1": 0.9999791965715951,
+        "page_grounding_precision": 1.0,
+        "page_grounding_recall": 0.9999583940087372,
+        "candidate_recall_at_20": 0.8690107995741013,
+        "indexing_time_sec": 65.37785299500138,
+        "grounding_time_sec": 137.6281926520005,
+        "eval_time_sec": 3.1954172189998644,
+        "total_time_sec": 206.20146286600175,
+        "failure_classes": {
+          "WRONG_OCCURRENCE": 5046,
+          "IOU_MISS": 2652,
+          "G1_SLOT_DRIFT": 22,
+          "UNRESOLVED": 2
+        },
+        "failure_percentages": {
+          "WRONG_OCCURRENCE": 65.34576534576534,
+          "IOU_MISS": 34.34343434343434,
+          "G1_SLOT_DRIFT": 0.2849002849002849,
+          "UNRESOLVED": 0.0259000259000259
+        }
+      }
+    ]
+  }
+}

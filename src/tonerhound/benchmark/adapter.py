@@ -105,6 +105,23 @@ class ExtractBenchAdapter:
             score_margin_threshold=score_margin_threshold,
         )
 
+    @property
+    def layout_blocks(self) -> list[Any]:
+        """Expose layout blocks from the underlying index if available."""
+        return getattr(self.index, "layout_blocks", [])
+
+    def get_table_blocks(self, page_num: int | None = None) -> list[Any]:
+        """Retrieve table layout blocks from the underlying index if available."""
+        if hasattr(self.index, "get_table_blocks"):
+            return self.index.get_table_blocks(page_num=page_num)
+        return []
+
+    def get_paragraph_blocks(self, page_num: int | None = None) -> list[Any]:
+        """Retrieve paragraph layout blocks from the underlying index if available."""
+        if hasattr(self.index, "get_paragraph_blocks"):
+            return self.index.get_paragraph_blocks(page_num=page_num)
+        return []
+
     def ground_extracted_data(
         self,
         extracted_data: dict[str, Any] | list[dict[str, Any]],

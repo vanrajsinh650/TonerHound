@@ -80,6 +80,7 @@ class DocumentPage:
     height: float
     tokens: list[DocumentToken] = field(default_factory=list)
     lines: list[VisualLine] = field(default_factory=list)
+    blocks: list[Any] = field(default_factory=list)
 
     @property
     def text(self) -> str:

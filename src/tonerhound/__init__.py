@@ -5,7 +5,9 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any, BinaryIO
 
+from tonerhound.document.hybrid_index import HybridDocumentIndex, HybridIndex, LayoutBlockHint
 from tonerhound.document.index import DocumentIndex
+from tonerhound.document.liteparse_index import LiteParseDocumentIndex
 from tonerhound.geometry.coordinates import BBox, CoordinateFrame, union_bbox_list
 from tonerhound.models.types import (
     DocumentPage,
@@ -25,6 +27,10 @@ __all__ = [
     "DocumentToken",
     "EvidenceResolver",
     "ExtractionInput",
+    "HybridDocumentIndex",
+    "HybridIndex",
+    "LayoutBlockHint",
+    "LiteParseDocumentIndex",
     "ProvenanceStatus",
     "ResolutionResult",
     "VisualLine",
@@ -36,12 +42,16 @@ __all__ = [
 def resolve(
     document: str | Path | bytes | BinaryIO | DocumentIndex,
     extraction: ExtractionInput | dict[str, Any] | list[ExtractionInput | dict[str, Any]],
+    backend: str = "pdfium",
+    **index_kwargs: Any,
 ) -> ResolutionResult | list[ResolutionResult]:
     """Resolve physical evidence and bounding boxes for extracted document fields.
 
     Parameters:
         document: PDF path, bytes, file stream, or pre-built DocumentIndex.
         extraction: ExtractionInput object, dictionary, or list thereof.
+        backend: Document parsing backend ('pdfium' or 'liteparse').
+        **index_kwargs: Extra arguments forwarded to DocumentIndex.from_pdf.
 
     Returns:
         ResolutionResult or list[ResolutionResult] with status, page, bbox, and confidence.
@@ -49,7 +59,7 @@ def resolve(
     if isinstance(document, DocumentIndex):
         index = document
     else:
-        index = DocumentIndex.from_pdf(document)
+        index = DocumentIndex.from_pdf(document, backend=backend, **index_kwargs)
 
     resolver = EvidenceResolver(index)
 

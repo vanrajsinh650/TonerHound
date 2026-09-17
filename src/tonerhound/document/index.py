@@ -153,13 +153,43 @@ class DocumentIndex:
     def from_pdf(
         cls,
         source: str | Path | bytes | BinaryIO,
-        enable_ocr: bool = False,
+        enable_ocr: bool | None = None,
         ocr_scale: float = 200.0 / 72.0,
         ocr_token_threshold: int = 25,
         use_cache: bool = True,
         cache_dir: Path | str = "research/cache/document_index",
+        backend: str = "pdfium",
+        **kwargs: Any,
     ) -> DocumentIndex:
-        """Load and index a PDF using pypdfium2 with optional OCR fallback and persistent disk caching."""
+        """Load and index a PDF using pypdfium2 or liteparse with optional OCR fallback and persistent disk caching."""
+        if backend == "liteparse":
+            from tonerhound.document.liteparse_index import LiteParseDocumentIndex
+
+            ocr_enabled = kwargs.pop("ocr_enabled", None)
+            if ocr_enabled is None:
+                ocr_enabled = enable_ocr if enable_ocr is not None else True
+            return LiteParseDocumentIndex.from_pdf(
+                source=source,
+                ocr_enabled=ocr_enabled,
+                use_cache=use_cache,
+                cache_dir=cache_dir,
+                backend="liteparse",
+                **kwargs,
+            )
+        elif backend == "hybrid":
+            from tonerhound.document.hybrid_index import HybridDocumentIndex
+
+            return HybridDocumentIndex.from_pdf(
+                source=source,
+                enable_ocr=enable_ocr if enable_ocr is not None else True,
+                use_cache=use_cache,
+                cache_dir=cache_dir,
+                **kwargs,
+            )
+        elif backend != "pdfium":
+            raise ValueError(f"Unsupported backend '{backend}'. Supported backends: 'pdfium', 'liteparse', 'hybrid'.")
+
+        actual_enable_ocr = False if enable_ocr is None else enable_ocr
         cache_path: Path | None = None
         if use_cache and isinstance(source, (str, Path)):
             src_path = Path(source)
@@ -172,7 +202,7 @@ class DocumentIndex:
                     while chunk := f.read(65536):
                         h.update(chunk)
                 file_hash = h.hexdigest()
-                cache_path = cache_dir / f"{file_hash}_{enable_ocr}_{ocr_scale:.2f}_{cls.INDEX_VERSION}.pkl"
+                cache_path = cache_dir / f"{file_hash}_{actual_enable_ocr}_{ocr_scale:.2f}_{cls.INDEX_VERSION}.pkl"
                 if cache_path.exists():
                     try:
                         with open(cache_path, "rb") as f:
@@ -192,7 +222,7 @@ class DocumentIndex:
                 tokens = _extract_tokens_from_page(pdf_page, page_num, width, height)
 
                 # Fallback to OCR if page has negligible native text tokens
-                if enable_ocr and len(tokens) < ocr_token_threshold:
+                if actual_enable_ocr and len(tokens) < ocr_token_threshold:
                     ocr_tokens = _extract_tokens_from_ocr(
                         pdf_page,
                         page_num=page_num,
