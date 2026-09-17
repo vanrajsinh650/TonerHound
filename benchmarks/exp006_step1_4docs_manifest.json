@@ -1,0 +1,98 @@
+{
+  "manifest_version": "EXP-005-LOCAL-v1.0",
+  "status": "FROZEN",
+  "creation_timestamp": "2026-09-14T14:20:00Z",
+  "description": "Stratified, representative, frozen 32-document local benchmark subset of ExtractBench for iterative TonerHound algorithmic progression.",
+  "summary": {
+    "total_documents": 32,
+    "train_dev_count": 20,
+    "local_validation_count": 12,
+    "short_count": 14,
+    "medium_count": 12,
+    "long_count": 6,
+    "total_pages": 881,
+    "train_dev_pages": 584,
+    "local_validation_pages": 297,
+    "exp004_train_dev_mean_grounded_f1": 0.3787,
+    "exp004_local_val_mean_grounded_f1": 0.443,
+    "exp004_total_mean_grounded_f1": 0.4028
+  },
+  "documents": [
+    {
+      "test_id": "medium/real_vg_reit_full",
+      "split": "train_dev",
+      "length_class": "medium",
+      "domain": "financial_holdings",
+      "challenge_tags": [
+        "vanguard_portfolio",
+        "40_plus_pages",
+        "reit_holdings",
+        "long_medium"
+      ],
+      "why_included": "Vanguard REIT portfolio across 40 pages testing scalable candidate retrieval on medium-to-long documents.",
+      "num_pages": 27,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.48063921327596804,
+        "page_grounding_f1": 0.46899426784783743,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "long/real_ftx_full",
+      "split": "train_dev",
+      "length_class": "long",
+      "domain": "bankruptcy_claims",
+      "challenge_tags": [
+        "100_plus_pages",
+        "bankruptcy_schedules",
+        "extreme_failure",
+        "page_pass_box_fail"
+      ],
+      "why_included": "High page F1 (94.90%) but 0.54% Grounded F1 in EXP-004; prime target for coordinate precision and local alignment.",
+      "num_pages": 114,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.005384170538616468,
+        "page_grounding_f1": 0.9489899144722724,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "long/real_imedia_full",
+      "split": "train_dev",
+      "length_class": "long",
+      "domain": "bankruptcy_claims",
+      "challenge_tags": [
+        "long_document",
+        "corporate_bankruptcy",
+        "page_pass_box_fail",
+        "extreme_failure"
+      ],
+      "why_included": "81.34% Page F1 but 0.27% Grounded F1 in EXP-004; proves bounding box IoU failure on long claims schedules.",
+      "num_pages": 114,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.002689571403782752,
+        "page_grounding_f1": 0.8133890242487526,
+        "value_f1": 1.0
+      }
+    },
+    {
+      "test_id": "long/real_ftx_full_corrupted",
+      "split": "local_validation",
+      "length_class": "long",
+      "domain": "bankruptcy_claims",
+      "challenge_tags": [
+        "long_corrupted",
+        "100_plus_pages",
+        "severe_noise",
+        "0_26_percent_baseline"
+      ],
+      "why_included": "Extreme held-out long corrupted case (0.26% baseline) testing robust OCR and alignment on large docs.",
+      "num_pages": 114,
+      "exp004_baseline": {
+        "word_grounding_f1": 0.002646868947708199,
+        "page_grounding_f1": 0.4791702829369901,
+        "value_f1": 1.0
+      }
+    }
+  ]
+}

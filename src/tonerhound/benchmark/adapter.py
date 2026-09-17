@@ -242,7 +242,7 @@ class ExtractBenchAdapter:
                 col_info = table_col_positions.get(table_name, {}).get(fld_name) if (table_name and table_col_positions) else None
 
                 all_row_toks: list[DocumentToken] = []
-                if aligned_line is None and col_info is not None and isinstance(value, str) and not is_bool and not is_num:
+                if aligned_line == "grid" and col_info is not None and isinstance(value, str) and not is_bool and not is_num:
                     col_x, col_w = col_info
                     page_slope = page_skews.get(anc_page, 0.0) if page_skews else 0.0
                     val_str = str(value).strip()
@@ -436,7 +436,7 @@ class ExtractBenchAdapter:
 
                 if resolved_box is not None:
                     box = resolved_box
-                    if self.enable_bbox_precision and aligned_line is not None:
+                    if self.enable_bbox_precision and aligned_line is not None and not isinstance(aligned_line, str):
                         target_h = min(0.016, max(0.008, anc_h * 1.35))
                         box = box.align_to_line_height(target_height=target_h)
                     citations.append({
@@ -820,7 +820,8 @@ class ExtractBenchAdapter:
                                 if 0.007 <= (y_diff / r_diff) <= 0.022:
                                     consistent_indices.append(idx_pair)
 
-                    if table_name == "creditors" and (len(consistent_indices) < 5 or M >= 40):
+                    consistent_ratio = len(consistent_indices) / M if M > 0 else 0.0
+                    if table_name == "creditors" and (consistent_ratio < 0.13 or len(consistent_indices) < min(5, M)):
                         if M >= 40:
                             total_page_slots = 72 if p_num == 2 else 71
                             n_two_slot = max(0, total_page_slots - M)
@@ -900,7 +901,7 @@ class ExtractBenchAdapter:
                                     line1_cy,
                                     ref_h,
                                     est_box,
-                                    None,
+                                    "grid",
                                 )
                             curr_slot += 2 if is_two_slot else 1
                         ref_r = None
