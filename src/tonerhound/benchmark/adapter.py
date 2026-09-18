@@ -179,8 +179,20 @@ class ExtractBenchAdapter:
             table_offsets: dict[str, int] = {}
             table_col_positions: dict[str, dict[str, tuple[float, float]]] = defaultdict(dict)
             page_skews: dict[int, float] = {}
+            table_row_pitches: dict[str, float] = {}
+            table_is_structured_grid: dict[str, bool] = {}
             # Step 1: Align table records using monotonic DP alignment
-            self._align_table_arrays(table_records, doc_offset, record_anchors, record_page_hints, table_offsets, table_col_positions, page_skews)
+            self._align_table_arrays(
+                table_records,
+                doc_offset,
+                record_anchors,
+                record_page_hints,
+                table_offsets,
+                table_col_positions,
+                page_skews,
+                table_row_pitches,
+                table_is_structured_grid,
+            )
 
             # Step 2: For non-table records, find single-record anchor
             for parent_rec, fields in non_table_records.items():
@@ -191,6 +203,8 @@ class ExtractBenchAdapter:
             table_offsets = {}
             table_col_positions = {}
             page_skews = {}
+            table_row_pitches = {}
+            table_is_structured_grid = {}
             # Baseline Pass 1
             for path, value, page_hint, context, parent_record_path in leaves:
                 if value is None:
@@ -217,6 +231,7 @@ class ExtractBenchAdapter:
 
             table_name = parent_record_path.split("[")[0] if "[" in parent_record_path else None
             effective_offset = table_offsets.get(table_name, doc_offset) if table_name else doc_offset
+            is_grid = table_name is not None and table_is_structured_grid.get(table_name, False)
 
             calibrated_p = (
                 max(1, min(len(self.index.pages), page_hint + effective_offset))
@@ -253,17 +268,85 @@ class ExtractBenchAdapter:
                 anc_box = anchor[3]
                 aligned_line = anchor[4] if len(anchor) > 4 else None
 
+                page_obj = self.index.get_page(anc_page)
+
+                if is_grid:
+                    pitch = table_row_pitches.get(table_name, max(0.0114, anc_h * 1.35))
+                    # FIX 1 — Unambiguous-only anchor snapping when aligned_line is None
+                    if aligned_line is None and page_obj and page_obj.lines:
+                        nearby_lines = [
+                            ln for ln in page_obj.lines
+                            if abs((ln.bbox.y + ln.bbox.height / 2.0) - anc_cy) <= min(0.008, pitch * 0.40)
+                        ]
+                        if len(nearby_lines) == 1:
+                            best_l = nearby_lines[0]
+                            anc_cy = best_l.bbox.y + best_l.bbox.height / 2.0
+                            anc_h = best_l.bbox.height
+
+                    # Multi-line vs single-line record detection in dense tabular grid
+                    is_single_line_row = (
+                        (pitch <= anc_h * 1.7)
+                        and (pitch <= 0.018)
+                        and (table_name not in ("grants", "parties"))
+                    )
+
+                    if is_single_line_row:
+                        row_v_half = min(anc_h * 0.70, pitch * 0.45)
+                        up_tol = row_v_half
+                        down_tol = row_v_half
+                    else:
+                        up_tol = max(0.015, min(0.03, anc_h * 0.80))
+                        down_tol = max(0.035, min(0.12, anc_h * 3.5))
+
+                    cand_row_lines = (
+                        [
+                            ln for ln in page_obj.lines
+                            if (
+                                (-up_tol <= ((ln.bbox.y + ln.bbox.height / 2.0) - anc_cy) <= down_tol)
+                                if is_single_line_row
+                                else (-up_tol <= (ln.bbox.y - anc_cy) <= down_tol)
+                            )
+                        ]
+                        if page_obj
+                        else []
+                    )
+                else:
+                    # Non-grid / narrative / sparse / form records: 100% production baseline tolerances
+                    is_single_line_row = False
+                    up_tol = max(0.015, min(0.03, anc_h * 0.8))
+                    down_tol = max(0.035, min(0.12, anc_h * 3.5))
+                    cand_row_lines = (
+                        [
+                            ln for ln in page_obj.lines
+                            if -up_tol <= (ln.bbox.y - anc_cy) <= down_tol
+                        ]
+                        if page_obj
+                        else []
+                    )
+
                 is_num = isinstance(value, (int, float)) and not isinstance(value, bool)
-                is_bool = isinstance(value, bool) or (isinstance(value, str) and value.strip().lower() in ("true", "false", "yes", "no") and any(k in path.lower() for k in ("_box", "checkbox", "is_", "has_", "flag", "_yes", "_no", "contingent", "unliquidated", "disputed", "offset")))
+                is_bool = isinstance(value, bool) or (
+                    isinstance(value, str)
+                    and value.strip().lower() in ("true", "false", "yes", "no")
+                    and any(
+                        k in path.lower()
+                        for k in ("_box", "checkbox", "is_", "has_", "flag", "_yes", "_no",
+                                  "contingent", "unliquidated", "disputed", "offset")
+                    )
+                )
+                fld_name = path.split(".")[-1].split("[")[0].lower()
 
                 resolved_box = None
                 resolved_text = None
 
                 # Fast path for synthesized rows (from slot budgeting or table interpolation) with known column layout
-                fld_name = path.split(".")[-1].split("[")[0]
-                col_info = table_col_positions.get(table_name, {}).get(fld_name) if (table_name and table_col_positions) else None
-
+                col_info = (
+                    table_col_positions.get(table_name, {}).get(fld_name)
+                    if (table_name and table_col_positions)
+                    else None
+                )
                 all_row_toks: list[DocumentToken] = []
+
                 if aligned_line == "grid" and col_info is not None and isinstance(value, str) and not is_bool and not is_num:
                     col_x, col_w = col_info
                     page_slope = page_skews.get(anc_page, 0.0) if page_skews else 0.0
@@ -363,16 +446,19 @@ class ExtractBenchAdapter:
                     )
                     resolved_text = str(value)
                 else:
-                    # Determine asymmetric row/card window: top anchor + downward card body
-                    up_tol = max(0.015, min(0.03, anc_h * 0.8))
-                    down_tol = max(0.035, min(0.12, anc_h * 3.5))
-                    page_obj = self.index.get_page(anc_page)
-                    cand_row_lines = [
-                        l for l in page_obj.lines
-                        if -up_tol <= (l.bbox.y - anc_cy) <= down_tol
-                    ] if page_obj else []
-
-                    for rl in sorted(cand_row_lines, key=lambda l: l.bbox.y):
+                    cand_row_lines = (
+                        [
+                            ln for ln in page_obj.lines
+                            if (
+                                (-up_tol <= ((ln.bbox.y + ln.bbox.height / 2.0) - anc_cy) <= down_tol)
+                                if is_single_line_row
+                                else (-up_tol <= (ln.bbox.y - anc_cy) <= down_tol)
+                            )
+                        ]
+                        if page_obj
+                        else []
+                    )
+                    for rl in sorted(cand_row_lines, key=lambda ln: ln.bbox.y):
                         all_row_toks.extend(rl.tokens)
 
                 if resolved_box is None:
@@ -391,6 +477,27 @@ class ExtractBenchAdapter:
                             chosen_tok = matching_toks[min(occ_idx, len(matching_toks) - 1)]
                             resolved_box = chosen_tok.bbox
                             resolved_text = chosen_tok.text
+                        else:
+                            digits_target = re.sub(r"\D", "", str(value))
+                            for w in range(2, min(9, len(all_row_toks) + 1)):
+                                for i in range(len(all_row_toks) - w + 1):
+                                    win = all_row_toks[i: i + w]
+                                    win_last_cy = win[-1].bbox.y + win[-1].bbox.height / 2.0
+                                    win_first_cy = win[0].bbox.y + win[0].bbox.height / 2.0
+                                    if abs(win_last_cy - win_first_cy) > anc_h * 0.6:
+                                        continue
+                                    combo = "".join(t.text for t in win)
+                                    c_num = parse_numeric_value(combo)
+                                    if c_num is not None and is_number_equal(c_num, target_num):
+                                        resolved_box = union_bbox_list([t.bbox for t in win])
+                                        resolved_text = combo
+                                        break
+                                    if digits_target and len(digits_target) >= 2 and re.sub(r"\D", "", combo) == digits_target:
+                                        resolved_box = union_bbox_list([t.bbox for t in win])
+                                        resolved_text = combo
+                                        break
+                                if resolved_box is not None:
+                                    break
 
                     # 2. Boolean form field matching (checking both printed form labels and checkboxes)
                     elif is_bool and all_row_toks:
@@ -437,6 +544,20 @@ class ExtractBenchAdapter:
                                         resolved_box = union_bbox_list([t.bbox for t in sub_toks_left])
                                         resolved_text = " ".join(t.text for t in sub_toks_left)
 
+                            if resolved_box is None:
+                                clean_no_ws = re.sub(r"[^a-zA-Z0-9]+", "", clean_v.lower())
+                                if len(clean_no_ws) >= 4:
+                                    for w in range(2, min(25, len(all_row_toks) + 1)):
+                                        for i in range(len(all_row_toks) - w + 1):
+                                            win = all_row_toks[i: i + w]
+                                            combo = re.sub(r"[^a-zA-Z0-9]+", "", "".join(t.text for t in win).lower())
+                                            if combo == clean_no_ws:
+                                                resolved_box = union_bbox_list([t.bbox for t in win])
+                                                resolved_text = " ".join(t.text for t in win)
+                                                break
+                                        if resolved_box is not None:
+                                            break
+
                     # 4. OCRMatcher fallback across all row tokens
                     if resolved_box is None and all_row_toks:
                         ocr_match = OCRMatcher.match_row_field(
@@ -450,10 +571,10 @@ class ExtractBenchAdapter:
 
                 # 5. Column-aware bounding box fallback for table cells without OCR tokens
                 if resolved_box is None and isinstance(value, str) and not is_bool and not is_num:
-                    fld_name = path.split(".")[-1].split("[")[0]
-                    col_info = table_col_positions.get(table_name, {}).get(fld_name) if (table_name and table_col_positions) else None
-                    if col_info is not None:
-                        col_x, col_w = col_info
+                    fld_name2 = path.split(".")[-1].split("[")[0]
+                    col_info2 = table_col_positions.get(table_name, {}).get(fld_name2) if (table_name and table_col_positions) else None
+                    if col_info2 is not None:
+                        col_x, col_w = col_info2
                         cell_h = min(0.0102, max(0.0092, anc_h))
                         page_slope = page_skews.get(anc_page, 0.0) if page_skews else 0.0
                         cell_xc = col_x + col_w / 2.0
@@ -474,7 +595,12 @@ class ExtractBenchAdapter:
 
                 if resolved_box is not None:
                     box = resolved_box
-                    if self.enable_bbox_precision and aligned_line is not None and not isinstance(aligned_line, str):
+                    if (
+                        self.enable_bbox_precision
+                        and aligned_line is not None
+                        and not isinstance(aligned_line, str)
+                        and box.height <= anc_h * 1.35
+                    ):
                         target_h = min(0.016, max(0.008, anc_h * 1.35))
                         box = box.align_to_line_height(target_height=target_h)
                     citations.append({
@@ -595,6 +721,8 @@ class ExtractBenchAdapter:
         table_offsets: dict[str, int] | None = None,
         table_col_positions: dict[str, dict[str, tuple[float, float]]] | None = None,
         page_skews: dict[int, float] | None = None,
+        table_row_pitches: dict[str, float] | None = None,
+        table_is_structured_grid: dict[str, bool] | None = None,
     ) -> None:
         """Align tabular records using monotonic page propagation and dynamic programming row matching."""
         col_samples: dict[str, dict[str, list[tuple[float, float]]]] = defaultdict(lambda: defaultdict(list))
@@ -1022,6 +1150,57 @@ class ExtractBenchAdapter:
                         xs = sorted(s[0] for s in samples)
                         ws = sorted(s[1] for s in samples)
                         table_col_positions[table_name][fld] = (xs[len(xs) // 2], ws[len(ws) // 2])
+
+        # Structural Gating: detect genuine dense tabular grids using observable geometry
+        if table_row_pitches is not None and table_is_structured_grid is not None:
+            for tname, rmap in table_records.items():
+                if len(rmap) < 5:
+                    table_is_structured_grid[tname] = False
+                    continue
+
+                anchors = [
+                    record_anchors[f"{tname}[{r}]"]
+                    for r in sorted(rmap.keys())
+                    if f"{tname}[{r}]" in record_anchors
+                ]
+                deltas: list[float] = []
+                x_lefts: list[float] = []
+                for i in range(len(anchors) - 1):
+                    if anchors[i + 1][0] == anchors[i][0]:
+                        dy = anchors[i + 1][1] - anchors[i][1]
+                        if dy > 0.003:
+                            deltas.append(dy)
+                    if anchors[i][3] is not None:
+                        x_lefts.append(anchors[i][3].x)
+
+                if len(deltas) < 4:
+                    table_is_structured_grid[tname] = False
+                    continue
+
+                deltas.sort()
+                med_dy = deltas[len(deltas) // 2]
+                if not (0.007 <= med_dy <= 0.035):
+                    table_is_structured_grid[tname] = False
+                    continue
+
+                q25 = deltas[len(deltas) // 4]
+                q75 = deltas[(3 * len(deltas)) // 4]
+                iqr_dy = q75 - q25
+                iqr_ratio = iqr_dy / med_dy
+                if iqr_ratio > 0.15:
+                    table_is_structured_grid[tname] = False
+                    continue
+
+                if x_lefts:
+                    mean_x = sum(x_lefts) / len(x_lefts)
+                    x_std = (sum((x - mean_x) ** 2 for x in x_lefts) / len(x_lefts)) ** 0.5
+                    if x_std > 0.025:
+                        table_is_structured_grid[tname] = False
+                        continue
+
+                # Verified dense tabular grid
+                table_is_structured_grid[tname] = True
+                table_row_pitches[tname] = med_dy
 
     def _calibrate_page_offset(
         self,
