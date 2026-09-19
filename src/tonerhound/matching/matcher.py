@@ -561,17 +561,26 @@ class EvidenceMatcher:
         )
 
         context_words: set[str] = set()
+        clean_words: list[str] = []
         if field_name:
             clean_name = field_name.split(".")[-1].split("[")[0]
-            context_words.update(clean_name.lower().replace("_", " ").split())
+            clean_words = clean_name.lower().replace("_", " ").split()
+            context_words.update(clean_words)
         if field_context:
             context_words.update(field_context.lower().split())
 
         stop_words = {
             "true", "false", "yes", "no", "the", "and", "for", "box", "item", "check",
-            "is", "has", "flag", "part", "sec", "to", "of", "in", "a", "an",
+            "is", "has", "flag", "part", "sec", "to", "of", "in", "a", "an", "type",
+            "recovery", "flooding", "augmented", "injection", "displacement",
         }
-        context_words = {w for w in context_words if len(w) >= 2 and w not in stop_words}
+        filtered_context = {w for w in context_words if len(w) >= 2 and w not in stop_words}
+        if not filtered_context:
+            filtered_context = {w for w in context_words if len(w) >= 2}
+
+        # Acronym expansions (e.g. CO2 -> carbon dioxide)
+        if "co2" in filtered_context or any("co2" in w for w in clean_words):
+            filtered_context.update(["carbon", "dioxide"])
 
         candidates: list[MatchCandidate] = []
         for p_num in pages:
@@ -582,15 +591,15 @@ class EvidenceMatcher:
             kw_tokens: list[tuple[DocumentToken, float]] = []
             for t in page.tokens:
                 norm_t = t.text.lower().strip(" -.,;:_()[]{}/'\"")
-                if norm_t in context_words:
-                    kw_tokens.append((t, 2.0))
-                elif any(kw in norm_t for kw in context_words if len(kw) >= 4):
-                    kw_tokens.append((t, 1.0))
+                if norm_t in filtered_context:
+                    kw_tokens.append((t, 3.0))
+                elif any(kw in norm_t for kw in filtered_context if len(kw) >= 4):
+                    kw_tokens.append((t, 1.5))
 
             if not kw_tokens:
                 for line in page.lines:
                     line_words = set(line.norm_text.lower().split())
-                    if context_words & line_words:
+                    if filtered_context & line_words:
                         if line.tokens:
                             kw_tokens.append((line.tokens[0], 0.5))
 
@@ -600,36 +609,45 @@ class EvidenceMatcher:
             for kw_t, kw_score in kw_tokens:
                 kw_cy = kw_t.bbox.y + kw_t.bbox.height / 2.0
                 for t in page.tokens:
-                    t_cy = t.bbox.y + t.bbox.height / 2.0
-                    if abs(t_cy - kw_cy) <= max(0.012, kw_t.bbox.height * 1.5):
-                        cb_state = detect_checkbox_state(t.text)
-                        if cb_state is not None and cb_state == target_bool:
-                            dist_x = abs(t.bbox.x - kw_t.bbox.x)
-                            if dist_x <= 0.35:
-                                box = t.bbox
-                                if box.width < 0.018:
-                                    pad_w = (0.022 - box.width) / 2.0
-                                    box = BBox(
-                                        x=max(0.0, box.x - pad_w),
-                                        y=box.y,
-                                        width=0.022,
-                                        height=box.height,
-                                        page=box.page,
-                                    )
-                                box = box.align_to_line_height(target_height=0.015)
+                    # Vertical alignment check: same visual line OR vertically spanning token (stacked o's)
+                    is_vert_aligned = (
+                        abs(t.bbox.y + t.bbox.height / 2.0 - kw_cy) <= max(0.015, kw_t.bbox.height * 1.5)
+                        or (t.bbox.y <= kw_cy <= t.bbox.y + t.bbox.height)
+                    )
+                    if not is_vert_aligned:
+                        continue
 
-                                sim = kw_score * 5.0 - dist_x * 10.0
-                                candidates.append(
-                                    MatchCandidate(
-                                        page=p_num,
-                                        bbox=box,
-                                        tokens=(t,),
-                                        matched_text=t.text,
-                                        match_type="boolean",
-                                        raw_similarity=sim,
-                                        line_index=t.line_index,
-                                    )
+                    cb_state = detect_checkbox_state(t.text)
+                    if cb_state is not None and cb_state == target_bool:
+                        dist_x = abs(t.bbox.x - kw_t.bbox.x)
+                        if dist_x <= 0.16:
+                            # Slice box if token is vertically stacked or oversized
+                            box = t.bbox
+                            target_h = max(0.010, min(0.016, kw_t.bbox.height * 1.05))
+                            target_w = max(0.014, min(0.022, box.width))
+                            box_y = max(0.0, kw_t.bbox.y - 0.001) if box.height > target_h * 1.8 else box.y
+                            box = BBox(
+                                x=box.x,
+                                y=box_y,
+                                width=target_w,
+                                height=target_h,
+                                page=box.page,
+                            )
+
+                            # Proximity bonus: strongly prefer checkboxes immediately to the left
+                            left_bonus = 2.0 if t.bbox.x <= kw_t.bbox.x else 0.0
+                            sim = kw_score * 5.0 - dist_x * 20.0 + left_bonus
+                            candidates.append(
+                                MatchCandidate(
+                                    page=p_num,
+                                    bbox=box,
+                                    tokens=(t,),
+                                    matched_text=t.text,
+                                    match_type="boolean",
+                                    raw_similarity=sim,
+                                    line_index=t.line_index,
                                 )
+                            )
 
         unique_cands: list[MatchCandidate] = []
         for c in sorted(candidates, key=lambda x: x.raw_similarity, reverse=True):

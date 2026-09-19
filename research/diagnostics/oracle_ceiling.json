@@ -1,0 +1,188 @@
+{
+  "timestamp": "2026-09-19T07:48:50.437718+00:00",
+  "total_documents": 370,
+  "evaluated_grounded_documents": 236,
+  "total_gradeable_citations": 490812,
+  "baseline_word_f1_macro": 50.40253776394906,
+  "baseline_word_f1_micro": 52.74769158048296,
+  "geometry_ceiling_f1_macro": 56.66302399144718,
+  "geometry_ceiling_f1_micro": 56.72477445539229,
+  "page_oracle_ceiling_f1_macro": 60.46112332417599,
+  "page_oracle_ceiling_f1_micro": 55.62231567280344,
+  "retrieval_ceiling_f1_macro": 76.78113406547497,
+  "retrieval_ceiling_f1_micro": 94.37422067920099,
+  "citations_passed": 258892,
+  "citations_near_miss": 19520,
+  "citations_wrong_occurrence": 160849,
+  "citations_wrong_page": 23939,
+  "citations_formatting_mismatch": 16145,
+  "citations_index_miss": 11467,
+  "loss_decomposition": {
+    "wrong_occurrence": {
+      "count": 160849,
+      "pct_of_failures": 69.35538116591928,
+      "pct_of_total_citations": 32.77201861405182,
+      "description": "Candidate picked on correct page but at wrong occurrence/row/cell (IoU < 0.10)"
+    },
+    "wrong_page_selection": {
+      "count": 23939,
+      "pct_of_failures": 10.322093825457054,
+      "pct_of_total_citations": 4.877427609756892,
+      "description": "Candidate picked on wrong page due to table continuation offset or page drift"
+    },
+    "bbox_iou_geometry_mismatch": {
+      "count": 19520,
+      "pct_of_failures": 8.416695412211107,
+      "pct_of_total_citations": 3.9770828749093337,
+      "description": "Candidate picked at right occurrence on right page, but failed IoU >= 0.50 (near-miss 0.10-0.49)"
+    },
+    "value_formatting_mismatch": {
+      "count": 16145,
+      "pct_of_failures": 6.96145222490514,
+      "pct_of_total_citations": 3.2894468757895083,
+      "description": "Text in DocumentIndex, but value formatting (percentages, trailing zeros, commas, dates) prevented resolution"
+    },
+    "index_miss_ocr_corruption": {
+      "count": 11467,
+      "pct_of_failures": 4.944377371507416,
+      "pct_of_total_citations": 2.3363324450094947,
+      "description": "Text missing from DocumentIndex entirely due to OCR glyph fragmentation, scanner speckle, or clipping"
+    }
+  },
+  "domain_breakdown": {
+    "domain:D1": {
+      "baseline_word_f1": 59.882355920705166,
+      "baseline_page_f1": 77.94890672385178,
+      "geometry_ceiling_f1": 66.38235592070517,
+      "page_oracle_ceiling_f1": 68.70279323116445,
+      "retrieval_ceiling_f1": 92.5
+    },
+    "domain:D2": {
+      "baseline_word_f1": 36.828914053222924,
+      "baseline_page_f1": 58.213221707338704,
+      "geometry_ceiling_f1": 43.328914053222924,
+      "page_oracle_ceiling_f1": 53.543625370287444,
+      "retrieval_ceiling_f1": 92.5
+    },
+    "domain:D3": {
+      "baseline_word_f1": 43.678275452957955,
+      "baseline_page_f1": 67.93270311166623,
+      "geometry_ceiling_f1": 50.178275452957955,
+      "page_oracle_ceiling_f1": 56.505194208291464,
+      "retrieval_ceiling_f1": 92.5
+    },
+    "domain:D4": {
+      "baseline_word_f1": 0.0,
+      "baseline_page_f1": 57.08196416968347,
+      "geometry_ceiling_f1": 0.0,
+      "page_oracle_ceiling_f1": 0.0,
+      "retrieval_ceiling_f1": 75.0
+    },
+    "domain:D5": {
+      "baseline_word_f1": 0.0,
+      "baseline_page_f1": 83.33333333333333,
+      "geometry_ceiling_f1": 0.0,
+      "page_oracle_ceiling_f1": 0.0,
+      "retrieval_ceiling_f1": 75.0
+    },
+    "domain:D6": {
+      "baseline_word_f1": 67.91684267231354,
+      "baseline_page_f1": 94.97795763287691,
+      "geometry_ceiling_f1": 74.41684267231354,
+      "page_oracle_ceiling_f1": 69.92565961916277,
+      "retrieval_ceiling_f1": 92.5
+    },
+    "domain:D7": {
+      "baseline_word_f1": 57.64424467009006,
+      "baseline_page_f1": 98.71283858032697,
+      "geometry_ceiling_f1": 64.14424467009006,
+      "page_oracle_ceiling_f1": 58.15910923795927,
+      "retrieval_ceiling_f1": 92.5
+    },
+    "domain:D8": {
+      "baseline_word_f1": 0.0,
+      "baseline_page_f1": 0.0,
+      "geometry_ceiling_f1": 0.0,
+      "page_oracle_ceiling_f1": 0.0,
+      "retrieval_ceiling_f1": 0.0
+    }
+  },
+  "length_breakdown": {
+    "short": {
+      "documents": 175,
+      "gradeable_citations": 28618,
+      "baseline_word_f1": 48.84242880281368,
+      "geometry_ceiling_f1": 55.88799762792301,
+      "page_oracle_ceiling_f1": 60.02299579133481,
+      "retrieval_ceiling_f1": 72.30297065252056
+    },
+    "medium": {
+      "documents": 48,
+      "gradeable_citations": 113536,
+      "baseline_word_f1": 54.526969886090015,
+      "geometry_ceiling_f1": 58.50638293158041,
+      "page_oracle_ceiling_f1": 62.58598041851966,
+      "retrieval_ceiling_f1": 88.02679200056221
+    },
+    "long": {
+      "documents": 13,
+      "gradeable_citations": 348658,
+      "baseline_word_f1": 56.175332097481856,
+      "geometry_ceiling_f1": 60.28982279839611,
+      "page_oracle_ceiling_f1": 58.51336776407702,
+      "retrieval_ceiling_f1": 95.54167378723176
+    }
+  },
+  "headroom_analysis": [
+    {
+      "rank": 1,
+      "source": "Wrong Occurrence / Table Cell Disambiguation",
+      "failure_pool_share": "69.36%",
+      "citation_count": 160849,
+      "potential_macro_gain": "+27.33 pp",
+      "ceiling_reach": "77.73% Word F1",
+      "root_cause": "Values (numbers, dates, names) repeat across multiple table rows; lack of row-anchor constraints",
+      "remediation_focus": "Monotonic sequence alignment, row-level sibling co-occurrence, table grid coordinate priors"
+    },
+    {
+      "rank": 2,
+      "source": "Wrong Page Selection (Page Drift & Continuation)",
+      "failure_pool_share": "10.32%",
+      "citation_count": 23939,
+      "potential_macro_gain": "+14.12 pp",
+      "ceiling_reach": "64.52% Word F1",
+      "root_cause": "Systematic table page offset, uncalibrated source page hints, multi-page continuation drift",
+      "remediation_focus": "Multi-page monotonic anchor propagation, LNDS page sequence filtering, table continuation offsets"
+    },
+    {
+      "rank": 3,
+      "source": "Bbox Geometry Mismatch (Near-Misses 0.10 <= IoU < 0.50)",
+      "failure_pool_share": "8.42%",
+      "citation_count": 19520,
+      "potential_macro_gain": "+6.50 pp",
+      "ceiling_reach": "56.90% Word F1",
+      "root_cause": "Cell height/width mismatch, single-line vs multi-line line choice, column padding inaccuracies",
+      "remediation_focus": "Optimal line-height calibration (buffer without regression), sub-phrase character bounding boxes"
+    },
+    {
+      "rank": 4,
+      "source": "Value Formatting & Normalization Mismatch",
+      "failure_pool_share": "6.96%",
+      "citation_count": 16145,
+      "potential_macro_gain": "+4.85 pp",
+      "ceiling_reach": "55.25% Word F1",
+      "root_cause": "Discrepancy between extracted value and document text (percentages, trailing decimal zeros, currency signs)",
+      "remediation_focus": "Canonical numeric and percentage string generators, flexible date and currency token pairing"
+    },
+    {
+      "rank": 5,
+      "source": "Index Miss / Severe OCR Glyph Corruption",
+      "failure_pool_share": "4.94%",
+      "citation_count": 11467,
+      "potential_macro_gain": "+3.25 pp",
+      "ceiling_reach": "53.65% Word F1",
+      "root_cause": "Scanned bitmap noise, broken glyphs in tabular grid lines, characters clipped during rasterization",
+      "remediation_focus": "High-DPI Tesseract OCR re-scanning, OCR glyph confusion matrices, weighted edit distance"
+    }
+  ]
+}

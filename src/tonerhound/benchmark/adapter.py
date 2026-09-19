@@ -1249,6 +1249,18 @@ class ExtractBenchAdapter:
             "NET ASSETS", "SERIES", "PERCENT", "AMOUNT", "INCORPORATED",
             "COMPANY", "PAGE", "SCHEDULE", "TRUE", "FALSE", "YES", "NO",
             "NONE", "N/A", "NULL",
+            # State names & generic financial headers that cause false offset peaks
+            "ALABAMA", "ALASKA", "ARIZONA", "ARKANSAS", "CALIFORNIA", "COLORADO",
+            "CONNECTICUT", "DELAWARE", "FLORIDA", "GEORGIA", "HAWAII", "IDAHO",
+            "ILLINOIS", "INDIANA", "IOWA", "KANSAS", "KENTUCKY", "LOUISIANA",
+            "MAINE", "MARYLAND", "MASSACHUSETTS", "MICHIGAN", "MINNESOTA",
+            "MISSISSIPPI", "MISSOURI", "MONTANA", "NEBRASKA", "NEVADA",
+            "NEW HAMPSHIRE", "NEW JERSEY", "NEW MEXICO", "NEW YORK",
+            "NORTH CAROLINA", "NORTH DAKOTA", "OHIO", "OKLAHOMA", "OREGON",
+            "PENNSYLVANIA", "RHODE ISLAND", "SOUTH CAROLINA", "SOUTH DAKOTA",
+            "TENNESSEE", "TEXAS", "UTAH", "VERMONT", "VIRGINIA", "WASHINGTON",
+            "WEST VIRGINIA", "WISCONSIN", "WYOMING", "MUNICIPAL BONDS",
+            "CORPORATE BONDS", "SCHEDULE OF INVESTMENTS", "PORTFOLIO OF INVESTMENTS",
         }
 
         # 1. Filter and deduplicate candidate anchors
