@@ -18,6 +18,7 @@ from tonerhound.models.types import (
     ResolutionResult,
 )
 from tonerhound.normalization.normalizers import normalize_unicode_and_case
+from tonerhound.resolution.reranker import StructuralReranker
 from tonerhound.resolution.verifier import CandidateVerifier
 
 
@@ -29,6 +30,7 @@ class EvidenceResolver:
         index: DocumentIndex,
         enable_verification: bool = True,
         score_margin_threshold: float = 0.05,
+        reranker: StructuralReranker | None = None,
     ) -> None:
         self.index = index
         self.matcher = EvidenceMatcher(index)
@@ -37,6 +39,18 @@ class EvidenceResolver:
             CandidateVerifier(score_margin_threshold=score_margin_threshold)
             if enable_verification
             else None
+        )
+        self.reranker = (
+            reranker
+            if reranker is not None
+            else StructuralReranker(
+                enabled=True,
+                w_column=8.0,
+                w_row=10.0,
+                w_sibling=8.0,
+                w_sequence=5.0,
+                w_page=15.0,
+            )
         )
 
     def resolve(self, extraction: ExtractionInput) -> ResolutionResult:
@@ -140,6 +154,40 @@ class EvidenceResolver:
                 candidates, context, y_hint=extraction.y_hint
             )
             scored_candidates.sort(key=lambda item: item[1], reverse=True)
+
+            # EXP-011: Structural Evidence Reranking
+            if self.reranker is not None and self.reranker.enabled:
+                base_cands = [c for c, _ in scored_candidates]
+                base_scores = [s for _, s in scored_candidates]
+                is_num = isinstance(value, (int, float)) and not isinstance(value, bool)
+                target_p = extraction.target_page or (
+                    extraction.page_hint
+                    if (extraction.page_confidence and extraction.page_confidence > 0)
+                    else None
+                )
+                p_conf = (
+                    extraction.page_confidence
+                    if extraction.page_confidence > 0
+                    else (1.0 if target_p is not None else 0.0)
+                )
+                reranked = self.reranker.rank_candidates(
+                    candidates=base_cands,
+                    base_scores=base_scores,
+                    column_corridor=extraction.column_corridor,
+                    column_peers=extraction.column_peers,
+                    target_y=extraction.expected_row_y,
+                    row_corridor=extraction.row_corridor,
+                    sibling_boxes=extraction.sibling_boxes,
+                    expected_row_y=extraction.expected_row_y,
+                    prev_row_y=extraction.prev_row_y,
+                    next_row_y=extraction.next_row_y,
+                    target_page=target_p,
+                    page_confidence=p_conf,
+                    is_numeric=is_num,
+                    is_header_field=extraction.is_header,
+                    total_pages=len(self.index.pages),
+                )
+                scored_candidates = [(r.candidate, r.total_score) for r in reranked]
 
         top_cand, top_score = scored_candidates[0]
         if extraction.y_hint is not None:

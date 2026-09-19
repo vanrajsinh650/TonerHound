@@ -97,6 +97,16 @@ class ExtractionInput:
     field_context: str | None = None
     page_hint: int | None = None
     y_hint: float | None = None
+    column_corridor: tuple[float, float] | None = None
+    column_peers: list[Any] | None = None
+    row_corridor: tuple[float, float] | None = None
+    sibling_boxes: list[Any] | None = None
+    expected_row_y: float | None = None
+    prev_row_y: float | None = None
+    next_row_y: float | None = None
+    target_page: int | None = None
+    page_confidence: float = 0.0
+    is_header: bool = False
 
 
 @dataclass(frozen=True, slots=True)

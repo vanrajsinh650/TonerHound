@@ -1,0 +1,441 @@
+{
+  "manifest_version": "EXP-011-FROZEN-BASELINE-v1.0",
+  "status": "FROZEN",
+  "experiment_id": "EXP-010-sprint-wave3",
+  "target_experiment": "EXP-011-structural-reranker",
+  "description": "Frozen reference baseline metrics established from EXP-010 Wave 3 for EXP-011 structural evidence reranking comparisons.",
+  "reference_source": "experiments/EXP-010-sprint-wave3.json",
+  "headline_metrics": {
+    "word_grounding_f1": 0.5903708222065125,
+    "word_grounding_precision": 0.6122505488894509,
+    "word_grounding_recall": 0.5752761717396961,
+    "page_grounding_f1": 0.9259371452778742,
+    "page_grounding_precision": 0.9404002888953005,
+    "page_grounding_recall": 0.9135623692093733,
+    "candidate_recall_at_20": 0.6781524328206188,
+    "false_grounding_rate": 0.38774945111054915,
+    "formatted": {
+      "word_grounding_f1": "59.04%",
+      "word_grounding_precision": "61.23%",
+      "word_grounding_recall": "57.53%",
+      "page_grounding_f1": "92.59%",
+      "page_grounding_precision": "94.04%",
+      "page_grounding_recall": "91.36%",
+      "candidate_recall_at_20": "67.82%",
+      "false_grounding_rate": "38.77%"
+    }
+  },
+  "splits": {
+    "train_dev": {
+      "count": 20,
+      "word_grounding_f1": 0.574252942240676,
+      "word_grounding_precision": 0.6007397608893102,
+      "word_grounding_recall": 0.5568914771312132,
+      "page_grounding_f1": 0.9279942660615393,
+      "candidate_recall_at_20": 0.6839176761050803,
+      "false_grounding_rate": 0.39926023911068975,
+      "formatted_f1": "57.43%"
+    },
+    "local_validation": {
+      "count": 12,
+      "word_grounding_f1": 0.6172339554829064,
+      "word_grounding_precision": 0.6314351955563519,
+      "word_grounding_recall": 0.605917329420501,
+      "page_grounding_f1": 0.9225086106384324,
+      "candidate_recall_at_20": 0.6685436940131831,
+      "false_grounding_rate": 0.3685648044436481,
+      "formatted_f1": "61.72%"
+    }
+  },
+  "slices": {
+    "short": {
+      "count": 14,
+      "word_grounding_f1": 0.6548254351860783,
+      "page_grounding_f1": 0.9868148510054636,
+      "formatted_f1": "65.48%"
+    },
+    "medium": {
+      "count": 12,
+      "word_grounding_f1": 0.4562853545644892,
+      "page_grounding_f1": 0.8331031692822565,
+      "formatted_f1": "45.63%"
+    },
+    "long": {
+      "count": 6,
+      "word_grounding_f1": 0.7081476605382387,
+      "page_grounding_f1": 0.9695571172380676,
+      "formatted_f1": "70.81%"
+    }
+  },
+  "per_document_baseline": {
+    "short/00581-2011-p0050": {
+      "split": "train_dev",
+      "length_class": "short",
+      "domain": "tax_form",
+      "word_grounding_f1": 0.5263157894736842,
+      "word_grounding_precision": 0.5555555555555556,
+      "word_grounding_recall": 0.5,
+      "page_grounding_f1": 1.0,
+      "candidate_recall_at_20": 0.6333333333333333,
+      "false_grounding_rate": 0.4444444444444444
+    },
+    "short/07021-2016-p0014": {
+      "split": "train_dev",
+      "length_class": "short",
+      "domain": "tax_form",
+      "word_grounding_f1": 0.2631578947368421,
+      "word_grounding_precision": 0.45454545454545453,
+      "word_grounding_recall": 0.18518518518518517,
+      "page_grounding_f1": 1.0,
+      "candidate_recall_at_20": 0.2222222222222222,
+      "false_grounding_rate": 0.5454545454545454
+    },
+    "short/08-15427 H-12 1-21-2003 F-01341": {
+      "split": "train_dev",
+      "length_class": "short",
+      "domain": "regulatory_form",
+      "word_grounding_f1": 0.3063063063063063,
+      "word_grounding_precision": 0.3695652173913043,
+      "word_grounding_recall": 0.26153846153846155,
+      "page_grounding_f1": 0.9444444444444444,
+      "candidate_recall_at_20": 0.3076923076923077,
+      "false_grounding_rate": 0.6304347826086957
+    },
+    "short/13f__sl_advisors_llc": {
+      "split": "train_dev",
+      "length_class": "short",
+      "domain": "financial_holdings",
+      "word_grounding_f1": 0.9980237154150198,
+      "word_grounding_precision": 0.9980237154150198,
+      "word_grounding_recall": 0.9980237154150198,
+      "page_grounding_f1": 1.0,
+      "candidate_recall_at_20": 0.9960552268244576,
+      "false_grounding_rate": 0.0019762845849802257
+    },
+    "short/nport__bullfinch_fund_inc": {
+      "split": "train_dev",
+      "length_class": "short",
+      "domain": "financial_holdings",
+      "word_grounding_f1": 0.9744990892531876,
+      "word_grounding_precision": 0.9744990892531876,
+      "word_grounding_recall": 0.9744990892531876,
+      "page_grounding_f1": 1.0,
+      "candidate_recall_at_20": 0.9763636363636363,
+      "false_grounding_rate": 0.025500910746812377
+    },
+    "short/real_clinton_property_25_11073": {
+      "split": "train_dev",
+      "length_class": "short",
+      "domain": "property_deed",
+      "word_grounding_f1": 0.41992882562277584,
+      "word_grounding_precision": 0.427536231884058,
+      "word_grounding_recall": 0.4125874125874126,
+      "page_grounding_f1": 0.9810126582278481,
+      "candidate_recall_at_20": 0.6820809248554913,
+      "false_grounding_rate": 0.572463768115942
+    },
+    "short/real_clinton_property_25_11073_corrupted": {
+      "split": "train_dev",
+      "length_class": "short",
+      "domain": "property_deed",
+      "word_grounding_f1": 0.4817518248175182,
+      "word_grounding_precision": 0.5038167938931297,
+      "word_grounding_recall": 0.46153846153846156,
+      "page_grounding_f1": 0.9873417721518988,
+      "candidate_recall_at_20": 0.48554913294797686,
+      "false_grounding_rate": 0.4961832061068703
+    },
+    "short/sched_i__rotary_club_ty2024": {
+      "split": "train_dev",
+      "length_class": "short",
+      "domain": "grant_schedule",
+      "word_grounding_f1": 0.8285714285714286,
+      "word_grounding_precision": 0.8285714285714286,
+      "word_grounding_recall": 0.8285714285714286,
+      "page_grounding_f1": 1.0,
+      "candidate_recall_at_20": 0.8888888888888888,
+      "false_grounding_rate": 0.17142857142857137
+    },
+    "short/sec_13f_0009_coatue_management": {
+      "split": "train_dev",
+      "length_class": "short",
+      "domain": "financial_holdings",
+      "word_grounding_f1": 0.8424543946932006,
+      "word_grounding_precision": 0.846263683960019,
+      "word_grounding_recall": 0.8386792452830188,
+      "page_grounding_f1": 0.9983471074380166,
+      "candidate_recall_at_20": 0.9636963696369637,
+      "false_grounding_rate": 0.15373631603998095
+    },
+    "medium/cabrera-2023": {
+      "split": "train_dev",
+      "length_class": "medium",
+      "domain": "insurance_valuation",
+      "word_grounding_f1": 0.26822157434402333,
+      "word_grounding_precision": 0.2948717948717949,
+      "word_grounding_recall": 0.24598930481283424,
+      "page_grounding_f1": 0.6588921282798834,
+      "candidate_recall_at_20": 0.25668449197860965,
+      "false_grounding_rate": 0.7051282051282051
+    },
+    "medium/becerra-2024": {
+      "split": "train_dev",
+      "length_class": "medium",
+      "domain": "insurance_valuation",
+      "word_grounding_f1": 0.34983498349834985,
+      "word_grounding_precision": 0.3970037453183521,
+      "word_grounding_recall": 0.31268436578171094,
+      "page_grounding_f1": 0.6732673267326732,
+      "candidate_recall_at_20": 0.3333333333333333,
+      "false_grounding_rate": 0.6029962546816479
+    },
+    "medium/bar-lev-2022": {
+      "split": "train_dev",
+      "length_class": "medium",
+      "domain": "insurance_valuation",
+      "word_grounding_f1": 0.29723991507430997,
+      "word_grounding_precision": 0.30973451327433627,
+      "word_grounding_recall": 0.2857142857142857,
+      "page_grounding_f1": 0.6906779661016949,
+      "candidate_recall_at_20": 0.4530612244897959,
+      "false_grounding_rate": 0.6902654867256637
+    },
+    "medium/13f__leonteq_securities_2025q4": {
+      "split": "train_dev",
+      "length_class": "medium",
+      "domain": "financial_holdings",
+      "word_grounding_f1": 0.9984584178498985,
+      "word_grounding_precision": 0.9984584178498985,
+      "word_grounding_recall": 0.9984584178498985,
+      "page_grounding_f1": 1.0,
+      "candidate_recall_at_20": 0.998377413597274,
+      "false_grounding_rate": 0.0015415821501014726
+    },
+    "medium/real_bbb_service_list_corrupted": {
+      "split": "train_dev",
+      "length_class": "medium",
+      "domain": "bankruptcy_claims",
+      "word_grounding_f1": 0.19154228855721395,
+      "word_grounding_precision": 0.19170124481327802,
+      "word_grounding_recall": 0.19138359569179786,
+      "page_grounding_f1": 0.9993131868131867,
+      "candidate_recall_at_20": 0.20381110190555096,
+      "false_grounding_rate": 0.808298755186722
+    },
+    "medium/real_enotes_deviations": {
+      "split": "train_dev",
+      "length_class": "medium",
+      "domain": "financial_holdings",
+      "word_grounding_f1": 0.3793103448275862,
+      "word_grounding_precision": 0.3804347826086957,
+      "word_grounding_recall": 0.3781925343811395,
+      "page_grounding_f1": 0.9565514881970578,
+      "candidate_recall_at_20": 0.9567779960707269,
+      "false_grounding_rate": 0.6195652173913043
+    },
+    "medium/real_vg_reit_full": {
+      "split": "train_dev",
+      "length_class": "medium",
+      "domain": "financial_holdings",
+      "word_grounding_f1": 0.4898183819482664,
+      "word_grounding_precision": 0.583989501312336,
+      "word_grounding_recall": 0.4218009478672986,
+      "page_grounding_f1": 0.8526359485263595,
+      "candidate_recall_at_20": 0.7727272727272727,
+      "false_grounding_rate": 0.41601049868766404
+    },
+    "long/real_ftx_full": {
+      "split": "train_dev",
+      "length_class": "long",
+      "domain": "bankruptcy_claims",
+      "word_grounding_f1": 0.9632095700259564,
+      "word_grounding_precision": 0.9632095700259564,
+      "word_grounding_recall": 0.9632095700259564,
+      "page_grounding_f1": 0.9999707062717872,
+      "candidate_recall_at_20": 0.9736673814091713,
+      "false_grounding_rate": 0.03679042997404358
+    },
+    "long/real_credit_strategies_full": {
+      "split": "train_dev",
+      "length_class": "long",
+      "domain": "financial_holdings",
+      "word_grounding_f1": 0.22261031551985097,
+      "word_grounding_precision": 0.24512820512820513,
+      "word_grounding_recall": 0.2038814246107912,
+      "page_grounding_f1": 0.8858144603430304,
+      "candidate_recall_at_20": 0.815805109922757,
+      "false_grounding_rate": 0.7548717948717949
+    },
+    "long/real_imedia_full": {
+      "split": "train_dev",
+      "length_class": "long",
+      "domain": "bankruptcy_claims",
+      "word_grounding_f1": 0.9372425244958233,
+      "word_grounding_precision": 0.9372544048675371,
+      "word_grounding_recall": 0.9372306444252902,
+      "page_grounding_f1": 0.999968795181976,
+      "candidate_recall_at_20": 0.9392587334583988,
+      "false_grounding_rate": 0.06274559513246292
+    },
+    "long/sec_13f_0010_renaissance_technologies": {
+      "split": "train_dev",
+      "length_class": "long",
+      "domain": "financial_holdings",
+      "word_grounding_f1": 0.7465612597822796,
+      "word_grounding_precision": 0.754631867246657,
+      "word_grounding_recall": 0.7386614520910869,
+      "page_grounding_f1": 0.9316473325209299,
+      "candidate_recall_at_20": 0.8189674204434352,
+      "false_grounding_rate": 0.24536813275334302
+    },
+    "short/07021-2016-p0026": {
+      "split": "local_validation",
+      "length_class": "short",
+      "domain": "tax_form",
+      "word_grounding_f1": 0.30434782608695654,
+      "word_grounding_precision": 0.3684210526315789,
+      "word_grounding_recall": 0.25925925925925924,
+      "page_grounding_f1": 1.0,
+      "candidate_recall_at_20": 0.48148148148148145,
+      "false_grounding_rate": 0.631578947368421
+    },
+    "short/08-43259 H-12 3-18-2024 F-22737": {
+      "split": "local_validation",
+      "length_class": "short",
+      "domain": "regulatory_form",
+      "word_grounding_f1": 0.3333333333333333,
+      "word_grounding_precision": 0.37254901960784315,
+      "word_grounding_recall": 0.30158730158730157,
+      "page_grounding_f1": 0.923076923076923,
+      "candidate_recall_at_20": 0.3333333333333333,
+      "false_grounding_rate": 0.6274509803921569
+    },
+    "short/13f__audent_global_2025q4": {
+      "split": "local_validation",
+      "length_class": "short",
+      "domain": "financial_holdings",
+      "word_grounding_f1": 0.9980988593155894,
+      "word_grounding_precision": 0.9980988593155894,
+      "word_grounding_recall": 0.9980988593155894,
+      "page_grounding_f1": 1.0,
+      "candidate_recall_at_20": 0.9962049335863378,
+      "false_grounding_rate": 0.0019011406844106071
+    },
+    "short/sched_i__the_women_s_foundation_of_colorado_inc_ty2024": {
+      "split": "local_validation",
+      "length_class": "short",
+      "domain": "grant_schedule",
+      "word_grounding_f1": 0.9194666666666667,
+      "word_grounding_precision": 0.919957310565635,
+      "word_grounding_recall": 0.9189765458422174,
+      "page_grounding_f1": 0.9818763326226013,
+      "candidate_recall_at_20": 0.9882854100106496,
+      "false_grounding_rate": 0.08004268943436499
+    },
+    "short/sec_13f_0019_soros_fund_management": {
+      "split": "local_validation",
+      "length_class": "short",
+      "domain": "financial_holdings",
+      "word_grounding_f1": 0.9713001383125863,
+      "word_grounding_precision": 0.9723087573554863,
+      "word_grounding_recall": 0.970293609671848,
+      "page_grounding_f1": 0.9993086761147598,
+      "candidate_recall_at_20": 0.9848066298342542,
+      "false_grounding_rate": 0.027691242644513725
+    },
+    "medium/cabrera-2022": {
+      "split": "local_validation",
+      "length_class": "medium",
+      "domain": "insurance_valuation",
+      "word_grounding_f1": 0.27176220806794055,
+      "word_grounding_precision": 0.2962962962962963,
+      "word_grounding_recall": 0.25098039215686274,
+      "page_grounding_f1": 0.5520169851380042,
+      "candidate_recall_at_20": 0.2823529411764706,
+      "false_grounding_rate": 0.7037037037037037
+    },
+    "medium/bar-lev-2023": {
+      "split": "local_validation",
+      "length_class": "medium",
+      "domain": "insurance_valuation",
+      "word_grounding_f1": 0.27765726681127983,
+      "word_grounding_precision": 0.28444444444444444,
+      "word_grounding_recall": 0.2711864406779661,
+      "page_grounding_f1": 0.7948164146868251,
+      "candidate_recall_at_20": 0.4491525423728814,
+      "false_grounding_rate": 0.7155555555555555
+    },
+    "medium/bianco-2022": {
+      "split": "local_validation",
+      "length_class": "medium",
+      "domain": "insurance_valuation",
+      "word_grounding_f1": 0.39234449760765544,
+      "word_grounding_precision": 0.422680412371134,
+      "word_grounding_recall": 0.36607142857142855,
+      "page_grounding_f1": 0.8516746411483254,
+      "candidate_recall_at_20": 0.4732142857142857,
+      "false_grounding_rate": 0.5773195876288659
+    },
+    "medium/real_bbb_service_list": {
+      "split": "local_validation",
+      "length_class": "medium",
+      "domain": "bankruptcy_claims",
+      "word_grounding_f1": 0.7014925373134328,
+      "word_grounding_precision": 0.7020746887966804,
+      "word_grounding_recall": 0.7009113504556752,
+      "page_grounding_f1": 0.9993131868131867,
+      "candidate_recall_at_20": 0.704225352112676,
+      "false_grounding_rate": 0.29792531120331955
+    },
+    "medium/sched_i__akron_community_foundation_ty2024": {
+      "split": "local_validation",
+      "length_class": "medium",
+      "domain": "grant_schedule",
+      "word_grounding_f1": 0.8577418388739142,
+      "word_grounding_precision": 0.8610944076969332,
+      "word_grounding_recall": 0.8544152744630071,
+      "page_grounding_f1": 0.9680787589498807,
+      "candidate_recall_at_20": 0.9251416641813301,
+      "false_grounding_rate": 0.13890559230306676
+    },
+    "long/real_ftx_full_corrupted": {
+      "split": "local_validation",
+      "length_class": "long",
+      "domain": "bankruptcy_claims",
+      "word_grounding_f1": 0.534449355779178,
+      "word_grounding_precision": 0.5344594086223761,
+      "word_grounding_recall": 0.5344393033141481,
+      "page_grounding_f1": 0.9999707062717872,
+      "candidate_recall_at_20": 0.5239062558778167,
+      "false_grounding_rate": 0.46554059137762394
+    },
+    "long/sec_13f_0026_brown_brothers_harriman": {
+      "split": "local_validation",
+      "length_class": "long",
+      "domain": "financial_holdings",
+      "word_grounding_f1": 0.844812937626344,
+      "word_grounding_precision": 0.8448376889722254,
+      "word_grounding_recall": 0.8447881877307084,
+      "page_grounding_f1": 0.9999707028388949,
+      "candidate_recall_at_20": 0.8804194984766816,
+      "false_grounding_rate": 0.15516231102777456
+    }
+  },
+  "raw_overall": {
+    "count": 32,
+    "total_pages": 881,
+    "total_citations": 201951,
+    "mean_word_grounding_f1": 0.5903708222065125,
+    "mean_word_precision": 0.6122505488894509,
+    "mean_word_recall": 0.5752761717396961,
+    "mean_page_grounding_f1": 0.9259371452778742,
+    "mean_page_precision": 0.9404002888953005,
+    "mean_page_recall": 0.9135623692093733,
+    "mean_candidate_recall_at_20": 0.6781524328206188,
+    "mean_false_grounding_rate": 0.38774945111054915,
+    "total_index_sec": 6.051780594007141,
+    "total_ground_sec": 157.73018538299584,
+    "total_eval_sec": 10.338582393000252,
+    "total_latency_sec": 174.12054837000323
+  }
+}

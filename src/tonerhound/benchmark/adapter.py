@@ -223,6 +223,8 @@ class ExtractBenchAdapter:
         record_anchors: dict[str, tuple[int, float, float, Any, Any]] = {}
         record_val_counts: dict[str, dict[Any, int]] = defaultdict(lambda: defaultdict(int))
         record_used_tokens: dict[str, set[DocumentToken]] = defaultdict(set)
+        record_resolved_boxes: dict[str, list[BBox]] = defaultdict(list)
+        column_resolved_boxes: dict[tuple[str, str], list[BBox]] = defaultdict(list)
 
         if self.enable_structural_disambiguation:
             table_records: dict[str, dict[int, list[tuple[str, Any, int | None, str | None, str]]]] = defaultdict(dict)
@@ -261,6 +263,11 @@ class ExtractBenchAdapter:
                 if parent_rec in ("", "root"):
                     continue
                 self._resolve_single_record_anchor(parent_rec, fields, doc_offset, record_anchors, record_page_hints)
+
+            # Seed sibling boxes from identified record anchors
+            for rk, anc in record_anchors.items():
+                if anc and len(anc) > 3 and anc[3] is not None and isinstance(anc[3], BBox):
+                    record_resolved_boxes[rk].append(anc[3])
 
             # Step 2b (Agent 7 Pillar 1): Determine consensus page for root scalar records
             root_fields = non_table_records.get("root", []) + non_table_records.get("", [])
@@ -683,12 +690,44 @@ class ExtractBenchAdapter:
                         resolved_text = str(value)
 
                 if resolved_box is None:
+                    col_corridor = (col_info[0], col_info[0] + col_info[1]) if col_info else None
+                    col_peers_list = column_resolved_boxes.get((table_name, fld_name)) if table_name else None
+                    sibs_list = record_resolved_boxes.get(row_rec_key, [])
+                    row_corr = (anc_cy - up_tol, anc_cy + down_tol)
+
+                    prev_y = None
+                    next_y = None
+                    exp_y = None
+                    if table_name and "[" in parent_record_path:
+                        m_row = re.search(r"\[(\d+)\]", parent_record_path)
+                        if m_row:
+                            r_idx = int(m_row.group(1))
+                            if r_idx > 0:
+                                p_anc = record_anchors.get(f"{table_name}[{r_idx - 1}]")
+                                if p_anc and p_anc[0] == anc_page:
+                                    prev_y = p_anc[1]
+                                    pitch = table_row_pitches.get(table_name, max(0.0114, anc_h * 1.35))
+                                    exp_y = prev_y + pitch
+                            n_anc = record_anchors.get(f"{table_name}[{r_idx + 1}]")
+                            if n_anc and n_anc[0] == anc_page:
+                                next_y = n_anc[1]
+
                     row_inp = ExtractionInput(
                         field=path,
                         value=value,
                         field_context=context,
                         page_hint=anc_page,
                         y_hint=anc_cy,
+                        column_corridor=col_corridor,
+                        column_peers=col_peers_list,
+                        row_corridor=row_corr,
+                        sibling_boxes=sibs_list,
+                        expected_row_y=exp_y,
+                        prev_row_y=prev_y,
+                        next_row_y=next_y,
+                        target_page=anc_page,
+                        page_confidence=1.0,
+                        is_header=(anc_cy < 0.08),
                     )
                     row_res = self.resolver.resolve(row_inp)
                     if row_res.is_grounded and row_res.page == anc_page and row_res.bbox is not None:
@@ -699,6 +738,9 @@ class ExtractBenchAdapter:
 
                 if resolved_box is not None:
                     box = resolved_box
+                    record_resolved_boxes[row_rec_key].append(box)
+                    if table_name:
+                        column_resolved_boxes[(table_name, fld_name)].append(box)
                     if (
                         self.enable_bbox_precision
                         and aligned_line is not None
@@ -743,17 +785,68 @@ class ExtractBenchAdapter:
                         })
                 continue
 
+            # EXP-011: Contextual structural hints for general resolution
+            fld_name = path.split(".")[-1].split("[")[0].lower()
+            col_info = (
+                table_col_positions.get(table_name, {}).get(fld_name)
+                if (table_name and table_col_positions)
+                else None
+            )
+            col_corridor = (col_info[0], col_info[0] + col_info[1]) if col_info else None
+            col_peers_list = column_resolved_boxes.get((table_name, fld_name)) if table_name else None
+            sibs_list = (
+                record_resolved_boxes.get(row_rec_key, [])
+                if row_rec_key not in ("", "root")
+                else []
+            )
+            row_corr = (
+                (anchor[1] - anchor[2] * 1.5, anchor[1] + anchor[2] * 1.5)
+                if anchor is not None
+                else None
+            )
+
+            # Array sequence context
+            prev_y = None
+            next_y = None
+            exp_y = None
+            if table_name and "[" in parent_record_path:
+                m_row = re.search(r"\[(\d+)\]", parent_record_path)
+                if m_row:
+                    r_idx = int(m_row.group(1))
+                    if r_idx > 0:
+                        p_anc = record_anchors.get(f"{table_name}[{r_idx - 1}]")
+                        if p_anc and (effective_page_hint is None or p_anc[0] == effective_page_hint):
+                            prev_y = p_anc[1]
+                            pitch = table_row_pitches.get(table_name, 0.015)
+                            exp_y = prev_y + pitch
+                    n_anc = record_anchors.get(f"{table_name}[{r_idx + 1}]")
+                    if n_anc and (effective_page_hint is None or n_anc[0] == effective_page_hint):
+                        next_y = n_anc[1]
+
             inp = ExtractionInput(
                 field=path,
                 value=value,
                 field_context=context,
                 page_hint=effective_page_hint,
                 y_hint=(anchor[1] if anchor is not None else None),
+                column_corridor=col_corridor,
+                column_peers=col_peers_list,
+                row_corridor=row_corr,
+                sibling_boxes=sibs_list,
+                expected_row_y=exp_y,
+                prev_row_y=prev_y,
+                next_row_y=next_y,
+                target_page=effective_page_hint,
+                page_confidence=(1.0 if effective_page_hint is not None else 0.0),
+                is_header=(anchor[1] < 0.08) if anchor else False,
             )
             res = self.resolver.resolve(inp)
 
             if res.is_grounded and res.page is not None and res.bbox is not None:
                 box = res.bbox
+                record_resolved_boxes[row_rec_key].append(box)
+                if table_name:
+                    column_resolved_boxes[(table_name, fld_name)].append(box)
                 if self.enable_bbox_precision:
                     box = box.align_to_line_height(min(0.018, max(0.009, res.bbox.height * 1.35)))
                 is_cb = (
@@ -843,6 +936,8 @@ class ExtractBenchAdapter:
                     value=value,
                     field_context=context,
                     page_hint=calibrated_p,
+                    target_page=calibrated_p,
+                    page_confidence=(1.0 if calibrated_p is not None else 0.0),
                 )
                 res = self.resolver.resolve(inp)
                 if res.is_grounded and res.page is not None and res.bbox is not None and res.confidence >= 0.75:
@@ -867,6 +962,8 @@ class ExtractBenchAdapter:
                 value=value,
                 field_context=context,
                 page_hint=calibrated_p,
+                target_page=calibrated_p,
+                page_confidence=(1.0 if calibrated_p is not None else 0.0),
             )
             res = self.resolver.resolve(inp)
             if res.is_grounded and res.page is not None and res.bbox is not None and res.confidence >= 0.85:
