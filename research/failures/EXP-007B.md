@@ -1,0 +1,42 @@
+# EXP-007B Failure Analysis Report
+
+Total Documents Analyzed: **370**  
+Documents with Grounded F1 < 50%: **264** (71.4%)
+
+## 1. Failure Categories Breakdown
+
+| Failure Category | Document Count | Percentage |
+| :--- | :--- | :--- |
+| **Wrong Occurrence / Ambiguity** | 102 | 27.6% |
+| **Wrong Page / Sparse Form** | 92 | 24.9% |
+| **Low IoU Bounding Box (<0.5)** | 70 | 18.9% |
+
+## 2. Hardest Documents (Lowest Grounding F1)
+
+| Document Test ID | Grounded F1 | Page F1 | Status |
+| :--- | :--- | :--- | :--- |
+| `long/dd1155_schedule_continuation_0011` | 0.00% | 32.10% | Underperforming |
+| `long/dd1155_schedule_continuation_0012` | 0.00% | 0.00% | Underperforming |
+| `long/gov_clin_schedule_0005` | 0.00% | 50.00% | Underperforming |
+| `long/gov_clin_schedule_0031` | 0.00% | 0.00% | Underperforming |
+| `long/real_oklahoma_unclaimed_2024` | 0.00% | 0.00% | Underperforming |
+| `long/sf1449_supplies_services_0042` | 0.00% | 0.00% | Underperforming |
+| `long/sf1449_supplies_services_0059` | 0.00% | 7.14% | Underperforming |
+| `medium/1G1PC5SB6E7111015_professional_valuation` | 0.00% | 66.67% | Underperforming |
+| `medium/1G1PC5SB6E7111015_professional_valuation_corrupted` | 0.00% | 66.67% | Underperforming |
+| `medium/baker_hughes_earnings_deck_q4fy25` | 0.00% | 50.00% | Underperforming |
+| `medium/byline_bancorp_investor_deck_q2_2023` | 0.00% | 0.00% | Underperforming |
+| `medium/ccc_online_0003_geico_ford_crown_victoria` | 0.00% | 100.00% | Underperforming |
+| `medium/ccc_online_0003_geico_ford_crown_victoria_corrupted` | 0.00% | 50.00% | Underperforming |
+| `medium/ccc_online_0004_liberty_dodge_journey` | 0.00% | 100.00% | Underperforming |
+| `medium/ccc_online_0004_liberty_dodge_journey_corrupted` | 0.00% | 66.67% | Underperforming |
+| `medium/ccc_online_0008_state_farm_genesis_gv80` | 0.00% | 0.00% | Underperforming |
+| `medium/ccc_online_0008_state_farm_genesis_gv80_corrupted` | 0.00% | 66.67% | Underperforming |
+| `medium/ccc_online_0009_travelers_ford_f150` | 0.00% | 100.00% | Underperforming |
+| `medium/ccc_online_0009_travelers_ford_f150_corrupted` | 0.00% | 100.00% | Underperforming |
+| `medium/ccc_online_0010_travelers_ford_explorer` | 0.00% | 0.00% | Underperforming |
+| `medium/ccc_online_0010_travelers_ford_explorer_corrupted` | 0.00% | 100.00% | Underperforming |
+| `medium/ccc_online_0011_infinity_toyota_tacoma` | 0.00% | 50.00% | Underperforming |
+| `medium/ccc_online_0011_infinity_toyota_tacoma_corrupted` | 0.00% | 50.00% | Underperforming |
+| `medium/ccc_online_0012_chubb_dodge_durango` | 0.00% | 66.67% | Underperforming |
+| `medium/ccc_online_0012_chubb_dodge_durango_corrupted` | 0.00% | 0.00% | Underperforming |

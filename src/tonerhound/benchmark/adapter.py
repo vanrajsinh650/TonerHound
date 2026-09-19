@@ -616,6 +616,26 @@ class ExtractBenchAdapter:
                 # In a row-anchored table, do not search outside row!
                 continue
 
+            # In structured tables, unanchored rows should not perform expensive unconstrained
+            # whole-page multiline or fuzzy searches.
+            if self.enable_structural_disambiguation and table_name is not None and anchor is None:
+                if effective_page_hint is not None and isinstance(value, str) and len(str(value).strip()) >= 3:
+                    val_str = str(value).strip()
+                    page_matches = self.index.search_exact(val_str, page=effective_page_hint)
+                    if page_matches:
+                        box, ref_text = page_matches[0]
+                        if self.enable_bbox_precision:
+                            box = box.align_to_line_height(min(0.018, max(0.009, box.height * 1.35)))
+                        citations.append({
+                            "field_path": path,
+                            "page": effective_page_hint,
+                            "bbox": box.to_coco(),
+                            "reference_text": ref_text,
+                            "confidence": 0.85,
+                            "source": "tonerhound",
+                        })
+                continue
+
             inp = ExtractionInput(
                 field=path,
                 value=value,
