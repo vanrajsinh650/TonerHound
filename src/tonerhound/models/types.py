@@ -96,6 +96,7 @@ class ExtractionInput:
     evidence_text: str | None = None
     field_context: str | None = None
     page_hint: int | None = None
+    y_hint: float | None = None
 
 
 @dataclass(frozen=True, slots=True)

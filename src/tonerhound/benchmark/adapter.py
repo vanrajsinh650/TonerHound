@@ -131,7 +131,7 @@ class ExtractBenchAdapter:
 
     def _expand_box_into_line_gaps(self, box: BBox, page_num: int) -> BBox:
         """Expand narrow token bboxes into adjacent line whitespace gaps to match form cell bounds."""
-        if box.width >= 0.25:
+        if box.width >= 0.40:
             return box
         page_obj = self.index.get_page(page_num)
         if not page_obj or not page_obj.lines:
@@ -163,17 +163,17 @@ class ExtractBenchAdapter:
         if first_idx > 0:
             prev_x1 = toks[first_idx - 1].bbox.x + toks[first_idx - 1].bbox.width
             gap_l = max(0.0, box.x - prev_x1)
-            pad_l = min(0.040, gap_l * 0.45)
+            pad_l = min(0.060, gap_l * 0.45) if gap_l >= 0.03 else 0.0
         else:
-            pad_l = min(0.025, max(0.0, box.x - 0.065))
+            pad_l = min(0.035, max(0.0, box.x - 0.065)) if box.x >= 0.09 else 0.0
 
-        # Right gap expansion
+        # Right gap expansion (scanned form cells often have large trailing whitespace)
         if last_idx < len(toks) - 1:
             next_x0 = toks[last_idx + 1].bbox.x
             gap_r = max(0.0, next_x0 - (box.x + box.width))
-            pad_r = min(0.040, gap_r * 0.45)
+            pad_r = min(0.120, gap_r * 0.50) if gap_r >= 0.03 else 0.0
         else:
-            pad_r = min(0.025, max(0.0, 0.92 - (box.x + box.width)))
+            pad_r = min(0.060, max(0.0, 0.92 - (box.x + box.width))) if (0.92 - (box.x + box.width)) >= 0.04 else 0.0
 
         new_x = max(0.0, box.x - pad_l)
         new_w = min(1.0 - new_x, box.width + pad_l + pad_r)
@@ -206,6 +206,16 @@ class ExtractBenchAdapter:
 
         # Detect any systematic offset between logical source_page and physical PDF pages
         doc_offset = self._detect_page_offset(leaves)
+
+        # Detect scanned regulatory/tax forms with cell slot geometry (e.g. Texas RRC forms D2)
+        keys_str = str(extracted_data.keys()).lower() if isinstance(extracted_data, dict) else ""
+        is_scanned_form = (
+            any(kw in keys_str for kw in (
+                "rrc_district", "operator_p5", "oil_lse_gas_id", "p5_no", "api_no", "api_number",
+                "well_no", "well_number", "casing_record", "casing_records", "h12_", "w14_", "w2_", "p4_"
+            ))
+            or (example_id is not None and any(kw in example_id.lower() for kw in ("h-12", "h12", "w-14", "w14", "w-2", "w2", "p-4", "p4", "rrc")))
+        )
 
         # Track resolved page hints per record path
         record_page_hints: dict[str, int] = {}
@@ -672,6 +682,21 @@ class ExtractBenchAdapter:
                         resolved_box = anc_box
                         resolved_text = str(value)
 
+                if resolved_box is None:
+                    row_inp = ExtractionInput(
+                        field=path,
+                        value=value,
+                        field_context=context,
+                        page_hint=anc_page,
+                        y_hint=anc_cy,
+                    )
+                    row_res = self.resolver.resolve(row_inp)
+                    if row_res.is_grounded and row_res.page == anc_page and row_res.bbox is not None:
+                        cand_cy = row_res.bbox.y + row_res.bbox.height / 2.0
+                        if abs(cand_cy - anc_cy) <= max(0.025, anc_h * 1.5):
+                            resolved_box = row_res.bbox
+                            resolved_text = row_res.matched_text
+
                 if resolved_box is not None:
                     box = resolved_box
                     if (
@@ -682,6 +707,9 @@ class ExtractBenchAdapter:
                     ):
                         target_h = min(0.016, max(0.008, anc_h * 1.35))
                         box = box.align_to_line_height(target_height=target_h)
+                    is_cb = is_bool or any(k in path.lower() for k in ("_box", "checkbox", "change_", "due_", "classification_", "new_rrc_"))
+                    if is_scanned_form and not is_cb and table_name is None:
+                        box = self._expand_box_into_line_gaps(box, anc_page)
                     citations.append({
                         "field_path": path,
                         "page": anc_page,
@@ -720,6 +748,7 @@ class ExtractBenchAdapter:
                 value=value,
                 field_context=context,
                 page_hint=effective_page_hint,
+                y_hint=(anchor[1] if anchor is not None else None),
             )
             res = self.resolver.resolve(inp)
 
@@ -727,6 +756,13 @@ class ExtractBenchAdapter:
                 box = res.bbox
                 if self.enable_bbox_precision:
                     box = box.align_to_line_height(min(0.018, max(0.009, res.bbox.height * 1.35)))
+                is_cb = (
+                    isinstance(value, bool)
+                    or (isinstance(value, str) and value.strip().lower() in ("true", "false", "yes", "no"))
+                    or any(k in path.lower() for k in ("_box", "checkbox", "change_", "due_", "classification_", "new_rrc_"))
+                )
+                if is_scanned_form and not is_cb and table_name is None:
+                    box = self._expand_box_into_line_gaps(box, res.page)
                 citation = {
                     "field_path": path,
                     "page": res.page,
@@ -1199,11 +1235,10 @@ class ExtractBenchAdapter:
                             curr_slot += 2 if is_two_slot else 1
                         ref_r = None
                     elif consistent_indices:
-                        ref_r, ref_l = consistent_indices[0]
-                        ref_y = ref_l.bbox.y
-                        ref_h = min(0.012, max(0.008, ref_l.bbox.height))
-                        ref_w = ref_l.bbox.width
-                        ref_x = ref_l.bbox.x
+                        ref_l0 = consistent_indices[0][1]
+                        ref_h = min(0.012, max(0.008, ref_l0.bbox.height))
+                        ref_w = ref_l0.bbox.width
+                        ref_x = ref_l0.bbox.x
                         if len(consistent_indices) >= 2:
                             steps = [
                                 (consistent_indices[k + 1][1].bbox.y - consistent_indices[k][1].bbox.y)
@@ -1214,6 +1249,46 @@ class ExtractBenchAdapter:
                             med_step = steps[len(steps) // 2]
                         else:
                             med_step = 0.0114 if M >= 20 else 0.016
+
+                        # Piecewise linear interpolation between known anchors
+                        for r_idx in page_rows:
+                            p_rec = f"{table_name}[{r_idx}]"
+                            if p_rec not in record_anchors:
+                                prev_anchors = [ci for ci in consistent_indices if ci[0] <= r_idx]
+                                next_anchors = [ci for ci in consistent_indices if ci[0] >= r_idx]
+                                if prev_anchors and next_anchors:
+                                    r_a, l_a = prev_anchors[-1]
+                                    r_b, l_b = next_anchors[0]
+                                    if r_b > r_a:
+                                        frac = (r_idx - r_a) / float(r_b - r_a)
+                                        est_y = l_a.bbox.y + frac * (l_b.bbox.y - l_a.bbox.y)
+                                    else:
+                                        est_y = l_a.bbox.y
+                                elif prev_anchors:
+                                    r_a, l_a = prev_anchors[-1]
+                                    est_y = l_a.bbox.y + (r_idx - r_a) * med_step
+                                elif next_anchors:
+                                    r_b, l_b = next_anchors[0]
+                                    est_y = l_b.bbox.y - (r_b - r_idx) * med_step
+                                else:
+                                    est_y = ref_l0.bbox.y + (r_idx - consistent_indices[0][0]) * med_step
+
+                                if 0.03 <= est_y <= 0.96:
+                                    est_box = BBox(
+                                        x=ref_x,
+                                        y=est_y,
+                                        width=ref_w,
+                                        height=ref_h,
+                                        page=p_num,
+                                    )
+                                    record_anchors[p_rec] = (
+                                        p_num,
+                                        est_y + ref_h / 2.0,
+                                        ref_h,
+                                        est_box,
+                                        None,
+                                    )
+                        ref_r = None
                     elif M >= 20:
                         # Fallback for dense tabular pages with missed OCR anchors
                         ref_r = page_rows[0]
@@ -1222,10 +1297,6 @@ class ExtractBenchAdapter:
                         ref_w = 0.85
                         ref_x = 0.05
                         med_step = 0.0114
-                    else:
-                        ref_r = None
-
-                    if ref_r is not None:
                         for r_idx in page_rows:
                             p_rec = f"{table_name}[{r_idx}]"
                             if p_rec not in record_anchors:
@@ -1245,6 +1316,8 @@ class ExtractBenchAdapter:
                                         est_box,
                                         None,
                                     )
+                    else:
+                        ref_r = None
 
             # Consolidate discovered column coordinates across the table
             if table_col_positions is not None:

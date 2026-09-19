@@ -122,12 +122,38 @@ class EvidenceResolver:
 
         # Step 2: Candidate Ranking
         if len(candidates) == 1:
+            if extraction.y_hint is not None:
+                cand_cy = candidates[0].bbox.y + candidates[0].bbox.height / 2.0
+                if abs(cand_cy - extraction.y_hint) > 0.040:
+                    return ResolutionResult(
+                        field=field,
+                        value=value,
+                        status=ProvenanceStatus.NOT_FOUND,
+                        page=None,
+                        bbox=None,
+                        confidence=0.0,
+                        explanation="Single candidate outside row vertical tolerance",
+                    )
             scored_candidates = [(candidates[0], 5.0)]
         else:
-            scored_candidates = self._score_candidates_with_context(candidates, context)
+            scored_candidates = self._score_candidates_with_context(
+                candidates, context, y_hint=extraction.y_hint
+            )
             scored_candidates.sort(key=lambda item: item[1], reverse=True)
 
         top_cand, top_score = scored_candidates[0]
+        if extraction.y_hint is not None:
+            top_cy = top_cand.bbox.y + top_cand.bbox.height / 2.0
+            if abs(top_cy - extraction.y_hint) > 0.040:
+                return ResolutionResult(
+                    field=field,
+                    value=value,
+                    status=ProvenanceStatus.NOT_FOUND,
+                    page=None,
+                    bbox=None,
+                    confidence=0.0,
+                    explanation="Top candidate outside row vertical tolerance",
+                )
 
         # Step 3: Candidate Verification (Strict Verification Stage)
         if self.verifier is not None:
@@ -184,8 +210,9 @@ class EvidenceResolver:
         self,
         candidates: list[MatchCandidate],
         context: str,
+        y_hint: float | None = None,
     ) -> list[tuple[MatchCandidate, float]]:
-        """Score each candidate based on spatial proximity to context label."""
+        """Score each candidate based on spatial proximity to context label and row y_hint."""
         norm_context = normalize_unicode_and_case(context).text.strip()
         cand_texts = {normalize_unicode_and_case(c.matched_text).text.strip() for c in candidates}
         context_words = [
@@ -218,6 +245,17 @@ class EvidenceResolver:
             if not page:
                 scored.append((cand, score))
                 continue
+
+            # Row y_hint guidance: heavily reward candidates on the specified row line
+            if y_hint is not None:
+                cand_cy = cand.bbox.y + cand.bbox.height / 2.0
+                dy = abs(cand_cy - y_hint)
+                if dy <= 0.012:
+                    score += 12.0 * (1.0 - dy / 0.012)
+                elif dy <= 0.025:
+                    score += 4.0 * (1.0 - (dy - 0.012) / 0.013)
+                else:
+                    score -= min(25.0, dy * 60.0)
 
             context_label_boxes = labels_by_page.get(cand.page, [])
 
