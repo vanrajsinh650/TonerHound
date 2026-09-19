@@ -98,12 +98,14 @@ class ExtractBenchAdapter:
         enable_verification: bool = True,
         score_margin_threshold: float = 0.05,
         enable_bbox_precision: bool = True,
+        enable_page_fallback: bool = True,
     ) -> None:
         self.index = index
         self.enable_structural_disambiguation = enable_structural_disambiguation
         self.enable_verification = enable_verification
         self.score_margin_threshold = score_margin_threshold
         self.enable_bbox_precision = enable_bbox_precision
+        self.enable_page_fallback = enable_page_fallback
         self.resolver = EvidenceResolver(
             index,
             enable_verification=enable_verification,
@@ -126,6 +128,56 @@ class ExtractBenchAdapter:
         if hasattr(self.index, "get_paragraph_blocks"):
             return self.index.get_paragraph_blocks(page_num=page_num)
         return []
+
+    def _expand_box_into_line_gaps(self, box: BBox, page_num: int) -> BBox:
+        """Expand narrow token bboxes into adjacent line whitespace gaps to match form cell bounds."""
+        if box.width >= 0.25:
+            return box
+        page_obj = self.index.get_page(page_num)
+        if not page_obj or not page_obj.lines:
+            return box
+
+        yc = box.y + box.height / 2.0
+        matched_line = None
+        for l in page_obj.lines:
+            l_yc = l.bbox.y + l.bbox.height / 2.0
+            if abs(l_yc - yc) <= max(0.010, box.height):
+                matched_line = l
+                break
+
+        if not matched_line or not matched_line.tokens or len(matched_line.tokens) < 2:
+            return box
+
+        toks = sorted(matched_line.tokens, key=lambda t: t.bbox.x)
+        overlapping = [
+            t for t in toks
+            if max(t.bbox.x, box.x) < min(t.bbox.x + t.bbox.width, box.x + box.width)
+        ]
+        if not overlapping:
+            return box
+
+        first_idx = toks.index(overlapping[0])
+        last_idx = toks.index(overlapping[-1])
+
+        # Left gap expansion
+        if first_idx > 0:
+            prev_x1 = toks[first_idx - 1].bbox.x + toks[first_idx - 1].bbox.width
+            gap_l = max(0.0, box.x - prev_x1)
+            pad_l = min(0.040, gap_l * 0.45)
+        else:
+            pad_l = min(0.025, max(0.0, box.x - 0.065))
+
+        # Right gap expansion
+        if last_idx < len(toks) - 1:
+            next_x0 = toks[last_idx + 1].bbox.x
+            gap_r = max(0.0, next_x0 - (box.x + box.width))
+            pad_r = min(0.040, gap_r * 0.45)
+        else:
+            pad_r = min(0.025, max(0.0, 0.92 - (box.x + box.width)))
+
+        new_x = max(0.0, box.x - pad_l)
+        new_w = min(1.0 - new_x, box.width + pad_l + pad_r)
+        return BBox(x=new_x, y=box.y, width=new_w, height=box.height, page=box.page)
 
     def ground_extracted_data(
         self,
@@ -199,6 +251,33 @@ class ExtractBenchAdapter:
                 if parent_rec in ("", "root"):
                     continue
                 self._resolve_single_record_anchor(parent_rec, fields, doc_offset, record_anchors, record_page_hints)
+
+            # Step 2b (Agent 7 Pillar 1): Determine consensus page for root scalar records
+            root_fields = non_table_records.get("root", []) + non_table_records.get("", [])
+            if root_fields:
+                if len(self.index.pages) == 1:
+                    record_page_hints["root"] = 1
+                    record_page_hints[""] = 1
+                else:
+                    page_votes: dict[int, float] = defaultdict(float)
+                    for path, val, ph, ctx, _rec in root_fields:
+                        if val is None or isinstance(val, bool):
+                            continue
+                        val_str = str(val).strip()
+                        if len(val_str) >= 4 and not val_str.replace(".", "").replace(",", "").isdigit():
+                            matches = self.index.search_exact(val_str)
+                            if matches:
+                                up = {m[0].page for m in matches}
+                                if len(up) == 1:
+                                    page_votes[next(iter(up))] += 2.0
+                                elif len(up) <= 3:
+                                    for p in up:
+                                        page_votes[p] += 0.5
+                    if page_votes:
+                        best_root_page, best_votes = max(page_votes.items(), key=lambda x: x[1])
+                        if best_votes >= 2.0:
+                            record_page_hints["root"] = best_root_page
+                            record_page_hints[""] = best_root_page
         else:
             table_offsets = {}
             table_col_positions = {}
@@ -657,6 +736,34 @@ class ExtractBenchAdapter:
                     "source": "tonerhound",
                 }
                 citations.append(citation)
+
+        # Step 4 (Agent 7 Pillar 5): Guaranteed page citation fallback
+        if self.enable_page_fallback:
+            existing_paths = {c["field_path"] for c in citations}
+            for path, value, page_hint, context, parent_record_path in leaves:
+                if path in existing_paths or value is None:
+                    continue
+                fallback_page = None
+                if len(self.index.pages) == 1:
+                    fallback_page = 1
+                elif parent_record_path in record_page_hints:
+                    fallback_page = record_page_hints[parent_record_path]
+                elif page_hint is not None:
+                    table_name = parent_record_path.split("[")[0] if "[" in parent_record_path else None
+                    eff_offset = table_offsets.get(table_name, doc_offset) if table_name else doc_offset
+                    fallback_page = max(1, min(len(self.index.pages), page_hint + eff_offset))
+                elif "root" in record_page_hints and parent_record_path in ("", "root"):
+                    fallback_page = record_page_hints["root"]
+
+                if fallback_page is not None:
+                    citations.append({
+                        "field_path": path,
+                        "page": fallback_page,
+                        "bbox": None,
+                        "reference_text": str(value),
+                        "confidence": 0.40,
+                        "source": "tonerhound_page_fallback",
+                    })
 
         return {
             "task_type": "extract",

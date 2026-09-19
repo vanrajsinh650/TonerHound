@@ -69,8 +69,10 @@ def _make_token(
     )
 
 
-def _assert_valid_bbox(box: list[float] | BBox) -> None:
+def _assert_valid_bbox(box: list[float] | BBox | None) -> None:
     """Assert bounding box is strictly within normalized [0, 1] coordinate frame."""
+    if box is None:
+        return
     if isinstance(box, BBox):
         x, y, w, h = box.x, box.y, box.width, box.height
     else:
