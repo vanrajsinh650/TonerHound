@@ -1,0 +1,148 @@
+{
+  "experiment_id": "EXP-012",
+  "title": "Flat-Form Label-Grounded Reranker",
+  "status": "COMPLETED",
+  "phase": "Phase 2 Complete \u2014 Ablation & Regression Gate Verified",
+  "started": "2026-09-19",
+  "baseline_experiment": "EXP-011",
+  "target_cohort": "flat-form documents (78 docs from EXP-011 failure set)",
+  "primary_metric": "Candidate Recall@1 on flat-form cohort",
+  "baseline_metrics": {
+    "cohort_docs": 78,
+    "avg_word_grounding_f1": 32.93,
+    "avg_page_f1": 86.83,
+    "avg_recall_at_1": 28.43,
+    "wrong_occurrences": 1187
+  },
+  "phase1_forensic_findings": {
+    "dominant_failure_mode": "same-row wrong-column (31.9% of wrong-occur) and near-match confusion (36%)",
+    "vertical_filter_signal": {
+      "description": "Row-band confinement |dy| <= T removes wrong candidates with near-zero regression risk",
+      "safety_rates": {
+        "1040": "100%",
+        "1065_k1": "100%",
+        "texas_rrc": "100%",
+        "w2": "100% at T=0.025"
+      },
+      "per_family_coverage": {
+        "1040": "79.1% at T=0.005 (666 wrong candidates removed)",
+        "1065_k1": "44.9% at T=0.010 (48 wrong candidates removed)",
+        "texas_rrc": "37.5% at T=0.008 (300 wrong candidates removed)",
+        "w2": "37.9% at T=0.025 (130 wrong candidates removed)"
+      }
+    },
+    "w2_inversion": "W-2 values appear LEFT of labels (inverted vs all other families)",
+    "x_direction_finding": "Directional x-rule fails for W-2; must be family-gated"
+  },
+  "phase2_design": {
+    "pipeline_stages": [
+      "Stage 1: Vertical family-gated filter (|dy| <= T_family)",
+      "Stage 2: Directional relationship (find label token, family-gated direction)",
+      "Stage 3: Label proximity re-selection (pick candidate in label row-band)",
+      "Stage 4: Competing-label suppression (multi-label disambiguation by field-key match)",
+      "Stage 5: Passthrough to existing verifier"
+    ],
+    "family_params": {
+      "w2": {
+        "T": 0.025,
+        "label_dir": "RIGHT",
+        "search_radius": 0.3
+      },
+      "1040": {
+        "T": 0.008,
+        "label_dir": "LEFT",
+        "search_radius": 0.25
+      },
+      "1065_k1": {
+        "T": 0.01,
+        "label_dir": "LEFT",
+        "search_radius": 0.2
+      },
+      "texas_rrc": {
+        "T": 0.008,
+        "label_dir": "LEFT",
+        "search_radius": 0.2
+      }
+    },
+    "ablation_configs": {
+      "A": "EXP-011 baseline (no change)",
+      "B": "+ vertical family-gated filter",
+      "C": "+ directional relationship",
+      "D": "+ label proximity re-selection",
+      "E": "+ competing-label suppression",
+      "F": "Full EXP-012"
+    },
+    "evaluation_protocol": {
+      "focused_set": "34-doc flat-form cohort (primary)",
+      "regression_gate": "32-doc frozen manifest (EXP-011 frozen baseline, must not regress)",
+      "full_370": "Only after 34-doc results and 32-doc gate pass"
+    }
+  },
+  "ablation_results": {
+    "A_baseline": {
+      "r1": 26.25,
+      "wf1": 31.07,
+      "pf1": 77.87,
+      "wrong_occur": 1105,
+      "delta_r1": 0.0
+    },
+    "B_vertical": {
+      "r1": 26.51,
+      "wf1": 31.33,
+      "pf1": 77.87,
+      "wrong_occur": 1100,
+      "delta_r1": 0.26
+    },
+    "C_direction": {
+      "r1": 26.47,
+      "wf1": 31.29,
+      "pf1": 77.87,
+      "wrong_occur": 1101,
+      "delta_r1": 0.22
+    },
+    "D_label": {
+      "r1": 26.37,
+      "wf1": 31.19,
+      "pf1": 77.87,
+      "wrong_occur": 1102,
+      "delta_r1": 0.12
+    },
+    "E_suppress": {
+      "r1": 26.27,
+      "wf1": 31.09,
+      "pf1": 77.87,
+      "wrong_occur": 1103,
+      "delta_r1": 0.02
+    },
+    "F_full": {
+      "r1": 26.39,
+      "wf1": 31.21,
+      "pf1": 77.87,
+      "wrong_occur": 1100,
+      "delta_r1": 0.14
+    }
+  },
+  "files": {
+    "core_reranker": "src/tonerhound/resolution/flat_form_reranker.py",
+    "ablation_runner": "benchmarks/run_exp012_ablation.py",
+    "focused_manifest": "benchmarks/exp012_flat_form_manifest.json",
+    "evaluator": "scratch/eval_exp012_flat_forms.py",
+    "vertical_ablation": "scratch/exp012_vertical_ablation.py",
+    "phase1_data": {
+      "agent_a_geometry": "scratch/exp012_agent_a_results.json",
+      "agent_b_thresholds": "scratch/exp012_agent_b_results.json",
+      "agent_c_competing": "scratch/exp012_agent_c_results.json",
+      "agent_d_generalization": "scratch/exp012_agent_d_results.json",
+      "vertical_ablation_results": "scratch/exp012_vertical_ablation_results.json"
+    }
+  },
+  "regression_gate": {
+    "passed": true,
+    "total_docs": 32,
+    "regressions": 0,
+    "wins": [
+      "short/07021-2016-p0026 (+4.3pp)",
+      "medium/bar-lev-2022 (+0.8pp)"
+    ]
+  }
+}
