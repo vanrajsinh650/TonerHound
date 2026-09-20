@@ -1,0 +1,216 @@
+{
+  "experiment_id": "EXP-013",
+  "title": "Candidate Generation Recovery",
+  "status": "COMPLETED",
+  "phase": "Phase 2 Complete — Focused Cohort & 32-Doc Regression Gate Verified (STOPPED before 370-Doc Benchmark per Instructions)",
+  "started": "2026-09-20",
+  "baseline_experiment": "EXP-011 + EXP-012",
+  "target_cohort": "Focused flat-form failure cohort (34 docs) and 32-doc frozen regression gate",
+  "primary_metric": "Candidate Recall@5 (Reference ~96.36% macro / ~61.34% on 32-doc baseline / ~36.73% on focused cohort)",
+  "hypothesis": "The next major performance ceiling on ExtractBench is candidate generation, not candidate ranking. Physical evidence present in document text and OCR glyphs is absent or fragmented in candidate pools across 5 distinct failure classes. Recovering these candidates at generation time will lift Candidate Recall@5, Recall@1, and downstream Word Grounding F1 without degrading precision or introducing template-specific rules.",
+  "priority_failure_classes": [
+    {
+      "class_id": 1,
+      "name": "Spaced-token numeric recovery",
+      "example": "'3 3 . 3 3 3 3 %' recovered as 33.3333%",
+      "description": "OCR/PDF text stream tokenizes each digit or separator into isolated tokens; standard candidate generators look for contiguous strings and miss them."
+    },
+    {
+      "class_id": 2,
+      "name": "OCR-fragmented numeric values",
+      "example": "'-3' + '186' -> -3186 or '21,' + '693.' -> 21693",
+      "description": "Negative signs, currency symbols, and thousands separators cause token splits where neither piece alone matches the target value."
+    },
+    {
+      "class_id": 3,
+      "name": "Split currency and percentage tokens",
+      "example": "'33.3333333' + '%' -> unified bounding box covering both value and unit",
+      "description": "Units detached by small spatial gaps (<= 0.035 document width) cause ground truth bounding box mismatch if not absorbed into the candidate span."
+    },
+    {
+      "class_id": 4,
+      "name": "Fragmented multi-token field values (interleaved sub-rows)",
+      "example": "'TELCO EXPERTS LLC' interleaved with street address tokens in reading order",
+      "description": "Multi-column or complex sub-row layouts place tokens from different semantic fields in the same reading order line; resolved by horizontal y-band sub-band clustering."
+    },
+    {
+      "class_id": 5,
+      "name": "Bounded character-span matching with missing anchor tokens",
+      "example": "'Fruitland Park FL 34731' matching when leading token is OCR-corrupted ('itland')",
+      "description": "High-confidence sub-spans recovered when an anchor token is missing or corrupted, falling back gracefully without false positives."
+    }
+  ],
+  "rules_compliance": {
+    "benchmark_specific_doc_ids_added": false,
+    "hardcoded_coordinates": false,
+    "hardcoded_known_values": false,
+    "form_1065_specific_hacks": false,
+    "word_iou_evaluation_modified": false,
+    "verifier_thresholds_weakened": false,
+    "downstream_resolver_preserved": "EXP-011 + EXP-012 fully active downstream",
+    "stopped_before_370_benchmark": true
+  },
+  "focused_cohort_ablation_34docs": {
+    "A_exp011": {
+      "num_docs": 34,
+      "candidate_recall_at_1": 34.41,
+      "candidate_recall_at_5": 36.73,
+      "candidate_recall_at_20": 37.07,
+      "word_grounding_f1": 31.07,
+      "word_grounding_precision": 39.49,
+      "word_grounding_recall": 26.44,
+      "page_grounding_f1": 77.87,
+      "false_grounding_rate": 0.0,
+      "ambiguity_rate": 17.22,
+      "total_runtime_sec": 14.49
+    },
+    "B_exp011_exp012": {
+      "num_docs": 34,
+      "candidate_recall_at_1": 34.44,
+      "candidate_recall_at_5": 36.73,
+      "candidate_recall_at_20": 37.07,
+      "word_grounding_f1": 31.21,
+      "word_grounding_precision": 39.63,
+      "word_grounding_recall": 26.58,
+      "page_grounding_f1": 77.87,
+      "false_grounding_rate": 0.0,
+      "ambiguity_rate": 17.22,
+      "total_runtime_sec": 14.37
+    },
+    "C_exp011_exp012_exp013": {
+      "num_docs": 34,
+      "candidate_recall_at_1": 35.49,
+      "candidate_recall_at_5": 38.39,
+      "candidate_recall_at_20": 39.19,
+      "word_grounding_f1": 32.07,
+      "word_grounding_precision": 39.84,
+      "word_grounding_recall": 27.45,
+      "page_grounding_f1": 77.95,
+      "false_grounding_rate": 0.0,
+      "ambiguity_rate": 21.0,
+      "total_runtime_sec": 50.53,
+      "deltas_vs_baseline": {
+        "candidate_recall_at_1": "+1.08 pp",
+        "candidate_recall_at_5": "+1.66 pp",
+        "candidate_recall_at_20": "+2.12 pp",
+        "word_grounding_f1": "+1.00 pp",
+        "page_grounding_f1": "+0.08 pp"
+      }
+    },
+    "D_exp011_exp013": {
+      "num_docs": 34,
+      "candidate_recall_at_1": 35.47,
+      "candidate_recall_at_5": 38.40,
+      "candidate_recall_at_20": 39.19,
+      "word_grounding_f1": 31.90,
+      "word_grounding_precision": 39.65,
+      "word_grounding_recall": 27.29,
+      "page_grounding_f1": 77.95,
+      "false_grounding_rate": 0.0,
+      "ambiguity_rate": 21.0,
+      "total_runtime_sec": 52.07
+    }
+  },
+  "regression_gate_32docs": {
+    "passed": true,
+    "total_docs": 32,
+    "material_regressions": 0,
+    "A_exp011": {
+      "candidate_recall_at_1": 60.09,
+      "candidate_recall_at_5": 61.34,
+      "candidate_recall_at_20": 61.56,
+      "word_grounding_f1": 59.04,
+      "word_grounding_precision": 61.23,
+      "word_grounding_recall": 57.53,
+      "page_grounding_f1": 92.59,
+      "false_grounding_rate": 0.0,
+      "ambiguity_rate": 13.56,
+      "total_runtime_sec": 148.34
+    },
+    "B_exp011_exp012": {
+      "candidate_recall_at_1": 60.07,
+      "candidate_recall_at_5": 61.34,
+      "candidate_recall_at_20": 61.56,
+      "word_grounding_f1": 59.20,
+      "word_grounding_precision": 61.42,
+      "word_grounding_recall": 57.67,
+      "page_grounding_f1": 92.59,
+      "false_grounding_rate": 0.0,
+      "ambiguity_rate": 13.56,
+      "total_runtime_sec": 147.30
+    },
+    "C_exp011_exp012_exp013": {
+      "candidate_recall_at_1": 60.50,
+      "candidate_recall_at_5": 62.04,
+      "candidate_recall_at_20": 62.52,
+      "word_grounding_f1": 59.57,
+      "word_grounding_precision": 61.92,
+      "word_grounding_recall": 57.95,
+      "page_grounding_f1": 92.69,
+      "false_grounding_rate": 0.0,
+      "ambiguity_rate": 14.66,
+      "total_runtime_sec": 223.92,
+      "deltas_vs_baseline": {
+        "candidate_recall_at_1": "+0.41 pp",
+        "candidate_recall_at_5": "+0.70 pp",
+        "candidate_recall_at_20": "+0.96 pp",
+        "word_grounding_f1": "+0.53 pp",
+        "page_grounding_f1": "+0.10 pp"
+      }
+    },
+    "D_exp011_exp013": {
+      "candidate_recall_at_1": 60.51,
+      "candidate_recall_at_5": 62.05,
+      "candidate_recall_at_20": 62.52,
+      "word_grounding_f1": 59.55,
+      "word_grounding_precision": 61.90,
+      "word_grounding_recall": 57.92,
+      "page_grounding_f1": 92.69,
+      "false_grounding_rate": 0.0,
+      "ambiguity_rate": 14.66,
+      "total_runtime_sec": 222.74
+    }
+  },
+  "diagnostics_summary": {
+    "32_doc_gate_total_recoveries": 4808,
+    "32_doc_gate_mechanism_counts": {
+      "spaced_numeric": 2254,
+      "ocr_fragmented_numeric": 2028,
+      "y_band_interleaved": 268,
+      "bounded_span": 178,
+      "split_percentage_currency": 80
+    },
+    "focused_cohort_total_recoveries": 4600,
+    "focused_cohort_mechanism_counts": {
+      "spaced_numeric": 1962,
+      "ocr_fragmented_numeric": 1746,
+      "y_band_interleaved": 666,
+      "bounded_span": 224,
+      "split_percentage_currency": 2
+    }
+  },
+  "test_suite_status": {
+    "unit_tests_added": "tests/test_candidate_recovery.py",
+    "unit_tests_passing": 7,
+    "unit_tests_coverage": [
+      "test_recovery_class_1_spaced_token_numeric",
+      "test_recovery_class_2_ocr_fragmented_numeric",
+      "test_recovery_class_2_thousands_separator_fragment",
+      "test_recovery_class_3_split_percentage_symbol",
+      "test_recovery_class_4_interleaved_sub_row_tokens",
+      "test_recovery_class_5_bounded_span_missing_anchor",
+      "test_recovery_diagnostics_recorded"
+    ],
+    "full_suite_passing": "165/165 passing in 29.07s"
+  },
+  "files": {
+    "core_recovery_engine": "src/tonerhound/matching/candidate_recovery.py",
+    "resolver_integration": "src/tonerhound/resolution/resolver.py",
+    "unit_tests": "tests/test_candidate_recovery.py",
+    "ablation_runner": "benchmarks/run_exp013_ablation.py",
+    "focused_ablation_data": "research/experiments/exp013_focused_ablation.json",
+    "regression_gate_data": "research/experiments/exp013_32doc_gate.json",
+    "experiment_report_md": "docs/experiments/EXP-013.md",
+    "experiment_report_json": "docs/experiments/EXP-013.json"
+  }
+}

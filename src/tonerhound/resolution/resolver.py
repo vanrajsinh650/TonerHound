@@ -11,6 +11,7 @@ from typing import Any
 
 from tonerhound.document.index import DocumentIndex
 from tonerhound.geometry.coordinates import BBox, union_bbox_list
+from tonerhound.matching.candidate_recovery import CandidateRecoveryEngine
 from tonerhound.matching.matcher import EvidenceMatcher, MatchCandidate
 from tonerhound.models.types import (
     ExtractionInput,
@@ -31,6 +32,7 @@ class EvidenceResolver:
         enable_verification: bool = True,
         score_margin_threshold: float = 0.05,
         reranker: StructuralReranker | None = None,
+        enable_candidate_recovery: bool = True,
     ) -> None:
         self.index = index
         self.matcher = EvidenceMatcher(index)
@@ -52,28 +54,23 @@ class EvidenceResolver:
                 w_page=15.0,
             )
         )
+        self.enable_candidate_recovery = enable_candidate_recovery
+        self.recovery_engine = (
+            CandidateRecoveryEngine(index) if enable_candidate_recovery else None
+        )
+        self.last_field_candidates: dict[str, list[MatchCandidate]] = {}
 
-    def resolve(self, extraction: ExtractionInput) -> ResolutionResult:
-        """Resolve physical evidence for an extracted field."""
+    def collect_candidates(self, extraction: ExtractionInput) -> list[MatchCandidate]:
+        """Collect all matching candidates across standard tiers and recovery engine."""
         field = extraction.field
         value = extraction.value
         evidence_text = extraction.evidence_text
         context = extraction.field_context or field
         page_hint = extraction.page_hint
 
-        # Handle null / empty extraction
         if value is None or (isinstance(value, str) and not value.strip()):
-            return ResolutionResult(
-                field=field,
-                value=value,
-                status=ProvenanceStatus.EXACT,
-                page=None,
-                bbox=None,
-                confidence=1.0,
-                explanation="Null / empty field",
-            )
+            return []
 
-        # Step 1: Candidate Generation across tiers
         candidates: list[MatchCandidate] = []
 
         # Tier 1a: Exact match on evidence_text (if provided)
@@ -82,7 +79,11 @@ class EvidenceResolver:
 
         # Tier 1b: If value is numeric, prioritize normalized numeric matching over raw float str()
         is_num = isinstance(value, (int, float)) and not isinstance(value, bool)
-        is_bool = isinstance(value, bool) or (isinstance(value, str) and value.strip().lower() in ("true", "false", "yes", "no") and any(k in field.lower() for k in ("_box", "checkbox", "is_", "has_", "flag", "_yes", "_no", "final", "amended", "general", "domestic", "contributed")))
+        is_bool = isinstance(value, bool) or (
+            isinstance(value, str)
+            and value.strip().lower() in ("true", "false", "yes", "no")
+            and any(k in field.lower() for k in ("_box", "checkbox", "is_", "has_", "flag", "_yes", "_no", "final", "amended", "general", "domestic", "contributed"))
+        )
 
         # Tier 1-bool: Checkbox candidate generation
         if not candidates and is_bool:
@@ -120,6 +121,60 @@ class EvidenceResolver:
                 candidates.extend(self.matcher.find_exact_candidates(str(value), page_hint=None))
             if not candidates and isinstance(value, str) and not is_bool:
                 candidates.extend(self.matcher.find_normalized_date_candidates(value, page_hint=None))
+
+        # EXP-013: Modular Candidate Recovery Engine
+        if self.recovery_engine is not None:
+            has_exact = any(c.match_type == "exact" for c in candidates)
+            rec_cands = self.recovery_engine.recover(
+                value=value,
+                page_hint=page_hint,
+                field_name=field,
+                field_context=context,
+                evidence_text=evidence_text,
+                has_exact_match=has_exact,
+            )
+            if not candidates:
+                candidates.extend(rec_cands)
+            elif rec_cands:
+                for rc in rec_cands:
+                    if not any(rc.page == c.page and rc.bbox.iou(c.bbox) >= 0.70 for c in candidates):
+                        candidates.append(rc)
+
+            # Global recovery fallback for small documents if still zero candidates
+            if not candidates and page_hint is not None and len(self.index.pages) <= 10:
+                candidates.extend(self.recovery_engine.recover(
+                    value=value,
+                    page_hint=None,
+                    field_name=field,
+                    field_context=context,
+                    evidence_text=evidence_text,
+                ))
+
+        return candidates
+
+    def resolve(self, extraction: ExtractionInput) -> ResolutionResult:
+        """Resolve physical evidence for an extracted field."""
+        field = extraction.field
+        value = extraction.value
+        evidence_text = extraction.evidence_text
+        context = extraction.field_context or field
+        page_hint = extraction.page_hint
+
+        # Handle null / empty extraction
+        if value is None or (isinstance(value, str) and not value.strip()):
+            return ResolutionResult(
+                field=field,
+                value=value,
+                status=ProvenanceStatus.EXACT,
+                page=None,
+                bbox=None,
+                confidence=1.0,
+                explanation="Null / empty field",
+            )
+
+        # Step 1: Candidate Generation across tiers + recovery
+        candidates = self.collect_candidates(extraction)
+        self.last_field_candidates[field] = list(candidates)
 
         # If zero candidates found: Check for derived vs not_found
         if not candidates:
@@ -348,7 +403,7 @@ class EvidenceResolver:
                     score -= 2.0
 
             # Bonus for exact match type over normalized or fuzzy
-            if cand.match_type == "exact":
+            if cand.match_type == "exact" or cand.match_type.startswith("recovered"):
                 score += 0.5
             elif cand.match_type.startswith("normalized"):
                 score += 0.3
