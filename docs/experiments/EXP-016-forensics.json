@@ -1,0 +1,348 @@
+{
+  "experiment_id": "EXP-016",
+  "title": "Remaining Geometry Opportunity / Leverage Analysis",
+  "status": "COMPLETED_FORENSIC_STAGE",
+  "current_frozen_stack": "EXP-011 + EXP-012 + EXP-013 + EXP-014 + EXP-015",
+  "frozen_32doc_baseline_f1": 60.18,
+  "near_miss_universe": {
+    "initial_near_miss_citations": 4605,
+    "recovered_by_exp015": 784,
+    "remaining_near_miss_citations": 3821,
+    "post_exp015_mean_iou": 0.28926973215907736
+  },
+  "subtype_distribution_remaining": {
+    "J_other": 1616,
+    "A_single_token_too_narrow": 974,
+    "E_ocr_character_box_fragmentation": 508,
+    "I_wrong_physical_extent_overextended": 359,
+    "H_coordinate_normalization_error": 255,
+    "D_whitespace_form_cell_boundary": 61,
+    "C_multiline_evidence": 24,
+    "B_punctuation_adjacent_fragmentation": 14,
+    "F_tokenization_mismatch": 8,
+    "G_line_grouping_error": 2
+  },
+  "prioritized_classes_analysis": {
+    "A_single_token_too_narrow": {
+      "remaining_citations": 974,
+      "share_of_remaining_pct": 25.49,
+      "current_mean_iou": 0.233,
+      "pct_exact_text_correct": 97.33,
+      "pct_usable_neighboring_geometry": 97.74,
+      "reachable_mean_iou": 0.5769,
+      "safe_recoverable_citations": 559,
+      "safe_recovery_pct": 57.39,
+      "implemented_without_ocr": true,
+      "regression_risk": "Very Low",
+      "generalization_potential": "Very High",
+      "implementation_complexity": "Low",
+      "recommended_rank": 1,
+      "key_documents": [
+        {
+          "doc_id": "long/real_imedia_full_corrupted",
+          "citations": 878
+        },
+        {
+          "doc_id": "medium/real_bbb_service_list_corrupted",
+          "citations": 20
+        },
+        {
+          "doc_id": "medium/becerra-2022",
+          "citations": 6
+        },
+        {
+          "doc_id": "medium/becerra-2023",
+          "citations": 6
+        },
+        {
+          "doc_id": "short/real_clinton_property_25_11073_corrupted",
+          "citations": 6
+        },
+        {
+          "doc_id": "medium/bar-lev-2023",
+          "citations": 5
+        },
+        {
+          "doc_id": "medium/bar-lev-2021",
+          "citations": 3
+        },
+        {
+          "doc_id": "medium/bar-lev-2024",
+          "citations": 3
+        }
+      ],
+      "recoverable_example": {
+        "doc_id": "medium/becerra-2022",
+        "field_path": "form_8949.part2_long_term_transactions[2].description_of_property",
+        "target_val": "184.000 sh WSHFX American Funds Washington",
+        "pred_text": "184.000",
+        "gt_box": [
+          0.0317,
+          0.4664,
+          0.4309,
+          0.0142
+        ],
+        "pred_box": [
+          0.03442,
+          0.465126,
+          0.067029,
+          0.015
+        ],
+        "cur_iou": 0.1483,
+        "reachable_iou": 0.952,
+        "mechanism": "Same-line multi-token horizontal concatenation matching unconsumed target words"
+      },
+      "unmodifiable_example": {
+        "doc_id": "medium/bar-lev-2021",
+        "field_path": "schedule_2.line_3_part1_total",
+        "target_val": "0",
+        "pred_text": "0.",
+        "gt_box": [
+          0.9033,
+          0.2072,
+          0.0274,
+          0.0159
+        ],
+        "pred_box": [
+          0.910264,
+          0.207955,
+          0.007331,
+          0.015
+        ],
+        "cur_iou": 0.2524,
+        "risk_reason": "Single-character target with no unconsumed words; horizontal padding risks column leakage"
+      }
+    },
+    "J_complex_residual_table_noise": {
+      "remaining_citations": 1616,
+      "share_of_remaining_pct": 42.29,
+      "current_mean_iou": 0.3221,
+      "pct_exact_text_correct": 56.56,
+      "pct_usable_neighboring_geometry": 56.56,
+      "reachable_mean_iou": 0.5248,
+      "safe_recoverable_citations": 387,
+      "safe_recovery_pct": 23.95,
+      "implemented_without_ocr": true,
+      "regression_risk": "Low (for dot-leader trimming) / Medium (for height clipping)",
+      "generalization_potential": "High (dot-leader SEC schedules)",
+      "implementation_complexity": "Low-Medium",
+      "recommended_rank": 2,
+      "sub_archetypes": {
+        "dot_leader_inclusion": {
+          "citations": 492,
+          "recoverable_citations": 363,
+          "recovery_rate_pct": 73.8
+        },
+        "multiline_block_height_bloat": {
+          "citations": 108,
+          "recoverable_citations": 24,
+          "recovery_rate_pct": 22.2
+        },
+        "corrupted_table_distortions": {
+          "citations": 1016,
+          "recoverable_citations": 0,
+          "recovery_rate_pct": 0.0
+        }
+      },
+      "recoverable_example": {
+        "doc_id": "long/real_ishares_iboxx_bond_etfs",
+        "field_path": "holdings[19].security_name",
+        "target_val": "Bombardier, Inc., 6.00%, 02/15/28",
+        "pred_text": "6.00%, 02/15/28(a)(b) .................................................",
+        "gt_box": [
+          0.05051,
+          0.56687,
+          0.08254,
+          0.01068
+        ],
+        "pred_box": [
+          0.050505,
+          0.564214,
+          0.230863,
+          0.016
+        ],
+        "cur_iou": 0.2386,
+        "reachable_iou": 0.684,
+        "mechanism": "Truncate bounding box width prior to dot-leader sequence ('...')"
+      },
+      "unmodifiable_example": {
+        "doc_id": "long/real_credit_strategies_full",
+        "field_path": "holdings[26].security_name",
+        "target_val": "OHA Loan Funding Ltd., Series 2013-1A, Class D1R3, (3-mo. CME Term SOFR + 3.30%), 7.16%, 04/23/37",
+        "pred_text": "OHA Loan Funding Ltd., Series 2013-1A, CarVal CLO VC Ltd., Series 2021-2A, Class D1R3, (3-mo. CME Term SOFR",
+        "gt_box": [
+          0.52189,
+          0.56552,
+          0.22034,
+          0.0093
+        ],
+        "pred_box": [
+          0.030303,
+          0.565512,
+          0.711913,
+          0.020921
+        ],
+        "cur_iou": 0.1376,
+        "risk_reason": "Multiple table columns smashed horizontally across lines; unrecoverable by 1D box adjustment"
+      }
+    },
+    "H_coordinate_normalization_error": {
+      "remaining_citations": 255,
+      "share_of_remaining_pct": 6.67,
+      "current_mean_iou": 0.3487,
+      "pct_exact_text_correct": 100.0,
+      "pct_usable_neighboring_geometry": 100.0,
+      "reachable_mean_iou": 0.7049,
+      "safe_recoverable_citations": 255,
+      "safe_recovery_pct": 100.0,
+      "implemented_without_ocr": true,
+      "regression_risk": "Medium-High (requires per-page affine model to prevent regressing passing citations)",
+      "generalization_potential": "Low (99.6% concentrated in real_imedia_full_corrupted)",
+      "implementation_complexity": "Medium-High",
+      "recommended_rank": 3,
+      "recoverable_example": {
+        "doc_id": "long/real_imedia_full_corrupted",
+        "field_path": "creditors[27].zip",
+        "target_val": "11788",
+        "pred_text": "11788",
+        "gt_box": [
+          0.853046,
+          0.383988,
+          0.017091,
+          0.008351
+        ],
+        "pred_box": [
+          0.849545,
+          0.385139,
+          0.01625,
+          0.0098
+        ],
+        "cur_iou": 0.4367,
+        "reachable_iou": 0.755,
+        "mechanism": "Per-page affine vertical and horizontal offset calibration"
+      },
+      "unmodifiable_example": {
+        "doc_id": "long/real_imedia_full_corrupted",
+        "field_path": "creditors[25].zip",
+        "target_val": "77002",
+        "pred_text": "77002",
+        "gt_box": [
+          0.853195,
+          0.362744,
+          0.017561,
+          0.008358
+        ],
+        "pred_box": [
+          0.849545,
+          0.361754,
+          0.01625,
+          0.0098
+        ],
+        "cur_iou": 0.5243,
+        "risk_reason": "Already-passing citation (IoU >= 0.50); any global shift regresses it below 0.50"
+      }
+    },
+    "E_ocr_character_box_fragmentation": {
+      "remaining_citations": 508,
+      "share_of_remaining_pct": 13.29,
+      "current_mean_iou": 0.1984,
+      "pct_exact_text_correct": 94.29,
+      "pct_usable_neighboring_geometry": 94.29,
+      "reachable_mean_iou": 0.7988,
+      "safe_recoverable_citations": 479,
+      "safe_recovery_pct": 94.29,
+      "implemented_without_ocr": false,
+      "regression_risk": "High (glyph fragment merging easily bridges tight column gaps)",
+      "generalization_potential": "Low (heavily concentrated in real_imedia OCR scans)",
+      "implementation_complexity": "High",
+      "recommended_rank": 4,
+      "recoverable_example": {
+        "doc_id": "medium/real_enotes_deviations_corrupted",
+        "field_path": "communications[76].author",
+        "target_val": "Trisha Hunt",
+        "pred_text": "rm'ha Hunt",
+        "gt_box": [
+          0.280752,
+          0.317534,
+          0.075765,
+          0.013907
+        ],
+        "pred_box": [
+          0.272941,
+          0.311818,
+          0.091176,
+          0.017273
+        ],
+        "cur_iou": 0.4995,
+        "reachable_iou": 0.685,
+        "mechanism": "Adjacent OCR character fragment bounding box merging"
+      },
+      "unmodifiable_example": {
+        "doc_id": "medium/cabrera-2023",
+        "field_path": "spouse_itemizes_box",
+        "target_val": "False",
+        "pred_text": "[ ]",
+        "gt_box": [
+          0.1492,
+          0.3533,
+          0.0163,
+          0.0173
+        ],
+        "pred_box": [
+          0.14232,
+          0.3535,
+          0.018,
+          0.018
+        ],
+        "cur_iou": 0.4573,
+        "risk_reason": "Form template checkbox; expanding or shifting glyph box aligns into form labels"
+      }
+    }
+  },
+  "opportunity_ranking": [
+    {
+      "rank": 1,
+      "class_id": "A",
+      "name": "Single Token Too Narrow (Multi-Token Same-Line Extension)",
+      "safe_recoverable_citations": 559,
+      "expected_word_f1_lift_pp": 0.95,
+      "generalizability": "Very High",
+      "regression_risk": "Very Low",
+      "implementation_complexity": "Low",
+      "actionability": "HIGH_PRIORITY_FOR_EXP016_OR_EXP017"
+    },
+    {
+      "rank": 2,
+      "class_id": "J_sub_dotleader",
+      "name": "Residual Table Noise Subtype: Dot-Leader Trimming & Single-Line Height Normalization",
+      "safe_recoverable_citations": 387,
+      "expected_word_f1_lift_pp": 0.65,
+      "generalizability": "High",
+      "regression_risk": "Low",
+      "implementation_complexity": "Low",
+      "actionability": "HIGH_PRIORITY_FOR_EXP016_OR_EXP017"
+    },
+    {
+      "rank": 3,
+      "class_id": "H",
+      "name": "Coordinate Normalization (Affine Drift)",
+      "safe_recoverable_citations": 255,
+      "expected_word_f1_lift_pp": 0.35,
+      "generalizability": "Low",
+      "regression_risk": "Medium-High",
+      "implementation_complexity": "Medium-High",
+      "actionability": "DEFER_OR_ISOLATE_TO_DOCUMENT_SPECIFIC"
+    },
+    {
+      "rank": 4,
+      "class_id": "E",
+      "name": "OCR Character-Box Fragmentation",
+      "safe_recoverable_citations": 479,
+      "expected_word_f1_lift_pp": 0.5,
+      "generalizability": "Low",
+      "regression_risk": "High",
+      "implementation_complexity": "High",
+      "actionability": "REQUIRES_OCR_PIPELINE_REDESIGN"
+    }
+  ]
+}

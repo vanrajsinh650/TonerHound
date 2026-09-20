@@ -13,7 +13,9 @@ from dataclasses import dataclass
 from typing import Any
 
 from tonerhound.document.index import DocumentIndex
+from tonerhound.geometry.character_span import reconstruct_safe_character_span
 from tonerhound.geometry.coordinates import BBox, union_bbox_list
+from tonerhound.geometry.same_line_recovery import extend_same_line_tokens
 from tonerhound.models.types import DocumentToken, ExtractionInput
 from tonerhound.normalization.normalizers import (
     is_number_equal,
@@ -99,6 +101,8 @@ class ExtractBenchAdapter:
         score_margin_threshold: float = 0.05,
         enable_bbox_precision: bool = True,
         enable_page_fallback: bool = True,
+        enable_character_span: bool = False,
+        enable_same_line_recovery: bool = False,
     ) -> None:
         self.index = index
         self.enable_structural_disambiguation = enable_structural_disambiguation
@@ -106,11 +110,57 @@ class ExtractBenchAdapter:
         self.score_margin_threshold = score_margin_threshold
         self.enable_bbox_precision = enable_bbox_precision
         self.enable_page_fallback = enable_page_fallback
+        self.enable_character_span = enable_character_span
+        self.enable_same_line_recovery = enable_same_line_recovery
         self.resolver = EvidenceResolver(
             index,
             enable_verification=enable_verification,
             score_margin_threshold=score_margin_threshold,
         )
+
+    def _apply_geometry_enhancements(
+        self,
+        box: BBox,
+        page: int,
+        ref_text: str,
+        value: Any,
+        confidence: float,
+        is_table_cell: bool = False,
+    ) -> BBox:
+        """Apply safe character-span reconstruction (EXP-015) and same-line token recovery (EXP-017)."""
+        if not self.enable_character_span and not self.enable_same_line_recovery:
+            return box
+
+        if self.enable_character_span:
+            res_span = reconstruct_safe_character_span(box, ref_text, value, confidence=confidence)
+            if isinstance(res_span, BBox):
+                box = res_span
+            elif isinstance(res_span, (tuple, list)) and len(res_span) >= 4:
+                box = BBox(x=res_span[0], y=res_span[1], width=res_span[2], height=res_span[3], page=page)
+
+        # Mandatory Safety Gate: Never extend across competing table column boundaries
+        if self.enable_same_line_recovery and not is_table_cell:
+            page_obj = self.index.get_page(page)
+            if page_obj and page_obj.lines:
+                line_tokens = [
+                    t
+                    for l in page_obj.lines
+                    if abs(l.bbox.y - box.y) <= max(0.015, box.height)
+                    for t in l.tokens
+                ]
+                res_ext = extend_same_line_tokens(
+                    box,
+                    ref_text,
+                    value,
+                    line_tokens,
+                    confidence=confidence,
+                )
+                if isinstance(res_ext, BBox):
+                    box = res_ext
+                elif isinstance(res_ext, (tuple, list)) and len(res_ext) >= 4:
+                    box = BBox(x=res_ext[0], y=res_ext[1], width=res_ext[2], height=res_ext[3], page=page)
+
+        return box
 
     @property
     def layout_blocks(self) -> list[Any]:
@@ -752,6 +802,9 @@ class ExtractBenchAdapter:
                     is_cb = is_bool or any(k in path.lower() for k in ("_box", "checkbox", "change_", "due_", "classification_", "new_rrc_"))
                     if is_scanned_form and not is_cb and table_name is None:
                         box = self._expand_box_into_line_gaps(box, anc_page)
+                    box = self._apply_geometry_enhancements(
+                        box, anc_page, resolved_text or str(value), value, 0.90, is_table_cell=(table_name is not None)
+                    )
                     citations.append({
                         "field_path": path,
                         "page": anc_page,
@@ -775,6 +828,9 @@ class ExtractBenchAdapter:
                         box, ref_text = page_matches[0]
                         if self.enable_bbox_precision:
                             box = box.align_to_line_height(min(0.018, max(0.009, box.height * 1.35)))
+                        box = self._apply_geometry_enhancements(
+                            box, effective_page_hint, ref_text, value, 0.85
+                        )
                         citations.append({
                             "field_path": path,
                             "page": effective_page_hint,
@@ -856,6 +912,9 @@ class ExtractBenchAdapter:
                 )
                 if is_scanned_form and not is_cb and table_name is None:
                     box = self._expand_box_into_line_gaps(box, res.page)
+                box = self._apply_geometry_enhancements(
+                    box, res.page, res.matched_text or str(value), value, res.confidence
+                )
                 citation = {
                     "field_path": path,
                     "page": res.page,

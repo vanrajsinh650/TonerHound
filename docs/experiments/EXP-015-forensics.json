@@ -1,0 +1,202 @@
+{
+  "experiment_id": "EXP-015",
+  "title": "Safe Character-Span Reconstruction Forensics & Geometry Resolution",
+  "status": "COMPLETED_FORENSIC_STAGE",
+  "phase": "Forensic Analysis & Offline Ablation Complete — NO PRODUCTION COMMIT (STOPPED per Instructions)",
+  "date": "2026-09-20",
+  "baseline_frozen_stack": "EXP-011 + EXP-012 + EXP-013",
+  "baseline_32doc_word_f1": 59.57,
+  "exp014_geometry_baseline_word_f1": 59.85,
+  "exp015_safe_char_span_word_f1": 60.18,
+  "central_hypothesis": "A large fraction of current grounding failures already have the correct semantic evidence and character span present in the token tree; the remaining bottleneck is constructing its physical bounding geometry precisely enough to cross the 0.50 IoU threshold without naive linear assumptions or boundary leakage.",
+  "phase_1_forensic_analysis": {
+    "total_false_expansions_analyzed": 6,
+    "false_expansions": [
+      {
+        "id": 1,
+        "doc_id": "long/real_ofac_ssi_full",
+        "field_path": "entities[295].aliases[11].name",
+        "target_value": "BANK VTB PUBLICHNOE AKTSIONERNOE OBSHCHESTVO",
+        "raw_token_text": "- 12. BANK VTB PUBLICHNOE AKTSIONERNOE OBSHCHESTVO;",
+        "cause_classification": "wrong_span_boundary_leading_offset",
+        "root_cause": "The raw token contained a leading index prefix ('- 12. ') starting at x=0.0897, while the target name started at x=0.1505. The naive character-span fix scaled width from the left edge while keeping x=0.0897 anchored, failing to shift X rightward past the bullet."
+      },
+      {
+        "id": 2,
+        "doc_id": "long/real_ofac_ssi_full",
+        "field_path": "entities[313].aliases[2].name",
+        "target_value": "VEB ENGINEERING LIMITED LIABILITY COMPANY",
+        "raw_token_text": "- 3. VEB ENGINEERING LIMITED LIABILITY COMPANY;",
+        "cause_classification": "wrong_span_boundary_leading_offset",
+        "root_cause": "Leading bullet and alias index included in raw token box; naive scaling left false left margin intact."
+      },
+      {
+        "id": 3,
+        "doc_id": "long/real_ofac_ssi_full",
+        "field_path": "entities[328].aliases[3].name",
+        "target_value": "OTKRYTOE AKTSIONERNOE OBSHCHESTVO SBERBANK ROSSII",
+        "raw_token_text": "- 4. OTKRYTOE AKTSIONERNOE OBSHCHESTVO SBERBANK ROSSII;",
+        "cause_classification": "wrong_span_boundary_leading_offset",
+        "root_cause": "Leading bullet and alias index included in raw token box."
+      },
+      {
+        "id": 4,
+        "doc_id": "long/real_ofac_ssi_full",
+        "field_path": "entities[509].aliases[1].name",
+        "target_value": "VTB PENSION ADMINISTRATOR LIMITED",
+        "raw_token_text": "- 2. VTB PENSION ADMINISTRATOR LIMITED;",
+        "cause_classification": "wrong_span_boundary_leading_offset",
+        "root_cause": "Leading bullet and alias index included in raw token box."
+      },
+      {
+        "id": 5,
+        "doc_id": "long/real_ofac_ssi_full",
+        "field_path": "entities[782].aliases[1].name",
+        "target_value": "OPEN JOINT-STOCK COMPANY RT-STROITELNYYE TEKHNOLOGII",
+        "raw_token_text": "- 2. OPEN JOINT-STOCK COMPANY RT-STROITELNYYE TEKHNOLOGII;",
+        "cause_classification": "wrong_span_boundary_leading_offset",
+        "root_cause": "Leading bullet and alias index included in raw token box."
+      },
+      {
+        "id": 6,
+        "doc_id": "medium/real_enotes_deviations_corrupted",
+        "field_path": "communications[172].text",
+        "target_value": "Subject #1020(b) was only seated (1) minute prior to vitals being taken at week 6 visit. Per the protocol, subjects must be seated for (5) minutes prior to vitals.",
+        "raw_token_text": "Subject #1 020(b) was only seated (1) mmute prior to vitals bemg taken at week 6 vnsn Per the 3 55 protocol subjects must: be seated for (5) minutes prior to vifals.",
+        "cause_classification": "token_normalization_ocr_noise",
+        "root_cause": "OCR whitespace insertions (#1 020(b)) and corrupted token runs caused length discrepancy; naive character ratio truncated the box at an incorrect internal position."
+      }
+    ],
+    "regression_root_causes": {
+      "table_dot_leaders": "In financial table portfolios (e.g. real_credit_strategies_full), dot leaders (........) connecting entity names to currency figures were captured in raw token text. Naive character scaling truncated the box in the middle of whitespace leaders, dropping IoU below 0.10.",
+      "adjacent_row_concatenation": "Adjacent multi-column cell tokens merged into a single line buffer, causing character ratio to partition unrelated column tokens."
+    },
+    "representative_successes": [
+      {
+        "pattern": "trailing_footnote_markers",
+        "example": "'02/15/31(a)(b)' -> '02/15/31'",
+        "iou_change": "0.4384 -> 0.6673 (+0.2289)"
+      },
+      {
+        "pattern": "trailing_punctuation_splits",
+        "example": "'B,' -> 'B'",
+        "iou_change": "0.4104 -> 0.5811 (+0.1707)"
+      },
+      {
+        "pattern": "leading_currency_symbols",
+        "example": "'$1,250.00' -> '1,250.00'",
+        "iou_change": "0.4210 -> 0.8850 (+0.4640)"
+      }
+    ]
+  },
+  "phase_2_safe_resolver_design": {
+    "principles": [
+      "Exact character start/end offset detection via substring matching",
+      "Proportional dual-axis adjustment (shift X when start_char > 0, scale W based on span length)",
+      "Strict safety guards rejecting dot leaders (....) and table noise",
+      "Threshold gating requiring confidence >= 0.80 and preserving all citations with IoU >= 0.50",
+      "Token continuity verification on identical visual line"
+    ],
+    "safety_conditions_audited": {
+      "high_confidence_match": true,
+      "exact_span_known": true,
+      "physically_continuous": true,
+      "no_unrelated_field_cross": true,
+      "not_materially_wider": true,
+      "strong_groundings_unchanged": true,
+      "zero_hardcoding_compliance": true
+    }
+  },
+  "phase_3_offline_ablation": {
+    "cohort_size": 4605,
+    "configurations": {
+      "A_exp014_geometry_baseline": {
+        "crossing_threshold_ge_050": 307,
+        "crossing_pct": 6.67,
+        "improved_citations": 948,
+        "mean_iou_delta": 0.0292,
+        "regressions": 2,
+        "false_expansions": 1
+      },
+      "B_unguarded_char_span": {
+        "crossing_threshold_ge_050": 769,
+        "crossing_pct": 16.70,
+        "improved_citations": 861,
+        "mean_iou_delta": 0.0459,
+        "regressions": 109,
+        "false_expansions": 6
+      },
+      "C_strictly_gated_safe_char_span": {
+        "crossing_threshold_ge_050": 477,
+        "crossing_pct": 10.36,
+        "improved_citations": 515,
+        "mean_iou_delta": 0.0194,
+        "regressions": 0,
+        "false_expansions": 1
+      },
+      "D_exp015_combined_stack": {
+        "crossing_threshold_ge_050": 784,
+        "crossing_pct": 17.02,
+        "improved_citations": 1463,
+        "mean_iou_delta": 0.0485,
+        "regressions": 2,
+        "false_expansions": 1
+      }
+    },
+    "verdict": "Config C eliminates 100% of regressions (0 vs 109) while preserving 477 crossings over IoU >= 0.50. Combined Stack Config D recovers 784 citations (+17.02% of all near-misses) with an average IoU delta of +0.0485."
+  },
+  "phase_4_32doc_validation": {
+    "suite": "Frozen 32-Document Benchmark (benchmarks/exp005_local_manifest.json)",
+    "comparison": {
+      "EXP-013": {
+        "word_grounding_f1": 59.57,
+        "word_grounding_precision": 61.92,
+        "word_grounding_recall": 57.95,
+        "page_grounding_f1": 92.69,
+        "candidate_recall_at_1": 60.50,
+        "candidate_recall_at_5": 62.04,
+        "false_grounding_rate": 0.0,
+        "ambiguity_rate": 14.66
+      },
+      "EXP-014": {
+        "word_grounding_f1": 59.85,
+        "word_grounding_precision": 62.14,
+        "word_grounding_recall": 58.11,
+        "page_grounding_f1": 92.69,
+        "candidate_recall_at_1": 60.50,
+        "candidate_recall_at_5": 62.04,
+        "false_grounding_rate": 0.0,
+        "ambiguity_rate": 14.66
+      },
+      "EXP-015": {
+        "word_grounding_f1": 60.18,
+        "word_grounding_precision": 62.42,
+        "word_grounding_recall": 58.39,
+        "page_grounding_f1": 92.69,
+        "candidate_recall_at_1": 60.50,
+        "candidate_recall_at_5": 62.04,
+        "false_grounding_rate": 0.0,
+        "ambiguity_rate": 14.66
+      }
+    },
+    "deltas_exp015_vs_exp013": {
+      "word_grounding_f1": "+0.61 pp (59.57% -> 60.18%)",
+      "word_grounding_precision": "+0.50 pp (61.92% -> 62.42%)",
+      "word_grounding_recall": "+0.44 pp (57.95% -> 58.39%)",
+      "page_grounding_f1": "0.00 pp (92.69% -> 92.69%)",
+      "regressions": 0,
+      "document_wins": 5
+    }
+  },
+  "unit_tests": {
+    "file": "tests/test_character_span.py",
+    "tests_count": 5,
+    "status": "ALL_PASSING (170/170 suite tests green)"
+  },
+  "rules_compliance": {
+    "no_370_benchmark_run": true,
+    "no_production_code_modified": true,
+    "no_production_commit_created": true,
+    "stopped_per_instructions": true
+  }
+}
