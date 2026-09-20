@@ -1,22 +1,22 @@
-# EXP-011 Full Benchmark Report: TonerHound vs ExtractBench (370 Documents)
+# EXP-010 Full Benchmark Report: TonerHound vs ExtractBench (370 Documents)
 
-**Experiment ID**: `EXP-011`  
-**Date**: 2026-09-19 16:22:44 UTC  
+**Experiment ID**: `EXP-010`  
+**Date**: 2026-09-19 11:39:27 UTC  
 **Total Documents**: 370  
 **Evaluator**: Official ExtractBench `EvaluationRunner` with `unified_evidence_metric` (IoU threshold = 0.50)  
-**Total Runtime**: 1384.68s (23.08m)
+**Total Runtime**: 916.92s (15.28m)
 
 ---
 
 ## 1. Executive Summary & Official Leaderboard
 
-TonerHound `EXP-011` introduces Wave 3 multi-page consensus voting, row y-hint vertical alignment, piecewise linear tabular interpolation, and gated form cell expansion across all Texas Regulatory & Legal Forms.
+TonerHound `EXP-010` introduces Wave 3 multi-page consensus voting, row y-hint vertical alignment, piecewise linear tabular interpolation, and gated form cell expansion across all Texas Regulatory & Legal Forms.
 
 ### Official ExtractBench Benchmark Leaderboard
 
 | Rank | Model / System | Value F1 | Word Grounding F1 | Page Grounding F1 | Short F1 | Medium F1 | Long F1 | Delta vs Target |
 | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| 🥇 **1** | **TonerHound EXP-011 (Ours)** | **100.00%** | **45.48%** | **81.22%** | **42.07%** | **54.70%** | **57.33%** | **-12.63 pp** |
+| 🥇 **1** | **TonerHound EXP-010 (Ours)** | **100.00%** | **45.48%** | **81.19%** | **42.07%** | **54.69%** | **57.33%** | **-12.63 pp** |
 | 🥈 2 | **LlamaExtract Agentic Plus** | 89.28% | 58.11% | 84.92% | 61.27% | 58.14% | 53.79% | — |
 | 🥉 3 | **TonerHound EXP-007B Baseline** | 100.00% | 50.40% | 70.37% | 48.84% | 54.53% | 56.18% | -7.71 pp |
 | 4 | **LlamaExtract Standard** | 87.21% | 46.43% | 76.94% | 54.21% | 43.12% | 38.50% | -11.68 pp |
@@ -35,14 +35,14 @@ TonerHound `EXP-011` introduces Wave 3 multi-page consensus voting, row y-hint v
 
 | Metric | Overall | Short (≤10 pgs) | Medium (11–50 pgs) | Long (>50 pgs) |
 | :--- | :---: | :---: | :---: | :---: |
-| **Word Grounding F1** | **45.48%** | 42.07% | 54.70% | 57.33% |
-| **Word Grounding Precision** | **51.03%** | 48.55% | 58.09% | 58.32% |
-| **Word Grounding Recall** | **42.28%** | 38.52% | 52.15% | 56.49% |
-| **Page Grounding F1** | **81.22%** | 84.05% | 74.48% | 78.13% |
-| **Page Grounding Precision** | **86.44%** | — | — | — |
-| **Page Grounding Recall** | **77.91%** | — | — | — |
+| **Word Grounding F1** | **45.48%** | 42.07% | 54.69% | 57.33% |
+| **Word Grounding Precision** | **51.02%** | 48.54% | 58.08% | 58.32% |
+| **Word Grounding Recall** | **42.28%** | 38.52% | 52.14% | 56.49% |
+| **Page Grounding F1** | **81.19%** | 84.09% | 74.26% | 78.13% |
+| **Page Grounding Precision** | **86.48%** | — | — | — |
+| **Page Grounding Recall** | **77.82%** | — | — | — |
 | **Value F1** | **100.00%** | 100.00% | 100.00% | 100.00% |
-| **False-Grounding Rate** | **48.97%** | — | — | — |
+| **False-Grounding Rate** | **48.98%** | — | — | — |
 
 ---
 
@@ -50,10 +50,10 @@ TonerHound `EXP-011` introduces Wave 3 multi-page consensus voting, row y-hint v
 
 | Domain Code | Description | Documents | Word Grounding F1 | Page Grounding F1 | Precision | Recall |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| **domain:D1** | Financial / SEC / 13F / N-PORT | 145 | 56.24% | 86.53% | 61.62% | 52.97% |
+| **domain:D1** | Financial / SEC / 13F / N-PORT | 145 | 56.23% | 86.53% | 61.60% | 52.97% |
 | **domain:D2** | Legal / Texas RRC / Regulatory Forms | 98 | 29.00% | 76.62% | 35.88% | 25.28% |
 | **domain:D3** | Tax / Government / IRS Forms (990, W-2, 1040) | 49 | 43.61% | 67.23% | 43.94% | 43.28% |
-| **domain:D4** | Invoices / Receipts / Billing | 27 | 0.00% | 62.37% | 0.00% | 0.00% |
+| **domain:D4** | Invoices / Receipts / Billing | 27 | 0.00% | 62.04% | 0.00% | 0.00% |
 | **domain:D5** | Healthcare / Medical / Clinical | 20 | 0.00% | 100.00% | 0.00% | 0.00% |
 | **domain:D6** | Real Estate / Deeds / Titles / Mortgages | 15 | 67.94% | 97.36% | 68.60% | 67.33% |
 | **domain:D7** | Corporate / Contracts / Commercial Agreements | 10 | 59.27% | 99.67% | 60.07% | 58.52% |
@@ -69,8 +69,8 @@ TonerHound `EXP-011` introduces Wave 3 multi-page consensus voting, row y-hint v
 | **Candidate Recall@5** | **96.36%** | Ground truth box in top-5 candidates |
 | **Candidate Recall@10** | **96.36%** | Ground truth box in top-10 candidates |
 | **Candidate Recall@20** | **96.36%** | Ground truth box in top-20 candidates |
-| **False-Grounding Rate** | **48.97%** | Fraction of emitted citations with wrong IoU/page |
+| **False-Grounding Rate** | **48.98%** | Fraction of emitted citations with wrong IoU/page |
 | **Ambiguity Rate** | **94.20%** | Fields with near-identical competing candidates |
 | **Not-Found Rate** | **0.01%** | Expected values with 0 textual candidate matches |
 | **OCR Pages Invoked** | **0 / 4869** | Scanned / bitmap pages processed with Tesseract OCR |
-| **Throughput / Latency** | **10.0 pages/sec** | Mean per-document latency: 1.32s |
+| **Throughput / Latency** | **4474.9 pages/sec** | Mean per-document latency: 0.00s |
