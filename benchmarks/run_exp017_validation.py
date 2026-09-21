@@ -49,8 +49,9 @@ from tonerhound.resolution.flat_form_reranker import FlatFormLabelReranker
 from tonerhound.resolution.resolver import EvidenceResolver
 
 CONFIGS = [
-    ("EXP-015", {"char_span": True, "same_line": False}),
-    ("EXP-017", {"char_span": True, "same_line": True}),
+    ("EXP-015", {"char_span": True, "same_line": False, "structure_aware": False}),
+    ("EXP-017", {"char_span": True, "same_line": True, "structure_aware": False}),
+    ("EXP-017R", {"char_span": True, "same_line": True, "structure_aware": True}),
 ]
 
 
@@ -98,6 +99,7 @@ class _ValidationAdapter(ExtractBenchAdapter):
         doc_id: str,
         enable_character_span: bool = False,
         enable_same_line_recovery: bool = False,
+        enable_structure_aware_recovery: bool = True,
     ) -> None:
         super().__init__(
             index,
@@ -108,6 +110,7 @@ class _ValidationAdapter(ExtractBenchAdapter):
             enable_page_fallback=True,
             enable_character_span=enable_character_span,
             enable_same_line_recovery=enable_same_line_recovery,
+            enable_structure_aware_recovery=enable_structure_aware_recovery,
         )
         self.resolver = _ValidationResolver(index=index, doc_id=doc_id)
 
@@ -234,6 +237,7 @@ def run_validation(
                 doc_id=tid,
                 enable_character_span=opts["char_span"],
                 enable_same_line_recovery=opts["same_line"],
+                enable_structure_aware_recovery=opts.get("structure_aware", True),
             )
             payload = adapter.ground_extracted_data(
                 test_case.expected_output,
@@ -317,40 +321,41 @@ def run_validation(
         print(f"  Runtime (s)       : {tot_time:6.2f}s")
         print("-" * 70)
 
-    # Document-level head-to-head comparison
+    # Document-level head-to-head comparisons
     exp015_map = {r.doc_id: r for r in results["EXP-015"]}
-    exp017_map = {r.doc_id: r for r in results["EXP-017"]}
+    exp017_map = {r.doc_id: r for r in results.get("EXP-017", [])}
+    exp017r_map = {r.doc_id: r for r in results.get("EXP-017R", [])}
 
-    wins = []
-    losses = []
-    ties = []
+    def _compare(cand_map: dict[str, Any], label: str) -> dict[str, Any]:
+        wins, losses, ties = [], [], []
+        for doc_id, r15 in exp015_map.items():
+            rcand = cand_map.get(doc_id)
+            if not rcand:
+                continue
+            diff = (rcand.word_grounding_f1 - r15.word_grounding_f1) * 100
+            if diff > 0.05:
+                wins.append((doc_id, diff, r15.word_grounding_f1 * 100, rcand.word_grounding_f1 * 100))
+            elif diff < -0.05:
+                losses.append((doc_id, diff, r15.word_grounding_f1 * 100, rcand.word_grounding_f1 * 100))
+            else:
+                ties.append((doc_id, diff))
+        print(f"\nHEAD-TO-HEAD COMPARISON ({label} vs EXP-015):")
+        print(f"  Wins   : {len(wins)}")
+        for w in wins:
+            print(f"    + {w[0]}: {w[2]:.2f}% -> {w[3]:.2f}% ({w[1]:+.2f} pp)")
+        print(f"  Losses : {len(losses)}")
+        for l in losses:
+            print(f"    - {l[0]}: {l[2]:.2f}% -> {l[3]:.2f}% ({l[1]:+.2f} pp)")
+        print(f"  Ties   : {len(ties)}")
+        return {"wins": wins, "losses": losses, "ties": len(ties)}
 
-    for doc_id, r15 in exp015_map.items():
-        r17 = exp017_map.get(doc_id)
-        if not r17:
-            continue
-        diff = (r17.word_grounding_f1 - r15.word_grounding_f1) * 100
-        if diff > 0.05:
-            wins.append((doc_id, diff, r15.word_grounding_f1 * 100, r17.word_grounding_f1 * 100))
-        elif diff < -0.05:
-            losses.append((doc_id, diff, r15.word_grounding_f1 * 100, r17.word_grounding_f1 * 100))
-        else:
-            ties.append((doc_id, diff))
-
-    print(f"\nHEAD-TO-HEAD COMPARISON (EXP-017 vs EXP-015):")
-    print(f"  Wins   : {len(wins)}")
-    for w in wins:
-        print(f"    + {w[0]}: {w[2]:.2f}% -> {w[3]:.2f}% ({w[1]:+.2f} pp)")
-    print(f"  Losses : {len(losses)}")
-    for l in losses:
-        print(f"    - {l[0]}: {l[2]:.2f}% -> {l[3]:.2f}% ({l[1]:+.2f} pp)")
-    print(f"  Ties   : {len(ties)}")
+    comp_017 = _compare(exp017_map, "EXP-017") if exp017_map else {}
+    comp_017r = _compare(exp017r_map, "EXP-017R") if exp017r_map else {}
 
     return {
         "summary": summary,
-        "wins": wins,
-        "losses": losses,
-        "ties": len(ties),
+        "exp017_vs_exp015": comp_017,
+        "exp017r_vs_exp015": comp_017r,
         "detailed_results": {k: [asdict(r) for r in v] for k, v in results.items()},
     }
 

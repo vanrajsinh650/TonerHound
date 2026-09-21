@@ -16,6 +16,7 @@ from tonerhound.document.index import DocumentIndex
 from tonerhound.geometry.character_span import reconstruct_safe_character_span
 from tonerhound.geometry.coordinates import BBox, union_bbox_list
 from tonerhound.geometry.same_line_recovery import extend_same_line_tokens
+from tonerhound.geometry.structure_classifier import TableStructureType, classify_table_structure
 from tonerhound.models.types import DocumentToken, ExtractionInput
 from tonerhound.normalization.normalizers import (
     is_number_equal,
@@ -103,6 +104,7 @@ class ExtractBenchAdapter:
         enable_page_fallback: bool = True,
         enable_character_span: bool = False,
         enable_same_line_recovery: bool = False,
+        enable_structure_aware_recovery: bool = True,
     ) -> None:
         self.index = index
         self.enable_structural_disambiguation = enable_structural_disambiguation
@@ -112,6 +114,7 @@ class ExtractBenchAdapter:
         self.enable_page_fallback = enable_page_fallback
         self.enable_character_span = enable_character_span
         self.enable_same_line_recovery = enable_same_line_recovery
+        self.enable_structure_aware_recovery = enable_structure_aware_recovery
         self.resolver = EvidenceResolver(
             index,
             enable_verification=enable_verification,
@@ -126,8 +129,9 @@ class ExtractBenchAdapter:
         value: Any,
         confidence: float,
         is_table_cell: bool = False,
+        max_right_boundary: float | None = None,
     ) -> BBox:
-        """Apply safe character-span reconstruction (EXP-015) and same-line token recovery (EXP-017)."""
+        """Apply safe character-span reconstruction (EXP-015) and same-line token recovery (EXP-017 / EXP-017R)."""
         if not self.enable_character_span and not self.enable_same_line_recovery:
             return box
 
@@ -154,6 +158,7 @@ class ExtractBenchAdapter:
                     value,
                     line_tokens,
                     confidence=confidence,
+                    max_right_boundary=max_right_boundary,
                 )
                 if isinstance(res_ext, BBox):
                     box = res_ext
@@ -345,12 +350,28 @@ class ExtractBenchAdapter:
                         if best_votes >= 2.0:
                             record_page_hints["root"] = best_root_page
                             record_page_hints[""] = best_root_page
+
+            # Step 2c (EXP-017R): Structure-Aware Table/Array Classification
+            table_structures: dict[str, TableStructureType] = {}
+            for tname, rmap in table_records.items():
+                is_grid = table_is_structured_grid.get(tname, False)
+                profile = classify_table_structure(
+                    table_name=tname,
+                    records_count=len(rmap),
+                    col_samples=table_col_positions.get(tname, {}),
+                    record_anchors=record_anchors,
+                    record_resolved_boxes=record_resolved_boxes,
+                    is_dense_grid=is_grid,
+                    row_leaves_map=rmap,
+                )
+                table_structures[tname] = profile.structure_type
         else:
             table_offsets = {}
             table_col_positions = {}
             page_skews = {}
             table_row_pitches = {}
             table_is_structured_grid = {}
+            table_structures = {}
             # Baseline Pass 1
             for path, value, page_hint, context, parent_record_path in leaves:
                 if value is None:
@@ -405,6 +426,30 @@ class ExtractBenchAdapter:
                 }
                 citations.append(citation)
                 continue
+
+            # Determine column position and structural protection (EXP-017R)
+            fld_name = path.split(".")[-1].split("[")[0].lower()
+            col_info = (
+                table_col_positions.get(table_name, {}).get(fld_name)
+                if (table_name and table_col_positions)
+                else None
+            )
+
+            is_protected_cell = False
+            if table_name is not None:
+                if self.enable_structure_aware_recovery:
+                    stype = table_structures.get(table_name, TableStructureType.UNKNOWN)
+                    is_protected_cell = (stype != TableStructureType.LINEAR_RECORD)
+                else:
+                    is_protected_cell = True
+
+            max_r_bound = None
+            if table_name and table_col_positions.get(table_name):
+                cur_x = col_info[0] if col_info else None
+                if cur_x is not None:
+                    other_xs = [c[0] for c in table_col_positions[table_name].values() if c[0] > cur_x + 0.03]
+                    if other_xs:
+                        max_r_bound = min(other_xs) - 0.005
 
             # Row-anchored resolution when structural disambiguation is active
             if self.enable_structural_disambiguation and anchor is not None:
@@ -802,8 +847,24 @@ class ExtractBenchAdapter:
                     is_cb = is_bool or any(k in path.lower() for k in ("_box", "checkbox", "change_", "due_", "classification_", "new_rrc_"))
                     if is_scanned_form and not is_cb and table_name is None:
                         box = self._expand_box_into_line_gaps(box, anc_page)
+                    sibs_on_line = [
+                        b.x for b in record_resolved_boxes.get(row_rec_key, [])
+                        if b.page == anc_page and abs(b.y - box.y) <= max(0.015, box.height) and b.x > box.x + box.width
+                    ]
+                    cur_bound = max_r_bound
+                    if sibs_on_line:
+                        sib_bound = min(sibs_on_line) - 0.005
+                        if cur_bound is None or sib_bound < cur_bound:
+                            cur_bound = sib_bound
+
                     box = self._apply_geometry_enhancements(
-                        box, anc_page, resolved_text or str(value), value, 0.90, is_table_cell=(table_name is not None)
+                        box,
+                        anc_page,
+                        resolved_text or str(value),
+                        value,
+                        0.90,
+                        is_table_cell=is_protected_cell,
+                        max_right_boundary=cur_bound,
                     )
                     citations.append({
                         "field_path": path,
@@ -829,7 +890,13 @@ class ExtractBenchAdapter:
                         if self.enable_bbox_precision:
                             box = box.align_to_line_height(min(0.018, max(0.009, box.height * 1.35)))
                         box = self._apply_geometry_enhancements(
-                            box, effective_page_hint, ref_text, value, 0.85
+                            box,
+                            effective_page_hint,
+                            ref_text,
+                            value,
+                            0.85,
+                            is_table_cell=is_protected_cell,
+                            max_right_boundary=max_r_bound,
                         )
                         citations.append({
                             "field_path": path,
@@ -912,8 +979,24 @@ class ExtractBenchAdapter:
                 )
                 if is_scanned_form and not is_cb and table_name is None:
                     box = self._expand_box_into_line_gaps(box, res.page)
+                sibs_on_line = [
+                    b.x for b in record_resolved_boxes.get(row_rec_key, [])
+                    if b.page == res.page and abs(b.y - box.y) <= max(0.015, box.height) and b.x > box.x + box.width
+                ]
+                cur_bound = max_r_bound
+                if sibs_on_line:
+                    sib_bound = min(sibs_on_line) - 0.005
+                    if cur_bound is None or sib_bound < cur_bound:
+                        cur_bound = sib_bound
+
                 box = self._apply_geometry_enhancements(
-                    box, res.page, res.matched_text or str(value), value, res.confidence
+                    box,
+                    res.page,
+                    res.matched_text or str(value),
+                    value,
+                    res.confidence,
+                    is_table_cell=is_protected_cell,
+                    max_right_boundary=cur_bound,
                 )
                 citation = {
                     "field_path": path,

@@ -42,10 +42,11 @@ def extend_same_line_tokens(
     line_tokens: Sequence[DocumentToken],
     confidence: float = 0.95,
     is_passed: bool = False,
+    max_right_boundary: float | None = None,
 ) -> BBox | tuple[float, float, float, float]:
     """Extend candidate bounding box across validated same-line sibling tokens.
 
-    Strictly satisfies all EXP-017 mandatory safety gates:
+    Strictly satisfies all EXP-017 / EXP-017R mandatory safety gates:
     - Pass protection: if candidate already passes (is_passed) or low confidence, returns unchanged.
     - Multi-token requirement: target value must contain 2 or more words.
     - Dot-leader hazard rejection: strings containing '...' are strictly bypassed.
@@ -53,6 +54,7 @@ def extend_same_line_tokens(
     - Sequential ordering: remaining target tokens must appear in order to the right.
     - Continuity: no unrelated tokens or excessive column gaps (> 0.08) between target tokens.
     - Exact termination: stops immediately at the end of the target sequence.
+    - Right boundary protection: never encroaches beyond max_right_boundary (adjacent column or sibling).
     """
     if is_passed or confidence < 0.80:
         return cand_bbox
@@ -115,6 +117,10 @@ def extend_same_line_tokens(
         if t == start_tok:
             continue
 
+        # Column / right boundary protection
+        if max_right_boundary is not None and t.bbox.x >= max_right_boundary:
+            break
+
         # Horizontal continuity: check gap between adjacent tokens
         gap = t.bbox.x - (prev_tok.bbox.x + prev_tok.bbox.width)
         if gap < -0.01:
@@ -152,6 +158,8 @@ def extend_same_line_tokens(
     boxes = [t.bbox for t in matched_tokens]
     min_x = min(b.x for b in boxes)
     max_x = max(b.x + b.width for b in boxes)
+    if max_right_boundary is not None and max_x > max_right_boundary:
+        max_x = max(cb_x + cb_w, max_right_boundary)
     min_y = min(b.y for b in boxes)
     max_y = max(b.y + b.height for b in boxes)
     out_w = max_x - min_x
