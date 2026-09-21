@@ -1,0 +1,163 @@
+{
+  "experiment_id": "EXP-018",
+  "title": "Safe Dot-Leader / Trailing-Padding Geometry Recovery",
+  "date": "2026-09-21",
+  "status": "PASSED_REGRESSION_GATE",
+  "baseline_stack": "EXP-011 + EXP-012 + EXP-013 + EXP-015 + EXP-017R",
+  "baseline_32doc_word_grounding_f1": 59.65,
+  "candidate_32doc_word_grounding_f1": 59.65,
+  "net_f1_delta_pp": 0.0,
+  "regressions": 0,
+  "losses": 0,
+  "wins": 0,
+  "ties": 32,
+  "class_j_forensics": {
+    "total_class_j_cohort": 1616,
+    "archetypes": {
+      "A_true_dot_leader": {
+        "description": "True dot-leader sequences ('...', '....', '…') bridging target entity to adjacent table columns",
+        "count": 372,
+        "percentage": 23.02,
+        "mean_iou": 0.2308,
+        "safely_recoverable": 363,
+        "recovery_rate_pct": 97.58,
+        "top_documents": {
+          "long/real_ishares_iboxx_bond_etfs": 372
+        },
+        "sample_case": {
+          "doc_id": "long/real_ishares_iboxx_bond_etfs",
+          "field_path": "holdings[19].security_name",
+          "target_val": "Bombardier, Inc., 6.00%, 02/15/28",
+          "pred_text": "6.00%, 02/15/28(a)(b) .................................................",
+          "gt_box": [0.05051, 0.56687, 0.08254, 0.01068],
+          "pred_box": [0.050505, 0.564214, 0.230863, 0.016],
+          "cur_iou": 0.2386,
+          "post_iou": 0.5948,
+          "delta_iou": 0.3562
+        }
+      },
+      "B_trailing_punctuation_footnotes": {
+        "description": "Trailing footnote markers '(a)(b)' or punctuation without repeated dot leaders",
+        "count": 242,
+        "percentage": 14.98,
+        "mean_iou": 0.3637,
+        "safely_recoverable": 0,
+        "action": "EXCLUDED_FROM_TRIMMING",
+        "hazard": "Alphanumeric footnote references cannot be trimmed as dots without corrupting target tokens",
+        "top_documents": {
+          "long/real_ishares_iboxx_bond_etfs": 78,
+          "long/real_credit_strategies_full": 49,
+          "medium/real_vg_healthcare_full": 37,
+          "medium/real_vg_primecap_full": 16
+        }
+      },
+      "C_legitimate_multicolumn_text": {
+        "description": "Genuine multi-column table content merged across column rails without dot leaders",
+        "count": 81,
+        "percentage": 5.01,
+        "mean_iou": 0.2625,
+        "safely_recoverable": 0,
+        "action": "EXCLUDED_FROM_TRIMMING",
+        "hazard": "Contains words and numbers from adjacent columns; blind coordinate truncation causes label collision",
+        "top_documents": {
+          "medium/real_bbb_service_list_corrupted": 32,
+          "long/real_ofac_ssi_full": 19,
+          "long/real_ishares_iboxx_bond_etfs": 11,
+          "long/real_imedia_full_corrupted": 5
+        }
+      },
+      "D_mashed_ocr_buffers": {
+        "description": "Multiple distinct table rows or records mashed into a single extractor buffer",
+        "count": 3,
+        "percentage": 0.19,
+        "mean_iou": 0.1996,
+        "safely_recoverable": 0,
+        "action": "EXCLUDED_FROM_TRIMMING",
+        "hazard": "Dots appear in middle between distinct record names; trimming creates arbitrary clipping",
+        "top_documents": {
+          "long/real_ofac_ssi_full": 2,
+          "long/real_credit_strategies_full": 1
+        }
+      },
+      "E1_multiline_height_bloat": {
+        "description": "Multiline block height bloat where horizontal coordinates match but box is 2.5x too tall",
+        "count": 240,
+        "percentage": 14.85,
+        "mean_iou": 0.3936,
+        "safely_recoverable": 0,
+        "action": "EXCLUDED_FROM_TRIMMING",
+        "top_documents": {
+          "medium/real_fidelity_northstar": 54,
+          "long/real_credit_strategies_full": 48,
+          "medium/real_blackrock_schedule_full": 35,
+          "medium/real_bbb_service_list_corrupted": 31
+        }
+      },
+      "E2_other_overextended_geometry": {
+        "description": "Scanned OCR noise, wide empty form-cell slots, or horizontal shifts without dots",
+        "count": 678,
+        "percentage": 41.96,
+        "mean_iou": 0.3277,
+        "safely_recoverable": 0,
+        "action": "EXCLUDED_FROM_TRIMMING",
+        "top_documents": {
+          "long/real_imedia_full_corrupted": 196,
+          "medium/real_bbb_service_list_corrupted": 121,
+          "long/real_ishares_iboxx_bond_etfs": 30,
+          "long/real_ofac_ssi_full": 17
+        }
+      }
+    }
+  },
+  "offline_cohort_evaluation": {
+    "total_citations": 1616,
+    "cases_modified": 372,
+    "cases_crossed_050": 363,
+    "cases_improved": 372,
+    "cases_regressed": 0,
+    "recovery_rate_pct": 22.46,
+    "recovery_rate_on_dot_cases_pct": 97.58,
+    "mean_iou_baseline": 0.3171,
+    "mean_iou_post": 0.4160,
+    "mean_iou_delta": 0.0989,
+    "mean_iou_delta_modified_only": 0.4298,
+    "false_trim_count": 0,
+    "false_trim_rate_pct": 0.0
+  },
+  "frozen_32doc_benchmark_validation": {
+    "manifest": "benchmarks/exp005_local_manifest.json",
+    "total_documents": 32,
+    "summary": {
+      "EXP-017R": {
+        "num_docs": 32,
+        "word_grounding_f1": 59.65,
+        "word_grounding_precision": 61.71,
+        "word_grounding_recall": 58.12,
+        "page_grounding_f1": 92.69,
+        "candidate_recall_at_1": 60.72,
+        "candidate_recall_at_5": 62.86,
+        "false_grounding_rate": 0.0,
+        "ambiguity_rate": 14.66,
+        "total_runtime_sec": 231.17
+      },
+      "EXP-018": {
+        "num_docs": 32,
+        "word_grounding_f1": 59.65,
+        "word_grounding_precision": 61.71,
+        "word_grounding_recall": 58.12,
+        "page_grounding_f1": 92.69,
+        "candidate_recall_at_1": 60.72,
+        "candidate_recall_at_5": 62.86,
+        "false_grounding_rate": 0.0,
+        "ambiguity_rate": 14.66,
+        "total_runtime_sec": 237.18
+      }
+    },
+    "head_to_head": {
+      "wins": 0,
+      "losses": 0,
+      "ties": 32
+    },
+    "regression_gate_status": "PASSED"
+  }
+}

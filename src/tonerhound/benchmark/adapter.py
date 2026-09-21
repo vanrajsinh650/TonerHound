@@ -15,6 +15,7 @@ from typing import Any
 from tonerhound.document.index import DocumentIndex
 from tonerhound.geometry.character_span import reconstruct_safe_character_span
 from tonerhound.geometry.coordinates import BBox, union_bbox_list
+from tonerhound.geometry.dot_leader_trimming import trim_dot_leaders
 from tonerhound.geometry.same_line_recovery import extend_same_line_tokens
 from tonerhound.geometry.structure_classifier import TableStructureType, classify_table_structure
 from tonerhound.models.types import DocumentToken, ExtractionInput
@@ -105,6 +106,7 @@ class ExtractBenchAdapter:
         enable_character_span: bool = False,
         enable_same_line_recovery: bool = False,
         enable_structure_aware_recovery: bool = True,
+        enable_dot_leader_trimming: bool = False,
     ) -> None:
         self.index = index
         self.enable_structural_disambiguation = enable_structural_disambiguation
@@ -115,6 +117,7 @@ class ExtractBenchAdapter:
         self.enable_character_span = enable_character_span
         self.enable_same_line_recovery = enable_same_line_recovery
         self.enable_structure_aware_recovery = enable_structure_aware_recovery
+        self.enable_dot_leader_trimming = enable_dot_leader_trimming
         self.resolver = EvidenceResolver(
             index,
             enable_verification=enable_verification,
@@ -131,8 +134,8 @@ class ExtractBenchAdapter:
         is_table_cell: bool = False,
         max_right_boundary: float | None = None,
     ) -> BBox:
-        """Apply safe character-span reconstruction (EXP-015) and same-line token recovery (EXP-017 / EXP-017R)."""
-        if not self.enable_character_span and not self.enable_same_line_recovery:
+        """Apply safe character-span reconstruction (EXP-015), same-line token recovery (EXP-017 / EXP-017R), and dot-leader trimming (EXP-018)."""
+        if not self.enable_character_span and not self.enable_same_line_recovery and not self.enable_dot_leader_trimming:
             return box
 
         if self.enable_character_span:
@@ -164,6 +167,31 @@ class ExtractBenchAdapter:
                     box = res_ext
                 elif isinstance(res_ext, (tuple, list)) and len(res_ext) >= 4:
                     box = BBox(x=res_ext[0], y=res_ext[1], width=res_ext[2], height=res_ext[3], page=page)
+
+        # EXP-018: Safe Dot-Leader / Trailing-Padding Geometry Recovery
+        if self.enable_dot_leader_trimming:
+            page_obj = self.index.get_page(page)
+            line_tokens = (
+                [
+                    t
+                    for l in page_obj.lines
+                    if abs(l.bbox.y - box.y) <= max(0.015, box.height)
+                    for t in l.tokens
+                ]
+                if page_obj and page_obj.lines
+                else None
+            )
+            res_trim = trim_dot_leaders(
+                cand_bbox=box,
+                reference_text=ref_text,
+                target_value=value,
+                line_tokens=line_tokens,
+                confidence=confidence,
+            )
+            if isinstance(res_trim, BBox):
+                box = res_trim
+            elif isinstance(res_trim, (tuple, list)) and len(res_trim) >= 4:
+                box = BBox(x=res_trim[0], y=res_trim[1], width=res_trim[2], height=res_trim[3], page=page)
 
         return box
 
