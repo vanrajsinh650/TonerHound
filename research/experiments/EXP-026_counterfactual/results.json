@@ -1,0 +1,87 @@
+{
+  "baseline": {
+    "cohort_a_dev": {
+      "word_f1": 0.5964979057107789,
+      "word_precision": 0.617106574533648,
+      "word_recall": 0.5811928185785515,
+      "page_f1": 0.926850018621535,
+      "grounded_docs_count": 32
+    },
+    "cohort_b_held": {
+      "word_f1": 0.4701954145126917,
+      "word_precision": 0.5135880405158795,
+      "word_recall": 0.44144068674408593,
+      "page_f1": 0.8661153008264229,
+      "grounded_docs_count": 32
+    },
+    "full_370": {
+      "word_f1": 0.45309099273453723,
+      "word_precision": 0.505229090640303,
+      "word_recall": 0.4217135707940125,
+      "page_f1": 0.8127517756798581,
+      "grounded_docs_count": 236
+    }
+  },
+  "variants": {
+    "pure_raw_selected": {
+      "title": "Variant A: Pure Raw Selected Candidate (FINAL CITATION = RAW SELECTED CANDIDATE BBOX)",
+      "mode": "raw_selected",
+      "cohort_a_dev": {
+        "word_f1": 0.4133511749464093,
+        "word_precision": 0.4236635827943653,
+        "word_recall": 0.40501155186948673,
+        "page_f1": 0.926850018621535,
+        "grounded_docs_count": 32
+      },
+      "cohort_b_held": {
+        "word_f1": 0.46636010494573776,
+        "word_precision": 0.501680915280863,
+        "word_recall": 0.44496485602774966,
+        "page_f1": 0.8661153008264229,
+        "grounded_docs_count": 32
+      },
+      "full_370": {
+        "word_f1": 0.43831885034847023,
+        "word_precision": 0.4871723584702751,
+        "word_recall": 0.40875012432905394,
+        "page_f1": 0.8127517756798581,
+        "grounded_docs_count": 370
+      },
+      "gain_vs_base": {
+        "cohort_a_word_f1_gain": -0.18314673076436955,
+        "cohort_b_word_f1_gain": -0.003835309566953937,
+        "full_word_f1_gain": -0.014772142386067
+      }
+    },
+    "scgf_restoration": {
+      "title": "Variant B: SCGF Restoration (Restore Candidate Bbox for all 57,856 SCGF fields)",
+      "mode": "scgf_fix",
+      "cohort_a_dev": {
+        "word_f1": 0.6545248144527965,
+        "word_precision": 0.6735394505638238,
+        "word_recall": 0.6400034025269654,
+        "page_f1": 0.926850018621535,
+        "grounded_docs_count": 32
+      },
+      "cohort_b_held": {
+        "word_f1": 0.5926797433546831,
+        "word_precision": 0.6399486388818078,
+        "word_recall": 0.5619010183534583,
+        "page_f1": 0.8661153008264229,
+        "grounded_docs_count": 32
+      },
+      "full_370": {
+        "word_f1": 0.5597888260156839,
+        "word_precision": 0.6210736761917511,
+        "word_recall": 0.5226186081273672,
+        "page_f1": 0.8127517756798581,
+        "grounded_docs_count": 370
+      },
+      "gain_vs_base": {
+        "cohort_a_word_f1_gain": 0.05802690874201766,
+        "cohort_b_word_f1_gain": 0.1224843288419914,
+        "full_word_f1_gain": 0.10669783328114668
+      }
+    }
+  }
+}

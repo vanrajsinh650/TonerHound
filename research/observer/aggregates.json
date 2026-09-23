@@ -1,0 +1,111 @@
+{
+  "timestamp": "2026-09-23T08:38:11.381407+00:00",
+  "total_documents": 369,
+  "grounded_documents": 236,
+  "ungrounded_documents": 133,
+  "total_gradeable_fields": 445950,
+  "total_field_records": 532812,
+  "baseline_metrics": {
+    "word_grounding_f1": 0.45309099273453723,
+    "word_grounding_precision": 0.505229090640303,
+    "word_grounding_recall": 0.4217135707940125,
+    "page_grounding_f1": 0.8745701105989506,
+    "page_grounding_precision": 0.9301177212523428,
+    "page_grounding_recall": 0.8390433841852811,
+    "value_f1": 1.0
+  },
+  "candidate_recall": {
+    "micro": {
+      "1": 0.4429532458795829,
+      "3": 0.5486870725417647,
+      "5": 0.5797712748065926,
+      "10": 0.6218970736629666,
+      "20": 0.6692431886982846
+    },
+    "micro_numerators": {
+      "1": 197535,
+      "3": 244687,
+      "5": 258549,
+      "10": 277335,
+      "20": 298449
+    },
+    "micro_denominator": 445950,
+    "macro_true_grounded_docs": {
+      "1": 0.40435162981080947,
+      "3": 0.4715852659474608,
+      "5": 0.4868833114526602,
+      "10": 0.5035036208427434,
+      "20": 0.517072253232639
+    },
+    "macro_true_denominator_docs": 236,
+    "macro_flawed_previous": {
+      "1": 0.6190433187949892,
+      "3": 0.6620436931262893,
+      "5": 0.6718278089507528,
+      "10": 0.6824576003221882,
+      "20": 0.6911356416338829
+    },
+    "macro_flawed_denominator_docs": 369
+  },
+  "oracle_ceilings": {
+    "1": 0.447106504876745,
+    "3": 0.5162424546789377,
+    "5": 0.5310751091629574,
+    "10": 0.546898098930853,
+    "20": 0.5598931396493477
+  },
+  "failure_classes": {
+    "RETRIEVAL_WRONG_PAGE": {
+      "count": 7921,
+      "percentage": 1.7762080950779235
+    },
+    "ASSOCIATION_WRONG_PAGE": {
+      "count": 2931,
+      "percentage": 0.6572485704675413
+    },
+    "BBOX_TOO_NARROW": {
+      "count": 5809,
+      "percentage": 1.3026124004933288
+    },
+    "SUCCESS": {
+      "count": 259271,
+      "percentage": 58.13902903912995
+    },
+    "SELECTED_CITATION_GEOMETRY_FAILURE": {
+      "count": 57856,
+      "percentage": 12.973651754681018
+    },
+    "BBOX_TOO_WIDE": {
+      "count": 20872,
+      "percentage": 4.680345330193967
+    },
+    "OCR_GEOMETRY": {
+      "count": 12848,
+      "percentage": 2.8810404753896175
+    },
+    "ASSOCIATION_WRONG_ROW": {
+      "count": 16257,
+      "percentage": 3.6454759502186342
+    },
+    "RETRIEVED_RANK_6_20": {
+      "count": 9489,
+      "percentage": 2.127817019845274
+    },
+    "RETRIEVAL_NO_CANDIDATE": {
+      "count": 48744,
+      "percentage": 10.930373360242179
+    },
+    "COORDINATE_DRIFT": {
+      "count": 2504,
+      "percentage": 0.5614979257764324
+    },
+    "RETRIEVED_RANK_GT_20": {
+      "count": 1091,
+      "percentage": 0.24464626079156856
+    },
+    "ASSOCIATION_RANK_MISS": {
+      "count": 357,
+      "percentage": 0.08005381769256643
+    }
+  }
+}
