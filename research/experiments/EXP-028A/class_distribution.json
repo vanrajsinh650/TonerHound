@@ -1,0 +1,216 @@
+{
+  "target_population": 64130,
+  "sample_size": 1000,
+  "deterministic_seed": 20260924,
+  "classes": {
+    "DIRECT TEXT EVIDENCE": {
+      "sample_count": 626,
+      "sample_fraction": 0.626,
+      "population_estimate": 40145,
+      "ci_95_fraction": [
+        0.5955817549893309,
+        0.6554539018723092
+      ],
+      "ci_95_population": [
+        38195,
+        42034
+      ],
+      "recoverability_category": "visually_recoverable"
+    },
+    "TABLE/CELL VISUAL EVIDENCE": {
+      "sample_count": 353,
+      "sample_fraction": 0.353,
+      "population_estimate": 22638,
+      "ci_95_fraction": [
+        0.32399373843890167,
+        0.3831313285558515
+      ],
+      "ci_95_population": [
+        20778,
+        24570
+      ],
+      "recoverability_category": "visually_recoverable"
+    },
+    "FORM / CHECKBOX / SYMBOL": {
+      "sample_count": 14,
+      "sample_fraction": 0.014,
+      "population_estimate": 898,
+      "ci_95_fraction": [
+        0.00835757513042392,
+        0.02336203411753566
+      ],
+      "ci_95_population": [
+        536,
+        1498
+      ],
+      "recoverability_category": "visually_recoverable"
+    },
+    "CHART / GRAPH / IMAGE": {
+      "sample_count": 0,
+      "sample_fraction": 0.0,
+      "population_estimate": 0,
+      "ci_95_fraction": [
+        2.168404344971009e-19,
+        0.0038267584855551234
+      ],
+      "ci_95_population": [
+        0,
+        245
+      ],
+      "recoverability_category": "potentially_recoverable"
+    },
+    "HANDWRITTEN": {
+      "sample_count": 0,
+      "sample_fraction": 0.0,
+      "population_estimate": 0,
+      "ci_95_fraction": [
+        2.168404344971009e-19,
+        0.0038267584855551234
+      ],
+      "ci_95_population": [
+        0,
+        245
+      ],
+      "recoverability_category": "visually_recoverable"
+    },
+    "MULTI-REGION / MULTI-LINE": {
+      "sample_count": 1,
+      "sample_fraction": 0.001,
+      "population_estimate": 64,
+      "ci_95_fraction": [
+        0.00017654637062607809,
+        0.0056425585979579355
+      ],
+      "ci_95_population": [
+        11,
+        362
+      ],
+      "recoverability_category": "visually_recoverable"
+    },
+    "OCR/PERCEPTION FAILURE": {
+      "sample_count": 6,
+      "sample_fraction": 0.006,
+      "population_estimate": 385,
+      "ci_95_fraction": [
+        0.0027526691418763745,
+        0.01302816824185209
+      ],
+      "ci_95_population": [
+        177,
+        835
+      ],
+      "recoverability_category": "visually_recoverable"
+    },
+    "DERIVED VALUE": {
+      "sample_count": 0,
+      "sample_fraction": 0.0,
+      "population_estimate": 0,
+      "ci_95_fraction": [
+        2.168404344971009e-19,
+        0.0038267584855551234
+      ],
+      "ci_95_population": [
+        0,
+        245
+      ],
+      "recoverability_category": "fundamentally_unrecoverable"
+    },
+    "NO SOURCE EVIDENCE": {
+      "sample_count": 0,
+      "sample_fraction": 0.0,
+      "population_estimate": 0,
+      "ci_95_fraction": [
+        2.168404344971009e-19,
+        0.0038267584855551234
+      ],
+      "ci_95_population": [
+        0,
+        245
+      ],
+      "recoverability_category": "fundamentally_unrecoverable"
+    },
+    "POSSIBLE ANNOTATION / METADATA": {
+      "sample_count": 0,
+      "sample_fraction": 0.0,
+      "population_estimate": 0,
+      "ci_95_fraction": [
+        2.168404344971009e-19,
+        0.0038267584855551234
+      ],
+      "ci_95_population": [
+        0,
+        245
+      ],
+      "recoverability_category": "potentially_recoverable"
+    },
+    "ANNOTATION/GROUND-TRUTH DISCREPANCY": {
+      "sample_count": 0,
+      "sample_fraction": 0.0,
+      "population_estimate": 0,
+      "ci_95_fraction": [
+        2.168404344971009e-19,
+        0.0038267584855551234
+      ],
+      "ci_95_population": [
+        0,
+        245
+      ],
+      "recoverability_category": "fundamentally_unrecoverable"
+    },
+    "UNKNOWN": {
+      "sample_count": 0,
+      "sample_fraction": 0.0,
+      "population_estimate": 0,
+      "ci_95_fraction": [
+        2.168404344971009e-19,
+        0.0038267584855551234
+      ],
+      "ci_95_population": [
+        0,
+        245
+      ],
+      "recoverability_category": "fundamentally_unrecoverable"
+    }
+  },
+  "recoverability_summary": {
+    "visually_recoverable": {
+      "sample_count": 1000,
+      "sample_fraction": 1.0,
+      "population_estimate": 64130,
+      "ci_95_fraction": [
+        0.996173241514445,
+        1.0
+      ],
+      "ci_95_population": [
+        63885,
+        64130
+      ]
+    },
+    "potentially_recoverable": {
+      "sample_count": 0,
+      "sample_fraction": 0.0,
+      "population_estimate": 0,
+      "ci_95_fraction": [
+        2.168404344971009e-19,
+        0.0038267584855551234
+      ],
+      "ci_95_population": [
+        0,
+        245
+      ]
+    },
+    "fundamentally_unrecoverable": {
+      "sample_count": 0,
+      "sample_fraction": 0.0,
+      "population_estimate": 0,
+      "ci_95_fraction": [
+        2.168404344971009e-19,
+        0.0038267584855551234
+      ],
+      "ci_95_population": [
+        0,
+        245
+      ]
+    }
+  }
+}
