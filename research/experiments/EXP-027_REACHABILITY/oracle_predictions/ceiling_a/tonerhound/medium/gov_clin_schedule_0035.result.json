@@ -1,0 +1,270 @@
+{
+  "request": {
+    "example_id": "medium/gov_clin_schedule_0035",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/gov_clin_schedule_0035.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 15,
+    "ocr_pages": 0,
+    "num_pages": 22
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/gov_clin_schedule_0035",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "contract_number": "W911QY20P0195",
+      "effective_date": "12-Jun-2020",
+      "total_amount": "$148,225.00",
+      "clin_line_items": [
+        {
+          "item_no": "0001",
+          "supplies_services": "Sample Collection Kits",
+          "quantity": "(b) (4)",
+          "unit": "Each",
+          "unit_price": "(b) (4)",
+          "amount": "$148,225.00",
+          "contract_type": "FFP",
+          "purchase_request_number": "0011509217",
+          "psc_code": "6550",
+          "acrn": "AA",
+          "cin": "GFEBS001150921700001",
+          "net_amount": "$148,225.00"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "contract_number",
+        "page": 19,
+        "bbox": [
+          0.699609,
+          0.277978,
+          0.10258,
+          0.013458
+        ],
+        "polygon": null,
+        "reference_text": "W911QY20P0195",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "effective_date",
+        "page": 1,
+        "bbox": [
+          0.269021,
+          0.109156,
+          0.072285,
+          0.013291
+        ],
+        "polygon": null,
+        "reference_text": "12-Jun-2020",
+        "confidence": 0.8840316117552511,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_amount",
+        "page": 6,
+        "bbox": [
+          0.185884,
+          0.749795,
+          0.06951,
+          0.013724
+        ],
+        "polygon": null,
+        "reference_text": "$148,225.00",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].item_no",
+        "page": 4,
+        "bbox": [
+          0.083727,
+          0.118173,
+          0.032843,
+          0.016043
+        ],
+        "polygon": null,
+        "reference_text": "0001",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].supplies_services",
+        "page": 4,
+        "bbox": [
+          0.173531,
+          0.132718,
+          0.152409,
+          0.016043
+        ],
+        "polygon": null,
+        "reference_text": "Sample Collection Kits",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].quantity",
+        "page": 4,
+        "bbox": [
+          0.391294,
+          0.119001,
+          0.017575,
+          0.011023
+        ],
+        "polygon": null,
+        "reference_text": "(b) (4)",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].unit",
+        "page": 4,
+        "bbox": [
+          0.491962,
+          0.118173,
+          0.032647,
+          0.016043
+        ],
+        "polygon": null,
+        "reference_text": "Each",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].unit_price",
+        "page": 4,
+        "bbox": [
+          0.391294,
+          0.119001,
+          0.017575,
+          0.011023
+        ],
+        "polygon": null,
+        "reference_text": "(b) (4)",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].amount",
+        "page": 4,
+        "bbox": [
+          0.859217,
+          0.118173,
+          0.081863,
+          0.016043
+        ],
+        "polygon": null,
+        "reference_text": "$148,225.00",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].contract_type",
+        "page": 4,
+        "bbox": [
+          0.173531,
+          0.147264,
+          0.027088,
+          0.016043
+        ],
+        "polygon": null,
+        "reference_text": "FFP",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].purchase_request_number",
+        "page": 4,
+        "bbox": [
+          0.419021,
+          0.263324,
+          0.081863,
+          0.016043
+        ],
+        "polygon": null,
+        "reference_text": "0011509217",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].psc_code",
+        "page": 4,
+        "bbox": [
+          0.237845,
+          0.27787,
+          0.032843,
+          0.016043
+        ],
+        "polygon": null,
+        "reference_text": "6550",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].cin",
+        "page": 4,
+        "bbox": [
+          0.210198,
+          0.394991,
+          0.173627,
+          0.016044
+        ],
+        "polygon": null,
+        "reference_text": "GFEBS001150921700001",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].net_amount",
+        "page": 4,
+        "bbox": [
+          0.859217,
+          0.118173,
+          0.081863,
+          0.016043
+        ],
+        "polygon": null,
+        "reference_text": "$148,225.00",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].acrn",
+        "page": 4,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "AA",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:47:42.909886Z",
+  "completed_at": "2026-09-21T14:47:42.909886Z",
+  "latency_in_ms": 131
+}

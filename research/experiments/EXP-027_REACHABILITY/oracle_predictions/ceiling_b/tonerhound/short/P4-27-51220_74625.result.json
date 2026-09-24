@@ -1,0 +1,779 @@
+{
+  "request": {
+    "example_id": "short/P4-27-51220_74625",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/P4-27-51220_74625.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 48,
+    "ocr_pages": 0,
+    "num_pages": 3
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/P4-27-51220_74625",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "field_name": "Hoople (Clear Fork)",
+      "lease_name": "Anna Belle",
+      "current_operator_name": "Custer & Wright Operating, Inc",
+      "operator_p5_no": "195651",
+      "oil_lse_gas_id_no": "68087",
+      "county": "Crosby",
+      "rrc_district": "8A",
+      "operator_address": "P. O. Box 2334 Midland, TX 79702",
+      "well_nos": "All",
+      "classification_oil": true,
+      "classification_gas": false,
+      "classification_other": false,
+      "effective_date": "08/01/2014",
+      "change_operator": false,
+      "change_oil_condensate_gatherer": false,
+      "change_gas_gatherer": false,
+      "change_gas_purchaser": false,
+      "change_gas_purchaser_system_code": false,
+      "change_field_name": false,
+      "change_field_name_from": null,
+      "change_field_name_docket": null,
+      "change_lease_name": false,
+      "change_lease_name_from": null,
+      "new_rrc_oil_lease": false,
+      "new_rrc_gas_well": false,
+      "new_rrc_other_well": false,
+      "new_rrc_other_well_specify": null,
+      "due_new_completion_recompletion": false,
+      "due_reclass_gas_to_oil": false,
+      "due_reclass_oil_to_gas": false,
+      "due_consolidation": true,
+      "due_unitization": true,
+      "due_field_transfer": null,
+      "due_subdivision": true,
+      "prev_operator_name": null,
+      "prev_operator_signature": false,
+      "prev_operator_name_print": null,
+      "prev_operator_title": null,
+      "prev_operator_date": null,
+      "prev_operator_phone": null,
+      "prev_operator_authorized_employee": false,
+      "prev_operator_authorized_agent": false,
+      "curr_operator_name_print": "Pam Botkin",
+      "curr_operator_signature": true,
+      "curr_operator_title": "Engineering Tech",
+      "curr_operator_email": "pbotkin@custerwright.com",
+      "curr_operator_date": "08/13/2014",
+      "curr_operator_phone": "(432)687-1565",
+      "curr_operator_authorized_employee": true,
+      "curr_operator_authorized_agent": false,
+      "reviewer_initials": null,
+      "approval_date": null,
+      "gas_gatherers_purchasers": [
+        {
+          "gatherer": true,
+          "purchaser": true,
+          "name": "Davis Gas Processing, Inc",
+          "system_code": "0003",
+          "percent_of_take": "100",
+          "full_well_stream": false
+        }
+      ],
+      "oil_condensate_gatherers": [
+        {
+          "name": "Sunoco Partners Marketing & Terminals LP",
+          "percent_of_take": "100"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "field_name",
+        "page": 3,
+        "bbox": [
+          0.469273,
+          0.185467,
+          0.207884,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Hoople (Clear Fork)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_name",
+        "page": 3,
+        "bbox": [
+          0.078978,
+          0.308981,
+          0.194247,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Anna Belle",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "current_operator_name",
+        "page": 3,
+        "bbox": [
+          0.047544,
+          0.124126,
+          0.206502,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Custer & Wright Operating, Inc",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_p5_no",
+        "page": 1,
+        "bbox": [
+          0.5247641430451501,
+          0.16060673870006226,
+          0.04471303050008424,
+          0.012894459733417796
+        ],
+        "polygon": null,
+        "reference_text": "19565 1",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "oil_lse_gas_id_no",
+        "page": 1,
+        "bbox": [
+          0.6446541006246367,
+          0.16077426000934067,
+          0.039717636427160086,
+          0.013744574742206722
+        ],
+        "polygon": null,
+        "reference_text": "68087",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.7570754587308434,
+          0.1601483764552982,
+          0.046370864349824514,
+          0.01388623499732719
+        ],
+        "polygon": null,
+        "reference_text": "Crosby",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district",
+        "page": 1,
+        "bbox": [
+          0.8797169766524732,
+          0.1605396687851244,
+          0.018813575164081442,
+          0.013319440498779173
+        ],
+        "polygon": null,
+        "reference_text": "8A",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_address",
+        "page": 3,
+        "bbox": [
+          0.047544,
+          0.186388,
+          0.61404,
+          0.025286
+        ],
+        "polygon": null,
+        "reference_text": "2334 Hoople (Clear Fork) Midland, TX 79702",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "well_nos",
+        "page": 1,
+        "bbox": [
+          0.519654088128904,
+          0.19366499329531067,
+          0.02030366629795921,
+          0.013744574742206722
+        ],
+        "polygon": null,
+        "reference_text": "All",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "classification_oil",
+        "page": 1,
+        "bbox": [
+          0.526336,
+          0.222174,
+          0.014,
+          0.015868
+        ],
+        "polygon": null,
+        "reference_text": "X",
+        "confidence": 0.9058736111218305,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "classification_gas",
+        "page": 2,
+        "bbox": [
+          0.040864,
+          0.404664,
+          0.014,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "D",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "effective_date",
+        "page": 1,
+        "bbox": [
+          0.7920597615914166,
+          0.22801975385494697,
+          0.07387382208975635,
+          0.014027971991480731
+        ],
+        "polygon": null,
+        "reference_text": "08/01/2014",
+        "confidence": 0.8554573942898642,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_operator",
+        "page": 3,
+        "bbox": [
+          0.410609,
+          0.426154,
+          0.014,
+          0.016651
+        ],
+        "polygon": null,
+        "reference_text": "no",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_oil_condensate_gatherer",
+        "page": 3,
+        "bbox": [
+          0.410609,
+          0.426154,
+          0.014,
+          0.016651
+        ],
+        "polygon": null,
+        "reference_text": "no",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_gas_gatherer",
+        "page": 3,
+        "bbox": [
+          0.410609,
+          0.426154,
+          0.014,
+          0.016651
+        ],
+        "polygon": null,
+        "reference_text": "no",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_gas_purchaser",
+        "page": 3,
+        "bbox": [
+          0.410609,
+          0.426154,
+          0.014,
+          0.016651
+        ],
+        "polygon": null,
+        "reference_text": "no",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_gas_purchaser_system_code",
+        "page": 3,
+        "bbox": [
+          0.410609,
+          0.426154,
+          0.014,
+          0.016651
+        ],
+        "polygon": null,
+        "reference_text": "no",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_field_name",
+        "page": 3,
+        "bbox": [
+          0.410609,
+          0.426154,
+          0.014,
+          0.016651
+        ],
+        "polygon": null,
+        "reference_text": "no",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_lease_name",
+        "page": 3,
+        "bbox": [
+          0.410609,
+          0.42631,
+          0.014,
+          0.015447
+        ],
+        "polygon": null,
+        "reference_text": "no",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "new_rrc_oil_lease",
+        "page": 3,
+        "bbox": [
+          0.410609,
+          0.42631,
+          0.014,
+          0.015447
+        ],
+        "polygon": null,
+        "reference_text": "no",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "new_rrc_gas_well",
+        "page": 3,
+        "bbox": [
+          0.410609,
+          0.426336,
+          0.014,
+          0.015247
+        ],
+        "polygon": null,
+        "reference_text": "no",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "new_rrc_other_well",
+        "page": 3,
+        "bbox": [
+          0.410609,
+          0.426336,
+          0.014,
+          0.015247
+        ],
+        "polygon": null,
+        "reference_text": "no",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_new_completion_recompletion",
+        "page": 3,
+        "bbox": [
+          0.410609,
+          0.426232,
+          0.014,
+          0.016049
+        ],
+        "polygon": null,
+        "reference_text": "no",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_reclass_gas_to_oil",
+        "page": 1,
+        "bbox": [
+          0.039701,
+          0.407651,
+          0.014,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "O",
+        "confidence": 0.7788271729149002,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_reclass_oil_to_gas",
+        "page": 1,
+        "bbox": [
+          0.039701,
+          0.407651,
+          0.014,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "O",
+        "confidence": 0.7788271729149002,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_consolidation",
+        "page": 3,
+        "bbox": [
+          0.824361,
+          0.141686,
+          0.014,
+          0.01625
+        ],
+        "polygon": null,
+        "reference_text": "X",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_unitization",
+        "page": 2,
+        "bbox": [
+          0.506876,
+          0.32406,
+          0.014,
+          0.015877
+        ],
+        "polygon": null,
+        "reference_text": "X",
+        "confidence": 0.7532430028853877,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_subdivision",
+        "page": 3,
+        "bbox": [
+          0.824361,
+          0.14179,
+          0.014,
+          0.015447
+        ],
+        "polygon": null,
+        "reference_text": "X",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_signature",
+        "page": 2,
+        "bbox": [
+          0.523379,
+          0.870302,
+          0.017258,
+          0.015676
+        ],
+        "polygon": null,
+        "reference_text": "Q",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_name_print",
+        "page": 2,
+        "bbox": [
+          0.055796,
+          0.87312,
+          0.195856,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Pam Botkin",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_signature",
+        "page": 1,
+        "bbox": [
+          0.499214,
+          0.914745,
+          0.014,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "X",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_title",
+        "page": 1,
+        "bbox": [
+          0.05385220322259948,
+          0.9157307190493446,
+          0.11502587491371696,
+          0.014188049614547449
+        ],
+        "polygon": null,
+        "reference_text": "Engineering Tech",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_date",
+        "page": 1,
+        "bbox": [
+          0.5184748408418525,
+          0.951661392392921,
+          0.07238143174106049,
+          0.013744574742206694
+        ],
+        "polygon": null,
+        "reference_text": "08/13/2014",
+        "confidence": 0.987999583997808,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_phone",
+        "page": 1,
+        "bbox": [
+          0.7798742229528616,
+          0.9519407224734402,
+          0.09628906728352271,
+          0.013886311736360235
+        ],
+        "polygon": null,
+        "reference_text": "(432)687-1565",
+        "confidence": 0.8306074844457051,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_authorized_employee",
+        "page": 1,
+        "bbox": [
+          0.4992138184809887,
+          0.9170496328114005,
+          0.014,
+          0.012497657541014328
+        ],
+        "polygon": null,
+        "reference_text": "X",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gas_gatherers_purchasers[0].name",
+        "page": 1,
+        "bbox": [
+          0.10613208089437456,
+          0.4259902289723922,
+          0.17120593317382113,
+          0.013886273366843727
+        ],
+        "polygon": null,
+        "reference_text": "Davis Gas Processing, Inc",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gas_gatherers_purchasers[0].system_code",
+        "page": 1,
+        "bbox": [
+          0.759827,
+          0.418453,
+          0.031774,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0003",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gas_gatherers_purchasers[0].percent_of_take",
+        "page": 1,
+        "bbox": [
+          0.59945,
+          0.606242,
+          0.021865,
+          0.017025
+        ],
+        "polygon": null,
+        "reference_text": "100",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "oil_condensate_gatherers[0].name",
+        "page": 1,
+        "bbox": [
+          0.04913522032225995,
+          0.6079455748359818,
+          0.28801394323838403,
+          0.014188011245031107
+        ],
+        "polygon": null,
+        "reference_text": "Sunoco Partners Marketing & Terminals LP",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "oil_condensate_gatherers[0].percent_of_take",
+        "page": 1,
+        "bbox": [
+          0.5994496879315714,
+          0.6084487526760819,
+          0.021865183039991853,
+          0.012611024114627223
+        ],
+        "polygon": null,
+        "reference_text": "100",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "classification_other",
+        "page": 3,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_authorized_employee",
+        "page": 3,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_authorized_agent",
+        "page": 3,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_email",
+        "page": 3,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "pbotkin@custerwright.com",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_authorized_agent",
+        "page": 3,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gas_gatherers_purchasers[0].gatherer",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gas_gatherers_purchasers[0].purchaser",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gas_gatherers_purchasers[0].full_well_stream",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:50:30.204581Z",
+  "completed_at": "2026-09-21T14:50:30.204581Z",
+  "latency_in_ms": 451
+}

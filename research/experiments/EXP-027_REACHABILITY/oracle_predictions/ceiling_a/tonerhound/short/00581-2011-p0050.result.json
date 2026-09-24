@@ -1,0 +1,527 @@
+{
+  "request": {
+    "example_id": "short/00581-2011-p0050",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/00581-2011-p0050.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 30,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/00581-2011-p0050",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "final_k1": false,
+      "amended_k1": false,
+      "partnership_ein": "26-1287244",
+      "partnership_name": "TELCO EXPERTS LLC",
+      "partnership_address": "38 PARK AVENUE, RUTHERFORD, NJ 07070",
+      "irs_center": "OGDEN, UT",
+      "is_publicly_traded_partnership": false,
+      "partner_id": "20-2113320",
+      "partner_name": "ESK CONSULTANTS LLC",
+      "partner_address": "237 MAYFAIR DRIVE, BROOKLYN, NY 11234",
+      "is_general_partner": true,
+      "is_domestic_partner": true,
+      "partner_entity_type": "DISREGARDED ENTITY",
+      "profit_share_beginning": 33.3333333,
+      "profit_share_ending": 33.3333333,
+      "loss_share_beginning": 33.3333333,
+      "loss_share_ending": 33.3333333,
+      "capital_share_beginning": 33.3333333,
+      "capital_share_ending": 33.3333333,
+      "liability_nonrecourse": null,
+      "liability_qualified_nonrecourse_financing": null,
+      "liability_recourse": 22027,
+      "capital_beginning_account": 12281,
+      "capital_contributed": 15000,
+      "capital_current_year_increase_decrease": -5588,
+      "capital_withdrawals_distributions": null,
+      "capital_ending_account": 21693,
+      "capital_account_method": "Tax basis",
+      "contributed_built_in_gain_loss_property": null,
+      "box_1_ordinary_business_income": -5307,
+      "box_2_net_rental_real_estate": null,
+      "box_3_other_net_rental_income": null,
+      "box_4_guaranteed_payments": null,
+      "box_5_interest_income": null,
+      "box_6a_ordinary_dividends": null,
+      "box_6b_qualified_dividends": null,
+      "box_7_royalties": null,
+      "box_8_net_short_term_capital_gain": null,
+      "box_9a_net_long_term_capital_gain": null,
+      "box_9b_collectibles_gain": null,
+      "box_9c_unrecaptured_1250_gain": null,
+      "box_10_net_section_1231_gain": null,
+      "box_12_section_179_deduction": null,
+      "box_14_self_employment_earnings": [
+        {
+          "code": "A",
+          "amount": -5307
+        },
+        {
+          "code": "C",
+          "amount": 34199
+        }
+      ],
+      "box_11_other_income": null,
+      "box_13_other_deductions": null,
+      "box_15_credits": null,
+      "box_16_foreign_transactions": null,
+      "box_17_amt_items": null,
+      "box_18_tax_exempt_income": null,
+      "box_19_distributions": null,
+      "box_20_other_information": null
+    },
+    "field_citations": [
+      {
+        "field_path": "final_k1",
+        "page": 1,
+        "bbox": [
+          0.551737,
+          0.080138,
+          0.014,
+          0.0135
+        ],
+        "polygon": null,
+        "reference_text": "D",
+        "confidence": 0.8557421350480666,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "amended_k1",
+        "page": 1,
+        "bbox": [
+          0.551737,
+          0.080138,
+          0.014,
+          0.0135
+        ],
+        "polygon": null,
+        "reference_text": "D",
+        "confidence": 0.8557421350480666,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partnership_ein",
+        "page": 1,
+        "bbox": [
+          0.08322243803350025,
+          0.22920989990234375,
+          0.11258418173572417,
+          0.007828991822522058
+        ],
+        "polygon": null,
+        "reference_text": "26-1287244",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partnership_name",
+        "page": 1,
+        "bbox": [
+          0.08141502761012893,
+          0.2726285529859138,
+          0.1966760004933274,
+          0.00819820827907991
+        ],
+        "polygon": null,
+        "reference_text": "TELCO EXPERTS LLC",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partnership_address",
+        "page": 1,
+        "bbox": [
+          0.08233315842150443,
+          0.2874181728170375,
+          0.24123198609881072,
+          0.023977799849076775
+        ],
+        "polygon": null,
+        "reference_text": "38 PARK AVENUE RUTHERFORD, NJ 07070",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "irs_center",
+        "page": 1,
+        "bbox": [
+          0.0820795804476716,
+          0.3316057763918482,
+          0.10399372618009971,
+          0.009588145246409385
+        ],
+        "polygon": null,
+        "reference_text": "OGDEN, UT",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "is_publicly_traded_partnership",
+        "page": 1,
+        "bbox": [
+          0.098701,
+          0.358951,
+          0.014,
+          0.0135
+        ],
+        "polygon": null,
+        "reference_text": "D",
+        "confidence": 0.7949623838594946,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partner_id",
+        "page": 1,
+        "bbox": [
+          0.08322243803350025,
+          0.4475179344716699,
+          0.11248591886425076,
+          0.007829030354817634
+        ],
+        "polygon": null,
+        "reference_text": "20-2113320",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partner_name",
+        "page": 1,
+        "bbox": [
+          0.08311349740502998,
+          0.4915300619722617,
+          0.21864186582975725,
+          0.00819820827907991
+        ],
+        "polygon": null,
+        "reference_text": "ESK CONSULTANTS LLC",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partner_address",
+        "page": 1,
+        "bbox": [
+          0.0829309065100609,
+          0.5063323203963463,
+          0.20755729754422592,
+          0.023977799849076664
+        ],
+        "polygon": null,
+        "reference_text": "237 MAYFAIR DRIVE BROOKLYN, NY 11234",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "is_general_partner",
+        "page": 1,
+        "bbox": [
+          0.09896819108693865,
+          0.5340452097883128,
+          0.022,
+          0.01
+        ],
+        "polygon": null,
+        "reference_text": "[XJ",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "is_domestic_partner",
+        "page": 1,
+        "bbox": [
+          0.09936840067105326,
+          0.5640391725482363,
+          0.022,
+          0.01
+        ],
+        "polygon": null,
+        "reference_text": "[XJ",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partner_entity_type",
+        "page": 1,
+        "bbox": [
+          0.2925935976669176,
+          0.5790932009918521,
+          0.20794234071237194,
+          0.008318429041390463
+        ],
+        "polygon": null,
+        "reference_text": "DISREGARDED ENTITY",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "profit_share_beginning",
+        "page": 1,
+        "bbox": [
+          0.18864397037315034,
+          0.6381492229423138,
+          0.1125854672949283,
+          0.007829030354817634
+        ],
+        "polygon": null,
+        "reference_text": "33.3333333%",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "profit_share_ending",
+        "page": 1,
+        "bbox": [
+          0.41043825015619034,
+          0.6384522794473051,
+          0.11187281737962922,
+          0.007829030354817634
+        ],
+        "polygon": null,
+        "reference_text": "33.3333333%",
+        "confidence": 0.92,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_share_beginning",
+        "page": 1,
+        "bbox": [
+          0.18864598339291205,
+          0.6530482359606811,
+          0.11294132053987246,
+          0.007829030354817634
+        ],
+        "polygon": null,
+        "reference_text": "33.3333333%",
+        "confidence": 0.92,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_share_ending",
+        "page": 1,
+        "bbox": [
+          0.4100285443701564,
+          0.6533512539333768,
+          0.11187281737962922,
+          0.007829030354817634
+        ],
+        "polygon": null,
+        "reference_text": "33.3333333%",
+        "confidence": 0.92,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_share_beginning",
+        "page": 1,
+        "bbox": [
+          0.18903525890384898,
+          0.667644192474057,
+          0.11222863652485982,
+          0.007829030354817634
+        ],
+        "polygon": null,
+        "reference_text": "33.3333333%",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_share_ending",
+        "page": 1,
+        "bbox": [
+          0.4100243182789796,
+          0.6679482508187342,
+          0.11222861379171738,
+          0.007829030354817634
+        ],
+        "polygon": null,
+        "reference_text": "33.3333333%",
+        "confidence": 0.92,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_beginning_account",
+        "page": 1,
+        "bbox": [
+          0.46909066921079023,
+          0.7682755017521405,
+          0.07458470777154658,
+          0.009218948055999432
+        ],
+        "polygon": null,
+        "reference_text": "$12,281",
+        "confidence": 0.9486118011412742,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_contributed",
+        "page": 1,
+        "bbox": [
+          0.4691077736271505,
+          0.78317449550436,
+          0.07366827114761032,
+          0.009218948055999432
+        ],
+        "polygon": null,
+        "reference_text": "15,000.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_account_method",
+        "page": 1,
+        "bbox": [
+          0.12794309740775067,
+          0.8553727275193339,
+          0.04779150226588505,
+          0.007948480471216102
+        ],
+        "polygon": null,
+        "reference_text": "Tax basis",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_1_ordinary_business_income",
+        "page": 1,
+        "bbox": [
+          0.6534964827918569,
+          0.14013163248697913,
+          0.0732976754598037,
+          0.009218928789851644
+        ],
+        "polygon": null,
+        "reference_text": "-5,307.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_14_self_employment_earnings[0].code",
+        "page": 1,
+        "bbox": [
+          0.070938,
+          0.138024,
+          0.655856,
+          0.015051
+        ],
+        "polygon": null,
+        "reference_text": "A",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_14_self_employment_earnings[0].amount",
+        "page": 1,
+        "bbox": [
+          0.653496,
+          0.137216,
+          0.073298,
+          0.015051
+        ],
+        "polygon": null,
+        "reference_text": "-5,307.",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_14_self_employment_earnings[1].code",
+        "page": 1,
+        "bbox": [
+          0.082848,
+          0.679472,
+          0.644942,
+          0.014956
+        ],
+        "polygon": null,
+        "reference_text": "C",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_14_self_employment_earnings[1].amount",
+        "page": 1,
+        "bbox": [
+          0.6543549544492387,
+          0.6825431669601286,
+          0.07343551104895285,
+          0.009218948055999432
+        ],
+        "polygon": null,
+        "reference_text": "34,199.",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "liability_recourse",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "22027",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_current_year_increase_decrease",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "-5588",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_ending_account",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "21693",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:50:02.552982Z",
+  "completed_at": "2026-09-21T14:50:02.552982Z",
+  "latency_in_ms": 490
+}

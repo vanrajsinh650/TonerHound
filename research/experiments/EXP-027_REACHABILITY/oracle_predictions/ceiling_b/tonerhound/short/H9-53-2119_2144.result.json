@@ -1,0 +1,733 @@
+{
+  "request": {
+    "example_id": "short/H9-53-2119_2144",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/H9-53-2119_2144.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 52,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/H9-53-2119_2144",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "operator": "BHP Billiton (TX LA OP) CO",
+      "operator_number": "068596",
+      "rrc_district": "2",
+      "street_or_po_box": "1000 Louisiana Street Suite 5600",
+      "city": "Houston",
+      "state": "TX",
+      "zip_code": "77002",
+      "lease_facility_operation_name": "Vasbinder A 5H",
+      "field_or_area_name": "Eagleville (Eagleford-2)",
+      "county": "Dewitt",
+      "optype_a_oil_field": false,
+      "optype_b_gas_field": false,
+      "optype_c_pipeline_gathering": false,
+      "optype_d_gasoline_plant": false,
+      "optype_e_drilling_workover": true,
+      "optype_f_sweetening_unit": false,
+      "optype_g_combination": false,
+      "optype_h_other": false,
+      "operation_type_other_explanation": "Based off maximum field concentration",
+      "h2s_concentration": "10000 PPM",
+      "maximum_escape_volume": "1000 MCF/Day",
+      "roe_100ppm": "426 Ft.",
+      "roe_500ppm": "195 Ft.",
+      "operation_existing": false,
+      "operation_new": true,
+      "modification_cert_change_yes": false,
+      "modification_cert_change_no": false,
+      "workover_100ppm_3000ft_yes": false,
+      "workover_100ppm_3000ft_no": true,
+      "previous_certificate_number": null,
+      "roe_100ppm_public_area_yes": false,
+      "roe_100ppm_public_area_no": true,
+      "roe_500ppm_public_road_yes": false,
+      "roe_500ppm_public_road_no": true,
+      "injection_h2s_fluid_yes": false,
+      "injection_h2s_fluid_no": true,
+      "compliance_date_mo": null,
+      "compliance_date_day": null,
+      "compliance_date_year": null,
+      "depth_of_compliance_drilling": "800 Ft. from Surface",
+      "contingency_plan_prepared_yes": true,
+      "contingency_plan_prepared_no": false,
+      "contingency_plan_location": "Rig Site/ 6825 Hwy 87, San Antonio, Tx, In Process with RRC SWR 36",
+      "data_location": "TRRC, BHP Billiton, 6825 Hwy 87, Suite 06, San Antonio, Tx",
+      "signature_present": true,
+      "representative_of_company": null,
+      "title": "Safety Automation Pres",
+      "phone_no": "432.631.7775",
+      "certificate_date": "3/27/2014",
+      "approved_by": "Wesley Dresch",
+      "rrc_use_date": "4-11-2014",
+      "remarks": null,
+      "certification_number": "079921",
+      "exempt_stamp_present": false,
+      "operations_covered": [
+        {
+          "rrc_id": "780337",
+          "type_id_code": "05",
+          "storage_yes": false,
+          "storage_no": true
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "operator",
+        "page": 1,
+        "bbox": [
+          0.1394517282479142,
+          0.20574817518248176,
+          0.16746126340882,
+          0.010948905109489038
+        ],
+        "polygon": null,
+        "reference_text": "BHP Billiton (TX LA OP) CO",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_number",
+        "page": 1,
+        "bbox": [
+          0.48808104886769965,
+          0.20437956204379562,
+          0.048271752085816466,
+          0.015510948905109484
+        ],
+        "polygon": null,
+        "reference_text": "068596",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district",
+        "page": 1,
+        "bbox": [
+          0.428677,
+          0.195774,
+          0.034768,
+          0.009
+        ],
+        "polygon": null,
+        "reference_text": "2.",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "state",
+        "page": 1,
+        "bbox": [
+          0.461263,
+          0.650023,
+          0.075495,
+          0.011086
+        ],
+        "polygon": null,
+        "reference_text": "Tx",
+        "confidence": 0.8687359808626169,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_facility_operation_name",
+        "page": 1,
+        "bbox": [
+          0.12753277711561384,
+          0.2591240875912409,
+          0.09594755661501786,
+          0.008667883211678828
+        ],
+        "polygon": null,
+        "reference_text": "Vasbinder A 5H",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "field_or_area_name",
+        "page": 1,
+        "bbox": [
+          0.4803337306317044,
+          0.25866788321167883,
+          0.14123957091775913,
+          0.010948905109489093
+        ],
+        "polygon": null,
+        "reference_text": "Eagleville (Eagleford-2)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.7681764004767581,
+          0.25866788321167883,
+          0.03754469606674615,
+          0.008667883211678828
+        ],
+        "polygon": null,
+        "reference_text": "Dewitt",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operation_type_other_explanation",
+        "page": 1,
+        "bbox": [
+          0.47794994040524436,
+          0.29516423357664234,
+          0.23480333730631703,
+          0.008667883211678828
+        ],
+        "polygon": null,
+        "reference_text": "Based off maximum i field",
+        "confidence": 0.9644594157895838,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "h2s_concentration",
+        "page": 1,
+        "bbox": [
+          0.484505,
+          0.337762,
+          0.047676,
+          0.009238
+        ],
+        "polygon": null,
+        "reference_text": "100 PPM",
+        "confidence": 0.8104855708361207,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "maximum_escape_volume",
+        "page": 1,
+        "bbox": [
+          0.7407628128724673,
+          0.32299270072992703,
+          0.11620977353992845,
+          0.01186131386861311
+        ],
+        "polygon": null,
+        "reference_text": "1000 mcr/pay",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "modification_cert_change_yes",
+        "page": 1,
+        "bbox": [
+          0.837902,
+          0.388305,
+          0.014303,
+          0.0135
+        ],
+        "polygon": null,
+        "reference_text": "No",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "modification_cert_change_no",
+        "page": 1,
+        "bbox": [
+          0.837902,
+          0.388305,
+          0.014303,
+          0.0135
+        ],
+        "polygon": null,
+        "reference_text": "No",
+        "confidence": 0.8694949453255362,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_100ppm_public_area_yes",
+        "page": 1,
+        "bbox": [
+          0.837902,
+          0.388305,
+          0.014303,
+          0.0135
+        ],
+        "polygon": null,
+        "reference_text": "No",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_100ppm_public_area_no",
+        "page": 1,
+        "bbox": [
+          0.808105,
+          0.388305,
+          0.020858,
+          0.0135
+        ],
+        "polygon": null,
+        "reference_text": "Yes",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_500ppm_public_road_yes",
+        "page": 1,
+        "bbox": [
+          0.837902,
+          0.388305,
+          0.014303,
+          0.0135
+        ],
+        "polygon": null,
+        "reference_text": "No",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_500ppm_public_road_no",
+        "page": 1,
+        "bbox": [
+          0.808105,
+          0.388305,
+          0.020858,
+          0.0135
+        ],
+        "polygon": null,
+        "reference_text": "Yes",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "depth_of_compliance_drilling",
+        "page": 1,
+        "bbox": [
+          0.671186,
+          0.553894,
+          0.205858,
+          0.009
+        ],
+        "polygon": null,
+        "reference_text": "Ft. from Surface",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "contingency_plan_location",
+        "page": 1,
+        "bbox": [
+          0.16090584028605484,
+          0.5971715328467153,
+          0.4123957091775924,
+          0.010948905109489093
+        ],
+        "polygon": null,
+        "reference_text": "Site/ 6825 Hwy 87, San Antonio, Tx In Process with RRC SWR 36",
+        "confidence": 0.75,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "data_location",
+        "page": 1,
+        "bbox": [
+          0.10786650774731824,
+          0.6514598540145985,
+          0.36889153754469606,
+          0.010948905109489093
+        ],
+        "polygon": null,
+        "reference_text": "TRRC, BHP Billiton, 6825 Hwy 87, Suite 06, San Antonio, Tx",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "phone_no",
+        "page": 1,
+        "bbox": [
+          0.634684147794994,
+          0.7276459854014599,
+          0.08462455303933258,
+          0.008667883211678884
+        ],
+        "polygon": null,
+        "reference_text": "432.631.7775",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[0].rrc_id",
+        "page": 1,
+        "bbox": [
+          0.263409,
+          0.909672,
+          0.02205,
+          0.015967
+        ],
+        "polygon": null,
+        "reference_text": "780337",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[0].type_id_code",
+        "page": 1,
+        "bbox": [
+          0.263409,
+          0.909672,
+          0.02205,
+          0.015967
+        ],
+        "polygon": null,
+        "reference_text": "05",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "street_or_po_box",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "1000 Louisiana Street Suite 5600",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "city",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Houston",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "zip_code",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "77002",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_a_oil_field",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_b_gas_field",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_c_pipeline_gathering",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_d_gasoline_plant",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_e_drilling_workover",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_f_sweetening_unit",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_g_combination",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_h_other",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_100ppm",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "426 Ft.",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_500ppm",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "195 Ft.",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operation_existing",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operation_new",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "workover_100ppm_3000ft_yes",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "workover_100ppm_3000ft_no",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_h2s_fluid_yes",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_h2s_fluid_no",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "contingency_plan_prepared_yes",
+        "page": 1,
+        "bbox": [
+          0.8122765196662693,
+          0.5780109489051095,
+          0.018474374255065554,
+          0.01
+        ],
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "contingency_plan_prepared_no",
+        "page": 1,
+        "bbox": [
+          0.8373063170441001,
+          0.5775547445255474,
+          0.01907032181168057,
+          0.01
+        ],
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "signature_present",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "title",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Safety Automation Pres",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "certificate_date",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "3/27/2014",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "approved_by",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Wesley Dresch",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_use_date",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "4-11-2014",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "certification_number",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "079921",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "exempt_stamp_present",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[0].storage_yes",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[0].storage_no",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:50:22.355561Z",
+  "completed_at": "2026-09-21T14:50:22.355561Z",
+  "latency_in_ms": 764
+}

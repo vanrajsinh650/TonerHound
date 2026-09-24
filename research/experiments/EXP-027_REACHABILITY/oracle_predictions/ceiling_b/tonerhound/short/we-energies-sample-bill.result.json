@@ -1,0 +1,399 @@
+{
+  "request": {
+    "example_id": "short/we-energies-sample-bill",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/we-energies-sample-bill.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 23,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/we-energies-sample-bill",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "utility_provider": "We Energies",
+      "account_number": "0123456789-00003",
+      "invoice_number": null,
+      "service_number": null,
+      "customer_name": "JOHN Q CUSTOMER",
+      "service_address": "123 MAIN ST NEENAH WI 54956-1802",
+      "bill_date": "02/03/2026",
+      "billing_period_start": "01/05/2026",
+      "billing_period_end": "02/02/2026",
+      "payment_due_date": "02/25/2026",
+      "amount_due": 246.4,
+      "previous_balance": 277.79,
+      "total_current_charges": 246.4,
+      "total_delivery_charges": null,
+      "total_supply_charges": null,
+      "meters": [
+        {
+          "meter_number": "NZT0123456",
+          "service_type": "electric",
+          "current_reading": 40705.0,
+          "previous_reading": 40036.0,
+          "usage_quantity": 669.0,
+          "usage_unit": "kWh"
+        },
+        {
+          "meter_number": "0WG0123456",
+          "service_type": "gas",
+          "current_reading": 1464.0,
+          "previous_reading": 1385.0,
+          "usage_quantity": 83.9,
+          "usage_unit": "therms"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "utility_provider",
+        "page": 1,
+        "bbox": [
+          0.116602,
+          0.905883,
+          0.093529,
+          0.02024
+        ],
+        "polygon": null,
+        "reference_text": "We Energies",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "account_number",
+        "page": 1,
+        "bbox": [
+          0.419,
+          0.73437,
+          0.138039,
+          0.02024
+        ],
+        "polygon": null,
+        "reference_text": "0123456789-00003",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer_name",
+        "page": 1,
+        "bbox": [
+          0.138563,
+          0.841239,
+          0.143794,
+          0.018216
+        ],
+        "polygon": null,
+        "reference_text": "JOHN Q CUSTOMER",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_address",
+        "page": 1,
+        "bbox": [
+          0.212684,
+          0.125563,
+          0.147477,
+          0.04104
+        ],
+        "polygon": null,
+        "reference_text": "123 NEENAH JOHN MAIN Q CUSTOMER WI ST 54956-1802",
+        "confidence": 0.75,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "bill_date",
+        "page": 1,
+        "bbox": [
+          0.072564,
+          0.106146,
+          0.073588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "02/03/2026",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "billing_period_start",
+        "page": 1,
+        "bbox": [
+          0.395412,
+          0.275036,
+          0.065412,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "01/05/2026",
+        "confidence": 0.8652218655981947,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "billing_period_end",
+        "page": 1,
+        "bbox": [
+          0.877137,
+          0.147763,
+          0.065412,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "02/02/2026",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "payment_due_date",
+        "page": 1,
+        "bbox": [
+          0.823152,
+          0.106146,
+          0.073588,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "02/25/2026",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "amount_due",
+        "page": 1,
+        "bbox": [
+          0.726856,
+          0.741766,
+          0.031237,
+          0.019677
+        ],
+        "polygon": null,
+        "reference_text": "$246.40",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "previous_balance",
+        "page": 1,
+        "bbox": [
+          0.628612,
+          0.175944,
+          0.034708,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$277.79",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_current_charges",
+        "page": 1,
+        "bbox": [
+          0.627648,
+          0.208672,
+          0.024103,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$246.40",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "meters[0].meter_number",
+        "page": 1,
+        "bbox": [
+          0.029412,
+          0.233383,
+          0.938731,
+          0.061202
+        ],
+        "polygon": null,
+        "reference_text": "NZT0123456",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "meters[0].service_type",
+        "page": 1,
+        "bbox": [
+          0.388771,
+          0.287758,
+          0.04285,
+          0.016192
+        ],
+        "polygon": null,
+        "reference_text": "Electric",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "meters[0].current_reading",
+        "page": 1,
+        "bbox": [
+          0.523922,
+          0.264121,
+          0.03634,
+          0.016192
+        ],
+        "polygon": null,
+        "reference_text": "40705",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "meters[0].usage_quantity",
+        "page": 1,
+        "bbox": [
+          0.53804,
+          0.287757,
+          0.021804,
+          0.016192
+        ],
+        "polygon": null,
+        "reference_text": "669",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "meters[0].usage_unit",
+        "page": 1,
+        "bbox": [
+          0.56285,
+          0.287757,
+          0.030497,
+          0.016192
+        ],
+        "polygon": null,
+        "reference_text": "KWH",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "meters[1].meter_number",
+        "page": 1,
+        "bbox": [
+          0.029412,
+          0.393161,
+          0.93452,
+          0.067152
+        ],
+        "polygon": null,
+        "reference_text": "0WG0123456",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "meters[1].service_type",
+        "page": 1,
+        "bbox": [
+          0.407203,
+          0.467758,
+          0.023974,
+          0.016192
+        ],
+        "polygon": null,
+        "reference_text": "Gas",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "meters[1].current_reading",
+        "page": 1,
+        "bbox": [
+          0.53098,
+          0.444121,
+          0.029072,
+          0.016192
+        ],
+        "polygon": null,
+        "reference_text": "1464",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "meters[1].usage_quantity",
+        "page": 1,
+        "bbox": [
+          0.400928,
+          0.482303,
+          0.025438,
+          0.016192
+        ],
+        "polygon": null,
+        "reference_text": "83.9",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "meters[1].usage_unit",
+        "page": 1,
+        "bbox": [
+          0.43,
+          0.482303,
+          0.044301,
+          0.016192
+        ],
+        "polygon": null,
+        "reference_text": "Therms",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "meters[0].previous_reading",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "40036.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "meters[1].previous_reading",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "1385.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:51:32.987302Z",
+  "completed_at": "2026-09-21T14:51:32.987302Z",
+  "latency_in_ms": 491
+}

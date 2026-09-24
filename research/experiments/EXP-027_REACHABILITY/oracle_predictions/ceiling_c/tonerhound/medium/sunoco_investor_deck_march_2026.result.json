@@ -1,0 +1,54 @@
+{
+  "request": {
+    "example_id": "medium/sunoco_investor_deck_march_2026",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/sunoco_investor_deck_march_2026.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/sunoco_investor_deck_march_2026",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "period": "FY2025",
+      "currency": "USD",
+      "fiscal_period_end_date": "2025-12-31",
+      "total_revenue": 42000.0,
+      "revenue_growth_yoy": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 527.0,
+      "adjusted_ebitda": 2100,
+      "gaap_eps_diluted": null,
+      "adjusted_eps_diluted": null,
+      "gross_margin": null,
+      "operating_margin": null,
+      "free_cash_flow": null,
+      "segments": []
+    },
+    "field_citations": [
+      {
+        "field_path": "adjusted_ebitda",
+        "page": 3,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:37:59.479479Z",
+  "completed_at": "2026-09-23T19:37:59.479479Z",
+  "latency_in_ms": 0
+}

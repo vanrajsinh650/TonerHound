@@ -1,0 +1,113 @@
+{
+  "request": {
+    "example_id": "short/fort_bend_operativeiq_invoice",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/fort_bend_operativeiq_invoice.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/fort_bend_operativeiq_invoice",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "invoice_number": "44920",
+      "invoice_type": "standard",
+      "original_invoice_number": null,
+      "date": "2022-05-18",
+      "due_date": "2022-07-02",
+      "purchase_order_number": "212706",
+      "order_number": null,
+      "vendor": {
+        "name": "EMS Technology Solutions LLC",
+        "address": {
+          "street": "3781 TRAMORE POINTE PKWY",
+          "city": "AUSTELL",
+          "state": "GA",
+          "zip_code": "30106",
+          "country": null
+        },
+        "phone": "877-217-3707",
+        "email": "accounting@operativeiq.com",
+        "tax_id": null
+      },
+      "customer": {
+        "name": "FORT BEND COUNTY EMS",
+        "address": {
+          "street": "301 JACKSON, SUITE 701",
+          "city": "RICHMOND",
+          "state": "TX",
+          "zip_code": "77469",
+          "country": null
+        },
+        "phone": null,
+        "email": null,
+        "account_number": null
+      },
+      "line_items": [
+        {
+          "line_no": 1,
+          "item_code": "IQ10183",
+          "description": "ANNUAL SANDBOX MAINTENANCE",
+          "quantity": 1.0,
+          "unit_price": 1800.0,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 1800.0
+        },
+        {
+          "line_no": 2,
+          "item_code": "IQ10182",
+          "description": "IQ SANDBOX ENVIRONMENT SETUP",
+          "quantity": 1.0,
+          "unit_price": 350.0,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 350.0
+        }
+      ],
+      "subtotal": 2150.0,
+      "discount_total": null,
+      "tax_total": 0.0,
+      "shipping": null,
+      "total_amount": 2150.0,
+      "payment_terms": "NET 45",
+      "bank_details": null,
+      "currency": "USD",
+      "notes": null
+    },
+    "field_citations": [
+      {
+        "field_path": "vendor.email",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.address.street",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:38:03.688835Z",
+  "completed_at": "2026-09-23T19:38:03.688835Z",
+  "latency_in_ms": 0
+}

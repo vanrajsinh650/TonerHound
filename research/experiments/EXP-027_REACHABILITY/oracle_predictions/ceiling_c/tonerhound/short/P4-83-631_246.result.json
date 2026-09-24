@@ -1,0 +1,788 @@
+{
+  "request": {
+    "example_id": "short/P4-83-631_246",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/P4-83-631_246.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/P4-83-631_246",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "field_name": "Comanche-Halsell (6500)",
+      "lease_name": "Briscoe Ranch etal Section 63",
+      "current_operator_name": "Peregrine Petroleum, LLC",
+      "operator_p5_no": "653272",
+      "oil_lse_gas_id_no": "14874",
+      "county": "Maverick",
+      "rrc_district": "01",
+      "operator_address": "10333 Richmond, Suite 225 Houston, TX 77042",
+      "well_nos": "163H",
+      "classification_oil": true,
+      "classification_gas": false,
+      "classification_other": false,
+      "effective_date": "06/08/2010",
+      "change_operator": true,
+      "change_oil_condensate_gatherer": false,
+      "change_gas_gatherer": false,
+      "change_gas_purchaser": false,
+      "change_gas_purchaser_system_code": false,
+      "change_field_name": false,
+      "change_field_name_from": null,
+      "change_field_name_docket": null,
+      "change_lease_name": true,
+      "change_lease_name_from": "Cage-West \"C\" 163H Unit",
+      "new_rrc_oil_lease": false,
+      "new_rrc_gas_well": false,
+      "new_rrc_other_well": false,
+      "new_rrc_other_well_specify": null,
+      "due_new_completion_recompletion": false,
+      "due_reclass_gas_to_oil": false,
+      "due_reclass_oil_to_gas": false,
+      "due_consolidation": false,
+      "due_unitization": false,
+      "due_field_transfer": false,
+      "due_subdivision": false,
+      "prev_operator_name": "TXCO Resources, Inc.",
+      "prev_operator_signature": true,
+      "prev_operator_name_print": null,
+      "prev_operator_title": null,
+      "prev_operator_date": "09/07/10",
+      "prev_operator_phone": null,
+      "prev_operator_authorized_employee": false,
+      "prev_operator_authorized_agent": false,
+      "curr_operator_name_print": "Tamara L. Gannon",
+      "curr_operator_signature": true,
+      "curr_operator_title": "VP, Engineering",
+      "curr_operator_email": "tgannon@peregrinepetroleum.com",
+      "curr_operator_date": "6/29/10",
+      "curr_operator_phone": "713-630-8966",
+      "curr_operator_authorized_employee": true,
+      "curr_operator_authorized_agent": false,
+      "reviewer_initials": null,
+      "approval_date": null,
+      "gas_gatherers_purchasers": null,
+      "oil_condensate_gatherers": null
+    },
+    "field_citations": [
+      {
+        "field_path": "field_name",
+        "page": 1,
+        "bbox": [
+          0.04436,
+          0.12608,
+          0.21313837812535924,
+          0.01944
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_name",
+        "page": 1,
+        "bbox": [
+          0.5165457667738483,
+          0.12769,
+          0.24212030839145815,
+          0.02009
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "current_operator_name",
+        "page": 1,
+        "bbox": [
+          0.04531,
+          0.15943,
+          0.21483519698835643,
+          0.02183
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_p5_no",
+        "page": 1,
+        "bbox": [
+          0.5147983524106939,
+          0.16101,
+          0.06806414405409916,
+          0.019
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "oil_lse_gas_id_no",
+        "page": 1,
+        "bbox": [
+          0.6335515881412712,
+          0.16233939348472515,
+          0.059897077092787354,
+          0.0182
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.7529164879739181,
+          0.16371365216105466,
+          0.0817802366038477,
+          0.01816
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district",
+        "page": 1,
+        "bbox": [
+          0.857665171273691,
+          0.16308943581171398,
+          0.026287240873510295,
+          0.01807
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_address",
+        "page": 1,
+        "bbox": [
+          0.0424525856368455,
+          0.19497941464821955,
+          0.23040215718974988,
+          0.03386808912607805
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "well_nos",
+        "page": 1,
+        "bbox": [
+          0.697,
+          0.1824,
+          0.0503,
+          0.0225
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "classification_oil",
+        "page": 1,
+        "bbox": [
+          0.5264061894789678,
+          0.22854477557234465,
+          0.01665,
+          0.01293
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "classification_gas",
+        "page": 1,
+        "bbox": [
+          0.5685632984001918,
+          0.22906321799887955,
+          0.01665,
+          0.01293
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "classification_other",
+        "page": 1,
+        "bbox": [
+          0.612536113611574,
+          0.22880477557234466,
+          0.01664,
+          0.01292
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "effective_date",
+        "page": 1,
+        "bbox": [
+          0.7840312319134977,
+          0.23082,
+          0.10222107019759587,
+          0.01989
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "change_operator",
+        "page": 1,
+        "bbox": [
+          0.15669890985610763,
+          0.2618963478389454,
+          0.0167,
+          0.01294
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "change_oil_condensate_gatherer",
+        "page": 1,
+        "bbox": [
+          0.2597348008401252,
+          0.2618663772252166,
+          0.01668,
+          0.01293
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "change_gas_gatherer",
+        "page": 1,
+        "bbox": [
+          0.4613765259076149,
+          0.26149115279756124,
+          0.01666,
+          0.01293
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "change_gas_purchaser",
+        "page": 1,
+        "bbox": [
+          0.6003309713522444,
+          0.26219955114468924,
+          0.01664,
+          0.01292
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "change_gas_purchaser_system_code",
+        "page": 1,
+        "bbox": [
+          0.7370527153865827,
+          0.2631979788780886,
+          0.01662,
+          0.01291
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "change_field_name",
+        "page": 1,
+        "bbox": [
+          0.1875889477898045,
+          0.2755195364515537,
+          0.01669,
+          0.01294
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "change_field_name_from",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "change_field_name_docket",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "change_lease_name",
+        "page": 1,
+        "bbox": [
+          0.18303650694076645,
+          0.2918031592263371,
+          0.027720436253446574,
+          0.019921361259067714
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "change_lease_name_from",
+        "page": 1,
+        "bbox": [
+          0.30467,
+          0.29389,
+          0.56918,
+          0.01293
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "new_rrc_oil_lease",
+        "page": 1,
+        "bbox": [
+          0.20445168713379283,
+          0.31972248467035774,
+          0.01669,
+          0.01293
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "new_rrc_gas_well",
+        "page": 1,
+        "bbox": [
+          0.2900475591509619,
+          0.31977248467035774,
+          0.01668,
+          0.01293
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "new_rrc_other_well",
+        "page": 1,
+        "bbox": [
+          0.20168326749333296,
+          0.3340292960577494,
+          0.01951235803219098,
+          0.01240477557234465
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "due_new_completion_recompletion",
+        "page": 1,
+        "bbox": [
+          0.5013551183019238,
+          0.32037841304026365,
+          0.01665,
+          0.01292
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "due_reclass_gas_to_oil",
+        "page": 1,
+        "bbox": [
+          0.8300423030905417,
+          0.32253363746791897,
+          0.01661,
+          0.0129
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "due_reclass_oil_to_gas",
+        "page": 1,
+        "bbox": [
+          0.7084396016802503,
+          0.32057,
+          0.01663,
+          0.01291
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "due_consolidation",
+        "page": 1,
+        "bbox": [
+          0.499,
+          0.3343,
+          0.0167,
+          0.0129
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "due_unitization",
+        "page": 1,
+        "bbox": [
+          0.4998,
+          0.3362,
+          0.0167,
+          0.0129
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "due_field_transfer",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "due_subdivision",
+        "page": 1,
+        "bbox": [
+          0.5007,
+          0.335,
+          0.0167,
+          0.0129
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_name",
+        "page": 1,
+        "bbox": [
+          0.04231448337832649,
+          0.7180222615157157,
+          0.18992618057061839,
+          0.01664363746791901
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_signature",
+        "page": 1,
+        "bbox": [
+          0.4927,
+          0.711,
+          0.2772,
+          0.0398
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_name_print",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_title",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_date",
+        "page": 1,
+        "bbox": [
+          0.786,
+          0.7108,
+          0.1424,
+          0.0311
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_phone",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_authorized_employee",
+        "page": 1,
+        "bbox": [
+          0.484044383553527,
+          0.7493277116440397,
+          0.01747277727768523,
+          0.01419522442765535
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_authorized_agent",
+        "page": 1,
+        "bbox": [
+          0.6912817200769324,
+          0.7511913784982299,
+          0.018455478687976604,
+          0.013806840773662987
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_name_print",
+        "page": 1,
+        "bbox": [
+          0.044521715584065515,
+          0.8747286681272035,
+          0.15896393839173112,
+          0.01892
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_signature",
+        "page": 1,
+        "bbox": [
+          0.4847296372225199,
+          0.8656027557739929,
+          0.32268024802714596,
+          0.030953545737798953
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_title",
+        "page": 1,
+        "bbox": [
+          0.04497030797837446,
+          0.9156342973307627,
+          0.1409613977178936,
+          0.01968
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_email",
+        "page": 1,
+        "bbox": [
+          0.04386754018411348,
+          0.9578247755723447,
+          0.19354935616805324,
+          0.0132195511446893
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_date",
+        "page": 1,
+        "bbox": [
+          0.47219575322552126,
+          0.9478561540705746,
+          0.1049357273092195,
+          0.02791907035708081
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_phone",
+        "page": 1,
+        "bbox": [
+          0.7168442457950307,
+          0.9521191022893786,
+          0.166789463921754,
+          0.019832021121911413
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_authorized_employee",
+        "page": 1,
+        "bbox": [
+          0.4780691654268037,
+          0.9194554207420528,
+          0.02248660676556588,
+          0.01303
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_authorized_agent",
+        "page": 1,
+        "bbox": [
+          0.690821568342145,
+          0.9208891316756498,
+          0.018455516621673558,
+          0.01301
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:38:02.578084Z",
+  "completed_at": "2026-09-23T19:38:02.578084Z",
+  "latency_in_ms": 0
+}

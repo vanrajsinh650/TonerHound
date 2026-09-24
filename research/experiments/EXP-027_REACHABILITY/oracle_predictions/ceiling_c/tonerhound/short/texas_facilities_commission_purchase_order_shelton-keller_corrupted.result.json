@@ -1,0 +1,100 @@
+{
+  "request": {
+    "example_id": "short/texas_facilities_commission_purchase_order_shelton-keller_corrupted",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/texas_facilities_commission_purchase_order_shelton-keller_corrupted.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/texas_facilities_commission_purchase_order_shelton-keller_corrupted",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "po_number": "303-0-0317",
+      "requisition_number": "303-0-00473",
+      "po_date": "2019-11-07",
+      "buyer": {
+        "name": "TEXAS FACILITIES COMMISSION",
+        "department": "Facilities Design and Construction"
+      },
+      "requisitioner": null,
+      "buyer_contact": "Leandra Contreras",
+      "vendor": {
+        "name": "SHELTON-KELLER GROUP INC",
+        "address": "200 EAST CESAR CHAVEZ ST STE 190 AUSTIN, TX 787014004",
+        "vendor_number": "17526176577",
+        "contact": "Megan Williams Phone:512-592-5214, Fax: mwilliams@skgtexas.com"
+      },
+      "ship_to": "Parking Garage R, Warehouse 1706 San Jacinto Blvd. ATTN: Leandra Contreras Austin, TX 78701",
+      "bill_to": "TEXAS FACILITIES COMMISSION FISCAL MANAGEMENT / ACCOUNTS PAYABLE P.O. BOX 13047 Austin, Texas 78711-3047",
+      "line_items": [
+        {
+          "line_no": 1,
+          "description": "Sit On It / Ideon (Exemplis) 2723Y.A142.B1--FC1-B17-E3-C16-S0-MC5-FABRIC-~-FG3-COVERCLOTHINDIGO-~-AC Amplify, Highback, Mesh Back, Enhanced Synchro Cntrl, Height FC1:Black Frame B17:Standard Black Nylon Base E3:Seat Depth Adjustment Upgrade C16:Standard Carpet Casters S0:Standard Cylinder Height MC5:Onyx (Black) Mesh Color FABRIC:Fabric Grade Selections ~:No Selection FG3:Fabric Grade 3 COVERCLOTH:Cover Cloth Standard Color Selection INDIGO:Cover Cloth Indigo ~:No Selection AC:Fully Assembled",
+          "quantity": 2.0,
+          "unit_of_measure": "EACH",
+          "unit_price": 448.0,
+          "start_date": "2019-11-07",
+          "end_date": "2019-12-06",
+          "extended_price": 896.0
+        },
+        {
+          "line_no": 2,
+          "description": "Allseating 85040-T2--BKN-(M3)-3EB-MED-SS-~-LH-G1-(1)-F-OBAY-~-BHA-KD-AS YouToo, Midback, Synchro Tilt, Task 2 Arm BKN:Black Nylon (M3):M3 Mesh 3EB:Ebony MED:Upholstered Medium Seat 20\"Wx18\"D (Std) SS:Seat Slider (2.5\" Range) ~:No Selection LH:65mm (2.5\") Hard Surface Casters G1:Grade 1 (1):Oasis F-OBAY:Bay ~:No Selection BHA:Back Height Adjustment KD:Knocked Down AS:Allseating Standard",
+          "quantity": 1.0,
+          "unit_of_measure": "EACH",
+          "unit_price": 540.0,
+          "start_date": "2019-11-07",
+          "end_date": "2019-12-06",
+          "extended_price": 540.0
+        },
+        {
+          "line_no": 3,
+          "description": "SAFCO Products Company 1801AG2113 Comfort Series Big & Tall Executive Chair, Fabric, Black",
+          "quantity": 1.0,
+          "unit_of_measure": "EACH",
+          "unit_price": 610.0,
+          "start_date": "2019-11-07",
+          "end_date": "2019-12-06",
+          "extended_price": 610.0
+        },
+        {
+          "line_no": 4,
+          "description": "Labor to install 4 chairs",
+          "quantity": 1.0,
+          "unit_of_measure": "FEE",
+          "unit_price": 165.0,
+          "start_date": "2019-11-07",
+          "end_date": "2019-12-06",
+          "extended_price": 165.0
+        }
+      ],
+      "total_amount": 2211.0,
+      "currency": "USD"
+    },
+    "field_citations": [
+      {
+        "field_path": "vendor.contact",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:38:04.082580Z",
+  "completed_at": "2026-09-23T19:38:04.082580Z",
+  "latency_in_ms": 0
+}

@@ -1,0 +1,201 @@
+{
+  "request": {
+    "example_id": "short/ms_medicaid_ra_paid_denied_claims_corrupted",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/ms_medicaid_ra_paid_denied_claims_corrupted.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/ms_medicaid_ra_paid_denied_claims_corrupted",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "payments": [
+        {
+          "check_number": "00000065",
+          "check_amount": null,
+          "ra_date": "01/14/08",
+          "payer_name": "MISSISSIPPI ENVISION MMIS",
+          "payee_name": "CHARLES Q PROVIDER",
+          "payee_provider_number": "00099999",
+          "payee_npi": "1234567890",
+          "claim_type": "VISION AND HEARING"
+        },
+        {
+          "check_number": "04952126",
+          "check_amount": null,
+          "ra_date": "01/07/08",
+          "payer_name": "MISSISSIPPI ENVISION MMIS",
+          "payee_name": "ANYTOWN MEDICAL CENT",
+          "payee_provider_number": "00099999",
+          "payee_npi": "1234567890",
+          "claim_type": "INPATIENT"
+        }
+      ],
+      "claims": [
+        {
+          "claim_number": "08000000360109867",
+          "patient_name": "JOHN A BENEFICIARY",
+          "recipient_id": "00000995588771",
+          "patient_account_number": "59A92",
+          "medical_record_number": "59A92",
+          "claim_from_date": "01/15/08",
+          "claim_to_date": "01/15/08",
+          "total_submitted": 181.23,
+          "total_paid": 172.17,
+          "total_patient_responsibility": 0.0,
+          "claim_status": "PAID",
+          "reason_codes": null
+        },
+        {
+          "claim_number": "08000000000920007",
+          "patient_name": "JIM Q BENEFICIARY",
+          "recipient_id": "00000994488775",
+          "patient_account_number": "59J19",
+          "medical_record_number": "59J19",
+          "claim_from_date": "01/16/08",
+          "claim_to_date": "01/16/08",
+          "total_submitted": 161.28,
+          "total_paid": 149.54,
+          "total_patient_responsibility": 3.0,
+          "claim_status": "PAID",
+          "reason_codes": "0132 0439"
+        },
+        {
+          "claim_number": "08001355000025107",
+          "patient_name": "JANE A DOE",
+          "recipient_id": "00000998877667",
+          "patient_account_number": "3719JANEAC2000",
+          "medical_record_number": "3719JANEAC2000",
+          "claim_from_date": "12/21/07",
+          "claim_to_date": "12/23/07",
+          "total_submitted": 6964.77,
+          "total_paid": 2409.66,
+          "total_patient_responsibility": 0.0,
+          "claim_status": "PAID",
+          "reason_codes": "0674"
+        }
+      ],
+      "service_lines": [
+        {
+          "claim_number": "08000000360109867",
+          "line_number": "1",
+          "date_of_service_from": "01/15/08",
+          "date_of_service_to": "01/15/08",
+          "procedure_code": "99204",
+          "modifiers": null,
+          "revenue_code": null,
+          "units": 1.0,
+          "charge_amount": 114.09,
+          "allowed_amount": null,
+          "paid_amount": 108.39,
+          "line_status": "PAID",
+          "reason_codes": null
+        },
+        {
+          "claim_number": "08000000360109867",
+          "line_number": "2",
+          "date_of_service_from": "01/15/08",
+          "date_of_service_to": "01/15/08",
+          "procedure_code": "V2020",
+          "modifiers": null,
+          "revenue_code": null,
+          "units": 1.0,
+          "charge_amount": 36.0,
+          "allowed_amount": null,
+          "paid_amount": 34.2,
+          "line_status": "PAID",
+          "reason_codes": null
+        },
+        {
+          "claim_number": "08000000360109867",
+          "line_number": "3",
+          "date_of_service_from": "01/15/08",
+          "date_of_service_to": "01/15/08",
+          "procedure_code": "V2100",
+          "modifiers": null,
+          "revenue_code": null,
+          "units": 1.0,
+          "charge_amount": 19.49,
+          "allowed_amount": null,
+          "paid_amount": 18.52,
+          "line_status": "PAID",
+          "reason_codes": null
+        },
+        {
+          "claim_number": "08000000360109867",
+          "line_number": "4",
+          "date_of_service_from": null,
+          "date_of_service_to": null,
+          "procedure_code": "92340",
+          "modifiers": null,
+          "revenue_code": null,
+          "units": null,
+          "charge_amount": null,
+          "allowed_amount": null,
+          "paid_amount": null,
+          "line_status": null,
+          "reason_codes": null
+        },
+        {
+          "claim_number": "08000000000920007",
+          "line_number": "1",
+          "date_of_service_from": "01/16/08",
+          "date_of_service_to": "01/16/08",
+          "procedure_code": "92014",
+          "modifiers": null,
+          "revenue_code": null,
+          "units": 1.0,
+          "charge_amount": 76.28,
+          "allowed_amount": null,
+          "paid_amount": 69.47,
+          "line_status": "PAID",
+          "reason_codes": null
+        },
+        {
+          "claim_number": "08000000000920007",
+          "line_number": "2",
+          "date_of_service_from": "01/16/08",
+          "date_of_service_to": "01/16/08",
+          "procedure_code": "92015",
+          "modifiers": null,
+          "revenue_code": null,
+          "units": 1.0,
+          "charge_amount": 25.0,
+          "allowed_amount": null,
+          "paid_amount": 23.75,
+          "line_status": "PAID",
+          "reason_codes": null
+        },
+        {
+          "claim_number": "08000000000920007",
+          "line_number": "3",
+          "date_of_service_from": "01/16/08",
+          "date_of_service_to": "01/16/08",
+          "procedure_code": "2021F",
+          "modifiers": null,
+          "revenue_code": null,
+          "units": 1.0,
+          "charge_amount": 0.0,
+          "allowed_amount": null,
+          "paid_amount": 0.0,
+          "line_status": "DENY",
+          "reason_codes": "0132 0439"
+        }
+      ]
+    },
+    "field_citations": []
+  },
+  "started_at": "2026-09-23T19:38:03.812770Z",
+  "completed_at": "2026-09-23T19:38:03.812770Z",
+  "latency_in_ms": 0
+}

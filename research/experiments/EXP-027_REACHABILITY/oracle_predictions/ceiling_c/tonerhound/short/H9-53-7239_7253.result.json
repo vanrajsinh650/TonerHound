@@ -1,0 +1,926 @@
+{
+  "request": {
+    "example_id": "short/H9-53-7239_7253",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/H9-53-7239_7253.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/H9-53-7239_7253",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "operator": "BHP Billiton (TX LA OP) CO",
+      "operator_number": "068596",
+      "rrc_district": "2",
+      "street_or_po_box": "1000 Louisiana Street Suite 5600",
+      "city": "Houston",
+      "state": "TX",
+      "zip_code": "77002",
+      "lease_facility_operation_name": "H Sisters B 3H",
+      "field_or_area_name": "Eagleville (Eagleford-2)",
+      "county": "Dewitt",
+      "optype_a_oil_field": false,
+      "optype_b_gas_field": false,
+      "optype_c_pipeline_gathering": false,
+      "optype_d_gasoline_plant": false,
+      "optype_e_drilling_workover": true,
+      "optype_f_sweetening_unit": false,
+      "optype_g_combination": false,
+      "optype_h_other": false,
+      "operation_type_other_explanation": "Based off field concentration TRRC",
+      "h2s_concentration": "10000 PPM",
+      "maximum_escape_volume": "1000 MCF/Day",
+      "roe_100ppm": "426 Ft.",
+      "roe_500ppm": "195 Ft.",
+      "operation_existing": false,
+      "operation_new": true,
+      "modification_cert_change_yes": false,
+      "modification_cert_change_no": false,
+      "workover_100ppm_3000ft_yes": false,
+      "workover_100ppm_3000ft_no": true,
+      "previous_certificate_number": null,
+      "roe_100ppm_public_area_yes": false,
+      "roe_100ppm_public_area_no": true,
+      "roe_500ppm_public_road_yes": false,
+      "roe_500ppm_public_road_no": true,
+      "injection_h2s_fluid_yes": false,
+      "injection_h2s_fluid_no": true,
+      "compliance_date_mo": null,
+      "compliance_date_day": null,
+      "compliance_date_year": null,
+      "depth_of_compliance_drilling": "800 Ft. from Surface",
+      "contingency_plan_prepared_yes": true,
+      "contingency_plan_prepared_no": false,
+      "contingency_plan_location": "Rig Site/ 6825 Hwy 87, San Antonio, Tx, In Process with RRC SWR 36",
+      "data_location": "TRRC, BHP Billiton, 6825 Hwy 87, Suite 06, San Antonio, Tx",
+      "signature_present": true,
+      "representative_of_company": null,
+      "title": "Safety Automation Pres",
+      "phone_no": "432.631.7775",
+      "certificate_date": "10/21/2014",
+      "approved_by": "Wesley Dresch",
+      "rrc_use_date": "10-23-2014",
+      "remarks": null,
+      "certification_number": "082478",
+      "exempt_stamp_present": false,
+      "operations_covered": [
+        {
+          "rrc_id": "796835",
+          "type_id_code": "05",
+          "storage_yes": false,
+          "storage_no": true
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "operator",
+        "page": 1,
+        "bbox": [
+          0.14844,
+          0.2007759821735617,
+          0.17079,
+          0.012964017826438289
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_number",
+        "page": 1,
+        "bbox": [
+          0.4964100000000001,
+          0.20299273162854947,
+          0.04989,
+          0.011697268371450534
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district",
+        "page": 1,
+        "bbox": [
+          0.80687,
+          0.20531,
+          0.01157,
+          0.01157
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "street_or_po_box",
+        "page": 1,
+        "bbox": [
+          0.14644,
+          0.22517272608191535,
+          0.20351,
+          0.011387273918084648
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "city",
+        "page": 1,
+        "bbox": [
+          0.51516,
+          0.22344,
+          0.05587,
+          0.01594
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "state",
+        "page": 1,
+        "bbox": [
+          0.73064,
+          0.22562,
+          0.02115,
+          0.01375
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "zip_code",
+        "page": 1,
+        "bbox": [
+          0.7845098995580673,
+          0.2279371102949532,
+          0.04205081468044919,
+          0.011148234640642855
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_facility_operation_name",
+        "page": 1,
+        "bbox": [
+          0.13607,
+          0.25391599326682995,
+          0.09377,
+          0.011404006733170062
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "field_or_area_name",
+        "page": 1,
+        "bbox": [
+          0.45292,
+          0.2560959599870253,
+          0.14046,
+          0.0129640400129747
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.73903,
+          0.2583194810835372,
+          0.0411,
+          0.009810518916462802
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_a_oil_field",
+        "page": 1,
+        "bbox": [
+          0.1358,
+          0.2862,
+          0.1395,
+          0.0112
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_b_gas_field",
+        "page": 1,
+        "bbox": [
+          0.3149,
+          0.2875,
+          0.1436,
+          0.0118
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_c_pipeline_gathering",
+        "page": 1,
+        "bbox": [
+          0.1333,
+          0.3048,
+          0.1714,
+          0.0093
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_d_gasoline_plant",
+        "page": 1,
+        "bbox": [
+          0.3141,
+          0.3029,
+          0.1125,
+          0.0118
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_e_drilling_workover",
+        "page": 1,
+        "bbox": [
+          0.1355,
+          0.3173,
+          0.1357,
+          0.0115
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_f_sweetening_unit",
+        "page": 1,
+        "bbox": [
+          0.3141,
+          0.3195,
+          0.1174,
+          0.0118
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_g_combination",
+        "page": 1,
+        "bbox": [
+          0.1325,
+          0.3311,
+          0.1469,
+          0.0131
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_h_other",
+        "page": 1,
+        "bbox": [
+          0.3149,
+          0.3304,
+          0.1076,
+          0.0144
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "operation_type_other_explanation",
+        "page": 1,
+        "bbox": [
+          0.46315632493738085,
+          0.2931920723955558,
+          0.21460173054239234,
+          0.012902868674784868
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "h2s_concentration",
+        "page": 1,
+        "bbox": [
+          0.57861,
+          0.32125,
+          0.08302,
+          0.01187
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "maximum_escape_volume",
+        "page": 1,
+        "bbox": [
+          0.74221,
+          0.31969,
+          0.12052,
+          0.01438
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_100ppm",
+        "page": 1,
+        "bbox": [
+          0.6027211609386066,
+          0.3409396648523179,
+          0.058224163526377694,
+          0.016722380715118106
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_500ppm",
+        "page": 1,
+        "bbox": [
+          0.801977182878128,
+          0.3429666410026259,
+          0.058224163526377694,
+          0.016722361545682223
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "operation_existing",
+        "page": 1,
+        "bbox": [
+          0.5877149760310536,
+          0.37093116959026534,
+          0.021213725925926605,
+          0.014710839108365233
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "operation_new",
+        "page": 1,
+        "bbox": [
+          0.6368095635128701,
+          0.37188019923411264,
+          0.02060763519326806,
+          0.013761809464517931
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "modification_cert_change_yes",
+        "page": 1,
+        "bbox": [
+          0.8143987568009231,
+          0.3733038334579175,
+          0.019395453727950967,
+          0.012812779820670629
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "modification_cert_change_no",
+        "page": 1,
+        "bbox": [
+          0.8404613461588375,
+          0.37425297081140546,
+          0.018789317138385962,
+          0.011863642467182668
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "workover_100ppm_3000ft_yes",
+        "page": 1,
+        "bbox": [
+          0.8162171207127117,
+          0.3979801839393437,
+          0.018183180548820958,
+          0.01138910969365224
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "workover_100ppm_3000ft_no",
+        "page": 1,
+        "bbox": [
+          0.8382055371546071,
+          0.3974284452046998,
+          0.024379341533031826,
+          0.011920845227129283
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "previous_certificate_number",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_100ppm_public_area_yes",
+        "page": 1,
+        "bbox": [
+          0.8150048933904882,
+          0.44875655502921447,
+          0.018789317138385962,
+          0.011389037887225135
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_100ppm_public_area_no",
+        "page": 1,
+        "bbox": [
+          0.838042125939808,
+          0.44803786808500806,
+          0.022159220464697805,
+          0.012491956720149987
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_500ppm_public_road_yes",
+        "page": 1,
+        "bbox": [
+          0.8137926202113581,
+          0.47485653973444547,
+          0.018183180548820958,
+          0.01091454101690826
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_500ppm_public_road_no",
+        "page": 1,
+        "bbox": [
+          0.8373953024514983,
+          0.47343911153889184,
+          0.02151215842480007,
+          0.013947859716309033
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_h2s_fluid_yes",
+        "page": 1,
+        "bbox": [
+          0.813186575335606,
+          0.5000074140135987,
+          0.020001498603703056,
+          0.012812743917457075
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_h2s_fluid_no",
+        "page": 1,
+        "bbox": [
+          0.8386482166724665,
+          0.49978953312079355,
+          0.020218318753499304,
+          0.011414101189552247
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "compliance_date_mo",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "compliance_date_day",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "compliance_date_year",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "depth_of_compliance_drilling",
+        "page": 1,
+        "bbox": [
+          0.7295204253792452,
+          0.5400877377412607,
+          0.09186479569236702,
+          0.021283000375567587
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "contingency_plan_prepared_yes",
+        "page": 1,
+        "bbox": [
+          0.8126484119112546,
+          0.5724783815000677,
+          0.019087697602315892,
+          0.0147359766527777
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "contingency_plan_prepared_no",
+        "page": 1,
+        "bbox": [
+          0.8392491646935204,
+          0.5749855669081517,
+          0.017577089816162413,
+          0.011863606563969115
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "contingency_plan_location",
+        "page": 1,
+        "bbox": [
+          0.14087,
+          0.59,
+          0.43654,
+          0.01281
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "data_location",
+        "page": 1,
+        "bbox": [
+          0.11234432748543736,
+          0.6444757826382266,
+          0.3706938170528582,
+          0.013681916489656096
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "signature_present",
+        "page": 1,
+        "bbox": [
+          0.1478,
+          0.6985,
+          0.1504,
+          0.0686
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "representative_of_company",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "title",
+        "page": 1,
+        "bbox": [
+          0.37758769763752703,
+          0.7230201691603035,
+          0.1462073760530104,
+          0.013175191621514978
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "phone_no",
+        "page": 1,
+        "bbox": [
+          0.6331271037570403,
+          0.7220067194240213,
+          0.08992399187301861,
+          0.01216168437692509
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "certificate_date",
+        "page": 1,
+        "bbox": [
+          0.7366367223654978,
+          0.7214999562170085,
+          0.07245670855295777,
+          0.01165499784765574
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "approved_by",
+        "page": 1,
+        "bbox": [
+          0.18156638951852383,
+          0.7909230459098788,
+          0.28659221828316295,
+          0.03141774694105644
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_use_date",
+        "page": 1,
+        "bbox": [
+          0.5334990927872796,
+          0.8015645940212524,
+          0.19019892113392045,
+          0.024323407092721946
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "remarks",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "certification_number",
+        "page": 1,
+        "bbox": [
+          0.70631,
+          0.8175,
+          0.09697,
+          0.0225
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "exempt_stamp_present",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[0].rrc_id",
+        "page": 1,
+        "bbox": [
+          0.11692,
+          0.3875,
+          0.05067,
+          0.01406
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[0].type_id_code",
+        "page": 1,
+        "bbox": [
+          0.26975,
+          0.38782,
+          0.02234,
+          0.01531
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[0].storage_yes",
+        "page": 1,
+        "bbox": [
+          0.3337563327241396,
+          0.38232024338070403,
+          0.06667172315488547,
+          0.026574517478761453
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[0].storage_no",
+        "page": 1,
+        "bbox": [
+          0.3998219422179133,
+          0.3832693089277649,
+          0.0587923372742453,
+          0.0256254519317006
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:38:02.425370Z",
+  "completed_at": "2026-09-23T19:38:02.425370Z",
+  "latency_in_ms": 0
+}

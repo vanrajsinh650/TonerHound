@@ -1,0 +1,359 @@
+{
+  "candidate_recall": {
+    "full_370": {
+      "total_fields": 445950,
+      "has_candidates_count": 378988,
+      "has_candidates_pct": 84.9844152931943,
+      "zero_candidates_count": 66962,
+      "zero_candidates_pct": 15.015584706805695,
+      "recall_at_1_count": 197535,
+      "recall_at_1_pct": 44.29532458795829,
+      "recall_at_3_count": 244687,
+      "recall_at_3_pct": 54.86870725417647,
+      "recall_at_5_count": 258549,
+      "recall_at_5_pct": 57.97712748065926,
+      "recall_at_10_count": 277335,
+      "recall_at_10_pct": 62.189707366296666,
+      "recall_at_20_count": 277335,
+      "recall_at_20_pct": 62.189707366296666,
+      "any_candidate_recall_count": 277335,
+      "any_candidate_recall_pct": 62.189707366296666
+    },
+    "cohort_a_dev": {
+      "total_fields": 176112,
+      "has_candidates_count": 147823,
+      "has_candidates_pct": 83.93692650131734,
+      "zero_candidates_count": 28289,
+      "zero_candidates_pct": 16.063073498682655,
+      "recall_at_1_count": 71357,
+      "recall_at_1_pct": 40.51796583992005,
+      "recall_at_3_count": 90871,
+      "recall_at_3_pct": 51.598414645225766,
+      "recall_at_5_count": 95618,
+      "recall_at_5_pct": 54.29385845371127,
+      "recall_at_10_count": 102715,
+      "recall_at_10_pct": 58.32368038520941,
+      "recall_at_20_count": 102715,
+      "recall_at_20_pct": 58.32368038520941,
+      "any_candidate_recall_count": 102715,
+      "any_candidate_recall_pct": 58.32368038520941
+    },
+    "cohort_b_held": {
+      "total_fields": 178930,
+      "has_candidates_count": 144342,
+      "has_candidates_pct": 80.66953557257028,
+      "zero_candidates_count": 34588,
+      "zero_candidates_pct": 19.33046442742972,
+      "recall_at_1_count": 78837,
+      "recall_at_1_pct": 44.060247023975855,
+      "recall_at_3_count": 95736,
+      "recall_at_3_pct": 53.504722517185485,
+      "recall_at_5_count": 101560,
+      "recall_at_5_pct": 56.759626669647346,
+      "recall_at_10_count": 108365,
+      "recall_at_10_pct": 60.562789917844974,
+      "recall_at_20_count": 108365,
+      "recall_at_20_pct": 60.562789917844974,
+      "any_candidate_recall_count": 108365,
+      "any_candidate_recall_pct": 60.562789917844974
+    },
+    "short": {
+      "total_fields": 27012,
+      "has_candidates_count": 24377,
+      "has_candidates_pct": 90.2450762624019,
+      "zero_candidates_count": 2635,
+      "zero_candidates_pct": 9.754923737598105,
+      "recall_at_1_count": 11590,
+      "recall_at_1_pct": 42.9068562120539,
+      "recall_at_3_count": 14237,
+      "recall_at_3_pct": 52.706204649785285,
+      "recall_at_5_count": 15064,
+      "recall_at_5_pct": 55.76780690063675,
+      "recall_at_10_count": 16313,
+      "recall_at_10_pct": 60.3916777728417,
+      "recall_at_20_count": 16313,
+      "recall_at_20_pct": 60.3916777728417,
+      "any_candidate_recall_count": 16313,
+      "any_candidate_recall_pct": 60.3916777728417
+    },
+    "medium": {
+      "total_fields": 102339,
+      "has_candidates_count": 99848,
+      "has_candidates_pct": 97.56593283108101,
+      "zero_candidates_count": 2491,
+      "zero_candidates_pct": 2.434067168918985,
+      "recall_at_1_count": 54852,
+      "recall_at_1_pct": 53.59833494562191,
+      "recall_at_3_count": 66503,
+      "recall_at_3_pct": 64.98304654139673,
+      "recall_at_5_count": 70411,
+      "recall_at_5_pct": 68.80172759163173,
+      "recall_at_10_count": 77025,
+      "recall_at_10_pct": 75.26456189722394,
+      "recall_at_20_count": 77025,
+      "recall_at_20_pct": 75.26456189722394,
+      "any_candidate_recall_count": 77025,
+      "any_candidate_recall_pct": 75.26456189722394
+    },
+    "long": {
+      "total_fields": 316599,
+      "has_candidates_count": 254763,
+      "has_candidates_pct": 80.46866856812561,
+      "zero_candidates_count": 61836,
+      "zero_candidates_pct": 19.531331431874392,
+      "recall_at_1_count": 131093,
+      "recall_at_1_pct": 41.40663741831149,
+      "recall_at_3_count": 163947,
+      "recall_at_3_pct": 51.78380222300134,
+      "recall_at_5_count": 173074,
+      "recall_at_5_pct": 54.66662876383058,
+      "recall_at_10_count": 183997,
+      "recall_at_10_pct": 58.11673441798616,
+      "recall_at_20_count": 183997,
+      "recall_at_20_pct": 58.11673441798616,
+      "any_candidate_recall_count": 183997,
+      "any_candidate_recall_pct": 58.11673441798616
+    }
+  },
+  "ceilings": {
+    "timestamp": "2026-09-24 05:45:32 UTC",
+    "baseline_production": {
+      "name": "Production Baseline (EXP-026 SCGF Restoration)",
+      "full_370": {
+        "word_f1": 0.5597888260156839,
+        "word_precision": 0.6210736761917511,
+        "word_recall": 0.5226186081273672,
+        "page_f1": 0.8127517756798581,
+        "page_precision": 0.8645991729366905,
+        "page_recall": 0.779819756743339,
+        "value_f1": 1.0,
+        "micro_word_f1": 0.0,
+        "micro_word_precision": 0.0,
+        "micro_word_recall": 0.0,
+        "micro_page_f1": 0.0,
+        "total_documents": 370
+      },
+      "cohort_a_dev": {
+        "word_f1": 0.6545248144527965,
+        "word_precision": 0.6735394505638238,
+        "word_recall": 0.6400034025269654,
+        "page_f1": 0.926850018621535,
+        "grounded_docs_count": 32
+      },
+      "cohort_b_held": {
+        "word_f1": 0.5926797433546831,
+        "word_precision": 0.6399486388818078,
+        "word_recall": 0.5619010183534583,
+        "page_f1": 0.8661153008264229,
+        "grounded_docs_count": 32
+      },
+      "length_splits": {
+        "short": {
+          "word_f1": 0.5195351920045898,
+          "word_precision": 0.5965331427593692,
+          "word_recall": 0.474353934857505,
+          "page_f1": 0.8409802030639714,
+          "grounded_docs_count": 175
+        },
+        "medium": {
+          "word_f1": 0.6713922792174581,
+          "word_precision": 0.6907270596668234,
+          "word_recall": 0.6545504225167097,
+          "page_f1": 0.7455036986555462,
+          "grounded_docs_count": 48
+        },
+        "long": {
+          "word_f1": 0.6895903797277086,
+          "word_precision": 0.6942452872581636,
+          "word_recall": 0.6852025105533248,
+          "page_f1": 0.7812910919754509,
+          "grounded_docs_count": 13
+        }
+      }
+    },
+    "ceiling_a": {
+      "name": "Ceiling A: Current Production Candidate Pool + Perfect Selection",
+      "full_370": {
+        "word_f1": 0.609579152211345,
+        "word_precision": 0.6748096176081128,
+        "word_recall": 0.5694117387255158,
+        "page_f1": 0.8205863642163774,
+        "page_precision": 0.8725057791802564,
+        "page_recall": 0.7875941134327513,
+        "value_f1": 1.0,
+        "micro_word_f1": 0.0,
+        "micro_word_precision": 0.0,
+        "micro_word_recall": 0.0,
+        "micro_page_f1": 0.0,
+        "total_documents": 370
+      },
+      "cohort_a_dev": {
+        "word_f1": 0.7296868380081455,
+        "word_precision": 0.7500250022451204,
+        "word_recall": 0.7132042820069134,
+        "page_f1": 0.936433627169989,
+        "grounded_docs_count": 32
+      },
+      "cohort_b_held": {
+        "word_f1": 0.6626016447107864,
+        "word_precision": 0.71356317564785,
+        "word_recall": 0.6290816553464825,
+        "page_f1": 0.8894067822691608,
+        "grounded_docs_count": 32
+      },
+      "length_splits": {
+        "short": {
+          "word_f1": 0.557659658780871,
+          "word_precision": 0.6398368872859459,
+          "word_recall": 0.5085831165855195,
+          "page_f1": 0.8415599960210978,
+          "grounded_docs_count": 175
+        },
+        "medium": {
+          "word_f1": 0.7531164023677043,
+          "word_precision": 0.7730937413721762,
+          "word_recall": 0.7356165858480161,
+          "page_f1": 0.7681786709952925,
+          "grounded_docs_count": 48
+        },
+        "long": {
+          "word_f1": 0.778511717044246,
+          "word_precision": 0.7827011457391992,
+          "word_recall": 0.7745791396962338,
+          "page_f1": 0.8081309715021653,
+          "grounded_docs_count": 13
+        }
+      },
+      "delta_vs_baseline": {
+        "full_word_f1_gain": 0.04979032619566104,
+        "held_word_f1_gain": 0.06992190135610332,
+        "dev_word_f1_gain": 0.07516202355534896
+      }
+    },
+    "ceiling_b": {
+      "name": "Ceiling B: Exhaustive Native/OCR Text Geometry + Perfect Selection",
+      "full_370": {
+        "word_f1": 0.6457556768756928,
+        "word_precision": 0.7094626748932209,
+        "word_recall": 0.6066406162880497,
+        "page_f1": 0.82897671448118,
+        "page_precision": 0.8814214722865942,
+        "page_recall": 0.7955731492813956,
+        "value_f1": 1.0,
+        "micro_word_f1": 0.0,
+        "micro_word_precision": 0.0,
+        "micro_word_recall": 0.0,
+        "micro_page_f1": 0.0,
+        "total_documents": 370
+      },
+      "cohort_a_dev": {
+        "word_f1": 0.7609335770170621,
+        "word_precision": 0.7800632658362544,
+        "word_recall": 0.7453435856290688,
+        "page_f1": 0.9467791604245966,
+        "grounded_docs_count": 32
+      },
+      "cohort_b_held": {
+        "word_f1": 0.7005162946570571,
+        "word_precision": 0.7447464802106608,
+        "word_recall": 0.6720418878939439,
+        "page_f1": 0.9045539421731001,
+        "grounded_docs_count": 32
+      },
+      "length_splits": {
+        "short": {
+          "word_f1": 0.5899692903182377,
+          "word_precision": 0.6727549739534386,
+          "word_recall": 0.5399589112340824,
+          "page_f1": 0.8470774238719726,
+          "grounded_docs_count": 175
+        },
+        "medium": {
+          "word_f1": 0.8015974554917449,
+          "word_precision": 0.8119586933904356,
+          "word_recall": 0.7925863906937972,
+          "page_f1": 0.7855210729082888,
+          "grounded_docs_count": 48
+        },
+        "long": {
+          "word_f1": 0.8213104671821635,
+          "word_precision": 0.8251579654005733,
+          "word_recall": 0.8177099403625421,
+          "page_f1": 0.8102994722094875,
+          "grounded_docs_count": 13
+        }
+      },
+      "delta_vs_baseline": {
+        "full_word_f1_gain": 0.08596685086000888,
+        "held_word_f1_gain": 0.10783655130237402,
+        "dev_word_f1_gain": 0.10640876256426557
+      }
+    },
+    "ceiling_c": {
+      "name": "Ceiling C: Diagnostic Gold-Geometry Ceiling",
+      "full_370": {
+        "word_f1": 1.0,
+        "word_precision": 1.0,
+        "word_recall": 1.0,
+        "page_f1": 1.0,
+        "page_precision": 1.0,
+        "page_recall": 1.0,
+        "value_f1": 1.0,
+        "micro_word_f1": 0.0,
+        "micro_word_precision": 0.0,
+        "micro_word_recall": 0.0,
+        "micro_page_f1": 0.0,
+        "total_documents": 370
+      },
+      "cohort_a_dev": {
+        "word_f1": 1.0,
+        "word_precision": 1.0,
+        "word_recall": 1.0,
+        "page_f1": 1.0,
+        "grounded_docs_count": 32
+      },
+      "cohort_b_held": {
+        "word_f1": 1.0,
+        "word_precision": 1.0,
+        "word_recall": 1.0,
+        "page_f1": 1.0,
+        "grounded_docs_count": 32
+      },
+      "length_splits": {
+        "short": {
+          "word_f1": 1.0,
+          "word_precision": 1.0,
+          "word_recall": 1.0,
+          "page_f1": 1.0,
+          "grounded_docs_count": 175
+        },
+        "medium": {
+          "word_f1": 1.0,
+          "word_precision": 1.0,
+          "word_recall": 1.0,
+          "page_f1": 1.0,
+          "grounded_docs_count": 48
+        },
+        "long": {
+          "word_f1": 1.0,
+          "word_precision": 1.0,
+          "word_recall": 1.0,
+          "page_f1": 1.0,
+          "grounded_docs_count": 13
+        }
+      }
+    },
+    "gaps_to_90": {
+      "gap_current_to_90": 0.3402111739843161,
+      "gap_ceiling_a_to_90": 0.29042084778865507,
+      "gap_ceiling_b_to_90": 0.2542443231243072,
+      "gap_ceiling_c_to_90": -0.09999999999999998
+    },
+    "reachability_verdict": {
+      "is_90_reachable_with_current_candidates": false,
+      "is_90_reachable_with_text_only": false,
+      "is_90_reachable_with_perfect_perception": true,
+      "decision_case": "CASE 3"
+    }
+  }
+}

@@ -1,0 +1,661 @@
+{
+  "request": {
+    "example_id": "short/P18-28-1547",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/P18-28-1547.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 40,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/P18-28-1547",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "reporting_period": "January /20 13",
+      "operator": "Barnett Enviro Mgmt Svcs, LLC",
+      "operator_no": "051292",
+      "address_street_or_box": "3026 Thomas Ave. #J",
+      "address_city": "Dallas",
+      "address_state": "TX",
+      "address_zip_code": "75204",
+      "purpose_monthly_report": null,
+      "purpose_corrected_report": false,
+      "purpose_initial_report": null,
+      "purpose_final_report": null,
+      "consolidated_p18_yes": null,
+      "consolidated_p18_no": null,
+      "system_serial_no": "09-0500",
+      "district_and_lease_no": "31137",
+      "gathering_system_facility_name": "Acton SWD",
+      "county": "Parker County, TX",
+      "rrc_district_no": "09",
+      "distance_from_nearest_town": "4.5 Miles",
+      "direction_from_nearest_town": "West",
+      "nearest_town": "Springtown",
+      "survey": "W. Cutbirth Survey",
+      "section": null,
+      "block": null,
+      "abstract_no": "266",
+      "township": null,
+      "league": null,
+      "labor": null,
+      "porcion": null,
+      "share": null,
+      "tract": null,
+      "lot": null,
+      "disposal_api_numbers": "367-33859",
+      "disposal_well_lease_and_well_no": "TWJM Springtown SWD #3 API 367-33859",
+      "disposal_well_uic_no": "W-14# 12358 4/17/07",
+      "disposal_method_recycling": null,
+      "disposal_method_land_application": null,
+      "disposal_method_discharge": null,
+      "disposal_method_other": null,
+      "disposal_method_other_text": null,
+      "disposal_method_permit_no": null,
+      "sec3_l1_num_oil_gas_wells": "0",
+      "sec3_l2_water_from_producing": "0",
+      "sec3_l3_water_from_nonproducing": "0",
+      "sec3_l4_total_texas_water": "0",
+      "sec3_l5_state_ok": null,
+      "sec3_l5_state_la": null,
+      "sec3_l5_state_nm": null,
+      "sec3_l5_state_other": null,
+      "sec3_l5_state_other_text": null,
+      "sec3_l5_out_of_state_water": null,
+      "sec3_l6_skimmed_total": "0",
+      "sec3_l7_tolerance": "0",
+      "sec3_l8_excess_to_leases": "0",
+      "sec3_l9_slugs_credited": "0",
+      "sec3_l10_excess_not_credited": "0",
+      "sec4_l1_storage_beginning": "0",
+      "sec4_l2_skimmed_not_allocated": "0",
+      "sec4_l3_sold": "0",
+      "sec4_l4_transferred": null,
+      "sec4_l5_bsw_collected": null,
+      "sec4_l6_storage_end": "0",
+      "signature_present": true,
+      "print_name": "Will Powers",
+      "certificate_date": "February 20, 2013",
+      "title": "Agent",
+      "telephone_area_code": "512",
+      "telephone_number": "964.7555",
+      "email_optional": null,
+      "gatherer_entries": null
+    },
+    "field_citations": [
+      {
+        "field_path": "reporting_period",
+        "page": 1,
+        "bbox": [
+          0.6495575221238938,
+          0.14102564102564102,
+          0.1504424778761061,
+          0.012362637362637374
+        ],
+        "polygon": null,
+        "reference_text": "January /20 13",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator",
+        "page": 1,
+        "bbox": [
+          0.058997,
+          0.137866,
+          0.168142,
+          0.017308
+        ],
+        "polygon": null,
+        "reference_text": "Barnett Enviro Mgmt",
+        "confidence": 0.75,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "address_street_or_box",
+        "page": 1,
+        "bbox": [
+          0.0584070796460177,
+          0.15613553113553114,
+          0.16460176991150444,
+          0.010073260073260065
+        ],
+        "polygon": null,
+        "reference_text": "3026 Thomas Ave. #J",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "address_city",
+        "page": 1,
+        "bbox": [
+          0.058997050147492625,
+          0.17216117216117216,
+          0.05191740412979351,
+          0.011904761904761918
+        ],
+        "polygon": null,
+        "reference_text": "Dallas,",
+        "confidence": 0.8060624524310256,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "address_state",
+        "page": 1,
+        "bbox": [
+          0.11622418879056047,
+          0.17216117216117216,
+          0.024188790560471976,
+          0.009615384615384609
+        ],
+        "polygon": null,
+        "reference_text": "TX",
+        "confidence": 0.817277296002964,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "address_zip_code",
+        "page": 1,
+        "bbox": [
+          0.1504424778761062,
+          0.17216117216117216,
+          0.04365781710914454,
+          0.010073260073260065
+        ],
+        "polygon": null,
+        "reference_text": "75204",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gathering_system_facility_name",
+        "page": 1,
+        "bbox": [
+          0.365138,
+          0.201623,
+          0.129847,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "~\u2014Acton SWD",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.640708,
+          0.265717,
+          0.159705,
+          0.012981
+        ],
+        "polygon": null,
+        "reference_text": "Parker Coun",
+        "confidence": 0.75,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district_no",
+        "page": 1,
+        "bbox": [
+          0.231268,
+          0.573272,
+          0.00649,
+          0.010508
+        ],
+        "polygon": null,
+        "reference_text": "9",
+        "confidence": 0.9591407126852559,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "distance_from_nearest_town",
+        "page": 1,
+        "bbox": [
+          0.35752212389380533,
+          0.26694139194139194,
+          0.06843657817109139,
+          0.010073260073260093
+        ],
+        "polygon": null,
+        "reference_text": "4.5 Miles",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "direction_from_nearest_town",
+        "page": 1,
+        "bbox": [
+          0.4312684365781711,
+          0.26694139194139194,
+          0.03893805309734516,
+          0.010073260073260093
+        ],
+        "polygon": null,
+        "reference_text": "West",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "nearest_town",
+        "page": 1,
+        "bbox": [
+          0.4943952802359882,
+          0.26694139194139194,
+          0.0943952802359882,
+          0.011904761904761918
+        ],
+        "polygon": null,
+        "reference_text": "Springtown,",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "survey",
+        "page": 1,
+        "bbox": [
+          0.36106194690265486,
+          0.23076923076923078,
+          0.1528023598820059,
+          0.017399267399267393
+        ],
+        "polygon": null,
+        "reference_text": "W. Cutbirth Survey",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "abstract_no",
+        "page": 1,
+        "bbox": [
+          0.324012,
+          0.23038,
+          0.027611,
+          0.013599
+        ],
+        "polygon": null,
+        "reference_text": "A-266",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "disposal_api_numbers",
+        "page": 1,
+        "bbox": [
+          0.5486725663716814,
+          0.358974358974359,
+          0.05722713864306783,
+          0.007783882783882812
+        ],
+        "polygon": null,
+        "reference_text": "367-33859",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "disposal_well_lease_and_well_no",
+        "page": 1,
+        "bbox": [
+          0.31268436578171094,
+          0.35714285714285715,
+          0.2932153392330383,
+          0.009615384615384637
+        ],
+        "polygon": null,
+        "reference_text": "TWJIM Springtown SWD #3 API 367-33859",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "disposal_well_uic_no",
+        "page": 1,
+        "bbox": [
+          0.7610619469026548,
+          0.3576007326007326,
+          0.17404129793510326,
+          0.009615384615384637
+        ],
+        "polygon": null,
+        "reference_text": "W-14# 12358 4/17/07",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l1_num_oil_gas_wells",
+        "page": 1,
+        "bbox": [
+          0.678879,
+          0.43117,
+          0.084838,
+          0.011745
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l2_water_from_producing",
+        "page": 1,
+        "bbox": [
+          0.834395,
+          0.450481,
+          0.06708,
+          0.011126
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l4_total_texas_water",
+        "page": 1,
+        "bbox": [
+          0.834395,
+          0.450481,
+          0.06708,
+          0.011126
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.8717921849386215,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l6_skimmed_total",
+        "page": 1,
+        "bbox": [
+          0.678879,
+          0.43117,
+          0.084838,
+          0.011745
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.8890822790072654,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l7_tolerance",
+        "page": 1,
+        "bbox": [
+          0.678879,
+          0.43117,
+          0.084838,
+          0.011745
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.805164144705509,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l8_excess_to_leases",
+        "page": 1,
+        "bbox": [
+          0.678879,
+          0.43117,
+          0.084838,
+          0.011745
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l9_slugs_credited",
+        "page": 1,
+        "bbox": [
+          0.678879,
+          0.43117,
+          0.084838,
+          0.011745
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.8327462170582642,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec4_l1_storage_beginning",
+        "page": 1,
+        "bbox": [
+          0.678879,
+          0.43117,
+          0.084838,
+          0.011745
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.8587658382265374,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec4_l3_sold",
+        "page": 1,
+        "bbox": [
+          0.678879,
+          0.43117,
+          0.084838,
+          0.011745
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.8059877198083413,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec4_l6_storage_end",
+        "page": 1,
+        "bbox": [
+          0.678879,
+          0.43117,
+          0.084838,
+          0.011745
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.8587658382265374,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "print_name",
+        "page": 1,
+        "bbox": [
+          0.7628318584070797,
+          0.7687728937728938,
+          0.09321533923303837,
+          0.009615384615384581
+        ],
+        "polygon": null,
+        "reference_text": "Will Powers",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "certificate_date",
+        "page": 1,
+        "bbox": [
+          0.4849557522123894,
+          0.8040293040293041,
+          0.13923303834808254,
+          0.012820512820512775
+        ],
+        "polygon": null,
+        "reference_text": "February 20, 2013",
+        "confidence": 0.7884614114718922,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "title",
+        "page": 1,
+        "bbox": [
+          0.7339233038348083,
+          0.8040293040293041,
+          0.046017699115044275,
+          0.012820512820512775
+        ],
+        "polygon": null,
+        "reference_text": "Agent",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "telephone_area_code",
+        "page": 1,
+        "bbox": [
+          0.5669616519174041,
+          0.8278388278388278,
+          0.026548672566371723,
+          0.009615384615384581
+        ],
+        "polygon": null,
+        "reference_text": "512",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "telephone_number",
+        "page": 1,
+        "bbox": [
+          0.776401179941003,
+          0.8273809523809523,
+          0.06666666666666665,
+          0.010073260073260037
+        ],
+        "polygon": null,
+        "reference_text": "964.7555",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_no",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "051292",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "purpose_corrected_report",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "system_serial_no",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "09-0500",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "district_and_lease_no",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "31137",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l3_water_from_nonproducing",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l10_excess_not_credited",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec4_l2_skimmed_not_allocated",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "signature_present",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:50:27.607607Z",
+  "completed_at": "2026-09-21T14:50:27.607607Z",
+  "latency_in_ms": 2337
+}

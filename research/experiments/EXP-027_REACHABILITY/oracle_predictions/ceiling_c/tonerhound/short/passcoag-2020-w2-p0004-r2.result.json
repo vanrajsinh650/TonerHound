@@ -1,0 +1,513 @@
+{
+  "request": {
+    "example_id": "short/passcoag-2020-w2-p0004-r2",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/passcoag-2020-w2-p0004-r2.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/passcoag-2020-w2-p0004-r2",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "employee_ssn": "XXX-XX-XXXXX",
+      "employer_ein": "05-0517079",
+      "employer_name": "PASCOAG UTILITY DISTRICT",
+      "employer_address": "PO BOX 107, PASCOAG RI 02859",
+      "void": false,
+      "employee_name": "WILLIAM J GUERTIN",
+      "employee_address": "494 EAST AVENUE, HARRISVILLE RI 02830",
+      "box_1_wages": 93162.78,
+      "box_2_federal_income_tax_withheld": 8256.59,
+      "box_3_social_security_wages": 107615.66,
+      "box_4_social_security_tax_withheld": 6672.17,
+      "box_5_medicare_wages_and_tips": 107615.66,
+      "box_6_medicare_tax_withheld": 1560.43,
+      "box_7_social_security_tips": null,
+      "box_8_allocated_tips": null,
+      "box_10_dependent_care_benefits": null,
+      "box_11_nonqualified_plans": null,
+      "box_12": [
+        {
+          "code": "C",
+          "amount": 276.12
+        },
+        {
+          "code": "D",
+          "amount": 14452.88
+        }
+      ],
+      "box_13_statutory_employee": false,
+      "box_13_retirement_plan": true,
+      "box_13_third_party_sick_pay": false,
+      "box_13_subtotal": false,
+      "box_14_other": [
+        {
+          "description": "RISDI",
+          "amount": 939.9
+        }
+      ],
+      "state_local_row_1": {
+        "state": "RI",
+        "employer_state_id": "05051707900",
+        "state_wages": 93162.78,
+        "state_income_tax": 3650.35,
+        "local_wages": null,
+        "local_income_tax": null,
+        "locality_name": null
+      },
+      "state_local_row_2": null,
+      "control_number_line1": "0012-0012N426",
+      "control_number_line2": "0000000027-ELECTR"
+    },
+    "field_citations": [
+      {
+        "field_path": "employee_ssn",
+        "page": 1,
+        "bbox": [
+          0.19607843,
+          0.25258303,
+          0.11568627,
+          0.04876999
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "employer_ein",
+        "page": 1,
+        "bbox": [
+          0.0416,
+          0.256,
+          0.0901,
+          0.0414
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "employer_name",
+        "page": 1,
+        "bbox": [
+          0.327,
+          0.1891,
+          0.2132,
+          0.0369
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "employer_address",
+        "page": 1,
+        "bbox": [
+          0.3275,
+          0.2331,
+          0.1405,
+          0.0849
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "void",
+        "page": 1,
+        "bbox": [
+          0.2906,
+          0.1474,
+          0.0278,
+          0.0558
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "employee_name",
+        "page": 1,
+        "bbox": [
+          0.32598039,
+          0.49188192,
+          0.1504902,
+          0.03247232
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "employee_address",
+        "page": 1,
+        "bbox": [
+          0.3275,
+          0.5406,
+          0.1751,
+          0.0852
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "box_1_wages",
+        "page": 1,
+        "bbox": [
+          0.7416,
+          0.2746,
+          0.0719,
+          0.0337
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "box_2_federal_income_tax_withheld",
+        "page": 1,
+        "bbox": [
+          0.91470588,
+          0.27324723,
+          0.06176471,
+          0.03837638
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "box_3_social_security_wages",
+        "page": 1,
+        "bbox": [
+          0.73480392,
+          0.36186962,
+          0.07843137,
+          0.03837638
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "box_4_social_security_tax_withheld",
+        "page": 1,
+        "bbox": [
+          0.91470588,
+          0.3603936,
+          0.06176471,
+          0.04132841
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "box_5_medicare_wages_and_tips",
+        "page": 1,
+        "bbox": [
+          0.7343,
+          0.454,
+          0.0788,
+          0.0365
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "box_6_medicare_tax_withheld",
+        "page": 1,
+        "bbox": [
+          0.91470588,
+          0.45196802,
+          0.06127451,
+          0.03690037
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "box_12[0].code",
+        "page": 1,
+        "bbox": [
+          0.0212,
+          0.4669,
+          0.0111,
+          0.0365
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "box_12[0].amount",
+        "page": 1,
+        "bbox": [
+          0.09362745,
+          0.46236162,
+          0.05343137,
+          0.03837638
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "box_12[1].code",
+        "page": 1,
+        "bbox": [
+          0.021,
+          0.5092,
+          0.01,
+          0.0339
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "box_12[1].amount",
+        "page": 1,
+        "bbox": [
+          0.07647059,
+          0.50516605,
+          0.07058824,
+          0.03837638
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "box_13_statutory_employee",
+        "page": 1,
+        "bbox": [
+          0.0185,
+          0.3625,
+          0.0714,
+          0.0506
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "box_13_retirement_plan",
+        "page": 1,
+        "bbox": [
+          0.1173,
+          0.3739,
+          0.0117,
+          0.0335
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "box_13_third_party_sick_pay",
+        "page": 1,
+        "bbox": [
+          0.1679,
+          0.3605,
+          0.0705,
+          0.0507
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "box_13_subtotal",
+        "page": 1,
+        "bbox": [
+          0.2421,
+          0.3607,
+          0.076,
+          0.0489
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "box_14_other[0].description",
+        "page": 1,
+        "bbox": [
+          0.15539216,
+          0.46236162,
+          0.04607843,
+          0.03837638
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "box_14_other[0].amount",
+        "page": 1,
+        "bbox": [
+          0.26372549,
+          0.46088561,
+          0.05245098,
+          0.0398524
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "state_local_row_1.state",
+        "page": 1,
+        "bbox": [
+          0.0277,
+          0.8316,
+          0.0186,
+          0.0394
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "state_local_row_1.employer_state_id",
+        "page": 1,
+        "bbox": [
+          0.06813725,
+          0.82865929,
+          0.09607843,
+          0.03837638
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "state_local_row_1.state_wages",
+        "page": 1,
+        "bbox": [
+          0.311,
+          0.8284,
+          0.0703,
+          0.0401
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "state_local_row_1.state_income_tax",
+        "page": 1,
+        "bbox": [
+          0.47156863,
+          0.82865929,
+          0.0622549,
+          0.03837638
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "control_number_line1",
+        "page": 1,
+        "bbox": [
+          0.11617647,
+          0.11814268,
+          0.11421569,
+          0.03690037
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "control_number_line2",
+        "page": 1,
+        "bbox": [
+          0.1155,
+          0.1634,
+          0.1511,
+          0.0447
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:38:03.870931Z",
+  "completed_at": "2026-09-23T19:38:03.870931Z",
+  "latency_in_ms": 0
+}

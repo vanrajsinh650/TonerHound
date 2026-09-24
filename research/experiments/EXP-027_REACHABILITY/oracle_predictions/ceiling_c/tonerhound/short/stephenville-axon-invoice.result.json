@@ -1,0 +1,497 @@
+{
+  "request": {
+    "example_id": "short/stephenville-axon-invoice",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/stephenville-axon-invoice.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/stephenville-axon-invoice",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "invoice_number": "INUS246402",
+      "invoice_type": "standard",
+      "original_invoice_number": null,
+      "date": "2024-05-01",
+      "due_date": "2024-05-31",
+      "purchase_order_number": null,
+      "order_number": null,
+      "vendor": {
+        "name": "Axon Enterprise Inc.",
+        "address": {
+          "street": "PO BOX 29661 DEPARTMENT 2018",
+          "city": "PHOENIX",
+          "state": "AZ",
+          "zip_code": "85038-9661",
+          "country": null
+        },
+        "phone": "1-480-991-0797, option 5, option 1",
+        "email": "arinquiries@axon.com",
+        "tax_id": "86-0741227"
+      },
+      "customer": {
+        "name": "Stephenville Police Dept.- TX",
+        "address": {
+          "street": "356 N Belknap St",
+          "city": "Stephenville",
+          "state": "TX",
+          "zip_code": "76401-3414",
+          "country": "USA"
+        },
+        "phone": null,
+        "email": null,
+        "account_number": "141848"
+      },
+      "line_items": [
+        {
+          "line_no": 1,
+          "item_code": "72036",
+          "description": "FLEET 3 STANDARD 2 CAMERA KIT",
+          "quantity": 14.0,
+          "unit_price": 0.0,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 0.0
+        },
+        {
+          "line_no": 2,
+          "item_code": "73840",
+          "description": "AXON EVIDENCE - ECOM LICENSE - BASIC",
+          "quantity": 34.0,
+          "unit_price": 900.0,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 6120.0
+        },
+        {
+          "line_no": 3,
+          "item_code": "73683",
+          "description": "AXON EVIDENCE - STORAGE - 10GB A LA CARTE",
+          "quantity": 34.0,
+          "unit_price": 0.0,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 0.0
+        },
+        {
+          "line_no": 4,
+          "item_code": "73746",
+          "description": "AXON EVIDENCE - ECOM LICENSE - PRO",
+          "quantity": 14.0,
+          "unit_price": 2340.0,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 6552.0
+        },
+        {
+          "line_no": 5,
+          "item_code": "73683",
+          "description": "AXON EVIDENCE - STORAGE - 10GB A LA CARTE",
+          "quantity": 42.0,
+          "unit_price": 0.0,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 0.0
+        },
+        {
+          "line_no": 6,
+          "item_code": "80464",
+          "description": "AXON BODY - TAP WARRANTY - CAMERA",
+          "quantity": 45.0,
+          "unit_price": 520.9,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 4688.1
+        },
+        {
+          "line_no": 7,
+          "item_code": "73309",
+          "description": "AXON BODY - TAP REFRESH 1 - CAMERA",
+          "quantity": 46.0,
+          "unit_price": 551.25,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 5071.5
+        },
+        {
+          "line_no": 8,
+          "item_code": "73310",
+          "description": "AXON BODY - TAP REFRESH 2 - CAMERA",
+          "quantity": 46.0,
+          "unit_price": 571.33,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 5256.24
+        },
+        {
+          "line_no": 9,
+          "item_code": "80464",
+          "description": "AXON BODY - TAP WARRANTY - CAMERA",
+          "quantity": 1.0,
+          "unit_price": 520.9,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 104.18
+        },
+        {
+          "line_no": 10,
+          "item_code": "73686",
+          "description": "AXON EVIDENCE - STORAGE - UNLIMITED (AXON DEVICE)",
+          "quantity": 45.0,
+          "unit_price": 1440.0,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 12960.0
+        },
+        {
+          "line_no": 11,
+          "item_code": "80465",
+          "description": "AXON BODY - TAP WARRANTY - MULTI BAY DOCK",
+          "quantity": 6.0,
+          "unit_price": 496.93,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 596.32
+        },
+        {
+          "line_no": 12,
+          "item_code": "73689",
+          "description": "AXON BODY - TAP REFRESH 1 - DOCK MULTI BAY",
+          "quantity": 6.0,
+          "unit_price": 625.1,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 750.12
+        },
+        {
+          "line_no": 13,
+          "item_code": "73688",
+          "description": "AXON BODY - TAP REFRESH 2 - DOCK MULTI BAY",
+          "quantity": 6.0,
+          "unit_price": 647.97,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 777.56
+        },
+        {
+          "line_no": 14,
+          "item_code": "80466",
+          "description": "AXON BODY - TAP WARRANTY - SINGLE BAY DOCK",
+          "quantity": 5.0,
+          "unit_price": 233.86,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 233.86
+        },
+        {
+          "line_no": 15,
+          "item_code": "80400",
+          "description": "AXON EVIDENCE - FLEET VEHICLE LICENSE",
+          "quantity": 14.0,
+          "unit_price": 1015.57,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 3138.39
+        },
+        {
+          "line_no": 16,
+          "item_code": "73391",
+          "description": "AXON FLEET 3 - DEPLOYMENT (PER VEHICLE)",
+          "quantity": 14.0,
+          "unit_price": 1015.57,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 3138.39
+        },
+        {
+          "line_no": 17,
+          "item_code": "50041",
+          "description": "AXON INTERVIEW - STREAMING SERVER LICENSE - PER SERVER",
+          "quantity": 2.0,
+          "unit_price": 1750.0,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 700.0
+        },
+        {
+          "line_no": 18,
+          "item_code": "50043",
+          "description": "AXON INTERVIEW - STREAMING SERVER MAINTENANCE - PER SERVER",
+          "quantity": 1.0,
+          "unit_price": 1750.2,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 350.04
+        },
+        {
+          "line_no": 19,
+          "item_code": "73202",
+          "description": "AXON BODY 3 - CAMERA - NA10 US BLK RAPIDLOCK",
+          "quantity": 45.0,
+          "unit_price": 195.07,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 1755.63
+        },
+        {
+          "line_no": 20,
+          "item_code": "73202",
+          "description": "AXON BODY 3 - CAMERA - NA10 US BLK RAPIDLOCK",
+          "quantity": 1.0,
+          "unit_price": 0.0,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 0.0
+        },
+        {
+          "line_no": 21,
+          "item_code": "11534",
+          "description": "USB-C to USB-A CABLE FOR AB3 OR FLEX 2",
+          "quantity": 50.0,
+          "unit_price": 0.0,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 0.0
+        },
+        {
+          "line_no": 22,
+          "item_code": "74211",
+          "description": "AXON BODY 3 - DOCK - SINGLE BAY",
+          "quantity": 5.0,
+          "unit_price": 0.0,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 0.0
+        },
+        {
+          "line_no": 23,
+          "item_code": "71104",
+          "description": "AXON - DOCK/DATAPORT POWERCORD - NORTH AMERICA",
+          "quantity": 5.0,
+          "unit_price": 0.0,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 0.0
+        },
+        {
+          "line_no": 24,
+          "item_code": "74210",
+          "description": "AXON BODY 3 - DOCK - EIGHT BAY",
+          "quantity": 6.0,
+          "unit_price": 0.0,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 0.0
+        },
+        {
+          "line_no": 25,
+          "item_code": "71019",
+          "description": "AXON BODY - DOCK POWERCORD - NORTH AMERICA",
+          "quantity": 6.0,
+          "unit_price": 0.0,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 0.0
+        },
+        {
+          "line_no": 26,
+          "item_code": "70033",
+          "description": "WALL MOUNT BRACKET, ASSY, EVIDENCE.COM DOCK",
+          "quantity": 6.0,
+          "unit_price": 43.9,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 52.68
+        },
+        {
+          "line_no": 27,
+          "item_code": "80495",
+          "description": "AXON FLEET 3 - EXT WARRANTY - 2 CAMERA KIT",
+          "quantity": 14.0,
+          "unit_price": 371.56,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 1148.22
+        },
+        {
+          "line_no": 28,
+          "item_code": "72048",
+          "description": "AXON FLEET 3 - SIM INSERTION - ATT",
+          "quantity": 14.0,
+          "unit_price": 12.69,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 39.22
+        },
+        {
+          "line_no": 29,
+          "item_code": "70112",
+          "description": "AXON SIGNAL - SIGNAL UNIT",
+          "quantity": 14.0,
+          "unit_price": 236.12,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 729.67
+        },
+        {
+          "line_no": 30,
+          "item_code": "80379",
+          "description": "AXON SIGNAL - EXT WARRANTY - SIGNAL UNIT",
+          "quantity": 14.0,
+          "unit_price": 58.9,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 182.02
+        },
+        {
+          "line_no": 31,
+          "item_code": "73313",
+          "description": "AXON BODY - TAP REFRESH 1 - DOCK SINGLE BAY",
+          "quantity": 5.0,
+          "unit_price": 150.24,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 150.24
+        },
+        {
+          "line_no": 32,
+          "item_code": "73314",
+          "description": "AXON BODY - TAP REFRESH 2 - DOCK SINGLE BAY",
+          "quantity": 5.0,
+          "unit_price": 155.91,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 155.91
+        },
+        {
+          "line_no": 33,
+          "item_code": "80410",
+          "description": "AXON EVIDENCE - STORAGE - FLEET 1 CAMERA UNLIMITED",
+          "quantity": 28.0,
+          "unit_price": 863.23,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 5335.23
+        },
+        {
+          "line_no": 34,
+          "item_code": "80504",
+          "description": "INTERVIEW ROOM STANDARD EVIDENCE.COM LICENSE",
+          "quantity": 4.0,
+          "unit_price": 4140.0,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 3312.01
+        },
+        {
+          "line_no": 35,
+          "item_code": "74020",
+          "description": "AXON BODY - MOUNT - MAGNET FLEXIBLE RAPIDLOCK",
+          "quantity": 50.0,
+          "unit_price": 0.0,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 0.0
+        },
+        {
+          "line_no": 36,
+          "item_code": "71200",
+          "description": "AXON FLEET - AIRGAIN ANT - 5-IN-1 2LTE 2WIFI 1GNSS BL",
+          "quantity": 14.0,
+          "unit_price": 210.73,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 651.21
+        },
+        {
+          "line_no": 37,
+          "item_code": "11634",
+          "description": "AXON FLEET - CRADLEPOINT IBR900-1200M-B-NPS+5YR NETCLOUD",
+          "quantity": 14.0,
+          "unit_price": 1057.03,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 3266.51
+        }
+      ],
+      "subtotal": 67215.25,
+      "discount_total": 0.0,
+      "tax_total": 0.0,
+      "shipping": null,
+      "total_amount": 67215.25,
+      "payment_terms": "Net 30 days",
+      "bank_details": {
+        "bank_name": "JPMorgan Chase",
+        "account_number": "634912729",
+        "routing_number": "122100024"
+      },
+      "currency": "USD",
+      "notes": null
+    },
+    "field_citations": [
+      {
+        "field_path": "purchase_order_number",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "order_number",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.address.country",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.phone",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "bank_details.bank_name",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:38:04.090117Z",
+  "completed_at": "2026-09-23T19:38:04.090117Z",
+  "latency_in_ms": 0
+}

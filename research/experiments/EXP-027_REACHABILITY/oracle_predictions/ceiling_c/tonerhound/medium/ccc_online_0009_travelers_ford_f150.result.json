@@ -1,0 +1,247 @@
+{
+  "request": {
+    "example_id": "medium/ccc_online_0009_travelers_ford_f150",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/ccc_online_0009_travelers_ford_f150.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/ccc_online_0009_travelers_ford_f150",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "report_reference_number": "104566040",
+      "claim_reference": "FQW8908001",
+      "insurance_company": "TRAVELERS - TRAVELERS INDEMNITY COMPANY OF AMERICA (THE)",
+      "owner_name": "City Of Cartersville",
+      "owner_address": "Po Box 1390 Cartersville, GA 30120-1390",
+      "loss_vehicle_vin": "1FTFX1EF3CFB87101",
+      "loss_vehicle_year": 2012,
+      "loss_vehicle_make": "Ford",
+      "loss_vehicle_model": "F-150",
+      "loss_vehicle_trim": "XL",
+      "loss_vehicle_body_type": "Pickup",
+      "loss_vehicle_odometer": 168902,
+      "loss_incident_date": "10/25/2021",
+      "claim_reported_date": "11/12/2021",
+      "base_vehicle_value": 13731.0,
+      "condition_adjustment": 268.0,
+      "adjusted_vehicle_value": 13999.0,
+      "vehicular_tax": null,
+      "title_registration_fees": null,
+      "deductible": -1000.0,
+      "total_settlement": 12999.0,
+      "comparable_vehicles": [
+        {
+          "comp_label": "Comp 1",
+          "vin": "1FTFX1EF2CFD08877",
+          "year": 2012,
+          "make": "Ford",
+          "model": "F-150",
+          "trim": "Xl",
+          "odometer": 165352,
+          "list_price": 12999.0,
+          "adjusted_comparable_value": 12974.0,
+          "source": "Autotrader",
+          "dealer_name": "1st Choice Autos",
+          "dealer_city": "Smyrna",
+          "dealer_state": "GA",
+          "distance_from_loss_miles": 27,
+          "stock_number": "D08877",
+          "updated_date": "11/07/2021",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": -227.0,
+          "adjustment_options": 1304.0,
+          "adjustment_package": null,
+          "adjustment_condition": -1102.0
+        },
+        {
+          "comp_label": "Comp 2",
+          "vin": "UNKNOWN",
+          "year": 2012,
+          "make": "Ford",
+          "model": "F-150",
+          "trim": "Xl",
+          "odometer": 199209,
+          "list_price": 12995.0,
+          "adjusted_comparable_value": 14394.0,
+          "source": "Dealer Ad",
+          "dealer_name": "Westown Motors",
+          "dealer_city": "Knoxville",
+          "dealer_state": "TN",
+          "distance_from_loss_miles": 124,
+          "stock_number": "10699",
+          "updated_date": "11/01/2021",
+          "adjustment_make_model_trim": 275.0,
+          "adjustment_mileage": 1272.0,
+          "adjustment_options": 954.0,
+          "adjustment_package": null,
+          "adjustment_condition": -1102.0
+        },
+        {
+          "comp_label": "Comp 3",
+          "vin": "1FTFX1ET7CFB82098",
+          "year": 2012,
+          "make": "Ford",
+          "model": "F-150",
+          "trim": "Xl",
+          "odometer": 131477,
+          "list_price": 18900.0,
+          "adjusted_comparable_value": 15154.0,
+          "source": "Dealer Ad",
+          "dealer_name": "First Class Auto Sales L",
+          "dealer_city": "Goodlettsville",
+          "dealer_state": "TN",
+          "distance_from_loss_miles": 183,
+          "stock_number": "B82098",
+          "updated_date": "11/10/2021",
+          "adjustment_make_model_trim": -550.0,
+          "adjustment_mileage": -3398.0,
+          "adjustment_options": 1304.0,
+          "adjustment_package": null,
+          "adjustment_condition": -1102.0
+        }
+      ],
+      "component_conditions": [
+        {
+          "component_name": "Seats",
+          "condition_rating": "PRIVATE OWNER",
+          "inspection_notes": "Notes: THE DRIVERS SEAT HAS A SMALL TEAR . ALL SEATS SHOW WEAR AND HAVE A FEW STAINS. Guideline: Lightly soiled, faded and/or discolored. Few small tears, holes and/or burn marks. No significant bare spots.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Carpets",
+          "condition_rating": "PRIVATE OWNER",
+          "inspection_notes": "Notes: THE LINER HAS SOME WEAR AND IS SOILED. Guideline: Lightly soiled and/or stained. Few small tears, holes and/or burn marks. No significant bare spots.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Dashboard",
+          "condition_rating": "PRIVATE OWNER",
+          "inspection_notes": "Notes: Light wear WITH LIGHT FADE Guideline: Few small scratches and/or gouges. Minimal damage to components. Light wear.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Headliner",
+          "condition_rating": "PRIVATE OWNER",
+          "inspection_notes": "Notes: LIGHT WEAR Guideline: Few small holes and/or burn marks. Lightly scuffed.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Sheet Metal",
+          "condition_rating": "PRIVATE OWNER",
+          "inspection_notes": "Notes: NORMAL WEAR Guideline: Few dents and/or numerous dings. No significant surface rust.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Trim",
+          "condition_rating": "PRIVATE OWNER",
+          "inspection_notes": "Notes: NORMAL WEAR Guideline: Minimal damage to components. Few dents and/or numerous dings.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Paint",
+          "condition_rating": "PRIVATE OWNER",
+          "inspection_notes": "Notes: Few small deep chips and/or scratches. Minor swirl marks. Guideline: Few small deep chips and/or scratches. No significant peeling and/or flaking. Minor swirl marks. Slight Fading.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Glass",
+          "condition_rating": "PRIVATE OWNER",
+          "inspection_notes": "Notes: Light surface scratches and/or pitting. Few chips Guideline: Light surface scratches and/or pitting. Few chips.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Engine",
+          "condition_rating": "PRIVATE OWNER",
+          "inspection_notes": "Notes: Minimal dirt and grease in engine compartment. Guideline: Minor seepage. Belts and hoses firm, show minimal wear. Minimal dirt and grease in engine compartment.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Transmission",
+          "condition_rating": "PRIVATE OWNER",
+          "inspection_notes": "Notes: Fluid slightly discolored Guideline: Fluid slightly discolored. A few areas of seepage.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Front Tires",
+          "condition_rating": "EXCELLENT",
+          "inspection_notes": "Notes: DISCOVERER AT3 245/70R17 11/32 LT 11/32 RT Guideline: Over 90% of new. Example: Typical new car tires are 11/32, loss measures at 10/32 = 91% (10/11)",
+          "value_impact": 134
+        },
+        {
+          "component_name": "Rear Tires",
+          "condition_rating": "EXCELLENT",
+          "inspection_notes": "Notes: DISCOVERER AT3 245/70R17 11/32 LT 11/32 RT Guideline: Over 90% of new. Example: Typical new car tires are 11/32, loss measures at 10/32 = 91% (10/11)",
+          "value_impact": 134
+        }
+      ],
+      "nhtsa_recalls": [
+        {
+          "campaign_id": "12V190000",
+          "component": "EXTERIOR LIGHTING:BACK UP LIGHTS",
+          "mfg_report_date": "APR 30, 2012"
+        },
+        {
+          "campaign_id": "12V198000",
+          "component": "AIR BAGS:FRONTAL:SENSOR/CONTROL MODULE",
+          "mfg_report_date": null
+        },
+        {
+          "campaign_id": "16V248000",
+          "component": "POWER TRAIN",
+          "mfg_report_date": "APR 27, 2016"
+        },
+        {
+          "campaign_id": "19V075000",
+          "component": null,
+          "mfg_report_date": "February 11, 2019"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "insurance_company",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "owner_address",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle_body_type",
+        "page": 4,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:37:53.365195Z",
+  "completed_at": "2026-09-23T19:37:53.365195Z",
+  "latency_in_ms": 0
+}

@@ -1,0 +1,626 @@
+{
+  "request": {
+    "example_id": "short/sched_i__rotary_club_ty2024",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/sched_i__rotary_club_ty2024.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/sched_i__rotary_club_ty2024",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "filer_ein": "521759743",
+      "filer_name": "ROTARY CLUB OF ANNAPOLIS FOUNDATION",
+      "tax_year": 2024,
+      "tax_period_end_date": "2025-06-30",
+      "grant_records_maintained": true,
+      "total_501c3_org_count": null,
+      "total_other_org_count": 3,
+      "grants": [
+        {
+          "recipient_name": "BALTIMORE ROTARY FOUNDATION",
+          "recipient_name_continuation": null,
+          "address_line1": "18 BUCHANAN ROAD",
+          "address_line2": null,
+          "city": "BALTIMORE",
+          "state": "MD",
+          "zip_code": "21212",
+          "recipient_ein": "526054895",
+          "irc_section": "C3",
+          "cash_grant_amount": 5000,
+          "noncash_assistance_amount": 0,
+          "valuation_method": null,
+          "noncash_assistance_description": null,
+          "purpose_of_grant": "GENERAL SUPPORT"
+        },
+        {
+          "recipient_name": "THE ROTARY FOUNDATION ROTARY INTERNATIONAL",
+          "recipient_name_continuation": null,
+          "address_line1": "1560 SHERMAN AVENUE",
+          "address_line2": null,
+          "city": "EVANSTON",
+          "state": "IL",
+          "zip_code": "60201",
+          "recipient_ein": "363245075",
+          "irc_section": "C3",
+          "cash_grant_amount": 6064,
+          "noncash_assistance_amount": 0,
+          "valuation_method": null,
+          "noncash_assistance_description": null,
+          "purpose_of_grant": "GENERAL SUPPORT"
+        },
+        {
+          "recipient_name": "MARSHALL HOPE CORPORATION",
+          "recipient_name_continuation": null,
+          "address_line1": "C/O WEST ANNAPOLIS POP-UP PANTRY",
+          "address_line2": null,
+          "city": "ANNAPOLIS",
+          "state": "MD",
+          "zip_code": "21401",
+          "recipient_ein": "852700300",
+          "irc_section": "C3",
+          "cash_grant_amount": 107000,
+          "noncash_assistance_amount": 0,
+          "valuation_method": null,
+          "noncash_assistance_description": null,
+          "purpose_of_grant": "GENERAL SUPPORT"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "filer_ein",
+        "page": 1,
+        "bbox": [
+          0.659294,
+          0.145832,
+          0.060648,
+          0.014706
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "filer_name",
+        "page": 1,
+        "bbox": [
+          0.216233,
+          0.145832,
+          0.243551,
+          0.014706
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "tax_year",
+        "page": 1,
+        "bbox": [
+          0.33778,
+          0.117646,
+          0.019656,
+          0.011438
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "tax_period_end_date",
+        "page": 1,
+        "bbox": [
+          0.568801,
+          0.169525,
+          0.058114,
+          0.014706
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "total_other_org_count",
+        "page": 1,
+        "bbox": [
+          0.713624,
+          0.145832,
+          0.006318,
+          0.014706
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants",
+        "page": 1,
+        "bbox": [
+          0.089015,
+          0.33088,
+          0.095252,
+          0.012255
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].recipient_name",
+        "page": 1,
+        "bbox": [
+          0.089015,
+          0.33088,
+          0.095252,
+          0.02451
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].address_line1",
+        "page": 1,
+        "bbox": [
+          0.089015,
+          0.35539,
+          0.096288,
+          0.012255
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].city",
+        "page": 1,
+        "bbox": [
+          0.089015,
+          0.367645,
+          0.05666,
+          0.012255
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].state",
+        "page": 1,
+        "bbox": [
+          0.148308,
+          0.367645,
+          0.014725,
+          0.012255
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].zip_code",
+        "page": 1,
+        "bbox": [
+          0.165666,
+          0.367645,
+          0.026326,
+          0.012255
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].recipient_ein",
+        "page": 1,
+        "bbox": [
+          0.249754,
+          0.330874,
+          0.056818,
+          0.013885
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].irc_section",
+        "page": 1,
+        "bbox": [
+          0.334034,
+          0.33088,
+          0.012102,
+          0.012255
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].cash_grant_amount",
+        "page": 1,
+        "bbox": [
+          0.488738,
+          0.330874,
+          0.028409,
+          0.013885
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].noncash_assistance_amount",
+        "page": 1,
+        "bbox": [
+          0.639458,
+          0.330874,
+          0.005682,
+          0.013885
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].purpose_of_grant",
+        "page": 1,
+        "bbox": [
+          0.832707,
+          0.33088,
+          0.093156,
+          0.012255
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].recipient_name",
+        "page": 1,
+        "bbox": [
+          0.089015,
+          0.390929,
+          0.124542,
+          0.02451
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].address_line1",
+        "page": 1,
+        "bbox": [
+          0.089015,
+          0.415439,
+          0.111395,
+          0.012255
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].city",
+        "page": 1,
+        "bbox": [
+          0.089015,
+          0.427694,
+          0.053866,
+          0.012255
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].state",
+        "page": 1,
+        "bbox": [
+          0.145514,
+          0.427694,
+          0.007898,
+          0.012255
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].zip_code",
+        "page": 1,
+        "bbox": [
+          0.155697,
+          0.427694,
+          0.026326,
+          0.012255
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].recipient_ein",
+        "page": 1,
+        "bbox": [
+          0.249754,
+          0.390923,
+          0.056818,
+          0.013885
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].irc_section",
+        "page": 1,
+        "bbox": [
+          0.334034,
+          0.390929,
+          0.012102,
+          0.012255
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].cash_grant_amount",
+        "page": 1,
+        "bbox": [
+          0.488738,
+          0.390923,
+          0.028409,
+          0.013885
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].noncash_assistance_amount",
+        "page": 1,
+        "bbox": [
+          0.639458,
+          0.390923,
+          0.005682,
+          0.013885
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].purpose_of_grant",
+        "page": 1,
+        "bbox": [
+          0.832707,
+          0.390929,
+          0.093156,
+          0.012255
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].recipient_name",
+        "page": 1,
+        "bbox": [
+          0.089015,
+          0.450978,
+          0.080164,
+          0.02451
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].address_line1",
+        "page": 1,
+        "bbox": [
+          0.089015,
+          0.475488,
+          0.141922,
+          0.02451
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].city",
+        "page": 1,
+        "bbox": [
+          0.089015,
+          0.499997,
+          0.056837,
+          0.012255
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].state",
+        "page": 1,
+        "bbox": [
+          0.148485,
+          0.499997,
+          0.014725,
+          0.012255
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].zip_code",
+        "page": 1,
+        "bbox": [
+          0.165843,
+          0.499997,
+          0.026326,
+          0.012255
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].recipient_ein",
+        "page": 1,
+        "bbox": [
+          0.249754,
+          0.450972,
+          0.056818,
+          0.013885
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].irc_section",
+        "page": 1,
+        "bbox": [
+          0.334034,
+          0.450978,
+          0.012102,
+          0.012255
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].cash_grant_amount",
+        "page": 1,
+        "bbox": [
+          0.477372,
+          0.450972,
+          0.039773,
+          0.013885
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].noncash_assistance_amount",
+        "page": 1,
+        "bbox": [
+          0.639458,
+          0.450972,
+          0.005682,
+          0.013885
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].purpose_of_grant",
+        "page": 1,
+        "bbox": [
+          0.832707,
+          0.450978,
+          0.093156,
+          0.012255
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:38:04.039613Z",
+  "completed_at": "2026-09-23T19:38:04.039613Z",
+  "latency_in_ms": 0
+}

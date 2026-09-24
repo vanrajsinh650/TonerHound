@@ -1,0 +1,448 @@
+{
+  "request": {
+    "example_id": "short/07021-2016-p0018",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/07021-2016-p0018.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 27,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/07021-2016-p0018",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "final_k1": false,
+      "amended_k1": true,
+      "partnership_ein": "26-3839121",
+      "partnership_name": "Pine Harbour Water Utilities LLC",
+      "partnership_address": "P O BOX 447, Fruitland Park FL 34731",
+      "irs_center": "OGDEN",
+      "is_publicly_traded_partnership": false,
+      "partner_id": "056-44-2710",
+      "partner_name": "SANDRA WESSON",
+      "partner_address": "P O BOX 447, Fruitland Park FL 34731",
+      "is_general_partner": false,
+      "is_domestic_partner": true,
+      "partner_entity_type": "INDIVIDUAL PASSIV",
+      "profit_share_beginning": 33.3333,
+      "profit_share_ending": 33.3333,
+      "loss_share_beginning": 33.3333,
+      "loss_share_ending": 33.3333,
+      "capital_share_beginning": 33.3333,
+      "capital_share_ending": 33.3333,
+      "liability_nonrecourse": null,
+      "liability_qualified_nonrecourse_financing": null,
+      "liability_recourse": null,
+      "capital_beginning_account": null,
+      "capital_contributed": 45442,
+      "capital_current_year_increase_decrease": -3186,
+      "capital_withdrawals_distributions": null,
+      "capital_ending_account": 42256,
+      "capital_account_method": null,
+      "contributed_built_in_gain_loss_property": null,
+      "box_1_ordinary_business_income": -3186,
+      "box_2_net_rental_real_estate": null,
+      "box_3_other_net_rental_income": null,
+      "box_4_guaranteed_payments": null,
+      "box_5_interest_income": null,
+      "box_6a_ordinary_dividends": null,
+      "box_6b_qualified_dividends": null,
+      "box_7_royalties": null,
+      "box_8_net_short_term_capital_gain": null,
+      "box_9a_net_long_term_capital_gain": null,
+      "box_9b_collectibles_gain": null,
+      "box_9c_unrecaptured_1250_gain": null,
+      "box_10_net_section_1231_gain": null,
+      "box_12_section_179_deduction": null,
+      "box_14_self_employment_earnings": [
+        {
+          "code": "A",
+          "amount": -3186
+        }
+      ],
+      "box_11_other_income": null,
+      "box_13_other_deductions": null,
+      "box_15_credits": null,
+      "box_16_foreign_transactions": null,
+      "box_17_amt_items": [
+        {
+          "code": "A",
+          "amount": 1151
+        }
+      ],
+      "box_18_tax_exempt_income": null,
+      "box_19_distributions": null,
+      "box_20_other_information": null
+    },
+    "field_citations": [
+      {
+        "field_path": "partnership_name",
+        "page": 1,
+        "bbox": [
+          0.07895118738311568,
+          0.26044456404869,
+          0.3614640391730016,
+          0.012494559239859537
+        ],
+        "polygon": null,
+        "reference_text": "ine Harbour Water Util",
+        "confidence": 0.8772159889816941,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partnership_address",
+        "page": 1,
+        "bbox": [
+          0.07759724411309935,
+          0.2767281580452967,
+          0.253644612879535,
+          0.026038121695470373
+        ],
+        "polygon": null,
+        "reference_text": "447 ruitland Park FL 34731",
+        "confidence": 0.75,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partner_address",
+        "page": 1,
+        "bbox": [
+          0.077597,
+          0.276728,
+          0.253645,
+          0.026038
+        ],
+        "polygon": null,
+        "reference_text": "447 ruitland Park FL 34731",
+        "confidence": 0.75,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partner_entity_type",
+        "page": 1,
+        "bbox": [
+          0.2957604102839052,
+          0.6017953891946812,
+          0.18168939328661154,
+          0.010211597789417493
+        ],
+        "polygon": null,
+        "reference_text": "INDIVIDUAL PASS I",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "profit_share_beginning",
+        "page": 1,
+        "bbox": [
+          0.18952723733739915,
+          0.6470154656304253,
+          0.1124194151435802,
+          0.01015896267361105
+        ],
+        "polygon": null,
+        "reference_text": "33.3333%",
+        "confidence": 0.7857519622728291,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "profit_share_ending",
+        "page": 1,
+        "bbox": [
+          0.36559225842843646,
+          0.648607889811198,
+          0.11433949190027576,
+          0.010162815903172251
+        ],
+        "polygon": null,
+        "reference_text": "33.333",
+        "confidence": 0.7607791177902342,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_share_beginning",
+        "page": 1,
+        "bbox": [
+          0.18929749532462725,
+          0.6621658248130722,
+          0.11202726177140776,
+          0.01015545623471037
+        ],
+        "polygon": null,
+        "reference_text": "33.333",
+        "confidence": 0.92,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_share_ending",
+        "page": 1,
+        "bbox": [
+          0.3649703630434921,
+          0.6637547040226484,
+          0.11433492922315414,
+          0.01046571827898124
+        ],
+        "polygon": null,
+        "reference_text": "33.333",
+        "confidence": 0.92,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_share_beginning",
+        "page": 1,
+        "bbox": [
+          0.18905844096264807,
+          0.6779222584734059,
+          0.11202743630004086,
+          0.01015534063782364
+        ],
+        "polygon": null,
+        "reference_text": "33.3333%",
+        "confidence": 0.7993449857398943,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_share_ending",
+        "page": 1,
+        "bbox": [
+          0.364731308681513,
+          0.6795110028199476,
+          0.11471789490942857,
+          0.011075356994012298
+        ],
+        "polygon": null,
+        "reference_text": "33.333",
+        "confidence": 0.8024798194253492,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_current_year_increase_decrease",
+        "page": 1,
+        "bbox": [
+          0.3986859789081648,
+          0.833859626692955,
+          0.0787967856413399,
+          0.011237905483053146
+        ],
+        "polygon": null,
+        "reference_text": "-3,186",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_1_ordinary_business_income",
+        "page": 1,
+        "bbox": [
+          0.6446538189657374,
+          0.12633352568655298,
+          0.06532432207095074,
+          0.010967139041785035
+        ],
+        "polygon": null,
+        "reference_text": "-3,186",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_14_self_employment_earnings[0].code",
+        "page": 1,
+        "bbox": [
+          0.644654,
+          0.126334,
+          0.065324,
+          0.010967
+        ],
+        "polygon": null,
+        "reference_text": "A",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_14_self_employment_earnings[0].amount",
+        "page": 1,
+        "bbox": [
+          0.644654,
+          0.126334,
+          0.065324,
+          0.010967
+        ],
+        "polygon": null,
+        "reference_text": "-3,186",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_17_amt_items[0].code",
+        "page": 1,
+        "bbox": [
+          0.872087,
+          0.406507,
+          0.052041,
+          0.010951
+        ],
+        "polygon": null,
+        "reference_text": "A",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_17_amt_items[0].amount",
+        "page": 1,
+        "bbox": [
+          0.8720874661713643,
+          0.40650697187943896,
+          0.05204144646139708,
+          0.010950647219262866
+        ],
+        "polygon": null,
+        "reference_text": "1,151",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "final_k1",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "amended_k1",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partnership_ein",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "26-3839121",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "irs_center",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "OGDEN",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "is_publicly_traded_partnership",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partner_id",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "056-44-2710",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partner_name",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "SANDRA WESSON",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "is_general_partner",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "is_domestic_partner",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_contributed",
+        "page": 1,
+        "bbox": [
+          0.3970816369150199,
+          0.8183095142094776,
+          0.08103212344101052,
+          0.01133835917771464
+        ],
+        "polygon": null,
+        "reference_text": "45442",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_ending_account",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "42256",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:50:06.282821Z",
+  "completed_at": "2026-09-21T14:50:06.282821Z",
+  "latency_in_ms": 681
+}

@@ -1,0 +1,659 @@
+{
+  "request": {
+    "example_id": "short/P4-83-457_159",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/P4-83-457_159.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 45,
+    "ocr_pages": 0,
+    "num_pages": 4
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/P4-83-457_159",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "field_name": "Pearsall (Austin Chalk)",
+      "lease_name": "McKinley, W. W. Unit 1",
+      "current_operator_name": "Kaler Energy Corp.",
+      "operator_p5_no": "450261",
+      "oil_lse_gas_id_no": "13324",
+      "county": "Frio",
+      "rrc_district": "01",
+      "operator_address": "70 NE Loop 410 Ste 810 San Antonio, TX 78216",
+      "well_nos": null,
+      "classification_oil": true,
+      "classification_gas": false,
+      "classification_other": false,
+      "effective_date": "3-1-2010",
+      "change_operator": true,
+      "change_oil_condensate_gatherer": false,
+      "change_gas_gatherer": false,
+      "change_gas_purchaser": false,
+      "change_gas_purchaser_system_code": false,
+      "change_field_name": false,
+      "change_field_name_from": null,
+      "change_field_name_docket": null,
+      "change_lease_name": false,
+      "change_lease_name_from": null,
+      "new_rrc_oil_lease": false,
+      "new_rrc_gas_well": false,
+      "new_rrc_other_well": false,
+      "new_rrc_other_well_specify": null,
+      "due_new_completion_recompletion": false,
+      "due_reclass_gas_to_oil": false,
+      "due_reclass_oil_to_gas": false,
+      "due_consolidation": false,
+      "due_unitization": false,
+      "due_field_transfer": false,
+      "due_subdivision": false,
+      "prev_operator_name": "Tiza Energy, Inc.",
+      "prev_operator_signature": false,
+      "prev_operator_name_print": null,
+      "prev_operator_title": null,
+      "prev_operator_date": null,
+      "prev_operator_phone": null,
+      "prev_operator_authorized_employee": false,
+      "prev_operator_authorized_agent": false,
+      "curr_operator_name_print": "John A. Kaler, II",
+      "curr_operator_signature": true,
+      "curr_operator_title": "President",
+      "curr_operator_email": null,
+      "curr_operator_date": "3/23/10",
+      "curr_operator_phone": "(210) 824-1361",
+      "curr_operator_authorized_employee": true,
+      "curr_operator_authorized_agent": false,
+      "reviewer_initials": null,
+      "approval_date": null,
+      "gas_gatherers_purchasers": [
+        {
+          "gatherer": false,
+          "purchaser": false,
+          "name": "N/A",
+          "system_code": null,
+          "percent_of_take": null,
+          "full_well_stream": false
+        }
+      ],
+      "oil_condensate_gatherers": [
+        {
+          "name": "N/A",
+          "percent_of_take": null
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "field_name",
+        "page": 1,
+        "bbox": [
+          0.06954813423577698,
+          0.11827575523272064,
+          0.1426620799198829,
+          0.01378165843122757
+        ],
+        "polygon": null,
+        "reference_text": "Pearsall (Austin Chalk)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_name",
+        "page": 1,
+        "bbox": [
+          0.5170923422561444,
+          0.11979331516366502,
+          0.129973508463332,
+          0.01191547722202331
+        ],
+        "polygon": null,
+        "reference_text": "McKinley. Unit",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "current_operator_name",
+        "page": 1,
+        "bbox": [
+          0.07033398811892902,
+          0.14992324345295227,
+          0.5119351687315329,
+          0.015094663816431153
+        ],
+        "polygon": null,
+        "reference_text": "Kaler Energy Corp.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_p5_no",
+        "page": 1,
+        "bbox": [
+          0.484204,
+          0.149342,
+          0.140321,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "45026 1",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "oil_lse_gas_id_no",
+        "page": 1,
+        "bbox": [
+          0.628124,
+          0.14891,
+          0.106397,
+          0.017249
+        ],
+        "polygon": null,
+        "reference_text": "13324",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.738279,
+          0.150544,
+          0.092645,
+          0.014342
+        ],
+        "polygon": null,
+        "reference_text": "Frio",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district",
+        "page": 1,
+        "bbox": [
+          0.834786,
+          0.151433,
+          0.048024,
+          0.015698
+        ],
+        "polygon": null,
+        "reference_text": "01",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_address",
+        "page": 1,
+        "bbox": [
+          0.07504911766325281,
+          0.18097036291521715,
+          0.15358547949821266,
+          0.02641428165473822
+        ],
+        "polygon": null,
+        "reference_text": "70 NE Loop 410 Ste 810 San Antonio. TX 78216",
+        "confidence": 0.75,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "classification_oil",
+        "page": 1,
+        "bbox": [
+          0.525344,
+          0.211418,
+          0.014,
+          0.016687
+        ],
+        "polygon": null,
+        "reference_text": "X",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "effective_date",
+        "page": 1,
+        "bbox": [
+          0.781315,
+          0.213641,
+          0.138685,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3-1-2010",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_operator",
+        "page": 1,
+        "bbox": [
+          0.1787819239204956,
+          0.24201290691757446,
+          0.014,
+          0.011606814441970767
+        ],
+        "polygon": null,
+        "reference_text": "X",
+        "confidence": 0.7803159989920452,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_lease_name",
+        "page": 4,
+        "bbox": [
+          0.584876,
+          0.766113,
+          0.014,
+          0.014656
+        ],
+        "polygon": null,
+        "reference_text": "o",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "new_rrc_oil_lease",
+        "page": 4,
+        "bbox": [
+          0.584876,
+          0.766113,
+          0.014,
+          0.014656
+        ],
+        "polygon": null,
+        "reference_text": "o",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "new_rrc_gas_well",
+        "page": 4,
+        "bbox": [
+          0.584876,
+          0.766218,
+          0.014,
+          0.013842
+        ],
+        "polygon": null,
+        "reference_text": "o",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "new_rrc_other_well",
+        "page": 4,
+        "bbox": [
+          0.584876,
+          0.766218,
+          0.014,
+          0.013842
+        ],
+        "polygon": null,
+        "reference_text": "o",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_name",
+        "page": 1,
+        "bbox": [
+          0.07111984200208107,
+          0.6655544061834405,
+          0.10405058528499112,
+          0.013494535688004183
+        ],
+        "polygon": null,
+        "reference_text": "Tiza Ene Inc.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_name_print",
+        "page": 1,
+        "bbox": [
+          0.07190569588523311,
+          0.8135213586900112,
+          0.09861886971641935,
+          0.013494613435836023
+        ],
+        "polygon": null,
+        "reference_text": "John Kaler, II",
+        "confidence": 0.9405328327599805,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_signature",
+        "page": 1,
+        "bbox": [
+          0.491552,
+          0.846807,
+          0.014,
+          0.017501
+        ],
+        "polygon": null,
+        "reference_text": "X",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_title",
+        "page": 4,
+        "bbox": [
+          0.065,
+          0.840861,
+          0.206522,
+          0.017836
+        ],
+        "polygon": null,
+        "reference_text": "President",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_phone",
+        "page": 1,
+        "bbox": [
+          0.7269155351563207,
+          0.8814812050447458,
+          0.09223478510338456,
+          0.012920367949389222
+        ],
+        "polygon": null,
+        "reference_text": "(210) 824-1361",
+        "confidence": 0.7574769419880297,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_authorized_employee",
+        "page": 1,
+        "bbox": [
+          0.4915520567039396,
+          0.8490759864547728,
+          0.014,
+          0.012963346950866091
+        ],
+        "polygon": null,
+        "reference_text": "X",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_authorized_agent",
+        "page": 4,
+        "bbox": [
+          0.584876,
+          0.766086,
+          0.014,
+          0.01486
+        ],
+        "polygon": null,
+        "reference_text": "o",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "classification_gas",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "classification_other",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_oil_condensate_gatherer",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_gas_gatherer",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_gas_purchaser",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_gas_purchaser_system_code",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_field_name",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_new_completion_recompletion",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_reclass_gas_to_oil",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_reclass_oil_to_gas",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_consolidation",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_unitization",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_field_transfer",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_subdivision",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_signature",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_authorized_employee",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_authorized_agent",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_date",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "3/23/10",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gas_gatherers_purchasers[0].gatherer",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gas_gatherers_purchasers[0].purchaser",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gas_gatherers_purchasers[0].name",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "N/A",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gas_gatherers_purchasers[0].full_well_stream",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "oil_condensate_gatherers[0].name",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "N/A",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:50:32.615633Z",
+  "completed_at": "2026-09-21T14:50:32.615633Z",
+  "latency_in_ms": 1230
+}

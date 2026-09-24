@@ -1,0 +1,104 @@
+{
+  "request": {
+    "example_id": "short/cfpb_closing-disclosure_H25F_corrupted",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/cfpb_closing-disclosure_H25F_corrupted.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/cfpb_closing-disclosure_H25F_corrupted",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "date_issued": null,
+      "closing_date": null,
+      "disbursement_date": null,
+      "settlement_agent": null,
+      "file_number": null,
+      "property_address": null,
+      "sale_price": null,
+      "appraised_property_value": null,
+      "borrower_name": null,
+      "seller_name": null,
+      "lender_name": null,
+      "loan_term": null,
+      "purpose": "Refinance",
+      "product": null,
+      "loan_type": null,
+      "loan_id": null,
+      "mic_number": null,
+      "loan_amount": null,
+      "interest_rate": null,
+      "monthly_principal_and_interest": null,
+      "prepayment_penalty": null,
+      "prepayment_penalty_detail": null,
+      "balloon_payment": null,
+      "estimated_total_monthly_payment_first_period": null,
+      "estimated_total_monthly_payment_second_period": null,
+      "estimated_taxes_insurance_assessments": null,
+      "closing_costs_total": "$5,977.57",
+      "closing_costs_loan_costs_portion": null,
+      "closing_costs_other_costs_portion": null,
+      "lender_credits": "$500.00",
+      "cash_to_close": "$29,677.43",
+      "total_of_payments": null,
+      "finance_charge": null,
+      "amount_financed": null,
+      "annual_percentage_rate": null,
+      "total_interest_percentage": null,
+      "assumption": null,
+      "demand_feature": null,
+      "negative_amortization": null,
+      "partial_payments": null,
+      "escrow_account": null,
+      "liability_after_foreclosure": null,
+      "loan_costs": [],
+      "other_costs": [],
+      "cash_to_close_grid": [
+        {
+          "line_label": "Loan Amount",
+          "loan_estimate": "$150,000.00",
+          "final": "$150,000.00",
+          "did_change": "NO"
+        },
+        {
+          "line_label": "Total Closing Costs (J)",
+          "loan_estimate": "– $5,099.00",
+          "final": "– $5,977.57",
+          "did_change": "YES"
+        },
+        {
+          "line_label": "Closing Costs Paid Before Closing",
+          "loan_estimate": "$0",
+          "final": "$655.00",
+          "did_change": "YES"
+        },
+        {
+          "line_label": "Total Payoffs and Payments (K)",
+          "loan_estimate": "– $120,000.00",
+          "final": "– $115,000.00",
+          "did_change": "YES"
+        },
+        {
+          "line_label": "Cash to Close",
+          "loan_estimate": "$24,901.00",
+          "final": "$29,677.43",
+          "did_change": null
+        }
+      ]
+    },
+    "field_citations": []
+  },
+  "started_at": "2026-09-23T19:38:03.675100Z",
+  "completed_at": "2026-09-23T19:38:03.675100Z",
+  "latency_in_ms": 0
+}

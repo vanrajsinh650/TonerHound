@@ -1,0 +1,226 @@
+{
+  "request": {
+    "example_id": "short/ccc_online_0006_esurance_toyota_rav4_corrupted",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/ccc_online_0006_esurance_toyota_rav4_corrupted.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/ccc_online_0006_esurance_toyota_rav4_corrupted",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "report_reference_number": "80742624",
+      "claim_reference": "WIS-0076822-01",
+      "insurance_company": "ESURANCE",
+      "owner_name": "Nash, Vickie",
+      "owner_address": "Saint Louis, MO 63125",
+      "loss_vehicle_vin": "JTEHH20V326066668",
+      "loss_vehicle_year": 2002,
+      "loss_vehicle_make": "Toyota",
+      "loss_vehicle_model": "RAV4",
+      "loss_vehicle_trim": null,
+      "loss_vehicle_body_type": "Sports Utility",
+      "loss_vehicle_odometer": 138866,
+      "loss_incident_date": "03/30/2016",
+      "claim_reported_date": "04/06/2016",
+      "base_vehicle_value": 6284.0,
+      "condition_adjustment": -496.0,
+      "adjusted_vehicle_value": 5788.0,
+      "vehicular_tax": 411.7,
+      "title_registration_fees": null,
+      "deductible": -500.0,
+      "total_settlement": 5699.7,
+      "comparable_vehicles": [
+        {
+          "comp_label": "Comp 1",
+          "vin": "JTEHH20V320179409",
+          "year": 2002,
+          "make": "Toyota",
+          "model": "Rav4",
+          "trim": null,
+          "odometer": 148939,
+          "list_price": 6495.0,
+          "adjusted_comparable_value": 6316.0,
+          "source": "Autotrader",
+          "dealer_name": "Jerry Ackerman",
+          "dealer_city": "Saint Louis",
+          "dealer_state": "MO",
+          "distance_from_loss_miles": 4,
+          "stock_number": "29082A",
+          "updated_date": "01/11/2016",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": null,
+          "adjustment_options": null,
+          "adjustment_package": null,
+          "adjustment_condition": null
+        },
+        {
+          "comp_label": "Comp 2",
+          "vin": "JTEHH20V620175953",
+          "year": 2002,
+          "make": "Toyota",
+          "model": "Rav4",
+          "trim": null,
+          "odometer": 71618,
+          "list_price": 7990.0,
+          "adjusted_comparable_value": 5936.0,
+          "source": "Autotrader",
+          "dealer_name": "Bommarito West County",
+          "dealer_city": "Ballwin",
+          "dealer_state": "MO",
+          "distance_from_loss_miles": 14,
+          "stock_number": "94384C",
+          "updated_date": "03/16/2016",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": null,
+          "adjustment_options": null,
+          "adjustment_package": null,
+          "adjustment_condition": null
+        },
+        {
+          "comp_label": "Comp 3",
+          "vin": "JTEHH20V426056134",
+          "year": 2002,
+          "make": "Toyota",
+          "model": "Rav4",
+          "trim": null,
+          "odometer": 138294,
+          "list_price": 6961.0,
+          "adjusted_comparable_value": 6075.0,
+          "source": "Autotrader",
+          "dealer_name": "Mnm Auto Sales",
+          "dealer_city": "Jefferson City",
+          "dealer_state": "MO",
+          "distance_from_loss_miles": 105,
+          "stock_number": "26056134",
+          "updated_date": "01/23/2016",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": null,
+          "adjustment_options": null,
+          "adjustment_package": null,
+          "adjustment_condition": null
+        }
+      ],
+      "component_conditions": [
+        {
+          "component_name": "Seats",
+          "condition_rating": "FAIR",
+          "inspection_notes": "Back row seats and driver head rest missing. Staining on driver's seat bottom and passenger seat bottom.",
+          "value_impact": -78
+        },
+        {
+          "component_name": "Carpets",
+          "condition_rating": "FAIR",
+          "inspection_notes": "Staining in driver's area at right side near gas pedal. Both front door panels and left rear have staining. Left rear area is stained.",
+          "value_impact": -72
+        },
+        {
+          "component_name": "Dashboard",
+          "condition_rating": "NORMAL",
+          "inspection_notes": "No visible damage to components.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Headliner",
+          "condition_rating": "FAIR",
+          "inspection_notes": "Numerous spots on headliner toward right rear.",
+          "value_impact": -84
+        },
+        {
+          "component_name": "Sheet Metal",
+          "condition_rating": "NORMAL",
+          "inspection_notes": "No visible dents, dings, or rust.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Trim",
+          "condition_rating": "FAIR",
+          "inspection_notes": "Sun damaged headlamps and left side body side moldings are scratched.",
+          "value_impact": -156
+        },
+        {
+          "component_name": "Paint",
+          "condition_rating": "FAIR",
+          "inspection_notes": "Scratches on left quarter panel and driver's side front and rear doors.",
+          "value_impact": -117
+        },
+        {
+          "component_name": "Glass",
+          "condition_rating": "NORMAL",
+          "inspection_notes": "No visible scratches, pitting or chips.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Engine",
+          "condition_rating": "NORMAL",
+          "inspection_notes": "Significant dirt and grease in engine compartment.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Transmission",
+          "condition_rating": "NORMAL",
+          "inspection_notes": "No photos to confirm condition.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Front Tires",
+          "condition_rating": "NORMAL",
+          "inspection_notes": "41%-68% 5/32-9/32",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Rear Tires",
+          "condition_rating": "ABOVE AVERAGE",
+          "inspection_notes": "Both tires 10/32",
+          "value_impact": 11
+        }
+      ],
+      "nhtsa_recalls": []
+    },
+    "field_citations": [
+      {
+        "field_path": "owner_address",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle_trim",
+        "page": 3,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "adjusted_vehicle_value",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:38:03.075990Z",
+  "completed_at": "2026-09-23T19:38:03.075990Z",
+  "latency_in_ms": 0
+}

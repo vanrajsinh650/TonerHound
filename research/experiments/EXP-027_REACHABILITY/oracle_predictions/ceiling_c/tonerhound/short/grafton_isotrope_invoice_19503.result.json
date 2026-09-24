@@ -1,0 +1,93 @@
+{
+  "request": {
+    "example_id": "short/grafton_isotrope_invoice_19503",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/grafton_isotrope_invoice_19503.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/grafton_isotrope_invoice_19503",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "invoice_number": "19503",
+      "invoice_type": "standard",
+      "original_invoice_number": null,
+      "date": "2024-09-03",
+      "due_date": "2024-10-03",
+      "purchase_order_number": "Dish 160R Upton St",
+      "order_number": null,
+      "vendor": {
+        "name": "isotrope, llc",
+        "address": {
+          "street": "PO Box 52437",
+          "city": "Boston",
+          "state": "MA",
+          "zip_code": "02205",
+          "country": "US"
+        },
+        "phone": "+1 5083598833",
+        "email": "riggs@isotrope.im",
+        "tax_id": null
+      },
+      "customer": {
+        "name": "Town of Grafton, Mass.",
+        "address": {
+          "street": "Memorial Municipal Center 30 Providence Rd.",
+          "city": "Grafton",
+          "state": "MA",
+          "zip_code": "01519",
+          "country": null
+        },
+        "phone": null,
+        "email": null,
+        "account_number": null
+      },
+      "line_items": [
+        {
+          "line_no": 1,
+          "item_code": null,
+          "description": "David Maxson, WCP: Dish 160R Upton St: August-September 2024 Review and analyze application, consult with staff, prepare report, participate in public hearing, consult on draft decision.",
+          "quantity": 1.0,
+          "unit_price": 4000.0,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 4000.0
+        }
+      ],
+      "subtotal": 4000.0,
+      "discount_total": null,
+      "tax_total": null,
+      "shipping": null,
+      "total_amount": 4000.0,
+      "payment_terms": "Net 30",
+      "bank_details": null,
+      "currency": "USD",
+      "notes": null
+    },
+    "field_citations": [
+      {
+        "field_path": "customer.address.country",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:38:03.699686Z",
+  "completed_at": "2026-09-23T19:38:03.699686Z",
+  "latency_in_ms": 0
+}

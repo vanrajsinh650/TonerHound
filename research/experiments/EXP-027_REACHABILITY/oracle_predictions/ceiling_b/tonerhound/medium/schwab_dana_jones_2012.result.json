@@ -1,0 +1,3718 @@
+{
+  "request": {
+    "example_id": "medium/schwab_dana_jones_2012",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/schwab_dana_jones_2012.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 233,
+    "ocr_pages": 0,
+    "num_pages": 48
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/schwab_dana_jones_2012",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "tax_year": 2012,
+      "recipient_name": "dana JONES\njohn JONES",
+      "recipient_tin_masked": "***-**-0000",
+      "account_number": "1111-9999",
+      "payer_name": "CHARLES SCHWAB & CO., INC.",
+      "payer_federal_id": "94-1737782",
+      "statement_date": "January 11, 2013",
+      "form_1099_div": {
+        "box_1a_total_ordinary_dividends": 5805.0,
+        "box_1b_qualified_dividends": 2380.0,
+        "box_2a_total_capital_gain_distributions": 1575.0,
+        "box_2b_unrecap_section_1250_gain": 400.0,
+        "box_2c_section_1202_gain": 325.0,
+        "box_2d_collectibles_28pct_gain": 400.0,
+        "section_897_ordinary_dividends": null,
+        "section_897_capital_gain": null,
+        "box_3_nondividend_distributions": 933.0,
+        "box_4_federal_income_tax_withheld": 450.0,
+        "section_199a_dividends": null,
+        "investment_expenses": 240.0,
+        "foreign_tax_paid": 300.0,
+        "cash_liquidation_distributions": 950.0,
+        "noncash_liquidation_distributions": 2700.0,
+        "exempt_interest_dividends": 2700.0,
+        "specified_private_activity_bond_interest_dividends": 2700.0
+      },
+      "form_1099_int": {
+        "box_1_interest_income": 2060.0,
+        "box_3_interest_on_us_treasury": 700.0,
+        "box_4_federal_income_tax_withheld": 65.0,
+        "box_5_investment_expenses": 85.0,
+        "box_6_foreign_tax_paid": 100.0,
+        "box_8_tax_exempt_interest": 425.0,
+        "box_9_specified_private_activity_bond_interest": 225.0,
+        "box_10_market_discount": null,
+        "box_11_bond_premium": null,
+        "box_12_bond_premium_on_treasury_obligations": null,
+        "box_13_bond_premium_on_tax_exempt_bond": null,
+        "state_tax_withheld": 2700.0
+      },
+      "form_1099_oid": {
+        "box_1_original_issue_discount": 1832.33,
+        "box_4_federal_income_tax_withheld": 200.0,
+        "box_6_original_issue_discount_on_us_treasury_obligations": 17675.62,
+        "other_periodic_interest": null,
+        "market_discount": null,
+        "acquisition_premium": null,
+        "tax_exempt_oid": null,
+        "tax_exempt_oid_specified_private_activity_bonds": null
+      },
+      "form_1099_misc": {
+        "box_1_rents": null,
+        "box_2_royalties": 1155.0,
+        "box_3_other_income": null,
+        "box_4_federal_income_tax_withheld": 15.0,
+        "box_8_substitute_payments": 810.0,
+        "state_tax_withheld": 1300.0
+      },
+      "form_1099_b_lots": [
+        {
+          "section_category": "short_term_covered",
+          "holding_period": "short_term",
+          "basis_reporting_status": "basis_reported_to_irs",
+          "form_8949_box": "A",
+          "transaction_action": "S",
+          "security_description": "sample corp",
+          "cusip": "30246XXXX",
+          "symbol": "XXYY",
+          "quantity": 5952.0,
+          "date_acquired": null,
+          "date_sold": "04/01/12",
+          "proceeds": 101902.74,
+          "cost_basis": 114092.06,
+          "wash_sale_loss_disallowed": 0.0,
+          "accrued_market_discount": null,
+          "option_premium": null,
+          "realized_gain_or_loss": null,
+          "federal_income_tax_withheld": 0.0,
+          "state": null,
+          "state_tax_withheld": null,
+          "loss_not_allowed_indicator": null
+        },
+        {
+          "section_category": "short_term_covered",
+          "holding_period": "short_term",
+          "basis_reporting_status": "basis_reported_to_irs",
+          "form_8949_box": "A",
+          "transaction_action": "SS",
+          "security_description": "sample corp",
+          "cusip": "30246XXXX",
+          "symbol": "XXYY",
+          "quantity": 300.0,
+          "date_acquired": "08/18/12",
+          "date_sold": "10/11/12",
+          "proceeds": 16965.8,
+          "cost_basis": 18062.05,
+          "wash_sale_loss_disallowed": 0.0,
+          "accrued_market_discount": null,
+          "option_premium": null,
+          "realized_gain_or_loss": null,
+          "federal_income_tax_withheld": 0.0,
+          "state": null,
+          "state_tax_withheld": null,
+          "loss_not_allowed_indicator": null
+        },
+        {
+          "section_category": "short_term_covered",
+          "holding_period": "short_term",
+          "basis_reporting_status": "basis_reported_to_irs",
+          "form_8949_box": "A",
+          "transaction_action": "S",
+          "security_description": "sample muni fund",
+          "cusip": "67062XXXX",
+          "symbol": "ABCXX",
+          "quantity": 1700.0,
+          "date_acquired": "09/14/12",
+          "date_sold": "11/11/12",
+          "proceeds": 23604.95,
+          "cost_basis": 22379.62,
+          "wash_sale_loss_disallowed": 0.0,
+          "accrued_market_discount": null,
+          "option_premium": null,
+          "realized_gain_or_loss": null,
+          "federal_income_tax_withheld": 0.0,
+          "state": null,
+          "state_tax_withheld": null,
+          "loss_not_allowed_indicator": null
+        },
+        {
+          "section_category": "short_term_noncovered",
+          "holding_period": "short_term",
+          "basis_reporting_status": "basis_not_reported_to_irs",
+          "form_8949_box": "B",
+          "transaction_action": "R",
+          "security_description": "sample corp bond **called**",
+          "cusip": "04939XXXX",
+          "symbol": null,
+          "quantity": 10000.0,
+          "date_acquired": "12/01/11",
+          "date_sold": "04/08/12",
+          "proceeds": 10406.25,
+          "cost_basis": 10408.0,
+          "wash_sale_loss_disallowed": 0.0,
+          "accrued_market_discount": null,
+          "option_premium": null,
+          "realized_gain_or_loss": null,
+          "federal_income_tax_withheld": 0.0,
+          "state": null,
+          "state_tax_withheld": null,
+          "loss_not_allowed_indicator": null
+        },
+        {
+          "section_category": "short_term_noncovered",
+          "holding_period": "short_term",
+          "basis_reporting_status": "basis_not_reported_to_irs",
+          "form_8949_box": "B",
+          "transaction_action": "S",
+          "security_description": "sample LTD PARTNERSHIP",
+          "cusip": "28370XXXX",
+          "symbol": "XXX",
+          "quantity": 50.0,
+          "date_acquired": "04/27/12",
+          "date_sold": "09/08/12",
+          "proceeds": 1828.85,
+          "cost_basis": 1854.98,
+          "wash_sale_loss_disallowed": 0.0,
+          "accrued_market_discount": null,
+          "option_premium": null,
+          "realized_gain_or_loss": null,
+          "federal_income_tax_withheld": 512.08,
+          "state": "CA",
+          "state_tax_withheld": 128.02,
+          "loss_not_allowed_indicator": null
+        },
+        {
+          "section_category": "short_term_noncovered_no_basis",
+          "holding_period": "short_term",
+          "basis_reporting_status": "basis_missing",
+          "form_8949_box": "B",
+          "transaction_action": "S",
+          "security_description": "sample corp",
+          "cusip": "30246XXXX",
+          "symbol": "XXYY",
+          "quantity": 100.0,
+          "date_acquired": "12/12/11",
+          "date_sold": "01/18/12",
+          "proceeds": 1720.95,
+          "cost_basis": null,
+          "wash_sale_loss_disallowed": null,
+          "accrued_market_discount": null,
+          "option_premium": null,
+          "realized_gain_or_loss": null,
+          "federal_income_tax_withheld": 0.0,
+          "state": null,
+          "state_tax_withheld": null,
+          "loss_not_allowed_indicator": null
+        },
+        {
+          "section_category": "short_term_noncovered_no_basis",
+          "holding_period": "short_term",
+          "basis_reporting_status": "basis_missing",
+          "form_8949_box": "B",
+          "transaction_action": "S",
+          "security_description": "sample STOCK",
+          "cusip": "12345XXXX",
+          "symbol": "YYYY",
+          "quantity": 500.0,
+          "date_acquired": "12/12/11",
+          "date_sold": "03/15/12",
+          "proceeds": 3352.95,
+          "cost_basis": null,
+          "wash_sale_loss_disallowed": null,
+          "accrued_market_discount": null,
+          "option_premium": null,
+          "realized_gain_or_loss": null,
+          "federal_income_tax_withheld": 0.0,
+          "state": null,
+          "state_tax_withheld": null,
+          "loss_not_allowed_indicator": null
+        },
+        {
+          "section_category": "long_term_covered",
+          "holding_period": "long_term",
+          "basis_reporting_status": "basis_reported_to_irs",
+          "form_8949_box": "D",
+          "transaction_action": "C",
+          "security_description": "EXAMPLE COMMON STOCK",
+          "cusip": "17296XXXX",
+          "symbol": "ABC",
+          "quantity": 0.5,
+          "date_acquired": "04/07/11",
+          "date_sold": "05/10/12",
+          "proceeds": 22.03,
+          "cost_basis": 19.16,
+          "wash_sale_loss_disallowed": 0.0,
+          "accrued_market_discount": null,
+          "option_premium": null,
+          "realized_gain_or_loss": null,
+          "federal_income_tax_withheld": 0.0,
+          "state": null,
+          "state_tax_withheld": null,
+          "loss_not_allowed_indicator": true
+        },
+        {
+          "section_category": "long_term_covered",
+          "holding_period": "long_term",
+          "basis_reporting_status": "basis_reported_to_irs",
+          "form_8949_box": "D",
+          "transaction_action": "S",
+          "security_description": "SAMPLE COMMON STOCK",
+          "cusip": "03759XXXX",
+          "symbol": "XYZ",
+          "quantity": 98.0,
+          "date_acquired": "01/21/11",
+          "date_sold": "02/08/12",
+          "proceeds": 1183.69,
+          "cost_basis": 1326.07,
+          "wash_sale_loss_disallowed": 142.38,
+          "accrued_market_discount": null,
+          "option_premium": null,
+          "realized_gain_or_loss": null,
+          "federal_income_tax_withheld": 0.0,
+          "state": null,
+          "state_tax_withheld": null,
+          "loss_not_allowed_indicator": null
+        },
+        {
+          "section_category": "long_term_covered",
+          "holding_period": "long_term",
+          "basis_reporting_status": "basis_reported_to_irs",
+          "form_8949_box": "D",
+          "transaction_action": "S",
+          "security_description": "SAMPLE REALTY TRUST REIT",
+          "cusip": "00423XXXX",
+          "symbol": "ZZZ",
+          "quantity": 100.0,
+          "date_acquired": "06/30/11",
+          "date_sold": "12/05/12",
+          "proceeds": 1165.83,
+          "cost_basis": 1228.75,
+          "wash_sale_loss_disallowed": 0.0,
+          "accrued_market_discount": null,
+          "option_premium": null,
+          "realized_gain_or_loss": null,
+          "federal_income_tax_withheld": 326.43,
+          "state": "CA",
+          "state_tax_withheld": 81.61,
+          "loss_not_allowed_indicator": null
+        },
+        {
+          "section_category": "long_term_noncovered",
+          "holding_period": "long_term",
+          "basis_reporting_status": "basis_not_reported_to_irs",
+          "form_8949_box": "E",
+          "transaction_action": "MT",
+          "security_description": "EXAMPLE CORP BOND **MATURED",
+          "cusip": "12589XXXX",
+          "symbol": null,
+          "quantity": 10000.0,
+          "date_acquired": "07/02/10",
+          "date_sold": "04/15/12",
+          "proceeds": 10000.0,
+          "cost_basis": 10605.97,
+          "wash_sale_loss_disallowed": 0.0,
+          "accrued_market_discount": null,
+          "option_premium": null,
+          "realized_gain_or_loss": null,
+          "federal_income_tax_withheld": 0.0,
+          "state": null,
+          "state_tax_withheld": null,
+          "loss_not_allowed_indicator": null
+        },
+        {
+          "section_category": "long_term_noncovered",
+          "holding_period": "long_term",
+          "basis_reporting_status": "basis_not_reported_to_irs",
+          "form_8949_box": "E",
+          "transaction_action": "R",
+          "security_description": "EXAMPLE MUNI BOND",
+          "cusip": "34114XXXX",
+          "symbol": null,
+          "quantity": 5000.0,
+          "date_acquired": "10/11/86",
+          "date_sold": "01/01/12",
+          "proceeds": 5000.0,
+          "cost_basis": 5000.0,
+          "wash_sale_loss_disallowed": 0.0,
+          "accrued_market_discount": null,
+          "option_premium": null,
+          "realized_gain_or_loss": null,
+          "federal_income_tax_withheld": 0.0,
+          "state": null,
+          "state_tax_withheld": null,
+          "loss_not_allowed_indicator": null
+        },
+        {
+          "section_category": "long_term_noncovered_no_basis",
+          "holding_period": "long_term",
+          "basis_reporting_status": "basis_missing",
+          "form_8949_box": "E",
+          "transaction_action": "R",
+          "security_description": "SAMPLE REMIC",
+          "cusip": "31392XXXX",
+          "symbol": null,
+          "quantity": 1000.0,
+          "date_acquired": "10/12/06",
+          "date_sold": "01/18/12",
+          "proceeds": 1000.0,
+          "cost_basis": null,
+          "wash_sale_loss_disallowed": null,
+          "accrued_market_discount": null,
+          "option_premium": null,
+          "realized_gain_or_loss": null,
+          "federal_income_tax_withheld": 0.0,
+          "state": null,
+          "state_tax_withheld": null,
+          "loss_not_allowed_indicator": null
+        },
+        {
+          "section_category": "long_term_noncovered_no_basis",
+          "holding_period": "long_term",
+          "basis_reporting_status": "basis_missing",
+          "form_8949_box": "E",
+          "transaction_action": "P",
+          "security_description": "SAMPLE UNIT INVSTMT TRUST",
+          "cusip": "45808XXXX",
+          "symbol": null,
+          "quantity": null,
+          "date_acquired": null,
+          "date_sold": "10/25/12",
+          "proceeds": 171.18,
+          "cost_basis": null,
+          "wash_sale_loss_disallowed": null,
+          "accrued_market_discount": null,
+          "option_premium": null,
+          "realized_gain_or_loss": null,
+          "federal_income_tax_withheld": 0.0,
+          "state": null,
+          "state_tax_withheld": null,
+          "loss_not_allowed_indicator": null
+        }
+      ],
+      "form_1099_b_summary": {
+        "gross_proceeds": 178325.22,
+        "total_cost_or_other_basis": null,
+        "federal_income_tax_withheld_proceeds": 838.51,
+        "state_tax_withheld_proceeds": null,
+        "short_term_realized_gain_total": null,
+        "short_term_realized_loss_total": null,
+        "wash_sale_loss_disallowed_total": null
+      },
+      "form_1099_b_regulated_futures": null
+    },
+    "field_citations": [
+      {
+        "field_path": "tax_year",
+        "page": 47,
+        "bbox": [
+          0.912126,
+          0.067859,
+          0.042424,
+          0.027085
+        ],
+        "polygon": null,
+        "reference_text": "2012",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "account_number",
+        "page": 11,
+        "bbox": [
+          0.534091,
+          0.086457,
+          0.089091,
+          0.027085
+        ],
+        "polygon": null,
+        "reference_text": "1111-9999",
+        "confidence": 0.8722829383045092,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "payer_federal_id",
+        "page": 3,
+        "bbox": [
+          0.647904,
+          0.305105,
+          0.067917,
+          0.015551
+        ],
+        "polygon": null,
+        "reference_text": "94-1737782",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_div.box_1a_total_ordinary_dividends",
+        "page": 20,
+        "bbox": [
+          0.847268,
+          0.88638,
+          0.107023,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$5,805.00",
+        "confidence": 0.8130407507905992,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_div.box_1b_qualified_dividends",
+        "page": 20,
+        "bbox": [
+          0.847268,
+          0.853836,
+          0.107023,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$2,380.00",
+        "confidence": 0.8271624516001339,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_div.box_2a_total_capital_gain_distributions",
+        "page": 21,
+        "bbox": [
+          0.847234,
+          0.753162,
+          0.107023,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$1,575.00",
+        "confidence": 0.8067859060641098,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_div.box_2b_unrecap_section_1250_gain",
+        "page": 21,
+        "bbox": [
+          0.873443,
+          0.720794,
+          0.054603,
+          0.016399
+        ],
+        "polygon": null,
+        "reference_text": "$400.00",
+        "confidence": 0.8240787874802316,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_div.box_2c_section_1202_gain",
+        "page": 21,
+        "bbox": [
+          0.917336,
+          0.622752,
+          0.025631,
+          0.013996
+        ],
+        "polygon": null,
+        "reference_text": "325.00",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_div.box_2d_collectibles_28pct_gain",
+        "page": 21,
+        "bbox": [
+          0.873443,
+          0.720794,
+          0.054603,
+          0.016399
+        ],
+        "polygon": null,
+        "reference_text": "$400.00",
+        "confidence": 0.8909492386782226,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_div.box_3_nondividend_distributions",
+        "page": 22,
+        "bbox": [
+          0.715495,
+          0.470723,
+          0.025481,
+          0.013996
+        ],
+        "polygon": null,
+        "reference_text": "933.00",
+        "confidence": 0.9492832955683188,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_div.box_4_federal_income_tax_withheld",
+        "page": 3,
+        "bbox": [
+          0.874977,
+          0.66606,
+          0.065171,
+          0.016399
+        ],
+        "polygon": null,
+        "reference_text": "$450.00",
+        "confidence": 0.7897136530036398,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_div.investment_expenses",
+        "page": 3,
+        "bbox": [
+          0.875159,
+          0.687503,
+          0.064943,
+          0.016498
+        ],
+        "polygon": null,
+        "reference_text": "$240.00",
+        "confidence": 0.7885628171890225,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_div.foreign_tax_paid",
+        "page": 3,
+        "bbox": [
+          0.884437,
+          0.709033,
+          0.046388,
+          0.016498
+        ],
+        "polygon": null,
+        "reference_text": "$300.00",
+        "confidence": 0.813727626652426,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_div.cash_liquidation_distributions",
+        "page": 3,
+        "bbox": [
+          0.875159,
+          0.752091,
+          0.064943,
+          0.016498
+        ],
+        "polygon": null,
+        "reference_text": "$950.00",
+        "confidence": 0.7882364343680159,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_div.noncash_liquidation_distributions",
+        "page": 3,
+        "bbox": [
+          0.86217,
+          0.773482,
+          0.09092,
+          0.01757
+        ],
+        "polygon": null,
+        "reference_text": "$2,700.00",
+        "confidence": 0.7962880565141717,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_div.exempt_interest_dividends",
+        "page": 3,
+        "bbox": [
+          0.86217,
+          0.816541,
+          0.09092,
+          0.01757
+        ],
+        "polygon": null,
+        "reference_text": "$2,700.00",
+        "confidence": 0.7823114391535853,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_div.specified_private_activity_bond_interest_dividends",
+        "page": 3,
+        "bbox": [
+          0.86217,
+          0.816541,
+          0.09092,
+          0.01757
+        ],
+        "polygon": null,
+        "reference_text": "$2,700.00",
+        "confidence": 0.853325386998516,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_int.box_1_interest_income",
+        "page": 6,
+        "bbox": [
+          0.906886,
+          0.486771,
+          0.046705,
+          0.016359
+        ],
+        "polygon": null,
+        "reference_text": "2,060.00",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_int.box_3_interest_on_us_treasury",
+        "page": 21,
+        "bbox": [
+          0.671421,
+          0.753338,
+          0.054603,
+          0.016399
+        ],
+        "polygon": null,
+        "reference_text": "$700.00",
+        "confidence": 0.8204121648181684,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_int.box_4_federal_income_tax_withheld",
+        "page": 6,
+        "bbox": [
+          0.923773,
+          0.530136,
+          0.019156,
+          0.013996
+        ],
+        "polygon": null,
+        "reference_text": "65.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_int.box_5_investment_expenses",
+        "page": 6,
+        "bbox": [
+          0.923796,
+          0.551666,
+          0.019091,
+          0.013996
+        ],
+        "polygon": null,
+        "reference_text": "85.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_int.box_6_foreign_tax_paid",
+        "page": 22,
+        "bbox": [
+          0.671432,
+          0.813441,
+          0.054603,
+          0.016399
+        ],
+        "polygon": null,
+        "reference_text": "$100.00",
+        "confidence": 0.8204041540767115,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_int.box_8_tax_exempt_interest",
+        "page": 6,
+        "bbox": [
+          0.916989,
+          0.616254,
+          0.025458,
+          0.013996
+        ],
+        "polygon": null,
+        "reference_text": "425.00",
+        "confidence": 0.8036611458680041,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_int.box_9_specified_private_activity_bond_interest",
+        "page": 21,
+        "bbox": [
+          0.671421,
+          0.720794,
+          0.054603,
+          0.016399
+        ],
+        "polygon": null,
+        "reference_text": "$225.00",
+        "confidence": 0.8192596381375662,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_int.state_tax_withheld",
+        "page": 6,
+        "bbox": [
+          0.862148,
+          0.722541,
+          0.091557,
+          0.01757
+        ],
+        "polygon": null,
+        "reference_text": "$2,700.00",
+        "confidence": 0.7772163048643946,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_oid.box_1_original_issue_discount",
+        "page": 10,
+        "bbox": [
+          0.391307,
+          0.629223,
+          0.096807,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$1,832.33",
+        "confidence": 0.8235529731412707,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_oid.box_4_federal_income_tax_withheld",
+        "page": 10,
+        "bbox": [
+          0.415043,
+          0.65881,
+          0.049449,
+          0.016399
+        ],
+        "polygon": null,
+        "reference_text": "$200.00",
+        "confidence": 0.8570578334091848,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_oid.box_6_original_issue_discount_on_us_treasury_obligations",
+        "page": 10,
+        "bbox": [
+          0.391307,
+          0.688046,
+          0.096898,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$17,675.62",
+        "confidence": 0.8853162279720366,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_misc.box_2_royalties",
+        "page": 8,
+        "bbox": [
+          0.907057,
+          0.486771,
+          0.046409,
+          0.016359
+        ],
+        "polygon": null,
+        "reference_text": "1,155.00",
+        "confidence": 0.8868583939492609,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_misc.box_4_federal_income_tax_withheld",
+        "page": 4,
+        "bbox": [
+          0.402284,
+          0.595451,
+          0.021466,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "15%",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_misc.box_8_substitute_payments",
+        "page": 8,
+        "bbox": [
+          0.916818,
+          0.530136,
+          0.02545,
+          0.013996
+        ],
+        "polygon": null,
+        "reference_text": "810.00",
+        "confidence": 0.8898968871867934,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_misc.state_tax_withheld",
+        "page": 43,
+        "bbox": [
+          0.834512,
+          0.70044,
+          0.119648,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$1,300.00",
+        "confidence": 0.7813050580875387,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[0].section_category",
+        "page": 12,
+        "bbox": [
+          0.554331,
+          0.485231,
+          0.026818,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "short_term_covered",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[0].holding_period",
+        "page": 12,
+        "bbox": [
+          0.04553,
+          0.331642,
+          0.908691,
+          0.323177
+        ],
+        "polygon": null,
+        "reference_text": "short_term",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[0].basis_reporting_status",
+        "page": 12,
+        "bbox": [
+          0.554331,
+          0.485231,
+          0.032717,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "basis_reported_to_irs",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[0].form_8949_box",
+        "page": 12,
+        "bbox": [
+          0.04553,
+          0.331642,
+          0.908691,
+          0.323177
+        ],
+        "polygon": null,
+        "reference_text": "A",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[0].transaction_action",
+        "page": 12,
+        "bbox": [
+          0.04553,
+          0.331642,
+          0.908691,
+          0.323177
+        ],
+        "polygon": null,
+        "reference_text": "S",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[0].security_description",
+        "page": 12,
+        "bbox": [
+          0.090125,
+          0.485231,
+          0.03992,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "sample corp",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[0].cusip",
+        "page": 12,
+        "bbox": [
+          0.32108,
+          0.485231,
+          0.060159,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "30246XXXX",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[0].symbol",
+        "page": 12,
+        "bbox": [
+          0.356375,
+          0.485231,
+          0.024852,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "XXYY",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[0].date_sold",
+        "page": 12,
+        "bbox": [
+          0.412784,
+          0.485231,
+          0.051557,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "04/01/12",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[1].section_category",
+        "page": 12,
+        "bbox": [
+          0.554331,
+          0.661423,
+          0.026818,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "short_term_covered",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[1].holding_period",
+        "page": 12,
+        "bbox": [
+          0.356375,
+          0.661423,
+          0.230562,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "short_term",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[1].basis_reporting_status",
+        "page": 12,
+        "bbox": [
+          0.554331,
+          0.661423,
+          0.032717,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "basis_reported_to_irs",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[1].form_8949_box",
+        "page": 12,
+        "bbox": [
+          0.356375,
+          0.661423,
+          0.230562,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "A",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[1].transaction_action",
+        "page": 12,
+        "bbox": [
+          0.356375,
+          0.661423,
+          0.230562,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "SS",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[1].security_description",
+        "page": 12,
+        "bbox": [
+          0.090125,
+          0.661423,
+          0.03992,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "sample corp",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[1].cusip",
+        "page": 12,
+        "bbox": [
+          0.32108,
+          0.661423,
+          0.060159,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "30246XXXX",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[1].symbol",
+        "page": 12,
+        "bbox": [
+          0.356375,
+          0.66051,
+          0.024852,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "XXYY",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[1].date_acquired",
+        "page": 12,
+        "bbox": [
+          0.413573,
+          0.661423,
+          0.05058,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "08/18/12",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[1].date_sold",
+        "page": 12,
+        "bbox": [
+          0.412784,
+          0.661687,
+          0.051148,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "10/11/12",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[1].proceeds",
+        "page": 12,
+        "bbox": [
+          0.529417,
+          0.640143,
+          0.053455,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "16,965.80",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[1].cost_basis",
+        "page": 12,
+        "bbox": [
+          0.653385,
+          0.640143,
+          0.053136,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "18,062.05",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[1].wash_sale_loss_disallowed",
+        "page": 12,
+        "bbox": [
+          0.809919,
+          0.68311,
+          0.020566,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[1].federal_income_tax_withheld",
+        "page": 12,
+        "bbox": [
+          0.933657,
+          0.68311,
+          0.020566,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[2].section_category",
+        "page": 12,
+        "bbox": [
+          0.554331,
+          0.72362,
+          0.026818,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "short_term_covered",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[2].holding_period",
+        "page": 12,
+        "bbox": [
+          0.045943,
+          0.72362,
+          0.908216,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "short_term",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[2].basis_reporting_status",
+        "page": 12,
+        "bbox": [
+          0.554331,
+          0.72362,
+          0.032717,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "basis_reported_to_irs",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[2].form_8949_box",
+        "page": 12,
+        "bbox": [
+          0.045943,
+          0.72362,
+          0.908216,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "A",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[2].transaction_action",
+        "page": 12,
+        "bbox": [
+          0.388046,
+          0.722885,
+          0.006375,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "S",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[2].security_description",
+        "page": 12,
+        "bbox": [
+          0.045943,
+          0.722885,
+          0.100057,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "sample muni fund",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[2].cusip",
+        "page": 12,
+        "bbox": [
+          0.321307,
+          0.722885,
+          0.05992,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "67062XXXX",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[2].symbol",
+        "page": 12,
+        "bbox": [
+          0.348682,
+          0.74412,
+          0.03258,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "ABCXX",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[2].quantity",
+        "page": 12,
+        "bbox": [
+          0.536466,
+          0.744995,
+          0.046409,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "1,700.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[2].date_acquired",
+        "page": 12,
+        "bbox": [
+          0.414063,
+          0.724069,
+          0.049875,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "09/14/12",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[2].date_sold",
+        "page": 12,
+        "bbox": [
+          0.412779,
+          0.745304,
+          0.051148,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "11/11/12",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[2].proceeds",
+        "page": 12,
+        "bbox": [
+          0.529216,
+          0.72376,
+          0.053568,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "23,604.95",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[2].cost_basis",
+        "page": 12,
+        "bbox": [
+          0.65308,
+          0.72376,
+          0.053261,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "22,379.62",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[2].wash_sale_loss_disallowed",
+        "page": 12,
+        "bbox": [
+          0.807375,
+          0.722885,
+          0.022955,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[2].federal_income_tax_withheld",
+        "page": 12,
+        "bbox": [
+          0.931023,
+          0.722885,
+          0.023136,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[3].section_category",
+        "page": 12,
+        "bbox": [
+          0.554331,
+          0.800512,
+          0.026818,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "short_term_noncovered",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[3].holding_period",
+        "page": 12,
+        "bbox": [
+          0.071313,
+          0.799825,
+          0.049354,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Short-Term",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[3].basis_reporting_status",
+        "page": 12,
+        "bbox": [
+          0.152636,
+          0.800878,
+          0.088717,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "basis is reported to",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[3].form_8949_box",
+        "page": 12,
+        "bbox": [
+          0.045586,
+          0.800512,
+          0.661061,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "B",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[3].transaction_action",
+        "page": 12,
+        "bbox": [
+          0.045586,
+          0.800512,
+          0.661061,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "R",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[3].security_description",
+        "page": 12,
+        "bbox": [
+          0.090125,
+          0.800512,
+          0.03992,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "sample corp bond **called**",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[3].cusip",
+        "page": 12,
+        "bbox": [
+          0.32108,
+          0.800512,
+          0.060159,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "04939XXXX",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[3].date_acquired",
+        "page": 12,
+        "bbox": [
+          0.413573,
+          0.800512,
+          0.05058,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "12/01/11",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[3].date_sold",
+        "page": 12,
+        "bbox": [
+          0.412784,
+          0.800512,
+          0.051557,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "04/08/12",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[4].section_category",
+        "page": 14,
+        "bbox": [
+          0.554331,
+          0.68034,
+          0.026818,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "short_term_noncovered",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[4].holding_period",
+        "page": 14,
+        "bbox": [
+          0.045943,
+          0.68034,
+          0.908284,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "short_term",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[4].basis_reporting_status",
+        "page": 14,
+        "bbox": [
+          0.554331,
+          0.68034,
+          0.032717,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "basis_not_reported_to_irs",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[4].form_8949_box",
+        "page": 14,
+        "bbox": [
+          0.045943,
+          0.68034,
+          0.908284,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "B",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[4].transaction_action",
+        "page": 14,
+        "bbox": [
+          0.388043,
+          0.679604,
+          0.006375,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "S",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[4].security_description",
+        "page": 14,
+        "bbox": [
+          0.045943,
+          0.679604,
+          0.132511,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "sample LTD PARTNERSHIP",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[4].cusip",
+        "page": 14,
+        "bbox": [
+          0.321805,
+          0.679604,
+          0.05942,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "28370XXXX",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[4].symbol",
+        "page": 14,
+        "bbox": [
+          0.362964,
+          0.700847,
+          0.018295,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "XXX",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[4].quantity",
+        "page": 14,
+        "bbox": [
+          0.553193,
+          0.70084,
+          0.023745,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "50.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[4].date_acquired",
+        "page": 14,
+        "bbox": [
+          0.414718,
+          0.680788,
+          0.049216,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "04/27/12",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[4].date_sold",
+        "page": 14,
+        "bbox": [
+          0.412377,
+          0.702023,
+          0.051557,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "09/08/12",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[4].proceeds",
+        "page": 14,
+        "bbox": [
+          0.536057,
+          0.680479,
+          0.046739,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "1,828.85",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[4].cost_basis",
+        "page": 14,
+        "bbox": [
+          0.660205,
+          0.680479,
+          0.046466,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "1,854.98",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[4].wash_sale_loss_disallowed",
+        "page": 14,
+        "bbox": [
+          0.807386,
+          0.679604,
+          0.022955,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[4].federal_income_tax_withheld",
+        "page": 14,
+        "bbox": [
+          0.917318,
+          0.679604,
+          0.036909,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "512.08",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[4].state",
+        "page": 14,
+        "bbox": [
+          0.121693,
+          0.730542,
+          0.012841,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "CA",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[4].state_tax_withheld",
+        "page": 14,
+        "bbox": [
+          0.918296,
+          0.730542,
+          0.03592,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "128.02",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[5].section_category",
+        "page": 14,
+        "bbox": [
+          0.071313,
+          0.795054,
+          0.104657,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Short-Term (Cost basis",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[5].holding_period",
+        "page": 14,
+        "bbox": [
+          0.071313,
+          0.794002,
+          0.049354,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Short-Term",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[5].basis_reporting_status",
+        "page": 14,
+        "bbox": [
+          0.152636,
+          0.794002,
+          0.034182,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "basis is",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[5].form_8949_box",
+        "page": 14,
+        "bbox": [
+          0.045586,
+          0.794688,
+          0.661212,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "B",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[5].transaction_action",
+        "page": 14,
+        "bbox": [
+          0.045586,
+          0.794688,
+          0.661212,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "S",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[5].security_description",
+        "page": 14,
+        "bbox": [
+          0.090125,
+          0.794688,
+          0.03992,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "sample corp",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[5].cusip",
+        "page": 14,
+        "bbox": [
+          0.32108,
+          0.794688,
+          0.060159,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "30246XXXX",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[5].symbol",
+        "page": 14,
+        "bbox": [
+          0.356375,
+          0.794688,
+          0.024852,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "XXYY",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[5].date_acquired",
+        "page": 14,
+        "bbox": [
+          0.413573,
+          0.794688,
+          0.05058,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "12/12/11",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[5].date_sold",
+        "page": 14,
+        "bbox": [
+          0.412784,
+          0.794688,
+          0.051557,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "01/18/12",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[6].section_category",
+        "page": 15,
+        "bbox": [
+          0.554331,
+          0.483791,
+          0.026818,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "short_term_noncovered_no_basis",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[6].holding_period",
+        "page": 15,
+        "bbox": [
+          0.045455,
+          0.305853,
+          0.909103,
+          0.371875
+        ],
+        "polygon": null,
+        "reference_text": "short_term",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[6].basis_reporting_status",
+        "page": 15,
+        "bbox": [
+          0.554331,
+          0.483791,
+          0.032717,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "basis_missing",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[6].form_8949_box",
+        "page": 15,
+        "bbox": [
+          0.045455,
+          0.305853,
+          0.909103,
+          0.371875
+        ],
+        "polygon": null,
+        "reference_text": "B",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[6].transaction_action",
+        "page": 15,
+        "bbox": [
+          0.045455,
+          0.305853,
+          0.909103,
+          0.371875
+        ],
+        "polygon": null,
+        "reference_text": "S",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[6].security_description",
+        "page": 15,
+        "bbox": [
+          0.090125,
+          0.483791,
+          0.03992,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "sample STOCK",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[6].cusip",
+        "page": 15,
+        "bbox": [
+          0.32108,
+          0.483791,
+          0.060159,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "12345XXXX",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[6].symbol",
+        "page": 15,
+        "bbox": [
+          0.356375,
+          0.483791,
+          0.024852,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "YYYY",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[6].date_acquired",
+        "page": 15,
+        "bbox": [
+          0.413573,
+          0.483791,
+          0.05058,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "12/12/11",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[6].date_sold",
+        "page": 15,
+        "bbox": [
+          0.412784,
+          0.483791,
+          0.051557,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "03/15/12",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[7].section_category",
+        "page": 15,
+        "bbox": [
+          0.554331,
+          0.678505,
+          0.026818,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "long_term_covered",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[7].holding_period",
+        "page": 15,
+        "bbox": [
+          0.045943,
+          0.677799,
+          0.908602,
+          0.017412
+        ],
+        "polygon": null,
+        "reference_text": "long_term",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[7].basis_reporting_status",
+        "page": 15,
+        "bbox": [
+          0.554331,
+          0.678505,
+          0.032717,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "basis_reported_to_irs",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[7].form_8949_box",
+        "page": 15,
+        "bbox": [
+          0.045943,
+          0.677799,
+          0.908602,
+          0.017412
+        ],
+        "polygon": null,
+        "reference_text": "D",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[7].transaction_action",
+        "page": 15,
+        "bbox": [
+          0.045943,
+          0.677799,
+          0.908602,
+          0.017412
+        ],
+        "polygon": null,
+        "reference_text": "C",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[7].security_description",
+        "page": 15,
+        "bbox": [
+          0.090125,
+          0.678505,
+          0.03992,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "EXAMPLE COMMON STOCK",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[7].cusip",
+        "page": 15,
+        "bbox": [
+          0.32108,
+          0.678505,
+          0.060159,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "17296XXXX",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[7].symbol",
+        "page": 15,
+        "bbox": [
+          0.356375,
+          0.678505,
+          0.024852,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "ABC",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[7].date_acquired",
+        "page": 15,
+        "bbox": [
+          0.413573,
+          0.678505,
+          0.05058,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "04/07/11",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[7].date_sold",
+        "page": 15,
+        "bbox": [
+          0.412784,
+          0.678505,
+          0.051557,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "05/10/12",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[7].wash_sale_loss_disallowed",
+        "page": 15,
+        "bbox": [
+          0.930682,
+          0.677799,
+          0.023864,
+          0.017412
+        ],
+        "polygon": null,
+        "reference_text": "0.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[7].federal_income_tax_withheld",
+        "page": 15,
+        "bbox": [
+          0.566284,
+          0.699329,
+          0.017045,
+          0.017118
+        ],
+        "polygon": null,
+        "reference_text": ".00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[8].section_category",
+        "page": 15,
+        "bbox": [
+          0.554331,
+          0.755443,
+          0.026818,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "long_term_covered",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[8].holding_period",
+        "page": 15,
+        "bbox": [
+          0.045455,
+          0.755443,
+          0.661616,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "long_term",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[8].basis_reporting_status",
+        "page": 15,
+        "bbox": [
+          0.266586,
+          0.755443,
+          0.087323,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "reported to the IRS)",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[8].form_8949_box",
+        "page": 15,
+        "bbox": [
+          0.045455,
+          0.755443,
+          0.661616,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "D",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[8].transaction_action",
+        "page": 15,
+        "bbox": [
+          0.045455,
+          0.755443,
+          0.661616,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "S",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[8].security_description",
+        "page": 15,
+        "bbox": [
+          0.090125,
+          0.755443,
+          0.03992,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "SAMPLE COMMON STOCK",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[8].cusip",
+        "page": 15,
+        "bbox": [
+          0.32108,
+          0.755443,
+          0.060159,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "03759XXXX",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[8].symbol",
+        "page": 15,
+        "bbox": [
+          0.356375,
+          0.755443,
+          0.024852,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "XYZ",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[8].date_acquired",
+        "page": 15,
+        "bbox": [
+          0.413573,
+          0.755443,
+          0.05058,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "01/21/11",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[8].date_sold",
+        "page": 15,
+        "bbox": [
+          0.412784,
+          0.755443,
+          0.051557,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "02/08/12",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[9].section_category",
+        "page": 16,
+        "bbox": [
+          0.554331,
+          0.484971,
+          0.026818,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "long_term_covered",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[9].holding_period",
+        "page": 16,
+        "bbox": [
+          0.045485,
+          0.331642,
+          0.908737,
+          0.322658
+        ],
+        "polygon": null,
+        "reference_text": "long_term",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[9].basis_reporting_status",
+        "page": 16,
+        "bbox": [
+          0.554331,
+          0.484971,
+          0.032717,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "basis_reported_to_irs",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[9].form_8949_box",
+        "page": 16,
+        "bbox": [
+          0.045485,
+          0.331642,
+          0.908737,
+          0.322658
+        ],
+        "polygon": null,
+        "reference_text": "D",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[9].transaction_action",
+        "page": 16,
+        "bbox": [
+          0.045485,
+          0.331642,
+          0.908737,
+          0.322658
+        ],
+        "polygon": null,
+        "reference_text": "S",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[9].security_description",
+        "page": 16,
+        "bbox": [
+          0.090125,
+          0.484971,
+          0.03992,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "SAMPLE REALTY TRUST REIT",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[9].cusip",
+        "page": 16,
+        "bbox": [
+          0.32108,
+          0.484971,
+          0.060159,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "00423XXXX",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[9].symbol",
+        "page": 16,
+        "bbox": [
+          0.356375,
+          0.484971,
+          0.024852,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "ZZZ",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[9].date_acquired",
+        "page": 16,
+        "bbox": [
+          0.413573,
+          0.484971,
+          0.05058,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "06/30/11",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[9].date_sold",
+        "page": 16,
+        "bbox": [
+          0.412784,
+          0.484971,
+          0.051557,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "12/05/12",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[9].wash_sale_loss_disallowed",
+        "page": 16,
+        "bbox": [
+          0.809919,
+          0.49428,
+          0.015424,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[9].state",
+        "page": 16,
+        "bbox": [
+          0.045485,
+          0.331642,
+          0.908737,
+          0.322658
+        ],
+        "polygon": null,
+        "reference_text": "CA",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[10].section_category",
+        "page": 16,
+        "bbox": [
+          0.554331,
+          0.667898,
+          0.026818,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "long_term_noncovered",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[10].holding_period",
+        "page": 16,
+        "bbox": [
+          0.045875,
+          0.667898,
+          0.908557,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "long_term",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[10].basis_reporting_status",
+        "page": 16,
+        "bbox": [
+          0.554331,
+          0.667898,
+          0.032717,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "basis_not_reported_to_irs",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[10].form_8949_box",
+        "page": 16,
+        "bbox": [
+          0.045875,
+          0.667898,
+          0.908557,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "E",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[10].transaction_action",
+        "page": 16,
+        "bbox": [
+          0.045875,
+          0.667898,
+          0.908557,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "MT",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[10].security_description",
+        "page": 16,
+        "bbox": [
+          0.090125,
+          0.667898,
+          0.03992,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "EXAMPLE CORP BOND **MATURED",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[10].cusip",
+        "page": 16,
+        "bbox": [
+          0.32108,
+          0.667898,
+          0.060159,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "12589XXXX",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[10].date_acquired",
+        "page": 16,
+        "bbox": [
+          0.413573,
+          0.667898,
+          0.05058,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "07/02/10",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[10].date_sold",
+        "page": 16,
+        "bbox": [
+          0.412784,
+          0.667898,
+          0.051557,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "04/15/12",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[10].wash_sale_loss_disallowed",
+        "page": 16,
+        "bbox": [
+          0.809919,
+          0.69823,
+          0.020566,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[10].federal_income_tax_withheld",
+        "page": 16,
+        "bbox": [
+          0.809919,
+          0.69823,
+          0.020566,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[11].section_category",
+        "page": 16,
+        "bbox": [
+          0.554331,
+          0.698955,
+          0.026818,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "long_term_noncovered",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[11].holding_period",
+        "page": 16,
+        "bbox": [
+          0.071869,
+          0.732498,
+          0.04602,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Long-Term",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[11].basis_reporting_status",
+        "page": 16,
+        "bbox": [
+          0.149859,
+          0.73238,
+          0.088717,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "basis is reported to",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[11].form_8949_box",
+        "page": 16,
+        "bbox": [
+          0.045485,
+          0.698955,
+          0.908636,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "E",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[11].transaction_action",
+        "page": 16,
+        "bbox": [
+          0.045485,
+          0.698955,
+          0.908636,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "R",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[11].security_description",
+        "page": 16,
+        "bbox": [
+          0.090125,
+          0.698955,
+          0.03992,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "EXAMPLE MUNI BOND",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[11].cusip",
+        "page": 16,
+        "bbox": [
+          0.32108,
+          0.698955,
+          0.060159,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "34114XXXX",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[11].date_acquired",
+        "page": 16,
+        "bbox": [
+          0.413573,
+          0.698955,
+          0.05058,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "10/11/86",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[11].date_sold",
+        "page": 16,
+        "bbox": [
+          0.412784,
+          0.698955,
+          0.051557,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "01/01/12",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[11].wash_sale_loss_disallowed",
+        "page": 16,
+        "bbox": [
+          0.809919,
+          0.69823,
+          0.020566,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[11].federal_income_tax_withheld",
+        "page": 16,
+        "bbox": [
+          0.809919,
+          0.69823,
+          0.020566,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[12].section_category",
+        "page": 31,
+        "bbox": [
+          0.554331,
+          0.741717,
+          0.026818,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "long_term_noncovered_no_basis",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[12].holding_period",
+        "page": 31,
+        "bbox": [
+          0.045943,
+          0.741717,
+          0.908602,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "long_term",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[12].basis_reporting_status",
+        "page": 31,
+        "bbox": [
+          0.684716,
+          0.742239,
+          0.0375,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Missing",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[12].form_8949_box",
+        "page": 31,
+        "bbox": [
+          0.045943,
+          0.741717,
+          0.908602,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "E",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[12].transaction_action",
+        "page": 31,
+        "bbox": [
+          0.045943,
+          0.741717,
+          0.908602,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "R",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[12].security_description",
+        "page": 31,
+        "bbox": [
+          0.045943,
+          0.740828,
+          0.07742,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "SAMPLE remic",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[12].cusip",
+        "page": 31,
+        "bbox": [
+          0.207409,
+          0.740828,
+          0.060284,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "31392XXXX",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[12].quantity",
+        "page": 31,
+        "bbox": [
+          0.321818,
+          0.741703,
+          0.046409,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "1,000.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[12].date_acquired",
+        "page": 31,
+        "bbox": [
+          0.382477,
+          0.742011,
+          0.051352,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "10/12/06",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[12].date_sold",
+        "page": 31,
+        "bbox": [
+          0.447727,
+          0.742011,
+          0.051557,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "01/18/12",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[12].proceeds",
+        "page": 31,
+        "bbox": [
+          0.56425,
+          0.741703,
+          0.046409,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "1,000.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[13].section_category",
+        "page": 31,
+        "bbox": [
+          0.554331,
+          0.797338,
+          0.026818,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "long_term_noncovered_no_basis",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[13].holding_period",
+        "page": 31,
+        "bbox": [
+          0.071869,
+          0.797697,
+          0.04602,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Long-Term",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[13].basis_reporting_status",
+        "page": 31,
+        "bbox": [
+          0.171748,
+          0.797893,
+          0.042616,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "is missing",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[13].form_8949_box",
+        "page": 31,
+        "bbox": [
+          0.045586,
+          0.797338,
+          0.90896,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "E",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[13].transaction_action",
+        "page": 31,
+        "bbox": [
+          0.045586,
+          0.797338,
+          0.90896,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "P",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[13].security_description",
+        "page": 31,
+        "bbox": [
+          0.090125,
+          0.797338,
+          0.03992,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "SAMPLE UNIT INVSTMT TRUST",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[13].cusip",
+        "page": 31,
+        "bbox": [
+          0.32108,
+          0.797338,
+          0.060159,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "45808XXXX",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[13].date_sold",
+        "page": 31,
+        "bbox": [
+          0.412784,
+          0.797338,
+          0.051557,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "10/25/12",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_summary.gross_proceeds",
+        "page": 18,
+        "bbox": [
+          0.528788,
+          0.637917,
+          0.054545,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "178,325.22",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_summary.federal_income_tax_withheld_proceeds",
+        "page": 18,
+        "bbox": [
+          0.55,
+          0.667329,
+          0.033333,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "838.51",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[0].quantity",
+        "page": 12,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "5952.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[0].proceeds",
+        "page": 12,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "101902.74",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[0].cost_basis",
+        "page": 12,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "114092.06",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[0].wash_sale_loss_disallowed",
+        "page": 12,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "0.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[0].federal_income_tax_withheld",
+        "page": 12,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "0.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[1].quantity",
+        "page": 12,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "300.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[3].quantity",
+        "page": 12,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "10000.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[3].proceeds",
+        "page": 12,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "10406.25",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[3].cost_basis",
+        "page": 12,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "10408.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[3].wash_sale_loss_disallowed",
+        "page": 12,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "0.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[3].federal_income_tax_withheld",
+        "page": 12,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "0.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[5].quantity",
+        "page": 14,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "100.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[5].proceeds",
+        "page": 14,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "1720.95",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[5].federal_income_tax_withheld",
+        "page": 14,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "0.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[6].quantity",
+        "page": 15,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "500.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[6].proceeds",
+        "page": 15,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "3352.95",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[6].federal_income_tax_withheld",
+        "page": 15,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "0.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[7].quantity",
+        "page": 15,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "0.5",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[7].proceeds",
+        "page": 15,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "22.03",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[7].cost_basis",
+        "page": 15,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "19.16",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[7].loss_not_allowed_indicator",
+        "page": 15,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[8].quantity",
+        "page": 15,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "98.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[8].proceeds",
+        "page": 15,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "1183.69",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[8].cost_basis",
+        "page": 15,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "1326.07",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[8].wash_sale_loss_disallowed",
+        "page": 15,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "142.38",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[8].federal_income_tax_withheld",
+        "page": 15,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "0.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[9].quantity",
+        "page": 16,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "100.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[9].proceeds",
+        "page": 16,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "1165.83",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[9].cost_basis",
+        "page": 16,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "1228.75",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[9].federal_income_tax_withheld",
+        "page": 16,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "326.43",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[9].state_tax_withheld",
+        "page": 16,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "81.61",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[10].quantity",
+        "page": 16,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "10000.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[10].proceeds",
+        "page": 16,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "10000.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[10].cost_basis",
+        "page": 16,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "10605.97",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[11].quantity",
+        "page": 16,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "5000.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[11].proceeds",
+        "page": 16,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "5000.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[11].cost_basis",
+        "page": 16,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "5000.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[12].federal_income_tax_withheld",
+        "page": 31,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "0.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[13].proceeds",
+        "page": 31,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "171.18",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "form_1099_b_lots[13].federal_income_tax_withheld",
+        "page": 31,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "0.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:49:59.068736Z",
+  "completed_at": "2026-09-21T14:49:59.068736Z",
+  "latency_in_ms": 2548
+}

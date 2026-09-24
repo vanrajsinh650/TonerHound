@@ -1,0 +1,689 @@
+{
+  "request": {
+    "example_id": "short/P4-27-51094_74234",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/P4-27-51094_74234.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 49,
+    "ocr_pages": 0,
+    "num_pages": 2
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/P4-27-51094_74234",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "field_name": "Revilo (Glorieta)",
+      "lease_name": "Vaughn \"A\"",
+      "current_operator_name": "Regent Oil & Gas Company, L.P.",
+      "operator_p5_no": "698779",
+      "oil_lse_gas_id_no": null,
+      "county": "Scurry",
+      "rrc_district": "8A",
+      "operator_address": "P.O. Box 25204 Dallas, Texas 75225",
+      "well_nos": "see Exhibit \"A\" attached 192, 193, 194",
+      "classification_oil": true,
+      "classification_gas": false,
+      "classification_other": false,
+      "effective_date": "7/14/04",
+      "change_operator": false,
+      "change_oil_condensate_gatherer": false,
+      "change_gas_gatherer": false,
+      "change_gas_purchaser": false,
+      "change_gas_purchaser_system_code": false,
+      "change_field_name": false,
+      "change_field_name_from": null,
+      "change_field_name_docket": null,
+      "change_lease_name": true,
+      "change_lease_name_from": "Revilo / Glorieta / Unit - Tract 19",
+      "new_rrc_oil_lease": false,
+      "new_rrc_gas_well": false,
+      "new_rrc_other_well": false,
+      "new_rrc_other_well_specify": null,
+      "due_new_completion_recompletion": false,
+      "due_reclass_gas_to_oil": false,
+      "due_reclass_oil_to_gas": false,
+      "due_consolidation": true,
+      "due_unitization": true,
+      "due_field_transfer": false,
+      "due_subdivision": true,
+      "prev_operator_name": "Oilex International Investments, Inc.",
+      "prev_operator_signature": true,
+      "prev_operator_name_print": null,
+      "prev_operator_title": null,
+      "prev_operator_date": null,
+      "prev_operator_phone": "unknown",
+      "prev_operator_authorized_employee": false,
+      "prev_operator_authorized_agent": false,
+      "curr_operator_name_print": "David A. Hart",
+      "curr_operator_signature": true,
+      "curr_operator_title": "President",
+      "curr_operator_email": "DavidHart1000@aol.com",
+      "curr_operator_date": "9/9/04",
+      "curr_operator_phone": "(214)522-6646",
+      "curr_operator_authorized_employee": false,
+      "curr_operator_authorized_agent": true,
+      "reviewer_initials": null,
+      "approval_date": null,
+      "gas_gatherers_purchasers": [
+        {
+          "gatherer": false,
+          "purchaser": false,
+          "name": "n/a",
+          "system_code": null,
+          "percent_of_take": null,
+          "full_well_stream": false
+        }
+      ],
+      "oil_condensate_gatherers": [
+        {
+          "name": "Plains Marketing, L.P.",
+          "percent_of_take": "100%"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "field_name",
+        "page": 1,
+        "bbox": [
+          0.12794347750666124,
+          0.11167675419123935,
+          0.1631004480023443,
+          0.02039198735674083
+        ],
+        "polygon": null,
+        "reference_text": "Revilo (Glorieta)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_name",
+        "page": 1,
+        "bbox": [
+          0.539638915260625,
+          0.11267168917228051,
+          0.058503051757715085,
+          0.016002094632251773
+        ],
+        "polygon": null,
+        "reference_text": "Vaughn",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.079278,
+          0.642925,
+          0.816101,
+          0.016929
+        ],
+        "polygon": null,
+        "reference_text": "Previous Operator, ESL-designation ofthe above named operator as Current Operator is not effective until this certificate is approved by meTQfimusim w \"W\"",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_address",
+        "page": 1,
+        "bbox": [
+          0.10007849098685477,
+          0.1922185546899416,
+          0.18360804450959084,
+          0.019057226822551315
+        ],
+        "polygon": null,
+        "reference_text": "Dallas, Texas 75225",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "classification_oil",
+        "page": 2,
+        "bbox": [
+          0.529273,
+          0.198339,
+          0.014,
+          0.01464
+        ],
+        "polygon": null,
+        "reference_text": "X",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_lease_name",
+        "page": 1,
+        "bbox": [
+          0.215071,
+          0.264864,
+          0.014,
+          0.01646
+        ],
+        "polygon": null,
+        "reference_text": "X",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_consolidation",
+        "page": 2,
+        "bbox": [
+          0.51002,
+          0.297004,
+          0.014,
+          0.014841
+        ],
+        "polygon": null,
+        "reference_text": "X",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_unitization",
+        "page": 2,
+        "bbox": [
+          0.51002,
+          0.296926,
+          0.014,
+          0.015443
+        ],
+        "polygon": null,
+        "reference_text": "X",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_subdivision",
+        "page": 2,
+        "bbox": [
+          0.51002,
+          0.296926,
+          0.014,
+          0.015443
+        ],
+        "polygon": null,
+        "reference_text": "X",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_signature",
+        "page": 1,
+        "bbox": [
+          0.697017,
+          0.846485,
+          0.014,
+          0.017263
+        ],
+        "polygon": null,
+        "reference_text": "X",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_phone",
+        "page": 1,
+        "bbox": [
+          0.7496075013993211,
+          0.7287530227486787,
+          0.06938581779042208,
+          0.01614366943954404
+        ],
+        "polygon": null,
+        "reference_text": "unknown",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_name_print",
+        "page": 1,
+        "bbox": [
+          0.11342228936923154,
+          0.8070712704912469,
+          0.12541894796601388,
+          0.018323430638276128
+        ],
+        "polygon": null,
+        "reference_text": "David A . Hart",
+        "confidence": 0.75,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_signature",
+        "page": 1,
+        "bbox": [
+          0.697017,
+          0.846485,
+          0.014,
+          0.017263
+        ],
+        "polygon": null,
+        "reference_text": "X",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_title",
+        "page": 1,
+        "bbox": [
+          0.114207,
+          0.850563,
+          0.085319,
+          0.020109
+        ],
+        "polygon": null,
+        "reference_text": "Presldent",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_date",
+        "page": 1,
+        "bbox": [
+          0.5259026619439745,
+          0.8765654043782201,
+          0.05809852618147815,
+          0.019683959934789663
+        ],
+        "polygon": null,
+        "reference_text": "9/9/04",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_phone",
+        "page": 1,
+        "bbox": [
+          0.7327315087995542,
+          0.877112990577606,
+          0.12556776307437045,
+          0.018126253590850183
+        ],
+        "polygon": null,
+        "reference_text": "(214)522-6646",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_authorized_agent",
+        "page": 1,
+        "bbox": [
+          0.697017,
+          0.846485,
+          0.014,
+          0.017263
+        ],
+        "polygon": null,
+        "reference_text": "X",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gas_gatherers_purchasers[0].name",
+        "page": 1,
+        "bbox": [
+          0.17778649553295173,
+          0.39250380568573934,
+          0.02817602232286512,
+          0.019967186242119128
+        ],
+        "polygon": null,
+        "reference_text": "n/a",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "oil_condensate_gatherers[0].name",
+        "page": 2,
+        "bbox": [
+          0.59057,
+          0.556713,
+          0.037432,
+          0.013865
+        ],
+        "polygon": null,
+        "reference_text": "Plains Marketing, L.P.",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "oil_condensate_gatherers[0].percent_of_take",
+        "page": 2,
+        "bbox": [
+          0.59057,
+          0.556713,
+          0.037432,
+          0.013865
+        ],
+        "polygon": null,
+        "reference_text": "100%",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "current_operator_name",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Regent Oil & Gas Company, L.P.",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_p5_no",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "698779",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "8A",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "well_nos",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "see Exhibit \"A\" attached 192, 193, 194",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "classification_gas",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "classification_other",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "effective_date",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "7/14/04",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_operator",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_oil_condensate_gatherer",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_gas_gatherer",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_gas_purchaser",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_gas_purchaser_system_code",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_field_name",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_lease_name_from",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Revilo / Glorieta / Unit - Tract 19",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "new_rrc_oil_lease",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "new_rrc_gas_well",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "new_rrc_other_well",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_new_completion_recompletion",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_reclass_gas_to_oil",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_reclass_oil_to_gas",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_field_transfer",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_name",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Oilex International Investments, Inc.",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_authorized_employee",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_authorized_agent",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_email",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "DavidHart1000@aol.com",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_authorized_employee",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gas_gatherers_purchasers[0].gatherer",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gas_gatherers_purchasers[0].purchaser",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gas_gatherers_purchasers[0].full_well_stream",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:50:30.606153Z",
+  "completed_at": "2026-09-21T14:50:30.606153Z",
+  "latency_in_ms": 962
+}

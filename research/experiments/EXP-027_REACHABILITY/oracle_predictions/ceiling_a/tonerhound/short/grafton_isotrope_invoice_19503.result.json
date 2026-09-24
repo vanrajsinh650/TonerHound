@@ -1,0 +1,450 @@
+{
+  "request": {
+    "example_id": "short/grafton_isotrope_invoice_19503",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/grafton_isotrope_invoice_19503.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 27,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/grafton_isotrope_invoice_19503",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "invoice_number": "19503",
+      "invoice_type": "standard",
+      "original_invoice_number": null,
+      "date": "2024-09-03",
+      "due_date": "2024-10-03",
+      "purchase_order_number": "Dish 160R Upton St",
+      "order_number": null,
+      "vendor": {
+        "name": "isotrope, llc",
+        "address": {
+          "street": "PO Box 52437",
+          "city": "Boston",
+          "state": "MA",
+          "zip_code": "02205",
+          "country": "US"
+        },
+        "phone": "+1 5083598833",
+        "email": "riggs@isotrope.im",
+        "tax_id": null
+      },
+      "customer": {
+        "name": "Town of Grafton, Mass.",
+        "address": {
+          "street": "Memorial Municipal Center 30 Providence Rd.",
+          "city": "Grafton",
+          "state": "MA",
+          "zip_code": "01519",
+          "country": null
+        },
+        "phone": null,
+        "email": null,
+        "account_number": null
+      },
+      "line_items": [
+        {
+          "line_no": 1,
+          "item_code": null,
+          "description": "David Maxson, WCP: Dish 160R Upton St: August-September 2024 Review and analyze application, consult with staff, prepare report, participate in public hearing, consult on draft decision.",
+          "quantity": 1.0,
+          "unit_price": 4000.0,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 4000.0
+        }
+      ],
+      "subtotal": 4000.0,
+      "discount_total": null,
+      "tax_total": null,
+      "shipping": null,
+      "total_amount": 4000.0,
+      "payment_terms": "Net 30",
+      "bank_details": null,
+      "currency": "USD",
+      "notes": null
+    },
+    "field_citations": [
+      {
+        "field_path": "invoice_number",
+        "page": 1,
+        "bbox": [
+          0.036969,
+          0.28242,
+          0.04567,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "19503",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "date",
+        "page": 1,
+        "bbox": [
+          0.036969,
+          0.431133,
+          0.082092,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "09/03/2024",
+        "confidence": 0.8904830943064077,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_date",
+        "page": 1,
+        "bbox": [
+          0.517688,
+          0.28242,
+          0.082091,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "10/03/2024",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "purchase_order_number",
+        "page": 1,
+        "bbox": [
+          0.0375,
+          0.32783,
+          0.144739,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Dish 160R Upton St",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.name",
+        "page": 1,
+        "bbox": [
+          0.150735,
+          0.048934,
+          0.082729,
+          0.015013
+        ],
+        "polygon": null,
+        "reference_text": "isotrope, llc",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.address.street",
+        "page": 1,
+        "bbox": [
+          0.150735,
+          0.066333,
+          0.106667,
+          0.015013
+        ],
+        "polygon": null,
+        "reference_text": "Box 52437",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.address.city",
+        "page": 1,
+        "bbox": [
+          0.150735,
+          0.083732,
+          0.047647,
+          0.015013
+        ],
+        "polygon": null,
+        "reference_text": "Boston,",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.address.state",
+        "page": 1,
+        "bbox": [
+          0.210833,
+          0.083732,
+          0.024575,
+          0.015013
+        ],
+        "polygon": null,
+        "reference_text": "MA",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.address.zip_code",
+        "page": 1,
+        "bbox": [
+          0.244428,
+          0.083732,
+          0.04567,
+          0.015013
+        ],
+        "polygon": null,
+        "reference_text": "02205",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.address.country",
+        "page": 1,
+        "bbox": [
+          0.294608,
+          0.083732,
+          0.022761,
+          0.015013
+        ],
+        "polygon": null,
+        "reference_text": "US",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.phone",
+        "page": 1,
+        "bbox": [
+          0.150735,
+          0.101131,
+          0.11451,
+          0.015013
+        ],
+        "polygon": null,
+        "reference_text": "+1 5083598833",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.email",
+        "page": 1,
+        "bbox": [
+          0.150735,
+          0.048934,
+          0.082729,
+          0.015013
+        ],
+        "polygon": null,
+        "reference_text": "riggs@isotrope.im",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.name",
+        "page": 1,
+        "bbox": [
+          0.133129,
+          0.177053,
+          0.170147,
+          0.015013
+        ],
+        "polygon": null,
+        "reference_text": "Town of Grafton, Mass.",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.address.street",
+        "page": 1,
+        "bbox": [
+          0.133129,
+          0.194578,
+          0.64531,
+          0.032285
+        ],
+        "polygon": null,
+        "reference_text": "Memorial Municipal Center 30 Providence Rd.",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.address.city",
+        "page": 1,
+        "bbox": [
+          0.195923,
+          0.177053,
+          0.051699,
+          0.015013
+        ],
+        "polygon": null,
+        "reference_text": "Grafton,",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.address.state",
+        "page": 1,
+        "bbox": [
+          0.196724,
+          0.22925,
+          0.024575,
+          0.015013
+        ],
+        "polygon": null,
+        "reference_text": "MA",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.address.zip_code",
+        "page": 1,
+        "bbox": [
+          0.230319,
+          0.22925,
+          0.04567,
+          0.015013
+        ],
+        "polygon": null,
+        "reference_text": "01519",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_amount",
+        "page": 1,
+        "bbox": [
+          0.903946,
+          0.47141,
+          0.063824,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "4,000.00",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "payment_terms",
+        "page": 1,
+        "bbox": [
+          0.670221,
+          0.28242,
+          0.048252,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Net 30",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "invoice_type",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "standard",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].line_no",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].description",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "David Maxson, WCP: Dish 160R Upton St: August-September 2024 Review and analyze application, consult with staff, prepare report, participate in public hearing, consult on draft decision.",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].quantity",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "1.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].unit_price",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "4000.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].amount",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "4000.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "subtotal",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "4000.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "currency",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "USD",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:51:23.672130Z",
+  "completed_at": "2026-09-21T14:51:23.672130Z",
+  "latency_in_ms": 47
+}

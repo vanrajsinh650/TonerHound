@@ -1,0 +1,176 @@
+{
+  "request": {
+    "example_id": "medium/dd1155_schedule_continuation_0007",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/dd1155_schedule_continuation_0007.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 10,
+    "ocr_pages": 0,
+    "num_pages": 13
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/dd1155_schedule_continuation_0007",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "contract_purchase_order_number": "FA868423DB074",
+      "delivery_order_call_number": "FA868423FB061",
+      "date_of_order": null,
+      "requisition_purchase_request_number": "A025532",
+      "total_award_amount": "USD 1,000.00",
+      "line_items": [
+        {
+          "item_number": "0001",
+          "description": "The contractor shall develop and deliver a post-award presentation within 15 calendar days of the effective contract date in accordance with CDRL A001 (Exhibit A). For briefing materials with a security classification higher than CUI, the Contractor shall follow security procedures as outlined in paragraph 5.3.1 of the SOW prior to submission.\n\nData Category Code: MGMT\nPurchase Requisition Number: F4FDAT2262A038\nProduct Service Code: AC13\nPricing Arrangement: Firm Fixed Price\nCIN: F4FDAT2262A0380000AA\nACRN: AA",
+          "quantity_ordered": 1.0,
+          "unit": "Each",
+          "unit_price": "USD 1,000.00",
+          "amount": "USD 1,000.00"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "contract_purchase_order_number",
+        "page": 1,
+        "bbox": [
+          0.071253,
+          0.091494,
+          0.209222,
+          0.020212
+        ],
+        "polygon": null,
+        "reference_text": "FA868423DB074",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "delivery_order_call_number",
+        "page": 1,
+        "bbox": [
+          0.299739,
+          0.092262,
+          0.172264,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "FA868423FB061",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "requisition_purchase_request_number",
+        "page": 1,
+        "bbox": [
+          0.689967,
+          0.092548,
+          0.065932,
+          0.016477
+        ],
+        "polygon": null,
+        "reference_text": "A025532",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_award_amount",
+        "page": 1,
+        "bbox": [
+          0.841247,
+          0.668802,
+          0.084879,
+          0.013952
+        ],
+        "polygon": null,
+        "reference_text": "USD 1,000.00",
+        "confidence": 0.7647477547349141,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].unit_price",
+        "page": 1,
+        "bbox": [
+          0.841247,
+          0.668802,
+          0.084879,
+          0.013952
+        ],
+        "polygon": null,
+        "reference_text": "USD 1,000.00",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].amount",
+        "page": 1,
+        "bbox": [
+          0.841247,
+          0.668802,
+          0.084879,
+          0.013952
+        ],
+        "polygon": null,
+        "reference_text": "USD 1,000.00",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].item_number",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "0001",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].description",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "The contractor shall develop and deliver a post-award presentation within 15 calendar days of the effective contract date in accordance with CDRL A001 (Exhibit A). For briefing materials with a security classification higher than CUI, the Contractor shall follow security procedures as outlined in paragraph 5.3.1 of the SOW prior to submission.\n\nData Category Code: MGMT\nPurchase Requisition Number: F4FDAT2262A038\nProduct Service Code: AC13\nPricing Arrangement: Firm Fixed Price\nCIN: F4FDAT2262A0380000AA\nACRN: AA",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].quantity_ordered",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "1.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].unit",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Each",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:47:42.164066Z",
+  "completed_at": "2026-09-21T14:47:42.164066Z",
+  "latency_in_ms": 81
+}

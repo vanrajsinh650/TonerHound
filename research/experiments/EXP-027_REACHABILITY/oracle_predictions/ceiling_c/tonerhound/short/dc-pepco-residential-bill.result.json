@@ -1,0 +1,53 @@
+{
+  "request": {
+    "example_id": "short/dc-pepco-residential-bill",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/dc-pepco-residential-bill.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/dc-pepco-residential-bill",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "utility_provider": "Pepco",
+      "account_number": "0123 4567 890",
+      "invoice_number": "200000088589",
+      "service_number": "0012 3456 7890 7001 6762 64",
+      "customer_name": "PEPCO CUSTOMER",
+      "service_address": "123 9TH ST NW WASHINGTON DC 20012",
+      "bill_date": "May 11, 2015",
+      "billing_period_start": "April 4, 2015",
+      "billing_period_end": "May 5, 2015",
+      "payment_due_date": "Jun 1, 2015",
+      "amount_due": 176.31,
+      "previous_balance": 287.32,
+      "total_current_charges": null,
+      "total_delivery_charges": 21.01,
+      "total_supply_charges": 155.3,
+      "meters": [
+        {
+          "meter_number": "1ND344415274",
+          "service_type": "electric",
+          "current_reading": 57043,
+          "previous_reading": 55628,
+          "usage_quantity": 1415.0,
+          "usage_unit": "kWh"
+        }
+      ]
+    },
+    "field_citations": []
+  },
+  "started_at": "2026-09-23T19:38:03.677112Z",
+  "completed_at": "2026-09-23T19:38:03.677112Z",
+  "latency_in_ms": 0
+}

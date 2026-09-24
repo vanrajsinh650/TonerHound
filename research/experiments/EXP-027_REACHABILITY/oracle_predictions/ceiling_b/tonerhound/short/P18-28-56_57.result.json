@@ -1,0 +1,621 @@
+{
+  "request": {
+    "example_id": "short/P18-28-56_57",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/P18-28-56_57.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 37,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/P18-28-56_57",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "reporting_period": "January 20 13",
+      "operator": "Park Tank Truck Service's Inc.",
+      "operator_no": "639524",
+      "address_street_or_box": "P.O. Box 637",
+      "address_city": "Iowa Park",
+      "address_state": "TX",
+      "address_zip_code": "76367",
+      "purpose_monthly_report": null,
+      "purpose_corrected_report": false,
+      "purpose_initial_report": null,
+      "purpose_final_report": null,
+      "consolidated_p18_yes": null,
+      "consolidated_p18_no": null,
+      "system_serial_no": "09-0377",
+      "district_and_lease_no": "24470",
+      "gathering_system_facility_name": "Rusk",
+      "county": "Wichita County, Texas",
+      "rrc_district_no": "9",
+      "distance_from_nearest_town": "One mile",
+      "direction_from_nearest_town": "West of",
+      "nearest_town": "Iowa Park, TX 76367",
+      "survey": "Tarrant Co. School Lands",
+      "section": null,
+      "block": null,
+      "abstract_no": null,
+      "township": null,
+      "league": null,
+      "labor": null,
+      "porcion": null,
+      "share": null,
+      "tract": null,
+      "lot": null,
+      "disposal_api_numbers": null,
+      "disposal_well_lease_and_well_no": null,
+      "disposal_well_uic_no": "4-3-98",
+      "disposal_method_recycling": null,
+      "disposal_method_land_application": null,
+      "disposal_method_discharge": null,
+      "disposal_method_other": null,
+      "disposal_method_other_text": null,
+      "disposal_method_permit_no": null,
+      "sec3_l1_num_oil_gas_wells": "0",
+      "sec3_l2_water_from_producing": "0",
+      "sec3_l3_water_from_nonproducing": "0",
+      "sec3_l4_total_texas_water": "0",
+      "sec3_l5_state_ok": null,
+      "sec3_l5_state_la": null,
+      "sec3_l5_state_nm": null,
+      "sec3_l5_state_other": null,
+      "sec3_l5_state_other_text": null,
+      "sec3_l5_out_of_state_water": null,
+      "sec3_l6_skimmed_total": "0",
+      "sec3_l7_tolerance": "0",
+      "sec3_l8_excess_to_leases": "0",
+      "sec3_l9_slugs_credited": "0",
+      "sec3_l10_excess_not_credited": "0",
+      "sec4_l1_storage_beginning": "0",
+      "sec4_l2_skimmed_not_allocated": "0",
+      "sec4_l3_sold": "0",
+      "sec4_l4_transferred": null,
+      "sec4_l5_bsw_collected": null,
+      "sec4_l6_storage_end": "0",
+      "signature_present": true,
+      "print_name": "Jordan Jackson",
+      "certificate_date": "02/06/2013",
+      "title": "Agent",
+      "telephone_area_code": "(940)",
+      "telephone_number": "592-4164",
+      "email_optional": null,
+      "gatherer_entries": null
+    },
+    "field_citations": [
+      {
+        "field_path": "reporting_period",
+        "page": 1,
+        "bbox": [
+          0.6283185840707964,
+          0.1446886446886447,
+          0.17109144542772858,
+          0.016941391941391937
+        ],
+        "polygon": null,
+        "reference_text": "January 20 13",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator",
+        "page": 1,
+        "bbox": [
+          0.05545722713864307,
+          0.14697802197802198,
+          0.24306784660766964,
+          0.010531135531135521
+        ],
+        "polygon": null,
+        "reference_text": "Park Tank Truck Service\u2019s Inc.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_no",
+        "page": 1,
+        "bbox": [
+          0.8578171091445428,
+          0.18177655677655677,
+          0.053097345132743334,
+          0.010531135531135521
+        ],
+        "polygon": null,
+        "reference_text": "639524",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "address_street_or_box",
+        "page": 1,
+        "bbox": [
+          0.05545722713864307,
+          0.16346153846153846,
+          0.10442477876106196,
+          0.010073260073260065
+        ],
+        "polygon": null,
+        "reference_text": "P.O. Box 637",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "address_city",
+        "page": 1,
+        "bbox": [
+          0.05604719764011799,
+          0.1794871794871795,
+          0.08436578171091445,
+          0.01190476190476189
+        ],
+        "polygon": null,
+        "reference_text": "Iowa Park,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "address_state",
+        "page": 1,
+        "bbox": [
+          0.14513274336283186,
+          0.1794871794871795,
+          0.024778761061946902,
+          0.010073260073260065
+        ],
+        "polygon": null,
+        "reference_text": "TX",
+        "confidence": 0.8118956830703411,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "address_zip_code",
+        "page": 1,
+        "bbox": [
+          0.1752212389380531,
+          0.1794871794871795,
+          0.04365781710914454,
+          0.010073260073260065
+        ],
+        "polygon": null,
+        "reference_text": "76367",
+        "confidence": 0.8240666137470377,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "system_serial_no",
+        "page": 1,
+        "bbox": [
+          0.778171,
+          0.209318,
+          0.118997,
+          0.013599
+        ],
+        "polygon": null,
+        "reference_text": "09-0377",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "district_and_lease_no",
+        "page": 1,
+        "bbox": [
+          0.7557522123893805,
+          0.23855311355311357,
+          0.04483775811209445,
+          0.009615384615384609
+        ],
+        "polygon": null,
+        "reference_text": "24470",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gathering_system_facility_name",
+        "page": 1,
+        "bbox": [
+          0.35398230088495575,
+          0.211996336996337,
+          0.0407079646017699,
+          0.009615384615384609
+        ],
+        "polygon": null,
+        "reference_text": "Rusk",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.3870206489675516,
+          0.23901098901098902,
+          0.17522123893805308,
+          0.013736263736263715
+        ],
+        "polygon": null,
+        "reference_text": "Wichita County, Texas",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district_no",
+        "page": 1,
+        "bbox": [
+          0.364602,
+          0.562122,
+          0.00472,
+          0.011745
+        ],
+        "polygon": null,
+        "reference_text": "9,",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "distance_from_nearest_town",
+        "page": 1,
+        "bbox": [
+          0.3551622418879056,
+          0.27289377289377287,
+          0.06961651917404127,
+          0.009615384615384637
+        ],
+        "polygon": null,
+        "reference_text": "~_One mile",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "direction_from_nearest_town",
+        "page": 1,
+        "bbox": [
+          0.4294985250737463,
+          0.2724358974358974,
+          0.060176991150442505,
+          0.010073260073260093
+        ],
+        "polygon": null,
+        "reference_text": "West of",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "nearest_town",
+        "page": 1,
+        "bbox": [
+          0.098525,
+          0.177404,
+          0.240354,
+          0.016071
+        ],
+        "polygon": null,
+        "reference_text": "Park, TX 76367",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "survey",
+        "page": 1,
+        "bbox": [
+          0.17935103244837758,
+          0.23901098901098902,
+          0.20176991150442475,
+          0.010073260073260065
+        ],
+        "polygon": null,
+        "reference_text": "Tarrant Co. School Lands",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l1_num_oil_gas_wells",
+        "page": 1,
+        "bbox": [
+          0.677699,
+          0.435211,
+          0.085723,
+          0.012363
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l2_water_from_producing",
+        "page": 1,
+        "bbox": [
+          0.834395,
+          0.469631,
+          0.06708,
+          0.011745
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l4_total_texas_water",
+        "page": 1,
+        "bbox": [
+          0.834395,
+          0.499393,
+          0.06708,
+          0.011745
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l6_skimmed_total",
+        "page": 1,
+        "bbox": [
+          0.834395,
+          0.499393,
+          0.06708,
+          0.011745
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l7_tolerance",
+        "page": 1,
+        "bbox": [
+          0.834395,
+          0.514583,
+          0.06708,
+          0.011126
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l8_excess_to_leases",
+        "page": 1,
+        "bbox": [
+          0.834395,
+          0.544265,
+          0.06708,
+          0.011745
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.8048249538494929,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l9_slugs_credited",
+        "page": 1,
+        "bbox": [
+          0.855103,
+          0.559295,
+          0.046372,
+          0.012363
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec4_l1_storage_beginning",
+        "page": 1,
+        "bbox": [
+          0.841475,
+          0.618819,
+          0.06708,
+          0.012363
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec4_l3_sold",
+        "page": 1,
+        "bbox": [
+          0.677699,
+          0.435211,
+          0.085723,
+          0.012363
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.7650798442953416,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec4_l6_storage_end",
+        "page": 1,
+        "bbox": [
+          0.841475,
+          0.618819,
+          0.06708,
+          0.012363
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "print_name",
+        "page": 1,
+        "bbox": [
+          0.7486725663716814,
+          0.7710622710622711,
+          0.12094395280235981,
+          0.009615384615384581
+        ],
+        "polygon": null,
+        "reference_text": "Jordan Jackson",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "title",
+        "page": 1,
+        "bbox": [
+          0.7345132743362832,
+          0.8054029304029304,
+          0.046017699115044275,
+          0.012362637362637319
+        ],
+        "polygon": null,
+        "reference_text": "Agent",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "telephone_area_code",
+        "page": 1,
+        "bbox": [
+          0.559882005899705,
+          0.8292124542124543,
+          0.03834808259587019,
+          0.012820512820512775
+        ],
+        "polygon": null,
+        "reference_text": "(940)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "purpose_corrected_report",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "disposal_well_uic_no",
+        "page": 1,
+        "bbox": [
+          0.7604719764011799,
+          0.3630952380952381,
+          0.05899705014749268,
+          0.008699633699633724
+        ],
+        "polygon": null,
+        "reference_text": "4-3-98",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l3_water_from_nonproducing",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l10_excess_not_credited",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec4_l2_skimmed_not_allocated",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "signature_present",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "certificate_date",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "02/06/2013",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "telephone_number",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "592-4164",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:50:29.641814Z",
+  "completed_at": "2026-09-21T14:50:29.641814Z",
+  "latency_in_ms": 1443
+}

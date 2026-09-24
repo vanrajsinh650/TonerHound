@@ -1,0 +1,124 @@
+{
+  "request": {
+    "example_id": "short/cbp_7501_continuation_0016",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/cbp_7501_continuation_0016.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/cbp_7501_continuation_0016",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "filer_code_entry_number": "9NK-0010492-5",
+      "entry_type": "01 ABI/A",
+      "summary_date": "08/21/19 048",
+      "surety_number": "054",
+      "bond_type": "8",
+      "port_code": "4601",
+      "entry_date": "08/12/19",
+      "importing_carrier": "OOCL BERLIN",
+      "mode_of_transport": "11",
+      "country_of_origin": "CN",
+      "import_date": "08/13/19",
+      "bill_of_lading_or_awb_number": "EGLV149902606378",
+      "manufacturer_id": "CNSHEXIN201SHE",
+      "exporting_country": "CN",
+      "export_date": "07/13/19",
+      "it_number": null,
+      "it_date": null,
+      "missing_documents": null,
+      "foreign_port_of_lading": "57078",
+      "us_port_of_unlading": "4601",
+      "location_of_goods": "E364",
+      "consignee_number": "SAME",
+      "importer_number": "47-553472400",
+      "reference_number": null,
+      "ultimate_consignee": {
+        "name": null,
+        "address": {
+          "address_line_one": null,
+          "address_line_two": null,
+          "city": null,
+          "state": "DE",
+          "zip_code": null
+        }
+      },
+      "importer_of_record": {
+        "name": "EAGLE TRADING USA LLC",
+        "address": {
+          "address_line_one": "717 N UNION ST STE#98",
+          "address_line_two": null,
+          "city": "WILMINGTON",
+          "state": "DE",
+          "zip_code": "19805"
+        }
+      },
+      "total_entered_value": 12751.0,
+      "total_other_fees": 60.11,
+      "ascertained_duty": 1165.95,
+      "ascertained_tax": 0.0,
+      "ascertained_other": 60.11,
+      "ascertained_total": 1226.06,
+      "declarant_name": "May Chen",
+      "declarant_title": "BROKER",
+      "declarant_date": "08/09/19",
+      "broker_filer_name": "ABILITY CUSTOMS BROKERS",
+      "broker_filer_phone": "5103475555",
+      "broker_importer_file_number": "10492 xxx/Paperless",
+      "other_fees": [
+        {
+          "fee_code": "499",
+          "fee_name": "Merchandise Processing Fee",
+          "fee_amount": 44.16
+        },
+        {
+          "fee_code": "501",
+          "fee_name": "Harbor Maintenance Fee",
+          "fee_amount": 15.95
+        }
+      ],
+      "line_items": [
+        {
+          "line_number": "001",
+          "htsus_numbers": [
+            "9903.88.03",
+            "7326.90.8688"
+          ],
+          "ada_cvd_case_numbers": null,
+          "manufacturer_id_line": null,
+          "gross_weight": "319kg",
+          "manifest_quantity": null,
+          "net_quantity_htsus_units": "150 KG",
+          "description_of_merchandise": "ARTICLE OF CHINA,US NTE 20; ARTICLES OF IRON/STEEL:NSP",
+          "entered_value_dollars": 576,
+          "chgs_codes": [
+            "C57"
+          ],
+          "relationship_indicator": "NOT RELATED",
+          "htsus_rates": [
+            "25.0%",
+            "2.90%"
+          ],
+          "ada_cvd_rates": null,
+          "irc_rates": null,
+          "visa_number": null,
+          "duty_and_tax_amount": 80.35
+        }
+      ]
+    },
+    "field_citations": []
+  },
+  "started_at": "2026-09-23T19:38:03.065479Z",
+  "completed_at": "2026-09-23T19:38:03.065479Z",
+  "latency_in_ms": 0
+}

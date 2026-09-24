@@ -1,0 +1,1269 @@
+{
+  "request": {
+    "example_id": "short/h5Filing-66006-1",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/h5Filing-66006-1.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/h5Filing-66006-1",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "uic_no": "000096558",
+      "filing_no": "66006",
+      "submittal_date": "02/08/2024",
+      "version": "1",
+      "evaluation": "02/27/2024",
+      "test_status": "Failed",
+      "preparer": "Maxlynn Futch",
+      "preparer_phone": "432-349--6657",
+      "preparer_email": "maxlynn_futch@kindermorgan.com",
+      "operator_name": "KINDER MORGAN PRODUCTION CO",
+      "operator_no": "463316",
+      "operator_address_line_1": "6 DESTA DRIVE STE 6000",
+      "operator_city": "MIDLAND",
+      "operator_address_line_2": null,
+      "operator_state": "TX",
+      "operator_postal_code": "79705",
+      "api": "41534209",
+      "injection_well": "Enhanced Recovery",
+      "district": "8A",
+      "lease_no": "03137",
+      "well_no": "16610A",
+      "lease_name": "SACROC UNIT",
+      "field_number": "48583001",
+      "field_name": "KELLY-SNYDER",
+      "county": "SCURRY",
+      "reason_for": "5-Year Test as Required by Statewide Rule",
+      "date_test_performed": "02/01/2023",
+      "retest": "No",
+      "retest_date_of_previous_test": null,
+      "remedial_actions_prior_to": null,
+      "well_completion_casing": [
+        {
+          "string_type": "Long String Casing",
+          "casing_tubing_size": "5 1/2",
+          "depth_set": "7100",
+          "top_of_cement": "1635"
+        },
+        {
+          "string_type": "Tubing or Hanging String",
+          "casing_tubing_size": "2 7/8",
+          "depth_set": "6708",
+          "top_of_cement": null
+        },
+        {
+          "string_type": "Surface Casing",
+          "casing_tubing_size": "8  5/8",
+          "depth_set": "1722",
+          "top_of_cement": "0"
+        }
+      ],
+      "packer_make_model": "Packer - AS1X",
+      "depth_packer": "6708",
+      "no_packer_injection_down_casing": false,
+      "injection_intervals": [
+        {
+          "interval_type": "Permitted Injection",
+          "top": "6350",
+          "bottom": "7250"
+        },
+        {
+          "interval_type": "Completed Injection",
+          "top": "6766",
+          "bottom": "6880"
+        },
+        {
+          "interval_type": "Authorized Liquid Injection",
+          "top": "2750",
+          "bottom": null
+        },
+        {
+          "interval_type": "Authorized Gas Injection",
+          "top": "2750",
+          "bottom": null
+        }
+      ],
+      "no_completed_intervals": false,
+      "well_status": "Shut-In",
+      "well_did_not_pressure_up": false,
+      "digital_recorder_attached": false,
+      "test_pressures": [
+        {
+          "time_point": "INITIAL",
+          "tubing_or_hanging_string": "38",
+          "casing": "560",
+          "surface_casing": "0"
+        },
+        {
+          "time_point": "After 15 minutes",
+          "tubing_or_hanging_string": "38",
+          "casing": "560",
+          "surface_casing": "0"
+        },
+        {
+          "time_point": "After 30 minutes",
+          "tubing_or_hanging_string": "38",
+          "casing": "560",
+          "surface_casing": "0"
+        }
+      ],
+      "test_witnessed_by_rrc": "No",
+      "name_of_rrc": null,
+      "injection_fluid_description": null,
+      "annulus_fluid_description": "Liqui",
+      "other_tests_surveys_performed": null,
+      "operator_comments_on_test": null
+    },
+    "field_citations": [
+      {
+        "field_path": "uic_no",
+        "page": 2,
+        "bbox": [
+          0.7295285148794121,
+          0.04108199277306578,
+          0.10457516192120157,
+          0.019534560095470756
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "filing_no",
+        "page": 2,
+        "bbox": [
+          0.731022463525556,
+          0.06220042559358254,
+          0.06065217165557853,
+          0.014782911961893505
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "submittal_date",
+        "page": 2,
+        "bbox": [
+          0.731022463525556,
+          0.08543073864489271,
+          0.10382810282706964,
+          0.015310879523055257
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "version",
+        "page": 2,
+        "bbox": [
+          0.72878156881336,
+          0.10390939357647923,
+          0.025302141399311962,
+          0.014254944400731752
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "evaluation",
+        "page": 2,
+        "bbox": [
+          0.7295285148794121,
+          0.12344393369965714,
+          0.10606911056734558,
+          0.019534580067763593
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "test_status",
+        "page": 2,
+        "bbox": [
+          0.730275460945464,
+          0.1450903640397749,
+          0.06154097951532833,
+          0.015310879523055257
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "preparer",
+        "page": 1,
+        "bbox": [
+          0.17345,
+          0.21227,
+          0.12877,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "preparer_phone",
+        "page": 1,
+        "bbox": [
+          0.65244,
+          0.21227,
+          0.12824499847581636,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "preparer_email",
+        "page": 1,
+        "bbox": [
+          0.17345,
+          0.23601999999999998,
+          0.27286245257596076,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_name",
+        "page": 1,
+        "bbox": [
+          0.19866,
+          0.28709,
+          0.30003089999173765,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_no",
+        "page": 1,
+        "bbox": [
+          0.65412,
+          0.28709,
+          0.05876,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_address_line_1",
+        "page": 1,
+        "bbox": [
+          0.19697,
+          0.31084,
+          0.2262587942356583,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_city",
+        "page": 1,
+        "bbox": [
+          0.65412,
+          0.31084,
+          0.08152419026047565,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_address_line_2",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_state",
+        "page": 1,
+        "bbox": [
+          0.20034,
+          0.35835,
+          0.02138,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_postal_code",
+        "page": 1,
+        "bbox": [
+          0.65412,
+          0.35835,
+          0.04941,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "api",
+        "page": 1,
+        "bbox": [
+          0.15832,
+          0.41773,
+          0.07745,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_well",
+        "page": 1,
+        "bbox": [
+          0.53479,
+          0.41773,
+          0.15879024631936578,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "district",
+        "page": 1,
+        "bbox": [
+          0.15832,
+          0.44149,
+          0.02138,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_no",
+        "page": 1,
+        "bbox": [
+          0.53479,
+          0.44149,
+          0.04941,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "well_no",
+        "page": 1,
+        "bbox": [
+          0.82891,
+          0.44149,
+          0.07384610481952864,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_name",
+        "page": 1,
+        "bbox": [
+          0.15832,
+          0.46524,
+          0.13024289576810436,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "field_number",
+        "page": 1,
+        "bbox": [
+          0.82891,
+          0.46524,
+          0.07745,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "field_name",
+        "page": 1,
+        "bbox": [
+          0.15832,
+          0.48899,
+          0.13939710951143727,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.15832,
+          0.51275,
+          0.09982,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "reason_for",
+        "page": 1,
+        "bbox": [
+          0.18521,
+          0.56738,
+          0.32588,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "date_test_performed",
+        "page": 1,
+        "bbox": [
+          0.82891,
+          0.56738,
+          0.08679,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "retest",
+        "page": 1,
+        "bbox": [
+          0.19697,
+          0.59113,
+          0.02417,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "retest_date_of_previous_test",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "remedial_actions_prior_to",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "well_completion_casing[0].string_type",
+        "page": 1,
+        "bbox": [
+          0.0725,
+          0.7332,
+          0.1505,
+          0.0168
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "well_completion_casing[0].casing_tubing_size",
+        "page": 1,
+        "bbox": [
+          0.33143,
+          0.73127,
+          0.04007,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "well_completion_casing[0].depth_set",
+        "page": 1,
+        "bbox": [
+          0.4995,
+          0.73127,
+          0.04007,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "well_completion_casing[0].top_of_cement",
+        "page": 1,
+        "bbox": [
+          0.66756,
+          0.73127,
+          0.04007,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "well_completion_casing[1].string_type",
+        "page": 1,
+        "bbox": [
+          0.0717,
+          0.7696,
+          0.1964,
+          0.0179
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "well_completion_casing[1].casing_tubing_size",
+        "page": 1,
+        "bbox": [
+          0.33143,
+          0.7669,
+          0.04007,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "well_completion_casing[1].depth_set",
+        "page": 1,
+        "bbox": [
+          0.4995,
+          0.7669,
+          0.04007,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "well_completion_casing[1].top_of_cement",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "well_completion_casing[2].string_type",
+        "page": 1,
+        "bbox": [
+          0.0725,
+          0.7517,
+          0.1252,
+          0.0162
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "well_completion_casing[2].casing_tubing_size",
+        "page": 1,
+        "bbox": [
+          0.329155024892174,
+          0.7522458843295873,
+          0.04183005346567264,
+          0.013726996811862839
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "well_completion_casing[2].depth_set",
+        "page": 1,
+        "bbox": [
+          0.49946307953311264,
+          0.7517178967961327,
+          0.04033621784760853,
+          0.014254984345317427
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "well_completion_casing[2].top_of_cement",
+        "page": 1,
+        "bbox": [
+          0.666036460357831,
+          0.7517178967961327,
+          0.0395891587534766,
+          0.015310879523055257
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "packer_make_model",
+        "page": 1,
+        "bbox": [
+          0.26723,
+          0.8527300000000001,
+          0.2753993473952435,
+          0.0196
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "depth_packer",
+        "page": 1,
+        "bbox": [
+          0.26368052015755333,
+          0.89105,
+          0.04737204471733086,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "no_packer_injection_down_casing",
+        "page": 1,
+        "bbox": [
+          0.51261,
+          0.89192,
+          0.02017,
+          0.01425
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_intervals[0].interval_type",
+        "page": 2,
+        "bbox": [
+          0.0451,
+          0.2485,
+          0.1554,
+          0.017
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_intervals[0].top",
+        "page": 2,
+        "bbox": [
+          0.37513,
+          0.24671,
+          0.04007,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_intervals[0].bottom",
+        "page": 2,
+        "bbox": [
+          0.52639,
+          0.24671,
+          0.04007,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_intervals[1].interval_type",
+        "page": 2,
+        "bbox": [
+          0.0452,
+          0.2726,
+          0.1661,
+          0.0162
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_intervals[1].top",
+        "page": 2,
+        "bbox": [
+          0.37681,
+          0.27046,
+          0.04007,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_intervals[1].bottom",
+        "page": 2,
+        "bbox": [
+          0.52639,
+          0.27046,
+          0.04007,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_intervals[2].interval_type",
+        "page": 2,
+        "bbox": [
+          0.0471,
+          0.2965,
+          0.2214,
+          0.0171
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_intervals[2].top",
+        "page": 2,
+        "bbox": [
+          0.37513,
+          0.29421,
+          0.04117749923790817,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_intervals[2].bottom",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_intervals[3].interval_type",
+        "page": 2,
+        "bbox": [
+          0.0446,
+          0.32,
+          0.2065,
+          0.0169
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_intervals[3].top",
+        "page": 2,
+        "bbox": [
+          0.3752541320206403,
+          0.31779,
+          0.043699263453647594,
+          0.01873
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_intervals[3].bottom",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "no_completed_intervals",
+        "page": 2,
+        "bbox": [
+          0.66723,
+          0.27316,
+          0.02017,
+          0.01425
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "well_status",
+        "page": 2,
+        "bbox": [
+          0.6995,
+          0.31797,
+          0.06338931691932022,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "well_did_not_pressure_up",
+        "page": 2,
+        "bbox": [
+          0.0437,
+          0.40024,
+          0.02017,
+          0.01425
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "digital_recorder_attached",
+        "page": 2,
+        "bbox": [
+          0.51429,
+          0.40024,
+          0.02017,
+          0.01425
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "test_pressures[0].time_point",
+        "page": 2,
+        "bbox": [
+          0.0734,
+          0.4608,
+          0.0663,
+          0.0145
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "test_pressures[0].tubing_or_hanging_string",
+        "page": 2,
+        "bbox": [
+          0.3079,
+          0.4581100000000001,
+          0.02547536827317621,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "test_pressures[0].casing",
+        "page": 2,
+        "bbox": [
+          0.54151,
+          0.45811,
+          0.03072,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "test_pressures[0].surface_casing",
+        "page": 2,
+        "bbox": [
+          0.72303,
+          0.45811,
+          0.01203,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "test_pressures[1].time_point",
+        "page": 2,
+        "bbox": [
+          0.0725,
+          0.4781,
+          0.1301,
+          0.0168
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "test_pressures[1].tubing_or_hanging_string",
+        "page": 2,
+        "bbox": [
+          0.3079,
+          0.47593,
+          0.026222342596248213,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "test_pressures[1].casing",
+        "page": 2,
+        "bbox": [
+          0.54151,
+          0.47593,
+          0.03072,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "test_pressures[1].surface_casing",
+        "page": 2,
+        "bbox": [
+          0.72303,
+          0.47593,
+          0.01203,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "test_pressures[2].time_point",
+        "page": 2,
+        "bbox": [
+          0.0734,
+          0.4966,
+          0.1276,
+          0.0168
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "test_pressures[2].tubing_or_hanging_string",
+        "page": 2,
+        "bbox": [
+          0.3079,
+          0.49374,
+          0.026222342596248213,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "test_pressures[2].casing",
+        "page": 2,
+        "bbox": [
+          0.54151,
+          0.49374,
+          0.03072,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "test_pressures[2].surface_casing",
+        "page": 2,
+        "bbox": [
+          0.72303,
+          0.49374,
+          0.01203,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "test_witnessed_by_rrc",
+        "page": 2,
+        "bbox": [
+          0.33479,
+          0.59113,
+          0.02417,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "name_of_rrc",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_fluid_description",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "annulus_fluid_description",
+        "page": 2,
+        "bbox": [
+          0.33479,
+          0.66595,
+          0.03818,
+          0.01822
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "other_tests_surveys_performed",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_comments_on_test",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:38:03.763809Z",
+  "completed_at": "2026-09-23T19:38:03.763809Z",
+  "latency_in_ms": 0
+}

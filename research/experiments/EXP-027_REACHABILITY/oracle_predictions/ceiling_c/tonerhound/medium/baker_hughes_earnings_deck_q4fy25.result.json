@@ -1,0 +1,75 @@
+{
+  "request": {
+    "example_id": "medium/baker_hughes_earnings_deck_q4fy25",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/baker_hughes_earnings_deck_q4fy25.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/baker_hughes_earnings_deck_q4fy25",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "period": "Q4 FY2025",
+      "currency": "USD",
+      "fiscal_period_end_date": "2025-12-31",
+      "total_revenue": 7386.0,
+      "revenue_growth_yoy": 0.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 876.0,
+      "adjusted_ebitda": 1337.0,
+      "gaap_eps_diluted": null,
+      "adjusted_eps_diluted": 0.78,
+      "gross_margin": null,
+      "operating_margin": null,
+      "free_cash_flow": 1341.0,
+      "segments": [
+        {
+          "segment_name": "Oilfield Services & Equipment",
+          "segment_revenue": 3572,
+          "segment_profit": 647
+        },
+        {
+          "segment_name": "Industrial & Energy Technology",
+          "segment_revenue": 3814,
+          "segment_profit": 761
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "revenue_growth_yoy",
+        "page": 10,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "net_income",
+        "page": 22,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:37:52.235968Z",
+  "completed_at": "2026-09-23T19:37:52.235968Z",
+  "latency_in_ms": 0
+}

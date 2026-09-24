@@ -1,0 +1,100 @@
+{
+  "request": {
+    "example_id": "medium/sysco_earnings_deck_q2fy26",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/sysco_earnings_deck_q2fy26.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/sysco_earnings_deck_q2fy26",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "period": "Q2 FY2026",
+      "currency": "USD",
+      "fiscal_period_end_date": "2025-12-27",
+      "total_revenue": 20762,
+      "revenue_growth_yoy": 3.0,
+      "gross_profit": 3792,
+      "operating_income": 692.0,
+      "net_income": 389.0,
+      "adjusted_ebitda": 1001.0,
+      "gaap_eps_diluted": 0.81,
+      "adjusted_eps_diluted": 0.99,
+      "gross_margin": 18.26,
+      "operating_margin": 3.33,
+      "free_cash_flow": null,
+      "segments": [
+        {
+          "segment_name": "U.S. FOODSERVICE OPERATIONS",
+          "segment_revenue": 14383,
+          "segment_profit": 820.0
+        },
+        {
+          "segment_name": "INTERNATIONAL FOODSERVICE OPERATIONS",
+          "segment_revenue": 3999,
+          "segment_profit": 117.0
+        },
+        {
+          "segment_name": "SYGMA",
+          "segment_revenue": 2126,
+          "segment_profit": 21
+        },
+        {
+          "segment_name": "GLOBAL SUPPORT CENTER",
+          "segment_revenue": null,
+          "segment_profit": -272
+        },
+        {
+          "segment_name": "OTHER",
+          "segment_revenue": 254,
+          "segment_profit": 6
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "fiscal_period_end_date",
+        "page": 22,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "total_revenue",
+        "page": 22,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "gross_profit",
+        "page": 22,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:37:59.483008Z",
+  "completed_at": "2026-09-23T19:37:59.483008Z",
+  "latency_in_ms": 0
+}

@@ -1,0 +1,75 @@
+{
+  "request": {
+    "example_id": "medium/veralto_earnings_deck_q4fy25",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/veralto_earnings_deck_q4fy25.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/veralto_earnings_deck_q4fy25",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "period": "FY2025",
+      "currency": "USD",
+      "fiscal_period_end_date": "2025-12-31",
+      "total_revenue": 5503.0,
+      "revenue_growth_yoy": 6.0,
+      "gross_profit": 3299.0,
+      "operating_income": 1277.0,
+      "net_income": 940.0,
+      "adjusted_ebitda": 1379.0,
+      "gaap_eps_diluted": 3.76,
+      "adjusted_eps_diluted": 3.9,
+      "gross_margin": 59.9,
+      "operating_margin": 23.2,
+      "free_cash_flow": 1014.0,
+      "segments": [
+        {
+          "segment_name": "Water Quality",
+          "segment_revenue": 3321,
+          "segment_profit": 844
+        },
+        {
+          "segment_name": "Product Quality & Innovation",
+          "segment_revenue": 2182,
+          "segment_profit": 549
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "period",
+        "page": 4,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "revenue_growth_yoy",
+        "page": 4,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:37:59.492874Z",
+  "completed_at": "2026-09-23T19:37:59.492874Z",
+  "latency_in_ms": 0
+}

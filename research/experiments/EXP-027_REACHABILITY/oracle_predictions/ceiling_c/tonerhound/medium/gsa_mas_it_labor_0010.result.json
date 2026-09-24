@@ -1,0 +1,80 @@
+{
+  "request": {
+    "example_id": "medium/gsa_mas_it_labor_0010",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/gsa_mas_it_labor_0010.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/gsa_mas_it_labor_0010",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "contract_number": "47QTCA18D00E0",
+      "contractor_name": "Rapidiant Corporation",
+      "schedule_title": "GSA Multiple Award Schedule (MAS) Catalog",
+      "labor_categories": [
+        {
+          "sin": "541511",
+          "labor_category_title": "Project Manager",
+          "minimum_education": "Bachelor of Science (BS) degree or higher",
+          "minimum_years_experience": "10",
+          "site": "Government Site",
+          "year_1_rate": 213.75,
+          "year_2_rate": 213.75,
+          "year_3_rate": 213.75,
+          "year_4_rate": 213.75,
+          "year_5_rate": 213.75
+        },
+        {
+          "sin": "541511",
+          "labor_category_title": "Core Analyst",
+          "minimum_education": "Bachelor of Science (BS) degree or higher",
+          "minimum_years_experience": "4",
+          "site": "Government Site",
+          "year_1_rate": 118.75,
+          "year_2_rate": 118.75,
+          "year_3_rate": 118.75,
+          "year_4_rate": 118.75,
+          "year_5_rate": 118.75
+        },
+        {
+          "sin": "541511",
+          "labor_category_title": "Implementation Specialist",
+          "minimum_education": "Bachelor of Science (BS) degree or higher",
+          "minimum_years_experience": "8",
+          "site": "Government Site",
+          "year_1_rate": 190.0,
+          "year_2_rate": 190.0,
+          "year_3_rate": 190.0,
+          "year_4_rate": 190.0,
+          "year_5_rate": 190.0
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "labor_categories",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:37:53.473953Z",
+  "completed_at": "2026-09-23T19:37:53.473953Z",
+  "latency_in_ms": 0
+}

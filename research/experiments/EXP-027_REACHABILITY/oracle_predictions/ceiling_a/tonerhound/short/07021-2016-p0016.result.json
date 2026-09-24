@@ -1,0 +1,438 @@
+{
+  "request": {
+    "example_id": "short/07021-2016-p0016",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/07021-2016-p0016.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 27,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/07021-2016-p0016",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "final_k1": false,
+      "amended_k1": true,
+      "partnership_ein": "26-3839121",
+      "partnership_name": "Pine Harbour Water Utilities LLC",
+      "partnership_address": "P O BOX 447, Fruitland Park FL 34731",
+      "irs_center": "OGDEN",
+      "is_publicly_traded_partnership": false,
+      "partner_id": "334-50-8852",
+      "partner_name": "MADELINE LIPSKY",
+      "partner_address": "P O BOX 447, Fruitland Park FL 34731",
+      "is_general_partner": false,
+      "is_domestic_partner": true,
+      "partner_entity_type": "INDIVIDUAL PASSIV",
+      "profit_share_beginning": 33.333,
+      "profit_share_ending": 33.3333,
+      "loss_share_beginning": 33.3333,
+      "loss_share_ending": 33.3333,
+      "capital_share_beginning": 33.3333,
+      "capital_share_ending": 33.3333,
+      "liability_nonrecourse": null,
+      "liability_qualified_nonrecourse_financing": null,
+      "liability_recourse": null,
+      "capital_beginning_account": null,
+      "capital_contributed": 45442,
+      "capital_current_year_increase_decrease": -3186,
+      "capital_withdrawals_distributions": null,
+      "capital_ending_account": 42256,
+      "capital_account_method": null,
+      "contributed_built_in_gain_loss_property": null,
+      "box_1_ordinary_business_income": -3186,
+      "box_2_net_rental_real_estate": null,
+      "box_3_other_net_rental_income": null,
+      "box_4_guaranteed_payments": null,
+      "box_5_interest_income": null,
+      "box_6a_ordinary_dividends": null,
+      "box_6b_qualified_dividends": null,
+      "box_7_royalties": null,
+      "box_8_net_short_term_capital_gain": null,
+      "box_9a_net_long_term_capital_gain": null,
+      "box_9b_collectibles_gain": null,
+      "box_9c_unrecaptured_1250_gain": null,
+      "box_10_net_section_1231_gain": null,
+      "box_12_section_179_deduction": null,
+      "box_14_self_employment_earnings": [
+        {
+          "code": "A",
+          "amount": -3186
+        }
+      ],
+      "box_11_other_income": null,
+      "box_13_other_deductions": null,
+      "box_15_credits": null,
+      "box_16_foreign_transactions": null,
+      "box_17_amt_items": [
+        {
+          "code": "A",
+          "amount": 1150
+        }
+      ],
+      "box_18_tax_exempt_income": null,
+      "box_19_distributions": null,
+      "box_20_other_information": null
+    },
+    "field_citations": [
+      {
+        "field_path": "partnership_address",
+        "page": 1,
+        "bbox": [
+          0.098304,
+          0.496244,
+          0.22992,
+          0.024442
+        ],
+        "polygon": null,
+        "reference_text": "447 itland Park FL 34731",
+        "confidence": 0.8154279815986356,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partner_name",
+        "page": 1,
+        "bbox": [
+          0.096892,
+          0.478976,
+          0.140105,
+          0.012715
+        ],
+        "polygon": null,
+        "reference_text": "ELINE LIPSKY",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partner_address",
+        "page": 1,
+        "bbox": [
+          0.09830390705781825,
+          0.4962440259528883,
+          0.2299203498690736,
+          0.024442229608092614
+        ],
+        "polygon": null,
+        "reference_text": "447 itland Park FL 34731",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partner_entity_type",
+        "page": 1,
+        "bbox": [
+          0.29875262889986726,
+          0.6031673701122553,
+          0.1800949495602277,
+          0.009674765846946043
+        ],
+        "polygon": null,
+        "reference_text": "INDIVIDUAL PASS I",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "profit_share_beginning",
+        "page": 1,
+        "bbox": [
+          0.1918874877730226,
+          0.6502139158923217,
+          0.11326094234690948,
+          0.00937325063377914
+        ],
+        "polygon": null,
+        "reference_text": "33.3330%",
+        "confidence": 0.782941899865186,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_current_year_increase_decrease",
+        "page": 1,
+        "bbox": [
+          0.651415,
+          0.122762,
+          0.052381,
+          0.012518
+        ],
+        "polygon": null,
+        "reference_text": "-3186",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_1_ordinary_business_income",
+        "page": 1,
+        "bbox": [
+          0.6383191775652318,
+          0.12438471630366166,
+          0.06547676036560457,
+          0.009272334551570394
+        ],
+        "polygon": null,
+        "reference_text": "-3186",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_14_self_employment_earnings[0].code",
+        "page": 1,
+        "bbox": [
+          0.209508,
+          0.376153,
+          0.006323,
+          0.005455
+        ],
+        "polygon": null,
+        "reference_text": "a",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_17_amt_items[0].code",
+        "page": 1,
+        "bbox": [
+          0.209508,
+          0.376153,
+          0.006323,
+          0.005455
+        ],
+        "polygon": null,
+        "reference_text": "a",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_17_amt_items[0].amount",
+        "page": 1,
+        "bbox": [
+          0.8702673818550858,
+          0.4018825569538155,
+          0.05271602456086599,
+          0.01094297929243615
+        ],
+        "polygon": null,
+        "reference_text": "1,150",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "final_k1",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "amended_k1",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partnership_ein",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "26-3839121",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partnership_name",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Pine Harbour Water Utilities LLC",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "irs_center",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "OGDEN",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "is_publicly_traded_partnership",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "partner_id",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "334-50-8852",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "is_general_partner",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "is_domestic_partner",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "profit_share_ending",
+        "page": 1,
+        "bbox": [
+          0.36835529601651856,
+          0.649689414284446,
+          0.11350619247536259,
+          0.009365043254813799
+        ],
+        "polygon": null,
+        "reference_text": "33.3333",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_share_beginning",
+        "page": 1,
+        "bbox": [
+          0.1919652652117162,
+          0.6656590471364031,
+          0.11286878897473701,
+          0.009369782727174036
+        ],
+        "polygon": null,
+        "reference_text": "33.3333",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_share_ending",
+        "page": 1,
+        "bbox": [
+          0.3684330859215431,
+          0.6651310776219224,
+          0.11350454691967932,
+          0.009365043254813799
+        ],
+        "polygon": null,
+        "reference_text": "33.3333",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_share_beginning",
+        "page": 1,
+        "bbox": [
+          0.19204157162335964,
+          0.6808103118279968,
+          0.11286877650840607,
+          0.009369782727174036
+        ],
+        "polygon": null,
+        "reference_text": "33.3333",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_share_ending",
+        "page": 1,
+        "bbox": [
+          0.3685093798668556,
+          0.6802823615796638,
+          0.11351058062385111,
+          0.009957130509193446
+        ],
+        "polygon": null,
+        "reference_text": "33.3333",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_contributed",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "45442",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_ending_account",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "42256",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_14_self_employment_earnings[0].amount",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "-3186",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:50:05.973083Z",
+  "completed_at": "2026-09-21T14:50:05.973083Z",
+  "latency_in_ms": 784
+}

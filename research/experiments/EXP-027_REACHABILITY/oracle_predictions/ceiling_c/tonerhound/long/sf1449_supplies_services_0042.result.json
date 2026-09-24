@@ -1,0 +1,97 @@
+{
+  "request": {
+    "example_id": "long/sf1449_supplies_services_0042",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/long/sf1449_supplies_services_0042.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "long/sf1449_supplies_services_0042",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "contract_number": "TOFS-16-D-0004",
+      "solicitation_number": null,
+      "requisition_number": null,
+      "issue_date": null,
+      "award_effective_date": "01/14/2016",
+      "total_award_amount": "$0.00",
+      "clin_items": [
+        {
+          "item_no": "0001",
+          "parent_item_no": null,
+          "supplies_services": "Legal Support Services - Base Year",
+          "description": "Base Year Fully Burdened Labor Rates: Partner: per Hour Associate: per Hour Paralegal: per Hour Obligated Amount: $0.00 Delivery: 01/14/2016",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": null
+        },
+        {
+          "item_no": "0002",
+          "parent_item_no": null,
+          "supplies_services": "Legal Support Services - Option Year 1",
+          "description": "Option Year 1 Fully Burdened Labor Rates: Partner: per Hour Associate: per Hour Paralegal: per Hour Amount: $0.00 (Option Line Item) Delivery: 01/14/2017 Continued ...",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "0.00"
+        },
+        {
+          "item_no": "0003",
+          "parent_item_no": null,
+          "supplies_services": "Legal Support Services - Option Year 2",
+          "description": "Option Year 2 Fully Burdened Labor Rates: Partner: per Hour Associate: per Hour Paralegal: per Hour Amount: $0.00 (Option Line Item) Delivery: 01/14/2018",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "0.00"
+        },
+        {
+          "item_no": "0004",
+          "parent_item_no": null,
+          "supplies_services": "Legal Support Services - Option Year 3",
+          "description": "Option Year 3 Fully Burdened Labor Rates: Partner: per Hour Associate: per Hour Paralegal: per Hour Amount: $0.00 (Option Line Item) Delivery: 01/14/2019",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "0.00"
+        },
+        {
+          "item_no": "0005",
+          "parent_item_no": null,
+          "supplies_services": "Legal Support Services - Option Year 4",
+          "description": "Option Year 4 Fully Burdened Labor Rates: Partner: per Hour Associate: per Hour Paralegal: per Hour Amount: $0.00 (Option Line Item) Delivery: 01/14/2020 The total amount of award: $0.00. The obligation for this award is shown in box 26.",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "0.00"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "clin_items",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:37:31.944604Z",
+  "completed_at": "2026-09-23T19:37:31.944604Z",
+  "latency_in_ms": 0
+}

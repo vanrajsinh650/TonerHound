@@ -1,0 +1,1034 @@
+{
+  "request": {
+    "example_id": "medium/gov_clin_schedule_0038",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/gov_clin_schedule_0038.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 60,
+    "ocr_pages": 0,
+    "num_pages": 22
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/gov_clin_schedule_0038",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "contract_number": "W911QY20P0149",
+      "effective_date": "2020 Apr 22",
+      "total_amount": "$806,646.82",
+      "clin_line_items": [
+        {
+          "item_no": "0001",
+          "supplies_services": "IR200 Thermometer",
+          "quantity": "5,318",
+          "unit": "Each",
+          "unit_price": "$149.99",
+          "amount": "$797,646.82",
+          "contract_type": "FFP",
+          "purchase_request_number": null,
+          "psc_code": "6515",
+          "acrn": null,
+          "cin": null,
+          "net_amount": "$797,646.82"
+        },
+        {
+          "item_no": "000101",
+          "supplies_services": "Funding for CLIN 0001",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "$0.00",
+          "contract_type": "FFP",
+          "purchase_request_number": "0011489439",
+          "psc_code": null,
+          "acrn": "AA",
+          "cin": "GFEBS001148943900010",
+          "net_amount": "$0.00"
+        },
+        {
+          "item_no": "000102",
+          "supplies_services": "Funding for CLIN 0001",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "$0.00",
+          "contract_type": "FFP",
+          "purchase_request_number": "0011489644",
+          "psc_code": null,
+          "acrn": "AB",
+          "cin": "GFEBS001148964400001",
+          "net_amount": "$0.00"
+        },
+        {
+          "item_no": "000103",
+          "supplies_services": "Funding for CLIN 0001",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "$0.00",
+          "contract_type": "FFP",
+          "purchase_request_number": "0011489642",
+          "psc_code": null,
+          "acrn": "AC",
+          "cin": "GFEBS001148964200001",
+          "net_amount": "$0.00"
+        },
+        {
+          "item_no": "000104",
+          "supplies_services": "Funding for CLIN 0001",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "$0.00",
+          "contract_type": "FFP",
+          "purchase_request_number": "0011489643",
+          "psc_code": null,
+          "acrn": "AD",
+          "cin": "GFEBS001148964300010",
+          "net_amount": "$0.00"
+        },
+        {
+          "item_no": "0002",
+          "supplies_services": "FREIGHT/SHIPPING for IR200 Thermometers",
+          "quantity": "1",
+          "unit": "Job",
+          "unit_price": null,
+          "amount": "$9,000.00 NTE",
+          "contract_type": "COST",
+          "purchase_request_number": null,
+          "psc_code": "V119",
+          "acrn": null,
+          "cin": null,
+          "net_amount": "$9,000.00"
+        },
+        {
+          "item_no": "000201",
+          "supplies_services": "Funding for CLIN 0002",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "$0.00",
+          "contract_type": "COST",
+          "purchase_request_number": "0011489439-0002",
+          "psc_code": null,
+          "acrn": "AA",
+          "cin": "GFEBS001148943900011",
+          "net_amount": "$0.00"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "contract_number",
+        "page": 1,
+        "bbox": [
+          0.064706,
+          0.124182,
+          0.102353,
+          0.009818
+        ],
+        "polygon": null,
+        "reference_text": "W911QY20P0149",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "effective_date",
+        "page": 1,
+        "bbox": [
+          0.461765,
+          0.122045,
+          0.071176,
+          0.012273
+        ],
+        "polygon": null,
+        "reference_text": "2020 Apr 22",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_amount",
+        "page": 1,
+        "bbox": [
+          0.891176,
+          0.67108,
+          0.047647,
+          0.009205
+        ],
+        "polygon": null,
+        "reference_text": "$806,646.82",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].item_no",
+        "page": 2,
+        "bbox": [
+          0.083727,
+          0.185013,
+          0.032843,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0001",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].supplies_services",
+        "page": 2,
+        "bbox": [
+          0.173531,
+          0.199558,
+          0.133687,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "IR200 Thermometer",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].quantity",
+        "page": 2,
+        "bbox": [
+          0.383335,
+          0.185013,
+          0.036961,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "5,318",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].unit",
+        "page": 2,
+        "bbox": [
+          0.491963,
+          0.185013,
+          0.032647,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Each",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].unit_price",
+        "page": 2,
+        "bbox": [
+          0.615296,
+          0.185013,
+          0.053235,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "$149.99",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].amount",
+        "page": 2,
+        "bbox": [
+          0.859217,
+          0.185013,
+          0.081863,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "$797,646.82",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].contract_type",
+        "page": 2,
+        "bbox": [
+          0.173531,
+          0.214104,
+          0.027088,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "FFP",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].psc_code",
+        "page": 2,
+        "bbox": [
+          0.083727,
+          0.185013,
+          0.857353,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "6515",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].net_amount",
+        "page": 2,
+        "bbox": [
+          0.859217,
+          0.185013,
+          0.081863,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "$797,646.82",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[1].item_no",
+        "page": 2,
+        "bbox": [
+          0.083727,
+          0.692134,
+          0.032843,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "000101",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[1].supplies_services",
+        "page": 2,
+        "bbox": [
+          0.173531,
+          0.692134,
+          0.210294,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Funding for CLIN 0001",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[1].amount",
+        "page": 2,
+        "bbox": [
+          0.904117,
+          0.692134,
+          0.065392,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "$0.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[1].contract_type",
+        "page": 2,
+        "bbox": [
+          0.173531,
+          0.692134,
+          0.210294,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "FFP",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[1].purchase_request_number",
+        "page": 2,
+        "bbox": [
+          0.210198,
+          0.692134,
+          0.173627,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0011489439",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[1].acrn",
+        "page": 2,
+        "bbox": [
+          0.173531,
+          0.692134,
+          0.210294,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "AA",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[1].cin",
+        "page": 2,
+        "bbox": [
+          0.210198,
+          0.692134,
+          0.173627,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "GFEBS001148943900010",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[1].net_amount",
+        "page": 2,
+        "bbox": [
+          0.859217,
+          0.692134,
+          0.065392,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "$0.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[2].item_no",
+        "page": 3,
+        "bbox": [
+          0.083727,
+          0.293346,
+          0.032843,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "000102",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[2].supplies_services",
+        "page": 3,
+        "bbox": [
+          0.173531,
+          0.293346,
+          0.210294,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Funding for CLIN 0001",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[2].amount",
+        "page": 3,
+        "bbox": [
+          0.904117,
+          0.293346,
+          0.065392,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "$0.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[2].contract_type",
+        "page": 3,
+        "bbox": [
+          0.173531,
+          0.293346,
+          0.210294,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "FFP",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[2].purchase_request_number",
+        "page": 3,
+        "bbox": [
+          0.210198,
+          0.293346,
+          0.173627,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0011489644",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[2].acrn",
+        "page": 3,
+        "bbox": [
+          0.173531,
+          0.293346,
+          0.210294,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "AB",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[2].cin",
+        "page": 3,
+        "bbox": [
+          0.210198,
+          0.293346,
+          0.173627,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "GFEBS001148964400001",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[2].net_amount",
+        "page": 3,
+        "bbox": [
+          0.859217,
+          0.293346,
+          0.065392,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "$0.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[3].item_no",
+        "page": 3,
+        "bbox": [
+          0.083727,
+          0.581831,
+          0.032843,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "000103",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[3].supplies_services",
+        "page": 3,
+        "bbox": [
+          0.173531,
+          0.581831,
+          0.210294,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Funding for CLIN 0001",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[3].amount",
+        "page": 3,
+        "bbox": [
+          0.904117,
+          0.581831,
+          0.065392,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "$0.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[3].contract_type",
+        "page": 3,
+        "bbox": [
+          0.173531,
+          0.581831,
+          0.210294,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "FFP",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[3].purchase_request_number",
+        "page": 3,
+        "bbox": [
+          0.210198,
+          0.581831,
+          0.173627,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0011489642",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[3].acrn",
+        "page": 3,
+        "bbox": [
+          0.173531,
+          0.581831,
+          0.210294,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "AC",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[3].cin",
+        "page": 3,
+        "bbox": [
+          0.210198,
+          0.581831,
+          0.173627,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "GFEBS001148964200001",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[3].net_amount",
+        "page": 3,
+        "bbox": [
+          0.859217,
+          0.581831,
+          0.065392,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "$0.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[4].item_no",
+        "page": 4,
+        "bbox": [
+          0.083727,
+          0.293346,
+          0.032843,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "000104",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[4].supplies_services",
+        "page": 4,
+        "bbox": [
+          0.173531,
+          0.293346,
+          0.210294,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Funding for CLIN 0001",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[4].amount",
+        "page": 4,
+        "bbox": [
+          0.904117,
+          0.293346,
+          0.065392,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "$0.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[4].contract_type",
+        "page": 4,
+        "bbox": [
+          0.173531,
+          0.293346,
+          0.210294,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "FFP",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[4].purchase_request_number",
+        "page": 4,
+        "bbox": [
+          0.210198,
+          0.293346,
+          0.173627,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0011489643",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[4].acrn",
+        "page": 4,
+        "bbox": [
+          0.173531,
+          0.293346,
+          0.210294,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "AD",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[4].cin",
+        "page": 4,
+        "bbox": [
+          0.210198,
+          0.293346,
+          0.173627,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "GFEBS001148964300010",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[4].net_amount",
+        "page": 4,
+        "bbox": [
+          0.859217,
+          0.293346,
+          0.065392,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "$0.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[5].item_no",
+        "page": 4,
+        "bbox": [
+          0.083727,
+          0.435619,
+          0.032843,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0002",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[5].supplies_services",
+        "page": 4,
+        "bbox": [
+          0.173529,
+          0.450164,
+          0.31437,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "FREIGHT/SHIPPING for IR200 Thermometers",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[5].quantity",
+        "page": 4,
+        "bbox": [
+          0.400002,
+          0.435619,
+          0.008137,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[5].unit",
+        "page": 4,
+        "bbox": [
+          0.494511,
+          0.435619,
+          0.022843,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Job",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[5].amount",
+        "page": 4,
+        "bbox": [
+          0.839806,
+          0.435619,
+          0.065392,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "$9,000.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[5].contract_type",
+        "page": 4,
+        "bbox": [
+          0.173529,
+          0.46471,
+          0.041512,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "COST",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[5].psc_code",
+        "page": 4,
+        "bbox": [
+          0.083727,
+          0.435619,
+          0.857395,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "V119",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[5].net_amount",
+        "page": 4,
+        "bbox": [
+          0.839806,
+          0.435619,
+          0.065392,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "$9,000.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[6].item_no",
+        "page": 4,
+        "bbox": [
+          0.083725,
+          0.752134,
+          0.049118,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "000201",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[6].supplies_services",
+        "page": 4,
+        "bbox": [
+          0.173531,
+          0.76668,
+          0.156569,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Funding for CLIN 0002",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[6].amount",
+        "page": 4,
+        "bbox": [
+          0.904117,
+          0.752134,
+          0.036961,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "$0.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[6].contract_type",
+        "page": 4,
+        "bbox": [
+          0.173531,
+          0.781225,
+          0.041512,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "COST",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[6].purchase_request_number",
+        "page": 4,
+        "bbox": [
+          0.210198,
+          0.752134,
+          0.173627,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0011489439-0002",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[6].acrn",
+        "page": 4,
+        "bbox": [
+          0.083725,
+          0.752134,
+          0.857353,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "AA",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[6].cin",
+        "page": 4,
+        "bbox": [
+          0.210198,
+          0.752134,
+          0.173627,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "GFEBS001148943900011",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[6].net_amount",
+        "page": 4,
+        "bbox": [
+          0.904117,
+          0.752134,
+          0.036961,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "$0.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:47:43.071240Z",
+  "completed_at": "2026-09-21T14:47:43.071240Z",
+  "latency_in_ms": 155
+}

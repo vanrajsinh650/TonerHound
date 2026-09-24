@@ -1,0 +1,1794 @@
+{
+  "request": {
+    "example_id": "short/ms_medicaid_ra_paid_denied_claims",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/ms_medicaid_ra_paid_denied_claims.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 107,
+    "ocr_pages": 0,
+    "num_pages": 6
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/ms_medicaid_ra_paid_denied_claims",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "payments": [
+        {
+          "check_number": "00000065",
+          "check_amount": null,
+          "ra_date": "01/14/08",
+          "payer_name": "MISSISSIPPI ENVISION MMIS",
+          "payee_name": "CHARLES Q PROVIDER",
+          "payee_provider_number": "00099999",
+          "payee_npi": "1234567890",
+          "claim_type": "VISION AND HEARING"
+        },
+        {
+          "check_number": "04952126",
+          "check_amount": null,
+          "ra_date": "01/07/08",
+          "payer_name": "MISSISSIPPI ENVISION MMIS",
+          "payee_name": "ANYTOWN MEDICAL CENT",
+          "payee_provider_number": "00099999",
+          "payee_npi": "1234567890",
+          "claim_type": "INPATIENT"
+        }
+      ],
+      "claims": [
+        {
+          "claim_number": "08000000360109867",
+          "patient_name": "JOHN A BENEFICIARY",
+          "recipient_id": "00000995588771",
+          "patient_account_number": "59A92",
+          "medical_record_number": "59A92",
+          "claim_from_date": "01/15/08",
+          "claim_to_date": "01/15/08",
+          "total_submitted": 181.23,
+          "total_paid": 172.17,
+          "total_patient_responsibility": 0.0,
+          "claim_status": "PAID",
+          "reason_codes": null
+        },
+        {
+          "claim_number": "08000000000920007",
+          "patient_name": "JIM Q BENEFICIARY",
+          "recipient_id": "00000994488775",
+          "patient_account_number": "59J19",
+          "medical_record_number": "59J19",
+          "claim_from_date": "01/16/08",
+          "claim_to_date": "01/16/08",
+          "total_submitted": 161.28,
+          "total_paid": 149.54,
+          "total_patient_responsibility": 3.0,
+          "claim_status": "PAID",
+          "reason_codes": "0132 0439"
+        },
+        {
+          "claim_number": "08001355000025107",
+          "patient_name": "JANE A DOE",
+          "recipient_id": "00000998877667",
+          "patient_account_number": "3719JANEAC2000",
+          "medical_record_number": "3719JANEAC2000",
+          "claim_from_date": "12/21/07",
+          "claim_to_date": "12/23/07",
+          "total_submitted": 6964.77,
+          "total_paid": 2409.66,
+          "total_patient_responsibility": 0.0,
+          "claim_status": "PAID",
+          "reason_codes": "0674"
+        }
+      ],
+      "service_lines": [
+        {
+          "claim_number": "08000000360109867",
+          "line_number": "1",
+          "date_of_service_from": "01/15/08",
+          "date_of_service_to": "01/15/08",
+          "procedure_code": "99204",
+          "modifiers": null,
+          "revenue_code": null,
+          "units": 1.0,
+          "charge_amount": 114.09,
+          "allowed_amount": null,
+          "paid_amount": 108.39,
+          "line_status": "PAID",
+          "reason_codes": null
+        },
+        {
+          "claim_number": "08000000360109867",
+          "line_number": "2",
+          "date_of_service_from": "01/15/08",
+          "date_of_service_to": "01/15/08",
+          "procedure_code": "V2020",
+          "modifiers": null,
+          "revenue_code": null,
+          "units": 1.0,
+          "charge_amount": 36.0,
+          "allowed_amount": null,
+          "paid_amount": 34.2,
+          "line_status": "PAID",
+          "reason_codes": null
+        },
+        {
+          "claim_number": "08000000360109867",
+          "line_number": "3",
+          "date_of_service_from": "01/15/08",
+          "date_of_service_to": "01/15/08",
+          "procedure_code": "V2100",
+          "modifiers": null,
+          "revenue_code": null,
+          "units": 1.0,
+          "charge_amount": 19.49,
+          "allowed_amount": null,
+          "paid_amount": 18.52,
+          "line_status": "PAID",
+          "reason_codes": null
+        },
+        {
+          "claim_number": "08000000360109867",
+          "line_number": "4",
+          "date_of_service_from": null,
+          "date_of_service_to": null,
+          "procedure_code": "92340",
+          "modifiers": null,
+          "revenue_code": null,
+          "units": null,
+          "charge_amount": null,
+          "allowed_amount": null,
+          "paid_amount": null,
+          "line_status": null,
+          "reason_codes": null
+        },
+        {
+          "claim_number": "08000000000920007",
+          "line_number": "1",
+          "date_of_service_from": "01/16/08",
+          "date_of_service_to": "01/16/08",
+          "procedure_code": "92014",
+          "modifiers": null,
+          "revenue_code": null,
+          "units": 1.0,
+          "charge_amount": 76.28,
+          "allowed_amount": null,
+          "paid_amount": 69.47,
+          "line_status": "PAID",
+          "reason_codes": null
+        },
+        {
+          "claim_number": "08000000000920007",
+          "line_number": "2",
+          "date_of_service_from": "01/16/08",
+          "date_of_service_to": "01/16/08",
+          "procedure_code": "92015",
+          "modifiers": null,
+          "revenue_code": null,
+          "units": 1.0,
+          "charge_amount": 25.0,
+          "allowed_amount": null,
+          "paid_amount": 23.75,
+          "line_status": "PAID",
+          "reason_codes": null
+        },
+        {
+          "claim_number": "08000000000920007",
+          "line_number": "3",
+          "date_of_service_from": "01/16/08",
+          "date_of_service_to": "01/16/08",
+          "procedure_code": "2021F",
+          "modifiers": null,
+          "revenue_code": null,
+          "units": 1.0,
+          "charge_amount": 0.0,
+          "allowed_amount": null,
+          "paid_amount": 0.0,
+          "line_status": "DENY",
+          "reason_codes": "0132 0439"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "payments[0].check_number",
+        "page": 5,
+        "bbox": [
+          0.127273,
+          0.227146,
+          0.054545,
+          0.01618
+        ],
+        "polygon": null,
+        "reference_text": "00000065",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "payments[0].ra_date",
+        "page": 5,
+        "bbox": [
+          0.086364,
+          0.192931,
+          0.054545,
+          0.017193
+        ],
+        "polygon": null,
+        "reference_text": "01/14/08",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "payments[0].payer_name",
+        "page": 5,
+        "bbox": [
+          0.386427,
+          0.194055,
+          0.17048,
+          0.015902
+        ],
+        "polygon": null,
+        "reference_text": "MISSISSIPPI ENVISION MMIS",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "payments[0].payee_name",
+        "page": 5,
+        "bbox": [
+          0.284874,
+          0.399986,
+          0.122614,
+          0.015902
+        ],
+        "polygon": null,
+        "reference_text": "CHARLES Q PROVIDER",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "payments[0].payee_provider_number",
+        "page": 5,
+        "bbox": [
+          0.134091,
+          0.210479,
+          0.054545,
+          0.01618
+        ],
+        "polygon": null,
+        "reference_text": "00099999",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "payments[0].payee_npi",
+        "page": 5,
+        "bbox": [
+          0.127273,
+          0.243813,
+          0.068207,
+          0.01618
+        ],
+        "polygon": null,
+        "reference_text": "1234567890",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "payments[0].claim_type",
+        "page": 5,
+        "bbox": [
+          0.659179,
+          0.244055,
+          0.122727,
+          0.015902
+        ],
+        "polygon": null,
+        "reference_text": "VISION AND HEARING",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "payments[1].check_number",
+        "page": 6,
+        "bbox": [
+          0.136364,
+          0.259137,
+          0.060303,
+          0.017259
+        ],
+        "polygon": null,
+        "reference_text": "04952126",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "payments[1].ra_date",
+        "page": 6,
+        "bbox": [
+          0.090909,
+          0.225817,
+          0.060303,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "01/07/08",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "payments[1].payer_name",
+        "page": 6,
+        "bbox": [
+          0.363699,
+          0.226846,
+          0.189091,
+          0.016962
+        ],
+        "polygon": null,
+        "reference_text": "MISSISSIPPI ENVISION MMIS",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "payments[1].payee_name",
+        "page": 6,
+        "bbox": [
+          0.280328,
+          0.409052,
+          0.151212,
+          0.016962
+        ],
+        "polygon": null,
+        "reference_text": "ANYTOWN MEDICAL CENT",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "payments[1].payee_provider_number",
+        "page": 6,
+        "bbox": [
+          0.136281,
+          0.242862,
+          0.060386,
+          0.017259
+        ],
+        "polygon": null,
+        "reference_text": "NO:00099999",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "payments[1].payee_npi",
+        "page": 6,
+        "bbox": [
+          0.136364,
+          0.275607,
+          0.075455,
+          0.017259
+        ],
+        "polygon": null,
+        "reference_text": "1234567890",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "payments[1].claim_type",
+        "page": 6,
+        "bbox": [
+          0.652967,
+          0.275865,
+          0.067879,
+          0.016962
+        ],
+        "polygon": null,
+        "reference_text": "INPATIENT",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[0].claim_number",
+        "page": 5,
+        "bbox": [
+          0.304571,
+          0.373364,
+          0.115909,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "08000000360109867",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[0].patient_name",
+        "page": 5,
+        "bbox": [
+          0.045455,
+          0.373466,
+          0.122727,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "JOHN A BENEFICIARY",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[0].recipient_id",
+        "page": 5,
+        "bbox": [
+          0.188662,
+          0.373364,
+          0.095455,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "00000995588771",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[0].patient_account_number",
+        "page": 5,
+        "bbox": [
+          0.464457,
+          0.373364,
+          0.034091,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "59A92",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[0].medical_record_number",
+        "page": 5,
+        "bbox": [
+          0.464457,
+          0.373364,
+          0.034091,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "59A92",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[0].claim_from_date",
+        "page": 5,
+        "bbox": [
+          0.045455,
+          0.373364,
+          0.453093,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "01/15/08",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[0].claim_to_date",
+        "page": 5,
+        "bbox": [
+          0.045455,
+          0.373364,
+          0.453093,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "01/15/08",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[0].total_submitted",
+        "page": 5,
+        "bbox": [
+          0.468851,
+          0.399834,
+          0.040909,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "181.23",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[0].total_paid",
+        "page": 5,
+        "bbox": [
+          0.843914,
+          0.399834,
+          0.040909,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "172.17",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[0].total_patient_responsibility",
+        "page": 5,
+        "bbox": [
+          0.775732,
+          0.399834,
+          0.020455,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": ".00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[0].claim_status",
+        "page": 5,
+        "bbox": [
+          0.912096,
+          0.399937,
+          0.027273,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "PAID",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[1].claim_number",
+        "page": 5,
+        "bbox": [
+          0.318207,
+          0.621239,
+          0.115909,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "08000000000920007",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[1].patient_name",
+        "page": 5,
+        "bbox": [
+          0.045455,
+          0.621342,
+          0.115939,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "JIM Q BENEFICIARY",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[1].recipient_id",
+        "page": 5,
+        "bbox": [
+          0.19548,
+          0.621239,
+          0.095455,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "00000994488775",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[1].patient_account_number",
+        "page": 5,
+        "bbox": [
+          0.509154,
+          0.621239,
+          0.034091,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "59J19",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[1].medical_record_number",
+        "page": 5,
+        "bbox": [
+          0.509154,
+          0.621239,
+          0.034091,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "59J19",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[1].claim_from_date",
+        "page": 5,
+        "bbox": [
+          0.045455,
+          0.621239,
+          0.49779,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "01/16/08",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[1].claim_to_date",
+        "page": 5,
+        "bbox": [
+          0.045455,
+          0.621239,
+          0.49779,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "01/16/08",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[1].total_submitted",
+        "page": 5,
+        "bbox": [
+          0.48476,
+          0.654573,
+          0.040909,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "161.28",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[1].total_paid",
+        "page": 5,
+        "bbox": [
+          0.812096,
+          0.654573,
+          0.040909,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "149.54",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[1].total_patient_responsibility",
+        "page": 5,
+        "bbox": [
+          0.743876,
+          0.654573,
+          0.020455,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "3.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[1].claim_status",
+        "page": 5,
+        "bbox": [
+          0.907551,
+          0.654676,
+          0.027273,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "PAID",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[1].reason_codes",
+        "page": 5,
+        "bbox": [
+          0.045455,
+          0.621239,
+          0.49779,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0132 0439",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[2].claim_number",
+        "page": 6,
+        "bbox": [
+          0.287601,
+          0.391539,
+          0.128523,
+          0.017259
+        ],
+        "polygon": null,
+        "reference_text": "08001355000025107",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[2].patient_name",
+        "page": 6,
+        "bbox": [
+          0.045455,
+          0.39073,
+          0.072009,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "JANE A DOE",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[2].recipient_id",
+        "page": 6,
+        "bbox": [
+          0.158965,
+          0.391539,
+          0.105606,
+          0.017259
+        ],
+        "polygon": null,
+        "reference_text": "00000998877667",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[2].patient_account_number",
+        "page": 6,
+        "bbox": [
+          0.44673,
+          0.391539,
+          0.105758,
+          0.017259
+        ],
+        "polygon": null,
+        "reference_text": "3719JANEAC2000",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[2].medical_record_number",
+        "page": 6,
+        "bbox": [
+          0.44673,
+          0.391539,
+          0.105758,
+          0.017259
+        ],
+        "polygon": null,
+        "reference_text": "3719JANEAC2000",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[2].claim_from_date",
+        "page": 6,
+        "bbox": [
+          0.045455,
+          0.408023,
+          0.060478,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "12/21/07-12/23/07",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[2].claim_to_date",
+        "page": 6,
+        "bbox": [
+          0.113492,
+          0.408023,
+          0.060478,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "12/21/07-12/23/07",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[2].claim_status",
+        "page": 6,
+        "bbox": [
+          0.395518,
+          0.275865,
+          0.03,
+          0.016962
+        ],
+        "polygon": null,
+        "reference_text": "PAID",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[2].reason_codes",
+        "page": 6,
+        "bbox": [
+          0.24245,
+          0.444088,
+          0.03,
+          0.017259
+        ],
+        "polygon": null,
+        "reference_text": "0674",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[0].claim_number",
+        "page": 5,
+        "bbox": [
+          0.113667,
+          0.455846,
+          0.832096,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "08000000360109867",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[0].line_number",
+        "page": 5,
+        "bbox": [
+          0.250025,
+          0.455913,
+          0.006818,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "1.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[0].date_of_service_from",
+        "page": 5,
+        "bbox": [
+          0.113667,
+          0.455846,
+          0.115934,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "01/15/08",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[0].date_of_service_to",
+        "page": 5,
+        "bbox": [
+          0.113667,
+          0.455846,
+          0.115934,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "01/15/08",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[0].procedure_code",
+        "page": 5,
+        "bbox": [
+          0.113667,
+          0.455846,
+          0.832096,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "99204",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[0].units",
+        "page": 5,
+        "bbox": [
+          0.250025,
+          0.455913,
+          0.020455,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "1.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[0].charge_amount",
+        "page": 5,
+        "bbox": [
+          0.352336,
+          0.455913,
+          0.040909,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "114.09",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[0].paid_amount",
+        "page": 5,
+        "bbox": [
+          0.652361,
+          0.455913,
+          0.040909,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "108.39",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[0].line_status",
+        "page": 5,
+        "bbox": [
+          0.720543,
+          0.456016,
+          0.027273,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "PAID",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[1].claim_number",
+        "page": 5,
+        "bbox": [
+          0.113667,
+          0.515229,
+          0.827494,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "08000000360109867",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[1].line_number",
+        "page": 5,
+        "bbox": [
+          0.113667,
+          0.515229,
+          0.827494,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "2",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[1].date_of_service_from",
+        "page": 5,
+        "bbox": [
+          0.113667,
+          0.515229,
+          0.115934,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "01/15/08",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[1].date_of_service_to",
+        "page": 5,
+        "bbox": [
+          0.113667,
+          0.515229,
+          0.115934,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "01/15/08",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[1].procedure_code",
+        "page": 5,
+        "bbox": [
+          0.113667,
+          0.541828,
+          0.034091,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "V2100",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[1].units",
+        "page": 5,
+        "bbox": [
+          0.250025,
+          0.515324,
+          0.020455,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "1.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[1].charge_amount",
+        "page": 5,
+        "bbox": [
+          0.352336,
+          0.515324,
+          0.027273,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "36.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[1].paid_amount",
+        "page": 5,
+        "bbox": [
+          0.659179,
+          0.515324,
+          0.027273,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "34.20",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[1].line_status",
+        "page": 5,
+        "bbox": [
+          0.720543,
+          0.515427,
+          0.027273,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "PAID",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[2].claim_number",
+        "page": 5,
+        "bbox": [
+          0.113667,
+          0.567923,
+          0.634149,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "08000000360109867",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[2].line_number",
+        "page": 5,
+        "bbox": [
+          0.113667,
+          0.567923,
+          0.634149,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "3",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[2].date_of_service_from",
+        "page": 5,
+        "bbox": [
+          0.113667,
+          0.567923,
+          0.115934,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "01/15/08",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[2].date_of_service_to",
+        "page": 5,
+        "bbox": [
+          0.113667,
+          0.567923,
+          0.115934,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "01/15/08",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[2].procedure_code",
+        "page": 5,
+        "bbox": [
+          0.250025,
+          0.568298,
+          0.027273,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "1.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[2].units",
+        "page": 5,
+        "bbox": [
+          0.250025,
+          0.568298,
+          0.020455,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "1.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[2].charge_amount",
+        "page": 5,
+        "bbox": [
+          0.352336,
+          0.568298,
+          0.034091,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "19.49",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[2].paid_amount",
+        "page": 5,
+        "bbox": [
+          0.659179,
+          0.568298,
+          0.034091,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "18.52",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[2].line_status",
+        "page": 5,
+        "bbox": [
+          0.720543,
+          0.568401,
+          0.027273,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "PAID",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[3].claim_number",
+        "page": 5,
+        "bbox": [
+          0.318207,
+          0.621239,
+          0.115909,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "08000000000920007",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[3].line_number",
+        "page": 5,
+        "bbox": [
+          0.072727,
+          0.594872,
+          0.006818,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "4",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[3].procedure_code",
+        "page": 5,
+        "bbox": [
+          0.113667,
+          0.594769,
+          0.034091,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "92340",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[4].claim_number",
+        "page": 5,
+        "bbox": [
+          0.106818,
+          0.720864,
+          0.640998,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "08000000000920007",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[4].line_number",
+        "page": 5,
+        "bbox": [
+          0.243207,
+          0.721239,
+          0.006818,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "1.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[4].date_of_service_from",
+        "page": 5,
+        "bbox": [
+          0.113667,
+          0.720864,
+          0.115934,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "01/16/08",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[4].date_of_service_to",
+        "page": 5,
+        "bbox": [
+          0.113667,
+          0.720864,
+          0.115934,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "01/16/08",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[4].procedure_code",
+        "page": 5,
+        "bbox": [
+          0.106818,
+          0.754622,
+          0.034091,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "92015",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[4].units",
+        "page": 5,
+        "bbox": [
+          0.243207,
+          0.721239,
+          0.020455,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "1.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[4].charge_amount",
+        "page": 5,
+        "bbox": [
+          0.338699,
+          0.721239,
+          0.034091,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "76.28",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[4].paid_amount",
+        "page": 5,
+        "bbox": [
+          0.652361,
+          0.721239,
+          0.034091,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "69.47",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[4].line_status",
+        "page": 5,
+        "bbox": [
+          0.720543,
+          0.721342,
+          0.027273,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "PAID",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[5].claim_number",
+        "page": 5,
+        "bbox": [
+          0.106818,
+          0.78758,
+          0.640998,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "08000000000920007",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[5].line_number",
+        "page": 5,
+        "bbox": [
+          0.106818,
+          0.78758,
+          0.640998,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "2",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[5].date_of_service_from",
+        "page": 5,
+        "bbox": [
+          0.113667,
+          0.78758,
+          0.115934,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "01/16/08",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[5].date_of_service_to",
+        "page": 5,
+        "bbox": [
+          0.113667,
+          0.78758,
+          0.115934,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "01/16/08",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[5].procedure_code",
+        "page": 5,
+        "bbox": [
+          0.106818,
+          0.78758,
+          0.640998,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "92015",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[5].units",
+        "page": 5,
+        "bbox": [
+          0.243207,
+          0.787955,
+          0.020455,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "1.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[5].charge_amount",
+        "page": 5,
+        "bbox": [
+          0.352336,
+          0.787955,
+          0.027273,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "25.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[5].paid_amount",
+        "page": 5,
+        "bbox": [
+          0.659179,
+          0.787955,
+          0.034091,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "23.75",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[5].line_status",
+        "page": 5,
+        "bbox": [
+          0.720543,
+          0.788058,
+          0.027273,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "PAID",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[6].claim_number",
+        "page": 5,
+        "bbox": [
+          0.106818,
+          0.854044,
+          0.640998,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "08000000000920007",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[6].line_number",
+        "page": 5,
+        "bbox": [
+          0.106818,
+          0.854044,
+          0.640998,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "3",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[6].date_of_service_from",
+        "page": 5,
+        "bbox": [
+          0.113667,
+          0.854044,
+          0.115934,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "01/16/08",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[6].date_of_service_to",
+        "page": 5,
+        "bbox": [
+          0.113667,
+          0.854044,
+          0.115934,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "01/16/08",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[6].procedure_code",
+        "page": 5,
+        "bbox": [
+          0.106818,
+          0.854044,
+          0.640998,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "2021F",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[6].units",
+        "page": 5,
+        "bbox": [
+          0.243207,
+          0.854419,
+          0.020455,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "1.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[6].charge_amount",
+        "page": 5,
+        "bbox": [
+          0.352336,
+          0.854419,
+          0.027273,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[6].paid_amount",
+        "page": 5,
+        "bbox": [
+          0.495518,
+          0.854419,
+          0.020455,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": ".00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[6].line_status",
+        "page": 5,
+        "bbox": [
+          0.720543,
+          0.854522,
+          0.027273,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "DENY",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "service_lines[6].reason_codes",
+        "page": 5,
+        "bbox": [
+          0.20351,
+          0.87285,
+          0.081818,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0132 0439",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[2].total_submitted",
+        "page": 6,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "6964.77",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[2].total_paid",
+        "page": 6,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "2409.66",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claims[2].total_patient_responsibility",
+        "page": 6,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "0.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:51:25.853828Z",
+  "completed_at": "2026-09-21T14:51:25.853828Z",
+  "latency_in_ms": 169
+}

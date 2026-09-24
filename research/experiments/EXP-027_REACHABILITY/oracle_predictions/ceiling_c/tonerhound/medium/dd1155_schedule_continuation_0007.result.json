@@ -1,0 +1,54 @@
+{
+  "request": {
+    "example_id": "medium/dd1155_schedule_continuation_0007",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/dd1155_schedule_continuation_0007.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/dd1155_schedule_continuation_0007",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "contract_purchase_order_number": "FA868423DB074",
+      "delivery_order_call_number": "FA868423FB061",
+      "date_of_order": null,
+      "requisition_purchase_request_number": "A025532",
+      "total_award_amount": "USD 1,000.00",
+      "line_items": [
+        {
+          "item_number": "0001",
+          "description": "The contractor shall develop and deliver a post-award presentation within 15 calendar days of the effective contract date in accordance with CDRL A001 (Exhibit A). For briefing materials with a security classification higher than CUI, the Contractor shall follow security procedures as outlined in paragraph 5.3.1 of the SOW prior to submission.\n\nData Category Code: MGMT\nPurchase Requisition Number: F4FDAT2262A038\nProduct Service Code: AC13\nPricing Arrangement: Firm Fixed Price\nCIN: F4FDAT2262A0380000AA\nACRN: AA",
+          "quantity_ordered": 1.0,
+          "unit": "Each",
+          "unit_price": "USD 1,000.00",
+          "amount": "USD 1,000.00"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "line_items",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:37:53.392854Z",
+  "completed_at": "2026-09-23T19:37:53.392854Z",
+  "latency_in_ms": 0
+}

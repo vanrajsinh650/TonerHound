@@ -1,0 +1,90 @@
+{
+  "request": {
+    "example_id": "medium/smfg-kessan-tanshin-2024-ja",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/smfg-kessan-tanshin-2024-ja.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/smfg-kessan-tanshin-2024-ja",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "period": "FY2024",
+      "currency": "JPY",
+      "fiscal_period_end_date": "2024-03-31",
+      "total_revenue": 9353590.0,
+      "revenue_growth_yoy": 52.3,
+      "gross_profit": 3738818.0,
+      "operating_income": 1466128.0,
+      "net_income": 962946.0,
+      "adjusted_ebitda": null,
+      "gaap_eps_diluted": 724.34,
+      "adjusted_eps_diluted": null,
+      "gross_margin": null,
+      "operating_margin": 15.7,
+      "free_cash_flow": null,
+      "segments": [
+        {
+          "segment_name": "ホールセール事業部門",
+          "segment_revenue": 835200,
+          "segment_profit": 632100
+        },
+        {
+          "segment_name": "リテール事業部門",
+          "segment_revenue": 1290000,
+          "segment_profit": 215700
+        },
+        {
+          "segment_name": "グローバル事業部門",
+          "segment_revenue": 1375900,
+          "segment_profit": 644900
+        },
+        {
+          "segment_name": "市場事業部門",
+          "segment_revenue": 526200,
+          "segment_profit": 389900
+        },
+        {
+          "segment_name": "本社管理等",
+          "segment_revenue": -288482,
+          "segment_profit": -322389
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "period",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "operating_income",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:37:59.478123Z",
+  "completed_at": "2026-09-23T19:37:59.478123Z",
+  "latency_in_ms": 0
+}

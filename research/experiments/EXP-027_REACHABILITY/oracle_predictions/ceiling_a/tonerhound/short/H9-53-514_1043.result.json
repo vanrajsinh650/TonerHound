@@ -1,0 +1,850 @@
+{
+  "request": {
+    "example_id": "short/H9-53-514_1043",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/H9-53-514_1043.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 61,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/H9-53-514_1043",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "operator": "CHESAPEAKE OPERATING, INC.",
+      "operator_number": "147715",
+      "rrc_district": "01",
+      "street_or_po_box": "P.O. BOX 18496",
+      "city": "OKLAHOMA CITY",
+      "state": "OK",
+      "zip_code": "73154-0496",
+      "lease_facility_operation_name": "LAZY A COTULLA",
+      "field_or_area_name": "BRISCOE RANCH (EAGLEFORD)",
+      "county": "DIMMIT",
+      "optype_a_oil_field": false,
+      "optype_b_gas_field": false,
+      "optype_c_pipeline_gathering": false,
+      "optype_d_gasoline_plant": false,
+      "optype_e_drilling_workover": true,
+      "optype_f_sweetening_unit": false,
+      "optype_g_combination": false,
+      "optype_h_other": false,
+      "operation_type_other_explanation": "DATA IS BASED ON OFFSET WELL W/H2S IN GAS STREAM. SAME FORMATION THIS WELL IS TO PRODUCE",
+      "h2s_concentration": "3000PPM",
+      "maximum_escape_volume": "1045 MCF/Day",
+      "roe_100ppm": "206 Ft.",
+      "roe_500ppm": "94 Ft.",
+      "operation_existing": false,
+      "operation_new": true,
+      "modification_cert_change_yes": false,
+      "modification_cert_change_no": true,
+      "workover_100ppm_3000ft_yes": false,
+      "workover_100ppm_3000ft_no": true,
+      "previous_certificate_number": "N/A",
+      "roe_100ppm_public_area_yes": false,
+      "roe_100ppm_public_area_no": true,
+      "roe_500ppm_public_road_yes": false,
+      "roe_500ppm_public_road_no": true,
+      "injection_h2s_fluid_yes": false,
+      "injection_h2s_fluid_no": true,
+      "compliance_date_mo": null,
+      "compliance_date_day": null,
+      "compliance_date_year": null,
+      "depth_of_compliance_drilling": "4000 Ft. From Surface",
+      "contingency_plan_prepared_yes": false,
+      "contingency_plan_prepared_no": true,
+      "contingency_plan_location": "N/A; WELL READINESS AND MONITORING FOR H2S WILL BE IN PLACE AT DEPTH OF COMPLIANCE NOTED ABOVE FOR DRILLING OPERATIONS.",
+      "data_location": "6100 N. WESTERN AVE. OKLAHOMA CITY, OK 73118",
+      "signature_present": true,
+      "representative_of_company": null,
+      "title": "REGULATORY SPECIALIST II",
+      "phone_no": "(405) 935-3782",
+      "certificate_date": "JUN 26 2012",
+      "approved_by": "Wesley",
+      "rrc_use_date": "10.5.12",
+      "remarks": null,
+      "certification_number": "070844",
+      "exempt_stamp_present": false,
+      "operations_covered": [
+        {
+          "rrc_id": "739387",
+          "type_id_code": "5",
+          "storage_yes": false,
+          "storage_no": true
+        },
+        {
+          "rrc_id": "739388",
+          "type_id_code": "5",
+          "storage_yes": false,
+          "storage_no": true
+        },
+        {
+          "rrc_id": "739385",
+          "type_id_code": "5",
+          "storage_yes": false,
+          "storage_no": true
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "operator",
+        "page": 1,
+        "bbox": [
+          0.08967551622418879,
+          0.14558689717925385,
+          0.2424778761061947,
+          0.010009099181073705
+        ],
+        "polygon": null,
+        "reference_text": "HESAPEAKE OPERATING, INC.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district",
+        "page": 1,
+        "bbox": [
+          0.433038,
+          0.725216,
+          0.00295,
+          0.010441
+        ],
+        "polygon": null,
+        "reference_text": "I",
+        "confidence": 0.7751265392671314,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "street_or_po_box",
+        "page": 1,
+        "bbox": [
+          0.07905604719764012,
+          0.1797088262056415,
+          0.13628318584070798,
+          0.008644222020018189
+        ],
+        "polygon": null,
+        "reference_text": "BOX 18496",
+        "confidence": 0.862450200541305,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "city",
+        "page": 1,
+        "bbox": [
+          0.48672566371681414,
+          0.1769790718835305,
+          0.12802359882005898,
+          0.0145586897179254
+        ],
+        "polygon": null,
+        "reference_text": "OKLAHOMA CITY,",
+        "confidence": 0.8478820740031026,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "state",
+        "page": 1,
+        "bbox": [
+          0.7486725663716814,
+          0.17743403093721566,
+          0.020648967551622377,
+          0.008189262966333044
+        ],
+        "polygon": null,
+        "reference_text": "OK",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "field_or_area_name",
+        "page": 1,
+        "bbox": [
+          0.4713864306784661,
+          0.2083712465878071,
+          0.24365781710914458,
+          0.010464058234758877
+        ],
+        "polygon": null,
+        "reference_text": "BRISCOE RANCH (EAGLEFORD)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_c_pipeline_gathering",
+        "page": 1,
+        "bbox": [
+          0.293215,
+          0.268407,
+          0.014,
+          0.014188
+        ],
+        "polygon": null,
+        "reference_text": "D",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_d_gasoline_plant",
+        "page": 1,
+        "bbox": [
+          0.293215,
+          0.268496,
+          0.014,
+          0.0135
+        ],
+        "polygon": null,
+        "reference_text": "D",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operation_type_other_explanation",
+        "page": 1,
+        "bbox": [
+          0.476106,
+          0.237853,
+          0.40354,
+          0.014741
+        ],
+        "polygon": null,
+        "reference_text": "DATA IS BASED ON OFFSET WELL W/H2S IN GAS",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operation_existing",
+        "page": 1,
+        "bbox": [
+          0.6176991150442478,
+          0.3466787989080983,
+          0.02064896755162242,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "D",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "modification_cert_change_yes",
+        "page": 1,
+        "bbox": [
+          0.617699,
+          0.34484,
+          0.020649,
+          0.014188
+        ],
+        "polygon": null,
+        "reference_text": "D",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "previous_certificate_number",
+        "page": 1,
+        "bbox": [
+          0.829499,
+          0.403003,
+          0.030088,
+          0.014741
+        ],
+        "polygon": null,
+        "reference_text": "N/A",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "contingency_plan_prepared_yes",
+        "page": 1,
+        "bbox": [
+          0.293215,
+          0.268496,
+          0.014,
+          0.0135
+        ],
+        "polygon": null,
+        "reference_text": "D",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "contingency_plan_location",
+        "page": 1,
+        "bbox": [
+          0.07964601769911504,
+          0.5982711555959963,
+          0.7032448377581121,
+          0.024112829845314043
+        ],
+        "polygon": null,
+        "reference_text": "N/A; WELL READINESS AND MONITORING FOR H2S WILL BE IN PLACE AT DEPTH OF COMPLIANCE NOTED ABOVE FOR DRILLING OPERATIONS.",
+        "confidence": 0.75,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "data_location",
+        "page": 1,
+        "bbox": [
+          0.06430678466076696,
+          0.6501364877161055,
+          0.2418879056047198,
+          0.024112829845313932
+        ],
+        "polygon": null,
+        "reference_text": "6100 N. WESTERN AVE. ~ OKLAHOMA CITY, OK 73118",
+        "confidence": 0.75,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "title",
+        "page": 1,
+        "bbox": [
+          0.40294985250737464,
+          0.7711555959963603,
+          0.23657817109144547,
+          0.008644222020018244
+        ],
+        "polygon": null,
+        "reference_text": "REGULATORY SPECIALIST II",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "phone_no",
+        "page": 1,
+        "bbox": [
+          0.648378,
+          0.758872,
+          0.26118,
+          0.025933
+        ],
+        "polygon": null,
+        "reference_text": "(405) 935-3735):\"'\u201c\u201d98",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "exempt_stamp_present",
+        "page": 1,
+        "bbox": [
+          0.320944,
+          0.023568,
+          0.022,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "o",
+        "confidence": 0.75,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[0].rrc_id",
+        "page": 1,
+        "bbox": [
+          0.0831858407079646,
+          0.36442220200181985,
+          0.056637168141592906,
+          0.008644222020018189
+        ],
+        "polygon": null,
+        "reference_text": "739387",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[0].type_id_code",
+        "page": 1,
+        "bbox": [
+          0.083186,
+          0.362671,
+          0.710914,
+          0.013512
+        ],
+        "polygon": null,
+        "reference_text": "5",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[1].rrc_id",
+        "page": 1,
+        "bbox": [
+          0.0831858407079646,
+          0.39490445859872614,
+          0.057227138643067846,
+          0.008644222020018189
+        ],
+        "polygon": null,
+        "reference_text": "739388",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[1].type_id_code",
+        "page": 1,
+        "bbox": [
+          0.083186,
+          0.393232,
+          0.633628,
+          0.012898
+        ],
+        "polygon": null,
+        "reference_text": "5",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[1].storage_yes",
+        "page": 1,
+        "bbox": [
+          0.918584,
+          0.424852,
+          0.016519,
+          0.012898
+        ],
+        "polygon": null,
+        "reference_text": "No",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[2].rrc_id",
+        "page": 1,
+        "bbox": [
+          0.083186,
+          0.394904,
+          0.057227,
+          0.008644
+        ],
+        "polygon": null,
+        "reference_text": "739388",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[2].type_id_code",
+        "page": 1,
+        "bbox": [
+          0.083186,
+          0.396422,
+          0.710914,
+          0.010009
+        ],
+        "polygon": null,
+        "reference_text": "5",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[2].storage_yes",
+        "page": 1,
+        "bbox": [
+          0.918584,
+          0.427662,
+          0.016519,
+          0.007279
+        ],
+        "polygon": null,
+        "reference_text": "No",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_number",
+        "page": 1,
+        "bbox": [
+          0.5327433628318584,
+          0.14604185623293903,
+          0.0471976401179941,
+          0.008189262966333044
+        ],
+        "polygon": null,
+        "reference_text": "147715",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "zip_code",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "73154-0496",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_facility_operation_name",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "LAZY A COTULLA",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "DIMMIT",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_a_oil_field",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_b_gas_field",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_e_drilling_workover",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_f_sweetening_unit",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_g_combination",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_h_other",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "h2s_concentration",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "3000PPM",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "maximum_escape_volume",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "1045 MCF/Day",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_100ppm",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "206 Ft.",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_500ppm",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "94 Ft.",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operation_new",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "modification_cert_change_no",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "workover_100ppm_3000ft_yes",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "workover_100ppm_3000ft_no",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_100ppm_public_area_yes",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_100ppm_public_area_no",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_500ppm_public_road_yes",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_500ppm_public_road_no",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_h2s_fluid_yes",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_h2s_fluid_no",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "depth_of_compliance_drilling",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "4000 Ft. From Surface",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "contingency_plan_prepared_no",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "signature_present",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "certificate_date",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "JUN 26 2012",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "approved_by",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Wesley",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_use_date",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "10.5.12",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "certification_number",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "070844",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[0].storage_yes",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[0].storage_no",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[1].storage_no",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[2].storage_no",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:50:24.479601Z",
+  "completed_at": "2026-09-21T14:50:24.479601Z",
+  "latency_in_ms": 814
+}

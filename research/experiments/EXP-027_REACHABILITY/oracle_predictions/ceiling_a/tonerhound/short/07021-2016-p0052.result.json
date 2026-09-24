@@ -1,0 +1,251 @@
+{
+  "request": {
+    "example_id": "short/07021-2016-p0052",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/07021-2016-p0052.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 13,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/07021-2016-p0052",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "final_k1": false,
+      "amended_k1": false,
+      "corporation_ein": "26-3839121",
+      "corporation_name": "Pine Harbour Water Utilities LLC",
+      "corporation_address": "101 Satellite Court, Leesburg FL 34748",
+      "irs_center": "Ogden, UT 84201",
+      "shareholder_id": "334-50-8852",
+      "shareholder_name": "Madeline Lipsky",
+      "shareholder_address": "P.O. Box 447, Fruitland Park FL 34731",
+      "shareholder_stock_ownership_pct": 33.3333,
+      "box_1_ordinary_business_income": -5615,
+      "box_2_net_rental_real_estate": null,
+      "box_3_other_net_rental_income": null,
+      "box_4_interest_income": null,
+      "box_5a_ordinary_dividends": null,
+      "box_5b_qualified_dividends": null,
+      "box_6_royalties": null,
+      "box_7_net_short_term_capital_gain": null,
+      "box_8a_net_long_term_capital_gain": null,
+      "box_8b_collectibles_gain": null,
+      "box_8c_unrecaptured_1250_gain": null,
+      "box_9_net_section_1231_gain": null,
+      "box_11_section_179_deduction": null,
+      "box_10_other_income": null,
+      "box_12_other_deductions": null,
+      "box_13_credits": null,
+      "box_14_foreign_transactions": null,
+      "box_15_amt_items": [
+        {
+          "code": "A",
+          "amount": 789
+        }
+      ],
+      "box_16_items_affecting_shareholder_basis": null,
+      "box_17_other_information": null
+    },
+    "field_citations": [
+      {
+        "field_path": "corporation_ein",
+        "page": 1,
+        "bbox": [
+          0.06641321867899178,
+          0.24759835907907202,
+          0.11580185485042,
+          0.010600773975102507
+        ],
+        "polygon": null,
+        "reference_text": "26-3839121",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "corporation_name",
+        "page": 1,
+        "bbox": [
+          0.06912623511420356,
+          0.2781629466047191,
+          0.37876908919390506,
+          0.013214265457307417
+        ],
+        "polygon": null,
+        "reference_text": "Pine Harbour Water Utilities LLC",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "corporation_address",
+        "page": 1,
+        "bbox": [
+          0.06786530313928144,
+          0.3092941130050505,
+          0.3388048870111603,
+          0.028449318625710207
+        ],
+        "polygon": null,
+        "reference_text": "101 Satellite Court Leesburg FL 34748",
+        "confidence": 0.75,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "irs_center",
+        "page": 1,
+        "bbox": [
+          0.06705762202443641,
+          0.37045145516443734,
+          0.18805008308560242,
+          0.013348280781447341
+        ],
+        "polygon": null,
+        "reference_text": "Oaden, UT 84201",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "shareholder_id",
+        "page": 1,
+        "bbox": [
+          0.0633283939236909,
+          0.43211719243213387,
+          0.12760595558515558,
+          0.010693328549163494
+        ],
+        "polygon": null,
+        "reference_text": "334-50-8852",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "shareholder_name",
+        "page": 1,
+        "bbox": [
+          0.06441869299396191,
+          0.4627914814033893,
+          0.17936335046306934,
+          0.01435015899966463
+        ],
+        "polygon": null,
+        "reference_text": "Madeline Lipsky",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "shareholder_address",
+        "page": 1,
+        "bbox": [
+          0.06427662045347925,
+          0.47868204598474984,
+          0.3386349459878759,
+          0.042795162008266274
+        ],
+        "polygon": null,
+        "reference_text": "Box 447 Fruitland Park FL 34731",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "shareholder_stock_ownership_pct",
+        "page": 1,
+        "bbox": [
+          0.35344,
+          0.559692,
+          0.057057,
+          0.014584
+        ],
+        "polygon": null,
+        "reference_text": "33.333300%",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_1_ordinary_business_income",
+        "page": 1,
+        "bbox": [
+          0.6063017003676471,
+          0.1274985881766888,
+          0.06649785259969876,
+          0.012367942116477182
+        ],
+        "polygon": null,
+        "reference_text": "-5,615",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_15_amt_items[0].code",
+        "page": 1,
+        "bbox": [
+          0.723549,
+          0.499627,
+          0.011221,
+          0.008795
+        ],
+        "polygon": null,
+        "reference_text": "A",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "box_15_amt_items[0].amount",
+        "page": 1,
+        "bbox": [
+          0.8667111864276961,
+          0.5000775269787721,
+          0.0317344914853962,
+          0.010050802519827151
+        ],
+        "polygon": null,
+        "reference_text": "789",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "final_k1",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "amended_k1",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:50:07.235318Z",
+  "completed_at": "2026-09-21T14:50:07.235318Z",
+  "latency_in_ms": 121
+}

@@ -1,0 +1,110 @@
+{
+  "request": {
+    "example_id": "medium/crh_results_deck_q4fy25",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/crh_results_deck_q4fy25.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/crh_results_deck_q4fy25",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "period": "FY2025",
+      "currency": "USD",
+      "fiscal_period_end_date": "2025-12-31",
+      "total_revenue": 37447.0,
+      "revenue_growth_yoy": 5.27,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 3730.0,
+      "adjusted_ebitda": 7681.0,
+      "gaap_eps_diluted": 5.51,
+      "adjusted_eps_diluted": 5.57,
+      "gross_margin": null,
+      "operating_margin": null,
+      "free_cash_flow": 4969.0,
+      "segments": [
+        {
+          "segment_name": "Americas Materials Solutions",
+          "segment_revenue": 17029,
+          "segment_profit": 4002
+        },
+        {
+          "segment_name": "Americas Building Solutions",
+          "segment_revenue": 7122,
+          "segment_profit": 1474
+        },
+        {
+          "segment_name": "International Solutions",
+          "segment_revenue": 13296,
+          "segment_profit": 2205
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "total_revenue",
+        "page": 39,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "revenue_growth_yoy",
+        "page": 39,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "net_income",
+        "page": 41,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "adjusted_ebitda",
+        "page": 39,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "free_cash_flow",
+        "page": 42,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:37:53.391636Z",
+  "completed_at": "2026-09-23T19:37:53.391636Z",
+  "latency_in_ms": 0
+}

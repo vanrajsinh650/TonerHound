@@ -1,0 +1,430 @@
+{
+  "request": {
+    "example_id": "short/cfpb_closing-disclosure_filled-sample",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/cfpb_closing-disclosure_filled-sample.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/cfpb_closing-disclosure_filled-sample",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "date_issued": "4/15/2013",
+      "closing_date": "4/15/2013",
+      "disbursement_date": "4/15/2013",
+      "settlement_agent": "Epsilon Title Co.",
+      "file_number": "12-3456",
+      "property_address": "456 Somewhere Ave, Anytown, ST 12345",
+      "sale_price": "$180,000",
+      "appraised_property_value": null,
+      "borrower_name": "Michael Jones and Mary Stone",
+      "seller_name": "Steve Cole and Amy Doe",
+      "lender_name": "Ficus Bank",
+      "loan_term": "30 years",
+      "purpose": "Purchase",
+      "product": "Fixed Rate",
+      "loan_type": "Conventional",
+      "loan_id": "123456789",
+      "mic_number": "000654321",
+      "loan_amount": "$162,000",
+      "interest_rate": "3.875%",
+      "monthly_principal_and_interest": "$761.78",
+      "prepayment_penalty": "YES",
+      "prepayment_penalty_detail": "As high as $3,240 if you pay off the loan during the first 2 years",
+      "balloon_payment": "NO",
+      "estimated_total_monthly_payment_first_period": "$1,050.26",
+      "estimated_total_monthly_payment_second_period": "$967.91",
+      "estimated_taxes_insurance_assessments": "$356.13",
+      "closing_costs_total": "$9,712.10",
+      "closing_costs_loan_costs_portion": "$4,694.05",
+      "closing_costs_other_costs_portion": "$5,018.05",
+      "lender_credits": "$0",
+      "cash_to_close": "$14,147.26",
+      "total_of_payments": "$285,803.36",
+      "finance_charge": "$118,830.27",
+      "amount_financed": "$162,000.00",
+      "annual_percentage_rate": "4.174%",
+      "total_interest_percentage": "69.46%",
+      "assumption": "will not allow",
+      "demand_feature": "does not have",
+      "negative_amortization": "do not have",
+      "partial_payments": "may accept",
+      "escrow_account": "will have",
+      "liability_after_foreclosure": "state law may protect",
+      "loan_costs": [
+        {
+          "section": "A. Origination Charges",
+          "line_label": "0.25 % of Loan Amount (Points)",
+          "payee": null,
+          "borrower_paid_at_closing": "$405.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "A. Origination Charges",
+          "line_label": "Application Fee",
+          "payee": null,
+          "borrower_paid_at_closing": "$300.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "A. Origination Charges",
+          "line_label": "Underwriting Fee",
+          "payee": null,
+          "borrower_paid_at_closing": "$1,097.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "B. Services Borrower Did Not Shop For",
+          "line_label": "Appraisal Fee",
+          "payee": "John Smith Appraisers Inc.",
+          "borrower_paid_at_closing": null,
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": "$405.00"
+        },
+        {
+          "section": "B. Services Borrower Did Not Shop For",
+          "line_label": "Credit Report Fee",
+          "payee": "Information Inc.",
+          "borrower_paid_at_closing": null,
+          "borrower_paid_before_closing": "$29.80",
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "B. Services Borrower Did Not Shop For",
+          "line_label": "Flood Determination Fee",
+          "payee": "Info Co.",
+          "borrower_paid_at_closing": "$20.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "B. Services Borrower Did Not Shop For",
+          "line_label": "Flood Monitoring Fee",
+          "payee": "Info Co.",
+          "borrower_paid_at_closing": "$31.75",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "B. Services Borrower Did Not Shop For",
+          "line_label": "Tax Monitoring Fee",
+          "payee": "Info Co.",
+          "borrower_paid_at_closing": "$75.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "B. Services Borrower Did Not Shop For",
+          "line_label": "Tax Status Research Fee",
+          "payee": "Info Co.",
+          "borrower_paid_at_closing": "$80.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "C. Services Borrower Did Shop For",
+          "line_label": "Pest Inspection Fee",
+          "payee": "Pests Co.",
+          "borrower_paid_at_closing": "$120.50",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "C. Services Borrower Did Shop For",
+          "line_label": "Survey Fee",
+          "payee": "Surveys Co.",
+          "borrower_paid_at_closing": "$85.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "C. Services Borrower Did Shop For",
+          "line_label": "Title – Insurance Binder",
+          "payee": "Epsilon Title Co.",
+          "borrower_paid_at_closing": "$650.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "C. Services Borrower Did Shop For",
+          "line_label": "Title – Lender’s Title Insurance",
+          "payee": "Epsilon Title Co.",
+          "borrower_paid_at_closing": "$500.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "C. Services Borrower Did Shop For",
+          "line_label": "Title – Settlement Agent Fee",
+          "payee": "Epsilon Title Co.",
+          "borrower_paid_at_closing": "$500.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "C. Services Borrower Did Shop For",
+          "line_label": "Title – Title Search",
+          "payee": "Epsilon Title Co.",
+          "borrower_paid_at_closing": "$800.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        }
+      ],
+      "other_costs": [
+        {
+          "section": "E. Taxes and Other Government Fees",
+          "line_label": "Recording Fees",
+          "payee": null,
+          "borrower_paid_at_closing": "$85.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "E. Taxes and Other Government Fees",
+          "line_label": "Transfer Tax",
+          "payee": "Any State",
+          "borrower_paid_at_closing": null,
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": "$950.00",
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "F. Prepaids",
+          "line_label": "Homeowner’s Insurance Premium",
+          "payee": "Insurance Co.",
+          "borrower_paid_at_closing": "$1,209.96",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "F. Prepaids",
+          "line_label": "Prepaid Interest",
+          "payee": null,
+          "borrower_paid_at_closing": "$279.04",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "F. Prepaids",
+          "line_label": "Property Taxes",
+          "payee": "Any County USA",
+          "borrower_paid_at_closing": "$631.80",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "G. Initial Escrow Payment at Closing",
+          "line_label": "Homeowner’s Insurance",
+          "payee": null,
+          "borrower_paid_at_closing": "$201.66",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "G. Initial Escrow Payment at Closing",
+          "line_label": "Property Taxes",
+          "payee": null,
+          "borrower_paid_at_closing": "$210.60",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "G. Initial Escrow Payment at Closing",
+          "line_label": "Aggregate Adjustment",
+          "payee": null,
+          "borrower_paid_at_closing": "– 0.01",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "H. Other",
+          "line_label": "HOA Capital Contribution",
+          "payee": "HOA Acre Inc.",
+          "borrower_paid_at_closing": "$500.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "H. Other",
+          "line_label": "HOA Processing Fee",
+          "payee": "HOA Acre Inc.",
+          "borrower_paid_at_closing": "$150.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "H. Other",
+          "line_label": "Home Inspection Fee",
+          "payee": "Engineers Inc.",
+          "borrower_paid_at_closing": "$750.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": "$750.00",
+          "paid_by_others": null
+        },
+        {
+          "section": "H. Other",
+          "line_label": "Home Warranty Fee",
+          "payee": "XYZ Warranty Inc.",
+          "borrower_paid_at_closing": null,
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": "$450.00",
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "H. Other",
+          "line_label": "Real Estate Commission",
+          "payee": "Alpha Real Estate Broker",
+          "borrower_paid_at_closing": null,
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": "$5,700.00",
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "H. Other",
+          "line_label": "Real Estate Commission",
+          "payee": "Omega Real Estate Broker",
+          "borrower_paid_at_closing": null,
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": "$5,700.00",
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        },
+        {
+          "section": "H. Other",
+          "line_label": "Title – Owner’s Title Insurance (optional)",
+          "payee": "Epsilon Title Co.",
+          "borrower_paid_at_closing": "$1,000.00",
+          "borrower_paid_before_closing": null,
+          "seller_paid_at_closing": null,
+          "seller_paid_before_closing": null,
+          "paid_by_others": null
+        }
+      ],
+      "cash_to_close_grid": [
+        {
+          "line_label": "Total Closing Costs (J)",
+          "loan_estimate": "$8,054.00",
+          "final": "$9,712.10",
+          "did_change": "YES"
+        },
+        {
+          "line_label": "Closing Costs Paid Before Closing",
+          "loan_estimate": "$0",
+          "final": "- $29.80",
+          "did_change": "YES"
+        },
+        {
+          "line_label": "Closing Costs Financed (Paid from your Loan Amount)",
+          "loan_estimate": "$0",
+          "final": "$0",
+          "did_change": "NO"
+        },
+        {
+          "line_label": "Down Payment/Funds from Borrower",
+          "loan_estimate": "$18,000.00",
+          "final": "$18,000.00",
+          "did_change": "NO"
+        },
+        {
+          "line_label": "Deposit",
+          "loan_estimate": "- $10,000.00",
+          "final": "- $10,000.00",
+          "did_change": "NO"
+        },
+        {
+          "line_label": "Funds for Borrower",
+          "loan_estimate": "$0",
+          "final": "$0",
+          "did_change": "NO"
+        },
+        {
+          "line_label": "Seller Credits",
+          "loan_estimate": "$0",
+          "final": "- $2,500.00",
+          "did_change": "YES"
+        },
+        {
+          "line_label": "Adjustments and Other Credits",
+          "loan_estimate": "$0",
+          "final": "- $1,035.04",
+          "did_change": "YES"
+        },
+        {
+          "line_label": "Cash to Close",
+          "loan_estimate": "$16,054.00",
+          "final": "$14,147.26",
+          "did_change": null
+        }
+      ]
+    },
+    "field_citations": []
+  },
+  "started_at": "2026-09-23T19:38:03.686186Z",
+  "completed_at": "2026-09-23T19:38:03.686186Z",
+  "latency_in_ms": 0
+}

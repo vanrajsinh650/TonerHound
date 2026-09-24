@@ -1,0 +1,583 @@
+{
+  "request": {
+    "example_id": "short/sched_i__after_violence_project_ty2024",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/sched_i__after_violence_project_ty2024.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 33,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/sched_i__after_violence_project_ty2024",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "filer_ein": "800294810",
+      "filer_name": "After Violence Project",
+      "tax_year": 2024,
+      "tax_period_end_date": "2024-12-31",
+      "grant_records_maintained": true,
+      "total_501c3_org_count": 1,
+      "total_other_org_count": 2,
+      "grants": [
+        {
+          "recipient_name": "SAADA",
+          "recipient_name_continuation": null,
+          "address_line1": "1650 Arch St Ste 2130",
+          "address_line2": null,
+          "city": "Philadelphia",
+          "state": "PA",
+          "zip_code": "19103",
+          "recipient_ein": "263001212",
+          "irc_section": null,
+          "cash_grant_amount": 75651,
+          "noncash_assistance_amount": 0,
+          "valuation_method": null,
+          "noncash_assistance_description": null,
+          "purpose_of_grant": "Sub-award: IMLS grant"
+        },
+        {
+          "recipient_name": "TexCHEP",
+          "recipient_name_continuation": null,
+          "address_line1": "350 S Buckner Blvd",
+          "address_line2": null,
+          "city": "Dallas",
+          "state": "TX",
+          "zip_code": "75217",
+          "recipient_ein": null,
+          "irc_section": null,
+          "cash_grant_amount": 6087,
+          "noncash_assistance_amount": 0,
+          "valuation_method": null,
+          "noncash_assistance_description": null,
+          "purpose_of_grant": "Fiscally sponsored by organization"
+        },
+        {
+          "recipient_name": "UC Regents",
+          "recipient_name_continuation": null,
+          "address_line1": "1111 Franklin St 8th Floor",
+          "address_line2": null,
+          "city": "Oakland",
+          "state": "CA",
+          "zip_code": "94607",
+          "recipient_ein": "943067788",
+          "irc_section": null,
+          "cash_grant_amount": 85625,
+          "noncash_assistance_amount": 0,
+          "valuation_method": null,
+          "noncash_assistance_description": null,
+          "purpose_of_grant": "Sub-award: IMLS grant"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "filer_ein",
+        "page": 1,
+        "bbox": [
+          0.5241959311745383,
+          0.14583243575750612,
+          0.06064767548532202,
+          0.01470588235294118
+        ],
+        "polygon": null,
+        "reference_text": "80-0294810",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "filer_name",
+        "page": 1,
+        "bbox": [
+          0.21560844267257537,
+          0.14583243575750612,
+          0.10906818659618647,
+          0.01470588235294118
+        ],
+        "polygon": null,
+        "reference_text": "After Violence Project",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "tax_year",
+        "page": 1,
+        "bbox": [
+          0.3377800373115925,
+          0.11764636070899714,
+          0.019655863444010418,
+          0.011437509574142158
+        ],
+        "polygon": null,
+        "reference_text": "2024",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "tax_period_end_date",
+        "page": 1,
+        "bbox": [
+          0.43370295052576546,
+          0.16952524621502246,
+          0.05811359906437419,
+          0.01470588235294118
+        ],
+        "polygon": null,
+        "reference_text": "2024-12-31",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grant_records_maintained",
+        "page": 1,
+        "bbox": [
+          0.8923330595999053,
+          0.23692665848077513,
+          0.01523721097695707,
+          0.012009385052849266
+        ],
+        "polygon": null,
+        "reference_text": "Yes",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_501c3_org_count",
+        "page": 1,
+        "bbox": [
+          0.356575,
+          0.475243,
+          0.005616,
+          0.017646
+        ],
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_other_org_count",
+        "page": 1,
+        "bbox": [
+          0.228017,
+          0.488314,
+          0.005616,
+          0.017646
+        ],
+        "polygon": null,
+        "reference_text": "2",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].recipient_name",
+        "page": 1,
+        "bbox": [
+          0.08901515151515152,
+          0.31944220050487643,
+          0.0321022765805023,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "SAADA",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].address_line1",
+        "page": 1,
+        "bbox": [
+          0.08901515151515152,
+          0.33169710246566075,
+          0.09476324524542296,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "1650 Arch St Ste 2130",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].city",
+        "page": 1,
+        "bbox": [
+          0.08901515151515152,
+          0.3439520044264451,
+          0.054214034417662954,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "Philadelphia,",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].state",
+        "page": 1,
+        "bbox": [
+          0.14586175090134745,
+          0.3439520044264451,
+          0.011934665718463938,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "PA",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].zip_code",
+        "page": 1,
+        "bbox": [
+          0.15991762912634647,
+          0.3439520044264451,
+          0.0263257556491428,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "19103",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].recipient_ein",
+        "page": 1,
+        "bbox": [
+          0.24975377863103693,
+          0.3194360670700572,
+          0.05681818181818182,
+          0.013884799932342706
+        ],
+        "polygon": null,
+        "reference_text": "26-3001212",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].cash_grant_amount",
+        "page": 1,
+        "bbox": [
+          0.4448348921958846,
+          0.3194360670700572,
+          0.03409090909090909,
+          0.013884799932342729
+        ],
+        "polygon": null,
+        "reference_text": "75,651",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].noncash_assistance_amount",
+        "page": 1,
+        "bbox": [
+          0.6012383663293087,
+          0.3194360670700572,
+          0.005681818181818182,
+          0.013884799932342729
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].purpose_of_grant",
+        "page": 1,
+        "bbox": [
+          0.8141756154069997,
+          0.31944220050487643,
+          0.09736733484749849,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "Sub-award: IMLS grant",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].recipient_name",
+        "page": 1,
+        "bbox": [
+          0.08901515151515152,
+          0.3672364178825827,
+          0.04104450495556147,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "TexCHEP",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].address_line1",
+        "page": 1,
+        "bbox": [
+          0.08901515151515152,
+          0.37949131984336704,
+          0.08316288572369199,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "350 S Buckner Blvd",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].city",
+        "page": 1,
+        "bbox": [
+          0.08901515151515152,
+          0.39174622180415136,
+          0.028939391627456207,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "Dallas,",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].state",
+        "page": 1,
+        "bbox": [
+          0.12042613944622,
+          0.39174622180415136,
+          0.012102281204377771,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "TX",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].zip_code",
+        "page": 1,
+        "bbox": [
+          0.13516099525220465,
+          0.39174622180415136,
+          0.026325746016068907,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "75217",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].cash_grant_amount",
+        "page": 1,
+        "bbox": [
+          0.4505176351527975,
+          0.36723028444776346,
+          0.028409090909090908,
+          0.013884799932342729
+        ],
+        "polygon": null,
+        "reference_text": "6,087",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].noncash_assistance_amount",
+        "page": 1,
+        "bbox": [
+          0.6012383663293087,
+          0.36723028444776346,
+          0.005681818181818182,
+          0.013884799932342729
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].purpose_of_grant",
+        "page": 1,
+        "bbox": [
+          0.8141756154069997,
+          0.3672364178825827,
+          0.09104156494140625,
+          0.02450980392156865
+        ],
+        "polygon": null,
+        "reference_text": "Fiscally sponsored by 350 S Buckner Blvd organization",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].recipient_name",
+        "page": 1,
+        "bbox": [
+          0.08901515151515152,
+          0.41503053552964153,
+          0.051571971238261516,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "UC Regents",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].address_line1",
+        "page": 1,
+        "bbox": [
+          0.08901515151515152,
+          0.42728543749042586,
+          0.10688350176570391,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "1111 Franklin St 8th",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].city",
+        "page": 1,
+        "bbox": [
+          0.08901515151515152,
+          0.4395403394512102,
+          0.03789772650208137,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "Oakland,",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].state",
+        "page": 1,
+        "bbox": [
+          0.12954546225191366,
+          0.4395403394512102,
+          0.013153403696387705,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "CA",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].zip_code",
+        "page": 1,
+        "bbox": [
+          0.14481060914318972,
+          0.4395403394512102,
+          0.026325765282216695,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "94607",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].recipient_ein",
+        "page": 1,
+        "bbox": [
+          0.24975377863103693,
+          0.41502440209482233,
+          0.05681818181818182,
+          0.013884799932342706
+        ],
+        "polygon": null,
+        "reference_text": "94-3067788",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].cash_grant_amount",
+        "page": 1,
+        "bbox": [
+          0.4448348921958846,
+          0.41502440209482233,
+          0.03409090909090909,
+          0.013884799932342729
+        ],
+        "polygon": null,
+        "reference_text": "85,625",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].noncash_assistance_amount",
+        "page": 1,
+        "bbox": [
+          0.6012383663293087,
+          0.41502440209482233,
+          0.005681818181818182,
+          0.013884799932342729
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].purpose_of_grant",
+        "page": 1,
+        "bbox": [
+          0.8141756154069997,
+          0.41503053552964153,
+          0.09736733484749849,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "Sub-award: IMLS grant",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:51:29.532079Z",
+  "completed_at": "2026-09-21T14:51:29.532079Z",
+  "latency_in_ms": 141
+}

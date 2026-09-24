@@ -1,0 +1,130 @@
+{
+  "request": {
+    "example_id": "medium/hpe_earnings_deck_q4fy25",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/hpe_earnings_deck_q4fy25.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/hpe_earnings_deck_q4fy25",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "period": "Q4 FY2025",
+      "currency": "USD",
+      "fiscal_period_end_date": "2025-10-31",
+      "total_revenue": 9679,
+      "revenue_growth_yoy": 14.0,
+      "gross_profit": 3241.0,
+      "operating_income": -8.0,
+      "net_income": 175,
+      "adjusted_ebitda": null,
+      "gaap_eps_diluted": 0.11,
+      "adjusted_eps_diluted": 0.62,
+      "gross_margin": 33.5,
+      "operating_margin": -0.08,
+      "free_cash_flow": 1900,
+      "segments": [
+        {
+          "segment_name": "Networking",
+          "segment_revenue": 2812.0,
+          "segment_profit": 648
+        },
+        {
+          "segment_name": "HPE Financial Services",
+          "segment_revenue": 889,
+          "segment_profit": 102
+        },
+        {
+          "segment_name": "Server",
+          "segment_revenue": 4457.0,
+          "segment_profit": 437
+        },
+        {
+          "segment_name": "Corporate Investments & Other",
+          "segment_revenue": 191,
+          "segment_profit": -6
+        },
+        {
+          "segment_name": "Hybrid Cloud",
+          "segment_revenue": 1412.0,
+          "segment_profit": 71
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "total_revenue",
+        "page": 10,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "revenue_growth_yoy",
+        "page": 9,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "net_income",
+        "page": 29,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "gross_margin",
+        "page": 29,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "operating_margin",
+        "page": 29,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "free_cash_flow",
+        "page": 9,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:37:53.958594Z",
+  "completed_at": "2026-09-23T19:37:53.958594Z",
+  "latency_in_ms": 0
+}

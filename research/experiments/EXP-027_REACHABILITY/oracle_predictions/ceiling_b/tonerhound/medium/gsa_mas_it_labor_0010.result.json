@@ -1,0 +1,487 @@
+{
+  "request": {
+    "example_id": "medium/gsa_mas_it_labor_0010",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/gsa_mas_it_labor_0010.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 33,
+    "ocr_pages": 0,
+    "num_pages": 15
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/gsa_mas_it_labor_0010",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "contract_number": "47QTCA18D00E0",
+      "contractor_name": "Rapidiant Corporation",
+      "schedule_title": "GSA Multiple Award Schedule (MAS) Catalog",
+      "labor_categories": [
+        {
+          "sin": "541511",
+          "labor_category_title": "Project Manager",
+          "minimum_education": "Bachelor of Science (BS) degree or higher",
+          "minimum_years_experience": "10",
+          "site": "Government Site",
+          "year_1_rate": 213.75,
+          "year_2_rate": 213.75,
+          "year_3_rate": 213.75,
+          "year_4_rate": 213.75,
+          "year_5_rate": 213.75
+        },
+        {
+          "sin": "541511",
+          "labor_category_title": "Core Analyst",
+          "minimum_education": "Bachelor of Science (BS) degree or higher",
+          "minimum_years_experience": "4",
+          "site": "Government Site",
+          "year_1_rate": 118.75,
+          "year_2_rate": 118.75,
+          "year_3_rate": 118.75,
+          "year_4_rate": 118.75,
+          "year_5_rate": 118.75
+        },
+        {
+          "sin": "541511",
+          "labor_category_title": "Implementation Specialist",
+          "minimum_education": "Bachelor of Science (BS) degree or higher",
+          "minimum_years_experience": "8",
+          "site": "Government Site",
+          "year_1_rate": 190.0,
+          "year_2_rate": 190.0,
+          "year_3_rate": 190.0,
+          "year_4_rate": 190.0,
+          "year_5_rate": 190.0
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "contract_number",
+        "page": 1,
+        "bbox": [
+          0.497925,
+          0.702032,
+          0.139569,
+          0.017068
+        ],
+        "polygon": null,
+        "reference_text": "47QTCA18D00E0",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "schedule_title",
+        "page": 1,
+        "bbox": [
+          0.232974,
+          0.279222,
+          0.52172,
+          0.018338
+        ],
+        "polygon": null,
+        "reference_text": "GSA Multiple Award Schedule (MAS) Catalog",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[0].sin",
+        "page": 1,
+        "bbox": [
+          0.247092,
+          0.359883,
+          0.049314,
+          0.015637
+        ],
+        "polygon": null,
+        "reference_text": "541511",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[0].labor_category_title",
+        "page": 1,
+        "bbox": [
+          0.192582,
+          0.359776,
+          0.441419,
+          0.015637
+        ],
+        "polygon": null,
+        "reference_text": "Project Manager",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[0].minimum_education",
+        "page": 1,
+        "bbox": [
+          0.192582,
+          0.359776,
+          0.441419,
+          0.015637
+        ],
+        "polygon": null,
+        "reference_text": "Bachelor of Science (BS) degree or higher",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[0].minimum_years_experience",
+        "page": 1,
+        "bbox": [
+          0.192582,
+          0.359776,
+          0.441419,
+          0.015637
+        ],
+        "polygon": null,
+        "reference_text": "10",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[0].site",
+        "page": 1,
+        "bbox": [
+          0.192582,
+          0.359776,
+          0.441419,
+          0.015637
+        ],
+        "polygon": null,
+        "reference_text": "Government Site",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[1].sin",
+        "page": 1,
+        "bbox": [
+          0.247092,
+          0.373065,
+          0.049314,
+          0.015637
+        ],
+        "polygon": null,
+        "reference_text": "541512",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[1].labor_category_title",
+        "page": 1,
+        "bbox": [
+          0.192582,
+          0.372958,
+          0.395138,
+          0.015637
+        ],
+        "polygon": null,
+        "reference_text": "Core Analyst",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[1].minimum_education",
+        "page": 1,
+        "bbox": [
+          0.192582,
+          0.372958,
+          0.395138,
+          0.015637
+        ],
+        "polygon": null,
+        "reference_text": "Bachelor of Science (BS) degree or higher",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[1].minimum_years_experience",
+        "page": 1,
+        "bbox": [
+          0.192582,
+          0.372958,
+          0.395138,
+          0.015637
+        ],
+        "polygon": null,
+        "reference_text": "4",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[1].site",
+        "page": 1,
+        "bbox": [
+          0.192582,
+          0.372958,
+          0.395138,
+          0.015637
+        ],
+        "polygon": null,
+        "reference_text": "Government Site",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[2].sin",
+        "page": 1,
+        "bbox": [
+          0.247092,
+          0.386216,
+          0.049314,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "541513",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[2].labor_category_title",
+        "page": 1,
+        "bbox": [
+          0.192582,
+          0.385958,
+          0.44437,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Implementation Specialist",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[2].minimum_education",
+        "page": 1,
+        "bbox": [
+          0.192582,
+          0.385958,
+          0.44437,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Bachelor of Science (BS) degree or higher",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[2].minimum_years_experience",
+        "page": 1,
+        "bbox": [
+          0.192582,
+          0.385958,
+          0.44437,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "8",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[2].site",
+        "page": 1,
+        "bbox": [
+          0.192582,
+          0.385958,
+          0.44437,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Government Site",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "contractor_name",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Rapidiant Corporation",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[0].year_1_rate",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "213.75",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[0].year_2_rate",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "213.75",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[0].year_3_rate",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "213.75",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[0].year_4_rate",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "213.75",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[0].year_5_rate",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "213.75",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[1].year_1_rate",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "118.75",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[1].year_2_rate",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "118.75",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[1].year_3_rate",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "118.75",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[1].year_4_rate",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "118.75",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[1].year_5_rate",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "118.75",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[2].year_1_rate",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "190.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[2].year_2_rate",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "190.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[2].year_3_rate",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "190.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[2].year_4_rate",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "190.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "labor_categories[2].year_5_rate",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "190.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:47:47.128573Z",
+  "completed_at": "2026-09-21T14:47:47.128573Z",
+  "latency_in_ms": 250
+}

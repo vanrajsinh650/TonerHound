@@ -1,0 +1,100 @@
+{
+  "request": {
+    "example_id": "short/oklahoma_county_purchase_order_avl_systems",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/oklahoma_county_purchase_order_avl_systems.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/oklahoma_county_purchase_order_avl_systems",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "po_number": "22601904",
+      "requisition_number": "12602080",
+      "po_date": "2025-08-28",
+      "buyer": {
+        "name": "Oklahoma County",
+        "department": "Emergency Management"
+      },
+      "requisitioner": "Nick Rutledge",
+      "buyer_contact": "Nick Rutledge",
+      "vendor": {
+        "name": "AVL SYSTEMS DESIGN LLC",
+        "address": "14901 BRISTOL PARK BLVD EDMOND, OK 73013",
+        "vendor_number": "5421",
+        "contact": "405-749-1866"
+      },
+      "ship_to": "OK CO EMERGENCY MANAGEMENT 320 ROBERT S KERR ROOM 101 OKLAHOMA CITY, OK 73102",
+      "bill_to": "OK CO EMERGENCY MANAGEMENT 320 ROBERT S KERR ROOM 101 OKLAHOMA CITY, OK 73102",
+      "line_items": [
+        {
+          "line_no": 1,
+          "description": "Statewide Contract # SW1021AV - Emergency Operations Center (EOC) audio-visual equipment",
+          "quantity": 1.0,
+          "unit_of_measure": "EACH",
+          "unit_price": 6721.8,
+          "start_date": null,
+          "end_date": null,
+          "extended_price": 6721.8
+        }
+      ],
+      "total_amount": 6721.8,
+      "currency": "USD"
+    },
+    "field_citations": [
+      {
+        "field_path": "buyer_contact",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.contact",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "ship_to",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "bill_to",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:38:03.814959Z",
+  "completed_at": "2026-09-23T19:38:03.814959Z",
+  "latency_in_ms": 0
+}

@@ -1,0 +1,54 @@
+{
+  "request": {
+    "example_id": "short/dd1155_schedule_continuation_0008",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/dd1155_schedule_continuation_0008.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/dd1155_schedule_continuation_0008",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "contract_purchase_order_number": "SPE4A4-14-V-7198",
+      "delivery_order_call_number": null,
+      "date_of_order": "2014 JAN 23",
+      "requisition_purchase_request_number": "0051978856",
+      "total_award_amount": null,
+      "line_items": [
+        {
+          "item_number": "0001",
+          "description": "1650003175589\\nGUIDE,PISTON ROLLER\\nGUIDE, PISTON ROLLER\\n52.246-11 Higher Level Contract Quality Requirement (Manufacturers)\\nFAR CLAUSE 52.246-11 APPLIES. A QUALITY MANAGEMENT PROGRAM MEETING THE REQUIREMENTS OF ISO 9001:2008; A PROGRAM COMPARABLE TO ISO 9001:2008 (EXAMPLE SAE AS 9100), THE FOLLOWING TAILORED VERSION OF ISO 9001:2008; OR A PROGRAM COMPARABLE TO THE TAILORED VERSION OF ISO 9001:2008 (EXAMPLE SAE AS 9003) IS REQUIRED. IN THE TAILORED VERSION OF THE ISO 9001:2008, ANY REFERENCES WHICH CITE THE ENTIRE INTERNATIONAL STANDARD ARE INTERPRETED AS EXCLUSIONS TO THIS DOCUMENT.\\nDLA TAILORED HIGHER LEVEL QUALITY CLAUSE FROM ISO 9001:2008\\n[ISO subclauses 4.1-8.5.3 as listed]\\nIDENTIFY TO\\nMARK IAW MIL-STD-130N(1), DATED 16 NOV 2012.\\nCONFIGURATION CONTROL APPLIES\\nSEE CLAUSE 52.246-9G36 (SECTION I).\\nTECH DATA AVAILABILITY\\nDSCR MAY NOT HAVE AN APPROVED BIDSET FOR\\nTHIS NSN.\\nCRITICAL APPLICATION ITEM\\nHYDRO-AIRE, INC. 81982 P/N 85965-1",
+          "quantity_ordered": 15.0,
+          "unit": "EA",
+          "unit_price": null,
+          "amount": null
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "line_items",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:38:03.678939Z",
+  "completed_at": "2026-09-23T19:38:03.678939Z",
+  "latency_in_ms": 0
+}

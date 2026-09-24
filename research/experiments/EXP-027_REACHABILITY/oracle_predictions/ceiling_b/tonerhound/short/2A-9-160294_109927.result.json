@@ -1,0 +1,483 @@
+{
+  "request": {
+    "example_id": "short/2A-9-160294_109927",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/2A-9-160294_109927.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 27,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/2A-9-160294_109927",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "p1_file_no": null,
+      "p1_district_no": null,
+      "p1_company": "R. L. Underwood",
+      "p1_address": "420 Oil & Gas Bldg Wichita Falls, Texas",
+      "p1_sec_no": null,
+      "p1_block_no": "1384",
+      "p1_survey": "TE&L CO",
+      "p1_county": "Archer",
+      "p1_well_no": "Z-8",
+      "p1_name_of_lease": "R Campbell Est \"Z\"",
+      "p1_no_of_acres": "480",
+      "p1_elev": "1154",
+      "p1_name_of_field": "Archer County Reg.",
+      "p1_located_miles": "6",
+      "p1_located_direction": "NE",
+      "p1_located_from": "Olney Texas",
+      "p1_form1_filed_in_name_of": "R. L. Underwood",
+      "p1_drilling_commenced": "Mar 7, 1955",
+      "p1_drilling_completed": "Mar. 8, 1955",
+      "p1_ever_produced_oil": "No",
+      "p1_ever_produced_gas": "No",
+      "p1_character_of_well": "Dry",
+      "p1_total_depth": "1068'",
+      "p1_date_wish_to_plug": "Mar. 8, 1955",
+      "p1_party_plugging_well": "R.W. Darden Drlg Co",
+      "p1_party_plugging_address": "Olney Texas",
+      "p1_correspondence_name": "R. L. Underwood",
+      "p1_correspondence_address": "420 Oil & Gas Bldg Wichita Falls, Tex",
+      "p1_init_prod_gas_volume": null,
+      "p1_init_prod_gas_pressure": null,
+      "p1_init_prod_oil_barrels": "Nil",
+      "p1_general_remarks": null,
+      "p2_file_no": null,
+      "p2_district_no": null,
+      "p2_company": null,
+      "p2_address": null,
+      "p2_sec_no": null,
+      "p2_block_no": null,
+      "p2_survey": null,
+      "p2_county": null,
+      "p2_well_no": null,
+      "p2_name_of_lease": null,
+      "p2_no_of_acres": null,
+      "p2_elev": null,
+      "p2_name_of_field": null,
+      "p2_form1_filed_in_name_of": null,
+      "p2_date_well_plugged": null,
+      "p2_completion_oil": null,
+      "p2_completion_gas": null,
+      "p2_completion_dry": null,
+      "p2_amount_plugged_oil": null,
+      "p2_amount_plugged_gas": null,
+      "p2_amount_plugged_water": null,
+      "p2_ever_produced_oil_or_gas": null,
+      "p2_total_depth": null,
+      "p2_top_of_producing_sand": null,
+      "p2_filled_with_mud_laden_fluid": null,
+      "p2_how_mud_applied": null,
+      "p2_were_plugs_used": null,
+      "p2_was_well_shot": null,
+      "p2_plugs_detail": null,
+      "p2_depth_thickness_formations": null,
+      "p2_abandoned_wells_plugged": null,
+      "p2_manner_of_confining": null,
+      "p2_adjacent_owners": null,
+      "p2_notice_given_adjacent_owners": null,
+      "p2_affiant_name": null,
+      "p2_affiant_signature_name": null,
+      "p2_affiant_title": null,
+      "p2_sworn_day": null,
+      "p2_sworn_month": null,
+      "p2_sworn_year": null,
+      "p2_notary_signature": false,
+      "p2_notary_county": null,
+      "p2_correspondence_name": null,
+      "p2_correspondence_address": null,
+      "casing_tubing_records": null
+    },
+    "field_citations": [
+      {
+        "field_path": "p1_company",
+        "page": 1,
+        "bbox": [
+          0.622497,
+          0.33921,
+          0.148339,
+          0.016958
+        ],
+        "polygon": null,
+        "reference_text": "Underwood",
+        "confidence": 0.75,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_address",
+        "page": 1,
+        "bbox": [
+          0.610718,
+          0.204773,
+          0.30212,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Wichita Ralls, Texas -",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_survey",
+        "page": 1,
+        "bbox": [
+          0.5241460541813898,
+          0.2234185733512786,
+          0.0683156654888104,
+          0.010318528488111267
+        ],
+        "polygon": null,
+        "reference_text": "TE&L CO",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_county",
+        "page": 1,
+        "bbox": [
+          0.7396937573616019,
+          0.22296994167788245,
+          0.058892815076560634,
+          0.009869896814715118
+        ],
+        "polygon": null,
+        "reference_text": "Archer",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_name_of_lease",
+        "page": 1,
+        "bbox": [
+          0.3303886925795053,
+          0.25078510542844323,
+          0.21908127208480566,
+          0.019291161956034086
+        ],
+        "polygon": null,
+        "reference_text": "Campbell H Est Z",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_no_of_acres",
+        "page": 1,
+        "bbox": [
+          0.6690223792697291,
+          0.25257963212202783,
+          0.03062426383981154,
+          0.012561686855091958
+        ],
+        "polygon": null,
+        "reference_text": "480",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_elev",
+        "page": 1,
+        "bbox": [
+          0.826266195524146,
+          0.24674742036787797,
+          0.04122497055359242,
+          0.021534320323014805
+        ],
+        "polygon": null,
+        "reference_text": "1154",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_name_of_field",
+        "page": 1,
+        "bbox": [
+          0.3963486454652532,
+          0.27994616419919244,
+          0.17432273262661963,
+          0.013010318528488107
+        ],
+        "polygon": null,
+        "reference_text": "Archer County Reg.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_located_miles",
+        "page": 1,
+        "bbox": [
+          0.136455,
+          0.307066,
+          0.059364,
+          0.015747
+        ],
+        "polygon": null,
+        "reference_text": "6",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_located_direction",
+        "page": 1,
+        "bbox": [
+          0.2956419316843345,
+          0.3082099596231494,
+          0.022968197879858654,
+          0.021534320323014777
+        ],
+        "polygon": null,
+        "reference_text": "NE",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_form1_filed_in_name_of",
+        "page": 1,
+        "bbox": [
+          0.622497,
+          0.33921,
+          0.148339,
+          0.016958
+        ],
+        "polygon": null,
+        "reference_text": "Underwood",
+        "confidence": 0.75,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_drilling_commenced",
+        "page": 1,
+        "bbox": [
+          0.2673733804475854,
+          0.3755047106325707,
+          0.10895170789163722,
+          0.012113055181695809
+        ],
+        "polygon": null,
+        "reference_text": "7, 1955",
+        "confidence": 0.7686889096338483,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_drilling_completed",
+        "page": 1,
+        "bbox": [
+          0.7002355712603062,
+          0.3737101839389861,
+          0.11837455830388699,
+          0.013458950201884257
+        ],
+        "polygon": null,
+        "reference_text": "Mar 1955",
+        "confidence": 0.815128290867871,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_ever_produced_oil",
+        "page": 1,
+        "bbox": [
+          0.366902,
+          0.401963,
+          0.020024,
+          0.01393
+        ],
+        "polygon": null,
+        "reference_text": "No",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_ever_produced_gas",
+        "page": 1,
+        "bbox": [
+          0.366902,
+          0.401963,
+          0.020024,
+          0.01393
+        ],
+        "polygon": null,
+        "reference_text": "No",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_total_depth",
+        "page": 1,
+        "bbox": [
+          0.812289,
+          0.430883,
+          0.067216,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Depth ._1068'\u2014+",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_correspondence_name",
+        "page": 1,
+        "bbox": [
+          0.622497,
+          0.33921,
+          0.148339,
+          0.016958
+        ],
+        "polygon": null,
+        "reference_text": "Underwood",
+        "confidence": 0.75,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_correspondence_address",
+        "page": 1,
+        "bbox": [
+          0.5347467608951708,
+          0.5495737999102737,
+          0.365135453474676,
+          0.01659937191565719
+        ],
+        "polygon": null,
+        "reference_text": "420 0il & Ges Bldg Wichita Falla,'reg;",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_init_prod_oil_barrels",
+        "page": 1,
+        "bbox": [
+          0.3574793875147232,
+          0.6177658142664872,
+          0.03239104829210837,
+          0.01121579183490351
+        ],
+        "polygon": null,
+        "reference_text": "Nil",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_block_no",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "1384",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_well_no",
+        "page": 1,
+        "bbox": [
+          0.15959952885747938,
+          0.25078510542844323,
+          0.030035335689045928,
+          0.019291161956034086
+        ],
+        "polygon": null,
+        "reference_text": "Z-8",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_located_from",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Olney Texas",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_character_of_well",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Dry",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_date_wish_to_plug",
+        "page": 1,
+        "bbox": [
+          0.2779740871613663,
+          0.46523104531179904,
+          0.11837455830388693,
+          0.012113055181695809
+        ],
+        "polygon": null,
+        "reference_text": "Mar. 8, 1955",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_party_plugging_well",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "R.W. Darden Drlg Co",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_party_plugging_address",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Olney Texas",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_notary_signature",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:50:14.066815Z",
+  "completed_at": "2026-09-21T14:50:14.066815Z",
+  "latency_in_ms": 243
+}

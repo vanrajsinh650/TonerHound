@@ -1,0 +1,640 @@
+{
+  "request": {
+    "example_id": "short/00581-2011-p0102",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/00581-2011-p0102.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/00581-2011-p0102",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "final_k1": false,
+      "amended_k1": false,
+      "partnership_ein": "26-1287244",
+      "partnership_name": "TELCO EXPERTS LLC",
+      "partnership_address": "38 PARK AVENUE, RUTHERFORD, NJ 07070",
+      "irs_center": "OGDEN, UT",
+      "is_publicly_traded_partnership": false,
+      "partner_id": "082-50-3829",
+      "partner_name": "PETER GOLDBERG",
+      "partner_address": "1520 YORK AVENUE, NEW YORK, NY 10028",
+      "is_general_partner": true,
+      "is_domestic_partner": true,
+      "partner_entity_type": "INDIVIDUAL",
+      "profit_share_beginning": 33.3333334,
+      "profit_share_ending": 33.3333334,
+      "loss_share_beginning": 33.3333334,
+      "loss_share_ending": 33.3333334,
+      "capital_share_beginning": 33.3333334,
+      "capital_share_ending": 33.3333334,
+      "liability_nonrecourse": null,
+      "liability_qualified_nonrecourse_financing": null,
+      "liability_recourse": 66238,
+      "capital_beginning_account": 21693,
+      "capital_contributed": null,
+      "capital_current_year_increase_decrease": 650,
+      "capital_withdrawals_distributions": null,
+      "capital_ending_account": 22343,
+      "capital_account_method": "Tax basis",
+      "contributed_built_in_gain_loss_property": false,
+      "box_1_ordinary_business_income": 3101,
+      "box_2_net_rental_real_estate": null,
+      "box_3_other_net_rental_income": null,
+      "box_4_guaranteed_payments": 155000,
+      "box_5_interest_income": null,
+      "box_6a_ordinary_dividends": null,
+      "box_6b_qualified_dividends": null,
+      "box_7_royalties": null,
+      "box_8_net_short_term_capital_gain": null,
+      "box_9a_net_long_term_capital_gain": null,
+      "box_9b_collectibles_gain": null,
+      "box_9c_unrecaptured_1250_gain": null,
+      "box_10_net_section_1231_gain": null,
+      "box_12_section_179_deduction": 520,
+      "box_14_self_employment_earnings": [
+        {
+          "code": "A",
+          "amount": 158101
+        },
+        {
+          "code": "C",
+          "amount": 268533
+        }
+      ],
+      "box_11_other_income": null,
+      "box_13_other_deductions": [
+        {
+          "code": "A",
+          "amount": 800
+        }
+      ],
+      "box_15_credits": null,
+      "box_16_foreign_transactions": null,
+      "box_17_amt_items": null,
+      "box_18_tax_exempt_income": [
+        {
+          "code": "C*",
+          "amount": null
+        }
+      ],
+      "box_19_distributions": null,
+      "box_20_other_information": null
+    },
+    "field_citations": [
+      {
+        "field_path": "final_k1",
+        "page": 1,
+        "bbox": [
+          0.5399,
+          0.0761,
+          0.0304,
+          0.014
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "amended_k1",
+        "page": 1,
+        "bbox": [
+          0.6704,
+          0.0763,
+          0.0287,
+          0.0141
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "partnership_ein",
+        "page": 1,
+        "bbox": [
+          0.07627031,
+          0.22578283,
+          0.12019991,
+          0.01239899
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "partnership_name",
+        "page": 1,
+        "bbox": [
+          0.07513929,
+          0.2697096,
+          0.20287936,
+          0.01270202
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "partnership_address",
+        "page": 1,
+        "bbox": [
+          0.0735,
+          0.2837,
+          0.2499,
+          0.0287
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "irs_center",
+        "page": 1,
+        "bbox": [
+          0.07582774,
+          0.32828283,
+          0.11008627,
+          0.01239899
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "is_publicly_traded_partnership",
+        "page": 1,
+        "bbox": [
+          0.0893,
+          0.354,
+          0.0314,
+          0.0174
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "partner_id",
+        "page": 1,
+        "bbox": [
+          0.07699154,
+          0.43017677,
+          0.13075613,
+          0.01270202
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "partner_name",
+        "page": 1,
+        "bbox": [
+          0.07607361,
+          0.47410354,
+          0.16822742,
+          0.01239899
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "partner_address",
+        "page": 1,
+        "bbox": [
+          0.077,
+          0.4888,
+          0.2092,
+          0.0267
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "is_general_partner",
+        "page": 1,
+        "bbox": [
+          0.0899,
+          0.5171,
+          0.0284,
+          0.0133
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "is_domestic_partner",
+        "page": 1,
+        "bbox": [
+          0.0891,
+          0.5453,
+          0.0286,
+          0.014
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "partner_entity_type",
+        "page": 1,
+        "bbox": [
+          0.2837,
+          0.5607,
+          0.1218,
+          0.0124
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "profit_share_beginning",
+        "page": 1,
+        "bbox": [
+          0.1823,
+          0.6202,
+          0.1193,
+          0.0124
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "profit_share_ending",
+        "page": 1,
+        "bbox": [
+          0.4006,
+          0.6194,
+          0.1224,
+          0.0124
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_share_beginning",
+        "page": 1,
+        "bbox": [
+          0.1805,
+          0.6346,
+          0.1201,
+          0.0124
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_share_ending",
+        "page": 1,
+        "bbox": [
+          0.4019,
+          0.6353,
+          0.1188,
+          0.0124
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_share_beginning",
+        "page": 1,
+        "bbox": [
+          0.1797,
+          0.6488,
+          0.1204,
+          0.0124
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_share_ending",
+        "page": 1,
+        "bbox": [
+          0.4017,
+          0.6489,
+          0.1168,
+          0.0124
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "liability_recourse",
+        "page": 1,
+        "bbox": [
+          0.4577,
+          0.7067,
+          0.0729,
+          0.0129
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_beginning_account",
+        "page": 1,
+        "bbox": [
+          0.4616,
+          0.7508,
+          0.0696,
+          0.0124
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_current_year_increase_decrease",
+        "page": 1,
+        "bbox": [
+          0.4928,
+          0.7784,
+          0.0383,
+          0.0137
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_ending_account",
+        "page": 1,
+        "bbox": [
+          0.4581,
+          0.808,
+          0.0697,
+          0.0126
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "capital_account_method",
+        "page": 1,
+        "bbox": [
+          0.12229804,
+          0.8377399,
+          0.05068296,
+          0.01239899
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "contributed_built_in_gain_loss_property",
+        "page": 1,
+        "bbox": [
+          0.0897,
+          0.8794,
+          0.0288,
+          0.0142
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "box_1_ordinary_business_income",
+        "page": 1,
+        "bbox": [
+          0.6552,
+          0.1354,
+          0.0588,
+          0.0136
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "box_4_guaranteed_payments",
+        "page": 1,
+        "bbox": [
+          0.6317,
+          0.2237,
+          0.0839,
+          0.0139
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "box_12_section_179_deduction",
+        "page": 1,
+        "bbox": [
+          0.6748,
+          0.5763,
+          0.0478,
+          0.0124
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "box_14_self_employment_earnings[0].code",
+        "page": 1,
+        "bbox": [
+          0.5404,
+          0.6641,
+          0.0143,
+          0.0134
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "box_14_self_employment_earnings[0].amount",
+        "page": 1,
+        "bbox": [
+          0.63497944,
+          0.66507576,
+          0.0880559,
+          0.01239899
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "box_14_self_employment_earnings[1].code",
+        "page": 1,
+        "bbox": [
+          0.5398,
+          0.6793,
+          0.016,
+          0.0116
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "box_14_self_employment_earnings[1].amount",
+        "page": 1,
+        "bbox": [
+          0.63547119,
+          0.67941919,
+          0.09489122,
+          0.01239899
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "box_13_other_deductions[0].code",
+        "page": 1,
+        "bbox": [
+          0.5386,
+          0.6053,
+          0.0152,
+          0.0128
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "box_13_other_deductions[0].amount",
+        "page": 1,
+        "bbox": [
+          0.68174479,
+          0.60589646,
+          0.04778164,
+          0.01239899
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "box_18_tax_exempt_income[0].code",
+        "page": 1,
+        "bbox": [
+          0.7372,
+          0.3708,
+          0.0236,
+          0.0131
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      },
+      {
+        "field_path": "box_18_tax_exempt_income[0].amount",
+        "page": 1,
+        "bbox": [
+          0.8734,
+          0.3716,
+          0.0508,
+          0.0121
+        ],
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:38:01.575825Z",
+  "completed_at": "2026-09-23T19:38:01.575825Z",
+  "latency_in_ms": 0
+}

@@ -1,0 +1,628 @@
+{
+  "request": {
+    "example_id": "short/sched_i__rotary_club_ty2024",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/sched_i__rotary_club_ty2024.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 36,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/sched_i__rotary_club_ty2024",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "filer_ein": "521759743",
+      "filer_name": "ROTARY CLUB OF ANNAPOLIS FOUNDATION",
+      "tax_year": 2024,
+      "tax_period_end_date": "2025-06-30",
+      "grant_records_maintained": true,
+      "total_501c3_org_count": null,
+      "total_other_org_count": 3,
+      "grants": [
+        {
+          "recipient_name": "BALTIMORE ROTARY FOUNDATION",
+          "recipient_name_continuation": null,
+          "address_line1": "18 BUCHANAN ROAD",
+          "address_line2": null,
+          "city": "BALTIMORE",
+          "state": "MD",
+          "zip_code": "21212",
+          "recipient_ein": "526054895",
+          "irc_section": "C3",
+          "cash_grant_amount": 5000,
+          "noncash_assistance_amount": 0,
+          "valuation_method": null,
+          "noncash_assistance_description": null,
+          "purpose_of_grant": "GENERAL SUPPORT"
+        },
+        {
+          "recipient_name": "THE ROTARY FOUNDATION ROTARY INTERNATIONAL",
+          "recipient_name_continuation": null,
+          "address_line1": "1560 SHERMAN AVENUE",
+          "address_line2": null,
+          "city": "EVANSTON",
+          "state": "IL",
+          "zip_code": "60201",
+          "recipient_ein": "363245075",
+          "irc_section": "C3",
+          "cash_grant_amount": 6064,
+          "noncash_assistance_amount": 0,
+          "valuation_method": null,
+          "noncash_assistance_description": null,
+          "purpose_of_grant": "GENERAL SUPPORT"
+        },
+        {
+          "recipient_name": "MARSHALL HOPE CORPORATION",
+          "recipient_name_continuation": null,
+          "address_line1": "C/O WEST ANNAPOLIS POP-UP PANTRY",
+          "address_line2": null,
+          "city": "ANNAPOLIS",
+          "state": "MD",
+          "zip_code": "21401",
+          "recipient_ein": "852700300",
+          "irc_section": "C3",
+          "cash_grant_amount": 107000,
+          "noncash_assistance_amount": 0,
+          "valuation_method": null,
+          "noncash_assistance_description": null,
+          "purpose_of_grant": "GENERAL SUPPORT"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "filer_ein",
+        "page": 1,
+        "bbox": [
+          0.6592945137409248,
+          0.14583243575750612,
+          0.06064767548532202,
+          0.01470588235294118
+        ],
+        "polygon": null,
+        "reference_text": "52-1759743",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "filer_name",
+        "page": 1,
+        "bbox": [
+          0.21623343650740806,
+          0.14583243575750612,
+          0.24355110014327852,
+          0.01470588235294118
+        ],
+        "polygon": null,
+        "reference_text": "ROTARY CLUB OF ANNAPOLIS FOUNDATION",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "tax_year",
+        "page": 1,
+        "bbox": [
+          0.3377800373115925,
+          0.11764636070899714,
+          0.019655863444010418,
+          0.011437509574142158
+        ],
+        "polygon": null,
+        "reference_text": "2024",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "tax_period_end_date",
+        "page": 1,
+        "bbox": [
+          0.568801533092152,
+          0.16952524621502246,
+          0.05811356053207861,
+          0.01470588235294118
+        ],
+        "polygon": null,
+        "reference_text": "2025-06-30",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grant_records_maintained",
+        "page": 1,
+        "bbox": [
+          0.892333,
+          0.234825,
+          0.015237,
+          0.016213
+        ],
+        "polygon": null,
+        "reference_text": "Yes",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_other_org_count",
+        "page": 1,
+        "bbox": [
+          0.333574,
+          0.548771,
+          0.005616,
+          0.017646
+        ],
+        "polygon": null,
+        "reference_text": "3",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].recipient_name",
+        "page": 1,
+        "bbox": [
+          0.089015,
+          0.329007,
+          0.095252,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "BALTIMORE ROTARY",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].address_line1",
+        "page": 1,
+        "bbox": [
+          0.08901515151515152,
+          0.3553895140005872,
+          0.0962878911182134,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "18 BUCHANAN ROAD",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].city",
+        "page": 1,
+        "bbox": [
+          0.08901515151515152,
+          0.367644515692019,
+          0.056660045276988646,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "BALTIMORE",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].state",
+        "page": 1,
+        "bbox": [
+          0.14830777139374704,
+          0.367644515692019,
+          0.014725376861264017,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "MD",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].zip_code",
+        "page": 1,
+        "bbox": [
+          0.16566571322354404,
+          0.367644515692019,
+          0.02632574601606888,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "21212",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].recipient_ein",
+        "page": 1,
+        "bbox": [
+          0.24975377863103693,
+          0.33087357664419936,
+          0.05681818181818182,
+          0.013884799932342706
+        ],
+        "polygon": null,
+        "reference_text": "52-6054895",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].irc_section",
+        "page": 1,
+        "bbox": [
+          0.33403408166133997,
+          0.33087971007901856,
+          0.012102300470525573,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "C3",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].cash_grant_amount",
+        "page": 1,
+        "bbox": [
+          0.48873762650923297,
+          0.33087357664419936,
+          0.028409090909090908,
+          0.013884799932342729
+        ],
+        "polygon": null,
+        "reference_text": "5,000",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].noncash_assistance_amount",
+        "page": 1,
+        "bbox": [
+          0.6394583962180398,
+          0.33087357664419936,
+          0.005681818181818182,
+          0.013884799932342729
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[0].purpose_of_grant",
+        "page": 1,
+        "bbox": [
+          0.8327070294004498,
+          0.33087971007901856,
+          0.09315629438920459,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "GENERAL SUPPORT",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].recipient_name",
+        "page": 1,
+        "bbox": [
+          0.110587,
+          0.389865,
+          0.038592,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "THE ROTARY FOUNDATION ROTARY INTERNATIONAL",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].address_line1",
+        "page": 1,
+        "bbox": [
+          0.08901515151515152,
+          0.4154386333390778,
+          0.11139488220214844,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "1560 SHERMAN AVENUE",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].city",
+        "page": 1,
+        "bbox": [
+          0.08901515151515152,
+          0.42769353529986215,
+          0.05386649237738714,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "EVANSTON,",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].state",
+        "page": 1,
+        "bbox": [
+          0.14551420886107166,
+          0.42769353529986215,
+          0.007897733437894572,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "IL",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].zip_code",
+        "page": 1,
+        "bbox": [
+          0.1556969652272234,
+          0.42769353529986215,
+          0.02632574601606888,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "60201",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].recipient_ein",
+        "page": 1,
+        "bbox": [
+          0.24975377863103693,
+          0.39092269598268997,
+          0.05681818181818182,
+          0.013884799932342706
+        ],
+        "polygon": null,
+        "reference_text": "36-3245075",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].irc_section",
+        "page": 1,
+        "bbox": [
+          0.33403408166133997,
+          0.39092882941750917,
+          0.012102300470525573,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "C3",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].cash_grant_amount",
+        "page": 1,
+        "bbox": [
+          0.48873762650923297,
+          0.39092269598268997,
+          0.028409090909090908,
+          0.013884799932342729
+        ],
+        "polygon": null,
+        "reference_text": "6,064",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].noncash_assistance_amount",
+        "page": 1,
+        "bbox": [
+          0.6394583962180398,
+          0.39092269598268997,
+          0.005681818181818182,
+          0.013884799932342729
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[1].purpose_of_grant",
+        "page": 1,
+        "bbox": [
+          0.8327070294004498,
+          0.39092882941750917,
+          0.09315629438920459,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "GENERAL SUPPORT",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].recipient_name",
+        "page": 1,
+        "bbox": [
+          0.089015,
+          0.449914,
+          0.080164,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "MARSHALL HOPE CORPORATION",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].address_line1",
+        "page": 1,
+        "bbox": [
+          0.08901515151515152,
+          0.47548765294692097,
+          0.14192234386097302,
+          0.02450980392156865
+        ],
+        "polygon": null,
+        "reference_text": "C/O WEST ANNAPOLIS POP-UP PANTRY",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].city",
+        "page": 1,
+        "bbox": [
+          0.08901515151515152,
+          0.49999745686848956,
+          0.05683712044147529,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "ANNAPOLIS",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].state",
+        "page": 1,
+        "bbox": [
+          0.1484848561913076,
+          0.49999745686848956,
+          0.014725386494337911,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "MD",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].zip_code",
+        "page": 1,
+        "bbox": [
+          0.1658428076541785,
+          0.49999745686848956,
+          0.02632574601606888,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "21401",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].recipient_ein",
+        "page": 1,
+        "bbox": [
+          0.24975377863103693,
+          0.45097171559053306,
+          0.05681818181818182,
+          0.013884799932342706
+        ],
+        "polygon": null,
+        "reference_text": "85-2700300",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].irc_section",
+        "page": 1,
+        "bbox": [
+          0.33403408166133997,
+          0.4509778490253523,
+          0.012102300470525573,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "C3",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].cash_grant_amount",
+        "page": 1,
+        "bbox": [
+          0.4773721405954072,
+          0.45097171559053306,
+          0.03977272727272727,
+          0.013884799932342729
+        ],
+        "polygon": null,
+        "reference_text": "107,000",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].noncash_assistance_amount",
+        "page": 1,
+        "bbox": [
+          0.6394583962180398,
+          0.45097171559053306,
+          0.005681818181818182,
+          0.013884799932342729
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "grants[2].purpose_of_grant",
+        "page": 1,
+        "bbox": [
+          0.8327070294004498,
+          0.4509778490253523,
+          0.09315629438920459,
+          0.012254901960784326
+        ],
+        "polygon": null,
+        "reference_text": "GENERAL SUPPORT",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:51:29.677194Z",
+  "completed_at": "2026-09-21T14:51:29.677194Z",
+  "latency_in_ms": 168
+}

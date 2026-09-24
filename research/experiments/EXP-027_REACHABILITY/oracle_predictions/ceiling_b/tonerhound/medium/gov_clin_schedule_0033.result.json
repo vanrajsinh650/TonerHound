@@ -1,0 +1,1442 @@
+{
+  "request": {
+    "example_id": "medium/gov_clin_schedule_0033",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/gov_clin_schedule_0033.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 86,
+    "ocr_pages": 0,
+    "num_pages": 50
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/gov_clin_schedule_0033",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "contract_number": "W911QY20C0047",
+      "effective_date": "17 APR 2020",
+      "total_amount": "$6,305,320.00",
+      "clin_line_items": [
+        {
+          "item_no": "0001",
+          "supplies_services": "Face Covering - ReadyOne",
+          "quantity": null,
+          "unit": "Each",
+          "unit_price": null,
+          "amount": "$11,600.00",
+          "contract_type": "FFP",
+          "purchase_request_number": "0011487274",
+          "psc_code": "8415",
+          "acrn": "AA",
+          "cin": "GFEBS001148727400010",
+          "net_amount": "$11,600.00"
+        },
+        {
+          "item_no": "0002",
+          "supplies_services": "Face Covering - IOB Greensboro",
+          "quantity": null,
+          "unit": "Each",
+          "unit_price": null,
+          "amount": "$11,600.00",
+          "contract_type": "FFP",
+          "purchase_request_number": "0011487274",
+          "psc_code": "8415",
+          "acrn": "AA",
+          "cin": "GFEBS001148727400020",
+          "net_amount": "$11,600.00"
+        },
+        {
+          "item_no": "0003",
+          "supplies_services": "CDRL A001: Manufacturability Report",
+          "quantity": "(b)",
+          "unit": "Each",
+          "unit_price": null,
+          "amount": "NSP",
+          "contract_type": "FFP",
+          "purchase_request_number": null,
+          "psc_code": "8415",
+          "acrn": null,
+          "cin": null,
+          "net_amount": null
+        },
+        {
+          "item_no": "000101",
+          "supplies_services": "Funding for CLIN 0001 / ACRN AB",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "$0.00",
+          "contract_type": "FFP",
+          "purchase_request_number": "0011491100",
+          "psc_code": null,
+          "acrn": "AB",
+          "cin": "GFEBS001149110000010",
+          "net_amount": "$0.00"
+        },
+        {
+          "item_no": "000201",
+          "supplies_services": "Funding for CLIN 0002 / ACRN AB",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "$0.00",
+          "contract_type": "FFP",
+          "purchase_request_number": "0011491100",
+          "psc_code": null,
+          "acrn": "AB",
+          "cin": "GFEBS001149110000020",
+          "net_amount": "$0.00"
+        },
+        {
+          "item_no": "0004",
+          "supplies_services": "Face Covering / Type II / ReadyOne",
+          "quantity": null,
+          "unit": "Each",
+          "unit_price": null,
+          "amount": "$1,188,997.50",
+          "contract_type": "FFP",
+          "purchase_request_number": "0011494049",
+          "psc_code": "8415",
+          "acrn": "AB",
+          "cin": "GFEBS001149404900001",
+          "net_amount": "$1,188,997.50"
+        },
+        {
+          "item_no": "0005",
+          "supplies_services": "Face Covering / Type II / Greensboro",
+          "quantity": null,
+          "unit": "Each",
+          "unit_price": null,
+          "amount": "$1,188,997.50",
+          "contract_type": "FFP",
+          "purchase_request_number": "0011494049",
+          "psc_code": "8415",
+          "acrn": "AB",
+          "cin": "GFEBS001149404900002",
+          "net_amount": "$1,188,997.50"
+        },
+        {
+          "item_no": "0006",
+          "supplies_services": "Face Covering / Type I / ReadyOne",
+          "quantity": null,
+          "unit": "Each",
+          "unit_price": null,
+          "amount": "$1,952,062.50",
+          "contract_type": "FFP",
+          "purchase_request_number": "0011494143-0002",
+          "psc_code": "8415",
+          "acrn": "AC",
+          "cin": "GFEBS001149414300001",
+          "net_amount": "$1,952,062.50"
+        },
+        {
+          "item_no": "0007",
+          "supplies_services": "Face Covering / Type II / Greensboro",
+          "quantity": null,
+          "unit": "Each",
+          "unit_price": null,
+          "amount": "$1,952,062.50",
+          "contract_type": "FFP",
+          "purchase_request_number": "0011494143-0002",
+          "psc_code": "8415",
+          "acrn": "AC",
+          "cin": "GFEBS001149414300002",
+          "net_amount": "$1,952,062.50"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "contract_number",
+        "page": 1,
+        "bbox": [
+          0.062353,
+          0.108114,
+          0.103529,
+          0.011045
+        ],
+        "polygon": null,
+        "reference_text": "W911QY20C0047",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "effective_date",
+        "page": 1,
+        "bbox": [
+          0.475882,
+          0.104398,
+          0.087059,
+          0.011659
+        ],
+        "polygon": null,
+        "reference_text": "17 APR 2020",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].item_no",
+        "page": 2,
+        "bbox": [
+          0.083725,
+          0.183976,
+          0.032813,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0001",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].supplies_services",
+        "page": 2,
+        "bbox": [
+          0.173529,
+          0.198521,
+          0.177942,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Face Covering - ReadyOne",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].unit",
+        "page": 2,
+        "bbox": [
+          0.491929,
+          0.183976,
+          0.032613,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Each",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].amount",
+        "page": 2,
+        "bbox": [
+          0.867281,
+          0.183976,
+          0.073747,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "$11,600.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].contract_type",
+        "page": 2,
+        "bbox": [
+          0.173529,
+          0.213067,
+          0.026997,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "FFP",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].purchase_request_number",
+        "page": 2,
+        "bbox": [
+          0.083725,
+          0.183791,
+          0.857302,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0011487274",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].psc_code",
+        "page": 2,
+        "bbox": [
+          0.083725,
+          0.183791,
+          0.857302,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "8415",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].acrn",
+        "page": 2,
+        "bbox": [
+          0.083725,
+          0.183791,
+          0.857302,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "AA",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].cin",
+        "page": 2,
+        "bbox": [
+          0.083726,
+          0.183791,
+          0.032813,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "GFEBS001148727400010",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[0].net_amount",
+        "page": 2,
+        "bbox": [
+          0.867281,
+          0.183976,
+          0.073747,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "$11,600.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[1].item_no",
+        "page": 2,
+        "bbox": [
+          0.083726,
+          0.530491,
+          0.032813,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0002",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[1].supplies_services",
+        "page": 2,
+        "bbox": [
+          0.173529,
+          0.545036,
+          0.217655,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Face Covering - IOB Greensboro",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[1].unit",
+        "page": 2,
+        "bbox": [
+          0.491929,
+          0.530491,
+          0.032613,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Each",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[1].amount",
+        "page": 2,
+        "bbox": [
+          0.867281,
+          0.530491,
+          0.073747,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "$11,600.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[1].contract_type",
+        "page": 2,
+        "bbox": [
+          0.173529,
+          0.55943,
+          0.026997,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "FFP",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[1].purchase_request_number",
+        "page": 2,
+        "bbox": [
+          0.083726,
+          0.530306,
+          0.857302,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0011487274",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[1].psc_code",
+        "page": 2,
+        "bbox": [
+          0.083726,
+          0.530306,
+          0.857302,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "8415",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[1].acrn",
+        "page": 2,
+        "bbox": [
+          0.083726,
+          0.530306,
+          0.857302,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "AA",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[1].cin",
+        "page": 2,
+        "bbox": [
+          0.083726,
+          0.530306,
+          0.032813,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "GFEBS001148727400020",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[1].net_amount",
+        "page": 2,
+        "bbox": [
+          0.867281,
+          0.530491,
+          0.073747,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "$11,600.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[2].item_no",
+        "page": 3,
+        "bbox": [
+          0.083725,
+          0.116158,
+          0.032813,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0003",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[2].supplies_services",
+        "page": 3,
+        "bbox": [
+          0.173529,
+          0.130703,
+          0.258827,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "CDRL A001: Manufacturability Report",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[2].quantity",
+        "page": 3,
+        "bbox": [
+          0.398581,
+          0.11714,
+          0.002662,
+          0.009
+        ],
+        "polygon": null,
+        "reference_text": "(b)",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[2].unit",
+        "page": 3,
+        "bbox": [
+          0.491928,
+          0.116158,
+          0.032713,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Each",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[2].amount",
+        "page": 3,
+        "bbox": [
+          0.910881,
+          0.116158,
+          0.030019,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "NSP",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[2].contract_type",
+        "page": 3,
+        "bbox": [
+          0.173529,
+          0.145248,
+          0.026997,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "FFP",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[2].psc_code",
+        "page": 3,
+        "bbox": [
+          0.237755,
+          0.203279,
+          0.032813,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "8415",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[3].item_no",
+        "page": 28,
+        "bbox": [
+          0.224953,
+          0.514533,
+          0.046492,
+          0.011734
+        ],
+        "polygon": null,
+        "reference_text": "000101",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[3].supplies_services",
+        "page": 28,
+        "bbox": [
+          0.173791,
+          0.571859,
+          0.240405,
+          0.015525
+        ],
+        "polygon": null,
+        "reference_text": "Funding for CLIN 0001 / ACRN AB",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[3].amount",
+        "page": 28,
+        "bbox": [
+          0.905198,
+          0.557339,
+          0.035293,
+          0.013544
+        ],
+        "polygon": null,
+        "reference_text": "$0.00",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[3].contract_type",
+        "page": 28,
+        "bbox": [
+          0.173791,
+          0.587284,
+          0.026483,
+          0.011307
+        ],
+        "polygon": null,
+        "reference_text": "FFP",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[3].purchase_request_number",
+        "page": 28,
+        "bbox": [
+          0.419588,
+          0.616145,
+          0.080663,
+          0.011768
+        ],
+        "polygon": null,
+        "reference_text": "0011491100",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[3].cin",
+        "page": 28,
+        "bbox": [
+          0.210875,
+          0.733174,
+          0.172275,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "GFEBS001149110000010",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[3].net_amount",
+        "page": 28,
+        "bbox": [
+          0.905198,
+          0.557339,
+          0.035293,
+          0.013544
+        ],
+        "polygon": null,
+        "reference_text": "$0.00",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[4].item_no",
+        "page": 29,
+        "bbox": [
+          0.083726,
+          0.294765,
+          0.032813,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "000201",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[4].supplies_services",
+        "page": 29,
+        "bbox": [
+          0.209108,
+          0.294765,
+          0.032649,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "Funding for CLIN 0002 / ACRN AB",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[4].amount",
+        "page": 29,
+        "bbox": [
+          0.867281,
+          0.294765,
+          0.073747,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "$0.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[4].contract_type",
+        "page": 29,
+        "bbox": [
+          0.174143,
+          0.294765,
+          0.209008,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "FFP",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[4].purchase_request_number",
+        "page": 29,
+        "bbox": [
+          0.174143,
+          0.294765,
+          0.209008,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "0011491100",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[4].acrn",
+        "page": 29,
+        "bbox": [
+          0.174143,
+          0.294765,
+          0.209008,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "AB",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[4].cin",
+        "page": 29,
+        "bbox": [
+          0.210875,
+          0.294765,
+          0.172275,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "GFEBS001149110000020",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[4].net_amount",
+        "page": 29,
+        "bbox": [
+          0.867281,
+          0.294765,
+          0.073747,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "$0.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[5].item_no",
+        "page": 29,
+        "bbox": [
+          0.084428,
+          0.39427,
+          0.031531,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0004",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[5].supplies_services",
+        "page": 29,
+        "bbox": [
+          0.173791,
+          0.409955,
+          0.238052,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Face Covering / Type II / ReadyOne",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[5].unit",
+        "page": 29,
+        "bbox": [
+          0.492436,
+          0.394169,
+          0.032142,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Each",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[5].amount",
+        "page": 29,
+        "bbox": [
+          0.84792,
+          0.394985,
+          0.092542,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "$1,188,997.50",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[5].contract_type",
+        "page": 29,
+        "bbox": [
+          0.173791,
+          0.423271,
+          0.026483,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "FFP",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[5].purchase_request_number",
+        "page": 29,
+        "bbox": [
+          0.084428,
+          0.394352,
+          0.856033,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0011494049",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[5].psc_code",
+        "page": 29,
+        "bbox": [
+          0.084428,
+          0.394352,
+          0.856033,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "8415",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[5].acrn",
+        "page": 29,
+        "bbox": [
+          0.084428,
+          0.394352,
+          0.856033,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "AB",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[5].cin",
+        "page": 29,
+        "bbox": [
+          0.083726,
+          0.394352,
+          0.032813,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "GFEBS001149404900001",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[5].net_amount",
+        "page": 29,
+        "bbox": [
+          0.84792,
+          0.394985,
+          0.092542,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "$1,188,997.50",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[6].item_no",
+        "page": 29,
+        "bbox": [
+          0.083726,
+          0.410192,
+          0.032813,
+          0.015525
+        ],
+        "polygon": null,
+        "reference_text": "0005",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[6].supplies_services",
+        "page": 29,
+        "bbox": [
+          0.173791,
+          0.410192,
+          0.156359,
+          0.015525
+        ],
+        "polygon": null,
+        "reference_text": "Face Covering / Type II",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[6].unit",
+        "page": 29,
+        "bbox": [
+          0.491929,
+          0.410192,
+          0.032613,
+          0.015525
+        ],
+        "polygon": null,
+        "reference_text": "Each",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[6].amount",
+        "page": 29,
+        "bbox": [
+          0.867281,
+          0.410192,
+          0.073747,
+          0.015525
+        ],
+        "polygon": null,
+        "reference_text": "$1,188,997.50",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[6].contract_type",
+        "page": 29,
+        "bbox": [
+          0.173791,
+          0.423508,
+          0.026483,
+          0.015525
+        ],
+        "polygon": null,
+        "reference_text": "FFP",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[6].purchase_request_number",
+        "page": 29,
+        "bbox": [
+          0.173791,
+          0.410192,
+          0.238052,
+          0.015525
+        ],
+        "polygon": null,
+        "reference_text": "0011494049",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[6].psc_code",
+        "page": 29,
+        "bbox": [
+          0.173791,
+          0.410192,
+          0.238052,
+          0.015525
+        ],
+        "polygon": null,
+        "reference_text": "8415",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[6].acrn",
+        "page": 29,
+        "bbox": [
+          0.173791,
+          0.410192,
+          0.238052,
+          0.015525
+        ],
+        "polygon": null,
+        "reference_text": "AB",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[6].cin",
+        "page": 29,
+        "bbox": [
+          0.083726,
+          0.410192,
+          0.032813,
+          0.015525
+        ],
+        "polygon": null,
+        "reference_text": "GFEBS001149404900002",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[6].net_amount",
+        "page": 29,
+        "bbox": [
+          0.867281,
+          0.410192,
+          0.073747,
+          0.015525
+        ],
+        "polygon": null,
+        "reference_text": "$1,188,997.50",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[7].item_no",
+        "page": 29,
+        "bbox": [
+          0.083726,
+          0.468935,
+          0.032813,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "0006",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[7].supplies_services",
+        "page": 29,
+        "bbox": [
+          0.209108,
+          0.468935,
+          0.032649,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "Face Covering / Type I / ReadyOne",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[7].unit",
+        "page": 29,
+        "bbox": [
+          0.491929,
+          0.468935,
+          0.032613,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "Each",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[7].amount",
+        "page": 29,
+        "bbox": [
+          0.867281,
+          0.468935,
+          0.073747,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "$1,952,062.50",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[7].contract_type",
+        "page": 29,
+        "bbox": [
+          0.173333,
+          0.468935,
+          0.163433,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "FFP",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[7].purchase_request_number",
+        "page": 29,
+        "bbox": [
+          0.173333,
+          0.468935,
+          0.163433,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "0011494143-0002",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[7].psc_code",
+        "page": 29,
+        "bbox": [
+          0.173333,
+          0.468935,
+          0.163433,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "8415",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[7].acrn",
+        "page": 29,
+        "bbox": [
+          0.173333,
+          0.468935,
+          0.163433,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "AC",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[7].cin",
+        "page": 29,
+        "bbox": [
+          0.083726,
+          0.468935,
+          0.032813,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "GFEBS001149414300001",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[7].net_amount",
+        "page": 29,
+        "bbox": [
+          0.867281,
+          0.468935,
+          0.073747,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "$1,952,062.50",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[8].item_no",
+        "page": 29,
+        "bbox": [
+          0.083726,
+          0.512507,
+          0.032813,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "0007",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[8].supplies_services",
+        "page": 29,
+        "bbox": [
+          0.209108,
+          0.512507,
+          0.032649,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "Face Covering / Type II / Greensboro",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[8].unit",
+        "page": 29,
+        "bbox": [
+          0.491929,
+          0.512507,
+          0.032613,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "Each",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[8].amount",
+        "page": 29,
+        "bbox": [
+          0.867281,
+          0.512507,
+          0.073747,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "$1,952,062.50",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[8].contract_type",
+        "page": 29,
+        "bbox": [
+          0.173807,
+          0.512507,
+          0.0958,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "FFP",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[8].purchase_request_number",
+        "page": 29,
+        "bbox": [
+          0.173807,
+          0.512507,
+          0.0958,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "0011494143-0002",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[8].psc_code",
+        "page": 29,
+        "bbox": [
+          0.238966,
+          0.512494,
+          0.030642,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "8415",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[8].acrn",
+        "page": 29,
+        "bbox": [
+          0.173807,
+          0.512507,
+          0.0958,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "AC",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[8].cin",
+        "page": 29,
+        "bbox": [
+          0.083726,
+          0.512507,
+          0.032813,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "GFEBS001149414300002",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[8].net_amount",
+        "page": 29,
+        "bbox": [
+          0.867281,
+          0.512507,
+          0.073747,
+          0.011802
+        ],
+        "polygon": null,
+        "reference_text": "$1,952,062.50",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_amount",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "$6,305,320.00",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[3].acrn",
+        "page": 28,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "AB",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:47:42.769663Z",
+  "completed_at": "2026-09-21T14:47:42.769663Z",
+  "latency_in_ms": 308
+}

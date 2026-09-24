@@ -1,0 +1,392 @@
+{
+  "request": {
+    "example_id": "medium/sysco_earnings_deck_q2fy26",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/sysco_earnings_deck_q2fy26.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 23,
+    "ocr_pages": 0,
+    "num_pages": 34
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/sysco_earnings_deck_q2fy26",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "period": "Q2 FY2026",
+      "currency": "USD",
+      "fiscal_period_end_date": "2025-12-27",
+      "total_revenue": 20762,
+      "revenue_growth_yoy": 3.0,
+      "gross_profit": 3792,
+      "operating_income": 692.0,
+      "net_income": 389.0,
+      "adjusted_ebitda": 1001.0,
+      "gaap_eps_diluted": 0.81,
+      "adjusted_eps_diluted": 0.99,
+      "gross_margin": 18.26,
+      "operating_margin": 3.33,
+      "free_cash_flow": null,
+      "segments": [
+        {
+          "segment_name": "U.S. FOODSERVICE OPERATIONS",
+          "segment_revenue": 14383,
+          "segment_profit": 820.0
+        },
+        {
+          "segment_name": "INTERNATIONAL FOODSERVICE OPERATIONS",
+          "segment_revenue": 3999,
+          "segment_profit": 117.0
+        },
+        {
+          "segment_name": "SYGMA",
+          "segment_revenue": 2126,
+          "segment_profit": 21
+        },
+        {
+          "segment_name": "GLOBAL SUPPORT CENTER",
+          "segment_revenue": null,
+          "segment_profit": -272
+        },
+        {
+          "segment_name": "OTHER",
+          "segment_revenue": 254,
+          "segment_profit": 6
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "total_revenue",
+        "page": 25,
+        "bbox": [
+          0.499161,
+          0.637355,
+          0.063382,
+          0.014678
+        ],
+        "polygon": null,
+        "reference_text": "$20,762",
+        "confidence": 0.7561598067376607,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gross_profit",
+        "page": 25,
+        "bbox": [
+          0.499161,
+          0.650673,
+          0.063398,
+          0.014678
+        ],
+        "polygon": null,
+        "reference_text": "$3,792",
+        "confidence": 0.8322062906571347,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operating_income",
+        "page": 25,
+        "bbox": [
+          0.499161,
+          0.758605,
+          0.063405,
+          0.016074
+        ],
+        "polygon": null,
+        "reference_text": "$692",
+        "confidence": 0.890086812476978,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "net_income",
+        "page": 27,
+        "bbox": [
+          0.509936,
+          0.338597,
+          0.080916,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$389",
+        "confidence": 0.8353836720682857,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "adjusted_ebitda",
+        "page": 27,
+        "bbox": [
+          0.509936,
+          0.481049,
+          0.080907,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$1,001",
+        "confidence": 0.8790290004546776,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gaap_eps_diluted",
+        "page": 23,
+        "bbox": [
+          0.544017,
+          0.411208,
+          0.049344,
+          0.017976
+        ],
+        "polygon": null,
+        "reference_text": "$0.81",
+        "confidence": 0.8663528735193367,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "adjusted_eps_diluted",
+        "page": 23,
+        "bbox": [
+          0.544017,
+          0.491795,
+          0.049344,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$0.99",
+        "confidence": 0.8354216499252779,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gross_margin",
+        "page": 25,
+        "bbox": [
+          0.540438,
+          0.664509,
+          0.017372,
+          0.014082
+        ],
+        "polygon": null,
+        "reference_text": "18.26%",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operating_margin",
+        "page": 23,
+        "bbox": [
+          0.572021,
+          0.233319,
+          0.01586,
+          0.017246
+        ],
+        "polygon": null,
+        "reference_text": "3.33%",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[0].segment_name",
+        "page": 24,
+        "bbox": [
+          0.201663,
+          0.252637,
+          0.596831,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "U.S. FOODSERVICE OPERATIONS",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[0].segment_revenue",
+        "page": 24,
+        "bbox": [
+          0.540287,
+          0.252329,
+          0.022256,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "14,383",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[1].segment_name",
+        "page": 24,
+        "bbox": [
+          0.201738,
+          0.477309,
+          0.596755,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "INTERNATIONAL FOODSERVICE OPERATIONS",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[1].segment_revenue",
+        "page": 24,
+        "bbox": [
+          0.544293,
+          0.477001,
+          0.018266,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "3,999",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[2].segment_name",
+        "page": 25,
+        "bbox": [
+          0.201663,
+          0.207873,
+          0.596831,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "SYGMA",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[2].segment_revenue",
+        "page": 25,
+        "bbox": [
+          0.544293,
+          0.207577,
+          0.018266,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "2,126",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[3].segment_name",
+        "page": 25,
+        "bbox": [
+          0.201663,
+          0.225919,
+          0.596831,
+          0.011907
+        ],
+        "polygon": null,
+        "reference_text": "GLOBAL SUPPORT CENTER",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[4].segment_name",
+        "page": 25,
+        "bbox": [
+          0.201738,
+          0.302814,
+          0.024219,
+          0.014082
+        ],
+        "polygon": null,
+        "reference_text": "OTHER",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[4].segment_revenue",
+        "page": 25,
+        "bbox": [
+          0.550566,
+          0.328415,
+          0.012001,
+          0.014082
+        ],
+        "polygon": null,
+        "reference_text": "254",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[0].segment_profit",
+        "page": 24,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "820.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[1].segment_profit",
+        "page": 24,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "117.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[2].segment_profit",
+        "page": 25,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "21",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[3].segment_profit",
+        "page": 25,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "-272",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[4].segment_profit",
+        "page": 25,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "6",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:50:00.474937Z",
+  "completed_at": "2026-09-21T14:50:00.474937Z",
+  "latency_in_ms": 421
+}

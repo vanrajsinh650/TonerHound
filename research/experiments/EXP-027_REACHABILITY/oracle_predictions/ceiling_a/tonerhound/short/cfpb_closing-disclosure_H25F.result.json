@@ -1,0 +1,447 @@
+{
+  "request": {
+    "example_id": "short/cfpb_closing-disclosure_H25F",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/cfpb_closing-disclosure_H25F.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 23,
+    "ocr_pages": 0,
+    "num_pages": 2
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/cfpb_closing-disclosure_H25F",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "date_issued": null,
+      "closing_date": null,
+      "disbursement_date": null,
+      "settlement_agent": null,
+      "file_number": null,
+      "property_address": null,
+      "sale_price": null,
+      "appraised_property_value": null,
+      "borrower_name": null,
+      "seller_name": null,
+      "lender_name": null,
+      "loan_term": null,
+      "purpose": "Refinance",
+      "product": null,
+      "loan_type": null,
+      "loan_id": null,
+      "mic_number": null,
+      "loan_amount": null,
+      "interest_rate": null,
+      "monthly_principal_and_interest": null,
+      "prepayment_penalty": null,
+      "prepayment_penalty_detail": null,
+      "balloon_payment": null,
+      "estimated_total_monthly_payment_first_period": null,
+      "estimated_total_monthly_payment_second_period": null,
+      "estimated_taxes_insurance_assessments": null,
+      "closing_costs_total": "$5,977.57",
+      "closing_costs_loan_costs_portion": null,
+      "closing_costs_other_costs_portion": null,
+      "lender_credits": "$500.00",
+      "cash_to_close": "$29,677.43",
+      "total_of_payments": null,
+      "finance_charge": null,
+      "amount_financed": null,
+      "annual_percentage_rate": null,
+      "total_interest_percentage": null,
+      "assumption": null,
+      "demand_feature": null,
+      "negative_amortization": null,
+      "partial_payments": null,
+      "escrow_account": null,
+      "liability_after_foreclosure": null,
+      "loan_costs": null,
+      "other_costs": null,
+      "cash_to_close_grid": [
+        {
+          "line_label": "Loan Amount",
+          "loan_estimate": "$150,000.00",
+          "final": "$150,000.00",
+          "did_change": "NO"
+        },
+        {
+          "line_label": "Total Closing Costs (J)",
+          "loan_estimate": "\u2013 $5,099.00",
+          "final": "\u2013 $5,977.57",
+          "did_change": "YES"
+        },
+        {
+          "line_label": "Closing Costs Paid Before Closing",
+          "loan_estimate": "$0",
+          "final": "$655.00",
+          "did_change": "YES"
+        },
+        {
+          "line_label": "Total Payoffs and Payments (K)",
+          "loan_estimate": "\u2013 $120,000.00",
+          "final": "\u2013 $115,000.00",
+          "did_change": "YES"
+        },
+        {
+          "line_label": "Cash to Close",
+          "loan_estimate": "$24,901.00",
+          "final": "$29,677.43",
+          "did_change": null
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "closing_costs_total",
+        "page": 2,
+        "bbox": [
+          0.676785,
+          0.185197,
+          0.058627,
+          0.02503
+        ],
+        "polygon": null,
+        "reference_text": "$5,977.57",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lender_credits",
+        "page": 2,
+        "bbox": [
+          0.655831,
+          0.238975,
+          0.043726,
+          0.024283
+        ],
+        "polygon": null,
+        "reference_text": "$500.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close",
+        "page": 2,
+        "bbox": [
+          0.425439,
+          0.720667,
+          0.060235,
+          0.024283
+        ],
+        "polygon": null,
+        "reference_text": "$29,677.43",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[0].line_label",
+        "page": 2,
+        "bbox": [
+          0.065737,
+          0.518657,
+          0.075569,
+          0.024283
+        ],
+        "polygon": null,
+        "reference_text": "Loan Amount",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[0].loan_estimate",
+        "page": 2,
+        "bbox": [
+          0.318927,
+          0.518657,
+          0.067072,
+          0.024283
+        ],
+        "polygon": null,
+        "reference_text": "$150,000.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[0].final",
+        "page": 2,
+        "bbox": [
+          0.318927,
+          0.518657,
+          0.067072,
+          0.024283
+        ],
+        "polygon": null,
+        "reference_text": "$150,000.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[0].did_change",
+        "page": 2,
+        "bbox": [
+          0.500508,
+          0.517909,
+          0.018654,
+          0.02503
+        ],
+        "polygon": null,
+        "reference_text": "NO",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[1].line_label",
+        "page": 2,
+        "bbox": [
+          0.065737,
+          0.559061,
+          0.117736,
+          0.024283
+        ],
+        "polygon": null,
+        "reference_text": "Total Closing Costs (J)",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[1].loan_estimate",
+        "page": 2,
+        "bbox": [
+          0.3326,
+          0.604515,
+          0.053399,
+          0.024283
+        ],
+        "polygon": null,
+        "reference_text": "$5,099.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[1].final",
+        "page": 2,
+        "bbox": [
+          0.430639,
+          0.604515,
+          0.053399,
+          0.024283
+        ],
+        "polygon": null,
+        "reference_text": "$5,977.57",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[1].did_change",
+        "page": 2,
+        "bbox": [
+          0.500509,
+          0.558313,
+          0.022209,
+          0.02503
+        ],
+        "polygon": null,
+        "reference_text": "YES",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[2].line_label",
+        "page": 2,
+        "bbox": [
+          0.065737,
+          0.644919,
+          0.184392,
+          0.024283
+        ],
+        "polygon": null,
+        "reference_text": "Closing Costs Paid Before Closing",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[2].loan_estimate",
+        "page": 2,
+        "bbox": [
+          0.372456,
+          0.644919,
+          0.013542,
+          0.024283
+        ],
+        "polygon": null,
+        "reference_text": "$0",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[2].final",
+        "page": 2,
+        "bbox": [
+          0.440312,
+          0.644919,
+          0.043726,
+          0.024283
+        ],
+        "polygon": null,
+        "reference_text": "$655 .00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[2].did_change",
+        "page": 2,
+        "bbox": [
+          0.500509,
+          0.644172,
+          0.022209,
+          0.02503
+        ],
+        "polygon": null,
+        "reference_text": "YES",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[3].line_label",
+        "page": 2,
+        "bbox": [
+          0.065737,
+          0.685323,
+          0.168758,
+          0.024283
+        ],
+        "polygon": null,
+        "reference_text": "Total Payoffs and Payments (K)",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[3].loan_estimate",
+        "page": 2,
+        "bbox": [
+          0.318927,
+          0.685323,
+          0.067072,
+          0.024283
+        ],
+        "polygon": null,
+        "reference_text": "$120,000.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[3].final",
+        "page": 2,
+        "bbox": [
+          0.416966,
+          0.685323,
+          0.067072,
+          0.024283
+        ],
+        "polygon": null,
+        "reference_text": "$115,000.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[3].did_change",
+        "page": 2,
+        "bbox": [
+          0.500509,
+          0.684576,
+          0.022209,
+          0.02503
+        ],
+        "polygon": null,
+        "reference_text": "YES",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[4].line_label",
+        "page": 2,
+        "bbox": [
+          0.064103,
+          0.719929,
+          0.078458,
+          0.02503
+        ],
+        "polygon": null,
+        "reference_text": "Cash to Close",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[4].loan_estimate",
+        "page": 2,
+        "bbox": [
+          0.327397,
+          0.720677,
+          0.060235,
+          0.024283
+        ],
+        "polygon": null,
+        "reference_text": "$24,901 .00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "cash_to_close_grid[4].final",
+        "page": 2,
+        "bbox": [
+          0.425439,
+          0.720667,
+          0.060235,
+          0.024283
+        ],
+        "polygon": null,
+        "reference_text": "$29,677.43",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "purpose",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Refinance",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:51:22.217943Z",
+  "completed_at": "2026-09-21T14:51:22.217943Z",
+  "latency_in_ms": 65
+}

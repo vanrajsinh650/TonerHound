@@ -1,0 +1,82 @@
+{
+  "request": {
+    "example_id": "short/hingham_lowes_receipt",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/hingham_lowes_receipt.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/hingham_lowes_receipt",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "merchant_name": "LOWE'S HOME CENTERS, LLC",
+      "store_number": "1618",
+      "merchant_address": {
+        "street": "729 BRIDGE STREET",
+        "city": "Weymouth",
+        "state": "MA",
+        "zip_code": "02191"
+      },
+      "merchant_phone": "(781) 340-5964",
+      "transaction_date": "2026-01-21",
+      "transaction_time": "08:13",
+      "transaction_id": "11847985",
+      "line_items": [
+        {
+          "line_no": 1,
+          "description": "PS 6-IN JR HACKSAW",
+          "quantity": 1,
+          "unit_price": 8.98,
+          "item_total": 8.98,
+          "sku": "587724"
+        },
+        {
+          "line_no": 2,
+          "description": "GORILLA WALL REPAIR FAST",
+          "quantity": 1,
+          "unit_price": 7.48,
+          "item_total": 7.48,
+          "sku": "6843097"
+        },
+        {
+          "line_no": 3,
+          "description": "PROJECT SOURCE 2-IN BRUSH",
+          "quantity": 1,
+          "unit_price": 3.98,
+          "item_total": 3.98,
+          "sku": "253307"
+        },
+        {
+          "line_no": 4,
+          "description": "SAT NIC 1.875IN X 36IN FL",
+          "quantity": 1,
+          "unit_price": 17.58,
+          "item_total": 17.58,
+          "sku": "574846"
+        }
+      ],
+      "subtotal": 38.02,
+      "tax": 2.38,
+      "total": 40.4,
+      "payment_method": "VISA",
+      "card_last4": "3954",
+      "auth_code": "05391D",
+      "amount_paid": 40.4,
+      "currency": "USD"
+    },
+    "field_citations": []
+  },
+  "started_at": "2026-09-23T19:38:03.771044Z",
+  "completed_at": "2026-09-23T19:38:03.771044Z",
+  "latency_in_ms": 0
+}

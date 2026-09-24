@@ -1,0 +1,107 @@
+{
+  "request": {
+    "example_id": "short/aclu_cdwg_invoice",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/aclu_cdwg_invoice.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/aclu_cdwg_invoice",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "invoice_number": "NF67652",
+      "invoice_type": "standard",
+      "original_invoice_number": null,
+      "date": "2014-07-19",
+      "due_date": "2014-08-18",
+      "purchase_order_number": "95055",
+      "order_number": "FLDQ324",
+      "vendor": {
+        "name": "CDW Government",
+        "address": {
+          "street": "75 Remittance Drive, Suite 1515",
+          "city": "Chicago",
+          "state": "IL",
+          "zip_code": "60675-1515",
+          "country": null
+        },
+        "phone": null,
+        "email": "gachremittance@cdw.com",
+        "tax_id": "36-4230110"
+      },
+      "customer": {
+        "name": "SUDBURY PUBLIC SCHOOLS",
+        "address": {
+          "street": "40 FAIRBANK RD STE C",
+          "city": "SUDBURY",
+          "state": "MA",
+          "zip_code": "01776-5609",
+          "country": null
+        },
+        "phone": null,
+        "email": null,
+        "account_number": "1095519"
+      },
+      "line_items": [
+        {
+          "line_no": 1,
+          "item_code": "2856676",
+          "description": "ACAD GOOGLE CHROME OS MGT LIC+SUP 5Y Manufacturer Part Number: CROSSWDNEDU Electronic distribution - NO MEDIA",
+          "quantity": 455.0,
+          "unit_price": 26.35,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 11989.25
+        }
+      ],
+      "subtotal": 11989.25,
+      "discount_total": null,
+      "tax_total": 0.0,
+      "shipping": 0.0,
+      "total_amount": 11989.25,
+      "payment_terms": "Net 30 Days",
+      "bank_details": {
+        "bank_name": "THE NORTHERN TRUST",
+        "account_number": "91057",
+        "routing_number": "071000152"
+      },
+      "currency": "USD",
+      "notes": null
+    },
+    "field_citations": [
+      {
+        "field_path": "vendor.email",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "customer.address.street",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:38:02.855432Z",
+  "completed_at": "2026-09-23T19:38:02.855432Z",
+  "latency_in_ms": 0
+}

@@ -1,0 +1,581 @@
+{
+  "request": {
+    "example_id": "short/P18-28-54_55",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/P18-28-54_55.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 37,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/P18-28-54_55",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "reporting_period": "January 2013",
+      "operator": "GSI Oil & Gas, Inc.",
+      "operator_no": "337075",
+      "address_street_or_box": "4101 Highway 21 East",
+      "address_city": "Bryan",
+      "address_state": "Texas",
+      "address_zip_code": "77806",
+      "purpose_monthly_report": null,
+      "purpose_corrected_report": false,
+      "purpose_initial_report": null,
+      "purpose_final_report": null,
+      "consolidated_p18_yes": null,
+      "consolidated_p18_no": null,
+      "system_serial_no": "09-0451",
+      "district_and_lease_no": "30684",
+      "gathering_system_facility_name": "George's Creek SWD #1",
+      "county": "Somervall",
+      "rrc_district_no": "09",
+      "distance_from_nearest_town": "67 west to CR 308, Turn right onto 67",
+      "direction_from_nearest_town": "67 west to CR 308, Turn right onto 67",
+      "nearest_town": null,
+      "survey": "J.Matthews Survey",
+      "section": null,
+      "block": null,
+      "abstract_no": "72",
+      "township": null,
+      "league": null,
+      "labor": null,
+      "porcion": null,
+      "share": null,
+      "tract": null,
+      "lot": null,
+      "disposal_api_numbers": null,
+      "disposal_well_lease_and_well_no": null,
+      "disposal_well_uic_no": "12311",
+      "disposal_method_recycling": null,
+      "disposal_method_land_application": null,
+      "disposal_method_discharge": null,
+      "disposal_method_other": null,
+      "disposal_method_other_text": null,
+      "disposal_method_permit_no": null,
+      "sec3_l1_num_oil_gas_wells": "54",
+      "sec3_l2_water_from_producing": "89,036",
+      "sec3_l3_water_from_nonproducing": "1,576",
+      "sec3_l4_total_texas_water": "90,612",
+      "sec3_l5_state_ok": null,
+      "sec3_l5_state_la": null,
+      "sec3_l5_state_nm": null,
+      "sec3_l5_state_other": null,
+      "sec3_l5_state_other_text": null,
+      "sec3_l5_out_of_state_water": null,
+      "sec3_l6_skimmed_total": "58",
+      "sec3_l7_tolerance": "45",
+      "sec3_l8_excess_to_leases": "13",
+      "sec3_l9_slugs_credited": "-0-",
+      "sec3_l10_excess_not_credited": "13",
+      "sec4_l1_storage_beginning": "80",
+      "sec4_l2_skimmed_not_allocated": "58",
+      "sec4_l3_sold": "-0-",
+      "sec4_l4_transferred": null,
+      "sec4_l5_bsw_collected": null,
+      "sec4_l6_storage_end": "138",
+      "signature_present": true,
+      "print_name": "Lisa Casey",
+      "certificate_date": "2-15-13",
+      "title": "Agent",
+      "telephone_area_code": "979",
+      "telephone_number": "778-8850",
+      "email_optional": null,
+      "gatherer_entries": null
+    },
+    "field_citations": [
+      {
+        "field_path": "reporting_period",
+        "page": 1,
+        "bbox": [
+          0.6755162241887905,
+          0.1412894375857339,
+          0.12271386430678466,
+          0.014631915866483769
+        ],
+        "polygon": null,
+        "reference_text": "January 2013",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator",
+        "page": 1,
+        "bbox": [
+          0.08259587020648967,
+          0.13854595336076816,
+          0.18584070796460178,
+          0.013260173754000903
+        ],
+        "polygon": null,
+        "reference_text": "GSI 0il_& Gas, Inc.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_no",
+        "page": 1,
+        "bbox": [
+          0.8914454277286136,
+          0.18564243255601282,
+          0.057817109144542744,
+          0.0105166895290352
+        ],
+        "polygon": null,
+        "reference_text": "337075",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "address_street_or_box",
+        "page": 1,
+        "bbox": [
+          0.08377581120943953,
+          0.1540923639689072,
+          0.19764011799410033,
+          0.013717421124828544
+        ],
+        "polygon": null,
+        "reference_text": "4101 Highway 21 East",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "address_city",
+        "page": 1,
+        "bbox": [
+          0.08200589970501475,
+          0.18518518518518517,
+          0.057227138643067846,
+          0.012345679012345678
+        ],
+        "polygon": null,
+        "reference_text": "Bryan,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "address_state",
+        "page": 1,
+        "bbox": [
+          0.15162241887905606,
+          0.18609967992684043,
+          0.049557522123893805,
+          0.009144947416552363
+        ],
+        "polygon": null,
+        "reference_text": "Texas",
+        "confidence": 0.7898719056724935,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "address_zip_code",
+        "page": 1,
+        "bbox": [
+          0.21179941002949854,
+          0.18564243255601282,
+          0.048377581120943924,
+          0.0105166895290352
+        ],
+        "polygon": null,
+        "reference_text": "77806",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "purpose_corrected_report",
+        "page": 1,
+        "bbox": [
+          0.489676,
+          0.494199,
+          0.014,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "oo",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "system_serial_no",
+        "page": 1,
+        "bbox": [
+          0.8407079646017699,
+          0.2245084590763603,
+          0.06666666666666665,
+          0.010059442158207588
+        ],
+        "polygon": null,
+        "reference_text": "09-0451",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gathering_system_facility_name",
+        "page": 1,
+        "bbox": [
+          0.35752212389380533,
+          0.22267946959304985,
+          0.20766961651917404,
+          0.010973936899862813
+        ],
+        "polygon": null,
+        "reference_text": "._George's Creek SWD #1",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.3870206489675516,
+          0.252400548696845,
+          0.08967551622418879,
+          0.010059442158207588
+        ],
+        "polygon": null,
+        "reference_text": "Somervall",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district_no",
+        "page": 1,
+        "bbox": [
+          0.852035,
+          0.145016,
+          0.056519,
+          0.01358
+        ],
+        "polygon": null,
+        "reference_text": "09",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "distance_from_nearest_town",
+        "page": 1,
+        "bbox": [
+          0.38761061946902653,
+          0.2825788751714678,
+          0.36342182890855457,
+          0.013260173754000903
+        ],
+        "polygon": null,
+        "reference_text": "67 West to CR 308, Turn right onto 67",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "direction_from_nearest_town",
+        "page": 1,
+        "bbox": [
+          0.38761061946902653,
+          0.2825788751714678,
+          0.36342182890855457,
+          0.013260173754000903
+        ],
+        "polygon": null,
+        "reference_text": "67 West to CR 308, Turn right onto 67",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "abstract_no",
+        "page": 1,
+        "bbox": [
+          0.345959,
+          0.249406,
+          0.019115,
+          0.016049
+        ],
+        "polygon": null,
+        "reference_text": "A-72,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "disposal_well_uic_no",
+        "page": 1,
+        "bbox": [
+          0.8,
+          0.3534522176497485,
+          0.048377581120943924,
+          0.010516689529035228
+        ],
+        "polygon": null,
+        "reference_text": "12311",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l1_num_oil_gas_wells",
+        "page": 1,
+        "bbox": [
+          0.734317,
+          0.455487,
+          0.057424,
+          0.01358
+        ],
+        "polygon": null,
+        "reference_text": "\u201454",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l2_water_from_producing",
+        "page": 1,
+        "bbox": [
+          0.863716814159292,
+          0.47233653406492915,
+          0.0985250737463127,
+          0.013260173754000903
+        ],
+        "polygon": null,
+        "reference_text": "89,036",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l4_total_texas_water",
+        "page": 1,
+        "bbox": [
+          0.8625368731563422,
+          0.5020576131687243,
+          0.0985250737463127,
+          0.012802926383173263
+        ],
+        "polygon": null,
+        "reference_text": "90,612",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l7_tolerance",
+        "page": 1,
+        "bbox": [
+          0.862537,
+          0.530095,
+          0.097935,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "45",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l8_excess_to_leases",
+        "page": 1,
+        "bbox": [
+          0.861947,
+          0.545405,
+          0.097935,
+          0.014815
+        ],
+        "polygon": null,
+        "reference_text": "13",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l10_excess_not_credited",
+        "page": 1,
+        "bbox": [
+          0.861357,
+          0.57612,
+          0.097345,
+          0.014198
+        ],
+        "polygon": null,
+        "reference_text": "13",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "district_and_lease_no",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "30684",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "survey",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "J.Matthews Survey",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l3_water_from_nonproducing",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "1,576",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l6_skimmed_total",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "58",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l9_slugs_credited",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "-0-",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec4_l1_storage_beginning",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "80",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec4_l2_skimmed_not_allocated",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "58",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec4_l3_sold",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "-0-",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec4_l6_storage_end",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "138",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "signature_present",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "print_name",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Lisa Casey",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "certificate_date",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "2-15-13",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "title",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Agent",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "telephone_area_code",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "979",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "telephone_number",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "778-8850",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:50:29.801711Z",
+  "completed_at": "2026-09-21T14:50:29.801711Z",
+  "latency_in_ms": 2190
+}

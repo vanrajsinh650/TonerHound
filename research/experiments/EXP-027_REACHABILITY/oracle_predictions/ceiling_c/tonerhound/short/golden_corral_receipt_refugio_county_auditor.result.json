@@ -1,0 +1,108 @@
+{
+  "request": {
+    "example_id": "short/golden_corral_receipt_refugio_county_auditor",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/golden_corral_receipt_refugio_county_auditor.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/golden_corral_receipt_refugio_county_auditor",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "merchant_name": "GOLDEN CORRAL",
+      "store_number": "0938",
+      "merchant_address": null,
+      "merchant_phone": null,
+      "transaction_date": "2015-02-27",
+      "transaction_time": "13:28",
+      "transaction_id": "F-0298",
+      "line_items": [
+        {
+          "line_no": 1,
+          "description": "SR LUNCH BUFFET",
+          "quantity": 1,
+          "unit_price": null,
+          "item_total": 7.99,
+          "sku": null
+        },
+        {
+          "line_no": 2,
+          "description": "SR. LUNCH BUFFET",
+          "quantity": 1,
+          "unit_price": null,
+          "item_total": 7.99,
+          "sku": null
+        },
+        {
+          "line_no": 3,
+          "description": "TEA",
+          "quantity": 1,
+          "unit_price": null,
+          "item_total": 2.29,
+          "sku": null
+        },
+        {
+          "line_no": 4,
+          "description": "TEA",
+          "quantity": 1,
+          "unit_price": null,
+          "item_total": 2.29,
+          "sku": null
+        }
+      ],
+      "subtotal": 20.56,
+      "tax": 1.7,
+      "total": 22.26,
+      "payment_method": "MASTERCARD",
+      "card_last4": "5760",
+      "auth_code": null,
+      "amount_paid": 22.26,
+      "currency": "USD"
+    },
+    "field_citations": [
+      {
+        "field_path": "transaction_time",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "payment_method",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "card_last4",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:38:03.690953Z",
+  "completed_at": "2026-09-23T19:38:03.690953Z",
+  "latency_in_ms": 0
+}

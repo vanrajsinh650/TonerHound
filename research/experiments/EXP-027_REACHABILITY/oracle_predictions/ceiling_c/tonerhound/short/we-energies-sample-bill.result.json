@@ -1,0 +1,61 @@
+{
+  "request": {
+    "example_id": "short/we-energies-sample-bill",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/we-energies-sample-bill.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/we-energies-sample-bill",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "utility_provider": "We Energies",
+      "account_number": "0123456789-00003",
+      "invoice_number": null,
+      "service_number": null,
+      "customer_name": "JOHN Q CUSTOMER",
+      "service_address": "123 MAIN ST NEENAH WI 54956-1802",
+      "bill_date": "02/03/2026",
+      "billing_period_start": "01/05/2026",
+      "billing_period_end": "02/02/2026",
+      "payment_due_date": "02/25/2026",
+      "amount_due": 246.4,
+      "previous_balance": 277.79,
+      "total_current_charges": 246.4,
+      "total_delivery_charges": null,
+      "total_supply_charges": null,
+      "meters": [
+        {
+          "meter_number": "NZT0123456",
+          "service_type": "electric",
+          "current_reading": 40705.0,
+          "previous_reading": 40036.0,
+          "usage_quantity": 669.0,
+          "usage_unit": "kWh"
+        },
+        {
+          "meter_number": "0WG0123456",
+          "service_type": "gas",
+          "current_reading": 1464.0,
+          "previous_reading": 1385.0,
+          "usage_quantity": 83.9,
+          "usage_unit": "therms"
+        }
+      ]
+    },
+    "field_citations": []
+  },
+  "started_at": "2026-09-23T19:38:04.747868Z",
+  "completed_at": "2026-09-23T19:38:04.747868Z",
+  "latency_in_ms": 0
+}

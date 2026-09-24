@@ -1,0 +1,207 @@
+{
+  "request": {
+    "example_id": "medium/baker_hughes_earnings_deck_q4fy25",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/baker_hughes_earnings_deck_q4fy25.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 12,
+    "ocr_pages": 0,
+    "num_pages": 25
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/baker_hughes_earnings_deck_q4fy25",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "period": "Q4 FY2025",
+      "currency": "USD",
+      "fiscal_period_end_date": "2025-12-31",
+      "total_revenue": 7386.0,
+      "revenue_growth_yoy": 0.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 876.0,
+      "adjusted_ebitda": 1337.0,
+      "gaap_eps_diluted": null,
+      "adjusted_eps_diluted": 0.78,
+      "gross_margin": null,
+      "operating_margin": null,
+      "free_cash_flow": 1341.0,
+      "segments": [
+        {
+          "segment_name": "Oilfield Services & Equipment",
+          "segment_revenue": 3572,
+          "segment_profit": 647
+        },
+        {
+          "segment_name": "Industrial & Energy Technology",
+          "segment_revenue": 3814,
+          "segment_profit": 761
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "total_revenue",
+        "page": 21,
+        "bbox": [
+          0.874146,
+          0.604052,
+          0.04008,
+          0.020844
+        ],
+        "polygon": null,
+        "reference_text": "$7,386",
+        "confidence": 0.7614391989832733,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "revenue_growth_yoy",
+        "page": 16,
+        "bbox": [
+          0.461823,
+          0.688,
+          0.010397,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "0.0%",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "net_income",
+        "page": 22,
+        "bbox": [
+          0.879698,
+          0.453515,
+          0.038067,
+          0.020844
+        ],
+        "polygon": null,
+        "reference_text": "$876",
+        "confidence": 0.7721906018517813,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "adjusted_ebitda",
+        "page": 10,
+        "bbox": [
+          0.193448,
+          0.489337,
+          0.026389,
+          0.027378
+        ],
+        "polygon": null,
+        "reference_text": "1,337",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "adjusted_eps_diluted",
+        "page": 23,
+        "bbox": [
+          0.718989,
+          0.938722,
+          0.028247,
+          0.020844
+        ],
+        "polygon": null,
+        "reference_text": "$0.78",
+        "confidence": 0.7590412433041933,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "free_cash_flow",
+        "page": 22,
+        "bbox": [
+          0.879698,
+          0.310367,
+          0.038521,
+          0.020844
+        ],
+        "polygon": null,
+        "reference_text": "$1,341",
+        "confidence": 0.7619323674611195,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[0].segment_name",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Oilfield Services & Equipment",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[0].segment_revenue",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "3572",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[0].segment_profit",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "647",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[1].segment_name",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Industrial & Energy Technology",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[1].segment_revenue",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "3814",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[1].segment_profit",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "761",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:46:27.335492Z",
+  "completed_at": "2026-09-21T14:46:27.335492Z",
+  "latency_in_ms": 121
+}

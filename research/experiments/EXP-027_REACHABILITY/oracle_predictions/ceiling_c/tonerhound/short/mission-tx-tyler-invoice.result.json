@@ -1,0 +1,152 @@
+{
+  "request": {
+    "example_id": "short/mission-tx-tyler-invoice",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/mission-tx-tyler-invoice.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/mission-tx-tyler-invoice",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "invoice_number": "025-479686",
+      "invoice_type": "standard",
+      "original_invoice_number": null,
+      "date": "2024-10-01",
+      "due_date": "2024-10-31",
+      "purchase_order_number": null,
+      "order_number": "189884",
+      "vendor": {
+        "name": "Tyler Technologies, Inc.",
+        "address": {
+          "street": "P.O. Box 203556",
+          "city": "Dallas",
+          "state": "TX",
+          "zip_code": "75320-3556",
+          "country": null
+        },
+        "phone": "1-800-772-2260 Press 2, then 2",
+        "email": "ar@tylertech.com",
+        "tax_id": "75-2303920"
+      },
+      "customer": {
+        "name": "CITY OF MISSION",
+        "address": {
+          "street": "1201 EAST 8TH STREET",
+          "city": "MISSION",
+          "state": "TX",
+          "zip_code": "78572",
+          "country": null
+        },
+        "phone": null,
+        "email": null,
+        "account_number": "43895"
+      },
+      "line_items": [
+        {
+          "line_no": 1,
+          "item_code": null,
+          "description": "Mobile Service Orders Subscription Fees",
+          "quantity": 1.0,
+          "unit_price": 759.69,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 759.69
+        },
+        {
+          "line_no": 2,
+          "item_code": null,
+          "description": "Host Reporting Services",
+          "quantity": 1.0,
+          "unit_price": 3150.0,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 3150.0
+        },
+        {
+          "line_no": 3,
+          "item_code": null,
+          "description": "Community Development Pro Annual Fees",
+          "quantity": 1.0,
+          "unit_price": null,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 1907.85
+        },
+        {
+          "line_no": 4,
+          "item_code": null,
+          "description": "Content Manager Annual Fees",
+          "quantity": 1.0,
+          "unit_price": null,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 16878.75
+        },
+        {
+          "line_no": 5,
+          "item_code": null,
+          "description": "ERP Pro Financials Annual Fees",
+          "quantity": 1.0,
+          "unit_price": null,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 57011.23
+        },
+        {
+          "line_no": 6,
+          "item_code": null,
+          "description": "ERP Pro Utilities Annual Fees",
+          "quantity": 1.0,
+          "unit_price": null,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 49846.3
+        },
+        {
+          "line_no": 7,
+          "item_code": null,
+          "description": "Municipal Justice Annual Fees",
+          "quantity": 1.0,
+          "unit_price": null,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 31581.9
+        },
+        {
+          "line_no": 8,
+          "item_code": null,
+          "description": "Third Party Annual Fees",
+          "quantity": 1.0,
+          "unit_price": null,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 994.35
+        }
+      ],
+      "subtotal": 162130.07,
+      "discount_total": null,
+      "tax_total": 0.0,
+      "shipping": null,
+      "total_amount": 162130.07,
+      "payment_terms": "NET30",
+      "bank_details": null,
+      "currency": "USD",
+      "notes": null
+    },
+    "field_citations": []
+  },
+  "started_at": "2026-09-23T19:38:03.785420Z",
+  "completed_at": "2026-09-23T19:38:03.785420Z",
+  "latency_in_ms": 0
+}

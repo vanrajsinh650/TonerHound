@@ -1,0 +1,190 @@
+{
+  "request": {
+    "example_id": "short/ccc_online_0005_american_family_chevrolet_sonic",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/ccc_online_0005_american_family_chevrolet_sonic.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/ccc_online_0005_american_family_chevrolet_sonic",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "report_reference_number": "101042591",
+      "claim_reference": "01003114989-1",
+      "insurance_company": "AMERICAN FAMILY - AMERICAN STANDARD INS. CO. OF OHIO",
+      "owner_name": "Duckworth, Jonathan",
+      "owner_address": "508a Plainville Rd Sw Plainville, GA 30733-9638",
+      "loss_vehicle_vin": "1G1JC5SH1G4162873",
+      "loss_vehicle_year": 2016,
+      "loss_vehicle_make": "Chevrolet",
+      "loss_vehicle_model": "Sonic",
+      "loss_vehicle_trim": "LT",
+      "loss_vehicle_body_type": "Sedan",
+      "loss_vehicle_odometer": 88745,
+      "loss_incident_date": "02/17/2021",
+      "claim_reported_date": "03/04/2021",
+      "base_vehicle_value": 7689.0,
+      "condition_adjustment": 0.0,
+      "adjusted_vehicle_value": 7689.0,
+      "vehicular_tax": null,
+      "title_registration_fees": null,
+      "deductible": null,
+      "total_settlement": 7689.0,
+      "comparable_vehicles": [
+        {
+          "comp_label": "Comp 1",
+          "vin": "1G1JC5SH2G4114086",
+          "year": 2016,
+          "make": "Chevrolet",
+          "model": "Sonic",
+          "trim": "Lt",
+          "odometer": 110804,
+          "list_price": 7975.0,
+          "adjusted_comparable_value": 7729.0,
+          "source": "Autotrader",
+          "dealer_name": "Rick Hendrick Chevrolet-duluth",
+          "dealer_city": "Duluth",
+          "dealer_state": "GA",
+          "distance_from_loss_miles": 58,
+          "stock_number": "SA10691A",
+          "updated_date": "02/14/2021",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": null,
+          "adjustment_options": null,
+          "adjustment_package": null,
+          "adjustment_condition": null
+        },
+        {
+          "comp_label": "Comp 2",
+          "vin": "1G1JC5SH4G4106880",
+          "year": 2016,
+          "make": "Chevrolet",
+          "model": "Sonic",
+          "trim": "Lt",
+          "odometer": 67054,
+          "list_price": 9950.0,
+          "adjusted_comparable_value": 7877.0,
+          "source": "Autotrader",
+          "dealer_name": "Hardy Chevrolet",
+          "dealer_city": "Gainesville",
+          "dealer_state": "GA",
+          "distance_from_loss_miles": 69,
+          "stock_number": "10583UP",
+          "updated_date": "02/21/2021",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": null,
+          "adjustment_options": null,
+          "adjustment_package": null,
+          "adjustment_condition": null
+        },
+        {
+          "comp_label": "Comp 3",
+          "vin": "1G1JC5SH8G4128011",
+          "year": 2016,
+          "make": "Chevrolet",
+          "model": "Sonic",
+          "trim": "Lt",
+          "odometer": 63329,
+          "list_price": 9991.0,
+          "adjusted_comparable_value": 7952.0,
+          "source": "Autotrader",
+          "dealer_name": "Southtowne Chevrolet Buick Gmc Cadillac",
+          "dealer_city": "Newnan",
+          "dealer_state": "GA",
+          "distance_from_loss_miles": 72,
+          "stock_number": "2Z20051A",
+          "updated_date": "02/21/2021",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": null,
+          "adjustment_options": null,
+          "adjustment_package": null,
+          "adjustment_condition": null
+        }
+      ],
+      "component_conditions": [
+        {
+          "component_name": "Mechanical",
+          "condition_rating": "GOOD",
+          "inspection_notes": "Belts and hoses firm, show minimal wear. Minimal dirt and grease in engine compartment.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Tires",
+          "condition_rating": "GOOD",
+          "inspection_notes": "Based on documentation provided tires appear to be in good condition.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Paint",
+          "condition_rating": "GOOD",
+          "inspection_notes": "Few small deep chips and/or scratches front sheet metal. Based on documentation provided paint appears in good condtition.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Body",
+          "condition_rating": "GOOD",
+          "inspection_notes": "Based on documentation provided body of vehicle in good condition.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Glass",
+          "condition_rating": "GOOD",
+          "inspection_notes": "Light surface scratches and/or pitting. Few chips.",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Interior",
+          "condition_rating": "GOOD",
+          "inspection_notes": "Headliner moderate soiling. Light soiling front seat/carpet. Few light burns from cigarette ash driver carpet. Light soiling rear seat/carpet.",
+          "value_impact": 0
+        }
+      ],
+      "nhtsa_recalls": []
+    },
+    "field_citations": [
+      {
+        "field_path": "loss_vehicle_body_type",
+        "page": 3,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "condition_adjustment",
+        "page": 6,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "total_settlement",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:38:03.062593Z",
+  "completed_at": "2026-09-23T19:38:03.062593Z",
+  "latency_in_ms": 0
+}

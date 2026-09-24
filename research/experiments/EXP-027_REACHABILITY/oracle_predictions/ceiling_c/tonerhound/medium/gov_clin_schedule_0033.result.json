@@ -1,0 +1,200 @@
+{
+  "request": {
+    "example_id": "medium/gov_clin_schedule_0033",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/gov_clin_schedule_0033.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/gov_clin_schedule_0033",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "contract_number": "W911QY20C0047",
+      "effective_date": "17 APR 2020",
+      "total_amount": "$6,305,320.00",
+      "clin_line_items": [
+        {
+          "item_no": "0001",
+          "supplies_services": "Face Covering - ReadyOne",
+          "quantity": null,
+          "unit": "Each",
+          "unit_price": null,
+          "amount": "$11,600.00",
+          "contract_type": "FFP",
+          "purchase_request_number": "0011487274",
+          "psc_code": "8415",
+          "acrn": "AA",
+          "cin": "GFEBS001148727400010",
+          "net_amount": "$11,600.00"
+        },
+        {
+          "item_no": "0002",
+          "supplies_services": "Face Covering - IOB Greensboro",
+          "quantity": null,
+          "unit": "Each",
+          "unit_price": null,
+          "amount": "$11,600.00",
+          "contract_type": "FFP",
+          "purchase_request_number": "0011487274",
+          "psc_code": "8415",
+          "acrn": "AA",
+          "cin": "GFEBS001148727400020",
+          "net_amount": "$11,600.00"
+        },
+        {
+          "item_no": "0003",
+          "supplies_services": "CDRL A001: Manufacturability Report",
+          "quantity": "(b)",
+          "unit": "Each",
+          "unit_price": null,
+          "amount": "NSP",
+          "contract_type": "FFP",
+          "purchase_request_number": null,
+          "psc_code": "8415",
+          "acrn": null,
+          "cin": null,
+          "net_amount": null
+        },
+        {
+          "item_no": "000101",
+          "supplies_services": "Funding for CLIN 0001 / ACRN AB",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "$0.00",
+          "contract_type": "FFP",
+          "purchase_request_number": "0011491100",
+          "psc_code": null,
+          "acrn": "AB",
+          "cin": "GFEBS001149110000010",
+          "net_amount": "$0.00"
+        },
+        {
+          "item_no": "000201",
+          "supplies_services": "Funding for CLIN 0002 / ACRN AB",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "$0.00",
+          "contract_type": "FFP",
+          "purchase_request_number": "0011491100",
+          "psc_code": null,
+          "acrn": "AB",
+          "cin": "GFEBS001149110000020",
+          "net_amount": "$0.00"
+        },
+        {
+          "item_no": "0004",
+          "supplies_services": "Face Covering / Type II / ReadyOne",
+          "quantity": null,
+          "unit": "Each",
+          "unit_price": null,
+          "amount": "$1,188,997.50",
+          "contract_type": "FFP",
+          "purchase_request_number": "0011494049",
+          "psc_code": "8415",
+          "acrn": "AB",
+          "cin": "GFEBS001149404900001",
+          "net_amount": "$1,188,997.50"
+        },
+        {
+          "item_no": "0005",
+          "supplies_services": "Face Covering / Type II / Greensboro",
+          "quantity": null,
+          "unit": "Each",
+          "unit_price": null,
+          "amount": "$1,188,997.50",
+          "contract_type": "FFP",
+          "purchase_request_number": "0011494049",
+          "psc_code": "8415",
+          "acrn": "AB",
+          "cin": "GFEBS001149404900002",
+          "net_amount": "$1,188,997.50"
+        },
+        {
+          "item_no": "0006",
+          "supplies_services": "Face Covering / Type I / ReadyOne",
+          "quantity": null,
+          "unit": "Each",
+          "unit_price": null,
+          "amount": "$1,952,062.50",
+          "contract_type": "FFP",
+          "purchase_request_number": "0011494143-0002",
+          "psc_code": "8415",
+          "acrn": "AC",
+          "cin": "GFEBS001149414300001",
+          "net_amount": "$1,952,062.50"
+        },
+        {
+          "item_no": "0007",
+          "supplies_services": "Face Covering / Type II / Greensboro",
+          "quantity": null,
+          "unit": "Each",
+          "unit_price": null,
+          "amount": "$1,952,062.50",
+          "contract_type": "FFP",
+          "purchase_request_number": "0011494143-0002",
+          "psc_code": "8415",
+          "acrn": "AC",
+          "cin": "GFEBS001149414300002",
+          "net_amount": "$1,952,062.50"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "clin_line_items",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[4].item_no",
+        "page": 29,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[5].item_no",
+        "page": 29,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "clin_line_items[5].purchase_request_number",
+        "page": 29,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:37:53.400097Z",
+  "completed_at": "2026-09-23T19:37:53.400097Z",
+  "latency_in_ms": 0
+}

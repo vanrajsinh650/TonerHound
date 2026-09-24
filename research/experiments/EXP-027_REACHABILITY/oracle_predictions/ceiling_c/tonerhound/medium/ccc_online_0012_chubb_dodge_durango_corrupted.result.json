@@ -1,0 +1,214 @@
+{
+  "request": {
+    "example_id": "medium/ccc_online_0012_chubb_dodge_durango_corrupted",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/ccc_online_0012_chubb_dodge_durango_corrupted.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/ccc_online_0012_chubb_dodge_durango_corrupted",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "report_reference_number": "117460427",
+      "claim_reference": "092024003197-001",
+      "insurance_company": "CHUBB GROUP - FEDERAL INSURANCE COMPANY",
+      "owner_name": "City Of Manchester, Unknown",
+      "owner_address": "14318 Manchester Rd Manchester, MO 63011-4072",
+      "loss_vehicle_vin": "1C4SDJFT7NC135681",
+      "loss_vehicle_year": 2022,
+      "loss_vehicle_make": "Dodge",
+      "loss_vehicle_model": "Durango",
+      "loss_vehicle_trim": "Orange Sport",
+      "loss_vehicle_body_type": "Sports Utility",
+      "loss_vehicle_odometer": null,
+      "loss_incident_date": "01/22/2024",
+      "claim_reported_date": "02/05/2024",
+      "base_vehicle_value": 41700.0,
+      "condition_adjustment": -163.0,
+      "adjusted_vehicle_value": 41537.0,
+      "vehicular_tax": null,
+      "title_registration_fees": null,
+      "deductible": null,
+      "total_settlement": 41537.0,
+      "comparable_vehicles": [
+        {
+          "comp_label": "Comp 1",
+          "vin": "1C4SDJCT2NC229469",
+          "year": 2022,
+          "make": "Dodge",
+          "model": "Durango",
+          "trim": "Orange Sport",
+          "odometer": 16269,
+          "list_price": 46675.0,
+          "adjusted_comparable_value": 40935.0,
+          "source": "Autotrader",
+          "dealer_name": "Sheets Chrysler Jeep Dodge",
+          "dealer_city": "Beckley",
+          "dealer_state": "WV",
+          "distance_from_loss_miles": 510,
+          "stock_number": "N0375A",
+          "updated_date": "01/28/2024",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": -2214.0,
+          "adjustment_options": -200.0,
+          "adjustment_package": null,
+          "adjustment_condition": -3326.0
+        },
+        {
+          "comp_label": "Comp 2",
+          "vin": "1C4SDJCT5NC229238",
+          "year": 2022,
+          "make": "Dodge",
+          "model": "Durango",
+          "trim": "Orange Sport",
+          "odometer": 7689,
+          "list_price": 49998.0,
+          "adjusted_comparable_value": 42125.0,
+          "source": "Inspected Inventory",
+          "dealer_name": "Eau Claire Ford",
+          "dealer_city": "Eau Claire",
+          "dealer_state": "WI",
+          "distance_from_loss_miles": 429,
+          "stock_number": "T24700B",
+          "updated_date": "01/09/2024",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": -3597.0,
+          "adjustment_options": -950.0,
+          "adjustment_package": null,
+          "adjustment_condition": -3326.0
+        }
+      ],
+      "component_conditions": [
+        {
+          "component_name": "Seats",
+          "condition_rating": "AVERAGE",
+          "inspection_notes": null,
+          "value_impact": 0
+        },
+        {
+          "component_name": "Carpets",
+          "condition_rating": "AVERAGE",
+          "inspection_notes": null,
+          "value_impact": 0
+        },
+        {
+          "component_name": "Dashboard",
+          "condition_rating": "AVERAGE",
+          "inspection_notes": null,
+          "value_impact": 0
+        },
+        {
+          "component_name": "Headliner",
+          "condition_rating": "AVERAGE",
+          "inspection_notes": null,
+          "value_impact": 0
+        },
+        {
+          "component_name": "Sheet Metal",
+          "condition_rating": "AVERAGE",
+          "inspection_notes": null,
+          "value_impact": 0
+        },
+        {
+          "component_name": "Trim",
+          "condition_rating": "AVERAGE",
+          "inspection_notes": null,
+          "value_impact": 0
+        },
+        {
+          "component_name": "Paint",
+          "condition_rating": "AVERAGE",
+          "inspection_notes": null,
+          "value_impact": 0
+        },
+        {
+          "component_name": "Glass",
+          "condition_rating": "AVERAGE",
+          "inspection_notes": null,
+          "value_impact": 0
+        },
+        {
+          "component_name": "Engine",
+          "condition_rating": "AVERAGE",
+          "inspection_notes": "unknown mileage",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Transmission",
+          "condition_rating": "AVERAGE",
+          "inspection_notes": "unknown mileage",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Front Tires",
+          "condition_rating": "BELOW AVERAGE",
+          "inspection_notes": "4/32 both",
+          "value_impact": -163
+        },
+        {
+          "component_name": "Rear Tires",
+          "condition_rating": "AVERAGE",
+          "inspection_notes": "5/32 both",
+          "value_impact": 0
+        }
+      ],
+      "nhtsa_recalls": [
+        {
+          "campaign_id": "22V140000",
+          "component": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ ELECTRONIC LIMITED SLIP:CONTROL UNIT/MODULE",
+          "mfg_report_date": "MAR 09, 2022"
+        },
+        {
+          "campaign_id": "22V154000",
+          "component": "STEERING:RACK AND PINION",
+          "mfg_report_date": "MAR 13, 2022"
+        },
+        {
+          "campaign_id": "22V866000",
+          "component": "POWER TRAIN:MANUAL TRANSMISSION:COLUMN SHIFT ASSEMBLY",
+          "mfg_report_date": "NOV 22, 2022"
+        },
+        {
+          "campaign_id": "23V115000",
+          "component": "STRUCTURE:BODY:HATCHBACK/LIFTGATE",
+          "mfg_report_date": "FEB 22, 2023"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "owner_address",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "total_settlement",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:37:53.406924Z",
+  "completed_at": "2026-09-23T19:37:53.406924Z",
+  "latency_in_ms": 0
+}

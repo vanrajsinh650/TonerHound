@@ -1,0 +1,686 @@
+{
+  "request": {
+    "example_id": "short/P18-28-43_44",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/P18-28-43_44.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 41,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/P18-28-43_44",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "reporting_period": "January /20 13",
+      "operator": "Barnett Enviro Mgmt Svcs, LLC",
+      "operator_no": "051292",
+      "address_street_or_box": "3026 Thomas Ave. #J",
+      "address_city": "Dallas",
+      "address_state": "TX",
+      "address_zip_code": "75204",
+      "purpose_monthly_report": null,
+      "purpose_corrected_report": false,
+      "purpose_initial_report": null,
+      "purpose_final_report": null,
+      "consolidated_p18_yes": null,
+      "consolidated_p18_no": null,
+      "system_serial_no": "09-0480",
+      "district_and_lease_no": "30934",
+      "gathering_system_facility_name": "Gordon SWD",
+      "county": "Parker County",
+      "rrc_district_no": "09",
+      "distance_from_nearest_town": "8.7 Miles",
+      "direction_from_nearest_town": "South",
+      "nearest_town": "Perrin",
+      "survey": "T&P RR Co",
+      "section": "266 FNL & 261 FWL",
+      "block": null,
+      "abstract_no": "1541",
+      "township": null,
+      "league": null,
+      "labor": null,
+      "porcion": null,
+      "share": null,
+      "tract": null,
+      "lot": null,
+      "disposal_api_numbers": "367-34072",
+      "disposal_well_lease_and_well_no": "Gordon SWD #1  API# 367-34072",
+      "disposal_well_uic_no": "W-14# 12376 4/17/07",
+      "disposal_method_recycling": null,
+      "disposal_method_land_application": null,
+      "disposal_method_discharge": null,
+      "disposal_method_other": null,
+      "disposal_method_other_text": null,
+      "disposal_method_permit_no": null,
+      "sec3_l1_num_oil_gas_wells": "54",
+      "sec3_l2_water_from_producing": "68,740",
+      "sec3_l3_water_from_nonproducing": "325",
+      "sec3_l4_total_texas_water": "69,065",
+      "sec3_l5_state_ok": null,
+      "sec3_l5_state_la": null,
+      "sec3_l5_state_nm": null,
+      "sec3_l5_state_other": null,
+      "sec3_l5_state_other_text": null,
+      "sec3_l5_out_of_state_water": null,
+      "sec3_l6_skimmed_total": "80",
+      "sec3_l7_tolerance": "34",
+      "sec3_l8_excess_to_leases": "46",
+      "sec3_l9_slugs_credited": "0",
+      "sec3_l10_excess_not_credited": "46",
+      "sec4_l1_storage_beginning": "20",
+      "sec4_l2_skimmed_not_allocated": "80",
+      "sec4_l3_sold": "0",
+      "sec4_l4_transferred": null,
+      "sec4_l5_bsw_collected": null,
+      "sec4_l6_storage_end": "100",
+      "signature_present": true,
+      "print_name": "Will Powers",
+      "certificate_date": "March 20, 2013",
+      "title": "Agent",
+      "telephone_area_code": "512",
+      "telephone_number": "964-7555",
+      "email_optional": null,
+      "gatherer_entries": null
+    },
+    "field_citations": [
+      {
+        "field_path": "operator",
+        "page": 1,
+        "bbox": [
+          0.059587,
+          0.139049,
+          0.166962,
+          0.017284
+        ],
+        "polygon": null,
+        "reference_text": "Barnett Enviro Mgmt",
+        "confidence": 0.75,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_no",
+        "page": 1,
+        "bbox": [
+          0.8578171091445428,
+          0.17695473251028807,
+          0.053097345132743334,
+          0.010059442158207588
+        ],
+        "polygon": null,
+        "reference_text": "051292",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "address_street_or_box",
+        "page": 1,
+        "bbox": [
+          0.0584070796460177,
+          0.1572930955647005,
+          0.16460176991150444,
+          0.010059442158207588
+        ],
+        "polygon": null,
+        "reference_text": "3026 Thomas Ave. #J",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "address_city",
+        "page": 1,
+        "bbox": [
+          0.058997050147492625,
+          0.17375400091449475,
+          0.05191740412979351,
+          0.011888431641518066
+        ],
+        "polygon": null,
+        "reference_text": "Dallas,",
+        "confidence": 0.8061089358716004,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "address_state",
+        "page": 1,
+        "bbox": [
+          0.11563421828908554,
+          0.17375400091449475,
+          0.024778761061946902,
+          0.009602194787379975
+        ],
+        "polygon": null,
+        "reference_text": "TX",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "address_zip_code",
+        "page": 1,
+        "bbox": [
+          0.14985250737463127,
+          0.17329675354366714,
+          0.044247787610619455,
+          0.010059442158207588
+        ],
+        "polygon": null,
+        "reference_text": "75204",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "system_serial_no",
+        "page": 1,
+        "bbox": [
+          0.7781710914454277,
+          0.2062185642432556,
+          0.05958702064896759,
+          0.010059442158207588
+        ],
+        "polygon": null,
+        "reference_text": "09-0480",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gathering_system_facility_name",
+        "page": 1,
+        "bbox": [
+          0.3663716814159292,
+          0.2062185642432556,
+          0.10442477876106199,
+          0.010059442158207588
+        ],
+        "polygon": null,
+        "reference_text": "Gordon SWD",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.5769911504424778,
+          0.2684042066758116,
+          0.1197640117994101,
+          0.012802926383173319
+        ],
+        "polygon": null,
+        "reference_text": "Parker County,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district_no",
+        "page": 1,
+        "bbox": [
+          0.841593,
+          0.140066,
+          0.051622,
+          0.012963
+        ],
+        "polygon": null,
+        "reference_text": "09",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "distance_from_nearest_town",
+        "page": 1,
+        "bbox": [
+          0.3663716814159292,
+          0.2684042066758116,
+          0.06843657817109144,
+          0.009602194787379947
+        ],
+        "polygon": null,
+        "reference_text": "8.7 Miles",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "direction_from_nearest_town",
+        "page": 1,
+        "bbox": [
+          0.4407079646017699,
+          0.2684042066758116,
+          0.0430678466076696,
+          0.009602194787379947
+        ],
+        "polygon": null,
+        "reference_text": "South",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "nearest_town",
+        "page": 1,
+        "bbox": [
+          0.5091445427728614,
+          0.2684042066758116,
+          0.04896755162241884,
+          0.009144947416552363
+        ],
+        "polygon": null,
+        "reference_text": "Perrin",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "survey",
+        "page": 1,
+        "bbox": [
+          0.3209439528023599,
+          0.2345679012345679,
+          0.09498525073746311,
+          0.010059442158207588
+        ],
+        "polygon": null,
+        "reference_text": "T&P RR Co",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "section",
+        "page": 1,
+        "bbox": [
+          0.151622,
+          0.232888,
+          0.164322,
+          0.012963
+        ],
+        "polygon": null,
+        "reference_text": "266 FNL & 261",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "abstract_no",
+        "page": 1,
+        "bbox": [
+          0.447394,
+          0.232807,
+          0.035792,
+          0.01358
+        ],
+        "polygon": null,
+        "reference_text": "A-1541",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "disposal_api_numbers",
+        "page": 1,
+        "bbox": [
+          0.5233038348082596,
+          0.35893918609967995,
+          0.07020648967551624,
+          0.009144947416552363
+        ],
+        "polygon": null,
+        "reference_text": "367-34072",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "disposal_well_lease_and_well_no",
+        "page": 1,
+        "bbox": [
+          0.371681,
+          0.357339,
+          0.221829,
+          0.012346
+        ],
+        "polygon": null,
+        "reference_text": "SWD #1 API# 367-34072",
+        "confidence": 0.75,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "disposal_well_uic_no",
+        "page": 1,
+        "bbox": [
+          0.7604719764011799,
+          0.3584819387288523,
+          0.17050147492625378,
+          0.009144947416552363
+        ],
+        "polygon": null,
+        "reference_text": "W-14# 12376 4/17/07",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l1_num_oil_gas_wells",
+        "page": 1,
+        "bbox": [
+          0.676018,
+          0.430956,
+          0.089764,
+          0.012346
+        ],
+        "polygon": null,
+        "reference_text": "54",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l2_water_from_producing",
+        "page": 1,
+        "bbox": [
+          0.8578171091445428,
+          0.45176040237768633,
+          0.043657817109144514,
+          0.010973936899862813
+        ],
+        "polygon": null,
+        "reference_text": "68,740",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l3_water_from_nonproducing",
+        "page": 1,
+        "bbox": [
+          0.817876,
+          0.465706,
+          0.084189,
+          0.012346
+        ],
+        "polygon": null,
+        "reference_text": "325",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l4_total_texas_water",
+        "page": 1,
+        "bbox": [
+          0.8578171091445428,
+          0.48239597622313674,
+          0.04424778761061943,
+          0.010973936899862813
+        ],
+        "polygon": null,
+        "reference_text": "69,065",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l6_skimmed_total",
+        "page": 1,
+        "bbox": [
+          0.826136,
+          0.496342,
+          0.075929,
+          0.012346
+        ],
+        "polygon": null,
+        "reference_text": "80",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l7_tolerance",
+        "page": 1,
+        "bbox": [
+          0.886136,
+          0.511431,
+          0.015929,
+          0.012346
+        ],
+        "polygon": null,
+        "reference_text": "34",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l8_excess_to_leases",
+        "page": 1,
+        "bbox": [
+          0.826136,
+          0.556779,
+          0.075929,
+          0.011728
+        ],
+        "polygon": null,
+        "reference_text": "46",
+        "confidence": 0.8428394197164877,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l9_slugs_credited",
+        "page": 1,
+        "bbox": [
+          0.834395,
+          0.542147,
+          0.06767,
+          0.011728
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l10_excess_not_credited",
+        "page": 1,
+        "bbox": [
+          0.826136,
+          0.556779,
+          0.075929,
+          0.011728
+        ],
+        "polygon": null,
+        "reference_text": "46",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec4_l1_storage_beginning",
+        "page": 1,
+        "bbox": [
+          0.833805,
+          0.616221,
+          0.075929,
+          0.011728
+        ],
+        "polygon": null,
+        "reference_text": "20",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec4_l2_skimmed_not_allocated",
+        "page": 1,
+        "bbox": [
+          0.834395,
+          0.632144,
+          0.075339,
+          0.012346
+        ],
+        "polygon": null,
+        "reference_text": "80",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec4_l3_sold",
+        "page": 1,
+        "bbox": [
+          0.842655,
+          0.647234,
+          0.06708,
+          0.012346
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec4_l6_storage_end",
+        "page": 1,
+        "bbox": [
+          0.827316,
+          0.66286,
+          0.082419,
+          0.011728
+        ],
+        "polygon": null,
+        "reference_text": "100",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "certificate_date",
+        "page": 1,
+        "bbox": [
+          0.49557522123893805,
+          0.8047553726566072,
+          0.11858407079646016,
+          0.009602194787380003
+        ],
+        "polygon": null,
+        "reference_text": "March 20, 2013",
+        "confidence": 0.772959193586626,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "telephone_area_code",
+        "page": 1,
+        "bbox": [
+          0.5681415929203539,
+          0.8276177411979881,
+          0.02595870206489681,
+          0.010059442158207643
+        ],
+        "polygon": null,
+        "reference_text": "512",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "reporting_period",
+        "page": 1,
+        "bbox": [
+          0.6495575221238938,
+          0.13946044810242342,
+          0.11799410029498525,
+          0.016460905349794247
+        ],
+        "polygon": null,
+        "reference_text": "January /20 13",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "purpose_corrected_report",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "district_and_lease_no",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "30934",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "signature_present",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "print_name",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Will Powers",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "title",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Agent",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "telephone_number",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "964-7555",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:50:27.609593Z",
+  "completed_at": "2026-09-21T14:50:27.609593Z",
+  "latency_in_ms": 1662
+}

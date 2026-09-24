@@ -1,0 +1,944 @@
+{
+  "request": {
+    "example_id": "short/2A-9-156032_107792",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/2A-9-156032_107792.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 64,
+    "ocr_pages": 0,
+    "num_pages": 2
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/2A-9-156032_107792",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "p1_file_no": null,
+      "p1_district_no": null,
+      "p1_company": "CONSOLIDATED OIL COMPANY",
+      "p1_address": "620 HAMILTON BLDG., WICHITA FALLS, TEXAS",
+      "p1_sec_no": "1573",
+      "p1_block_no": null,
+      "p1_survey": "T.E.&L. Co.",
+      "p1_county": "Baylor",
+      "p1_well_no": "Z-5",
+      "p1_name_of_lease": "W. H. Portwood",
+      "p1_no_of_acres": "80",
+      "p1_elev": null,
+      "p1_name_of_field": "Baylor",
+      "p1_located_miles": "5",
+      "p1_located_direction": "SW",
+      "p1_located_from": "Megargel",
+      "p1_form1_filed_in_name_of": null,
+      "p1_drilling_commenced": "5-29-43",
+      "p1_drilling_completed": "6-3-43",
+      "p1_ever_produced_oil": "No",
+      "p1_ever_produced_gas": "No",
+      "p1_character_of_well": "Dry",
+      "p1_total_depth": "1395",
+      "p1_date_wish_to_plug": "June 17, 1943",
+      "p1_party_plugging_well": "Great Northern Pipe & Sup. Co.",
+      "p1_party_plugging_address": "Wichita Falls, Texas.",
+      "p1_correspondence_name": "Consolidated Oil Company",
+      "p1_correspondence_address": "620 Hamilton Bldg., Wichita Falls, Texas.",
+      "p1_init_prod_gas_volume": "None",
+      "p1_init_prod_gas_pressure": null,
+      "p1_init_prod_oil_barrels": "None",
+      "p1_general_remarks": "Casing cemented with 35 sacks. Will pull as much of it as possible.",
+      "p2_file_no": null,
+      "p2_district_no": null,
+      "p2_company": "CONSOLISDATED OIL COMPANY",
+      "p2_address": "620 HAMILTON BLDG., WICHITA FALLS, TEXAS.",
+      "p2_sec_no": "1573",
+      "p2_block_no": null,
+      "p2_survey": "T.E.&.L.Co.",
+      "p2_county": "Baylor",
+      "p2_well_no": "Z-5",
+      "p2_name_of_lease": "W. H. Portwood",
+      "p2_no_of_acres": "80",
+      "p2_elev": null,
+      "p2_name_of_field": "Baylor",
+      "p2_form1_filed_in_name_of": null,
+      "p2_date_well_plugged": "June 17, 1943",
+      "p2_completion_oil": "Dry",
+      "p2_completion_gas": "None",
+      "p2_completion_dry": "Yes",
+      "p2_amount_plugged_oil": "None",
+      "p2_amount_plugged_gas": null,
+      "p2_amount_plugged_water": null,
+      "p2_ever_produced_oil_or_gas": "No",
+      "p2_total_depth": "1395",
+      "p2_top_of_producing_sand": "None",
+      "p2_filled_with_mud_laden_fluid": "Yes",
+      "p2_how_mud_applied": "Pump",
+      "p2_were_plugs_used": "No",
+      "p2_was_well_shot": "No",
+      "p2_plugs_detail": null,
+      "p2_depth_thickness_formations": "None",
+      "p2_abandoned_wells_plugged": "Yes",
+      "p2_manner_of_confining": null,
+      "p2_adjacent_owners": "None",
+      "p2_notice_given_adjacent_owners": "No offset operators",
+      "p2_affiant_name": "S. V. White",
+      "p2_affiant_signature_name": "S. V. White",
+      "p2_affiant_title": "Vice President",
+      "p2_sworn_day": "17th",
+      "p2_sworn_month": "June",
+      "p2_sworn_year": "43",
+      "p2_notary_signature": true,
+      "p2_notary_county": "Wichita",
+      "p2_correspondence_name": "Consolidated Oil Company",
+      "p2_correspondence_address": "620 Hamilton Bldg., Wichita Falls, Texas",
+      "casing_tubing_records": [
+        {
+          "size_pipe": "7\"",
+          "put_in_well_ft": "1354",
+          "put_in_well_in": null,
+          "pulled_out_ft": null,
+          "pulled_out_in": null,
+          "left_in_well_ft": null,
+          "left_in_well_in": null,
+          "packers_and_shoes": "35 sacks cement"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "p1_company",
+        "page": 2,
+        "bbox": [
+          0.074468,
+          0.188452,
+          0.429078,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Company._COMSOLISDATED OIL COMPANY.",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_address",
+        "page": 2,
+        "bbox": [
+          0.664894,
+          0.188452,
+          0.330969,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "820 HAMILTON BLDG., WICHITA FALLS,",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_county",
+        "page": 2,
+        "bbox": [
+          0.741726,
+          0.208501,
+          0.060284,
+          0.015764
+        ],
+        "polygon": null,
+        "reference_text": "Baylor",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_no_of_acres",
+        "page": 2,
+        "bbox": [
+          0.818085,
+          0.229459,
+          0.072281,
+          0.01242
+        ],
+        "polygon": null,
+        "reference_text": "80",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_name_of_field",
+        "page": 2,
+        "bbox": [
+          0.741726,
+          0.208501,
+          0.060284,
+          0.015764
+        ],
+        "polygon": null,
+        "reference_text": "Baylor",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_ever_produced_oil",
+        "page": 2,
+        "bbox": [
+          0.106383,
+          0.214891,
+          0.018125,
+          0.009
+        ],
+        "polygon": null,
+        "reference_text": "No.._-",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_ever_produced_gas",
+        "page": 2,
+        "bbox": [
+          0.229314,
+          0.392879,
+          0.04078,
+          0.012898
+        ],
+        "polygon": null,
+        "reference_text": "No",
+        "confidence": 0.8397298676505962,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_character_of_well",
+        "page": 2,
+        "bbox": [
+          0.815012,
+          0.272939,
+          0.045656,
+          0.010032
+        ],
+        "polygon": null,
+        "reference_text": "Dry.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_party_plugging_address",
+        "page": 2,
+        "bbox": [
+          0.798463,
+          0.922479,
+          0.1974,
+          0.013854
+        ],
+        "polygon": null,
+        "reference_text": "Wichita Falls, Texas",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_correspondence_name",
+        "page": 2,
+        "bbox": [
+          0.093842,
+          0.922859,
+          0.336123,
+          0.019108
+        ],
+        "polygon": null,
+        "reference_text": "COnsolidated O1) Compamy",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_correspondence_address",
+        "page": 2,
+        "bbox": [
+          0.590041,
+          0.922175,
+          0.405822,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "00 Hamilton Bldg,, Wichita Falls, Texas",
+        "confidence": 0.8636141671907211,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_init_prod_gas_volume",
+        "page": 2,
+        "bbox": [
+          0.612884,
+          0.485545,
+          0.040189,
+          0.01051
+        ],
+        "polygon": null,
+        "reference_text": "None",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_init_prod_oil_barrels",
+        "page": 2,
+        "bbox": [
+          0.612884,
+          0.485545,
+          0.040189,
+          0.01051
+        ],
+        "polygon": null,
+        "reference_text": "None",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_company",
+        "page": 2,
+        "bbox": [
+          0.074468,
+          0.188452,
+          0.429078,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Company._COMSOLISDATED OIL COMPANY.",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_address",
+        "page": 2,
+        "bbox": [
+          0.6648936170212766,
+          0.1886058032554848,
+          0.33096926713947994,
+          0.017692852087756533
+        ],
+        "polygon": null,
+        "reference_text": "820 HAMILTON BLDG., WICHITA FALLS,",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_county",
+        "page": 2,
+        "bbox": [
+          0.741725768321513,
+          0.2105449398443029,
+          0.06028368794326244,
+          0.011677282377919318
+        ],
+        "polygon": null,
+        "reference_text": "Baylor",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_no_of_acres",
+        "page": 2,
+        "bbox": [
+          0.851063829787234,
+          0.2310686482661005,
+          0.020685579196217496,
+          0.009200283085633393
+        ],
+        "polygon": null,
+        "reference_text": "80",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_name_of_field",
+        "page": 2,
+        "bbox": [
+          0.741726,
+          0.208501,
+          0.060284,
+          0.015764
+        ],
+        "polygon": null,
+        "reference_text": "Baylor",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_completion_oil",
+        "page": 2,
+        "bbox": [
+          0.815012,
+          0.272939,
+          0.045656,
+          0.010032
+        ],
+        "polygon": null,
+        "reference_text": "Dry.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_completion_gas",
+        "page": 2,
+        "bbox": [
+          0.612884,
+          0.485545,
+          0.040189,
+          0.01051
+        ],
+        "polygon": null,
+        "reference_text": "None",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_completion_dry",
+        "page": 2,
+        "bbox": [
+          0.8770685579196218,
+          0.27105449398443027,
+          0.03132387706855788,
+          0.01203113941967443
+        ],
+        "polygon": null,
+        "reference_text": "Yes",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_amount_plugged_oil",
+        "page": 2,
+        "bbox": [
+          0.612884,
+          0.485545,
+          0.040189,
+          0.01051
+        ],
+        "polygon": null,
+        "reference_text": "None",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_ever_produced_oil_or_gas",
+        "page": 2,
+        "bbox": [
+          0.73227,
+          0.232938,
+          0.014972,
+          0.009
+        ],
+        "polygon": null,
+        "reference_text": "No.",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_top_of_producing_sand",
+        "page": 2,
+        "bbox": [
+          0.612884,
+          0.485545,
+          0.040189,
+          0.01051
+        ],
+        "polygon": null,
+        "reference_text": "None",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_filled_with_mud_laden_fluid",
+        "page": 2,
+        "bbox": [
+          0.877069,
+          0.268949,
+          0.031324,
+          0.016242
+        ],
+        "polygon": null,
+        "reference_text": "Yes",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_were_plugs_used",
+        "page": 2,
+        "bbox": [
+          0.229314,
+          0.392879,
+          0.04078,
+          0.012898
+        ],
+        "polygon": null,
+        "reference_text": "No",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_was_well_shot",
+        "page": 2,
+        "bbox": [
+          0.229314,
+          0.392879,
+          0.04078,
+          0.012898
+        ],
+        "polygon": null,
+        "reference_text": "No",
+        "confidence": 0.8040925604336457,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_depth_thickness_formations",
+        "page": 2,
+        "bbox": [
+          0.612884,
+          0.485545,
+          0.040189,
+          0.01051
+        ],
+        "polygon": null,
+        "reference_text": "None",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_abandoned_wells_plugged",
+        "page": 2,
+        "bbox": [
+          0.877069,
+          0.268949,
+          0.031324,
+          0.016242
+        ],
+        "polygon": null,
+        "reference_text": "Yes",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_adjacent_owners",
+        "page": 2,
+        "bbox": [
+          0.612884,
+          0.485545,
+          0.040189,
+          0.01051
+        ],
+        "polygon": null,
+        "reference_text": "None",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_sworn_day",
+        "page": 2,
+        "bbox": [
+          0.981087,
+          0.204453,
+          0.005319,
+          0.009
+        ],
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_sworn_month",
+        "page": 2,
+        "bbox": [
+          0.750591,
+          0.246382,
+          0.039007,
+          0.012898
+        ],
+        "polygon": null,
+        "reference_text": "June",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_notary_county",
+        "page": 2,
+        "bbox": [
+          0.798463,
+          0.922788,
+          0.070922,
+          0.011465
+        ],
+        "polygon": null,
+        "reference_text": "Wichita",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_correspondence_name",
+        "page": 2,
+        "bbox": [
+          0.1288416075650118,
+          0.9228591648973815,
+          0.266548463356974,
+          0.019108280254777066
+        ],
+        "polygon": null,
+        "reference_text": "COnsolidated O1) Compamy",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_correspondence_address",
+        "page": 2,
+        "bbox": [
+          0.6052009456264775,
+          0.924274593064402,
+          0.390661938534279,
+          0.013800424628450103
+        ],
+        "polygon": null,
+        "reference_text": "00 Hamilton Bldg,, Wichita Falls, Texas",
+        "confidence": 0.8636141671907211,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "casing_tubing_records[0].packers_and_shoes",
+        "page": 1,
+        "bbox": [
+          0.7446808510638298,
+          0.5271700776287932,
+          0.14657210401891263,
+          0.008468595624558928
+        ],
+        "polygon": null,
+        "reference_text": "35 sacks cement",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_sec_no",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "1573",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_survey",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "T.E.&L. Co.",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_well_no",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Z-5",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_name_of_lease",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "W. H. Portwood",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_located_miles",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "5",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_located_direction",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "SW",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_located_from",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Megargel",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_drilling_commenced",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "5-29-43",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_drilling_completed",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "6-3-43",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_total_depth",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "1395",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_date_wish_to_plug",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "June 17, 1943",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_party_plugging_well",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Great Northern Pipe & Sup. Co.",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p1_general_remarks",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Casing cemented with 35 sacks. Will pull as much of it as possible.",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_sec_no",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "1573",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_survey",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "T.E.&.L.Co.",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_well_no",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Z-5",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_name_of_lease",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "W. H. Portwood",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_date_well_plugged",
+        "page": 2,
+        "bbox": [
+          0.7505910165484634,
+          0.24805378627034677,
+          0.1542553191489361,
+          0.013446567586695019
+        ],
+        "polygon": null,
+        "reference_text": "June 17, 1943",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_total_depth",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "1395",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_how_mud_applied",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Pump",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_notice_given_adjacent_owners",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "No offset operators",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_affiant_name",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "S. V. White",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_affiant_signature_name",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "S. V. White",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_affiant_title",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Vice President",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_sworn_year",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "43",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "p2_notary_signature",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "casing_tubing_records[0].size_pipe",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "7\"",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "casing_tubing_records[0].put_in_well_ft",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "1354",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:50:13.116651Z",
+  "completed_at": "2026-09-21T14:50:13.116651Z",
+  "latency_in_ms": 712
+}

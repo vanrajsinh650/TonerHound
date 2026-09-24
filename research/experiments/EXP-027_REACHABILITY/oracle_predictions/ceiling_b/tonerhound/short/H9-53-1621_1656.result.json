@@ -1,0 +1,793 @@
+{
+  "request": {
+    "example_id": "short/H9-53-1621_1656",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/H9-53-1621_1656.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 51,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/H9-53-1621_1656",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "operator": "EOG Resources, Inc.",
+      "operator_number": "253162",
+      "rrc_district": "02",
+      "street_or_po_box": "19100 Ridgwood Pkwy., Bldg. 2",
+      "city": "San Antonio",
+      "state": "TX",
+      "zip_code": "78259-1828",
+      "lease_facility_operation_name": "Duncan Unit 4H",
+      "field_or_area_name": "Eagleville (Eagle Ford-2)",
+      "county": "Karnes",
+      "optype_a_oil_field": false,
+      "optype_b_gas_field": false,
+      "optype_c_pipeline_gathering": false,
+      "optype_d_gasoline_plant": false,
+      "optype_e_drilling_workover": true,
+      "optype_f_sweetening_unit": false,
+      "optype_g_combination": false,
+      "optype_h_other": false,
+      "operation_type_other_explanation": null,
+      "h2s_concentration": "7000 PPM",
+      "maximum_escape_volume": "100 MCF/Day",
+      "roe_100ppm": "81 Ft.",
+      "roe_500ppm": "37 Ft.",
+      "operation_existing": false,
+      "operation_new": true,
+      "modification_cert_change_yes": false,
+      "modification_cert_change_no": true,
+      "workover_100ppm_3000ft_yes": false,
+      "workover_100ppm_3000ft_no": true,
+      "previous_certificate_number": null,
+      "roe_100ppm_public_area_yes": false,
+      "roe_100ppm_public_area_no": true,
+      "roe_500ppm_public_road_yes": false,
+      "roe_500ppm_public_road_no": true,
+      "injection_h2s_fluid_yes": false,
+      "injection_h2s_fluid_no": true,
+      "compliance_date_mo": null,
+      "compliance_date_day": null,
+      "compliance_date_year": "2014",
+      "depth_of_compliance_drilling": "8000'",
+      "contingency_plan_prepared_yes": false,
+      "contingency_plan_prepared_no": true,
+      "contingency_plan_location": null,
+      "data_location": "19100 Ridgewood Pkwy. Bldg. 2, San antonio, Texas 78259-1828",
+      "signature_present": true,
+      "representative_of_company": null,
+      "title": "S & E Manager",
+      "phone_no": "(210) 403-7822",
+      "certificate_date": "3/25/2014",
+      "approved_by": "Wesley Dresc",
+      "rrc_use_date": "3-26-2014",
+      "remarks": null,
+      "certification_number": "079730",
+      "exempt_stamp_present": false,
+      "operations_covered": [
+        {
+          "rrc_id": "780596",
+          "type_id_code": "5",
+          "storage_yes": false,
+          "storage_no": true
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "operator",
+        "page": 1,
+        "bbox": [
+          0.1410029498525074,
+          0.11772727272727272,
+          0.1286135693215339,
+          0.009999999999999995
+        ],
+        "polygon": null,
+        "reference_text": "EOG Resources, Inc.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_number",
+        "page": 1,
+        "bbox": [
+          0.512684365781711,
+          0.13090909090909092,
+          0.04483775811209434,
+          0.008636363636363636
+        ],
+        "polygon": null,
+        "reference_text": "253162",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district",
+        "page": 1,
+        "bbox": [
+          0.7716814159292036,
+          0.13227272727272726,
+          0.014749262536873142,
+          0.008181818181818179
+        ],
+        "polygon": null,
+        "reference_text": "02",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "street_or_po_box",
+        "page": 1,
+        "bbox": [
+          0.21415929203539824,
+          0.15636363636363637,
+          0.19410029498525078,
+          0.011363636363636381
+        ],
+        "polygon": null,
+        "reference_text": "19100 Ridgwood Pkwy., Bldg. 2",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "city",
+        "page": 1,
+        "bbox": [
+          0.48908554572271384,
+          0.16954545454545455,
+          0.07787610619469026,
+          0.008636363636363636
+        ],
+        "polygon": null,
+        "reference_text": "San Antonio",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "zip_code",
+        "page": 1,
+        "bbox": [
+          0.7864306784660767,
+          0.17136363636363636,
+          0.07138643067846606,
+          0.008181818181818179
+        ],
+        "polygon": null,
+        "reference_text": "78259-1828",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_facility_operation_name",
+        "page": 1,
+        "bbox": [
+          0.07315634218289085,
+          0.19636363636363635,
+          0.10855457227138643,
+          0.008636363636363636
+        ],
+        "polygon": null,
+        "reference_text": "Duncan Unit 4H",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "field_or_area_name",
+        "page": 1,
+        "bbox": [
+          0.48200589970501473,
+          0.19818181818181818,
+          0.15575221238938053,
+          0.011363636363636354
+        ],
+        "polygon": null,
+        "reference_text": "Eagleville (Eagle Ford-2)",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.6932153392330384,
+          0.19954545454545455,
+          0.043657817109144514,
+          0.008181818181818179
+        ],
+        "polygon": null,
+        "reference_text": "Karnes",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_a_oil_field",
+        "page": 1,
+        "bbox": [
+          0.282596,
+          0.240523,
+          0.014,
+          0.0135
+        ],
+        "polygon": null,
+        "reference_text": "D",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_b_gas_field",
+        "page": 1,
+        "bbox": [
+          0.282596,
+          0.240523,
+          0.014,
+          0.0135
+        ],
+        "polygon": null,
+        "reference_text": "D",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_c_pipeline_gathering",
+        "page": 1,
+        "bbox": [
+          0.282596,
+          0.240435,
+          0.014,
+          0.014175
+        ],
+        "polygon": null,
+        "reference_text": "D",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_d_gasoline_plant",
+        "page": 1,
+        "bbox": [
+          0.282596,
+          0.240523,
+          0.014,
+          0.0135
+        ],
+        "polygon": null,
+        "reference_text": "D",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_e_drilling_workover",
+        "page": 1,
+        "bbox": [
+          0.07315634218289085,
+          0.25136363636363634,
+          0.014,
+          0.0105
+        ],
+        "polygon": null,
+        "reference_text": "X",
+        "confidence": 0.8496517891268696,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_f_sweetening_unit",
+        "page": 1,
+        "bbox": [
+          0.282596,
+          0.240519,
+          0.014,
+          0.013531
+        ],
+        "polygon": null,
+        "reference_text": "D",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "h2s_concentration",
+        "page": 1,
+        "bbox": [
+          0.5740412979351033,
+          0.2913636363636364,
+          0.06371681415929209,
+          0.008181818181818179
+        ],
+        "polygon": null,
+        "reference_text": "7000 PPM",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "maximum_escape_volume",
+        "page": 1,
+        "bbox": [
+          0.7020648967551623,
+          0.2918181818181818,
+          0.08790560471976394,
+          0.010454545454545439
+        ],
+        "polygon": null,
+        "reference_text": "100 MCF/Day",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operation_existing",
+        "page": 1,
+        "bbox": [
+          0.5893805309734513,
+          0.34136363636363637,
+          0.014,
+          0.0105
+        ],
+        "polygon": null,
+        "reference_text": "O",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operation_new",
+        "page": 1,
+        "bbox": [
+          0.374631,
+          0.326882,
+          0.022,
+          0.013531
+        ],
+        "polygon": null,
+        "reference_text": "YES",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "modification_cert_change_yes",
+        "page": 1,
+        "bbox": [
+          0.442478,
+          0.39325,
+          0.014,
+          0.0135
+        ],
+        "polygon": null,
+        "reference_text": "O",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "modification_cert_change_no",
+        "page": 1,
+        "bbox": [
+          0.80885,
+          0.365977,
+          0.020059,
+          0.0135
+        ],
+        "polygon": null,
+        "reference_text": "Yes",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "workover_100ppm_3000ft_yes",
+        "page": 1,
+        "bbox": [
+          0.282596,
+          0.240523,
+          0.014,
+          0.0135
+        ],
+        "polygon": null,
+        "reference_text": "D",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "workover_100ppm_3000ft_no",
+        "page": 1,
+        "bbox": [
+          0.443068,
+          0.364159,
+          0.014,
+          0.0135
+        ],
+        "polygon": null,
+        "reference_text": "X",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_100ppm_public_area_yes",
+        "page": 1,
+        "bbox": [
+          0.441888,
+          0.448163,
+          0.014,
+          0.014175
+        ],
+        "polygon": null,
+        "reference_text": "O",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_100ppm_public_area_no",
+        "page": 1,
+        "bbox": [
+          0.382301,
+          0.449526,
+          0.014,
+          0.014175
+        ],
+        "polygon": null,
+        "reference_text": "[",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_500ppm_public_road_yes",
+        "page": 1,
+        "bbox": [
+          0.441888,
+          0.448163,
+          0.014,
+          0.014175
+        ],
+        "polygon": null,
+        "reference_text": "O",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_500ppm_public_road_no",
+        "page": 1,
+        "bbox": [
+          0.382301,
+          0.449526,
+          0.014,
+          0.014175
+        ],
+        "polygon": null,
+        "reference_text": "[",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "depth_of_compliance_drilling",
+        "page": 1,
+        "bbox": [
+          0.6283185840707964,
+          0.5568181818181818,
+          0.03480825958702061,
+          0.008181818181818179
+        ],
+        "polygon": null,
+        "reference_text": "8000",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "contingency_plan_prepared_yes",
+        "page": 1,
+        "bbox": [
+          0.743953,
+          0.568617,
+          0.015339,
+          0.014175
+        ],
+        "polygon": null,
+        "reference_text": "No",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "contingency_plan_prepared_no",
+        "page": 1,
+        "bbox": [
+          0.720944,
+          0.568162,
+          0.018879,
+          0.014175
+        ],
+        "polygon": null,
+        "reference_text": "Yes",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "data_location",
+        "page": 1,
+        "bbox": [
+          0.06725663716814159,
+          0.6604545454545454,
+          0.3091445427728614,
+          0.008181818181818179
+        ],
+        "polygon": null,
+        "reference_text": "19100 Ridgewood Pkwy. Bldg. 2, San antonio, Texas 78259-1828",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "title",
+        "page": 1,
+        "bbox": [
+          0.32448377581120946,
+          0.764090909090909,
+          0.0814159292035398,
+          0.009545454545454524
+        ],
+        "polygon": null,
+        "reference_text": "S & E Manager",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "phone_no",
+        "page": 1,
+        "bbox": [
+          0.5799410029498525,
+          0.765,
+          0.08023598820058997,
+          0.009090909090909038
+        ],
+        "polygon": null,
+        "reference_text": "(210) 403-7822",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[0].rrc_id",
+        "page": 1,
+        "bbox": [
+          0.07256637168141593,
+          0.3654545454545455,
+          0.04365781710914454,
+          0.008181818181818179
+        ],
+        "polygon": null,
+        "reference_text": "780596",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[0].type_id_code",
+        "page": 1,
+        "bbox": [
+          0.286136,
+          0.365909,
+          0.00767,
+          0.008182
+        ],
+        "polygon": null,
+        "reference_text": "5",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[0].storage_yes",
+        "page": 1,
+        "bbox": [
+          0.835988,
+          0.367727,
+          0.015929,
+          0.007273
+        ],
+        "polygon": null,
+        "reference_text": "No",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operations_covered[0].storage_no",
+        "page": 1,
+        "bbox": [
+          0.443068,
+          0.365909,
+          0.00944,
+          0.007273
+        ],
+        "polygon": null,
+        "reference_text": "X",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "state",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "TX",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_g_combination",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "optype_h_other",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_100ppm",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "81 Ft.",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "roe_500ppm",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "37 Ft.",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_h2s_fluid_yes",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "injection_h2s_fluid_no",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "compliance_date_year",
+        "page": 1,
+        "bbox": [
+          0.7970501474926254,
+          0.5213636363636364,
+          0.036578171091445455,
+          0.008181818181818179
+        ],
+        "polygon": null,
+        "reference_text": "2014",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "signature_present",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "certificate_date",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "3/25/2014",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "approved_by",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Wesley Dresc",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_use_date",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "3-26-2014",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "certification_number",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "079730",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "exempt_stamp_present",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:50:22.021113Z",
+  "completed_at": "2026-09-21T14:50:22.021113Z",
+  "latency_in_ms": 559
+}

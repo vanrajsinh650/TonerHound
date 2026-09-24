@@ -1,0 +1,102 @@
+{
+  "request": {
+    "example_id": "short/ms_medicaid_ra_adjustments",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/ms_medicaid_ra_adjustments.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/ms_medicaid_ra_adjustments",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "payments": [
+        {
+          "check_number": "04957561",
+          "check_amount": null,
+          "ra_date": "01/07/08",
+          "payer_name": "MISSISSIPPI ENVISION MMIS",
+          "payee_name": "JAMES B PROVIDER",
+          "payee_provider_number": "00099999",
+          "payee_npi": "1234567890",
+          "claim_type": "CLINICS"
+        }
+      ],
+      "claims": [
+        {
+          "claim_number": "08000400000009778",
+          "patient_name": "NANCY BENEFICIARY",
+          "recipient_id": "00000444777906",
+          "patient_account_number": "1NAN 01001B",
+          "medical_record_number": "1NAN 01001B",
+          "claim_from_date": "12/28/07",
+          "claim_to_date": "12/28/07",
+          "total_submitted": -80.0,
+          "total_paid": -73.3,
+          "total_patient_responsibility": 3.0,
+          "claim_status": "CREDIT",
+          "reason_codes": null
+        },
+        {
+          "claim_number": "08000400000009779",
+          "patient_name": "NANCY BENEFICIARY",
+          "recipient_id": "00000444777906",
+          "patient_account_number": "1NAN 01001B",
+          "medical_record_number": "1NAN 01001B",
+          "claim_from_date": "12/28/07",
+          "claim_to_date": "12/28/07",
+          "total_submitted": 80.0,
+          "total_paid": 73.3,
+          "total_patient_responsibility": 3.0,
+          "claim_status": "DEBIT",
+          "reason_codes": "3222"
+        }
+      ],
+      "service_lines": [
+        {
+          "claim_number": "08000400000009778",
+          "line_number": "1",
+          "date_of_service_from": "12/28/07",
+          "date_of_service_to": "12/28/07",
+          "procedure_code": "99213",
+          "modifiers": null,
+          "revenue_code": null,
+          "units": -1.0,
+          "charge_amount": -80.0,
+          "allowed_amount": null,
+          "paid_amount": -73.3,
+          "line_status": "CREDIT",
+          "reason_codes": null
+        },
+        {
+          "claim_number": "08000400000009779",
+          "line_number": "1",
+          "date_of_service_from": "12/28/07",
+          "date_of_service_to": "12/28/07",
+          "procedure_code": "99213",
+          "modifiers": null,
+          "revenue_code": null,
+          "units": 1.0,
+          "charge_amount": 80.0,
+          "allowed_amount": null,
+          "paid_amount": 73.3,
+          "line_status": "DEBIT",
+          "reason_codes": "3222"
+        }
+      ]
+    },
+    "field_citations": []
+  },
+  "started_at": "2026-09-23T19:38:03.775262Z",
+  "completed_at": "2026-09-23T19:38:03.775262Z",
+  "latency_in_ms": 0
+}

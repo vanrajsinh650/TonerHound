@@ -1,0 +1,54 @@
+{
+  "request": {
+    "example_id": "short/dd1155_schedule_continuation_0002",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/dd1155_schedule_continuation_0002.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/dd1155_schedule_continuation_0002",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "contract_purchase_order_number": "SPE4A7-17-P-5525",
+      "delivery_order_call_number": null,
+      "date_of_order": "2017 FEB 17",
+      "requisition_purchase_request_number": "0065228382",
+      "total_award_amount": null,
+      "line_items": [
+        {
+          "item_number": "0001",
+          "description": "1650-00-993-7386\nVALVE,LINEAR,DIRECTIONAL CONTROL\nHYDRO-AIRE INC., DBA CRANE HYDRO-AIRE CAGE 81982\nP/N: 80791",
+          "quantity_ordered": 3.0,
+          "unit": "EA",
+          "unit_price": null,
+          "amount": null
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "line_items",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:38:03.678114Z",
+  "completed_at": "2026-09-23T19:38:03.678114Z",
+  "latency_in_ms": 0
+}

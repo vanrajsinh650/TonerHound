@@ -1,0 +1,58 @@
+{
+  "request": {
+    "example_id": "medium/gov_clin_schedule_0035",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/gov_clin_schedule_0035.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/gov_clin_schedule_0035",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "contract_number": "W911QY20P0195",
+      "effective_date": "12-Jun-2020",
+      "total_amount": "$148,225.00",
+      "clin_line_items": [
+        {
+          "item_no": "0001",
+          "supplies_services": "Sample Collection Kits",
+          "quantity": "(b) (4)",
+          "unit": "Each",
+          "unit_price": "(b) (4)",
+          "amount": "$148,225.00",
+          "contract_type": "FFP",
+          "purchase_request_number": "0011509217",
+          "psc_code": "6550",
+          "acrn": "AA",
+          "cin": "GFEBS001150921700001",
+          "net_amount": "$148,225.00"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "clin_line_items",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:37:53.401370Z",
+  "completed_at": "2026-09-23T19:37:53.401370Z",
+  "latency_in_ms": 0
+}

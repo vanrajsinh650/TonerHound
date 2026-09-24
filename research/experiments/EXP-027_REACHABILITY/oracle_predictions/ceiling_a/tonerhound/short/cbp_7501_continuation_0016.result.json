@@ -1,0 +1,897 @@
+{
+  "request": {
+    "example_id": "short/cbp_7501_continuation_0016",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/cbp_7501_continuation_0016.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 56,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/cbp_7501_continuation_0016",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "filer_code_entry_number": "9NK-0010492-5",
+      "entry_type": "01 ABI/A",
+      "summary_date": "08/21/19 048",
+      "surety_number": "054",
+      "bond_type": "8",
+      "port_code": "4601",
+      "entry_date": "08/12/19",
+      "importing_carrier": "OOCL BERLIN",
+      "mode_of_transport": "11",
+      "country_of_origin": "CN",
+      "import_date": "08/13/19",
+      "bill_of_lading_or_awb_number": "EGLV149902606378",
+      "manufacturer_id": "CNSHEXIN201SHE",
+      "exporting_country": "CN",
+      "export_date": "07/13/19",
+      "it_number": null,
+      "it_date": null,
+      "missing_documents": null,
+      "foreign_port_of_lading": "57078",
+      "us_port_of_unlading": "4601",
+      "location_of_goods": "E364",
+      "consignee_number": "SAME",
+      "importer_number": "47-553472400",
+      "reference_number": null,
+      "ultimate_consignee": {
+        "name": null,
+        "address": {
+          "address_line_one": null,
+          "address_line_two": null,
+          "city": null,
+          "state": "DE",
+          "zip_code": null
+        }
+      },
+      "importer_of_record": {
+        "name": "EAGLE TRADING USA LLC",
+        "address": {
+          "address_line_one": "717 N UNION ST STE#98",
+          "address_line_two": null,
+          "city": "WILMINGTON",
+          "state": "DE",
+          "zip_code": "19805"
+        }
+      },
+      "total_entered_value": 12751.0,
+      "total_other_fees": 60.11,
+      "ascertained_duty": 1165.95,
+      "ascertained_tax": 0.0,
+      "ascertained_other": 60.11,
+      "ascertained_total": 1226.06,
+      "declarant_name": "May Chen",
+      "declarant_title": "BROKER",
+      "declarant_date": "08/09/19",
+      "broker_filer_name": "ABILITY CUSTOMS BROKERS",
+      "broker_filer_phone": "5103475555",
+      "broker_importer_file_number": "10492 xxx/Paperless",
+      "other_fees": [
+        {
+          "fee_code": "499",
+          "fee_name": "Merchandise Processing Fee",
+          "fee_amount": 44.16
+        },
+        {
+          "fee_code": "501",
+          "fee_name": "Harbor Maintenance Fee",
+          "fee_amount": 15.95
+        }
+      ],
+      "line_items": [
+        {
+          "line_number": "001",
+          "htsus_numbers": [
+            "9903.88.03",
+            "7326.90.8688"
+          ],
+          "ada_cvd_case_numbers": null,
+          "manufacturer_id_line": null,
+          "gross_weight": "319kg",
+          "manifest_quantity": null,
+          "net_quantity_htsus_units": "150 KG",
+          "description_of_merchandise": "ARTICLE OF CHINA,US NTE 20; ARTICLES OF IRON/STEEL:NSP",
+          "entered_value_dollars": 576,
+          "chgs_codes": [
+            "C57"
+          ],
+          "relationship_indicator": "NOT RELATED",
+          "htsus_rates": [
+            "25.0%",
+            "2.90%"
+          ],
+          "ada_cvd_rates": null,
+          "irc_rates": null,
+          "visa_number": null,
+          "duty_and_tax_amount": 80.35
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "filer_code_entry_number",
+        "page": 1,
+        "bbox": [
+          0.498235,
+          0.064989,
+          0.147059,
+          0.014114
+        ],
+        "polygon": null,
+        "reference_text": "9NK-0010492-5",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "entry_type",
+        "page": 1,
+        "bbox": [
+          0.498235,
+          0.063227,
+          0.263529,
+          0.017182
+        ],
+        "polygon": null,
+        "reference_text": "9NK-0010492-5 ABI/A",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "summary_date",
+        "page": 1,
+        "bbox": [
+          0.785294,
+          0.065455,
+          0.13,
+          0.03
+        ],
+        "polygon": null,
+        "reference_text": "08/21/19 Eniry Date 048",
+        "confidence": 0.75,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "surety_number",
+        "page": 1,
+        "bbox": [
+          0.498235,
+          0.099239,
+          0.031765,
+          0.012886
+        ],
+        "polygon": null,
+        "reference_text": "054",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "bond_type",
+        "page": 1,
+        "bbox": [
+          0.613529,
+          0.098784,
+          0.008824,
+          0.012886
+        ],
+        "polygon": null,
+        "reference_text": "8",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "port_code",
+        "page": 1,
+        "bbox": [
+          0.694118,
+          0.09825,
+          0.042941,
+          0.0135
+        ],
+        "polygon": null,
+        "reference_text": "4601",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "entry_date",
+        "page": 1,
+        "bbox": [
+          0.785882,
+          0.096489,
+          0.09,
+          0.016568
+        ],
+        "polygon": null,
+        "reference_text": "08/12/19",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "importing_carrier",
+        "page": 1,
+        "bbox": [
+          0.025294,
+          0.129239,
+          0.125882,
+          0.012886
+        ],
+        "polygon": null,
+        "reference_text": "QOOCL BERLIN",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "mode_of_transport",
+        "page": 1,
+        "bbox": [
+          0.337647,
+          0.127875,
+          0.020588,
+          0.012886
+        ],
+        "polygon": null,
+        "reference_text": "11",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "country_of_origin",
+        "page": 1,
+        "bbox": [
+          0.507647,
+          0.155545,
+          0.024706,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "CN",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "import_date",
+        "page": 1,
+        "bbox": [
+          0.786471,
+          0.124136,
+          0.09,
+          0.017182
+        ],
+        "polygon": null,
+        "reference_text": "08/13/19",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "bill_of_lading_or_awb_number",
+        "page": 1,
+        "bbox": [
+          0.025294,
+          0.158705,
+          0.183529,
+          0.0135
+        ],
+        "polygon": null,
+        "reference_text": "EGLV149902606378",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "manufacturer_id",
+        "page": 1,
+        "bbox": [
+          0.302941,
+          0.157341,
+          0.16,
+          0.0135
+        ],
+        "polygon": null,
+        "reference_text": "CNSHEXIN201SHE",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "exporting_country",
+        "page": 1,
+        "bbox": [
+          0.507647,
+          0.155545,
+          0.024706,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "CN",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "export_date",
+        "page": 1,
+        "bbox": [
+          0.787059,
+          0.15467,
+          0.09,
+          0.016568
+        ],
+        "polygon": null,
+        "reference_text": "07/13/19",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "us_port_of_unlading",
+        "page": 1,
+        "bbox": [
+          0.694118,
+          0.09825,
+          0.042941,
+          0.0135
+        ],
+        "polygon": null,
+        "reference_text": "4601",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "consignee_number",
+        "page": 1,
+        "bbox": [
+          0.27,
+          0.220545,
+          0.045294,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "SAME",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "importer_number",
+        "page": 1,
+        "bbox": [
+          0.511765,
+          0.220068,
+          0.135882,
+          0.0135
+        ],
+        "polygon": null,
+        "reference_text": "47-553472400",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "importer_of_record.name",
+        "page": 1,
+        "bbox": [
+          0.511176,
+          0.257273,
+          0.241176,
+          0.009545
+        ],
+        "polygon": null,
+        "reference_text": "EAGLE TRADING USA LLC",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "importer_of_record.address.address_line_one",
+        "page": 1,
+        "bbox": [
+          0.512353,
+          0.27,
+          0.238824,
+          0.011364
+        ],
+        "polygon": null,
+        "reference_text": "717 N UNION ST STE#98",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "importer_of_record.address.city",
+        "page": 1,
+        "bbox": [
+          0.512353,
+          0.27,
+          0.238824,
+          0.011364
+        ],
+        "polygon": null,
+        "reference_text": "WILMINGTON",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "importer_of_record.address.state",
+        "page": 1,
+        "bbox": [
+          0.512353,
+          0.27,
+          0.238824,
+          0.011364
+        ],
+        "polygon": null,
+        "reference_text": "DE",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "importer_of_record.address.zip_code",
+        "page": 1,
+        "bbox": [
+          0.512353,
+          0.27,
+          0.238824,
+          0.011364
+        ],
+        "polygon": null,
+        "reference_text": "19805",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_entered_value",
+        "page": 1,
+        "bbox": [
+          0.357647,
+          0.646057,
+          0.054706,
+          0.012886
+        ],
+        "polygon": null,
+        "reference_text": "12751",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_other_fees",
+        "page": 1,
+        "bbox": [
+          0.393529,
+          0.67742,
+          0.054118,
+          0.012886
+        ],
+        "polygon": null,
+        "reference_text": "60.11",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "ascertained_tax",
+        "page": 1,
+        "bbox": [
+          0.198824,
+          0.37333,
+          0.022353,
+          0.012886
+        ],
+        "polygon": null,
+        "reference_text": "o,",
+        "confidence": 0.766647797015586,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "ascertained_other",
+        "page": 1,
+        "bbox": [
+          0.393529,
+          0.67742,
+          0.054118,
+          0.012886
+        ],
+        "polygon": null,
+        "reference_text": "60.11",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "ascertained_total",
+        "page": 1,
+        "bbox": [
+          0.842353,
+          0.735523,
+          0.078824,
+          0.0135
+        ],
+        "polygon": null,
+        "reference_text": "1226.06",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "declarant_title",
+        "page": 1,
+        "bbox": [
+          0.221176,
+          0.884773,
+          0.069076,
+          0.012273
+        ],
+        "polygon": null,
+        "reference_text": "BROKERS",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "broker_filer_name",
+        "page": 1,
+        "bbox": [
+          0.036471,
+          0.884693,
+          0.265294,
+          0.012886
+        ],
+        "polygon": null,
+        "reference_text": "ABILITY CUSTOMS BROKERS",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "broker_filer_phone",
+        "page": 1,
+        "bbox": [
+          0.304118,
+          0.911057,
+          0.112353,
+          0.012886
+        ],
+        "polygon": null,
+        "reference_text": "5103475555",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "other_fees[0].fee_code",
+        "page": 1,
+        "bbox": [
+          0.025294,
+          0.155909,
+          0.851765,
+          0.017273
+        ],
+        "polygon": null,
+        "reference_text": "499",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "other_fees[0].fee_name",
+        "page": 1,
+        "bbox": [
+          0.025294,
+          0.155909,
+          0.851765,
+          0.017273
+        ],
+        "polygon": null,
+        "reference_text": "Merchandise Processing Fee",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "other_fees[1].fee_code",
+        "page": 1,
+        "bbox": [
+          0.034706,
+          0.64642,
+          0.031765,
+          0.015341
+        ],
+        "polygon": null,
+        "reference_text": "501",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "other_fees[1].fee_name",
+        "page": 1,
+        "bbox": [
+          0.034706,
+          0.645739,
+          0.377647,
+          0.015341
+        ],
+        "polygon": null,
+        "reference_text": "Harbor Maintenance Fee",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "other_fees[1].fee_amount",
+        "page": 1,
+        "bbox": [
+          0.15,
+          0.645739,
+          0.055294,
+          0.015341
+        ],
+        "polygon": null,
+        "reference_text": "15.95",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].line_number",
+        "page": 1,
+        "bbox": [
+          0.031176,
+          0.431511,
+          0.032353,
+          0.012886
+        ],
+        "polygon": null,
+        "reference_text": "001",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].htsus_numbers[0]",
+        "page": 1,
+        "bbox": [
+          0.085294,
+          0.444614,
+          0.112353,
+          0.0135
+        ],
+        "polygon": null,
+        "reference_text": "9903.88.03",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].htsus_numbers[1]",
+        "page": 1,
+        "bbox": [
+          0.085882,
+          0.485977,
+          0.135882,
+          0.0135
+        ],
+        "polygon": null,
+        "reference_text": "7326.90.8688",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].net_quantity_htsus_units",
+        "page": 1,
+        "bbox": [
+          0.417647,
+          0.485148,
+          0.068824,
+          0.012886
+        ],
+        "polygon": null,
+        "reference_text": "150 KG",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].relationship_indicator",
+        "page": 1,
+        "bbox": [
+          0.49,
+          0.4025,
+          0.124118,
+          0.012273
+        ],
+        "polygon": null,
+        "reference_text": "NOT RELATED",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].htsus_rates[1]",
+        "page": 1,
+        "bbox": [
+          0.688235,
+          0.484693,
+          0.055294,
+          0.012886
+        ],
+        "polygon": null,
+        "reference_text": "2.90%",
+        "confidence": 0.85,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "foreign_port_of_lading",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "57078",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "location_of_goods",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "E364",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "ultimate_consignee.address.state",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "DE",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "ascertained_duty",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "1165.95",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "declarant_name",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "May Chen",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "declarant_date",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "08/09/19",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "broker_importer_file_number",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "10492 xxx/Paperless",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "other_fees[0].fee_amount",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "44.16",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].gross_weight",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "319kg",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].description_of_merchandise",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "ARTICLE OF CHINA,US NTE 20; ARTICLES OF IRON/STEEL:NSP",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].entered_value_dollars",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "576",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].chgs_codes[0]",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "C57",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].htsus_rates[0]",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "25.0%",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].duty_and_tax_amount",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "80.35",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:51:12.617525Z",
+  "completed_at": "2026-09-21T14:51:12.617525Z",
+  "latency_in_ms": 1269
+}

@@ -1,0 +1,133 @@
+{
+  "request": {
+    "example_id": "short/southampton-ny-york-env-invoice",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/southampton-ny-york-env-invoice.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/southampton-ny-york-env-invoice",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "invoice_number": "2105629",
+      "invoice_type": "standard",
+      "original_invoice_number": null,
+      "date": "2021-04-30",
+      "due_date": null,
+      "purchase_order_number": null,
+      "order_number": null,
+      "vendor": {
+        "name": "York Analytical Laboratories, Inc.",
+        "address": {
+          "street": "120 Research Drive",
+          "city": "Stratford",
+          "state": "CT",
+          "zip_code": "06615",
+          "country": null
+        },
+        "phone": "(203) 325-1371",
+        "email": null,
+        "tax_id": "06-1332045"
+      },
+      "customer": {
+        "name": "Hampton Bays Water District",
+        "address": {
+          "street": "18B Ponquoque Ave",
+          "city": "Hampton Bays",
+          "state": "NY",
+          "zip_code": "11946",
+          "country": null
+        },
+        "phone": null,
+        "email": null,
+        "account_number": null
+      },
+      "line_items": [
+        {
+          "line_no": 1,
+          "item_code": null,
+          "description": "1,4-Dioxane by GC/MS/SIM EPA 522",
+          "quantity": 8.0,
+          "unit_price": 95.0,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 760.0
+        },
+        {
+          "line_no": 2,
+          "item_code": null,
+          "description": "PFAS, EPA 537.1 List",
+          "quantity": 12.0,
+          "unit_price": 275.0,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 3300.0
+        },
+        {
+          "line_no": 3,
+          "item_code": null,
+          "description": "Sample Disposal Fee",
+          "quantity": 20.0,
+          "unit_price": 1.5,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 30.0
+        },
+        {
+          "line_no": 4,
+          "item_code": null,
+          "description": "Surcharge",
+          "quantity": 1.0,
+          "unit_price": null,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 101.5
+        }
+      ],
+      "subtotal": 4191.5,
+      "discount_total": null,
+      "tax_total": null,
+      "shipping": null,
+      "total_amount": 4191.5,
+      "payment_terms": "NET 30 DAYS",
+      "bank_details": null,
+      "currency": "USD",
+      "notes": null
+    },
+    "field_citations": [
+      {
+        "field_path": "order_number",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "payment_terms",
+        "page": 2,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:38:04.043253Z",
+  "completed_at": "2026-09-23T19:38:04.043253Z",
+  "latency_in_ms": 0
+}

@@ -1,0 +1,1743 @@
+{
+  "request": {
+    "example_id": "short/ti_spec_sheet_ne555_timer_corrupted",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/ti_spec_sheet_ne555_timer_corrupted.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 100,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/ti_spec_sheet_ne555_timer_corrupted",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "manufacturer": "Texas Instruments",
+      "product_title": "NA555, NE555, SA555, SE555",
+      "specifications": [
+        {
+          "section": "Absolute Maximum Ratings",
+          "symbol": "VCC",
+          "name": "Supply voltage",
+          "conditions": null,
+          "value": null,
+          "value_imperial": null,
+          "min": null,
+          "typ": null,
+          "max": "18",
+          "unit": "V",
+          "unit_imperial": null
+        },
+        {
+          "section": "Absolute Maximum Ratings",
+          "symbol": "VI",
+          "name": "Input voltage",
+          "conditions": "CONT, RESET, THRES, TRIG",
+          "value": null,
+          "value_imperial": null,
+          "min": null,
+          "typ": null,
+          "max": "VCC",
+          "unit": "V",
+          "unit_imperial": null
+        },
+        {
+          "section": "Absolute Maximum Ratings",
+          "symbol": "IO",
+          "name": "Output current",
+          "conditions": null,
+          "value": null,
+          "value_imperial": null,
+          "min": null,
+          "typ": null,
+          "max": "+/-225",
+          "unit": "mA",
+          "unit_imperial": null
+        },
+        {
+          "section": "Absolute Maximum Ratings",
+          "symbol": "TJ",
+          "name": "Operating virtual junction temperature",
+          "conditions": null,
+          "value": null,
+          "value_imperial": null,
+          "min": null,
+          "typ": null,
+          "max": "150",
+          "unit": "\u00b0C",
+          "unit_imperial": null
+        },
+        {
+          "section": "Absolute Maximum Ratings",
+          "symbol": "TJ",
+          "name": "Case temperature for 60 seconds",
+          "conditions": "FK package",
+          "value": null,
+          "value_imperial": null,
+          "min": null,
+          "typ": null,
+          "max": "260",
+          "unit": "\u00b0C",
+          "unit_imperial": null
+        },
+        {
+          "section": "Absolute Maximum Ratings",
+          "symbol": "TJ",
+          "name": "Lead temperature 1.6mm (1/16 inch) from case",
+          "conditions": "JG package, 60 seconds",
+          "value": null,
+          "value_imperial": null,
+          "min": null,
+          "typ": null,
+          "max": "300",
+          "unit": "\u00b0C",
+          "unit_imperial": null
+        },
+        {
+          "section": "Absolute Maximum Ratings",
+          "symbol": "Tstg",
+          "name": "Storage temperature",
+          "conditions": null,
+          "value": null,
+          "value_imperial": null,
+          "min": "-65",
+          "typ": null,
+          "max": "150",
+          "unit": "\u00b0C",
+          "unit_imperial": null
+        },
+        {
+          "section": "ESD Ratings",
+          "symbol": "V(ESD)",
+          "name": "Electrostatic discharge",
+          "conditions": "Human-body model (HBM), per ANSI/ESDA/JEDEC JS-001",
+          "value": "+/-500",
+          "value_imperial": null,
+          "min": null,
+          "typ": null,
+          "max": null,
+          "unit": "V",
+          "unit_imperial": null
+        },
+        {
+          "section": "ESD Ratings",
+          "symbol": "V(ESD)",
+          "name": "Electrostatic discharge",
+          "conditions": "Charged device model (CDM), per ANSI/ESDA/JEDEC JS-002",
+          "value": "+/-1500",
+          "value_imperial": null,
+          "min": null,
+          "typ": null,
+          "max": null,
+          "unit": "V",
+          "unit_imperial": null
+        },
+        {
+          "section": "Recommended Operating Conditions",
+          "symbol": "VCC",
+          "name": "Supply voltage",
+          "conditions": "NA555, NE555, SA555",
+          "value": null,
+          "value_imperial": null,
+          "min": "4.5",
+          "typ": null,
+          "max": "16",
+          "unit": "V",
+          "unit_imperial": null
+        },
+        {
+          "section": "Recommended Operating Conditions",
+          "symbol": "VCC",
+          "name": "Supply voltage",
+          "conditions": "SE555",
+          "value": null,
+          "value_imperial": null,
+          "min": "4.5",
+          "typ": null,
+          "max": "18",
+          "unit": "V",
+          "unit_imperial": null
+        },
+        {
+          "section": "Recommended Operating Conditions",
+          "symbol": "IO",
+          "name": "Output current",
+          "conditions": null,
+          "value": null,
+          "value_imperial": null,
+          "min": null,
+          "typ": null,
+          "max": "+/-200",
+          "unit": "mA",
+          "unit_imperial": null
+        },
+        {
+          "section": "Recommended Operating Conditions",
+          "symbol": "TA",
+          "name": "Operating free-air temperature",
+          "conditions": "NA555",
+          "value": null,
+          "value_imperial": null,
+          "min": "-40",
+          "typ": null,
+          "max": "105",
+          "unit": "\u00b0C",
+          "unit_imperial": null
+        },
+        {
+          "section": "Recommended Operating Conditions",
+          "symbol": "TA",
+          "name": "Operating free-air temperature",
+          "conditions": "NE555",
+          "value": null,
+          "value_imperial": null,
+          "min": "0",
+          "typ": null,
+          "max": "70",
+          "unit": "\u00b0C",
+          "unit_imperial": null
+        },
+        {
+          "section": "Recommended Operating Conditions",
+          "symbol": "TA",
+          "name": "Operating free-air temperature",
+          "conditions": "SA555",
+          "value": null,
+          "value_imperial": null,
+          "min": "-40",
+          "typ": null,
+          "max": "85",
+          "unit": "\u00b0C",
+          "unit_imperial": null
+        },
+        {
+          "section": "Recommended Operating Conditions",
+          "symbol": "TA",
+          "name": "Operating free-air temperature",
+          "conditions": "SE555",
+          "value": null,
+          "value_imperial": null,
+          "min": "-55",
+          "typ": null,
+          "max": "125",
+          "unit": "\u00b0C",
+          "unit_imperial": null
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "manufacturer",
+        "page": 1,
+        "bbox": [
+          0.738824,
+          0.938045,
+          0.091176,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Texas Instruments",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "product_title",
+        "page": 1,
+        "bbox": [
+          0.471176,
+          0.953636,
+          0.167647,
+          0.018182
+        ],
+        "polygon": null,
+        "reference_text": "NA555 NE555 SA555 SE555",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[0].section",
+        "page": 1,
+        "bbox": [
+          0.299412,
+          0.050355,
+          0.065294,
+          0.0102
+        ],
+        "polygon": null,
+        "reference_text": "Absolute Maximum Ratings",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[0].symbol",
+        "page": 1,
+        "bbox": [
+          0.092353,
+          0.049455,
+          0.829412,
+          0.012
+        ],
+        "polygon": null,
+        "reference_text": "VCC",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[0].name",
+        "page": 1,
+        "bbox": [
+          0.211765,
+          0.050355,
+          0.057059,
+          0.0102
+        ],
+        "polygon": null,
+        "reference_text": "Supply voltage",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[0].max",
+        "page": 1,
+        "bbox": [
+          0.092353,
+          0.049455,
+          0.829412,
+          0.012
+        ],
+        "polygon": null,
+        "reference_text": "18",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[0].unit",
+        "page": 1,
+        "bbox": [
+          0.092353,
+          0.049455,
+          0.829412,
+          0.012
+        ],
+        "polygon": null,
+        "reference_text": "V",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[1].section",
+        "page": 1,
+        "bbox": [
+          0.127647,
+          0.115409,
+          0.237059,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Absolute Maximum Ratings",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[1].symbol",
+        "page": 1,
+        "bbox": [
+          0.092353,
+          0.065455,
+          0.829412,
+          0.018182
+        ],
+        "polygon": null,
+        "reference_text": "VI",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[1].name",
+        "page": 1,
+        "bbox": [
+          0.211765,
+          0.066545,
+          0.057059,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Input voltage",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[1].conditions",
+        "page": 1,
+        "bbox": [
+          0.425882,
+          0.066545,
+          0.041176,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "CONT, RESET, THRES, TRIG",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[1].max",
+        "page": 1,
+        "bbox": [
+          0.092353,
+          0.065455,
+          0.829412,
+          0.018182
+        ],
+        "polygon": null,
+        "reference_text": "VCC",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[1].unit",
+        "page": 1,
+        "bbox": [
+          0.092353,
+          0.065455,
+          0.829412,
+          0.018182
+        ],
+        "polygon": null,
+        "reference_text": "V",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[2].section",
+        "page": 1,
+        "bbox": [
+          0.127647,
+          0.115409,
+          0.237059,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Absolute Maximum Ratings",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[2].symbol",
+        "page": 1,
+        "bbox": [
+          0.098235,
+          0.115,
+          0.266471,
+          0.016364
+        ],
+        "polygon": null,
+        "reference_text": "IO",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[2].name",
+        "page": 1,
+        "bbox": [
+          0.211765,
+          0.115182,
+          0.057059,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Output current",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[2].max",
+        "page": 1,
+        "bbox": [
+          0.098235,
+          0.115,
+          0.266471,
+          0.016364
+        ],
+        "polygon": null,
+        "reference_text": "+/-225",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[2].unit",
+        "page": 1,
+        "bbox": [
+          0.098235,
+          0.115,
+          0.266471,
+          0.016364
+        ],
+        "polygon": null,
+        "reference_text": "mA",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[3].section",
+        "page": 1,
+        "bbox": [
+          0.650588,
+          0.312909,
+          0.234706,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Absolute Maximum Ratings",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[3].symbol",
+        "page": 1,
+        "bbox": [
+          0.096471,
+          0.214545,
+          0.82,
+          0.031364
+        ],
+        "polygon": null,
+        "reference_text": "TJ",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[3].name",
+        "page": 1,
+        "bbox": [
+          0.153529,
+          0.225455,
+          0.226471,
+          0.020455
+        ],
+        "polygon": null,
+        "reference_text": "Operating virtual junction temperature",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[3].max",
+        "page": 1,
+        "bbox": [
+          0.096471,
+          0.214545,
+          0.82,
+          0.031364
+        ],
+        "polygon": null,
+        "reference_text": "150",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[3].unit",
+        "page": 1,
+        "bbox": [
+          0.096471,
+          0.214545,
+          0.82,
+          0.031364
+        ],
+        "polygon": null,
+        "reference_text": "\u00b0C",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[4].section",
+        "page": 1,
+        "bbox": [
+          0.650588,
+          0.312909,
+          0.234706,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Absolute Maximum Ratings",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[4].symbol",
+        "page": 1,
+        "bbox": [
+          0.094706,
+          0.306364,
+          0.791765,
+          0.030455
+        ],
+        "polygon": null,
+        "reference_text": "TJ",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[4].name",
+        "page": 1,
+        "bbox": [
+          0.211765,
+          0.313591,
+          0.057059,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Case temperature for 60 seconds",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[4].conditions",
+        "page": 1,
+        "bbox": [
+          0.425882,
+          0.313591,
+          0.041176,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "FK package",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[4].max",
+        "page": 1,
+        "bbox": [
+          0.094706,
+          0.306364,
+          0.791765,
+          0.030455
+        ],
+        "polygon": null,
+        "reference_text": "260",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[4].unit",
+        "page": 1,
+        "bbox": [
+          0.094706,
+          0.306364,
+          0.791765,
+          0.030455
+        ],
+        "polygon": null,
+        "reference_text": "\u00b0C",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[5].section",
+        "page": 1,
+        "bbox": [
+          0.299412,
+          0.343136,
+          0.065294,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Absolute Maximum Ratings",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[5].symbol",
+        "page": 1,
+        "bbox": [
+          0.093529,
+          0.331364,
+          0.77,
+          0.039545
+        ],
+        "polygon": null,
+        "reference_text": "TJ",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[5].name",
+        "page": 1,
+        "bbox": [
+          0.211765,
+          0.343136,
+          0.057059,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Lead temperature 1.6mm (1/16 inch) from case",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[5].conditions",
+        "page": 1,
+        "bbox": [
+          0.425882,
+          0.343136,
+          0.041176,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "JG package, 60 seconds",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[5].max",
+        "page": 1,
+        "bbox": [
+          0.093529,
+          0.331364,
+          0.77,
+          0.039545
+        ],
+        "polygon": null,
+        "reference_text": "300",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[5].unit",
+        "page": 1,
+        "bbox": [
+          0.093529,
+          0.331364,
+          0.77,
+          0.039545
+        ],
+        "polygon": null,
+        "reference_text": "\u00b0C",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[6].section",
+        "page": 1,
+        "bbox": [
+          0.299412,
+          0.146355,
+          0.065294,
+          0.0102
+        ],
+        "polygon": null,
+        "reference_text": "Absolute Maximum Ratings",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[6].symbol",
+        "page": 1,
+        "bbox": [
+          0.092353,
+          0.145455,
+          0.829412,
+          0.012
+        ],
+        "polygon": null,
+        "reference_text": "Tstg",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[6].name",
+        "page": 1,
+        "bbox": [
+          0.211765,
+          0.146355,
+          0.057059,
+          0.0102
+        ],
+        "polygon": null,
+        "reference_text": "Storage temperature",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[6].min",
+        "page": 1,
+        "bbox": [
+          0.368824,
+          0.145455,
+          0.552941,
+          0.012
+        ],
+        "polygon": null,
+        "reference_text": "-65",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[6].max",
+        "page": 1,
+        "bbox": [
+          0.092353,
+          0.145455,
+          0.829412,
+          0.012
+        ],
+        "polygon": null,
+        "reference_text": "150",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[6].unit",
+        "page": 1,
+        "bbox": [
+          0.092353,
+          0.145455,
+          0.829412,
+          0.012
+        ],
+        "polygon": null,
+        "reference_text": "\u00b0C",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[7].section",
+        "page": 1,
+        "bbox": [
+          0.255294,
+          0.504955,
+          0.084118,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Operating",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[7].symbol",
+        "page": 1,
+        "bbox": [
+          0.664118,
+          0.481364,
+          0.020588,
+          0.016818
+        ],
+        "polygon": null,
+        "reference_text": "ESD",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[7].name",
+        "page": 1,
+        "bbox": [
+          0.211765,
+          0.431318,
+          0.057059,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Electrostatic discharge",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[7].conditions",
+        "page": 1,
+        "bbox": [
+          0.347059,
+          0.426818,
+          0.356471,
+          0.016364
+        ],
+        "polygon": null,
+        "reference_text": "Human-body model (HBM), per ANSVESDA/JEDEC JS-001",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[7].value",
+        "page": 1,
+        "bbox": [
+          0.347647,
+          0.466545,
+          0.030588,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "500V",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[7].unit",
+        "page": 1,
+        "bbox": [
+          0.09,
+          0.42,
+          0.613529,
+          0.038636
+        ],
+        "polygon": null,
+        "reference_text": "V",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[8].section",
+        "page": 1,
+        "bbox": [
+          0.255294,
+          0.504955,
+          0.084118,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Operating",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[8].symbol",
+        "page": 1,
+        "bbox": [
+          0.664118,
+          0.481364,
+          0.020588,
+          0.016818
+        ],
+        "polygon": null,
+        "reference_text": "ESD",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[8].name",
+        "page": 1,
+        "bbox": [
+          0.211765,
+          0.474727,
+          0.057059,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Electrostatic discharge",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[8].conditions",
+        "page": 1,
+        "bbox": [
+          0.425882,
+          0.474727,
+          0.041176,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Charged device model (CDM), per ANSI/ESDA/JEDEC JS-002",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[8].value",
+        "page": 1,
+        "bbox": [
+          0.347647,
+          0.466545,
+          0.030588,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "500V",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[8].unit",
+        "page": 1,
+        "bbox": [
+          0.091176,
+          0.467273,
+          0.692941,
+          0.030909
+        ],
+        "polygon": null,
+        "reference_text": "V",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[9].section",
+        "page": 1,
+        "bbox": [
+          0.299412,
+          0.194355,
+          0.065294,
+          0.0102
+        ],
+        "polygon": null,
+        "reference_text": "Recommended Operating Conditions",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[9].symbol",
+        "page": 1,
+        "bbox": [
+          0.092353,
+          0.193455,
+          0.829412,
+          0.012
+        ],
+        "polygon": null,
+        "reference_text": "VCC",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[9].name",
+        "page": 1,
+        "bbox": [
+          0.211765,
+          0.194355,
+          0.057059,
+          0.0102
+        ],
+        "polygon": null,
+        "reference_text": "Supply voltage",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[9].conditions",
+        "page": 1,
+        "bbox": [
+          0.425882,
+          0.194355,
+          0.041176,
+          0.0102
+        ],
+        "polygon": null,
+        "reference_text": "NA555, NE555, SA555",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[9].min",
+        "page": 1,
+        "bbox": [
+          0.092353,
+          0.193455,
+          0.829412,
+          0.012
+        ],
+        "polygon": null,
+        "reference_text": "4.5",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[9].max",
+        "page": 1,
+        "bbox": [
+          0.092353,
+          0.193455,
+          0.829412,
+          0.012
+        ],
+        "polygon": null,
+        "reference_text": "16",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[9].unit",
+        "page": 1,
+        "bbox": [
+          0.092353,
+          0.193455,
+          0.829412,
+          0.012
+        ],
+        "polygon": null,
+        "reference_text": "V",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[10].section",
+        "page": 1,
+        "bbox": [
+          0.299412,
+          0.210355,
+          0.065294,
+          0.0102
+        ],
+        "polygon": null,
+        "reference_text": "Recommended Operating Conditions",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[10].symbol",
+        "page": 1,
+        "bbox": [
+          0.092353,
+          0.209455,
+          0.829412,
+          0.012
+        ],
+        "polygon": null,
+        "reference_text": "VCC",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[10].name",
+        "page": 1,
+        "bbox": [
+          0.211765,
+          0.210355,
+          0.057059,
+          0.0102
+        ],
+        "polygon": null,
+        "reference_text": "Supply voltage",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[10].conditions",
+        "page": 1,
+        "bbox": [
+          0.425882,
+          0.210355,
+          0.041176,
+          0.0102
+        ],
+        "polygon": null,
+        "reference_text": "SE555",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[10].min",
+        "page": 1,
+        "bbox": [
+          0.092353,
+          0.209455,
+          0.829412,
+          0.012
+        ],
+        "polygon": null,
+        "reference_text": "4.5",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[10].max",
+        "page": 1,
+        "bbox": [
+          0.092353,
+          0.209455,
+          0.829412,
+          0.012
+        ],
+        "polygon": null,
+        "reference_text": "18",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[10].unit",
+        "page": 1,
+        "bbox": [
+          0.092353,
+          0.209455,
+          0.829412,
+          0.012
+        ],
+        "polygon": null,
+        "reference_text": "V",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[11].section",
+        "page": 1,
+        "bbox": [
+          0.121765,
+          0.504091,
+          0.317059,
+          0.016364
+        ],
+        "polygon": null,
+        "reference_text": "Recommended Operating Conditions",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[11].symbol",
+        "page": 1,
+        "bbox": [
+          0.091176,
+          0.504091,
+          0.347647,
+          0.016364
+        ],
+        "polygon": null,
+        "reference_text": "IO",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[11].name",
+        "page": 1,
+        "bbox": [
+          0.211765,
+          0.504273,
+          0.057059,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Output current",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[11].max",
+        "page": 1,
+        "bbox": [
+          0.091176,
+          0.504091,
+          0.347647,
+          0.016364
+        ],
+        "polygon": null,
+        "reference_text": "+/-200",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[11].unit",
+        "page": 1,
+        "bbox": [
+          0.091176,
+          0.504091,
+          0.347647,
+          0.016364
+        ],
+        "polygon": null,
+        "reference_text": "mA",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[12].section",
+        "page": 1,
+        "bbox": [
+          0.299412,
+          0.531091,
+          0.065294,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Recommended Operating Conditions",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[12].symbol",
+        "page": 1,
+        "bbox": [
+          0.090588,
+          0.528636,
+          0.434118,
+          0.020909
+        ],
+        "polygon": null,
+        "reference_text": "TA",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[12].name",
+        "page": 1,
+        "bbox": [
+          0.122941,
+          0.528636,
+          0.195882,
+          0.020909
+        ],
+        "polygon": null,
+        "reference_text": "operating free-air mperawra",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[12].conditions",
+        "page": 1,
+        "bbox": [
+          0.55,
+          0.558636,
+          0.036765,
+          0.033636
+        ],
+        "polygon": null,
+        "reference_text": "Nesss,",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[12].min",
+        "page": 1,
+        "bbox": [
+          0.235294,
+          0.528636,
+          0.289412,
+          0.020909
+        ],
+        "polygon": null,
+        "reference_text": "-40",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[12].max",
+        "page": 1,
+        "bbox": [
+          0.090588,
+          0.528636,
+          0.434118,
+          0.020909
+        ],
+        "polygon": null,
+        "reference_text": "105",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[12].unit",
+        "page": 1,
+        "bbox": [
+          0.090588,
+          0.528636,
+          0.434118,
+          0.020909
+        ],
+        "polygon": null,
+        "reference_text": "\u00b0C",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[13].section",
+        "page": 1,
+        "bbox": [
+          0.299412,
+          0.598818,
+          0.065294,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Recommended Operating Conditions",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[13].symbol",
+        "page": 1,
+        "bbox": [
+          0.091765,
+          0.642,
+          0.014706,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Ta",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[13].name",
+        "page": 1,
+        "bbox": [
+          0.152941,
+          0.643591,
+          0.178235,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Operating free-air temperature",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[13].conditions",
+        "page": 1,
+        "bbox": [
+          0.425882,
+          0.598818,
+          0.041176,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "NE555",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[13].min",
+        "page": 1,
+        "bbox": [
+          0.151176,
+          0.598818,
+          0.088235,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[13].max",
+        "page": 1,
+        "bbox": [
+          0.151176,
+          0.598818,
+          0.088235,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "70",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[13].unit",
+        "page": 1,
+        "bbox": [
+          0.151176,
+          0.598818,
+          0.088235,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "\u00b0C",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[14].section",
+        "page": 1,
+        "bbox": [
+          0.299412,
+          0.641091,
+          0.065294,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Recommended Operating Conditions",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[14].symbol",
+        "page": 1,
+        "bbox": [
+          0.091765,
+          0.642,
+          0.014706,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Ta",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[14].name",
+        "page": 1,
+        "bbox": [
+          0.152941,
+          0.643591,
+          0.178235,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Operating free-air temperature",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[14].conditions",
+        "page": 1,
+        "bbox": [
+          0.425882,
+          0.641091,
+          0.041176,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "SA555",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[14].min",
+        "page": 1,
+        "bbox": [
+          0.342549,
+          0.635,
+          0.501569,
+          0.028182
+        ],
+        "polygon": null,
+        "reference_text": "-40",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[14].max",
+        "page": 1,
+        "bbox": [
+          0.091765,
+          0.635,
+          0.752353,
+          0.028182
+        ],
+        "polygon": null,
+        "reference_text": "85",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[14].unit",
+        "page": 1,
+        "bbox": [
+          0.091765,
+          0.635,
+          0.752353,
+          0.028182
+        ],
+        "polygon": null,
+        "reference_text": "\u00b0C",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[15].section",
+        "page": 1,
+        "bbox": [
+          0.299412,
+          0.290355,
+          0.065294,
+          0.0102
+        ],
+        "polygon": null,
+        "reference_text": "Recommended Operating Conditions",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[15].symbol",
+        "page": 1,
+        "bbox": [
+          0.092353,
+          0.289455,
+          0.829412,
+          0.012
+        ],
+        "polygon": null,
+        "reference_text": "TA",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[15].name",
+        "page": 1,
+        "bbox": [
+          0.211765,
+          0.290355,
+          0.057059,
+          0.0102
+        ],
+        "polygon": null,
+        "reference_text": "Operating free-air temperature",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[15].conditions",
+        "page": 1,
+        "bbox": [
+          0.425882,
+          0.290355,
+          0.041176,
+          0.0102
+        ],
+        "polygon": null,
+        "reference_text": "SE555",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[15].min",
+        "page": 1,
+        "bbox": [
+          0.368824,
+          0.289455,
+          0.552941,
+          0.012
+        ],
+        "polygon": null,
+        "reference_text": "-55",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[15].max",
+        "page": 1,
+        "bbox": [
+          0.092353,
+          0.289455,
+          0.829412,
+          0.012
+        ],
+        "polygon": null,
+        "reference_text": "125",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "specifications[15].unit",
+        "page": 1,
+        "bbox": [
+          0.092353,
+          0.289455,
+          0.829412,
+          0.012
+        ],
+        "polygon": null,
+        "reference_text": "\u00b0C",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:51:31.735867Z",
+  "completed_at": "2026-09-21T14:51:31.735867Z",
+  "latency_in_ms": 376
+}

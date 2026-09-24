@@ -1,0 +1,455 @@
+{
+  "request": {
+    "example_id": "short/golden_corral_receipt_refugio_county_auditor",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/golden_corral_receipt_refugio_county_auditor.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 28,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/golden_corral_receipt_refugio_county_auditor",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "merchant_name": "GOLDEN CORRAL",
+      "store_number": "0938",
+      "merchant_address": null,
+      "merchant_phone": null,
+      "transaction_date": "2015-02-27",
+      "transaction_time": "13:28",
+      "transaction_id": "F-0298",
+      "line_items": [
+        {
+          "line_no": 1,
+          "description": "SR LUNCH BUFFET",
+          "quantity": 1,
+          "unit_price": null,
+          "item_total": 7.99,
+          "sku": null
+        },
+        {
+          "line_no": 2,
+          "description": "SR. LUNCH BUFFET",
+          "quantity": 1,
+          "unit_price": null,
+          "item_total": 7.99,
+          "sku": null
+        },
+        {
+          "line_no": 3,
+          "description": "TEA",
+          "quantity": 1,
+          "unit_price": null,
+          "item_total": 2.29,
+          "sku": null
+        },
+        {
+          "line_no": 4,
+          "description": "TEA",
+          "quantity": 1,
+          "unit_price": null,
+          "item_total": 2.29,
+          "sku": null
+        }
+      ],
+      "subtotal": 20.56,
+      "tax": 1.7,
+      "total": 22.26,
+      "payment_method": "MASTERCARD",
+      "card_last4": "5760",
+      "auth_code": null,
+      "amount_paid": 22.26,
+      "currency": "USD"
+    },
+    "field_citations": [
+      {
+        "field_path": "store_number",
+        "page": 1,
+        "bbox": [
+          0.288235,
+          0.428011,
+          0.056471,
+          0.015341
+        ],
+        "polygon": null,
+        "reference_text": "#0938",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "transaction_date",
+        "page": 1,
+        "bbox": [
+          0.483529,
+          0.63475,
+          0.057059,
+          0.015955
+        ],
+        "polygon": null,
+        "reference_text": "02/27/15",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "transaction_id",
+        "page": 1,
+        "bbox": [
+          0.492353,
+          0.225545,
+          0.099412,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "F-02g9g",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].line_no",
+        "page": 1,
+        "bbox": [
+          0.071176,
+          0.718591,
+          0.002353,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].description",
+        "page": 1,
+        "bbox": [
+          0.083529,
+          0.706318,
+          0.086471,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "LUNCH BUFFET",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].quantity",
+        "page": 1,
+        "bbox": [
+          0.071176,
+          0.718591,
+          0.002353,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].item_total",
+        "page": 1,
+        "bbox": [
+          0.326471,
+          0.710864,
+          0.027647,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "7.99",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].description",
+        "page": 1,
+        "bbox": [
+          0.083529,
+          0.719955,
+          0.085882,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "LUNCH BUFFET",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].quantity",
+        "page": 1,
+        "bbox": [
+          0.071176,
+          0.718591,
+          0.002353,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].item_total",
+        "page": 1,
+        "bbox": [
+          0.128824,
+          0.722682,
+          0.225294,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "BUFFET7,99",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].line_no",
+        "page": 1,
+        "bbox": [
+          0.071765,
+          0.705182,
+          0.002941,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "3",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].description",
+        "page": 1,
+        "bbox": [
+          0.128235,
+          0.739727,
+          0.040588,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "TEA",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].quantity",
+        "page": 1,
+        "bbox": [
+          0.071176,
+          0.718591,
+          0.002353,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].item_total",
+        "page": 1,
+        "bbox": [
+          0.325882,
+          0.738818,
+          0.027647,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "2.29",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[3].description",
+        "page": 1,
+        "bbox": [
+          0.128235,
+          0.749764,
+          0.040588,
+          0.0102
+        ],
+        "polygon": null,
+        "reference_text": "TEA",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[3].item_total",
+        "page": 1,
+        "bbox": [
+          0.325882,
+          0.741818,
+          0.027647,
+          0.01
+        ],
+        "polygon": null,
+        "reference_text": "2.29",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total",
+        "page": 1,
+        "bbox": [
+          0.505882,
+          0.621727,
+          0.035882,
+          0.014727
+        ],
+        "polygon": null,
+        "reference_text": "22.26",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "card_last4",
+        "page": 1,
+        "bbox": [
+          0.720544,
+          0.606818,
+          0.042389,
+          0.027727
+        ],
+        "polygon": null,
+        "reference_text": "FERREREE R R R R S (Rec:143) 22.26 Weno; [)54816.xxxxxxxkxxxx5760,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "amount_paid",
+        "page": 1,
+        "bbox": [
+          0.505882,
+          0.621727,
+          0.035882,
+          0.014727
+        ],
+        "polygon": null,
+        "reference_text": "22.26",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "merchant_name",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "GOLDEN CORRAL",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "transaction_time",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "13:28",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].line_no",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "2",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[3].line_no",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "4",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[3].quantity",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "subtotal",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "20.56",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "tax",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "1.7",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "payment_method",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "MASTERCARD",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "currency",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "USD",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:51:23.623218Z",
+  "completed_at": "2026-09-21T14:51:23.623218Z",
+  "latency_in_ms": 234
+}

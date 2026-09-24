@@ -1,0 +1,317 @@
+{
+  "request": {
+    "example_id": "medium/smfg-kessan-tanshin-2024-ja",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/smfg-kessan-tanshin-2024-ja.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 18,
+    "ocr_pages": 0,
+    "num_pages": 19
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/smfg-kessan-tanshin-2024-ja",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "period": "FY2024",
+      "currency": "JPY",
+      "fiscal_period_end_date": "2024-03-31",
+      "total_revenue": 9353590.0,
+      "revenue_growth_yoy": 52.3,
+      "gross_profit": 3738818.0,
+      "operating_income": 1466128.0,
+      "net_income": 962946.0,
+      "adjusted_ebitda": null,
+      "gaap_eps_diluted": 724.34,
+      "adjusted_eps_diluted": null,
+      "gross_margin": null,
+      "operating_margin": 15.7,
+      "free_cash_flow": null,
+      "segments": [
+        {
+          "segment_name": "\u30db\u30fc\u30eb\u30bb\u30fc\u30eb\u4e8b\u696d\u90e8\u9580",
+          "segment_revenue": 835200,
+          "segment_profit": 632100
+        },
+        {
+          "segment_name": "\u30ea\u30c6\u30fc\u30eb\u4e8b\u696d\u90e8\u9580",
+          "segment_revenue": 1290000,
+          "segment_profit": 215700
+        },
+        {
+          "segment_name": "\u30b0\u30ed\u30fc\u30d0\u30eb\u4e8b\u696d\u90e8\u9580",
+          "segment_revenue": 1375900,
+          "segment_profit": 644900
+        },
+        {
+          "segment_name": "\u5e02\u5834\u4e8b\u696d\u90e8\u9580",
+          "segment_revenue": 526200,
+          "segment_profit": 389900
+        },
+        {
+          "segment_name": "\u672c\u793e\u7ba1\u7406\u7b49",
+          "segment_revenue": -288482,
+          "segment_profit": -322389
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "revenue_growth_yoy",
+        "page": 1,
+        "bbox": [
+          0.395418,
+          0.324867,
+          0.03023,
+          0.014356
+        ],
+        "polygon": null,
+        "reference_text": "52.3",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gross_profit",
+        "page": 15,
+        "bbox": [
+          0.832222,
+          0.234155,
+          0.068018,
+          0.014356
+        ],
+        "polygon": null,
+        "reference_text": "3,738,818",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operating_margin",
+        "page": 1,
+        "bbox": [
+          0.874735,
+          0.403682,
+          0.03023,
+          0.014356
+        ],
+        "polygon": null,
+        "reference_text": "15.7",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[0].segment_name",
+        "page": 15,
+        "bbox": [
+          0.145324,
+          0.234155,
+          0.754917,
+          0.014356
+        ],
+        "polygon": null,
+        "reference_text": "\u30db\u30fc\u30eb\u30bb\u30fc\u30eb\u4e8b\u696d\u90e8\u9580",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[0].segment_revenue",
+        "page": 15,
+        "bbox": [
+          0.318308,
+          0.234155,
+          0.052903,
+          0.014356
+        ],
+        "polygon": null,
+        "reference_text": "835,200",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[1].segment_name",
+        "page": 15,
+        "bbox": [
+          0.145324,
+          0.252918,
+          0.754917,
+          0.014356
+        ],
+        "polygon": null,
+        "reference_text": "\u30ea\u30c6\u30fc\u30eb\u4e8b\u696d\u90e8\u9580",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[1].segment_revenue",
+        "page": 15,
+        "bbox": [
+          0.408999,
+          0.234155,
+          0.068018,
+          0.014356
+        ],
+        "polygon": null,
+        "reference_text": "1,290,000",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[1].segment_profit",
+        "page": 15,
+        "bbox": [
+          0.424114,
+          0.290443,
+          0.052903,
+          0.014356
+        ],
+        "polygon": null,
+        "reference_text": "215,700",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[2].segment_name",
+        "page": 15,
+        "bbox": [
+          0.145324,
+          0.27168,
+          0.754917,
+          0.014356
+        ],
+        "polygon": null,
+        "reference_text": "\u30b0\u30ed\u30fc\u30d0\u30eb\u4e8b\u696d\u90e8\u9580",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[2].segment_profit",
+        "page": 15,
+        "bbox": [
+          0.52992,
+          0.290443,
+          0.052903,
+          0.014356
+        ],
+        "polygon": null,
+        "reference_text": "644,900",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[3].segment_name",
+        "page": 15,
+        "bbox": [
+          0.145324,
+          0.290443,
+          0.754917,
+          0.014356
+        ],
+        "polygon": null,
+        "reference_text": "\u5e02\u5834\u4e8b\u696d\u90e8\u9580",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[3].segment_profit",
+        "page": 15,
+        "bbox": [
+          0.635725,
+          0.290443,
+          0.052903,
+          0.014356
+        ],
+        "polygon": null,
+        "reference_text": "389,900",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[4].segment_name",
+        "page": 15,
+        "bbox": [
+          0.183111,
+          0.335449,
+          0.529029,
+          0.014356
+        ],
+        "polygon": null,
+        "reference_text": "\u672c\u793e\u7ba1\u7406\u7b49",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[0].segment_profit",
+        "page": 15,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "632100",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[2].segment_revenue",
+        "page": 15,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "1375900",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[3].segment_revenue",
+        "page": 15,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "526200",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[4].segment_revenue",
+        "page": 15,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "-288482",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[4].segment_profit",
+        "page": 15,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "-322389",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:49:59.857108Z",
+  "completed_at": "2026-09-21T14:49:59.857108Z",
+  "latency_in_ms": 116
+}

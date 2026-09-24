@@ -1,0 +1,86 @@
+{
+  "request": {
+    "example_id": "long/dd1155_schedule_continuation_0012",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/long/dd1155_schedule_continuation_0012.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "long/dd1155_schedule_continuation_0012",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "contract_purchase_order_number": "H94003-04-D-0004",
+      "delivery_order_call_number": "0290",
+      "date_of_order": "2014 Oct 23",
+      "requisition_purchase_request_number": "4DF48001",
+      "total_award_amount": "$31,696,101.00",
+      "line_items": [
+        {
+          "item_number": "0001",
+          "description": "DATA IAW EXHIBIT \"A\"\nCPFF\nBASIC CONTRACT ITEM NO. 0007\nDD FORM 1423, AS REQUIRED BY DMEA CET 14-480 IN DIRECT\nSUPPORT OF CLIN 0002.\nNOTE: THE USE OF DD FORM 1423 EQUIVALENTS AS SHOWN IN THE\nCET ARE APPROVED FOR USE ON THIS DELIVERY ORDER.\nFOB: Destination\nPURCHASE REQUEST NUMBER: 4DF48001",
+          "quantity_ordered": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "NSP"
+        },
+        {
+          "item_number": "0002",
+          "description": "ENGINEERING SERVICES\nCPFF\nBASIC CONTRACT ITEM NO. 0008\nENGINEERING SERVICES IN SUPPORT OF ADVANCED TECHNOLOGY\nSUPPORT PROGRAM III (ATSP3) IN ACCORDANCE WITH TECHNICAL\nREQUIREMENTS DOCUMENT (11 MAR 04) AND DMEA CET 14-480.\nFOB: Destination\nPURCHASE REQUEST NUMBER: 4DF48001",
+          "quantity_ordered": 1.0,
+          "unit": "Lot",
+          "unit_price": null,
+          "amount": "$31,696,101.00"
+        },
+        {
+          "item_number": "000201",
+          "description": "ACRN AA FUND CITE\\nCPFF\\nFUNDING INFORMATION FOR ACRN AA\\nMIPR NO. F3YCAL4226G003\\nFOB: Destination\\nPURCHASE REQUEST NUMBER: 4DF48001",
+          "quantity_ordered": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "$0.00"
+        },
+        {
+          "item_number": "000202",
+          "description": "ACRN AB FUND CITE\\nCPFF\\nFUNDING INFORMATION FOR ACRN AB\\nMIPR NO. F3YCAL4189G002\\nFOB: Destination\\nPURCHASE REQUEST NUMBER: 4DF48001",
+          "quantity_ordered": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "$0.00"
+        },
+        {
+          "item_number": "000203",
+          "description": "ACRN AC FUND CITE\nCPFF\nFUNDING INFORMATION FOR ACRN AC\nMIPR NO. F3YCAL4227G001\nFOB: Destination\nPURCHASE REQUEST NUMBER: 4DF48001",
+          "quantity_ordered": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "$0.00"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "line_items",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:37:12.718161Z",
+  "completed_at": "2026-09-23T19:37:12.718161Z",
+  "latency_in_ms": 0
+}

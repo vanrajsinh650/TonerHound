@@ -1,0 +1,257 @@
+{
+  "request": {
+    "example_id": "medium/crh_results_deck_q4fy25",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/crh_results_deck_q4fy25.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 16,
+    "ocr_pages": 0,
+    "num_pages": 42
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/crh_results_deck_q4fy25",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "period": "FY2025",
+      "currency": "USD",
+      "fiscal_period_end_date": "2025-12-31",
+      "total_revenue": 37447.0,
+      "revenue_growth_yoy": 5.27,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 3730.0,
+      "adjusted_ebitda": 7681.0,
+      "gaap_eps_diluted": 5.51,
+      "adjusted_eps_diluted": 5.57,
+      "gross_margin": null,
+      "operating_margin": null,
+      "free_cash_flow": 4969.0,
+      "segments": [
+        {
+          "segment_name": "Americas Materials Solutions",
+          "segment_revenue": 17029,
+          "segment_profit": 4002
+        },
+        {
+          "segment_name": "Americas Building Solutions",
+          "segment_revenue": 7122,
+          "segment_profit": 1474
+        },
+        {
+          "segment_name": "International Solutions",
+          "segment_revenue": 13296,
+          "segment_profit": 2205
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "period",
+        "page": 42,
+        "bbox": [
+          0.785245,
+          0.395177,
+          0.041371,
+          0.028004
+        ],
+        "polygon": null,
+        "reference_text": "FY 2025",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_revenue",
+        "page": 39,
+        "bbox": [
+          0.771468,
+          0.687273,
+          0.031634,
+          0.025177
+        ],
+        "polygon": null,
+        "reference_text": "37,447",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "net_income",
+        "page": 41,
+        "bbox": [
+          0.700292,
+          0.66808,
+          0.02654,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "3,730",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "adjusted_ebitda",
+        "page": 39,
+        "bbox": [
+          0.777216,
+          0.662761,
+          0.025887,
+          0.026412
+        ],
+        "polygon": null,
+        "reference_text": "7,681",
+        "confidence": 0.8908554919616428,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gaap_eps_diluted",
+        "page": 41,
+        "bbox": [
+          0.77723,
+          0.666965,
+          0.016218,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$5.51",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "adjusted_eps_diluted",
+        "page": 38,
+        "bbox": [
+          0.919541,
+          0.836138,
+          0.017049,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$5.57",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "free_cash_flow",
+        "page": 42,
+        "bbox": [
+          0.802028,
+          0.534779,
+          0.027497,
+          0.028004
+        ],
+        "polygon": null,
+        "reference_text": "4,969",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[0].segment_name",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Americas Materials Solutions",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[0].segment_revenue",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "17029",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[0].segment_profit",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "4002",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[1].segment_name",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Americas Building Solutions",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[1].segment_revenue",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "7122",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[1].segment_profit",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "1474",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[2].segment_name",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "International Solutions",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[2].segment_revenue",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "13296",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "segments[2].segment_profit",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "2205",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:47:42.075305Z",
+  "completed_at": "2026-09-21T14:47:42.075305Z",
+  "latency_in_ms": 151
+}

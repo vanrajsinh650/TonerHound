@@ -1,0 +1,151 @@
+{
+  "request": {
+    "example_id": "medium/coreweave_earnings_deck_q4fy25",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/coreweave_earnings_deck_q4fy25.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 7,
+    "ocr_pages": 0,
+    "num_pages": 24
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/coreweave_earnings_deck_q4fy25",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "period": "Q4 FY2025",
+      "currency": "USD",
+      "fiscal_period_end_date": "2025-12-31",
+      "total_revenue": 1572.0,
+      "revenue_growth_yoy": 110.0,
+      "gross_profit": null,
+      "operating_income": -89.0,
+      "net_income": -452.0,
+      "adjusted_ebitda": 898.0,
+      "gaap_eps_diluted": -0.89,
+      "adjusted_eps_diluted": null,
+      "gross_margin": null,
+      "operating_margin": -6.0,
+      "free_cash_flow": null,
+      "segments": []
+    },
+    "field_citations": [
+      {
+        "field_path": "period",
+        "page": 23,
+        "bbox": [
+          0.778868,
+          0.107089,
+          0.046967,
+          0.024889
+        ],
+        "polygon": null,
+        "reference_text": "Q4 2025",
+        "confidence": 0.7868576078640668,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "revenue_growth_yoy",
+        "page": 10,
+        "bbox": [
+          0.104271,
+          0.505793,
+          0.0272,
+          0.024889
+        ],
+        "polygon": null,
+        "reference_text": "110%",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operating_income",
+        "page": 18,
+        "bbox": [
+          0.764194,
+          0.325417,
+          0.023926,
+          0.021778
+        ],
+        "polygon": null,
+        "reference_text": "$(89)",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "net_income",
+        "page": 18,
+        "bbox": [
+          0.758153,
+          0.414306,
+          0.029964,
+          0.021778
+        ],
+        "polygon": null,
+        "reference_text": "$(452)",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "adjusted_ebitda",
+        "page": 18,
+        "bbox": [
+          0.764347,
+          0.679689,
+          0.024296,
+          0.021778
+        ],
+        "polygon": null,
+        "reference_text": "$898",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gaap_eps_diluted",
+        "page": 18,
+        "bbox": [
+          0.763969,
+          0.507356,
+          0.019328,
+          0.021778
+        ],
+        "polygon": null,
+        "reference_text": "$(0.89)",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operating_margin",
+        "page": 18,
+        "bbox": [
+          0.767826,
+          0.355047,
+          0.011871,
+          0.021778
+        ],
+        "polygon": null,
+        "reference_text": "(6)",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:47:41.919278Z",
+  "completed_at": "2026-09-21T14:47:41.919278Z",
+  "latency_in_ms": 114
+}

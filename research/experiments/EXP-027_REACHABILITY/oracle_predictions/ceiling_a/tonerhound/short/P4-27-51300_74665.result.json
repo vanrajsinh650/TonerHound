@@ -1,0 +1,690 @@
+{
+  "request": {
+    "example_id": "short/P4-27-51300_74665",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/P4-27-51300_74665.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 45,
+    "ocr_pages": 0,
+    "num_pages": 4
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/P4-27-51300_74665",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "field_name": "DORWARD",
+      "lease_name": "MARTIN, ANNIE \"C\"",
+      "current_operator_name": "RAPTOR PETROLEUM OPERATING, LLC",
+      "operator_p5_no": "685812",
+      "oil_lse_gas_id_no": null,
+      "county": "SCURRY",
+      "rrc_district": "8A",
+      "operator_address": "2616 SILVER SHADOW CONROE, TX 77304",
+      "well_nos": "8, 9, 11",
+      "classification_oil": true,
+      "classification_gas": false,
+      "classification_other": false,
+      "effective_date": "2/2014",
+      "change_operator": true,
+      "change_oil_condensate_gatherer": false,
+      "change_gas_gatherer": false,
+      "change_gas_purchaser": false,
+      "change_gas_purchaser_system_code": false,
+      "change_field_name": false,
+      "change_field_name_from": null,
+      "change_field_name_docket": null,
+      "change_lease_name": false,
+      "change_lease_name_from": null,
+      "new_rrc_oil_lease": false,
+      "new_rrc_gas_well": false,
+      "new_rrc_other_well": false,
+      "new_rrc_other_well_specify": null,
+      "due_new_completion_recompletion": false,
+      "due_reclass_gas_to_oil": false,
+      "due_reclass_oil_to_gas": false,
+      "due_consolidation": false,
+      "due_unitization": false,
+      "due_field_transfer": false,
+      "due_subdivision": false,
+      "prev_operator_name": "ROCKER A OPERATING COMPANY",
+      "prev_operator_signature": true,
+      "prev_operator_name_print": "W. E. CHAPMAN, JR.",
+      "prev_operator_title": "PRESIDENT",
+      "prev_operator_date": "2-20-14",
+      "prev_operator_phone": "(806)495-2766",
+      "prev_operator_authorized_employee": true,
+      "prev_operator_authorized_agent": false,
+      "curr_operator_name_print": "Erin Eubanks",
+      "curr_operator_signature": true,
+      "curr_operator_title": "Regulatory Manager",
+      "curr_operator_email": "erin.eubanks@raptorpetroleum.com",
+      "curr_operator_date": "2/24/2014",
+      "curr_operator_phone": "(832)220-5982",
+      "curr_operator_authorized_employee": true,
+      "curr_operator_authorized_agent": false,
+      "reviewer_initials": null,
+      "approval_date": null,
+      "gas_gatherers_purchasers": null,
+      "oil_condensate_gatherers": null
+    },
+    "field_citations": [
+      {
+        "field_path": "field_name",
+        "page": 1,
+        "bbox": [
+          0.07038930162689411,
+          0.13746147892385477,
+          0.07364036970711385,
+          0.012327665234869778
+        ],
+        "polygon": null,
+        "reference_text": "DORWARD",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "lease_name",
+        "page": 1,
+        "bbox": [
+          0.5245772706448923,
+          0.13822165578583917,
+          0.10183346479012967,
+          0.011756803567566948
+        ],
+        "polygon": null,
+        "reference_text": "MARTIN, ANNIE",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "current_operator_name",
+        "page": 1,
+        "bbox": [
+          0.07156901261795234,
+          0.1711904326684817,
+          0.2713199647421772,
+          0.012815802224480422
+        ],
+        "polygon": null,
+        "reference_text": "RAPTOR PETROLEUM OPERATING, LLC",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.766810844120641,
+          0.17111246581084227,
+          0.05244461138640866,
+          0.011335736492894183
+        ],
+        "polygon": null,
+        "reference_text": "SCURRY",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district",
+        "page": 1,
+        "bbox": [
+          0.8788832382634182,
+          0.17192820173279807,
+          0.016818769530384747,
+          0.011902530991442228
+        ],
+        "polygon": null,
+        "reference_text": "8A",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "classification_oil",
+        "page": 1,
+        "bbox": [
+          0.5324419772502238,
+          0.2298865843134059,
+          0.014,
+          0.010563511602711588
+        ],
+        "polygon": null,
+        "reference_text": "X",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "effective_date",
+        "page": 1,
+        "bbox": [
+          0.8293354266415573,
+          0.23423377380003557,
+          0.04142059144457766,
+          0.012894459733417796
+        ],
+        "polygon": null,
+        "reference_text": "2/2014",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_operator",
+        "page": 1,
+        "bbox": [
+          0.1812819472766742,
+          0.2636162287093308,
+          0.014,
+          0.011307389094063485
+        ],
+        "polygon": null,
+        "reference_text": "X",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_oil_condensate_gatherer",
+        "page": 2,
+        "bbox": [
+          0.424647,
+          0.427632,
+          0.014,
+          0.016088
+        ],
+        "polygon": null,
+        "reference_text": "no",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_gas_gatherer",
+        "page": 2,
+        "bbox": [
+          0.424647,
+          0.427632,
+          0.014,
+          0.016088
+        ],
+        "polygon": null,
+        "reference_text": "no",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_gas_purchaser",
+        "page": 2,
+        "bbox": [
+          0.424647,
+          0.427632,
+          0.014,
+          0.016088
+        ],
+        "polygon": null,
+        "reference_text": "no",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_gas_purchaser_system_code",
+        "page": 2,
+        "bbox": [
+          0.424647,
+          0.427632,
+          0.014,
+          0.016088
+        ],
+        "polygon": null,
+        "reference_text": "no",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_field_name",
+        "page": 1,
+        "bbox": [
+          0.656311,
+          0.664209,
+          0.014,
+          0.015064
+        ],
+        "polygon": null,
+        "reference_text": "o",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "change_lease_name",
+        "page": 1,
+        "bbox": [
+          0.656311,
+          0.664209,
+          0.014,
+          0.015064
+        ],
+        "polygon": null,
+        "reference_text": "o",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "new_rrc_oil_lease",
+        "page": 2,
+        "bbox": [
+          0.424647,
+          0.427762,
+          0.014,
+          0.015082
+        ],
+        "polygon": null,
+        "reference_text": "no",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "new_rrc_gas_well",
+        "page": 2,
+        "bbox": [
+          0.424647,
+          0.427762,
+          0.014,
+          0.015082
+        ],
+        "polygon": null,
+        "reference_text": "no",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "new_rrc_other_well",
+        "page": 2,
+        "bbox": [
+          0.424647,
+          0.427762,
+          0.014,
+          0.015082
+        ],
+        "polygon": null,
+        "reference_text": "no",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_new_completion_recompletion",
+        "page": 2,
+        "bbox": [
+          0.424647,
+          0.427736,
+          0.014,
+          0.015283
+        ],
+        "polygon": null,
+        "reference_text": "no",
+        "confidence": 0.9506818746528974,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_consolidation",
+        "page": 2,
+        "bbox": [
+          0.424647,
+          0.427632,
+          0.014,
+          0.016088
+        ],
+        "polygon": null,
+        "reference_text": "no",
+        "confidence": 0.9466928264975365,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_field_transfer",
+        "page": 1,
+        "bbox": [
+          0.656311,
+          0.664209,
+          0.014,
+          0.015064
+        ],
+        "polygon": null,
+        "reference_text": "o",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_subdivision",
+        "page": 3,
+        "bbox": [
+          0.777298,
+          0.183116,
+          0.022,
+          0.014274
+        ],
+        "polygon": null,
+        "reference_text": "D",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_name",
+        "page": 1,
+        "bbox": [
+          0.07589461125140169,
+          0.6974650334758684,
+          0.23561409374864684,
+          0.012793471165845505
+        ],
+        "polygon": null,
+        "reference_text": "ROCKER A OPERATING COMPANY",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_signature",
+        "page": 1,
+        "bbox": [
+          0.181282,
+          0.261637,
+          0.014,
+          0.015265
+        ],
+        "polygon": null,
+        "reference_text": "X",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_name_print",
+        "page": 1,
+        "bbox": [
+          0.07550137842126438,
+          0.7300092900273483,
+          0.13626391984465597,
+          0.012894382994384723
+        ],
+        "polygon": null,
+        "reference_text": "W. E. CHAPMAN, JR.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_title",
+        "page": 1,
+        "bbox": [
+          0.07707432224245994,
+          0.763827721484581,
+          0.07946815850379466,
+          0.0127527227392642
+        ],
+        "polygon": null,
+        "reference_text": "PRESIDENT",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_authorized_employee",
+        "page": 1,
+        "bbox": [
+          0.181282,
+          0.261637,
+          0.014,
+          0.015265
+        ],
+        "polygon": null,
+        "reference_text": "X",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_authorized_agent",
+        "page": 1,
+        "bbox": [
+          0.656311,
+          0.664183,
+          0.014,
+          0.015265
+        ],
+        "polygon": null,
+        "reference_text": "o",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_signature",
+        "page": 1,
+        "bbox": [
+          0.181282,
+          0.261637,
+          0.014,
+          0.015265
+        ],
+        "polygon": null,
+        "reference_text": "X",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_authorized_employee",
+        "page": 1,
+        "bbox": [
+          0.181282,
+          0.261637,
+          0.014,
+          0.015265
+        ],
+        "polygon": null,
+        "reference_text": "X",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_authorized_agent",
+        "page": 1,
+        "bbox": [
+          0.656311,
+          0.664183,
+          0.014,
+          0.015265
+        ],
+        "polygon": null,
+        "reference_text": "o",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_p5_no",
+        "page": 1,
+        "bbox": [
+          0.5521037937661377,
+          0.17095576470523233,
+          0.03563704243509391,
+          0.012327665234869778
+        ],
+        "polygon": null,
+        "reference_text": "685812",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_address",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "2616 SILVER SHADOW CONROE, TX 77304",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "well_nos",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "8, 9, 11",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "classification_gas",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "classification_other",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_reclass_gas_to_oil",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_reclass_oil_to_gas",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "due_unitization",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "False",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_date",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "2-20-14",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "prev_operator_phone",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "(806)495-2766",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_name_print",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Erin Eubanks",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_title",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Regulatory Manager",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_email",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "erin.eubanks@raptorpetroleum.com",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_date",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "2/24/2014",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "curr_operator_phone",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "(832)220-5982",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:50:31.078461Z",
+  "completed_at": "2026-09-21T14:50:31.078461Z",
+  "latency_in_ms": 1312
+}

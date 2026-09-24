@@ -1,0 +1,133 @@
+{
+  "request": {
+    "example_id": "short/hingham-grainger-invoice",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/hingham-grainger-invoice.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/hingham-grainger-invoice",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "invoice_number": "9823373304",
+      "invoice_type": "standard",
+      "original_invoice_number": null,
+      "date": "2023-08-30",
+      "due_date": "2023-09-29",
+      "purchase_order_number": "WEB2454487473",
+      "order_number": "1491364305",
+      "vendor": {
+        "name": "GRAINGER",
+        "address": {
+          "street": "428 UNIVERSITY AVE.",
+          "city": "NORWOOD",
+          "state": "MA",
+          "zip_code": "02062-2638",
+          "country": null
+        },
+        "phone": "1-800-472-4643",
+        "email": null,
+        "tax_id": "36-1150280"
+      },
+      "customer": {
+        "name": "HINGHAM TOWN HALL SELECTMEN",
+        "address": {
+          "street": "210 CENTRAL ST",
+          "city": "HINGHAM",
+          "state": "MA",
+          "zip_code": "02043-1955",
+          "country": null
+        },
+        "phone": "(781) 741-1400",
+        "email": null,
+        "account_number": "838233708"
+      },
+      "line_items": [
+        {
+          "line_no": 1,
+          "item_code": "61DE01",
+          "description": "OFFICE DEHUMID,229CFM,16.9PT,WHITE MANUFACTURER # FFAP5033W1",
+          "quantity": 1.0,
+          "unit_price": 392.07,
+          "discount_percent": null,
+          "tax_rate": null,
+          "amount": 392.07
+        }
+      ],
+      "subtotal": 392.07,
+      "discount_total": null,
+      "tax_total": null,
+      "shipping": null,
+      "total_amount": 392.07,
+      "payment_terms": "NET 30 DAYS AFTER INVOICE DATE",
+      "bank_details": null,
+      "currency": "USD",
+      "notes": null
+    },
+    "field_citations": [
+      {
+        "field_path": "vendor.address.street",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.address.city",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.address.state",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.address.zip_code",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.phone",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:38:03.757883Z",
+  "completed_at": "2026-09-23T19:38:03.757883Z",
+  "latency_in_ms": 0
+}

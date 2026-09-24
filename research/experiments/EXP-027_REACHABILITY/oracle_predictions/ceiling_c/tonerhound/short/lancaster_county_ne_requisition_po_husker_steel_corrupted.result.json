@@ -1,0 +1,79 @@
+{
+  "request": {
+    "example_id": "short/lancaster_county_ne_requisition_po_husker_steel_corrupted",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/lancaster_county_ne_requisition_po_husker_steel_corrupted.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/lancaster_county_ne_requisition_po_husker_steel_corrupted",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "po_number": null,
+      "requisition_number": null,
+      "po_date": "2025-10-29",
+      "buyer": {
+        "name": "LANCASTER COUNTY, NEBRASKA",
+        "department": null
+      },
+      "requisitioner": "Kurtis Hunt",
+      "buyer_contact": "Ron Bohaty",
+      "vendor": {
+        "name": "Husker Steel Inc",
+        "address": null,
+        "vendor_number": null,
+        "contact": null
+      },
+      "ship_to": "Lancaster County Engineer, 444 Cherrycreek Rd, Building B, Lincoln, NE 68528",
+      "bill_to": "Lancaster County Engineer, 444 Cherrycreek Rd, Building B, Lincoln, NE 68528",
+      "line_items": [
+        {
+          "line_no": 1,
+          "description": "Steel Sheet Piling, 7GA. 10' x 18\" sheets",
+          "quantity": 75.0,
+          "unit_of_measure": "Each",
+          "unit_price": 128.0,
+          "start_date": null,
+          "end_date": null,
+          "extended_price": 9600.0
+        },
+        {
+          "line_no": 2,
+          "description": "Steel Sheet Piling, 7GA. 15' x 18\" sheets",
+          "quantity": 75.0,
+          "unit_of_measure": "Each",
+          "unit_price": 192.0,
+          "start_date": null,
+          "end_date": null,
+          "extended_price": 14400.0
+        },
+        {
+          "line_no": 3,
+          "description": "Steel Sheet Piling, 7GA. 20' x 18\" sheets",
+          "quantity": 60.0,
+          "unit_of_measure": "Each",
+          "unit_price": 256.0,
+          "start_date": null,
+          "end_date": null,
+          "extended_price": 15360.0
+        }
+      ],
+      "total_amount": 39360.0,
+      "currency": "USD"
+    },
+    "field_citations": []
+  },
+  "started_at": "2026-09-23T19:38:03.776438Z",
+  "completed_at": "2026-09-23T19:38:03.776438Z",
+  "latency_in_ms": 0
+}

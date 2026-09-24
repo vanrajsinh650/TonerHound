@@ -1,0 +1,1731 @@
+{
+  "request": {
+    "example_id": "medium/ccc_online_0012_chubb_dodge_durango",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/ccc_online_0012_chubb_dodge_durango.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 107,
+    "ocr_pages": 0,
+    "num_pages": 17
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/ccc_online_0012_chubb_dodge_durango",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "report_reference_number": "117460427",
+      "claim_reference": "092024003197-001",
+      "insurance_company": "CHUBB GROUP - FEDERAL INSURANCE COMPANY",
+      "owner_name": "City Of Manchester, Unknown",
+      "owner_address": "14318 Manchester Rd Manchester, MO 63011-4072",
+      "loss_vehicle_vin": "1C4SDJFT7NC135681",
+      "loss_vehicle_year": 2022,
+      "loss_vehicle_make": "Dodge",
+      "loss_vehicle_model": "Durango",
+      "loss_vehicle_trim": "Orange Sport",
+      "loss_vehicle_body_type": "Sports Utility",
+      "loss_vehicle_odometer": null,
+      "loss_incident_date": "01/22/2024",
+      "claim_reported_date": "02/05/2024",
+      "base_vehicle_value": 41700.0,
+      "condition_adjustment": -163.0,
+      "adjusted_vehicle_value": 41537.0,
+      "vehicular_tax": null,
+      "title_registration_fees": null,
+      "deductible": null,
+      "total_settlement": 41537.0,
+      "comparable_vehicles": [
+        {
+          "comp_label": "Comp 1",
+          "vin": "1C4SDJCT2NC229469",
+          "year": 2022,
+          "make": "Dodge",
+          "model": "Durango",
+          "trim": "Orange Sport",
+          "odometer": 16269,
+          "list_price": 46675.0,
+          "adjusted_comparable_value": 40935.0,
+          "source": "Autotrader",
+          "dealer_name": "Sheets Chrysler Jeep Dodge",
+          "dealer_city": "Beckley",
+          "dealer_state": "WV",
+          "distance_from_loss_miles": 510,
+          "stock_number": "N0375A",
+          "updated_date": "01/28/2024",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": -2214.0,
+          "adjustment_options": -200.0,
+          "adjustment_package": null,
+          "adjustment_condition": -3326.0
+        },
+        {
+          "comp_label": "Comp 2",
+          "vin": "1C4SDJCT5NC229238",
+          "year": 2022,
+          "make": "Dodge",
+          "model": "Durango",
+          "trim": "Orange Sport",
+          "odometer": 7689,
+          "list_price": 49998.0,
+          "adjusted_comparable_value": 42125.0,
+          "source": "Inspected Inventory",
+          "dealer_name": "Eau Claire Ford",
+          "dealer_city": "Eau Claire",
+          "dealer_state": "WI",
+          "distance_from_loss_miles": 429,
+          "stock_number": "T24700B",
+          "updated_date": "01/09/2024",
+          "adjustment_make_model_trim": null,
+          "adjustment_mileage": -3597.0,
+          "adjustment_options": -950.0,
+          "adjustment_package": null,
+          "adjustment_condition": -3326.0
+        }
+      ],
+      "component_conditions": [
+        {
+          "component_name": "Seats",
+          "condition_rating": "AVERAGE",
+          "inspection_notes": null,
+          "value_impact": 0
+        },
+        {
+          "component_name": "Carpets",
+          "condition_rating": "AVERAGE",
+          "inspection_notes": null,
+          "value_impact": 0
+        },
+        {
+          "component_name": "Dashboard",
+          "condition_rating": "AVERAGE",
+          "inspection_notes": null,
+          "value_impact": 0
+        },
+        {
+          "component_name": "Headliner",
+          "condition_rating": "AVERAGE",
+          "inspection_notes": null,
+          "value_impact": 0
+        },
+        {
+          "component_name": "Sheet Metal",
+          "condition_rating": "AVERAGE",
+          "inspection_notes": null,
+          "value_impact": 0
+        },
+        {
+          "component_name": "Trim",
+          "condition_rating": "AVERAGE",
+          "inspection_notes": null,
+          "value_impact": 0
+        },
+        {
+          "component_name": "Paint",
+          "condition_rating": "AVERAGE",
+          "inspection_notes": null,
+          "value_impact": 0
+        },
+        {
+          "component_name": "Glass",
+          "condition_rating": "AVERAGE",
+          "inspection_notes": null,
+          "value_impact": 0
+        },
+        {
+          "component_name": "Engine",
+          "condition_rating": "AVERAGE",
+          "inspection_notes": "unknown mileage",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Transmission",
+          "condition_rating": "AVERAGE",
+          "inspection_notes": "unknown mileage",
+          "value_impact": 0
+        },
+        {
+          "component_name": "Front Tires",
+          "condition_rating": "BELOW AVERAGE",
+          "inspection_notes": "4/32 both",
+          "value_impact": -163
+        },
+        {
+          "component_name": "Rear Tires",
+          "condition_rating": "AVERAGE",
+          "inspection_notes": "5/32 both",
+          "value_impact": 0
+        }
+      ],
+      "nhtsa_recalls": [
+        {
+          "campaign_id": "22V140000",
+          "component": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ ELECTRONIC LIMITED SLIP:CONTROL UNIT/MODULE",
+          "mfg_report_date": "MAR 09, 2022"
+        },
+        {
+          "campaign_id": "22V154000",
+          "component": "STEERING:RACK AND PINION",
+          "mfg_report_date": "MAR 13, 2022"
+        },
+        {
+          "campaign_id": "22V866000",
+          "component": "POWER TRAIN:MANUAL TRANSMISSION:COLUMN SHIFT ASSEMBLY",
+          "mfg_report_date": "NOV 22, 2022"
+        },
+        {
+          "campaign_id": "23V115000",
+          "component": "STRUCTURE:BODY:HATCHBACK/LIFTGATE",
+          "mfg_report_date": "FEB 22, 2023"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "report_reference_number",
+        "page": 1,
+        "bbox": [
+          0.396405,
+          0.402126,
+          0.073588,
+          0.017934
+        ],
+        "polygon": null,
+        "reference_text": "117460427",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claim_reference",
+        "page": 1,
+        "bbox": [
+          0.396405,
+          0.422328,
+          0.127544,
+          0.017934
+        ],
+        "polygon": null,
+        "reference_text": "092024003197-001",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "insurance_company",
+        "page": 1,
+        "bbox": [
+          0.541716,
+          0.09746,
+          0.401732,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "CHUBB GROUP - FEDERAL INSURANCE COMPANY",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "owner_name",
+        "page": 1,
+        "bbox": [
+          0.396405,
+          0.212351,
+          0.195324,
+          0.017934
+        ],
+        "polygon": null,
+        "reference_text": "City Of Manchester, Unknown",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle_vin",
+        "page": 4,
+        "bbox": [
+          0.322549,
+          0.199695,
+          0.151191,
+          0.017934
+        ],
+        "polygon": null,
+        "reference_text": "1C4SDJFT7NC135681",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle_year",
+        "page": 1,
+        "bbox": [
+          0.396405,
+          0.265381,
+          0.032706,
+          0.017934
+        ],
+        "polygon": null,
+        "reference_text": "2022",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle_make",
+        "page": 1,
+        "bbox": [
+          0.433199,
+          0.265381,
+          0.043324,
+          0.017934
+        ],
+        "polygon": null,
+        "reference_text": "Dodge",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle_model",
+        "page": 1,
+        "bbox": [
+          0.480611,
+          0.265381,
+          0.056397,
+          0.017934
+        ],
+        "polygon": null,
+        "reference_text": "Durango",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle_trim",
+        "page": 1,
+        "bbox": [
+          0.541096,
+          0.265381,
+          0.088279,
+          0.017934
+        ],
+        "polygon": null,
+        "reference_text": "Orange Sport",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_vehicle_body_type",
+        "page": 4,
+        "bbox": [
+          0.322549,
+          0.320908,
+          0.082529,
+          0.017934
+        ],
+        "polygon": null,
+        "reference_text": "Sports Utility",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "loss_incident_date",
+        "page": 1,
+        "bbox": [
+          0.396405,
+          0.301997,
+          0.073588,
+          0.017934
+        ],
+        "polygon": null,
+        "reference_text": "01/22/2024",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "claim_reported_date",
+        "page": 1,
+        "bbox": [
+          0.396405,
+          0.322199,
+          0.073588,
+          0.017934
+        ],
+        "polygon": null,
+        "reference_text": "02/05/2024",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "base_vehicle_value",
+        "page": 1,
+        "bbox": [
+          0.46875,
+          0.586455,
+          0.094938,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "$41,700.00",
+        "confidence": 0.7524570875517839,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "condition_adjustment",
+        "page": 1,
+        "bbox": [
+          0.497467,
+          0.603517,
+          0.066221,
+          0.017934
+        ],
+        "polygon": null,
+        "reference_text": "-$163.00",
+        "confidence": 0.7639759103776946,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "adjusted_vehicle_value",
+        "page": 1,
+        "bbox": [
+          0.416966,
+          0.658992,
+          0.146722,
+          0.025521
+        ],
+        "polygon": null,
+        "reference_text": "$41,537.00",
+        "confidence": 0.7720365765920036,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_settlement",
+        "page": 1,
+        "bbox": [
+          0.416966,
+          0.658992,
+          0.146722,
+          0.025521
+        ],
+        "polygon": null,
+        "reference_text": "$41,537.00",
+        "confidence": 0.7741860618303213,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].comp_label",
+        "page": 10,
+        "bbox": [
+          0.885699,
+          0.208679,
+          0.02251,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Mpi",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].vin",
+        "page": 10,
+        "bbox": [
+          0.714968,
+          0.223901,
+          0.135843,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "1C4SDJCT2NC229469",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].year",
+        "page": 10,
+        "bbox": [
+          0.689542,
+          0.193528,
+          0.029072,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "2022",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].make",
+        "page": 10,
+        "bbox": [
+          0.722248,
+          0.193528,
+          0.040667,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Dodge",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].model",
+        "page": 10,
+        "bbox": [
+          0.766549,
+          0.193528,
+          0.053739,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Durango",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].trim",
+        "page": 10,
+        "bbox": [
+          0.823921,
+          0.193528,
+          0.083529,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Orange Sport",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].odometer",
+        "page": 10,
+        "bbox": [
+          0.389279,
+          0.211773,
+          0.044971,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "16,269",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].source",
+        "page": 10,
+        "bbox": [
+          0.689542,
+          0.193528,
+          0.217909,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Autotrader",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].dealer_name",
+        "page": 10,
+        "bbox": [
+          0.760013,
+          0.239053,
+          0.167098,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Sheets Chrysler Jeep Dodge",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].dealer_city",
+        "page": 10,
+        "bbox": [
+          0.689542,
+          0.193528,
+          0.217909,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Beckley",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].dealer_state",
+        "page": 10,
+        "bbox": [
+          0.689542,
+          0.193528,
+          0.217909,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "WV",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].stock_number",
+        "page": 10,
+        "bbox": [
+          0.689542,
+          0.193528,
+          0.217909,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "N0375A",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].updated_date",
+        "page": 10,
+        "bbox": [
+          0.689542,
+          0.193528,
+          0.217909,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "01/28/2024",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].comp_label",
+        "page": 10,
+        "bbox": [
+          0.689542,
+          0.345043,
+          0.217909,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Comp 2",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].vin",
+        "page": 10,
+        "bbox": [
+          0.714968,
+          0.375417,
+          0.135843,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "1C4SDJCT5NC229238",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].year",
+        "page": 10,
+        "bbox": [
+          0.689542,
+          0.345043,
+          0.029072,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "2022",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].make",
+        "page": 10,
+        "bbox": [
+          0.722248,
+          0.345043,
+          0.040667,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Dodge",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].model",
+        "page": 10,
+        "bbox": [
+          0.766549,
+          0.345043,
+          0.053739,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Durango",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].trim",
+        "page": 10,
+        "bbox": [
+          0.823921,
+          0.345043,
+          0.083529,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Orange Sport",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].source",
+        "page": 10,
+        "bbox": [
+          0.689542,
+          0.345043,
+          0.217909,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Inspected Inventory",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].dealer_name",
+        "page": 10,
+        "bbox": [
+          0.760013,
+          0.390568,
+          0.091529,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Eau Claire Ford",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].dealer_city",
+        "page": 10,
+        "bbox": [
+          0.760013,
+          0.390568,
+          0.06102,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Eau Claire",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].dealer_state",
+        "page": 10,
+        "bbox": [
+          0.689542,
+          0.345043,
+          0.217909,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "WI",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].stock_number",
+        "page": 10,
+        "bbox": [
+          0.689542,
+          0.345043,
+          0.217909,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "T24700B",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].updated_date",
+        "page": 10,
+        "bbox": [
+          0.689542,
+          0.345043,
+          0.217909,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "01/09/2024",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[0].component_name",
+        "page": 8,
+        "bbox": [
+          0.063725,
+          0.230965,
+          0.037603,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Seats",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[0].condition_rating",
+        "page": 8,
+        "bbox": [
+          0.166013,
+          0.230965,
+          0.071103,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "AVERAGE",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[0].value_impact",
+        "page": 8,
+        "bbox": [
+          0.622542,
+          0.230965,
+          0.008176,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[1].component_name",
+        "page": 8,
+        "bbox": [
+          0.063725,
+          0.253693,
+          0.051485,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Carpets",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[1].condition_rating",
+        "page": 8,
+        "bbox": [
+          0.166013,
+          0.253693,
+          0.071103,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "AVERAGE",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[1].value_impact",
+        "page": 8,
+        "bbox": [
+          0.622542,
+          0.253693,
+          0.008176,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[2].component_name",
+        "page": 8,
+        "bbox": [
+          0.063725,
+          0.27642,
+          0.071926,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Dashboard",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[2].condition_rating",
+        "page": 8,
+        "bbox": [
+          0.166013,
+          0.27642,
+          0.071103,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "AVERAGE",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[2].value_impact",
+        "page": 8,
+        "bbox": [
+          0.622542,
+          0.27642,
+          0.008176,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[3].component_name",
+        "page": 8,
+        "bbox": [
+          0.063725,
+          0.299147,
+          0.062926,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Headliner",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[3].condition_rating",
+        "page": 8,
+        "bbox": [
+          0.166013,
+          0.299147,
+          0.071103,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "AVERAGE",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[3].value_impact",
+        "page": 8,
+        "bbox": [
+          0.622542,
+          0.299147,
+          0.008176,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[4].component_name",
+        "page": 8,
+        "bbox": [
+          0.063725,
+          0.344602,
+          0.078471,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Sheet Metal",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[4].condition_rating",
+        "page": 8,
+        "bbox": [
+          0.166013,
+          0.344602,
+          0.071103,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "AVERAGE",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[4].value_impact",
+        "page": 8,
+        "bbox": [
+          0.622542,
+          0.344602,
+          0.008176,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[5].component_name",
+        "page": 8,
+        "bbox": [
+          0.063725,
+          0.367329,
+          0.029397,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Trim",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[5].condition_rating",
+        "page": 8,
+        "bbox": [
+          0.166013,
+          0.367329,
+          0.071103,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "AVERAGE",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[5].value_impact",
+        "page": 8,
+        "bbox": [
+          0.622542,
+          0.367329,
+          0.008176,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[6].component_name",
+        "page": 8,
+        "bbox": [
+          0.063725,
+          0.390056,
+          0.033515,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Paint",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[6].condition_rating",
+        "page": 8,
+        "bbox": [
+          0.166013,
+          0.390056,
+          0.071103,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "AVERAGE",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[6].value_impact",
+        "page": 8,
+        "bbox": [
+          0.622542,
+          0.390056,
+          0.008176,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[7].component_name",
+        "page": 8,
+        "bbox": [
+          0.063725,
+          0.412783,
+          0.037588,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Glass",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[7].condition_rating",
+        "page": 8,
+        "bbox": [
+          0.166013,
+          0.412783,
+          0.071103,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "AVERAGE",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[7].value_impact",
+        "page": 8,
+        "bbox": [
+          0.622542,
+          0.412783,
+          0.008176,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[8].component_name",
+        "page": 8,
+        "bbox": [
+          0.063725,
+          0.458238,
+          0.045779,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Engine",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[8].condition_rating",
+        "page": 8,
+        "bbox": [
+          0.166013,
+          0.458238,
+          0.071103,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "AVERAGE",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[8].inspection_notes",
+        "page": 8,
+        "bbox": [
+          0.290196,
+          0.458238,
+          0.114426,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "unknown mileage",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[8].value_impact",
+        "page": 8,
+        "bbox": [
+          0.622542,
+          0.458238,
+          0.008176,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[9].component_name",
+        "page": 8,
+        "bbox": [
+          0.063725,
+          0.480965,
+          0.087426,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Transmission",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[9].condition_rating",
+        "page": 8,
+        "bbox": [
+          0.166013,
+          0.480965,
+          0.071103,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "AVERAGE",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[9].inspection_notes",
+        "page": 8,
+        "bbox": [
+          0.290196,
+          0.480965,
+          0.114426,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "unknown mileage",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[9].value_impact",
+        "page": 8,
+        "bbox": [
+          0.622542,
+          0.480965,
+          0.008176,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[10].component_name",
+        "page": 8,
+        "bbox": [
+          0.063725,
+          0.52642,
+          0.071088,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Front Tires",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[10].condition_rating",
+        "page": 8,
+        "bbox": [
+          0.166013,
+          0.542834,
+          0.071103,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "AVERAGE",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[10].inspection_notes",
+        "page": 8,
+        "bbox": [
+          0.290196,
+          0.52642,
+          0.061324,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "4/32 both",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[10].value_impact",
+        "page": 8,
+        "bbox": [
+          0.603123,
+          0.52642,
+          0.027596,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "$163",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[11].component_name",
+        "page": 8,
+        "bbox": [
+          0.063725,
+          0.565561,
+          0.068632,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Rear Tires",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[11].condition_rating",
+        "page": 8,
+        "bbox": [
+          0.166013,
+          0.565561,
+          0.071103,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "AVERAGE",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[11].inspection_notes",
+        "page": 8,
+        "bbox": [
+          0.290196,
+          0.565561,
+          0.061324,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "5/32 both",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "component_conditions[11].value_impact",
+        "page": 8,
+        "bbox": [
+          0.622542,
+          0.565561,
+          0.008176,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "nhtsa_recalls[0].campaign_id",
+        "page": 16,
+        "bbox": [
+          0.216515,
+          0.192179,
+          0.075221,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "22V140000",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "nhtsa_recalls[0].component",
+        "page": 16,
+        "bbox": [
+          0.058824,
+          0.233941,
+          0.553427,
+          0.029698
+        ],
+        "polygon": null,
+        "reference_text": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ ELECTRONIC LIMITED SLIP:CONTROL UNIT/MODULE",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "nhtsa_recalls[0].mfg_report_date",
+        "page": 16,
+        "bbox": [
+          0.197132,
+          0.212381,
+          0.094,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "09, 2022",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "nhtsa_recalls[1].campaign_id",
+        "page": 16,
+        "bbox": [
+          0.058824,
+          0.637886,
+          0.552559,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "22V154000",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "nhtsa_recalls[1].component",
+        "page": 16,
+        "bbox": [
+          0.058824,
+          0.670714,
+          0.116882,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "steering rack, and",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "nhtsa_recalls[1].mfg_report_date",
+        "page": 16,
+        "bbox": [
+          0.058824,
+          0.637886,
+          0.552559,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "MAR 13, 2022",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "nhtsa_recalls[2].campaign_id",
+        "page": 16,
+        "bbox": [
+          0.058824,
+          0.743946,
+          0.546779,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "22V866000",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "nhtsa_recalls[2].component",
+        "page": 16,
+        "bbox": [
+          0.363721,
+          0.743946,
+          0.027794,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "POWER TRAIN:MANUAL TRANSMISSION:COLUMN SHIFT ASSEMBLY",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "nhtsa_recalls[2].mfg_report_date",
+        "page": 16,
+        "bbox": [
+          0.058824,
+          0.743946,
+          0.546779,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "NOV 22, 2022",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "nhtsa_recalls[3].campaign_id",
+        "page": 17,
+        "bbox": [
+          0.216515,
+          0.338357,
+          0.075221,
+          0.013284
+        ],
+        "polygon": null,
+        "reference_text": "23V115000",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "nhtsa_recalls[3].component",
+        "page": 17,
+        "bbox": [
+          0.153588,
+          0.378761,
+          0.305588,
+          0.013284
+        ],
+        "polygon": null,
+        "reference_text": "STRUCTURE:BODY:HATCHBACK/LIFTGATE",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "nhtsa_recalls[3].mfg_report_date",
+        "page": 17,
+        "bbox": [
+          0.197132,
+          0.358559,
+          0.089926,
+          0.013284
+        ],
+        "polygon": null,
+        "reference_text": "22, 2023",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "owner_address",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "14318 Manchester Rd Manchester, MO 63011-4072",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].list_price",
+        "page": 10,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "46675.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].adjusted_comparable_value",
+        "page": 10,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "40935.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].distance_from_loss_miles",
+        "page": 10,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "510",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].adjustment_mileage",
+        "page": 10,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "-2214.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].adjustment_options",
+        "page": 10,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "-200.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[0].adjustment_condition",
+        "page": 10,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "-3326.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].odometer",
+        "page": 10,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "7689",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].list_price",
+        "page": 10,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "49998.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].adjusted_comparable_value",
+        "page": 10,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "42125.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].distance_from_loss_miles",
+        "page": 10,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "429",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].adjustment_mileage",
+        "page": 10,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "-3597.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].adjustment_options",
+        "page": 10,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "-950.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "comparable_vehicles[1].adjustment_condition",
+        "page": 10,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "-3326.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:47:41.680716Z",
+  "completed_at": "2026-09-21T14:47:41.680716Z",
+  "latency_in_ms": 369
+}

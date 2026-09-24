@@ -1,0 +1,712 @@
+{
+  "request": {
+    "example_id": "short/texas_facilities_commission_purchase_order_shelton-keller_corrupted",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/texas_facilities_commission_purchase_order_shelton-keller_corrupted.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 46,
+    "ocr_pages": 0,
+    "num_pages": 4
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/texas_facilities_commission_purchase_order_shelton-keller_corrupted",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "po_number": "303-0-0317",
+      "requisition_number": "303-0-00473",
+      "po_date": "2019-11-07",
+      "buyer": {
+        "name": "TEXAS FACILITIES COMMISSION",
+        "department": "Facilities Design and Construction"
+      },
+      "requisitioner": null,
+      "buyer_contact": "Leandra Contreras",
+      "vendor": {
+        "name": "SHELTON-KELLER GROUP INC",
+        "address": "200 EAST CESAR CHAVEZ ST STE 190 AUSTIN, TX 787014004",
+        "vendor_number": "17526176577",
+        "contact": "Megan Williams Phone:512-592-5214, Fax: mwilliams@skgtexas.com"
+      },
+      "ship_to": "Parking Garage R, Warehouse 1706 San Jacinto Blvd. ATTN: Leandra Contreras Austin, TX 78701",
+      "bill_to": "TEXAS FACILITIES COMMISSION FISCAL MANAGEMENT / ACCOUNTS PAYABLE P.O. BOX 13047 Austin, Texas 78711-3047",
+      "line_items": [
+        {
+          "line_no": 1,
+          "description": "Sit On It / Ideon (Exemplis) 2723Y.A142.B1--FC1-B17-E3-C16-S0-MC5-FABRIC-~-FG3-COVERCLOTHINDIGO-~-AC Amplify, Highback, Mesh Back, Enhanced Synchro Cntrl, Height FC1:Black Frame B17:Standard Black Nylon Base E3:Seat Depth Adjustment Upgrade C16:Standard Carpet Casters S0:Standard Cylinder Height MC5:Onyx (Black) Mesh Color FABRIC:Fabric Grade Selections ~:No Selection FG3:Fabric Grade 3 COVERCLOTH:Cover Cloth Standard Color Selection INDIGO:Cover Cloth Indigo ~:No Selection AC:Fully Assembled",
+          "quantity": 2.0,
+          "unit_of_measure": "EACH",
+          "unit_price": 448.0,
+          "start_date": "2019-11-07",
+          "end_date": "2019-12-06",
+          "extended_price": 896.0
+        },
+        {
+          "line_no": 2,
+          "description": "Allseating 85040-T2--BKN-(M3)-3EB-MED-SS-~-LH-G1-(1)-F-OBAY-~-BHA-KD-AS YouToo, Midback, Synchro Tilt, Task 2 Arm BKN:Black Nylon (M3):M3 Mesh 3EB:Ebony MED:Upholstered Medium Seat 20\"Wx18\"D (Std) SS:Seat Slider (2.5\" Range) ~:No Selection LH:65mm (2.5\") Hard Surface Casters G1:Grade 1 (1):Oasis F-OBAY:Bay ~:No Selection BHA:Back Height Adjustment KD:Knocked Down AS:Allseating Standard",
+          "quantity": 1.0,
+          "unit_of_measure": "EACH",
+          "unit_price": 540.0,
+          "start_date": "2019-11-07",
+          "end_date": "2019-12-06",
+          "extended_price": 540.0
+        },
+        {
+          "line_no": 3,
+          "description": "SAFCO Products Company 1801AG2113 Comfort Series Big & Tall Executive Chair, Fabric, Black",
+          "quantity": 1.0,
+          "unit_of_measure": "EACH",
+          "unit_price": 610.0,
+          "start_date": "2019-11-07",
+          "end_date": "2019-12-06",
+          "extended_price": 610.0
+        },
+        {
+          "line_no": 4,
+          "description": "Labor to install 4 chairs",
+          "quantity": 1.0,
+          "unit_of_measure": "FEE",
+          "unit_price": 165.0,
+          "start_date": "2019-11-07",
+          "end_date": "2019-12-06",
+          "extended_price": 165.0
+        }
+      ],
+      "total_amount": 2211.0,
+      "currency": "USD"
+    },
+    "field_citations": [
+      {
+        "field_path": "po_number",
+        "page": 1,
+        "bbox": [
+          0.273495,
+          0.218091,
+          0.092388,
+          0.014727
+        ],
+        "polygon": null,
+        "reference_text": "Number:303-0-0317",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "requisition_number",
+        "page": 1,
+        "bbox": [
+          0.274739,
+          0.236273,
+          0.095261,
+          0.014727
+        ],
+        "polygon": null,
+        "reference_text": "Number:303-0-00473",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "po_date",
+        "page": 1,
+        "bbox": [
+          0.828235,
+          0.222477,
+          0.073529,
+          0.015955
+        ],
+        "polygon": null,
+        "reference_text": "11/7/2019",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "buyer.name",
+        "page": 3,
+        "bbox": [
+          0.095882,
+          0.767727,
+          0.187647,
+          0.008182
+        ],
+        "polygon": null,
+        "reference_text": "TEXAS FACILITIES COMMISSION",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "buyer.department",
+        "page": 3,
+        "bbox": [
+          0.095882,
+          0.767727,
+          0.187647,
+          0.008182
+        ],
+        "polygon": null,
+        "reference_text": "Facilities Design and Construction",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "buyer_contact",
+        "page": 1,
+        "bbox": [
+          0.286471,
+          0.699,
+          0.120588,
+          0.014727
+        ],
+        "polygon": null,
+        "reference_text": "Leandra Contreras,",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.name",
+        "page": 1,
+        "bbox": [
+          0.622353,
+          0.498636,
+          0.194118,
+          0.010455
+        ],
+        "polygon": null,
+        "reference_text": "SHELTON-KELLER GROUP INC",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.address",
+        "page": 1,
+        "bbox": [
+          0.24,
+          0.511818,
+          0.598824,
+          0.025455
+        ],
+        "polygon": null,
+        "reference_text": "200 EAST CESAR CHAVEZ ST STE 190 Austin,",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.vendor_number",
+        "page": 1,
+        "bbox": [
+          0.622353,
+          0.498636,
+          0.194118,
+          0.010455
+        ],
+        "polygon": null,
+        "reference_text": "17526176577",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "vendor.contact",
+        "page": 1,
+        "bbox": [
+          0.622353,
+          0.498636,
+          0.194118,
+          0.010455
+        ],
+        "polygon": null,
+        "reference_text": "Megan Williams Phone:512-592-5214, Fax: mwilliams@skgtexas.com",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "ship_to",
+        "page": 1,
+        "bbox": [
+          0.199412,
+          0.479136,
+          0.563529,
+          0.017182
+        ],
+        "polygon": null,
+        "reference_text": "Parking Garage R, Warehouse 17526176577",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "bill_to",
+        "page": 1,
+        "bbox": [
+          0.103529,
+          0.295909,
+          0.398235,
+          0.055
+        ],
+        "polygon": null,
+        "reference_text": "FACILITIES COMMISSION FISCAL MANAGEMENT / ACCOUNTS PAYABLE P.O. BOX 13047 Austin, Texas 78711-3047",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].description",
+        "page": 1,
+        "bbox": [
+          0.185882,
+          0.792909,
+          0.037059,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "Sit On It / Ideon (Exemplis) 2723Y.A142.B1--FC1-B17-E3-C16-S0-MC5-FABRIC-~-FG3-COVERCLOTHINDIGO-~-AC Amplify, Highback, Mesh Back, Enhanced Synchro Cntrl, Height FC1:Black Frame B17:Standard Black Nylon Base E3:Seat Depth Adjustment Upgrade C16:Standard Carpet Casters S0:Standard Cylinder Height MC5:Onyx (Black) Mesh Color FABRIC:Fabric Grade Selections ~:No Selection FG3:Fabric Grade 3 COVERCLOTH:Cover Cloth Standard Color Selection INDIGO:Cover Cloth Indigo ~:No Selection AC:Fully Assembled",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].quantity",
+        "page": 1,
+        "bbox": [
+          0.488235,
+          0.792455,
+          0.007059,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "2",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].unit_of_measure",
+        "page": 1,
+        "bbox": [
+          0.516471,
+          0.792682,
+          0.035294,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "EACH",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].start_date",
+        "page": 1,
+        "bbox": [
+          0.118824,
+          0.792909,
+          0.761765,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "2019-11-07",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].end_date",
+        "page": 1,
+        "bbox": [
+          0.118824,
+          0.792909,
+          0.761765,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "2019-12-06",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].extended_price",
+        "page": 1,
+        "bbox": [
+          0.837731,
+          0.794273,
+          0.035714,
+          0.016
+        ],
+        "polygon": null,
+        "reference_text": "$896.00",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].line_no",
+        "page": 1,
+        "bbox": [
+          0.488235,
+          0.795909,
+          0.007059,
+          0.009091
+        ],
+        "polygon": null,
+        "reference_text": "2",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].description",
+        "page": 1,
+        "bbox": [
+          0.185882,
+          0.810991,
+          0.037059,
+          0.0102
+        ],
+        "polygon": null,
+        "reference_text": "Allseating 85040-T2--BKN-(M3)-3EB-MED-SS-~-LH-G1-(1)-F-OBAY-~-BHA-KD-AS YouToo, Midback, Synchro Tilt, Task 2 Arm BKN:Black Nylon (M3):M3 Mesh 3EB:Ebony MED:Upholstered Medium Seat 20\"Wx18\"D (Std) SS:Seat Slider (2.5\" Range) ~:No Selection LH:65mm (2.5\") Hard Surface Casters G1:Grade 1 (1):Oasis F-OBAY:Bay ~:No Selection BHA:Back Height Adjustment KD:Knocked Down AS:Allseating Standard",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].unit_of_measure",
+        "page": 1,
+        "bbox": [
+          0.118824,
+          0.810091,
+          0.761765,
+          0.012
+        ],
+        "polygon": null,
+        "reference_text": "EACH",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].start_date",
+        "page": 1,
+        "bbox": [
+          0.118824,
+          0.810091,
+          0.761765,
+          0.012
+        ],
+        "polygon": null,
+        "reference_text": "2019-11-07",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].end_date",
+        "page": 1,
+        "bbox": [
+          0.118824,
+          0.810091,
+          0.761765,
+          0.012
+        ],
+        "polygon": null,
+        "reference_text": "2019-12-06",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].description",
+        "page": 1,
+        "bbox": [
+          0.185882,
+          0.826991,
+          0.037059,
+          0.0102
+        ],
+        "polygon": null,
+        "reference_text": "SAFCO Products Company 1801AG2113 Comfort Series Big & Tall Executive Chair, Fabric, Black",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].unit_of_measure",
+        "page": 1,
+        "bbox": [
+          0.118824,
+          0.826091,
+          0.761765,
+          0.012
+        ],
+        "polygon": null,
+        "reference_text": "EACH",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].start_date",
+        "page": 1,
+        "bbox": [
+          0.118824,
+          0.826091,
+          0.761765,
+          0.012
+        ],
+        "polygon": null,
+        "reference_text": "2019-11-07",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].end_date",
+        "page": 1,
+        "bbox": [
+          0.118824,
+          0.826091,
+          0.761765,
+          0.012
+        ],
+        "polygon": null,
+        "reference_text": "2019-12-06",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[3].description",
+        "page": 1,
+        "bbox": [
+          0.185882,
+          0.842991,
+          0.037059,
+          0.0102
+        ],
+        "polygon": null,
+        "reference_text": "Labor to install 4 chairs",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[3].unit_of_measure",
+        "page": 1,
+        "bbox": [
+          0.118824,
+          0.842091,
+          0.761765,
+          0.012
+        ],
+        "polygon": null,
+        "reference_text": "FEE",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[3].start_date",
+        "page": 1,
+        "bbox": [
+          0.118824,
+          0.842091,
+          0.761765,
+          0.012
+        ],
+        "polygon": null,
+        "reference_text": "2019-11-07",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[3].end_date",
+        "page": 1,
+        "bbox": [
+          0.118824,
+          0.842091,
+          0.761765,
+          0.012
+        ],
+        "polygon": null,
+        "reference_text": "2019-12-06",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "total_amount",
+        "page": 3,
+        "bbox": [
+          0.826471,
+          0.13892,
+          0.067647,
+          0.015341
+        ],
+        "polygon": null,
+        "reference_text": "$2,211.00",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].line_no",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "1",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].unit_price",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "448.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].quantity",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "1.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].unit_price",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "540.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[1].extended_price",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "540.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].line_no",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "3",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].quantity",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "1.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].unit_price",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "610.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[2].extended_price",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "610.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[3].line_no",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "4",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[3].quantity",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "1.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[3].unit_price",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "165.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[3].extended_price",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "165.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "currency",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "USD",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:51:31.089779Z",
+  "completed_at": "2026-09-21T14:51:31.089779Z",
+  "latency_in_ms": 335
+}

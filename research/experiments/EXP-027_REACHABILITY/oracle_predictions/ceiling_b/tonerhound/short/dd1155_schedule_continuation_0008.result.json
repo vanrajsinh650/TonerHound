@@ -1,0 +1,131 @@
+{
+  "request": {
+    "example_id": "short/dd1155_schedule_continuation_0008",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/dd1155_schedule_continuation_0008.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 7,
+    "ocr_pages": 0,
+    "num_pages": 5
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/dd1155_schedule_continuation_0008",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "contract_purchase_order_number": "SPE4A4-14-V-7198",
+      "delivery_order_call_number": null,
+      "date_of_order": "2014 JAN 23",
+      "requisition_purchase_request_number": "0051978856",
+      "total_award_amount": null,
+      "line_items": [
+        {
+          "item_number": "0001",
+          "description": "1650003175589\\nGUIDE,PISTON ROLLER\\nGUIDE, PISTON ROLLER\\n52.246-11 Higher Level Contract Quality Requirement (Manufacturers)\\nFAR CLAUSE 52.246-11 APPLIES. A QUALITY MANAGEMENT PROGRAM MEETING THE REQUIREMENTS OF ISO 9001:2008; A PROGRAM COMPARABLE TO ISO 9001:2008 (EXAMPLE SAE AS 9100), THE FOLLOWING TAILORED VERSION OF ISO 9001:2008; OR A PROGRAM COMPARABLE TO THE TAILORED VERSION OF ISO 9001:2008 (EXAMPLE SAE AS 9003) IS REQUIRED. IN THE TAILORED VERSION OF THE ISO 9001:2008, ANY REFERENCES WHICH CITE THE ENTIRE INTERNATIONAL STANDARD ARE INTERPRETED AS EXCLUSIONS TO THIS DOCUMENT.\\nDLA TAILORED HIGHER LEVEL QUALITY CLAUSE FROM ISO 9001:2008\\n[ISO subclauses 4.1-8.5.3 as listed]\\nIDENTIFY TO\\nMARK IAW MIL-STD-130N(1), DATED 16 NOV 2012.\\nCONFIGURATION CONTROL APPLIES\\nSEE CLAUSE 52.246-9G36 (SECTION I).\\nTECH DATA AVAILABILITY\\nDSCR MAY NOT HAVE AN APPROVED BIDSET FOR\\nTHIS NSN.\\nCRITICAL APPLICATION ITEM\\nHYDRO-AIRE, INC. 81982 P/N 85965-1",
+          "quantity_ordered": 15.0,
+          "unit": "EA",
+          "unit_price": null,
+          "amount": null
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "contract_purchase_order_number",
+        "page": 1,
+        "bbox": [
+          0.075964,
+          0.090984,
+          0.100448,
+          0.015881
+        ],
+        "polygon": null,
+        "reference_text": "SPE4A4-14-V-7198",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "date_of_order",
+        "page": 1,
+        "bbox": [
+          0.520237,
+          0.095968,
+          0.066123,
+          0.015881
+        ],
+        "polygon": null,
+        "reference_text": "2014 JAN 23",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "requisition_purchase_request_number",
+        "page": 1,
+        "bbox": [
+          0.639717,
+          0.092576,
+          0.063595,
+          0.015881
+        ],
+        "polygon": null,
+        "reference_text": "0051978856",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].item_number",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "0001",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].description",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "1650003175589\\nGUIDE,PISTON ROLLER\\nGUIDE, PISTON ROLLER\\n52.246-11 Higher Level Contract Quality Requirement (Manufacturers)\\nFAR CLAUSE 52.246-11 APPLIES. A QUALITY MANAGEMENT PROGRAM MEETING THE REQUIREMENTS OF ISO 9001:2008; A PROGRAM COMPARABLE TO ISO 9001:2008 (EXAMPLE SAE AS 9100), THE FOLLOWING TAILORED VERSION OF ISO 9001:2008; OR A PROGRAM COMPARABLE TO THE TAILORED VERSION OF ISO 9001:2008 (EXAMPLE SAE AS 9003) IS REQUIRED. IN THE TAILORED VERSION OF THE ISO 9001:2008, ANY REFERENCES WHICH CITE THE ENTIRE INTERNATIONAL STANDARD ARE INTERPRETED AS EXCLUSIONS TO THIS DOCUMENT.\\nDLA TAILORED HIGHER LEVEL QUALITY CLAUSE FROM ISO 9001:2008\\n[ISO subclauses 4.1-8.5.3 as listed]\\nIDENTIFY TO\\nMARK IAW MIL-STD-130N(1), DATED 16 NOV 2012.\\nCONFIGURATION CONTROL APPLIES\\nSEE CLAUSE 52.246-9G36 (SECTION I).\\nTECH DATA AVAILABILITY\\nDSCR MAY NOT HAVE AN APPROVED BIDSET FOR\\nTHIS NSN.\\nCRITICAL APPLICATION ITEM\\nHYDRO-AIRE, INC. 81982 P/N 85965-1",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].quantity_ordered",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "15.0",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "line_items[0].unit",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "EA",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:51:22.824654Z",
+  "completed_at": "2026-09-21T14:51:22.824654Z",
+  "latency_in_ms": 125
+}

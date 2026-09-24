@@ -1,0 +1,98 @@
+{
+  "request": {
+    "example_id": "short/mcdonalds_receipt_chicago_documentcloud",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/mcdonalds_receipt_chicago_documentcloud.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/mcdonalds_receipt_chicago_documentcloud",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "merchant_name": "MCDONALDS",
+      "store_number": "6676",
+      "merchant_address": {
+        "street": "600 N CLARK",
+        "city": "CHICAGO",
+        "state": "IL",
+        "zip_code": "60610"
+      },
+      "merchant_phone": "312-867-0455",
+      "transaction_date": "2012-12-08",
+      "transaction_time": "00:34",
+      "transaction_id": "84",
+      "line_items": [
+        {
+          "line_no": 1,
+          "description": "MED VANILLA SHAKE",
+          "quantity": 5,
+          "unit_price": null,
+          "item_total": 14.25,
+          "sku": null
+        },
+        {
+          "line_no": 2,
+          "description": "BIG MAC",
+          "quantity": 5,
+          "unit_price": null,
+          "item_total": 23.75,
+          "sku": null
+        },
+        {
+          "line_no": 3,
+          "description": "QTR POUNDER CHEESE",
+          "quantity": 10,
+          "unit_price": null,
+          "item_total": 45.5,
+          "sku": null
+        },
+        {
+          "line_no": 4,
+          "description": "DOUBLE CHEESEBURGER",
+          "quantity": 5,
+          "unit_price": null,
+          "item_total": 12.5,
+          "sku": null
+        },
+        {
+          "line_no": 5,
+          "description": "CHEESEBURGER",
+          "quantity": 20,
+          "unit_price": null,
+          "item_total": 34.0,
+          "sku": null
+        },
+        {
+          "line_no": 6,
+          "description": "MED FRENCH FRIES",
+          "quantity": 15,
+          "unit_price": null,
+          "item_total": 28.5,
+          "sku": null
+        }
+      ],
+      "subtotal": 158.5,
+      "tax": 17.04,
+      "total": 175.54,
+      "payment_method": "DEBIT",
+      "card_last4": "0093",
+      "auth_code": "861336",
+      "amount_paid": 175.54,
+      "currency": "USD"
+    },
+    "field_citations": []
+  },
+  "started_at": "2026-09-23T19:38:03.773438Z",
+  "completed_at": "2026-09-23T19:38:03.773438Z",
+  "latency_in_ms": 0
+}

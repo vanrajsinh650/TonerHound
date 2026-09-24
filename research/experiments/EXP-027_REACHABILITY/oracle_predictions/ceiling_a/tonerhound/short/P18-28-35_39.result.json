@@ -1,0 +1,682 @@
+{
+  "request": {
+    "example_id": "short/P18-28-35_39",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/P18-28-35_39.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 43,
+    "ocr_pages": 0,
+    "num_pages": 1
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/P18-28-35_39",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "reporting_period": "1 / 2013",
+      "operator": "Superior Disposal Services, LLC",
+      "operator_no": "830271",
+      "address_street_or_box": "997 FM 2288",
+      "address_city": "San Angelo",
+      "address_state": "TX",
+      "address_zip_code": "76901",
+      "purpose_monthly_report": null,
+      "purpose_corrected_report": false,
+      "purpose_initial_report": null,
+      "purpose_final_report": null,
+      "consolidated_p18_yes": null,
+      "consolidated_p18_no": null,
+      "system_serial_no": "08-3926",
+      "district_and_lease_no": "40506",
+      "gathering_system_facility_name": "PATRON",
+      "county": "Glasscock",
+      "rrc_district_no": "08",
+      "distance_from_nearest_town": "11 Miles",
+      "direction_from_nearest_town": "NW",
+      "nearest_town": "Garden City, TX",
+      "survey": "T&P RR Co.",
+      "section": "47",
+      "block": "36",
+      "abstract_no": null,
+      "township": null,
+      "league": null,
+      "labor": null,
+      "porcion": null,
+      "share": null,
+      "tract": null,
+      "lot": null,
+      "disposal_api_numbers": null,
+      "disposal_well_lease_and_well_no": "L.M. HARRISON ET AL, Well No.1",
+      "disposal_well_uic_no": "13151",
+      "disposal_method_recycling": null,
+      "disposal_method_land_application": null,
+      "disposal_method_discharge": null,
+      "disposal_method_other": null,
+      "disposal_method_other_text": null,
+      "disposal_method_permit_no": null,
+      "sec3_l1_num_oil_gas_wells": "164",
+      "sec3_l2_water_from_producing": "74434",
+      "sec3_l3_water_from_nonproducing": "34900",
+      "sec3_l4_total_texas_water": "109334",
+      "sec3_l5_state_ok": null,
+      "sec3_l5_state_la": null,
+      "sec3_l5_state_nm": null,
+      "sec3_l5_state_other": null,
+      "sec3_l5_state_other_text": null,
+      "sec3_l5_out_of_state_water": null,
+      "sec3_l6_skimmed_total": "508",
+      "sec3_l7_tolerance": "37",
+      "sec3_l8_excess_to_leases": "471",
+      "sec3_l9_slugs_credited": "0",
+      "sec3_l10_excess_not_credited": "471",
+      "sec4_l1_storage_beginning": "0",
+      "sec4_l2_skimmed_not_allocated": "508",
+      "sec4_l3_sold": "508",
+      "sec4_l4_transferred": null,
+      "sec4_l5_bsw_collected": null,
+      "sec4_l6_storage_end": "0",
+      "signature_present": true,
+      "print_name": "John B. Gormley, Jr",
+      "certificate_date": "FEB 20, 2013",
+      "title": "Mngmt",
+      "telephone_area_code": "325",
+      "telephone_number": "277-7774",
+      "email_optional": null,
+      "gatherer_entries": [
+        {
+          "name": "National Crude Mkt",
+          "amt": "508",
+          "rrc_id_no": "03-1249"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "reporting_period",
+        "page": 1,
+        "bbox": [
+          0.6466076696165192,
+          0.17679305619004113,
+          0.11858407079646016,
+          0.010050251256281395
+        ],
+        "polygon": null,
+        "reference_text": "1 e 2013",
+        "confidence": 0.75,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator",
+        "page": 1,
+        "bbox": [
+          0.10147492625368731,
+          0.1745089081772499,
+          0.24542772861356932,
+          0.012334399269072649
+        ],
+        "polygon": null,
+        "reference_text": "Superior Dlsposal Servlces, LLe.",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "address_street_or_box",
+        "page": 1,
+        "bbox": [
+          0.11268436578171091,
+          0.1827318410232983,
+          0.08790560471976401,
+          0.021470991320237554
+        ],
+        "polygon": null,
+        "reference_text": "997 FM 2288",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "address_city",
+        "page": 1,
+        "bbox": [
+          0.09970501474926254,
+          0.2096847875742348,
+          0.1014749262536873,
+          0.02284148012791229
+        ],
+        "polygon": null,
+        "reference_text": "CSanAngelo",
+        "confidence": 0.75,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "address_state",
+        "page": 1,
+        "bbox": [
+          0.312094,
+          0.219963,
+          0.024779,
+          0.012334
+        ],
+        "polygon": null,
+        "reference_text": "TX",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "purpose_corrected_report",
+        "page": 1,
+        "bbox": [
+          0.492625,
+          0.217365,
+          0.022,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "o",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "system_serial_no",
+        "page": 1,
+        "bbox": [
+          0.7693215339233038,
+          0.24714481498401097,
+          0.05427728613569316,
+          0.015532206486980338
+        ],
+        "polygon": null,
+        "reference_text": "08-3926",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gathering_system_facility_name",
+        "page": 1,
+        "bbox": [
+          0.30855457227138644,
+          0.24988579259936045,
+          0.07374631268436577,
+          0.009593421653723178
+        ],
+        "polygon": null,
+        "reference_text": "PATRON",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "county",
+        "page": 1,
+        "bbox": [
+          0.39646017699115044,
+          0.26815897670169025,
+          0.07433628318584073,
+          0.013704888076747357
+        ],
+        "polygon": null,
+        "reference_text": "Glasscock",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "rrc_district_no",
+        "page": 1,
+        "bbox": [
+          0.8377581120943953,
+          0.1754225673823664,
+          0.026548672566371723,
+          0.01324805847418914
+        ],
+        "polygon": null,
+        "reference_text": "08",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "distance_from_nearest_town",
+        "page": 1,
+        "bbox": [
+          0.32684365781710917,
+          0.295568752855185,
+          0.057817109144542744,
+          0.01324805847418914
+        ],
+        "polygon": null,
+        "reference_text": "11 Mlles",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "nearest_town",
+        "page": 1,
+        "bbox": [
+          0.4359882005899705,
+          0.2983097304705345,
+          0.17050147492625362,
+          0.012791228871630866
+        ],
+        "polygon": null,
+        "reference_text": "Garden City, R",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "survey",
+        "page": 1,
+        "bbox": [
+          0.303835,
+          0.271128,
+          0.068544,
+          0.012334
+        ],
+        "polygon": null,
+        "reference_text": "T&P RR Co.;",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "section",
+        "page": 1,
+        "bbox": [
+          0.174041,
+          0.268285,
+          0.024189,
+          0.016651
+        ],
+        "polygon": null,
+        "reference_text": "S.47,",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "disposal_well_lease_and_well_no",
+        "page": 1,
+        "bbox": [
+          0.2884955752212389,
+          0.39104613978985836,
+          0.23480825958702067,
+          0.010963910461397941
+        ],
+        "polygon": null,
+        "reference_text": "L.M. HARRISON ET AL, Well No.1",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "disposal_well_uic_no",
+        "page": 1,
+        "bbox": [
+          0.751622418879056,
+          0.3924166285975331,
+          0.03952802359882002,
+          0.009136592051164905
+        ],
+        "polygon": null,
+        "reference_text": "13151",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l2_water_from_producing",
+        "page": 1,
+        "bbox": [
+          0.761209,
+          0.474315,
+          0.128466,
+          0.016651
+        ],
+        "polygon": null,
+        "reference_text": "74434",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l3_water_from_nonproducing",
+        "page": 1,
+        "bbox": [
+          0.8407079646017699,
+          0.49246231155778897,
+          0.04070796460176995,
+          0.008679762448606687
+        ],
+        "polygon": null,
+        "reference_text": "34900",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l4_total_texas_water",
+        "page": 1,
+        "bbox": [
+          0.831858407079646,
+          0.5070808588396528,
+          0.05014749262536877,
+          0.009593421653723122
+        ],
+        "polygon": null,
+        "reference_text": "109334",
+        "confidence": 0.95,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l6_skimmed_total",
+        "page": 1,
+        "bbox": [
+          0.828348,
+          0.654488,
+          0.053658,
+          0.011718
+        ],
+        "polygon": null,
+        "reference_text": "508",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l9_slugs_credited",
+        "page": 1,
+        "bbox": [
+          0.328732,
+          0.739002,
+          0.029971,
+          0.011718
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.8328527398427014,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec4_l1_storage_beginning",
+        "page": 1,
+        "bbox": [
+          0.328732,
+          0.739002,
+          0.029971,
+          0.011718
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.9492082162465124,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec4_l2_skimmed_not_allocated",
+        "page": 1,
+        "bbox": [
+          0.828348,
+          0.654488,
+          0.053658,
+          0.011718
+        ],
+        "polygon": null,
+        "reference_text": "508",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec4_l3_sold",
+        "page": 1,
+        "bbox": [
+          0.8578171091445428,
+          0.6560073092736409,
+          0.024188790560471962,
+          0.008679762448606687
+        ],
+        "polygon": null,
+        "reference_text": "508",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec4_l6_storage_end",
+        "page": 1,
+        "bbox": [
+          0.328732,
+          0.739002,
+          0.029971,
+          0.011718
+        ],
+        "polygon": null,
+        "reference_text": "0",
+        "confidence": 0.99,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gatherer_entries[0].name",
+        "page": 1,
+        "bbox": [
+          0.11504424778761062,
+          0.7249885792599361,
+          0.13628318584070792,
+          0.009136592051164905
+        ],
+        "polygon": null,
+        "reference_text": "National Crude Mkt",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gatherer_entries[0].amt",
+        "page": 1,
+        "bbox": [
+          0.34277286135693213,
+          0.7245317496573778,
+          0.024188790560471962,
+          0.00822293284604847
+        ],
+        "polygon": null,
+        "reference_text": "508",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gatherer_entries[0].rrc_id_no",
+        "page": 1,
+        "bbox": [
+          0.434808,
+          0.723161,
+          0.054867,
+          0.00868
+        ],
+        "polygon": null,
+        "reference_text": "03-1249",
+        "confidence": 0.9,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "operator_no",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "830271",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "address_zip_code",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "76901",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "district_and_lease_no",
+        "page": 1,
+        "bbox": [
+          0.7398230088495575,
+          0.26770214709913204,
+          0.0684365781710915,
+          0.012334399269072649
+        ],
+        "polygon": null,
+        "reference_text": "40506",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "direction_from_nearest_town",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "NW",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "block",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "36",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l1_num_oil_gas_wells",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "164",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l7_tolerance",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "37",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l8_excess_to_leases",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "471",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "sec3_l10_excess_not_credited",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "471",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "signature_present",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "True",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "print_name",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "John B. Gormley, Jr",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "certificate_date",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "FEB 20, 2013",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "title",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "Mngmt",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "telephone_area_code",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "325",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "telephone_number",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": "277-7774",
+        "confidence": 0.4,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:50:28.196576Z",
+  "completed_at": "2026-09-21T14:50:28.196576Z",
+  "latency_in_ms": 2413
+}

@@ -1,0 +1,106 @@
+{
+  "request": {
+    "example_id": "medium/byline_bancorp_investor_deck_q2_2023",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/byline_bancorp_investor_deck_q2_2023.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound",
+  "product_type": "extract",
+  "raw_output": {
+    "citations_count": 4,
+    "ocr_pages": 0,
+    "num_pages": 24
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/byline_bancorp_investor_deck_q2_2023",
+    "pipeline_name": "tonerhound",
+    "extracted_data": {
+      "period": "Q2 FY2023",
+      "currency": "USD",
+      "fiscal_period_end_date": "2023-06-30",
+      "total_revenue": 90.457,
+      "revenue_growth_yoy": 19.0,
+      "gross_profit": null,
+      "operating_income": 35.339,
+      "net_income": 26.107,
+      "adjusted_ebitda": null,
+      "gaap_eps_diluted": 0.7,
+      "adjusted_eps_diluted": 0.73,
+      "gross_margin": null,
+      "operating_margin": 39.1,
+      "free_cash_flow": null,
+      "segments": []
+    },
+    "field_citations": [
+      {
+        "field_path": "period",
+        "page": 10,
+        "bbox": [
+          0.477905,
+          0.87859,
+          0.03463,
+          0.018
+        ],
+        "polygon": null,
+        "reference_text": "Q2 2023",
+        "confidence": 0.9116948115279558,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "fiscal_period_end_date",
+        "page": 17,
+        "bbox": [
+          0.630391,
+          0.206977,
+          0.042452,
+          0.020952
+        ],
+        "polygon": null,
+        "reference_text": "6/30/23",
+        "confidence": 0.7535361538495894,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "gaap_eps_diluted",
+        "page": 19,
+        "bbox": [
+          0.475365,
+          0.505924,
+          0.014105,
+          0.017134
+        ],
+        "polygon": null,
+        "reference_text": "0.70",
+        "confidence": 0.7931841516869536,
+        "source": "tonerhound",
+        "metadata": null
+      },
+      {
+        "field_path": "adjusted_eps_diluted",
+        "page": 19,
+        "bbox": [
+          0.475365,
+          0.626381,
+          0.018521,
+          0.017134
+        ],
+        "polygon": null,
+        "reference_text": "0.73",
+        "confidence": 0.8070604818732455,
+        "source": "tonerhound",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-21T14:47:23.210451Z",
+  "completed_at": "2026-09-21T14:47:23.210451Z",
+  "latency_in_ms": 126
+}

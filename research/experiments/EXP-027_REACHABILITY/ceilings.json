@@ -1,0 +1,241 @@
+{
+  "timestamp": "2026-09-24 05:45:32 UTC",
+  "baseline_production": {
+    "name": "Production Baseline (EXP-026 SCGF Restoration)",
+    "full_370": {
+      "word_f1": 0.5597888260156839,
+      "word_precision": 0.6210736761917511,
+      "word_recall": 0.5226186081273672,
+      "page_f1": 0.8127517756798581,
+      "page_precision": 0.8645991729366905,
+      "page_recall": 0.779819756743339,
+      "value_f1": 1.0,
+      "micro_word_f1": 0.0,
+      "micro_word_precision": 0.0,
+      "micro_word_recall": 0.0,
+      "micro_page_f1": 0.0,
+      "total_documents": 370
+    },
+    "cohort_a_dev": {
+      "word_f1": 0.6545248144527965,
+      "word_precision": 0.6735394505638238,
+      "word_recall": 0.6400034025269654,
+      "page_f1": 0.926850018621535,
+      "grounded_docs_count": 32
+    },
+    "cohort_b_held": {
+      "word_f1": 0.5926797433546831,
+      "word_precision": 0.6399486388818078,
+      "word_recall": 0.5619010183534583,
+      "page_f1": 0.8661153008264229,
+      "grounded_docs_count": 32
+    },
+    "length_splits": {
+      "short": {
+        "word_f1": 0.5195351920045898,
+        "word_precision": 0.5965331427593692,
+        "word_recall": 0.474353934857505,
+        "page_f1": 0.8409802030639714,
+        "grounded_docs_count": 175
+      },
+      "medium": {
+        "word_f1": 0.6713922792174581,
+        "word_precision": 0.6907270596668234,
+        "word_recall": 0.6545504225167097,
+        "page_f1": 0.7455036986555462,
+        "grounded_docs_count": 48
+      },
+      "long": {
+        "word_f1": 0.6895903797277086,
+        "word_precision": 0.6942452872581636,
+        "word_recall": 0.6852025105533248,
+        "page_f1": 0.7812910919754509,
+        "grounded_docs_count": 13
+      }
+    }
+  },
+  "ceiling_a": {
+    "name": "Ceiling A: Current Production Candidate Pool + Perfect Selection",
+    "full_370": {
+      "word_f1": 0.609579152211345,
+      "word_precision": 0.6748096176081128,
+      "word_recall": 0.5694117387255158,
+      "page_f1": 0.8205863642163774,
+      "page_precision": 0.8725057791802564,
+      "page_recall": 0.7875941134327513,
+      "value_f1": 1.0,
+      "micro_word_f1": 0.0,
+      "micro_word_precision": 0.0,
+      "micro_word_recall": 0.0,
+      "micro_page_f1": 0.0,
+      "total_documents": 370
+    },
+    "cohort_a_dev": {
+      "word_f1": 0.7296868380081455,
+      "word_precision": 0.7500250022451204,
+      "word_recall": 0.7132042820069134,
+      "page_f1": 0.936433627169989,
+      "grounded_docs_count": 32
+    },
+    "cohort_b_held": {
+      "word_f1": 0.6626016447107864,
+      "word_precision": 0.71356317564785,
+      "word_recall": 0.6290816553464825,
+      "page_f1": 0.8894067822691608,
+      "grounded_docs_count": 32
+    },
+    "length_splits": {
+      "short": {
+        "word_f1": 0.557659658780871,
+        "word_precision": 0.6398368872859459,
+        "word_recall": 0.5085831165855195,
+        "page_f1": 0.8415599960210978,
+        "grounded_docs_count": 175
+      },
+      "medium": {
+        "word_f1": 0.7531164023677043,
+        "word_precision": 0.7730937413721762,
+        "word_recall": 0.7356165858480161,
+        "page_f1": 0.7681786709952925,
+        "grounded_docs_count": 48
+      },
+      "long": {
+        "word_f1": 0.778511717044246,
+        "word_precision": 0.7827011457391992,
+        "word_recall": 0.7745791396962338,
+        "page_f1": 0.8081309715021653,
+        "grounded_docs_count": 13
+      }
+    },
+    "delta_vs_baseline": {
+      "full_word_f1_gain": 0.04979032619566104,
+      "held_word_f1_gain": 0.06992190135610332,
+      "dev_word_f1_gain": 0.07516202355534896
+    }
+  },
+  "ceiling_b": {
+    "name": "Ceiling B: Exhaustive Native/OCR Text Geometry + Perfect Selection",
+    "full_370": {
+      "word_f1": 0.6457556768756928,
+      "word_precision": 0.7094626748932209,
+      "word_recall": 0.6066406162880497,
+      "page_f1": 0.82897671448118,
+      "page_precision": 0.8814214722865942,
+      "page_recall": 0.7955731492813956,
+      "value_f1": 1.0,
+      "micro_word_f1": 0.0,
+      "micro_word_precision": 0.0,
+      "micro_word_recall": 0.0,
+      "micro_page_f1": 0.0,
+      "total_documents": 370
+    },
+    "cohort_a_dev": {
+      "word_f1": 0.7609335770170621,
+      "word_precision": 0.7800632658362544,
+      "word_recall": 0.7453435856290688,
+      "page_f1": 0.9467791604245966,
+      "grounded_docs_count": 32
+    },
+    "cohort_b_held": {
+      "word_f1": 0.7005162946570571,
+      "word_precision": 0.7447464802106608,
+      "word_recall": 0.6720418878939439,
+      "page_f1": 0.9045539421731001,
+      "grounded_docs_count": 32
+    },
+    "length_splits": {
+      "short": {
+        "word_f1": 0.5899692903182377,
+        "word_precision": 0.6727549739534386,
+        "word_recall": 0.5399589112340824,
+        "page_f1": 0.8470774238719726,
+        "grounded_docs_count": 175
+      },
+      "medium": {
+        "word_f1": 0.8015974554917449,
+        "word_precision": 0.8119586933904356,
+        "word_recall": 0.7925863906937972,
+        "page_f1": 0.7855210729082888,
+        "grounded_docs_count": 48
+      },
+      "long": {
+        "word_f1": 0.8213104671821635,
+        "word_precision": 0.8251579654005733,
+        "word_recall": 0.8177099403625421,
+        "page_f1": 0.8102994722094875,
+        "grounded_docs_count": 13
+      }
+    },
+    "delta_vs_baseline": {
+      "full_word_f1_gain": 0.08596685086000888,
+      "held_word_f1_gain": 0.10783655130237402,
+      "dev_word_f1_gain": 0.10640876256426557
+    }
+  },
+  "ceiling_c": {
+    "name": "Ceiling C: Diagnostic Gold-Geometry Ceiling",
+    "full_370": {
+      "word_f1": 1.0,
+      "word_precision": 1.0,
+      "word_recall": 1.0,
+      "page_f1": 1.0,
+      "page_precision": 1.0,
+      "page_recall": 1.0,
+      "value_f1": 1.0,
+      "micro_word_f1": 0.0,
+      "micro_word_precision": 0.0,
+      "micro_word_recall": 0.0,
+      "micro_page_f1": 0.0,
+      "total_documents": 370
+    },
+    "cohort_a_dev": {
+      "word_f1": 1.0,
+      "word_precision": 1.0,
+      "word_recall": 1.0,
+      "page_f1": 1.0,
+      "grounded_docs_count": 32
+    },
+    "cohort_b_held": {
+      "word_f1": 1.0,
+      "word_precision": 1.0,
+      "word_recall": 1.0,
+      "page_f1": 1.0,
+      "grounded_docs_count": 32
+    },
+    "length_splits": {
+      "short": {
+        "word_f1": 1.0,
+        "word_precision": 1.0,
+        "word_recall": 1.0,
+        "page_f1": 1.0,
+        "grounded_docs_count": 175
+      },
+      "medium": {
+        "word_f1": 1.0,
+        "word_precision": 1.0,
+        "word_recall": 1.0,
+        "page_f1": 1.0,
+        "grounded_docs_count": 48
+      },
+      "long": {
+        "word_f1": 1.0,
+        "word_precision": 1.0,
+        "word_recall": 1.0,
+        "page_f1": 1.0,
+        "grounded_docs_count": 13
+      }
+    }
+  },
+  "gaps_to_90": {
+    "gap_current_to_90": 0.3402111739843161,
+    "gap_ceiling_a_to_90": 0.29042084778865507,
+    "gap_ceiling_b_to_90": 0.2542443231243072,
+    "gap_ceiling_c_to_90": -0.09999999999999998
+  },
+  "reachability_verdict": {
+    "is_90_reachable_with_current_candidates": false,
+    "is_90_reachable_with_text_only": false,
+    "is_90_reachable_with_perfect_perception": true,
+    "decision_case": "CASE 3"
+  }
+}

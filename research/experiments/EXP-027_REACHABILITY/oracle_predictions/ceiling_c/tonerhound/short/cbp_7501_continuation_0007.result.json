@@ -1,0 +1,145 @@
+{
+  "request": {
+    "example_id": "short/cbp_7501_continuation_0007",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/short/cbp_7501_continuation_0007.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "short/cbp_7501_continuation_0007",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "filer_code_entry_number": "9XP-1032414-2",
+      "entry_type": "01 ABI/A",
+      "summary_date": "06/09/22",
+      "surety_number": "846",
+      "bond_type": "9",
+      "port_code": "2720",
+      "entry_date": "05/29/2022",
+      "importing_carrier": "CA",
+      "mode_of_transport": "40",
+      "country_of_origin": "CN",
+      "import_date": "05/28/2022",
+      "bill_of_lading_or_awb_number": "99964822586",
+      "manufacturer_id": "CNGOOHAR1188SHA",
+      "exporting_country": "CN",
+      "export_date": "05/27/2022",
+      "it_number": null,
+      "it_date": null,
+      "missing_documents": null,
+      "foreign_port_of_lading": null,
+      "us_port_of_unlading": "2720",
+      "location_of_goods": "Z543/AIR CHINA INTERNATIONA",
+      "consignee_number": "45-356655000",
+      "importer_number": "214601-20212",
+      "reference_number": null,
+      "ultimate_consignee": {
+        "name": "OTX LOGISTICS, INC.",
+        "address": {
+          "address_line_one": "23059 INTERNATIONAL AIRPORT CENTER BLVD",
+          "address_line_two": null,
+          "city": "SPRINGFIELD GARDENS",
+          "state": "NY",
+          "zip_code": "11413"
+        }
+      },
+      "importer_of_record": {
+        "name": "ULUCK TECHNOLOGY PTE LTD",
+        "address": {
+          "address_line_one": "GOLDEN MILE COMPLEX 5001 BEACH ROAD",
+          "address_line_two": "KALLANG",
+          "city": "SINGAPORE",
+          "state": null,
+          "zip_code": "199588"
+        }
+      },
+      "total_entered_value": 72980.0,
+      "total_other_fees": 252.8,
+      "ascertained_duty": 20142.48,
+      "ascertained_tax": 0.0,
+      "ascertained_other": 252.8,
+      "ascertained_total": 20395.28,
+      "declarant_name": "OTX LOGISTICS, INC.",
+      "declarant_title": "ATTY-IN-FACT",
+      "declarant_date": "05/29/2022",
+      "broker_filer_name": "OTX LOGISTICS, INC.",
+      "broker_filer_phone": "+17187237899",
+      "broker_importer_file_number": "SLAXIA22050396 / Ref: AMS",
+      "other_fees": [
+        {
+          "fee_code": "499",
+          "fee_name": "Merchandise Processing Fee",
+          "fee_amount": 252.8
+        }
+      ],
+      "line_items": [
+        {
+          "line_number": "001",
+          "htsus_numbers": [
+            "9903.88.02",
+            "8543.70.9860"
+          ],
+          "ada_cvd_case_numbers": null,
+          "manufacturer_id_line": null,
+          "gross_weight": "645 KG",
+          "manifest_quantity": "100 PK",
+          "net_quantity_htsus_units": "100.00 NO",
+          "description_of_merchandise": "ARTICLE OF CHINA,US NTE 20(C); ELECTRIC MACHINE,APPARTUS",
+          "entered_value_dollars": 41000,
+          "chgs_codes": [
+            "C2022"
+          ],
+          "relationship_indicator": "N",
+          "htsus_rates": [
+            "25%",
+            "2.6%"
+          ],
+          "ada_cvd_rates": null,
+          "irc_rates": null,
+          "visa_number": null,
+          "duty_and_tax_amount": 11316.0
+        },
+        {
+          "line_number": "002",
+          "htsus_numbers": [
+            "9903.88.02",
+            "8543.70.9860"
+          ],
+          "ada_cvd_case_numbers": null,
+          "manufacturer_id_line": null,
+          "gross_weight": "503 KG",
+          "manifest_quantity": null,
+          "net_quantity_htsus_units": "78.00 NO",
+          "description_of_merchandise": "ARTICLE OF CHINA,US NTE 20(C); ELECTRIC MACHINE,APPARTUS",
+          "entered_value_dollars": 31980,
+          "chgs_codes": [
+            "C1578"
+          ],
+          "relationship_indicator": "N",
+          "htsus_rates": [
+            "25%",
+            "2.6%"
+          ],
+          "ada_cvd_rates": null,
+          "irc_rates": null,
+          "visa_number": null,
+          "duty_and_tax_amount": 8826.48
+        }
+      ]
+    },
+    "field_citations": []
+  },
+  "started_at": "2026-09-23T19:38:03.055290Z",
+  "completed_at": "2026-09-23T19:38:03.055290Z",
+  "latency_in_ms": 0
+}

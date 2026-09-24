@@ -1,0 +1,142 @@
+{
+  "request": {
+    "example_id": "medium/gov_clin_schedule_0038",
+    "source_file_path": "/home/vanrajsinh/Projects/TonerHound/research/data/full/medium/gov_clin_schedule_0038.pdf",
+    "product_type": "extract",
+    "input_files": null,
+    "schema_override": null,
+    "config_override": null,
+    "trace_metadata": null,
+    "trace_tags": null
+  },
+  "pipeline_name": "tonerhound_ceiling_c",
+  "product_type": "extract",
+  "raw_output": {
+    "diagnostic_ceiling": "gold_geometry"
+  },
+  "output": {
+    "task_type": "extract",
+    "example_id": "medium/gov_clin_schedule_0038",
+    "pipeline_name": "tonerhound_ceiling_c",
+    "extracted_data": {
+      "contract_number": "W911QY20P0149",
+      "effective_date": "2020 Apr 22",
+      "total_amount": "$806,646.82",
+      "clin_line_items": [
+        {
+          "item_no": "0001",
+          "supplies_services": "IR200 Thermometer",
+          "quantity": "5,318",
+          "unit": "Each",
+          "unit_price": "$149.99",
+          "amount": "$797,646.82",
+          "contract_type": "FFP",
+          "purchase_request_number": null,
+          "psc_code": "6515",
+          "acrn": null,
+          "cin": null,
+          "net_amount": "$797,646.82"
+        },
+        {
+          "item_no": "000101",
+          "supplies_services": "Funding for CLIN 0001",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "$0.00",
+          "contract_type": "FFP",
+          "purchase_request_number": "0011489439",
+          "psc_code": null,
+          "acrn": "AA",
+          "cin": "GFEBS001148943900010",
+          "net_amount": "$0.00"
+        },
+        {
+          "item_no": "000102",
+          "supplies_services": "Funding for CLIN 0001",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "$0.00",
+          "contract_type": "FFP",
+          "purchase_request_number": "0011489644",
+          "psc_code": null,
+          "acrn": "AB",
+          "cin": "GFEBS001148964400001",
+          "net_amount": "$0.00"
+        },
+        {
+          "item_no": "000103",
+          "supplies_services": "Funding for CLIN 0001",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "$0.00",
+          "contract_type": "FFP",
+          "purchase_request_number": "0011489642",
+          "psc_code": null,
+          "acrn": "AC",
+          "cin": "GFEBS001148964200001",
+          "net_amount": "$0.00"
+        },
+        {
+          "item_no": "000104",
+          "supplies_services": "Funding for CLIN 0001",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "$0.00",
+          "contract_type": "FFP",
+          "purchase_request_number": "0011489643",
+          "psc_code": null,
+          "acrn": "AD",
+          "cin": "GFEBS001148964300010",
+          "net_amount": "$0.00"
+        },
+        {
+          "item_no": "0002",
+          "supplies_services": "FREIGHT/SHIPPING for IR200 Thermometers",
+          "quantity": "1",
+          "unit": "Job",
+          "unit_price": null,
+          "amount": "$9,000.00 NTE",
+          "contract_type": "COST",
+          "purchase_request_number": null,
+          "psc_code": "V119",
+          "acrn": null,
+          "cin": null,
+          "net_amount": "$9,000.00"
+        },
+        {
+          "item_no": "000201",
+          "supplies_services": "Funding for CLIN 0002",
+          "quantity": null,
+          "unit": null,
+          "unit_price": null,
+          "amount": "$0.00",
+          "contract_type": "COST",
+          "purchase_request_number": "0011489439-0002",
+          "psc_code": null,
+          "acrn": "AA",
+          "cin": "GFEBS001148943900011",
+          "net_amount": "$0.00"
+        }
+      ]
+    },
+    "field_citations": [
+      {
+        "field_path": "clin_line_items",
+        "page": 1,
+        "bbox": null,
+        "polygon": null,
+        "reference_text": null,
+        "confidence": null,
+        "source": "gold_diagnostic_page",
+        "metadata": null
+      }
+    ]
+  },
+  "started_at": "2026-09-23T19:37:53.403389Z",
+  "completed_at": "2026-09-23T19:37:53.403389Z",
+  "latency_in_ms": 0
+}
