@@ -1,0 +1,27 @@
+{
+  "experiment_id": "EXP-028B2",
+  "title": "Table Row/Column Disambiguation via Joint Record Resolution",
+  "baseline_comparison": {
+    "EXP-026_production": 0.5598,
+    "EXP-028B0_oracle": 0.7512,
+    "EXP-028B1_production": 0.5605
+  },
+  "phases": {
+    "phase1": "Verify diagnosis from EXP-028B1 field failure analysis",
+    "phase2": "Build structural context signals (page, row vertical corridor, column corridor, sibling co-linearity, reading order)",
+    "phase3": "Joint row/record resolution algorithm",
+    "phase4": "Controlled experiments across ablation modes A through F",
+    "phase5": "Regression controls (6 smoke docs, non-table, tax forms, OCR corrupted)",
+    "phase6": "Artifacts and documentation"
+  },
+  "ablation_modes": {
+    "A": "BASELINE (pure text match, no structural context)",
+    "B": "ROW_ANCHOR_ONLY (page and row vertical confinement only)",
+    "C": "COLUMN_ONLY (page and column corridor only)",
+    "D": "ROW_AND_COLUMN (page, row, and column rails)",
+    "E": "JOINT_RECORD (joint multi-field record resolution + sibling co-linearity)",
+    "F": "AMBIGUITY_GATED (Mode E + abstention on indistinguishable candidates)"
+  },
+  "primary_metric": "Word Grounding F1",
+  "target_threshold": 0.5
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "category": "D. table row/column assignment",
+    "doc_id": "long/real_oklahoma_unclaimed_2024",
+    "field_path": "owners[9956].locale",
+    "value": "623 CASTLETON AVE",
+    "diagnosis": "Multi-column dense table segmentation failure in OCR text extraction.",
+    "status": "Document-level multi-column segmentation boundary limit (OCR text ceiling)."
+  },
+  {
+    "category": "D. table row/column assignment",
+    "doc_id": "long/real_ftx_full",
+    "field_path": "creditors[2744].address_1",
+    "value": "ADDRESS ON FILE",
+    "diagnosis": "Identical boilerplate text in 500+ table rows; requires record-level slot interpolation.",
+    "status": "Addressed by structural record slot budgeting in production adapter."
+  }
+]

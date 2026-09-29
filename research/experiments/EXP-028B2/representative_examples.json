@@ -1,0 +1,122 @@
+[
+  {
+    "example_id": "1",
+    "doc_id": "medium/sec_13f_0031_loomis_sayles",
+    "field_path": "holdings[5].title_of_class",
+    "field_name": "title_of_class",
+    "value": "COMMON",
+    "issue": "Repeated string \"COMMON\" across rows in the same column.",
+    "mode_a_baseline": {
+      "page": 1,
+      "bbox": [
+        0.1948,
+        0.4264,
+        0.0602,
+        0.0136
+      ],
+      "iou": 0.0,
+      "verdict": "FAIL (Assigned to wrong row y=0.4264 instead of y=0.4079)"
+    },
+    "mode_e_joint": {
+      "page": 1,
+      "bbox": [
+        0.1948,
+        0.4079,
+        0.0602,
+        0.0101
+      ],
+      "iou": 1.0,
+      "verdict": "PASS (Anchored to holdings[5] row context)"
+    }
+  },
+  {
+    "example_id": "2",
+    "doc_id": "medium/sec_13f_0031_loomis_sayles",
+    "field_path": "holdings[12].cusip",
+    "field_name": "cusip",
+    "value": "007973AE0",
+    "issue": "Row alignment drift causing 13F table entry to snap to row above.",
+    "mode_a_baseline": {
+      "page": 1,
+      "bbox": [
+        0.2652,
+        0.6034,
+        0.0631,
+        0.0136
+      ],
+      "iou": 0.0,
+      "verdict": "FAIL (Matched row 11 at y=0.6034)"
+    },
+    "mode_e_joint": {
+      "page": 1,
+      "bbox": [
+        0.2652,
+        0.6347,
+        0.0631,
+        0.0101
+      ],
+      "iou": 1.0,
+      "verdict": "PASS (Identified distinctive CUSIP anchor and resolved at y=0.6347)"
+    }
+  },
+  {
+    "example_id": "3",
+    "doc_id": "medium/sec_13f_0031_loomis_sayles",
+    "field_path": "holdings[12].title_of_class",
+    "field_name": "title_of_class",
+    "value": "CV BND",
+    "issue": "Disambiguating class title on same row as CUSIP 007973AE0.",
+    "mode_a_baseline": {
+      "page": 1,
+      "bbox": [
+        0.1948,
+        0.6034,
+        0.0487,
+        0.0136
+      ],
+      "iou": 0.0,
+      "verdict": "FAIL (Assigned to row 11)"
+    },
+    "mode_e_joint": {
+      "page": 1,
+      "bbox": [
+        0.1948,
+        0.6347,
+        0.0488,
+        0.0101
+      ],
+      "iou": 1.0,
+      "verdict": "PASS (Boosted by sibling co-linearity with CUSIP anchor at y=0.6347)"
+    }
+  },
+  {
+    "example_id": "4",
+    "doc_id": "medium/sec_13f_0031_loomis_sayles",
+    "field_path": "holdings[0].voting_authority.shared",
+    "field_name": "voting_authority.shared",
+    "value": 0,
+    "issue": "Disambiguating repeated \"0\" between shared column (x=0.72-0.82) and none column (x=0.82-0.92).",
+    "mode_a_baseline": {
+      "page": 1,
+      "bbox": [
+        0.85,
+        0.327,
+        0.01,
+        0.01
+      ],
+      "iou": 0.0,
+      "verdict": "FAIL (Wrong column: picked none column)"
+    },
+    "mode_d_row_col": {
+      "page": 1,
+      "bbox": [
+        0.78,
+        0.327,
+        0.01,
+        0.01
+      ],
+      "iou": 0.85,
+      "verdict": "PASS (Constrained to shared column rail)"
+    }
+  }
+]
