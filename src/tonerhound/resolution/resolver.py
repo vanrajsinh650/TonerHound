@@ -193,7 +193,7 @@ class EvidenceResolver:
         if len(candidates) == 1:
             if extraction.y_hint is not None:
                 cand_cy = candidates[0].bbox.y + candidates[0].bbox.height / 2.0
-                if abs(cand_cy - extraction.y_hint) > 0.040:
+                if abs(cand_cy - extraction.y_hint) > 0.080:
                     return ResolutionResult(
                         field=field,
                         value=value,
@@ -248,15 +248,22 @@ class EvidenceResolver:
         if extraction.y_hint is not None:
             top_cy = top_cand.bbox.y + top_cand.bbox.height / 2.0
             if abs(top_cy - extraction.y_hint) > 0.040:
-                return ResolutionResult(
-                    field=field,
-                    value=value,
-                    status=ProvenanceStatus.NOT_FOUND,
-                    page=None,
-                    bbox=None,
-                    confidence=0.0,
-                    explanation="Top candidate outside row vertical tolerance",
-                )
+                within_tol = [
+                    (c, s) for c, s in scored_candidates
+                    if abs((c.bbox.y + c.bbox.height / 2.0) - extraction.y_hint) <= 0.040
+                ]
+                if within_tol:
+                    top_cand, top_score = within_tol[0]
+                elif abs(top_cy - extraction.y_hint) > 0.080:
+                    return ResolutionResult(
+                        field=field,
+                        value=value,
+                        status=ProvenanceStatus.NOT_FOUND,
+                        page=None,
+                        bbox=None,
+                        confidence=0.0,
+                        explanation="Top candidate outside row vertical tolerance",
+                    )
 
         # Step 3: Candidate Verification (Strict Verification Stage)
         if self.verifier is not None:

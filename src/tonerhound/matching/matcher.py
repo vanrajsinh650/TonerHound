@@ -64,6 +64,7 @@ class EvidenceMatcher:
         self,
         query: str,
         page_hint: int | None = None,
+        _allow_drift: bool = True,
     ) -> list[MatchCandidate]:
         """Tier 1: Search exact string / phrase in document using sublinear inverted line/word index."""
         if not query or not query.strip():
@@ -73,11 +74,28 @@ class EvidenceMatcher:
         if not norm_query:
             return []
 
-        # Prevent scanning whole document for short 1-2 char queries without page hint
+        # Prevent scanning whole document for short 1-2 char queries without page hint:
+        # Instead of dropping them (old info-loss point 1/7), perform fast sublinear index lookup
+        clean_query = norm_query.strip(" -.,;:_()[]{}/'\"")
         if len(norm_query) <= 2 and page_hint is None and len(self.index.pages) > 1:
+            matching_tokens = self.index._token_index.get(norm_query, [])
+            if not matching_tokens and clean_query:
+                matching_tokens = self.index._stem_token_index.get(clean_query, [])
+            if matching_tokens:
+                return [
+                    MatchCandidate(
+                        page=t.page,
+                        bbox=t.bbox,
+                        tokens=(t,),
+                        matched_text=t.text,
+                        match_type="exact",
+                        raw_similarity=1.0,
+                        line_index=t.line_index,
+                    )
+                    for t in matching_tokens
+                ]
             return []
 
-        clean_query = norm_query.strip(" -.,;:_()[]{}/'\"")
         candidates: list[MatchCandidate] = []
         seen_lines: set[tuple[int, int]] = set()
 
@@ -169,8 +187,8 @@ class EvidenceMatcher:
                         )
                     )
 
-        # Step 4: Page-wide substring search fallback for small documents or hint page
-        if not candidates and (page_hint is not None or len(self.index.pages) <= 10):
+        # Step 4: Page-wide substring search fallback (restoring document-wide search fallback, Fix 7)
+        if not candidates:
             target_pages = [page_hint] if page_hint is not None else [p.page_number for p in self.index.pages]
             for p_num in target_pages:
                 page_matches = self.index.search_exact(query, page=p_num)
@@ -186,12 +204,25 @@ class EvidenceMatcher:
                         )
                     )
 
+        # Step 5: Page-hint drift / relaxation fallback (Fix 6)
+        if _allow_drift and not candidates and page_hint is not None:
+            drift_pages = [p for p in (page_hint - 1, page_hint + 1) if 1 <= p <= len(self.index.pages) and self.index.get_page(p)]
+            for dp in drift_pages:
+                dp_cands = self.find_exact_candidates(query, page_hint=dp, _allow_drift=False)
+                if dp_cands:
+                    candidates.extend(dp_cands)
+                    break
+            # Document-wide fallback if still empty
+            if not candidates:
+                candidates.extend(self.find_exact_candidates(query, page_hint=None, _allow_drift=False))
+
         return candidates
 
     def find_normalized_numeric_candidates(
         self,
         value: Any,
         page_hint: int | None = None,
+        _allow_drift: bool = True,
     ) -> list[MatchCandidate]:
         """Tier 2a: Locate numeric values via sublinear O(1) inverted numeric index."""
         target_num = parse_numeric_value(value)
@@ -224,9 +255,13 @@ class EvidenceMatcher:
                 continue
 
             tok_bbox = token.bbox
+            clean_v = val_str.strip("$€£¥%,() ")
             if val_str in token.text and len(val_str) < len(token.text):
                 idx = token.text.find(val_str)
                 tok_bbox = tok_bbox.sub_bbox(idx, idx + len(val_str), len(token.text))
+            elif clean_v and clean_v in token.text and len(clean_v) < len(token.text):
+                idx = token.text.find(clean_v)
+                tok_bbox = tok_bbox.sub_bbox(idx, idx + len(clean_v), len(token.text))
 
             candidates.append(
                 MatchCandidate(
@@ -239,6 +274,17 @@ class EvidenceMatcher:
                     line_index=line_idx,
                 )
             )
+
+        # Page-hint drift / document-wide fallback for numeric candidates (Fix 6, 7)
+        if _allow_drift and not candidates and page_hint is not None:
+            drift_pages = [p for p in (page_hint - 1, page_hint + 1) if 1 <= p <= len(self.index.pages) and self.index.get_page(p)]
+            for dp in drift_pages:
+                dp_cands = self.find_normalized_numeric_candidates(value, page_hint=dp, _allow_drift=False)
+                if dp_cands:
+                    candidates.extend(dp_cands)
+                    break
+            if not candidates:
+                candidates.extend(self.find_normalized_numeric_candidates(value, page_hint=None, _allow_drift=False))
 
         return candidates
 
@@ -342,8 +388,8 @@ class EvidenceMatcher:
             else:
                 return []
 
-        # Select top-50 candidate lines by overlap
-        top_lines = sorted(line_overlap_counts.items(), key=lambda item: item[1], reverse=True)[:50]
+        # Select top-200 candidate lines by overlap (Fix 1: raise candidate cutoff)
+        top_lines = sorted(line_overlap_counts.items(), key=lambda item: item[1], reverse=True)[:200]
 
         candidates: list[MatchCandidate] = []
         for (p_num, line_idx), _score in top_lines:
@@ -462,8 +508,29 @@ class EvidenceMatcher:
                         return sub
                     if sub_alnum and clean_tgt_alnum:
                         cov = min(len(sub_alnum), len(clean_tgt_alnum)) / max(len(sub_alnum), len(clean_tgt_alnum))
-                        if (clean_tgt_alnum in sub_alnum or sub_alnum in clean_tgt_alnum) and cov >= 0.70:
-                            return sub
+        # Fallback pass: character-level substring slicing within individual tokens (Fix 8)
+        if len(clean_target) >= 2:
+            clean_tgt_low = clean_target.lower()
+            clean_tgt_alnum = re.sub(r"[^a-zA-Z0-9]+", "", clean_target).lower()
+            for tok in tokens:
+                tok_low = tok.text.lower()
+                tok_alnum = re.sub(r"[^a-zA-Z0-9]+", "", tok.text).lower()
+                if clean_tgt_low in tok_low and len(tok.text) > len(clean_target):
+                    idx = tok_low.find(clean_tgt_low)
+                    frac_start = idx / len(tok.text)
+                    frac_len = len(clean_target) / len(tok.text)
+                    new_x = tok.bbox.x + frac_start * tok.bbox.width
+                    new_w = max(0.001, frac_len * tok.bbox.width)
+                    sliced_bbox = BBox(x=new_x, y=tok.bbox.y, width=new_w, height=tok.bbox.height, page=tok.page)
+                    return [DocumentToken(text=clean_target, bbox=sliced_bbox, page=tok.page, char_index_in_page=tok.char_index_in_page + idx, line_index=tok.line_index)]
+                elif clean_tgt_alnum and clean_tgt_alnum in tok_alnum and (len(tok_alnum) > len(clean_tgt_alnum) or len(tok.text) > len(clean_target)):
+                    idx_char = tok_alnum.find(clean_tgt_alnum)
+                    frac_start = idx_char / max(1, len(tok_alnum))
+                    frac_len = len(clean_tgt_alnum) / max(1, len(tok_alnum))
+                    new_x = tok.bbox.x + frac_start * tok.bbox.width
+                    new_w = max(0.001, frac_len * tok.bbox.width)
+                    sliced_bbox = BBox(x=new_x, y=tok.bbox.y, width=new_w, height=tok.bbox.height, page=tok.page)
+                    return [DocumentToken(text=clean_target, bbox=sliced_bbox, page=tok.page, char_index_in_page=tok.char_index_in_page, line_index=tok.line_index)]
 
         return []
 
@@ -484,7 +551,7 @@ class EvidenceMatcher:
             pages_to_check.add(page_hint)
         elif lines_to_check:
             pages_to_check.update(p for p, _ in lines_to_check)
-        elif len(self.index.pages) <= 10:
+        else:
             pages_to_check.update(p.page_number for p in self.index.pages)
 
         candidates: list[MatchCandidate] = []
@@ -504,12 +571,14 @@ class EvidenceMatcher:
                     start_tokens = [t for t in span_lines[0].tokens if q_words[0] in t.text.lower()]
                     token_sets_to_test = []
                     
-                    # If column start token found, construct column-bounded token set
+                    # If column start token found, construct column-bounded token sets (Fix 9)
                     for st in start_tokens:
-                        col_tokens: list[DocumentToken] = []
-                        for l in span_lines:
-                            col_tokens.extend(t for t in l.tokens if abs(t.bbox.x - st.bbox.x) <= 0.40)
-                        token_sets_to_test.append(col_tokens)
+                        for col_w in (0.20, 0.32, 0.45):
+                            col_tokens: list[DocumentToken] = []
+                            for l in span_lines:
+                                col_tokens.extend(t for t in l.tokens if (st.bbox.x - 0.02) <= t.bbox.x <= (st.bbox.x + col_w))
+                            if col_tokens:
+                                token_sets_to_test.append(col_tokens)
                     
                     # Also test full span tokens
                     all_span_tokens: list[DocumentToken] = []
@@ -654,5 +723,5 @@ class EvidenceMatcher:
             if not any(c.page == u.page and c.bbox.iou(u.bbox) >= 0.7 for u in unique_cands):
                 unique_cands.append(c)
 
-        return unique_cands[:10]
+        return unique_cands[:200]
 

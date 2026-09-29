@@ -1,0 +1,82 @@
+{
+  "timestamp": "2026-09-29T09:29:42.645881+00:00",
+  "experiment": "EXP-028B1",
+  "description": "True Text Path Productionization",
+  "official_summary": {
+    "word_f1": 0.5604639657386028,
+    "word_precision": 0.6172824235053627,
+    "word_recall": 0.5256551994430498,
+    "page_f1": 0.8165931056716297,
+    "page_precision": 0.8686891033953454,
+    "page_recall": 0.783795460895885,
+    "value_f1": 1.0,
+    "total_documents": 370
+  },
+  "cohort_a_dev": {
+    "word_f1": 0.6533024089633162,
+    "word_precision": 0.6687945257911124,
+    "word_recall": 0.6413020736745949,
+    "page_f1": 0.9250422821497417,
+    "docs_count": 32
+  },
+  "cohort_b_held": {
+    "word_f1": 0.5935881706189192,
+    "word_precision": 0.6377741823704207,
+    "word_recall": 0.5651637958928637,
+    "page_f1": 0.8544078116123113,
+    "docs_count": 32
+  },
+  "length_splits": {
+    "short": {
+      "word_f1": 0.519985539851221,
+      "word_precision": 0.5921679857850279,
+      "word_recall": 0.47700493928047144,
+      "page_f1": 0.8446966926876689,
+      "docs_count": 252
+    },
+    "medium": {
+      "word_f1": 0.6734607172740524,
+      "word_precision": 0.6888436035235559,
+      "word_recall": 0.6598019918597158,
+      "page_f1": 0.7524093860477407,
+      "docs_count": 98
+    },
+    "long": {
+      "word_f1": 0.6881470777840065,
+      "word_precision": 0.6911354973657707,
+      "word_recall": 0.6852513142469927,
+      "page_f1": 0.7729016520367912,
+      "docs_count": 20
+    }
+  },
+  "comparison": {
+    "exp026_production": 0.5597888260156839,
+    "exp028b0_true_text_oracle": 0.7512429162441171,
+    "exp028b1_production": 0.5604639657386028,
+    "delta_to_production": 0.0006751397229188827,
+    "remaining_oracle_gap": 0.1907789505055143,
+    "remaining_gap_to_90": 0.3395360342613972
+  },
+  "oracle_gap_breakdown": {
+    "A. wrong candidate selected": {
+      "count": 6986,
+      "percent": 1.4024169912072912
+    },
+    "C. repeated occurrence": {
+      "count": 881,
+      "percent": 0.17685791143052154
+    },
+    "D. table row/column assignment": {
+      "count": 488861,
+      "percent": 98.13727064680612
+    },
+    "F. multiline": {
+      "count": 331,
+      "percent": 0.06644718352270446
+    },
+    "G. normalization": {
+      "count": 1081,
+      "percent": 0.21700726703336415
+    }
+  }
+}

@@ -53,7 +53,7 @@ class CandidateRecoveryEngine:
         enable_split_symbol: bool = True,
         enable_interleaved_tokens: bool = True,
         enable_bounded_spans: bool = True,
-        max_candidate_per_field: int = 15,
+        max_candidate_per_field: int = 500,
     ) -> None:
         self.index = index
         self.enable_spaced_numeric = enable_spaced_numeric
@@ -77,13 +77,15 @@ class CandidateRecoveryEngine:
         if value is None or (isinstance(value, str) and not value.strip()):
             return []
 
-        # Target pages: prioritize page_hint, else check all pages if doc is small (<= 10 pages)
+        # Target pages: prioritize page_hint with +/- 1 drift guard, else check all document pages (Fix 6, 7)
         if page_hint is not None and self.index.get_page(page_hint):
             target_pages = [page_hint]
-        elif len(self.index.pages) <= 10:
-            target_pages = [p.page_number for p in self.index.pages]
+            if page_hint - 1 >= 1 and self.index.get_page(page_hint - 1):
+                target_pages.append(page_hint - 1)
+            if page_hint + 1 <= len(self.index.pages) and self.index.get_page(page_hint + 1):
+                target_pages.append(page_hint + 1)
         else:
-            return []
+            target_pages = [p.page_number for p in self.index.pages]
 
         recovered: list[MatchCandidate] = []
         is_num = isinstance(value, (int, float)) and not isinstance(value, bool)

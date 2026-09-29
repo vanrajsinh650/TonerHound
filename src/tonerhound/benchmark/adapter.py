@@ -751,17 +751,27 @@ class ExtractBenchAdapter:
                             # inter-column tokens may break contiguous subsequence matching.
                             # Retry on tokens restricted to the left column (x < 0.25) which
                             # preserves vertical reading order across line breaks.
-                            if resolved_box is None and len(clean_v.split()) >= 3:
-                                left_toks = [
-                                    t for t in all_row_toks if t.bbox.x < 0.25
-                                ]
+                            if resolved_box is None and len(clean_v.split()) >= 2:
+                                left_toks = [t for t in all_row_toks if t.bbox.x < 0.25]
                                 if len(left_toks) >= len(clean_v.split()):
-                                    sub_toks_left = self.resolver.matcher._find_token_subsequence(
-                                        left_toks, clean_v
-                                    )
+                                    sub_toks_left = self.resolver.matcher._find_token_subsequence(left_toks, clean_v)
                                     if sub_toks_left:
                                         resolved_box = union_bbox_list([t.bbox for t in sub_toks_left])
                                         resolved_text = " ".join(t.text for t in sub_toks_left)
+
+                                if resolved_box is None:
+                                    corridors_to_test = []
+                                    if col_info is not None:
+                                        corridors_to_test.append((col_info[0] - 0.02, col_info[0] + col_info[1] + 0.02))
+                                    corridors_to_test.extend([(0.25, 0.55), (0.50, 0.85)])
+                                    for c_min, c_max in corridors_to_test:
+                                        col_toks = [t for t in all_row_toks if c_min <= t.bbox.x <= c_max]
+                                        if len(col_toks) >= len(clean_v.split()):
+                                            sub_toks_col = self.resolver.matcher._find_token_subsequence(col_toks, clean_v)
+                                            if sub_toks_col:
+                                                resolved_box = union_bbox_list([t.bbox for t in sub_toks_col])
+                                                resolved_text = " ".join(t.text for t in sub_toks_col)
+                                                break
 
                             if resolved_box is None:
                                 clean_no_ws = re.sub(r"[^a-zA-Z0-9]+", "", clean_v.lower())
@@ -907,14 +917,16 @@ class ExtractBenchAdapter:
                 # In a row-anchored table, do not search outside row!
                 continue
 
-            # In structured tables, unanchored rows should not perform expensive unconstrained
-            # whole-page multiline or fuzzy searches.
+            # In structured tables, unanchored rows should prioritize exact search matching row index (Fix 3, 4)
             if self.enable_structural_disambiguation and table_name is not None and anchor is None:
-                if effective_page_hint is not None and isinstance(value, str) and len(str(value).strip()) >= 3:
+                if effective_page_hint is not None and isinstance(value, str) and len(str(value).strip()) >= 2:
                     val_str = str(value).strip()
                     page_matches = self.index.search_exact(val_str, page=effective_page_hint)
                     if page_matches:
-                        box, ref_text = page_matches[0]
+                        m_row = re.search(r"\[(\d+)\]", parent_record_path)
+                        r_idx = int(m_row.group(1)) if m_row else 0
+                        match_idx = min(r_idx, len(page_matches) - 1)
+                        box, ref_text = page_matches[match_idx]
                         if self.enable_bbox_precision:
                             box = box.align_to_line_height(min(0.018, max(0.009, box.height * 1.35)))
                         box = self._apply_geometry_enhancements(
@@ -934,7 +946,7 @@ class ExtractBenchAdapter:
                             "confidence": 0.85,
                             "source": "tonerhound",
                         })
-                continue
+                        continue
 
             # EXP-011: Contextual structural hints for general resolution
             fld_name = path.split(".")[-1].split("[")[0].lower()

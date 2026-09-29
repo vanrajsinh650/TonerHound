@@ -168,18 +168,10 @@ class CandidateVerifier:
 
         # 2. Page Hint Consistency Check
         if page_hint is not None and top_cand.page != page_hint:
-            # If any candidate exists on the hint page, reject candidates on other pages
+            # If candidate exists on the hint page, select that candidate instead of dropping (Fix 6)
             hint_page_cands = [c for c, _s in scored_candidates if c.page == page_hint]
             if hint_page_cands:
-                return VerificationDecision(
-                    is_accepted=False,
-                    status=ProvenanceStatus.AMBIGUOUS,
-                    confidence=0.4,
-                    bbox=None,
-                    page=None,
-                    matched_text=None,
-                    reason=f"Top candidate on page {top_cand.page} conflicts with page hint {page_hint}",
-                )
+                top_cand = hint_page_cands[0]
 
         # 3. Table Row Alignment Check
         if row_anchor is not None:
@@ -264,7 +256,7 @@ class CandidateVerifier:
                         reason=f"Date value mismatch: target={target_date} vs token='{top_cand.matched_text}'",
                     )
 
-        # 5. Score Margin & Abstention Check (Step 6)
+        # 5. Score Margin & Abstention Check (Step 6 / Fix 5)
         if len(scored_candidates) > 1:
             sec_cand, sec_score = scored_candidates[1]
             score_margin = top_score - sec_score
@@ -275,11 +267,10 @@ class CandidateVerifier:
                 same_region = same_page and (top_cand.bbox.iou(sec_cand.bbox) >= 0.50)
 
                 if not same_region:
-                    # Indistinguishable candidates in distinct spatial regions -> ABSTAIN!
                     return VerificationDecision(
                         is_accepted=False,
                         status=ProvenanceStatus.AMBIGUOUS,
-                        confidence=0.50,
+                        confidence=0.0,
                         bbox=None,
                         page=None,
                         matched_text=None,
