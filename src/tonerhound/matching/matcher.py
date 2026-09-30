@@ -40,12 +40,29 @@ class MatchCandidate:
         return len({t.line_index for t in self.tokens}) > 1
 
 
+# Feature flag for EXP-028F Phase 1.1: Strict page-hint filtering vs +/- 1 page drift
+ENABLE_STRICT_PAGE_HINT: bool = False
+
+
 class EvidenceMatcher:
     """Multi-tiered evidence matcher across document index."""
 
-    def __init__(self, index: DocumentIndex) -> None:
+    def __init__(
+        self,
+        index: DocumentIndex,
+        enable_strict_page_hint: bool | None = None,
+    ) -> None:
         self.index = index
+        self.enable_strict_page_hint = enable_strict_page_hint
         self._numeric_cache: dict[int, list[tuple[DocumentToken, float, int]]] = {}
+
+    def _resolve_strict_page_hint(self, override: bool | None = None) -> bool:
+        """Resolve effective strict page hint setting, respecting method overrides."""
+        if override is not None:
+            return override
+        if self.enable_strict_page_hint is not None:
+            return self.enable_strict_page_hint
+        return ENABLE_STRICT_PAGE_HINT
 
     def _get_page_numeric_tokens(self, page_num: int) -> list[tuple[DocumentToken, float, int]]:
         if page_num not in self._numeric_cache:
@@ -292,11 +309,15 @@ class EvidenceMatcher:
         self,
         value: Any,
         page_hint: int | None = None,
+        enable_strict_page_hint: bool | None = None,
+        _allow_drift: bool = True,
     ) -> list[MatchCandidate]:
         """Tier 2b: Locate date values via sublinear inverted date index."""
         target_date = parse_date_value(value)
         if target_date is None:
             return []
+
+        strict = self._resolve_strict_page_hint(enable_strict_page_hint)
 
         date_key = target_date.strftime("%Y-%m-%d")
         raw_matches = list(self.index._date_index.get(date_key, []))
@@ -338,6 +359,39 @@ class EvidenceMatcher:
                     )
                 )
 
+        # Page drift fallback: if strict filtering is disabled and no candidates found on page_hint
+        if not strict and not candidates and _allow_drift and page_hint is not None:
+            drift_pages = [
+                p
+                for p in (page_hint - 1, page_hint + 1)
+                if 1 <= p <= len(self.index.pages) and self.index.get_page(p)
+            ]
+            for dp in drift_pages:
+                dp_cands = self.find_normalized_date_candidates(
+                    value,
+                    page_hint=dp,
+                    enable_strict_page_hint=True,
+                    _allow_drift=False,
+                )
+                if dp_cands:
+                    for c in dp_cands:
+                        candidates.append(
+                            MatchCandidate(
+                                page=c.page,
+                                bbox=c.bbox,
+                                tokens=c.tokens,
+                                matched_text=c.matched_text,
+                                match_type=c.match_type,
+                                raw_similarity=c.raw_similarity * 0.95,
+                                line_index=c.line_index,
+                            )
+                        )
+                    break
+
+        if page_hint is not None and candidates:
+            # Rank exact page_hint candidate ahead of drifted candidates
+            candidates.sort(key=lambda c: (0 if c.page == page_hint else 1, -c.raw_similarity))
+
         return candidates
 
     def find_fuzzy_candidates(
@@ -345,10 +399,14 @@ class EvidenceMatcher:
         query: str,
         threshold: float = 0.80,
         page_hint: int | None = None,
+        enable_strict_page_hint: bool | None = None,
+        _allow_drift: bool = True,
     ) -> list[MatchCandidate]:
         """Tier 3: Fuzzy sequence alignment using n-gram inverted index pruning."""
         if not query or len(query.strip()) < 4:
             return []
+
+        strict = self._resolve_strict_page_hint(enable_strict_page_hint)
 
         norm_query = normalize_unicode_and_case(query).text.strip()
         if not norm_query:
@@ -429,6 +487,40 @@ class EvidenceMatcher:
                         line_index=line.line_index,
                     )
                 )
+
+        # Page drift fallback: if strict filtering is disabled and no candidates found on page_hint
+        if not strict and not candidates and _allow_drift and page_hint is not None:
+            drift_pages = [
+                p
+                for p in (page_hint - 1, page_hint + 1)
+                if 1 <= p <= len(self.index.pages) and self.index.get_page(p)
+            ]
+            for dp in drift_pages:
+                dp_cands = self.find_fuzzy_candidates(
+                    query,
+                    threshold=threshold,
+                    page_hint=dp,
+                    enable_strict_page_hint=True,
+                    _allow_drift=False,
+                )
+                if dp_cands:
+                    for c in dp_cands:
+                        candidates.append(
+                            MatchCandidate(
+                                page=c.page,
+                                bbox=c.bbox,
+                                tokens=c.tokens,
+                                matched_text=c.matched_text,
+                                match_type=c.match_type,
+                                raw_similarity=c.raw_similarity * 0.95,
+                                line_index=c.line_index,
+                            )
+                        )
+                    break
+
+        if page_hint is not None and candidates:
+            # Rank exact page_hint candidate ahead of drifted candidates
+            candidates.sort(key=lambda c: (0 if c.page == page_hint else 1, -c.raw_similarity))
 
         return candidates
 
