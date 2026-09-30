@@ -1,0 +1,80 @@
+{
+  "experiment": "EXP-028E",
+  "description": "Fast Safe Full 370-Document Production Benchmark",
+  "timestamp": "2026-09-30T09:13:33.982685+00:00",
+  "total_documents": 370,
+  "overall_metrics": {
+    "word_grounding_f1": 56.047665608944754,
+    "word_grounding_precision": 61.72753570728561,
+    "word_grounding_recall": 52.56864566866527,
+    "page_grounding_f1": 81.66390206483347,
+    "false_grounding_rate": 23.87108533265026,
+    "abstention_rate": 28.18848647136615,
+    "exp028b1_baseline_word_f1": 56.05,
+    "delta_vs_b1_pp": -0.0023343910552426905,
+    "distance_to_llama_extract_pp": 2.062334391055245,
+    "distance_to_codex_pp": 21.062334391055245
+  },
+  "performance": {
+    "prediction_time_sec": 1.423546152000199,
+    "evaluation_time_sec": 960.5028288589983,
+    "total_runtime_sec": 961.9263750109985,
+    "average_time_per_doc_sec": 2.5998010135432392,
+    "workers": 2
+  },
+  "cohort_metrics": {
+    "cohort_a_dev": {
+      "word_f1": 0.6533024089633162,
+      "word_precision": 0.6687945257911124,
+      "word_recall": 0.6413020736745949,
+      "page_f1": 0.9250422821497417,
+      "docs_count": 32
+    },
+    "cohort_b_held": {
+      "word_f1": 0.5935881706189192,
+      "word_precision": 0.6377741823704207,
+      "word_recall": 0.5651637958928637,
+      "page_f1": 0.8544078116123113,
+      "docs_count": 32
+    }
+  },
+  "split_metrics": {
+    "short": {
+      "word_f1": 0.519985539851221,
+      "word_precision": 0.5921679857850279,
+      "word_recall": 0.47700493928047144,
+      "page_f1": 0.8446966926876689,
+      "docs_count": 175
+    },
+    "medium": {
+      "word_f1": 0.6735231114990389,
+      "word_precision": 0.6888088602303982,
+      "word_recall": 0.6599556733074295,
+      "page_f1": 0.7525864003658262,
+      "docs_count": 48
+    },
+    "long": {
+      "word_f1": 0.6881470777840065,
+      "word_precision": 0.6911354973657707,
+      "word_recall": 0.6852513142469927,
+      "page_f1": 0.7729016520367912,
+      "docs_count": 13
+    }
+  },
+  "table_metrics": {
+    "table_heavy": {
+      "word_f1": 0.8757315851652444,
+      "word_precision": 0.8807257786056863,
+      "word_recall": 0.8708996382925768,
+      "page_f1": 0.8490632884894301,
+      "docs_count": 13
+    },
+    "non_table": {
+      "word_f1": 0.5420985660536387,
+      "word_precision": 0.6019172607503144,
+      "word_recall": 0.505561921436083,
+      "page_f1": 0.8146418737160932,
+      "docs_count": 223
+    }
+  }
+}

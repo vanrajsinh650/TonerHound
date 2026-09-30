@@ -1,0 +1,20 @@
+{
+  "experiment_id": "EXP-028E",
+  "baseline_experiment": "EXP-028B1",
+  "pipeline": "EXP-028D Safe Table Resolution Production Integration",
+  "enable_structural_dp_scoring": true,
+  "max_workers": 2,
+  "total_test_cases": 370,
+  "resource_safety": {
+    "max_concurrent_workers": 2,
+    "omp_num_threads": 1,
+    "mkl_num_threads": 1,
+    "openblas_num_threads": 1,
+    "incremental_gc": true
+  },
+  "benchmarks": {
+    "full": "/home/vanrajsinh/Projects/TonerHound/research/data/full",
+    "manifest_dev": "/home/vanrajsinh/Projects/TonerHound/benchmarks/exp005_local_manifest.json",
+    "manifest_held_out": "/home/vanrajsinh/Projects/TonerHound/benchmarks/held_out_manifest.json"
+  }
+}
