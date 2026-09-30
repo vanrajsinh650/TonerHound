@@ -1,0 +1,21 @@
+{
+  "experiment_id": "EXP-028D",
+  "baseline": "EXP-028B1",
+  "enable_structural_dp_scoring": true,
+  "workers": 2,
+  "targeted_documents": [
+    "long/real_sm0801_eco_full",
+    "medium/sec_13f_0031_loomis_sayles",
+    "short/W14-Atascosa SWD Well No. 4 - W-14 (Updated 01.22.2025)",
+    "short/bianco-2024",
+    "medium/real_pueblo_oct_2025",
+    "short/real_wyo_Goshen_2024",
+    "medium/veralto_earnings_deck_q4fy25"
+  ],
+  "defect_fixes": {
+    "defect_a": "Repeated code anchors monotonic binding (no cands[0] collapse)",
+    "defect_b": "Dynamic column projection from page header tokens + empirical col_samples",
+    "defect_c": "Geometry preservation through _apply_geometry_enhancements",
+    "defect_d": "Cross-record monotonic y progression validation"
+  }
+}

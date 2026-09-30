@@ -171,15 +171,17 @@ class JointRecordResolver:
 
         if use_col and column_corridor is not None:
             col_x0, col_x1 = column_corridor
-            col_w = max(0.010, col_x1 - col_x0)
+            # If the column is on the right boundary of the table (e.g. >= 0.88), allow it to extend to 0.98
+            eff_col_x1 = 0.98 if col_x1 >= 0.88 else col_x1
+            col_w = max(0.010, eff_col_x1 - col_x0)
 
             # Check overlap with designated column corridor
-            overlap = max(0.0, min(c_x1, col_x1) - max(c_x0, col_x0))
+            overlap = max(0.0, min(c_x1, eff_col_x1) - max(c_x0, col_x0))
             containment = overlap / max(1e-4, c_box.width)
 
             if is_numeric:
                 # Numeric fields align right rail
-                delta_rail = abs(c_x1 - col_x1)
+                delta_rail = abs(c_x1 - eff_col_x1) if eff_col_x1 < 0.95 else abs(c_x1 - col_x1)
             else:
                 # Text fields align left rail
                 delta_rail = abs(c_x0 - col_x0)
@@ -187,11 +189,11 @@ class JointRecordResolver:
             sigma_x = max(0.008, col_w * 0.40)
             rail_score = math.exp(-(delta_rail**2) / (2.0 * sigma_x**2))
 
-            if containment >= 0.50 or delta_rail <= 0.025:
-                scores["column"] = 10.0 * (0.6 * rail_score + 0.4 * containment)
+            if containment >= 0.50 or delta_rail <= 0.025 or (c_x0 >= col_x0 and eff_col_x1 >= 0.95):
+                scores["column"] = 10.0 * (0.6 * rail_score + 0.4 * max(containment, 0.7 if c_x0 >= col_x0 else 0.0))
             else:
                 # Outside assigned column
-                dist_outside = max(0.0, col_x0 - c_x1, c_x0 - col_x1)
+                dist_outside = max(0.0, col_x0 - c_x1, c_x0 - eff_col_x1)
                 scores["column"] = -10.0 * min(1.5, dist_outside / 0.040)
         elif use_col and all_column_corridors:
             # We don't have this field's column, but check if candidate falls inside another column
@@ -299,6 +301,8 @@ class JointRecordResolver:
         self,
         fields: list[RecordFieldLeaf],
         candidates_by_field: dict[str, list[MatchCandidate]],
+        row_index: int = 0,
+        previous_anchor_y: float | None = None,
     ) -> tuple[str | None, MatchCandidate | None]:
         """Identify the most distinctive anchor candidate for a record."""
         best_anchor_field: str | None = None
@@ -321,11 +325,21 @@ class JointRecordResolver:
             # Entropy calculation: length and character variety
             is_digit_only = val_str.replace(".", "").replace(",", "").replace("-", "").isdigit()
             is_code = bool(re.match(r"^[0-9A-Z]{6,12}$", clean_u))
-            
+
             cand_pages = {c.page for c in cands}
             # An anchor must be unambiguous (exactly 1 candidate or clearly dominant)
             if len(cands) > 1 and not (is_code and len(cand_pages) == 1):
                 continue
+
+            # Sort candidates by (page, y) for monotonic assignment
+            sorted_cands = sorted(cands, key=lambda c: (c.page, c.bbox.y))
+            if previous_anchor_y is not None:
+                valid_cands = [c for c in sorted_cands if c.bbox.y > previous_anchor_y + 0.002]
+                if not valid_cands:
+                    continue
+                chosen_cand = valid_cands[0]
+            else:
+                chosen_cand = sorted_cands[min(row_index, len(sorted_cands) - 1)]
 
             if is_code:
                 priority = 100.0 + len(val_str)
@@ -339,7 +353,7 @@ class JointRecordResolver:
             if priority > best_anchor_score:
                 best_anchor_score = priority
                 best_anchor_field = fld.field_name
-                best_anchor_cand = cands[0]
+                best_anchor_cand = chosen_cand
 
         return best_anchor_field, best_anchor_cand
 
@@ -350,6 +364,7 @@ class JointRecordResolver:
         candidates_by_field: dict[str, list[MatchCandidate]],
         column_corridors: dict[str, tuple[float, float]] | None = None,
         mode: ResolverMode | None = None,
+        previous_anchor_y: float | None = None,
     ) -> dict[str, FieldResolutionResult]:
         """Jointly resolve all fields belonging to a single structured record."""
         active_mode = mode or self.mode
@@ -360,7 +375,12 @@ class JointRecordResolver:
 
         # Step 1: Discover anchor if record is not anchored
         if not record.is_anchored and active_mode != ResolverMode.BASELINE:
-            anc_fld, anc_cand = self.identify_record_anchor(fields, candidates_by_field)
+            anc_fld, anc_cand = self.identify_record_anchor(
+                fields,
+                candidates_by_field,
+                row_index=record.row_index,
+                previous_anchor_y=previous_anchor_y,
+            )
             if anc_cand is not None and anc_fld is not None:
                 record.page = anc_cand.page
                 record.anchor_field = anc_fld

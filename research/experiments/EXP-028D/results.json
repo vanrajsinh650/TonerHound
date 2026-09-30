@@ -1,0 +1,89 @@
+{
+  "experiment": "EXP-028D",
+  "description": "Safe Table Resolution Integration Targeted Benchmark",
+  "timestamp": "2026-09-30T05:06:06.081510+00:00",
+  "total_runtime_seconds": 30.905524828000125,
+  "decision_gate_passed": true,
+  "smoke_suite_average_f1": 0.6283644811452503,
+  "smoke_suite_baseline_f1": 0.6283666666666666,
+  "smoke_suite_delta_pp": -0.00021855214162869174,
+  "per_document_results": [
+    {
+      "test_id": "long/real_sm0801_eco_full",
+      "word_f1": 0.9247990383893021,
+      "word_precision": 0.9250075142771266,
+      "word_recall": 0.9245906564518552,
+      "page_f1": 0.9756802944656238,
+      "citations": 7606,
+      "false_grounding": 0.07499248572287343,
+      "abstention_rate": 0.11207097828624796,
+      "latency_sec": 5.213891579000119
+    },
+    {
+      "test_id": "medium/sec_13f_0031_loomis_sayles",
+      "word_f1": 0.8630430220356768,
+      "word_precision": 0.874234693877551,
+      "word_recall": 0.852134272689598,
+      "page_f1": 0.9382427755306284,
+      "citations": 11982,
+      "false_grounding": 0.12576530612244896,
+      "abstention_rate": 0.21098380086922164,
+      "latency_sec": 30.815718177000235
+    },
+    {
+      "test_id": "short/W14-Atascosa SWD Well No. 4 - W-14 (Updated 01.22.2025)",
+      "word_f1": 0.5401459854014597,
+      "word_precision": 0.6851851851851852,
+      "word_recall": 0.4457831325301205,
+      "page_f1": 0.610909090909091,
+      "citations": 84,
+      "false_grounding": 0.31481481481481477,
+      "abstention_rate": 0.5647668393782384,
+      "latency_sec": 0.2425287850001041
+    },
+    {
+      "test_id": "short/bianco-2024",
+      "word_f1": 0.31438127090301005,
+      "word_precision": 0.3263888888888889,
+      "word_recall": 0.3032258064516129,
+      "page_f1": 0.6956521739130435,
+      "citations": 144,
+      "false_grounding": 0.6736111111111112,
+      "abstention_rate": 0.8833063209076175,
+      "latency_sec": 6.4486200970004575
+    },
+    {
+      "test_id": "medium/real_pueblo_oct_2025",
+      "word_f1": 0.9960063897763578,
+      "word_precision": 0.9962716378162451,
+      "word_recall": 0.9957412829385148,
+      "page_f1": 0.9983595031638153,
+      "citations": 4266,
+      "false_grounding": 0.0037283621837549408,
+      "abstention_rate": 0.0032710280373831778,
+      "latency_sec": 6.263560596999923
+    },
+    {
+      "test_id": "short/real_wyo_Goshen_2024",
+      "word_f1": 0.9948542024013721,
+      "word_precision": 1.0,
+      "word_recall": 0.9897610921501706,
+      "page_f1": 0.996523754345307,
+      "citations": 1120,
+      "false_grounding": 0.0,
+      "abstention_rate": 0.0026714158504007124,
+      "latency_sec": 2.9277336569994077
+    },
+    {
+      "test_id": "medium/veralto_earnings_deck_q4fy25",
+      "word_f1": 0.0,
+      "word_precision": 0.0,
+      "word_recall": 0.0,
+      "page_f1": 0.0,
+      "citations": 17,
+      "false_grounding": 0.0,
+      "abstention_rate": 0.19047619047619047,
+      "latency_sec": 1.154230070000267
+    }
+  ]
+}

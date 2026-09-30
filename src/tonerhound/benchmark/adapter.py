@@ -107,6 +107,7 @@ class ExtractBenchAdapter:
         enable_same_line_recovery: bool = False,
         enable_structure_aware_recovery: bool = True,
         enable_dot_leader_trimming: bool = False,
+        enable_structural_dp_scoring: bool = True,
     ) -> None:
         self.index = index
         self.enable_structural_disambiguation = enable_structural_disambiguation
@@ -118,6 +119,7 @@ class ExtractBenchAdapter:
         self.enable_same_line_recovery = enable_same_line_recovery
         self.enable_structure_aware_recovery = enable_structure_aware_recovery
         self.enable_dot_leader_trimming = enable_dot_leader_trimming
+        self.enable_structural_dp_scoring = enable_structural_dp_scoring
         self.resolver = EvidenceResolver(
             index,
             enable_verification=enable_verification,
@@ -1154,6 +1156,56 @@ class ExtractBenchAdapter:
                 record_page_hints[parent_rec] = res.page
                 return
 
+    def _derive_page_column_headers(
+        self,
+        page_obj: Any,
+        table_name: str,
+        field_names: list[str],
+    ) -> dict[str, tuple[float, float]]:
+        """Derive column regions (x_start, width) dynamically from page header tokens (EXP-028D)."""
+        if not page_obj or not getattr(page_obj, "lines", None):
+            return {}
+
+        canonical_aliases: dict[str, list[str]] = {
+            "name_of_issuer": ["name of issuer", "issuer name", "issuer", "name"],
+            "title_of_class": ["title of class", "class of title", "class"],
+            "cusip": ["cusip", "cusi p"],
+            "value": ["value", "val ue", "fair value", "market value"],
+            "shares_or_principal_amount": ["shrs or prn amt", "shares or principal", "shares", "shrs", "prn amt"],
+            "sh_prn": ["sh/ prn", "sh/prn", "sh prn", "sh / prn"],
+            "investment_discretion": ["investment discretion", "inv discretion", "discretion"],
+            "other_managers": ["other managers", "other mgrs", "managers"],
+            "voting_authority.sole": ["sole", "voting authority sole"],
+            "voting_authority.shared": ["shared", "voting authority shared"],
+            "voting_authority.none": ["none", "voting authority none"],
+            "name": ["creditor name", "name", "creditor"],
+            "address_1": ["address 1", "address line 1", "address"],
+            "city": ["city"],
+            "state": ["state", "st"],
+            "postal_code": ["zip", "postal code", "zip code"],
+            "country": ["country"],
+        }
+
+        header_lines = [l for l in page_obj.lines if 0.03 <= l.bbox.y <= 0.45]
+        found_cols: dict[str, tuple[float, float]] = {}
+
+        for ln in header_lines:
+            ltxt = ln.norm_text.lower()
+            for fld in field_names:
+                if fld in found_cols:
+                    continue
+                aliases = canonical_aliases.get(fld, [fld.lower().replace("_", " ")])
+                for alias in aliases:
+                    if alias in ltxt and ln.tokens:
+                        matching_toks = [t for t in ln.tokens if t.text.lower() in alias or alias in t.text.lower()]
+                        if matching_toks:
+                            min_x = min(t.bbox.x for t in matching_toks)
+                            max_x = max(t.bbox.x + t.bbox.width for t in matching_toks)
+                            found_cols[fld] = (min_x, max(0.02, max_x - min_x))
+                            break
+
+        return found_cols
+
     def _align_table_arrays(
         self,
         table_records: dict[str, dict[int, list[tuple[str, Any, int | None, str | None, str]]]],
@@ -1311,19 +1363,26 @@ class ExtractBenchAdapter:
                     "TRUE", "FALSE", "YES", "NO", "NULL", "UNKNOWN",
                 }
                 row_salient_strings: list[list[str]] = []
+                row_salient_items: list[list[tuple[str, str, bool]]] = []
                 for r_idx in page_rows:
                     salient = []
+                    items = []
                     for _p, v, _ph, _ctx, _rp in rows_map[r_idx]:
                         if v is not None and not isinstance(v, bool):
                             vs = str(v).strip().upper()
+                            fld = _p.split(".")[-1].split("[")[0].lower()
+                            is_code = bool(re.match(r"^[0-9A-Z]{6,12}$", vs)) or any(k in fld for k in ("cusip", "id", "code", "account", "number"))
                             if len(vs) >= 2 and vs not in boilerplate_salient:
                                 salient.append(vs)
+                                items.append((fld, vs, is_code))
                             pnum = parse_numeric_value(v)
                             if pnum is not None and pnum.is_integer() and abs(pnum) >= 1000:
                                 formatted_commas = f"{int(pnum):,}"
                                 if formatted_commas != vs:
                                     salient.append(formatted_commas)
+                                    items.append((fld, formatted_commas, False))
                     row_salient_strings.append(salient)
+                    row_salient_items.append(items)
 
                 # Pre-filter lines if table starts at a consistent column 0
                 col0_x_votes: list[float] = []
@@ -1349,6 +1408,11 @@ class ExtractBenchAdapter:
                 M = len(page_rows)
                 N = len(filtered_lines)
 
+                dynamic_cols: dict[str, tuple[float, float]] = {}
+                if self.enable_structural_dp_scoring:
+                    all_fld_names = list({item[0] for row_items in row_salient_items for item in row_items})
+                    dynamic_cols = self._derive_page_column_headers(page_obj, table_name, all_fld_names)
+
                 dp = [[0.0] * (N + 1) for _ in range(M + 1)]
                 parent_dp = [[(-1, -1)] * (N + 1) for _ in range(M + 1)]
 
@@ -1359,6 +1423,7 @@ class ExtractBenchAdapter:
 
                 for i in range(1, M + 1):
                     r_strs = row_salient_strings[i - 1]
+                    r_items = row_salient_items[i - 1] if i - 1 < len(row_salient_items) else []
                     for j in range(1, N + 1):
                         # Option 1: Skip line j-1
                         b_val = dp[i][j - 1]
@@ -1373,7 +1438,53 @@ class ExtractBenchAdapter:
                         line_txt = filtered_lines[j - 1].norm_text.upper()
                         match_count = sum(1 for s in r_strs if _matches_table_line(s, line_txt))
                         if match_count > 0:
-                            match_score = match_count * 4.0
+                            if self.enable_structural_dp_scoring:
+                                # 1. Physical vertical row proximity score
+                                y_step = (filtered_lines[-1].bbox.y - filtered_lines[0].bbox.y) / max(1, N - 1) if N > 1 else 0.015
+                                exp_y = filtered_lines[0].bbox.y + (i - 1) * y_step
+                                line_y = filtered_lines[j - 1].bbox.y
+                                dy = abs(line_y - exp_y)
+                                if dy <= y_step * 1.5:
+                                    prox_score = 0.5 * (1.0 - dy / (y_step * 1.5))
+                                else:
+                                    prox_score = -0.2 * min(1.0, (dy - y_step * 1.5) / (y_step * 2.0))
+
+                                # 2. Sibling co-linearity
+                                sibling_score = min(0.8, (match_count - 1) * 0.4) if match_count >= 2 else 0.0
+
+                                # 3. Anchor evidence
+                                matched_items = [item for item in r_items if _matches_table_line(item[1], line_txt)]
+                                anchor_score = 0.6 if any(item[2] for item in matched_items) else 0.0
+
+                                # 4. Column projection & Horizontal reading order
+                                col_proj_score = 0.0
+                                order_score = 0.0
+                                line_toks = filtered_lines[j - 1].tokens
+                                if line_toks:
+                                    matched_tok_xs: list[tuple[int, float]] = []
+                                    cols_dict = dynamic_cols or (table_col_positions.get(table_name, {}) if table_col_positions else {})
+                                    for idx_m, (fld, s_val, _isc) in enumerate(matched_items):
+                                        for tok in line_toks:
+                                            if s_val in tok.text.upper() or tok.text.upper() in s_val:
+                                                matched_tok_xs.append((idx_m, tok.bbox.x))
+                                                col_c = cols_dict.get(fld)
+                                                if col_c:
+                                                    cx0, cw = col_c
+                                                    cx1 = cx0 + cw
+                                                    if cx0 - 0.03 <= tok.bbox.x <= cx1 + 0.03:
+                                                        col_proj_score = min(0.6, col_proj_score + 0.3)
+                                                break
+
+                                    if len(matched_tok_xs) >= 2:
+                                        is_ordered = all(matched_tok_xs[k][1] <= matched_tok_xs[k + 1][1] + 0.02 for k in range(len(matched_tok_xs) - 1))
+                                        if is_ordered:
+                                            order_score = 0.4
+
+                                structural_bonus = max(-0.5, min(1.5, prox_score + sibling_score + anchor_score + col_proj_score + order_score))
+                                match_score = (match_count * 4.0) + structural_bonus
+                            else:
+                                match_score = match_count * 4.0
+
                             if dp[i - 1][j - 1] + match_score > b_val:
                                 b_val = dp[i - 1][j - 1] + match_score
                                 b_p = (i - 1, j - 1)
@@ -1620,15 +1731,18 @@ class ExtractBenchAdapter:
                         "method_of_service": (0.910, 0.018),
                     },
                 }
-                if table_name in standard_table_cols:
-                    for fld, coords in standard_table_cols[table_name].items():
-                        table_col_positions.setdefault(table_name, {})[fld] = coords
-
+                # 1. Prioritize empirical col_samples from aligned rows (EXP-028D Defect B)
                 for fld, samples in col_samples[table_name].items():
-                    if fld not in table_col_positions.setdefault(table_name, {}) and len(samples) >= 3:
+                    if len(samples) >= 3:
                         xs = sorted(s[0] for s in samples)
                         ws = sorted(s[1] for s in samples)
-                        table_col_positions[table_name][fld] = (xs[len(xs) // 2], ws[len(ws) // 2])
+                        table_col_positions.setdefault(table_name, {})[fld] = (xs[len(xs) // 2], ws[len(ws) // 2])
+
+                # 2. Fallback to standard_table_cols only for fields without empirical coordinates
+                if table_name in standard_table_cols:
+                    for fld, coords in standard_table_cols[table_name].items():
+                        if fld not in table_col_positions.setdefault(table_name, {}):
+                            table_col_positions[table_name][fld] = coords
 
         # Structural Gating: detect genuine dense tabular grids using observable geometry
         if table_row_pitches is not None and table_is_structured_grid is not None:

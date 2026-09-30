@@ -429,3 +429,42 @@ def test_ablation_modes_a_through_f():
     # Mode F (Ambiguity Gated): verify execution
     res_f = JointRecordResolver().rank_record_candidates(candidates, "amt", rec, column_corridor=cols["amt"], mode=ResolverMode.AMBIGUITY_GATED)
     assert res_f[0][0] == c_good
+
+
+# ==============================================================================
+# 12. Repeated CUSIP / Code Anchors across Records
+# ==============================================================================
+
+def test_repeated_cusip_candidates_joint_record_resolver(resolver: JointRecordResolver):
+    """Verify that JointRecordResolver does not collapse multiple rows sharing repeated CUSIPs."""
+    c0 = _make_candidate("037833100", BBox(x=0.30, y=0.10, width=0.10, height=0.012, page=1), 1)
+    c1 = _make_candidate("037833100", BBox(x=0.30, y=0.15, width=0.10, height=0.012, page=1), 1)
+    c2 = _make_candidate("037833100", BBox(x=0.30, y=0.20, width=0.10, height=0.012, page=1), 1)
+
+    fields_0 = [RecordFieldLeaf("holdings[0].cusip", "cusip", "037833100", page_hint=1)]
+    fields_1 = [RecordFieldLeaf("holdings[1].cusip", "cusip", "037833100", page_hint=1)]
+    fields_2 = [RecordFieldLeaf("holdings[2].cusip", "cusip", "037833100", page_hint=1)]
+
+    cands_map = {"cusip": [c0, c1, c2]}
+
+    # Row 0
+    rec0 = StructuralRecord("holdings", 0, "holdings[0]")
+    res0 = resolver.resolve_record(rec0, fields_0, cands_map)
+    assert rec0.anchor_bbox == c0.bbox
+    assert abs(rec0.row_y_center - 0.106) < 0.01
+
+    # Row 1 with previous_anchor_y=0.10
+    rec1 = StructuralRecord("holdings", 1, "holdings[1]")
+    res1 = resolver.resolve_record(rec1, fields_1, cands_map, previous_anchor_y=rec0.anchor_bbox.y)
+    assert rec1.anchor_bbox == c1.bbox
+    assert abs(rec1.row_y_center - 0.156) < 0.01
+
+    # Row 2 with previous_anchor_y=0.15
+    rec2 = StructuralRecord("holdings", 2, "holdings[2]")
+    res2 = resolver.resolve_record(rec2, fields_2, cands_map, previous_anchor_y=rec1.anchor_bbox.y)
+    assert rec2.anchor_bbox == c2.bbox
+    assert abs(rec2.row_y_center - 0.206) < 0.01
+
+    # Monotonic progression: y0 < y1 < y2
+    assert rec0.row_y_center < rec1.row_y_center < rec2.row_y_center
+
