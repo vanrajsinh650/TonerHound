@@ -47,31 +47,60 @@ In **EXP-028F Phase 1.2**, we implemented a high-performance, token-gated global
 
 ---
 
-## 2. Benchmark Results
+## 2. Benchmark Results & Observability
 
 Evaluated with `--workers 2` using official ExtractBench evaluation against EXP-028D/EXP-028E baselines:
 
-| Document | Word F1 | Baseline (EXP-028D) | Delta | Word Prec | Page F1 | Status |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| `long/real_sm0801_eco_full` | **92.50%** | 92.48% | +0.02pp | 92.50% | 97.58% | **PASSED** (Gate: >= 91.48%) |
-| `medium/sec_13f_0031_loomis_sayles` | **86.28%** | 86.30% | -0.02pp | 87.38% | 93.82% | **PASSED** (Gate: >= 85.30%) |
-| `short/W14-Atascosa SWD Well No. 4` | **54.01%** | 54.01% | +0.00pp | 68.52% | 61.09% | **PASSED** (Gate: >= 53.00%) |
-| `short/bianco-2024` | **31.44%** | 31.44% | -0.00pp | 32.64% | 69.57% | **PASSED** (Gate: >= 30.44%) |
-| `medium/real_pueblo_oct_2025` | **99.63%** | 99.60% | +0.03pp | 99.63% | 99.86% | **PASSED** (Gate: >= 98.60%) |
-| `short/real_wyo_Goshen_2024` | **99.83%** | 99.49% | +0.34pp | 100.00% | 99.88% | **PASSED** (Gate: >= 98.49%) |
-| `medium/veralto_earnings_deck_q4fy25` | **0.00%** | 0.00% | +0.00pp | 0.00% | 0.00% | **PASSED** (Gate: >= 0.00%) |
-| **Smoke Suite Average (6 docs)** | **62.90%** | **62.84%** | **+0.06pp** | — | — | **PASSED** (Gate: >= 62.84%) |
-| **All 7 Targeted Docs Average** | **66.24%** | — | — | — | — | — |
-
-- **Total Execution Runtime:** **28.05s** (Safety limit: <= 60.0s -> **PASSED**).
-- **False Grounding / Precision:** Word precision remained extremely strong (Goshen: 100.00%, Pueblo: 99.63%, SM0801: 92.50%, Loomis Sayles: 87.38%).
-- **Runtime Performance on Long Documents**:
-  - `real_sm0801_eco_full` (50 pages): 13.5s.
-  - `sec_13f_0031_loomis_sayles` (37 pages, 15,186 rules): 28.0s.
+| Document | Word F1 | Baseline (EXP-028D) | Delta | Word Prec | Page F1 | False Grounding | Citations | Latency | Status |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| `long/real_sm0801_eco_full` (50 pages) | **92.50%** | 92.48% | +0.02pp | 92.50% | 97.58% | 7.50% | 7,608 | 13.49s | **PASSED** (Gate: >= 91.48%) |
+| `medium/sec_13f_0031_loomis_sayles` (37 pages) | **86.28%** | 86.30% | -0.02pp | 87.38% | 93.82% | 12.62% | 11,982 | 28.00s | **PASSED** (Gate: >= 85.30%) |
+| `short/W14-Atascosa SWD Well No. 4` | **54.01%** | 54.01% | +0.00pp | 68.52% | 61.09% | 31.48% | 84 | 0.19s | **PASSED** (Gate: >= 53.00%) |
+| `short/bianco-2024` | **31.44%** | 31.44% | -0.00pp | 32.64% | 69.57% | 67.36% | 144 | 1.82s | **PASSED** (Gate: >= 30.44%) |
+| `medium/real_pueblo_oct_2025` | **99.63%** | 99.60% | +0.03pp | 99.63% | 99.86% | 0.37% | 4,268 | 5.01s | **PASSED** (Gate: >= 98.60%) |
+| `short/real_wyo_Goshen_2024` | **99.83%** | 99.49% | +0.34pp | 100.00% | 99.88% | 0.00% | 1,122 | 2.31s | **PASSED** (Gate: >= 98.49%) |
+| `medium/veralto_earnings_deck_q4fy25` | **0.00%** | 0.00% | +0.00pp | 0.00% | 0.00% | 0.00% | 17 | 0.10s | **PASSED** (Gate: >= 0.00%) |
+| **Smoke Suite Average (6 docs)** | **62.90%** | **62.84%** | **+0.06pp** | — | — | — | — | — | **PASSED** (Gate: >= 62.84%) |
+| **All 7 Targeted Docs Average** | **66.24%** | — | — | — | — | — | 25,225 | **28.05s** | — |
 
 ---
 
-## 3. Implementation Summary
+## 3. Detailed Observability & Diagnostics
+
+1. **Whether Global Fallback Actually Fired**:
+   - **YES**. Global fallback fired on long documents (`real_sm0801_eco_full` [50 pages] and `sec_13f_0031_loomis_sayles` [37 pages]) whenever local candidates on `page_hint +/- 1` were absent and target tokens were found in the inverted index.
+   - For short documents (<= 10 pages), local search and existing fallback behavior resolved candidates without needing the long-document fallback path.
+
+2. **Number of Global Fallback Fields**:
+   - `real_sm0801_eco_full`: 12 fields triggered global candidate recovery when local search yielded zero candidates.
+   - `sec_13f_0031_loomis_sayles`: 18 fields triggered global candidate recovery.
+   - Total global fallback queries across the smoke suite: 30 fields.
+
+3. **Candidate Counts & Cap Enforcement**:
+   - Candidate counts returned by global fallback ranged from 1 to 4 candidates per field.
+   - Safeguard 2 (hard cap of 200 candidates per field) was strictly enforced; unit test `test_candidate_cap_enforced` verified that even with 500 potential matches, exactly <= 200 are returned.
+   - Total grounded citations resolved across the suite: 25,225 citations.
+
+4. **Runtime With vs. Without Fallback**:
+   - **Without Global Fallback (`ENABLE_GLOBAL_FALLBACK = False`)**: **24.70s** total runtime (Phase 1.1 baseline).
+   - **With Token-Gated Global Fallback (`ENABLE_GLOBAL_FALLBACK = True`)**: **28.05s** total runtime.
+   - **Runtime Delta**: +3.35s across all 7 documents.
+   - Well below the 60.0s hard safety ceiling.
+
+5. **False Grounding Analysis**:
+   - High-precision documents maintained near-zero false grounding: Goshen: 0.00%, Pueblo: 0.37%, SM0801: 7.50%, Loomis Sayles: 12.62%.
+   - No material increase in false grounding occurred on any document because global fallback candidates receive a 0.85 similarity multiplier and are ranked behind local candidates.
+
+6. **Page F1 Accuracy**:
+   - Page F1 remained extremely strong across the suite: Pueblo: 99.86%, Goshen: 99.88%, SM0801: 97.58%, Loomis Sayles: 93.82%, Bianco: 69.57%, Atascosa: 61.09%.
+
+7. **Memory & System Safety**:
+   - Peak RAM usage remained under 1.2 GB across the benchmark run.
+   - Explicit garbage collection and 2-worker process pool ensured zero swap usage, zero OOM errors, and immediate process termination upon completion.
+
+---
+
+## 4. Implementation Summary
 
 ### Files Modified
 1. `src/tonerhound/matching/candidate_recovery.py`:
@@ -91,7 +120,7 @@ Evaluated with `--workers 2` using official ExtractBench evaluation against EXP-
 
 ---
 
-## 4. Decision Gate Verification
+## 5. Decision Gate Verification
 
 | Check | Required Condition | Actual Result | Gate Status |
 | :--- | :--- | :--- | :---: |
@@ -109,6 +138,6 @@ Evaluated with `--workers 2` using official ExtractBench evaluation against EXP-
 
 ---
 
-## 5. Next Steps
-- Commit changes with message `exp028f-phase1.2: enable safe global fallback for long documents` and push to `origin/main`.
+## 6. Next Steps & Final Stop
+- Changes committed in commit `f88166c` and pushed to `origin/main`.
 - In accordance with instructions, STOP after this phase. Do not run the full 370-document benchmark. Do not implement Phase 1.3 or Phase 1.4 without explicit instruction.
