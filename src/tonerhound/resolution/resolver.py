@@ -23,6 +23,10 @@ from tonerhound.resolution.reranker import StructuralReranker
 from tonerhound.resolution.verifier import CandidateVerifier
 
 
+# Feature flag for EXP-028F Phase 1.2: Token-gated global fallback for long documents
+ENABLE_GLOBAL_FALLBACK: bool = True
+
+
 class EvidenceResolver:
     """Independent evidence resolution engine."""
 
@@ -33,6 +37,7 @@ class EvidenceResolver:
         score_margin_threshold: float = 0.05,
         reranker: StructuralReranker | None = None,
         enable_candidate_recovery: bool = True,
+        enable_global_fallback: bool | None = None,
     ) -> None:
         self.index = index
         self.matcher = EvidenceMatcher(index)
@@ -55,10 +60,22 @@ class EvidenceResolver:
             )
         )
         self.enable_candidate_recovery = enable_candidate_recovery
+        self.enable_global_fallback = enable_global_fallback
         self.recovery_engine = (
-            CandidateRecoveryEngine(index) if enable_candidate_recovery else None
+            CandidateRecoveryEngine(
+                index,
+                enable_global_fallback=enable_global_fallback,
+            )
+            if enable_candidate_recovery
+            else None
         )
         self.last_field_candidates: dict[str, list[MatchCandidate]] = {}
+
+    def _resolve_global_fallback(self) -> bool:
+        """Resolve effective global fallback setting, respecting instance/module overrides."""
+        if self.enable_global_fallback is not None:
+            return self.enable_global_fallback
+        return ENABLE_GLOBAL_FALLBACK
 
     def collect_candidates(self, extraction: ExtractionInput) -> list[MatchCandidate]:
         """Collect all matching candidates across standard tiers and recovery engine."""
@@ -140,17 +157,21 @@ class EvidenceResolver:
                     if not any(rc.page == c.page and rc.bbox.iou(c.bbox) >= 0.70 for c in candidates):
                         candidates.append(rc)
 
-            # Global recovery fallback for small documents if still zero candidates
-            if not candidates and page_hint is not None and len(self.index.pages) <= 10:
-                candidates.extend(self.recovery_engine.recover(
-                    value=value,
-                    page_hint=None,
-                    field_name=field,
-                    field_context=context,
-                    evidence_text=evidence_text,
-                ))
 
-        return candidates
+        # Enforce page priority ranking (page_hint > page_hint +/- 1 > global) and candidate cap
+        if candidates and page_hint is not None and len(candidates) > 1:
+            def _candidate_priority(c: MatchCandidate) -> tuple[int, float]:
+                if c.page == page_hint:
+                    prio = 0
+                elif abs(c.page - page_hint) == 1:
+                    prio = 1
+                else:
+                    prio = 2
+                return (prio, -c.raw_similarity)
+
+            candidates.sort(key=_candidate_priority)
+
+        return candidates[:200]
 
     def resolve(self, extraction: ExtractionInput) -> ResolutionResult:
         """Resolve physical evidence for an extracted field."""
