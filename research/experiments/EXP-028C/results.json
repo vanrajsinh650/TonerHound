@@ -1,0 +1,110 @@
+{
+  "timestamp": "2026-09-30T09:00:00+00:00",
+  "experiment": "EXP-028C",
+  "description": "Fast Safe Production Benchmark: JointRecordResolver",
+  "decision_gate": {
+    "status": "STOP_TRIGGERED",
+    "verdict": "Obvious regression on table documents under Phase 1 smoke benchmark. Per benchmark protocol, execution stopped at Decision Gate to diagnose root cause rather than proceeding to full 370-document execution.",
+    "smoke_macro_word_f1": 0.5907,
+    "b1_smoke_macro_word_f1": 0.6284,
+    "delta_smoke_word_f1": -0.0377,
+    "suite_macro_word_f1_with_loomis": 0.5820,
+    "b1_suite_macro_word_f1_with_loomis": 0.6176,
+    "delta_suite_word_f1_with_loomis": -0.0356
+  },
+  "smoke_summary": {
+    "word_f1": 0.5907,
+    "word_precision": 0.6164,
+    "word_recall": 0.5732,
+    "page_f1": 0.7167,
+    "false_grounding_rate": 0.1618,
+    "abstention_rate": 0.0,
+    "total_documents": 6
+  },
+  "per_document_metrics": {
+    "short/W14-Atascosa SWD Well No. 4 - W-14 (Updated 01.22.2025)": {
+      "word_f1": 0.5109,
+      "word_precision": 0.6481,
+      "word_recall": 0.4217,
+      "page_f1": 0.6109,
+      "false_grounding_rate": 0.2289,
+      "abstention_rate": 0.0,
+      "b1_word_f1": 0.5401,
+      "delta": -0.0292
+    },
+    "short/bianco-2024": {
+      "word_f1": 0.2943,
+      "word_precision": 0.3056,
+      "word_recall": 0.2839,
+      "page_f1": 0.6957,
+      "false_grounding_rate": 0.3871,
+      "abstention_rate": 0.0,
+      "b1_word_f1": 0.3144,
+      "delta": -0.0201
+    },
+    "short/real_wyo_Goshen_2024": {
+      "word_f1": 0.9949,
+      "word_precision": 1.0,
+      "word_recall": 0.9898,
+      "page_f1": 0.9965,
+      "false_grounding_rate": 0.1017,
+      "abstention_rate": 0.0,
+      "b1_word_f1": 0.9949,
+      "delta": 0.0
+    },
+    "medium/real_pueblo_oct_2025": {
+      "word_f1": 0.9939,
+      "word_precision": 0.9941,
+      "word_recall": 0.9936,
+      "page_f1": 0.9984,
+      "false_grounding_rate": 0.0043,
+      "abstention_rate": 0.0,
+      "b1_word_f1": 0.9960,
+      "delta": -0.0021
+    },
+    "medium/veralto_earnings_deck_q4fy25": {
+      "word_f1": 0.0,
+      "word_precision": 0.0,
+      "word_recall": 0.0,
+      "page_f1": 0.0,
+      "false_grounding_rate": 0.0,
+      "abstention_rate": 0.0,
+      "b1_word_f1": 0.0,
+      "delta": 0.0
+    },
+    "long/real_sm0801_eco_full": {
+      "word_f1": 0.7502,
+      "word_precision": 0.7503,
+      "word_recall": 0.7500,
+      "page_f1": 0.9987,
+      "false_grounding_rate": 0.2486,
+      "abstention_rate": 0.0,
+      "b1_word_f1": 0.9248,
+      "delta": -0.1746
+    },
+    "medium/sec_13f_0031_loomis_sayles": {
+      "word_f1": 0.6977,
+      "word_precision": 0.6988,
+      "word_recall": 0.6967,
+      "page_f1": 0.9944,
+      "false_grounding_rate": 0.2976,
+      "abstention_rate": 0.0,
+      "b1_word_f1": 0.8600,
+      "delta": -0.1623
+    }
+  },
+  "root_causes": {
+    "anchor_collapse": "identify_record_anchor picks cands[0] for repeated codes on the same page, causing distinct consecutive table rows to collapse onto row 1's vertical corridor",
+    "column_corridor_misalignment": "Hardcoded STANDARD_TABLE_COLUMNS corridors (e.g. [0.82, 0.92] for holdings voting_authority.none) penalize legitimate candidates at x=0.944, causing false selection",
+    "missing_character_span_reconstruction": "JointRecordResolver emits raw token bboxes without reconstruct_safe_character_span, failing the 0.50 IoU threshold for sub-string values",
+    "absence_of_global_table_monotonicity": "Independent per-record resolution lacks the dynamic programming monotonic row ordering (y0 < y1 < y2) previously maintained by ExtractBenchAdapter"
+  },
+  "comparison_baselines": {
+    "exp026_production": 0.5597888260156839,
+    "exp028b0_oracle": 0.7512429162441171,
+    "exp028b1_production": 0.5604639657386028,
+    "exp028b2_controlled_suite": 0.5823,
+    "exp028b2_controlled_loomis": 0.6978,
+    "exp028c_smoke": 0.5907
+  }
+}

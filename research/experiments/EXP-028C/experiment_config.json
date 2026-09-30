@@ -1,0 +1,52 @@
+{
+  "experiment_id": "EXP-028C",
+  "title": "Fast Safe Production Benchmark: JointRecordResolver",
+  "date": "2026-09-30",
+  "goal": "Measure the real production impact of EXP-028B2 JointRecordResolver on the 370-document ExtractBench benchmark",
+  "primary_metric": "Word Grounding F1 (IoU >= 0.50)",
+  "harness": "Official ExtractBench Evaluator (ExtractEvaluator)",
+  "concurrency": {
+    "max_workers": 2,
+    "resource_safety": "Explicit GC, persistent index cache reuse, zero swap strategy"
+  },
+  "known_baselines": {
+    "EXP-026_production": 0.5598,
+    "EXP-028B0_true_text_oracle": 0.7512,
+    "EXP-028B1_production": 0.5605,
+    "EXP-028B2_controlled_mode_e_suite": 0.5823,
+    "EXP-028B2_loomis_sayles": 0.6978
+  },
+  "phase1_smoke_benchmark": {
+    "document_count": 6,
+    "documents": [
+      "short/W14-Atascosa SWD Well No. 4 - W-14 (Updated 01.22.2025)",
+      "short/bianco-2024",
+      "short/real_wyo_Goshen_2024",
+      "medium/real_pueblo_oct_2025",
+      "medium/veralto_earnings_deck_q4fy25",
+      "long/real_sm0801_eco_full"
+    ],
+    "controlled_doc_case": "medium/sec_13f_0031_loomis_sayles"
+  },
+  "decision_gate": {
+    "rule": "If there is an obvious regression, STOP and diagnose only the regression. If healthy, immediately continue to the full benchmark.",
+    "verdict": "TRIGGERED_STOP",
+    "regression_detected": true,
+    "smoke_f1_delta": -0.0377,
+    "largest_document_regressions": [
+      {
+        "doc_id": "long/real_sm0801_eco_full",
+        "b1_f1": 0.9248,
+        "c_f1": 0.7502,
+        "delta": -0.1746
+      },
+      {
+        "doc_id": "medium/sec_13f_0031_loomis_sayles",
+        "b1_f1": 0.8600,
+        "c_f1": 0.6977,
+        "delta": -0.1623
+      }
+    ]
+  },
+  "status": "STOPPED_AT_DECISION_GATE"
+}
