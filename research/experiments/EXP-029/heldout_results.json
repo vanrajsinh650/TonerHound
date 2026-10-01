@@ -1,0 +1,365 @@
+{
+  "experiment": "EXP-029",
+  "timestamp": "2026-10-01T05:28:49Z",
+  "held_out_cohort": "Cohort B (32 documents)",
+  "documents_evaluated": 32,
+  "total_fields": 71439,
+  "selected_policy": {
+    "name": "Conservatism Margin Threshold tau = 0.02",
+    "tau": 0.02,
+    "criterion": "Switch only if P(challenger) - P(rank_1) > 0.02"
+  },
+  "official_extractbench_metrics": {
+    "baseline": {
+      "word_f1": 59.35881706189192,
+      "word_precision": 63.77741823704206,
+      "word_recall": 56.51637958928637,
+      "page_f1": 85.44078116123113,
+      "false_grounding": 0.0
+    },
+    "reranker": {
+      "word_f1": 57.94007279550717,
+      "word_precision": 62.29487116637655,
+      "word_recall": 55.145392131313756,
+      "page_f1": 85.11395180327315,
+      "false_grounding": 0.0
+    },
+    "delta_pp": {
+      "word_grounding_f1": -1.4187,
+      "word_precision": -1.4825,
+      "word_recall": -1.371,
+      "page_f1": -0.3268,
+      "false_grounding": 0.0
+    }
+  },
+  "candidate_level_metrics": {
+    "roc_auc": 0.794,
+    "pr_auc": 0.3761,
+    "brier_score": 0.0925
+  },
+  "selection_accuracy_metrics": {
+    "tau": 0.02,
+    "hit_count": 16990,
+    "hit_rate": 23.78,
+    "gain_pp": -1.22,
+    "total_flips": 13077,
+    "beneficial_flips": 2206,
+    "harmful_flips": 3077,
+    "neutral_flips": 7794,
+    "net_flips": -871,
+    "subgroups": {
+      "all_multi_candidate": {
+        "total": 71439,
+        "baseline_hit_rate": 25.0,
+        "rerank_hit_rate": 23.78,
+        "gain_pp": -1.22,
+        "beneficial_flips": 2206,
+        "harmful_flips": 3077
+      },
+      "low_margin": {
+        "total": 65339,
+        "baseline_hit_rate": 23.12,
+        "rerank_hit_rate": 21.83,
+        "gain_pp": -1.29,
+        "beneficial_flips": 1868,
+        "harmful_flips": 2710
+      },
+      "ocr_fuzzy": {
+        "total": 3260,
+        "baseline_hit_rate": 23.96,
+        "rerank_hit_rate": 23.77,
+        "gain_pp": -0.18,
+        "beneficial_flips": 37,
+        "harmful_flips": 43
+      },
+      "table_fields": {
+        "total": 70804,
+        "baseline_hit_rate": 25.06,
+        "rerank_hit_rate": 23.83,
+        "gain_pp": -1.22,
+        "beneficial_flips": 2187,
+        "harmful_flips": 3054
+      },
+      "non_table_fields": {
+        "total": 635,
+        "baseline_hit_rate": 18.58,
+        "rerank_hit_rate": 17.95,
+        "gain_pp": -0.63,
+        "beneficial_flips": 19,
+        "harmful_flips": 23
+      }
+    }
+  },
+  "all_policy_evaluations": {
+    "tau_0.00": {
+      "tau": 0.0,
+      "hit_count": 15887,
+      "hit_rate": 22.24,
+      "gain_pp": -2.76,
+      "total_flips": 29608,
+      "beneficial_flips": 3659,
+      "harmful_flips": 5633,
+      "neutral_flips": 20316,
+      "net_flips": -1974,
+      "subgroups": {
+        "all_multi_candidate": {
+          "total": 71439,
+          "baseline_hit_rate": 25.0,
+          "rerank_hit_rate": 22.24,
+          "gain_pp": -2.76,
+          "beneficial_flips": 3659,
+          "harmful_flips": 5633
+        },
+        "low_margin": {
+          "total": 65339,
+          "baseline_hit_rate": 23.12,
+          "rerank_hit_rate": 20.14,
+          "gain_pp": -2.98,
+          "beneficial_flips": 3321,
+          "harmful_flips": 5266
+        },
+        "ocr_fuzzy": {
+          "total": 3260,
+          "baseline_hit_rate": 23.96,
+          "rerank_hit_rate": 23.83,
+          "gain_pp": -0.12,
+          "beneficial_flips": 47,
+          "harmful_flips": 51
+        },
+        "table_fields": {
+          "total": 70804,
+          "baseline_hit_rate": 25.06,
+          "rerank_hit_rate": 22.29,
+          "gain_pp": -2.77,
+          "beneficial_flips": 3631,
+          "harmful_flips": 5595
+        },
+        "non_table_fields": {
+          "total": 635,
+          "baseline_hit_rate": 18.58,
+          "rerank_hit_rate": 17.01,
+          "gain_pp": -1.57,
+          "beneficial_flips": 28,
+          "harmful_flips": 38
+        }
+      }
+    },
+    "tau_0.02": {
+      "tau": 0.02,
+      "hit_count": 16990,
+      "hit_rate": 23.78,
+      "gain_pp": -1.22,
+      "total_flips": 13077,
+      "beneficial_flips": 2206,
+      "harmful_flips": 3077,
+      "neutral_flips": 7794,
+      "net_flips": -871,
+      "subgroups": {
+        "all_multi_candidate": {
+          "total": 71439,
+          "baseline_hit_rate": 25.0,
+          "rerank_hit_rate": 23.78,
+          "gain_pp": -1.22,
+          "beneficial_flips": 2206,
+          "harmful_flips": 3077
+        },
+        "low_margin": {
+          "total": 65339,
+          "baseline_hit_rate": 23.12,
+          "rerank_hit_rate": 21.83,
+          "gain_pp": -1.29,
+          "beneficial_flips": 1868,
+          "harmful_flips": 2710
+        },
+        "ocr_fuzzy": {
+          "total": 3260,
+          "baseline_hit_rate": 23.96,
+          "rerank_hit_rate": 23.77,
+          "gain_pp": -0.18,
+          "beneficial_flips": 37,
+          "harmful_flips": 43
+        },
+        "table_fields": {
+          "total": 70804,
+          "baseline_hit_rate": 25.06,
+          "rerank_hit_rate": 23.83,
+          "gain_pp": -1.22,
+          "beneficial_flips": 2187,
+          "harmful_flips": 3054
+        },
+        "non_table_fields": {
+          "total": 635,
+          "baseline_hit_rate": 18.58,
+          "rerank_hit_rate": 17.95,
+          "gain_pp": -0.63,
+          "beneficial_flips": 19,
+          "harmful_flips": 23
+        }
+      }
+    },
+    "tau_0.05": {
+      "tau": 0.05,
+      "hit_count": 17764,
+      "hit_rate": 24.87,
+      "gain_pp": -0.14,
+      "total_flips": 5541,
+      "beneficial_flips": 1065,
+      "harmful_flips": 1162,
+      "neutral_flips": 3314,
+      "net_flips": -97,
+      "subgroups": {
+        "all_multi_candidate": {
+          "total": 71439,
+          "baseline_hit_rate": 25.0,
+          "rerank_hit_rate": 24.87,
+          "gain_pp": -0.14,
+          "beneficial_flips": 1065,
+          "harmful_flips": 1162
+        },
+        "low_margin": {
+          "total": 65339,
+          "baseline_hit_rate": 23.12,
+          "rerank_hit_rate": 23.01,
+          "gain_pp": -0.1,
+          "beneficial_flips": 727,
+          "harmful_flips": 795
+        },
+        "ocr_fuzzy": {
+          "total": 3260,
+          "baseline_hit_rate": 23.96,
+          "rerank_hit_rate": 23.62,
+          "gain_pp": -0.34,
+          "beneficial_flips": 23,
+          "harmful_flips": 34
+        },
+        "table_fields": {
+          "total": 70804,
+          "baseline_hit_rate": 25.06,
+          "rerank_hit_rate": 24.92,
+          "gain_pp": -0.14,
+          "beneficial_flips": 1051,
+          "harmful_flips": 1148
+        },
+        "non_table_fields": {
+          "total": 635,
+          "baseline_hit_rate": 18.58,
+          "rerank_hit_rate": 18.58,
+          "gain_pp": 0.0,
+          "beneficial_flips": 14,
+          "harmful_flips": 14
+        }
+      }
+    },
+    "tau_0.08": {
+      "tau": 0.08,
+      "hit_count": 17844,
+      "hit_rate": 24.98,
+      "gain_pp": -0.02,
+      "total_flips": 3350,
+      "beneficial_flips": 661,
+      "harmful_flips": 678,
+      "neutral_flips": 2011,
+      "net_flips": -17,
+      "subgroups": {
+        "all_multi_candidate": {
+          "total": 71439,
+          "baseline_hit_rate": 25.0,
+          "rerank_hit_rate": 24.98,
+          "gain_pp": -0.02,
+          "beneficial_flips": 661,
+          "harmful_flips": 678
+        },
+        "low_margin": {
+          "total": 65339,
+          "baseline_hit_rate": 23.12,
+          "rerank_hit_rate": 23.14,
+          "gain_pp": 0.02,
+          "beneficial_flips": 323,
+          "harmful_flips": 311
+        },
+        "ocr_fuzzy": {
+          "total": 3260,
+          "baseline_hit_rate": 23.96,
+          "rerank_hit_rate": 23.5,
+          "gain_pp": -0.46,
+          "beneficial_flips": 16,
+          "harmful_flips": 31
+        },
+        "table_fields": {
+          "total": 70804,
+          "baseline_hit_rate": 25.06,
+          "rerank_hit_rate": 25.04,
+          "gain_pp": -0.02,
+          "beneficial_flips": 650,
+          "harmful_flips": 666
+        },
+        "non_table_fields": {
+          "total": 635,
+          "baseline_hit_rate": 18.58,
+          "rerank_hit_rate": 18.43,
+          "gain_pp": -0.16,
+          "beneficial_flips": 11,
+          "harmful_flips": 12
+        }
+      }
+    },
+    "tau_0.10": {
+      "tau": 0.1,
+      "hit_count": 17980,
+      "hit_rate": 25.17,
+      "gain_pp": 0.17,
+      "total_flips": 2383,
+      "beneficial_flips": 518,
+      "harmful_flips": 399,
+      "neutral_flips": 1466,
+      "net_flips": 119,
+      "subgroups": {
+        "all_multi_candidate": {
+          "total": 71439,
+          "baseline_hit_rate": 25.0,
+          "rerank_hit_rate": 25.17,
+          "gain_pp": 0.17,
+          "beneficial_flips": 518,
+          "harmful_flips": 399
+        },
+        "low_margin": {
+          "total": 65339,
+          "baseline_hit_rate": 23.12,
+          "rerank_hit_rate": 23.34,
+          "gain_pp": 0.23,
+          "beneficial_flips": 180,
+          "harmful_flips": 32
+        },
+        "ocr_fuzzy": {
+          "total": 3260,
+          "baseline_hit_rate": 23.96,
+          "rerank_hit_rate": 23.5,
+          "gain_pp": -0.46,
+          "beneficial_flips": 15,
+          "harmful_flips": 30
+        },
+        "table_fields": {
+          "total": 70804,
+          "baseline_hit_rate": 25.06,
+          "rerank_hit_rate": 25.23,
+          "gain_pp": 0.17,
+          "beneficial_flips": 507,
+          "harmful_flips": 387
+        },
+        "non_table_fields": {
+          "total": 635,
+          "baseline_hit_rate": 18.58,
+          "rerank_hit_rate": 18.43,
+          "gain_pp": -0.16,
+          "beneficial_flips": 11,
+          "harmful_flips": 12
+        }
+      }
+    }
+  },
+  "decision_gate": {
+    "heldout_word_f1_gain_pp": -1.4187,
+    "status": "REGRESSION",
+    "recommendation": "STOP production integration. Reranker regressed baseline performance."
+  }
+}
