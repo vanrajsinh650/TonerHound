@@ -1,0 +1,24 @@
+{
+  "Constraint_A_Row_Coherence": {
+    "isolated_hit1_gain_pp": 11.47,
+    "status": "Validated core mechanism of joint candidate ranking"
+  },
+  "Constraint_B_Monotonicity": {
+    "isolated_hit1_gain_pp": -1.14,
+    "status": "Regressive when hard-enforced; requires soft penalty"
+  },
+  "Constraint_C_Column_Rail_Consistency": {
+    "isolated_hit1_gain_pp": 1.31,
+    "status": "Helps resolve identical numbers across columns"
+  },
+  "Constraint_D_Sibling_Proximity": {
+    "isolated_hit1_gain_pp": 0.85,
+    "status": "Reinforces intra-row colinearity"
+  },
+  "Constraint_F_Conservatism_Abstention": {
+    "raw_word_f1": 52.19,
+    "conservative_word_f1": 58.79,
+    "gain_from_conservatism_pp": 6.6,
+    "status": "Vital safeguard preventing destructive row drift on ambiguous tables"
+  }
+}

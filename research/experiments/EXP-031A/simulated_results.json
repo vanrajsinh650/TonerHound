@@ -1,0 +1,50 @@
+{
+  "experiment": "EXP-031A",
+  "timestamp": "2026-10-01T08:10:50Z",
+  "description": "Simulated Native Integration of Global Structured Assignment",
+  "held_out_cohort": "Cohort B (32 documents)",
+  "selection_metrics": {
+    "baseline_hit_count": 17861,
+    "baseline_hit_rate": 25.0,
+    "exp030_hit_count": 23380,
+    "exp030_hit_rate": 32.73,
+    "hit1_gain_pp": 7.73,
+    "beneficial_flips": 6203,
+    "harmful_flips": 684,
+    "net_flips": 5519
+  },
+  "official_extractbench_metrics": {
+    "baseline": {
+      "word_f1": 59.3588,
+      "word_precision": 63.7774,
+      "word_recall": 56.5164,
+      "page_f1": 85.4408,
+      "false_grounding": 0.0,
+      "abstention_rate": 0.0
+    },
+    "exp030_raw_posthoc": {
+      "word_f1": 52.3384,
+      "word_precision": 56.4072,
+      "word_recall": 49.8134,
+      "page_f1": 85.4924
+    },
+    "exp031a_simulated_native": {
+      "word_f1": 52.18773554983527,
+      "word_precision": 56.2579230114066,
+      "word_recall": 49.66161832412743,
+      "page_f1": 85.49240695892819,
+      "false_grounding": 0.0,
+      "abstention_rate": 0.0
+    },
+    "exp031a_conservative_simulated": {
+      "word_f1": 58.7918,
+      "delta_vs_baseline_pp": -0.567
+    }
+  },
+  "decision_gate": {
+    "status": "GATE_D_REGRESSION",
+    "decision": "STOP STRUCTURED ASSIGNMENT",
+    "best_word_f1": 58.79,
+    "delta_vs_baseline_pp": -0.57
+  }
+}
