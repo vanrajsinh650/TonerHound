@@ -1,0 +1,70 @@
+{
+  "experiment": "EXP-032",
+  "description": "True Record-Level Oracle under unmodified official ExtractBench evaluator",
+  "evaluator": "extract_bench.evaluation.evaluators.extract.ExtractEvaluator",
+  "timestamp": "2026-10-01 09:22:39 UTC",
+  "baseline": {
+    "cohort_b": {
+      "word_f1": 59.35881706189192,
+      "word_precision": 63.77741823704207,
+      "word_recall": 56.51637958928637,
+      "page_f1": 85.44078116123113,
+      "value_f1": 100.0,
+      "grounded_docs_count": 32,
+      "total_evaluated": 32
+    },
+    "full_370": {
+      "word_f1": 56.047665608944754,
+      "word_precision": 61.72753570728561,
+      "word_recall": 52.56864566866526,
+      "page_f1": 81.66390206483347,
+      "value_f1": 100.0,
+      "grounded_docs_count": 236,
+      "total_evaluated": 370
+    }
+  },
+  "mode_a_selection_oracle_baseline_emission": {
+    "cohort_b": {
+      "word_f1": 66.22175913512255,
+      "word_precision": 71.0431902915377,
+      "word_recall": 63.082432609466885,
+      "page_f1": 87.76795288867211,
+      "value_f1": 100.0,
+      "grounded_docs_count": 32,
+      "total_evaluated": 32
+    },
+    "full_370": {
+      "word_f1": 60.95910139511154,
+      "word_precision": 67.04373591782465,
+      "word_recall": 57.17615555477909,
+      "page_f1": 82.43923705307249,
+      "value_f1": 100.0,
+      "grounded_docs_count": 236,
+      "total_evaluated": 370
+    },
+    "selection_headroom_cohort_b_pp": 6.86,
+    "selection_headroom_full_370_pp": 4.91
+  },
+  "mode_b_selection_oracle_optimal_abstention": {
+    "cohort_b": {
+      "word_f1": 67.78610410327146,
+      "word_precision": 99.79973147554864,
+      "word_recall": 56.88015020313779,
+      "page_f1": 61.359235310535254,
+      "value_f1": 100.0,
+      "grounded_docs_count": 32,
+      "total_evaluated": 32
+    },
+    "full_370": {
+      "word_f1": 62.563871695271146,
+      "word_precision": 99.0757463698394,
+      "word_recall": 50.32759338395966,
+      "page_f1": 46.35073508264272,
+      "value_f1": 100.0,
+      "grounded_docs_count": 236,
+      "total_evaluated": 370
+    },
+    "headroom_cohort_b_pp": 8.43,
+    "headroom_full_370_pp": 6.52
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "total_table_fields": 436680,
+  "repeated_table_value_fields": 305692,
+  "repeated_table_value_pct": 70.0,
+  "distinct_repeated_value_groups": 33897,
+  "mean_repeated_instances_per_group": 9.02,
+  "max_repeated_instances_in_single_table": 7249,
+  "collision_mechanism_summary": "In tables with repeated values (e.g. state 'CA', currency '0.00', status 'Active'), all rows produce identical text-level candidate matches. Hungarian alignment strictly pairs predicted rows to gold rows by value equality (identity assignment). Independent point-wise or greedy candidate selection picks whichever candidate has higher text/local score, causing multiple predicted rows to collide onto the same gold bbox, yielding 1 True Positive and N-1 False Positives."
+}

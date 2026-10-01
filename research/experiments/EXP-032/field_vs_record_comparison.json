@@ -1,0 +1,10 @@
+{
+  "production_baseline_f1": 56.05,
+  "field_level_oracle_a_f1": 60.96,
+  "field_level_oracle_b_true_text_f1": 75.12,
+  "record_level_official_oracle_mode_a_f1": 60.96,
+  "record_level_official_oracle_mode_b_f1": 62.56,
+  "divergence_mode_a_vs_field_ceiling_a_pp": -0.0,
+  "divergence_mode_b_vs_field_ceiling_a_pp": 1.6,
+  "analysis": "Under the unmodified official ExtractBench evaluator, Hungarian row alignment is fixed to identity by value matching. Mode A (pure candidate selection under current emission behavior) achieves exactly 60.96% Word Grounding F1, providing a true selection headroom of +4.91 pp above production (56.05%). Mode B (with optimal abstention on ungroundable fields) eliminates ungradeable precision penalties, demonstrating the ceiling of selection + precision filtering."
+}
