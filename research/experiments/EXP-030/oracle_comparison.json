@@ -1,0 +1,39 @@
+{
+  "experiment": "EXP-030",
+  "timestamp": "2026-10-01T05:52:43Z",
+  "description": "Oracle Table Structure Theoretical Reachability Benchmark",
+  "cohort_a_development": {
+    "cohort": "Cohort A (Development)",
+    "total_records": 23855,
+    "total_multi_cand_fields": 88533,
+    "baseline_hit_count": 17744,
+    "baseline_hit_rate": 20.04,
+    "ceiling_a_recall_count": 63182,
+    "ceiling_a_recall_rate": 71.37,
+    "selection_gap_pp": 51.32,
+    "oracle_hit_count": 40817,
+    "oracle_hit_rate": 46.1,
+    "oracle_gain_pp": 26.06,
+    "selection_gap_closed_pct": 50.78,
+    "beneficial_flips": 23287,
+    "harmful_flips": 214,
+    "net_flips": 23073
+  },
+  "cohort_b_held_out": {
+    "cohort": "Cohort B (Held-Out)",
+    "total_records": 14944,
+    "total_multi_cand_fields": 70804,
+    "baseline_hit_count": 17743,
+    "baseline_hit_rate": 25.06,
+    "ceiling_a_recall_count": 53950,
+    "ceiling_a_recall_rate": 76.2,
+    "selection_gap_pp": 51.14,
+    "oracle_hit_count": 35248,
+    "oracle_hit_rate": 49.78,
+    "oracle_gain_pp": 24.72,
+    "selection_gap_closed_pct": 48.35,
+    "beneficial_flips": 19680,
+    "harmful_flips": 2175,
+    "net_flips": 17505
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "experiment": "EXP-030",
+  "timestamp": "2026-10-01T05:58:07Z",
+  "description": "Global Structured Assignment for Table-Level Evidence Grounding",
+  "held_out_cohort": "Cohort B (32 documents)",
+  "total_multi_candidate_fields": 71439,
+  "selection_metrics": {
+    "baseline_hit_count": 17861,
+    "baseline_hit_rate": 25.0,
+    "exp030_hit_count": 23380,
+    "exp030_hit_rate": 32.73,
+    "hit1_gain_pp": 7.73,
+    "candidate_pool_recall": 75.83,
+    "selection_gap_pp": 50.82,
+    "gap_reduction_pct": 15.2,
+    "beneficial_flips": 6203,
+    "harmful_flips": 684,
+    "net_flips": 5519
+  },
+  "official_extractbench_metrics": {
+    "baseline": {
+      "word_f1": 59.3588,
+      "word_precision": 63.7774,
+      "word_recall": 56.5164,
+      "page_f1": 85.4408,
+      "false_grounding": 0.0,
+      "abstention_rate": 0.0
+    },
+    "exp030": {
+      "word_f1": 52.33841866012289,
+      "word_precision": 56.40718778676378,
+      "word_recall": 49.81341766984552,
+      "page_f1": 85.49240695892819,
+      "false_grounding": 0.0,
+      "abstention_rate": 0.0
+    },
+    "delta_pp": {
+      "word_f1": -7.02,
+      "word_precision": -7.37,
+      "word_recall": -6.7,
+      "page_f1": 0.05
+    }
+  },
+  "decision_gate": {
+    "status": "GATE_C_STOP",
+    "message": "Gate C Triggered: Hit@1 gain < 2pp or Word F1 regressed. STOP.",
+    "hit1_gain_pp": 7.73,
+    "word_f1_delta_pp": -7.02
+  }
+}
