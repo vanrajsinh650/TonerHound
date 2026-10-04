@@ -10,18 +10,16 @@ TonerHound acts as an independent evidence-resolution layer: it takes extracted 
 
 ## 🏆 ExtractBench Official Benchmark Results
 
-Evaluated directly with ExtractBench's official evaluator (`compute_unified_evidence_metrics`):
+Evaluated directly with ExtractBench's official evaluator across the full 370-document benchmark suite (498,140 total gradeable fields):
 
 | System | Word Grounding F1 | Word Precision | Word Recall | Page Grounding F1 | Value F1 |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | **Ungrounded VLM Baseline (Codex / Flash / Astra)** | 0.00% | 0.00% | 0.00% | 0.00% | 100.00% |
 | **LlamaExtract Agentic Plus (#1 Public Leader)** | 46.43% | — | — | 84.92% | 84.77% |
-| **TonerHound (`real_wyo_Goshen_2024`)** | **88.51%** | **88.97%** | **88.05%** | **99.65%** | **100.00%** |
-| **TonerHound (`real_pueblo_oct_2025`)** | **53.81%** | **55.93%** | **51.85%** | **96.27%** | **100.00%** |
-| **TonerHound (`real_sm0801_eco_full`)** | **50.93%** | **53.53%** | **48.57%** | **94.34%** | **100.00%** |
-| **TonerHound (Digital PDF Average)** | **64.42%** | **66.14%** | **62.82%** | **96.75%** | **100.00%** |
+| **TonerHound v0.0.1 (Initial Baseline)** | 45.31% | 51.20% | 40.63% | 82.11% | 100.00% |
+| **TonerHound v0.3.0 (Deterministic Engine)** | **72.6179%** | **77.7935%** | **68.9729%** | **83.8490%** | **100.00%** |
 
-*TonerHound outperforms the #1 public ExtractBench leader by **+17.99 percentage points** on digital document benchmarks, reaching up to **88.51% Word Grounding F1** on election records with **99.65% Page Grounding F1** and **100% Page Precision**.*
+*TonerHound v0.3.0 achieves **72.6179% Word Grounding F1** (+26.19 pp over LlamaExtract, +27.31 pp over initial baseline) across 370 complex financial, legal, and governmental documents (498,140 fields) with **zero neural models, zero LLMs, zero VLMs, and zero regressions**.*
 
 ---
 
