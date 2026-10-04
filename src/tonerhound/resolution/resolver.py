@@ -18,13 +18,23 @@ from tonerhound.models.types import (
     ProvenanceStatus,
     ResolutionResult,
 )
-from tonerhound.normalization.normalizers import normalize_unicode_and_case
+from tonerhound.normalization.normalizers import (
+    normalize_unicode_and_case,
+    parse_numeric_value,
+)
 from tonerhound.resolution.reranker import StructuralReranker
 from tonerhound.resolution.verifier import CandidateVerifier
 
 
 # Feature flag for EXP-028F Phase 1.2: Token-gated global fallback for long documents
 ENABLE_GLOBAL_FALLBACK: bool = True
+
+# Feature flags for EXP-033: Candidate Generation Reconciliation & Productionization
+ENABLE_EXP033_CANDIDATE_EXPANSION: bool = False
+ENABLE_TOKEN_STRIP_RECOVERY: bool = False
+ENABLE_MULTI_LINE_RECOVERY: bool = False
+ENABLE_GLOBAL_SEARCH_RELAXATION: bool = False
+ENABLE_BOOLEAN_EXPANSION: bool = False
 
 
 class EvidenceResolver:
@@ -38,6 +48,11 @@ class EvidenceResolver:
         reranker: StructuralReranker | None = None,
         enable_candidate_recovery: bool = True,
         enable_global_fallback: bool | None = None,
+        enable_exp033_candidate_expansion: bool | None = None,
+        enable_token_strip_recovery: bool | None = None,
+        enable_multi_line_recovery: bool | None = None,
+        enable_global_search_relaxation: bool | None = None,
+        enable_boolean_expansion: bool | None = None,
     ) -> None:
         self.index = index
         self.matcher = EvidenceMatcher(index)
@@ -61,6 +76,11 @@ class EvidenceResolver:
         )
         self.enable_candidate_recovery = enable_candidate_recovery
         self.enable_global_fallback = enable_global_fallback
+        self.enable_exp033_candidate_expansion = enable_exp033_candidate_expansion
+        self.enable_token_strip_recovery = enable_token_strip_recovery
+        self.enable_multi_line_recovery = enable_multi_line_recovery
+        self.enable_global_search_relaxation = enable_global_search_relaxation
+        self.enable_boolean_expansion = enable_boolean_expansion
         self.recovery_engine = (
             CandidateRecoveryEngine(
                 index,
@@ -76,6 +96,14 @@ class EvidenceResolver:
         if self.enable_global_fallback is not None:
             return self.enable_global_fallback
         return ENABLE_GLOBAL_FALLBACK
+
+    def _is_flag_enabled(self, flag_attr: bool | None, module_flag: bool) -> bool:
+        """Resolve effective candidate generation flag."""
+        if flag_attr is not None:
+            return flag_attr
+        if self.enable_exp033_candidate_expansion is True or ENABLE_EXP033_CANDIDATE_EXPANSION:
+            return True
+        return module_flag
 
     def collect_candidates(self, extraction: ExtractionInput) -> list[MatchCandidate]:
         """Collect all matching candidates across standard tiers and recovery engine."""
@@ -96,11 +124,18 @@ class EvidenceResolver:
 
         # Tier 1b: If value is numeric, prioritize normalized numeric matching over raw float str()
         is_num = isinstance(value, (int, float)) and not isinstance(value, bool)
-        is_bool = isinstance(value, bool) or (
-            isinstance(value, str)
-            and value.strip().lower() in ("true", "false", "yes", "no")
-            and any(k in field.lower() for k in ("_box", "checkbox", "is_", "has_", "flag", "_yes", "_no", "final", "amended", "general", "domestic", "contributed"))
-        )
+        enable_bool = self._is_flag_enabled(self.enable_boolean_expansion, ENABLE_BOOLEAN_EXPANSION)
+        if enable_bool:
+            is_bool = isinstance(value, bool) or (
+                isinstance(value, str)
+                and value.strip().lower() in ("true", "false", "yes", "no")
+            )
+        else:
+            is_bool = isinstance(value, bool) or (
+                isinstance(value, str)
+                and value.strip().lower() in ("true", "false", "yes", "no")
+                and any(k in field.lower() for k in ("_box", "checkbox", "is_", "has_", "flag", "_yes", "_no", "final", "amended", "general", "domestic", "contributed"))
+            )
 
         # Tier 1-bool: Checkbox candidate generation
         if not candidates and is_bool:
@@ -138,6 +173,30 @@ class EvidenceResolver:
                 candidates.extend(self.matcher.find_exact_candidates(str(value), page_hint=None))
             if not candidates and isinstance(value, str) and not is_bool:
                 candidates.extend(self.matcher.find_normalized_date_candidates(value, page_hint=None))
+            if not candidates and isinstance(value, str) and not is_bool:
+                candidates.extend(self.matcher.find_normalized_numeric_candidates(value, page_hint=None))
+
+        # EXP-033 Fix 2: Punctuation and token strip fallback
+        enable_token_strip = self._is_flag_enabled(self.enable_token_strip_recovery, ENABLE_TOKEN_STRIP_RECOVERY)
+        if not candidates and enable_token_strip and isinstance(value, str) and not is_bool:
+            stripped = value.strip(" -.,;:_()[]{}/'\"")
+            if stripped and stripped != value:
+                candidates.extend(self.matcher.find_exact_candidates(stripped, page_hint=page_hint))
+                if not candidates:
+                    candidates.extend(self.matcher.find_normalized_numeric_candidates(stripped, page_hint=page_hint))
+                if not candidates and page_hint is not None:
+                    candidates.extend(self.matcher.find_exact_candidates(stripped, page_hint=None))
+                    if not candidates:
+                        candidates.extend(self.matcher.find_normalized_numeric_candidates(stripped, page_hint=None))
+
+        # EXP-033 Fix 4: Multi-line and newline span recovery
+        enable_multiline = self._is_flag_enabled(self.enable_multi_line_recovery, ENABLE_MULTI_LINE_RECOVERY)
+        if not candidates and enable_multiline and isinstance(value, str) and "\n" in value:
+            clean_ml = " ".join(value.split())
+            if clean_ml and clean_ml != value:
+                candidates.extend(self.matcher.find_exact_candidates(clean_ml, page_hint=page_hint))
+                if not candidates and page_hint is not None:
+                    candidates.extend(self.matcher.find_exact_candidates(clean_ml, page_hint=None))
 
         # EXP-013: Modular Candidate Recovery Engine
         if self.recovery_engine is not None:

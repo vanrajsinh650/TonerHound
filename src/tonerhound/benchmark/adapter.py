@@ -108,6 +108,11 @@ class ExtractBenchAdapter:
         enable_structure_aware_recovery: bool = True,
         enable_dot_leader_trimming: bool = False,
         enable_structural_dp_scoring: bool = True,
+        enable_exp033_candidate_expansion: bool | None = None,
+        enable_token_strip_recovery: bool | None = None,
+        enable_multi_line_recovery: bool | None = None,
+        enable_global_search_relaxation: bool | None = None,
+        enable_boolean_expansion: bool | None = None,
     ) -> None:
         self.index = index
         self.enable_structural_disambiguation = enable_structural_disambiguation
@@ -120,10 +125,20 @@ class ExtractBenchAdapter:
         self.enable_structure_aware_recovery = enable_structure_aware_recovery
         self.enable_dot_leader_trimming = enable_dot_leader_trimming
         self.enable_structural_dp_scoring = enable_structural_dp_scoring
+        self.enable_exp033_candidate_expansion = enable_exp033_candidate_expansion
+        self.enable_token_strip_recovery = enable_token_strip_recovery
+        self.enable_multi_line_recovery = enable_multi_line_recovery
+        self.enable_global_search_relaxation = enable_global_search_relaxation
+        self.enable_boolean_expansion = enable_boolean_expansion
         self.resolver = EvidenceResolver(
             index,
             enable_verification=enable_verification,
             score_margin_threshold=score_margin_threshold,
+            enable_exp033_candidate_expansion=enable_exp033_candidate_expansion,
+            enable_token_strip_recovery=enable_token_strip_recovery,
+            enable_multi_line_recovery=enable_multi_line_recovery,
+            enable_global_search_relaxation=enable_global_search_relaxation,
+            enable_boolean_expansion=enable_boolean_expansion,
         )
 
     def _apply_geometry_enhancements(

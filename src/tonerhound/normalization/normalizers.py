@@ -126,10 +126,13 @@ def clean_currency_and_numbers(text: str) -> str:
     """Extract clean numeric representation from formatted currency or numbers."""
     cleaned = text.strip()
     # Check parenthesized negative: (100.00) -> -100.00
+    # Note: Parenthesized percentages (e.g. (99.4%)) represent positive allocations, not negative amounts
     negative = False
     if cleaned.startswith("(") and cleaned.endswith(")"):
-        cleaned = cleaned[1:-1].strip()
-        negative = True
+        inner = cleaned[1:-1].strip()
+        if not inner.endswith("%") and not inner.startswith("-"):
+            negative = True
+        cleaned = inner
 
     # Strip currency symbols and codes
     cleaned = _CURRENCY_SYMBOLS.sub("", cleaned)
@@ -154,7 +157,7 @@ def parse_numeric_value(value: Any) -> float | None:
 
     cleaned = clean_currency_and_numbers(str(value))
     cleaned = re.sub(r"^[~≈]", "", cleaned).strip()
-    cleaned = cleaned.rstrip("%")
+    cleaned = cleaned.rstrip("%'\"")
 
     try:
         return float(cleaned)

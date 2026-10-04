@@ -206,7 +206,12 @@ class EvidenceMatcher:
 
         # Step 4: Page-wide substring search fallback (restoring document-wide search fallback, Fix 7)
         if not candidates:
-            target_pages = [page_hint] if page_hint is not None else [p.page_number for p in self.index.pages]
+            if page_hint is not None:
+                target_pages = [page_hint]
+            elif len(self.index.pages) <= 10:
+                target_pages = [p.page_number for p in self.index.pages]
+            else:
+                target_pages = []
             for p_num in target_pages:
                 page_matches = self.index.search_exact(query, page=p_num)
                 for box, text in page_matches:
@@ -643,7 +648,7 @@ class EvidenceMatcher:
             pages_to_check.add(page_hint)
         elif lines_to_check:
             pages_to_check.update(p for p, _ in lines_to_check)
-        else:
+        elif len(self.index.pages) <= 10:
             pages_to_check.update(p.page_number for p in self.index.pages)
 
         candidates: list[MatchCandidate] = []
@@ -654,7 +659,7 @@ class EvidenceMatcher:
 
             n_lines = len(page.lines)
             for i in range(n_lines - 1):
-                for span_len in (2, 3):
+                for span_len in (2, 3, 4, 5):
                     if i + span_len > n_lines:
                         continue
                     span_lines = page.lines[i : i + span_len]
