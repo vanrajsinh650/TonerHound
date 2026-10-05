@@ -1,0 +1,468 @@
+{
+  "net_rescued_fields": 1242,
+  "word_f1_gain_pp": 1.4411,
+  "page_f1_gain_pp": 0.2964,
+  "rescued_by_fix": {
+    "fix1_ocr_noise": 16,
+    "fix2_checkbox": 5,
+    "fix3_high_dpi_ocr": 0,
+    "fix4_dates": 4,
+    "fix5_multiline": 0,
+    "fix6_normalization": 494,
+    "fix7_token_slicing": 0,
+    "fix8_hyphenation": 0,
+    "standard_resolver": 723
+  },
+  "sample_rescued_records": [
+    {
+      "document_id": "long/real_sm0801_eco_full",
+      "field_path": "note_line",
+      "gold_value": "NOTE: ND=NOT DONE; UNK=UNKNOWN.",
+      "gold_page": 2,
+      "gold_bbox": [
+        0.093273,
+        0.704808,
+        0.240644,
+        0.018084
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "standard_resolver"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "schedule_c.line_1_gross_receipts",
+      "gold_value": "21,950",
+      "gold_page": 7,
+      "gold_bbox": [
+        0.895531,
+        0.359709,
+        0.056763,
+        0.008554
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    },
+    {
+      "document_id": "medium/bar-lev-2021",
+      "field_path": "form_8582.part_vi_allowances[0].loss",
+      "gold_value": "64,216.",
+      "gold_page": 18,
+      "gold_bbox": [
+        0.519062,
+        0.305455,
+        0.06217,
+        0.011364
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    },
+    {
+      "document_id": "medium/bar-lev-2021",
+      "field_path": "form_8582.part_vi_allowances[0].subtract_c_from_a",
+      "gold_value": "57,026.",
+      "gold_page": 18,
+      "gold_bbox": [
+        0.86393,
+        0.303636,
+        0.062757,
+        0.011364
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    },
+    {
+      "document_id": "medium/bar-lev-2021",
+      "field_path": "form_8582.part_vi_allowances[1].loss",
+      "gold_value": "159,064,",
+      "gold_page": 18,
+      "gold_bbox": [
+        0.509677,
+        0.319545,
+        0.071554,
+        0.011364
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    },
+    {
+      "document_id": "medium/bar-lev-2021",
+      "field_path": "form_8582.part_vi_allowances[1].subtract_c_from_a",
+      "gold_value": "141,254,",
+      "gold_page": 18,
+      "gold_bbox": [
+        0.855132,
+        0.317273,
+        0.071554,
+        0.011364
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    },
+    {
+      "document_id": "medium/bar-lev-2021",
+      "field_path": "form_8582.part_vi_total_loss",
+      "gold_value": "223,280,",
+      "gold_page": 18,
+      "gold_bbox": [
+        0.51085,
+        0.384091,
+        0.072727,
+        0.011364
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    },
+    {
+      "document_id": "medium/bar-lev-2021",
+      "field_path": "form_8582.part_vi_total_special_allowance",
+      "gold_value": "25,000,",
+      "gold_page": 18,
+      "gold_bbox": [
+        0.74956,
+        0.382727,
+        0.06393,
+        0.010909
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    },
+    {
+      "document_id": "medium/bar-lev-2021",
+      "field_path": "form_8582.part_vi_total_subtract_c_from_a",
+      "gold_value": "198,280,",
+      "gold_page": 18,
+      "gold_bbox": [
+        0.856891,
+        0.381818,
+        0.071554,
+        0.011364
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    },
+    {
+      "document_id": "medium/bar-lev-2021",
+      "field_path": "schedule_c.line_39_other_costs",
+      "gold_value": "4,790,",
+      "gold_page": 8,
+      "gold_bbox": [
+        0.870381,
+        0.255,
+        0.053372,
+        0.011818
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    },
+    {
+      "document_id": "medium/bar-lev-2021",
+      "field_path": "schedule_se.line_2_net_nonfarm_profit",
+      "gold_value": "3,146,",
+      "gold_page": 10,
+      "gold_bbox": [
+        0.873314,
+        0.328636,
+        0.053959,
+        0.010909
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    },
+    {
+      "document_id": "medium/bar-lev-2021",
+      "field_path": "schedule_se.line_11_line_6_times_2_9_pct",
+      "gold_value": "84,",
+      "gold_page": 10,
+      "gold_bbox": [
+        0.908504,
+        0.642727,
+        0.02346,
+        0.009545
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    },
+    {
+      "document_id": "medium/bar-lev-2021",
+      "field_path": "schedule_se.line_12_self_employment_tax",
+      "gold_value": "444,",
+      "gold_page": 10,
+      "gold_bbox": [
+        0.898534,
+        0.659545,
+        0.034018,
+        0.009091
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    },
+    {
+      "document_id": "medium/bar-lev-2021",
+      "field_path": "schedule_1.line_10_additional_income",
+      "gold_value": "243,682,",
+      "gold_page": 3,
+      "gold_bbox": [
+        0.860997,
+        0.8,
+        0.082698,
+        0.011364
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    },
+    {
+      "document_id": "medium/bar-lev-2021",
+      "field_path": "form_8582.line_1b_activities_with_net_loss",
+      "gold_value": "51,617.",
+      "gold_page": 17,
+      "gold_bbox": [
+        0.693255,
+        0.232727,
+        0.061584,
+        0.011364
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    },
+    {
+      "document_id": "medium/bar-lev-2021",
+      "field_path": "form_8582.line_1c_prior_years_unallowed_losses",
+      "gold_value": "171,663.",
+      "gold_page": 17,
+      "gold_bbox": [
+        0.684457,
+        0.247727,
+        0.070381,
+        0.011364
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    },
+    {
+      "document_id": "medium/bar-lev-2021",
+      "field_path": "form_8582.line_1d_combine_1a_1b_1c",
+      "gold_value": "~223,280.",
+      "gold_page": 17,
+      "gold_bbox": [
+        0.848094,
+        0.261818,
+        0.081525,
+        0.011818
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    },
+    {
+      "document_id": "medium/bar-lev-2022",
+      "field_path": "schedule_1.line_3_business_income",
+      "gold_value": "-357.",
+      "gold_page": 3,
+      "gold_bbox": [
+        0.879765,
+        0.228636,
+        0.043988,
+        0.009091
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    },
+    {
+      "document_id": "medium/bar-lev-2022",
+      "field_path": "form_4952.line_2_disallowed_carryover_prior_year",
+      "gold_value": "244,473,",
+      "gold_page": 12,
+      "gold_bbox": [
+        0.851613,
+        0.208182,
+        0.073314,
+        0.010909
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    },
+    {
+      "document_id": "medium/bar-lev-2022",
+      "field_path": "form_8582.part_vi_allowances[0].loss",
+      "gold_value": "194,985.",
+      "gold_page": 16,
+      "gold_bbox": [
+        0.497947,
+        0.299545,
+        0.073314,
+        0.011364
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    },
+    {
+      "document_id": "medium/bar-lev-2022",
+      "field_path": "form_8582.part_vi_allowances[0].special_allowance",
+      "gold_value": "25,000.",
+      "gold_page": 16,
+      "gold_bbox": [
+        0.741349,
+        0.303182,
+        0.06393,
+        0.011364
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    },
+    {
+      "document_id": "medium/bar-lev-2022",
+      "field_path": "schedule_b.interest_payers[0].amount",
+      "gold_value": "10.",
+      "gold_page": 6,
+      "gold_bbox": [
+        0.900293,
+        0.163182,
+        0.024047,
+        0.009091
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    },
+    {
+      "document_id": "medium/bar-lev-2022",
+      "field_path": "schedule_c.line_1_gross_receipts",
+      "gold_value": "4,439,",
+      "gold_page": 7,
+      "gold_bbox": [
+        0.869208,
+        0.343636,
+        0.054545,
+        0.010909
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    },
+    {
+      "document_id": "medium/bar-lev-2022",
+      "field_path": "schedule_c.line_5_gross_profit",
+      "gold_value": "3,839.",
+      "gold_page": 7,
+      "gold_bbox": [
+        0.868622,
+        0.404091,
+        0.053959,
+        0.010909
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    },
+    {
+      "document_id": "medium/bar-lev-2022",
+      "field_path": "schedule_c.line_36_purchases",
+      "gold_value": "600.",
+      "gold_page": 8,
+      "gold_bbox": [
+        0.892669,
+        0.167273,
+        0.034018,
+        0.009545
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    },
+    {
+      "document_id": "medium/bar-lev-2023",
+      "field_path": "line_9_total_income",
+      "gold_value": "~165,205.",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.832845,
+        0.809545,
+        0.080352,
+        0.010909
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    },
+    {
+      "document_id": "medium/bar-lev-2023",
+      "field_path": "schedule_1.line_3_business_income",
+      "gold_value": "-462.",
+      "gold_page": 3,
+      "gold_bbox": [
+        0.878592,
+        0.233636,
+        0.043402,
+        0.009545
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    },
+    {
+      "document_id": "medium/bar-lev-2023",
+      "field_path": "form_1116.countries[0].line_3a_itemized_or_standard_deduction",
+      "gold_value": "7,906.",
+      "gold_page": 10,
+      "gold_bbox": [
+        0.461584,
+        0.534545,
+        0.053959,
+        0.009545
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    },
+    {
+      "document_id": "medium/bar-lev-2023",
+      "field_path": "form_4952.line_2_disallowed_carryover_prior_year",
+      "gold_value": "244,473,",
+      "gold_page": 12,
+      "gold_bbox": [
+        0.849267,
+        0.221364,
+        0.073314,
+        0.012727
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    },
+    {
+      "document_id": "medium/bar-lev-2023",
+      "field_path": "form_8582.part_vi_allowances[0].loss",
+      "gold_value": "266,962,",
+      "gold_page": 14,
+      "gold_bbox": [
+        0.496774,
+        0.304545,
+        0.072727,
+        0.011364
+      ],
+      "base_iou": 0.0,
+      "after_iou": 1.0,
+      "fix": "fix6_normalization"
+    }
+  ]
+}

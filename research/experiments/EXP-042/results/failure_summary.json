@@ -1,0 +1,100 @@
+{
+  "run_id": "exp042_full_run_v1",
+  "timestamp": "2026-10-04T10:11:34.909010+00:00",
+  "total_fields_evaluated": 498140,
+  "total_grounding_success": 327671,
+  "total_grounding_failures": 170469,
+  "evaluated_documents": 236,
+  "total_theoretical_ceiling_pp": 9.5071,
+  "total_realistic_expected_gain_pp": 0.7659,
+  "classes": [
+    {
+      "rank": 1,
+      "failure_class": "REAL_INDEXING_MISS",
+      "field_count": 77529,
+      "field_pct": 45.4798,
+      "THEORETICAL_CEILING_pp": 4.2617,
+      "REALISTIC_RECOVERY_RATE": 0.05,
+      "REALISTIC_RECOVERY_RATE_pct": "5.00%",
+      "REALISTIC_EXPECTED_GAIN_pp": 0.2131,
+      "recommended_next_step": "Deterministic refinement"
+    },
+    {
+      "rank": 2,
+      "failure_class": "NORMALIZATION_MISMATCH",
+      "field_count": 46156,
+      "field_pct": 27.0759,
+      "THEORETICAL_CEILING_pp": 2.5371,
+      "REALISTIC_RECOVERY_RATE": 0.0,
+      "REALISTIC_RECOVERY_RATE_pct": "0.00%",
+      "REALISTIC_EXPECTED_GAIN_pp": 0.0,
+      "recommended_next_step": "Neural VLM model"
+    },
+    {
+      "rank": 3,
+      "failure_class": "TOKEN_SLICING",
+      "field_count": 23542,
+      "field_pct": 13.8101,
+      "THEORETICAL_CEILING_pp": 1.2941,
+      "REALISTIC_RECOVERY_RATE": 0.15,
+      "REALISTIC_RECOVERY_RATE_pct": "15.00%",
+      "REALISTIC_EXPECTED_GAIN_pp": 0.1941,
+      "recommended_next_step": "Deterministic refinement"
+    },
+    {
+      "rank": 4,
+      "failure_class": "NO_TEXT_AT_GOLD_REGION",
+      "field_count": 14952,
+      "field_pct": 8.7711,
+      "THEORETICAL_CEILING_pp": 0.8219,
+      "REALISTIC_RECOVERY_RATE": 0.05,
+      "REALISTIC_RECOVERY_RATE_pct": "5.00%",
+      "REALISTIC_EXPECTED_GAIN_pp": 0.0411,
+      "recommended_next_step": "Neural VLM model"
+    },
+    {
+      "rank": 5,
+      "failure_class": "HYPHENATION",
+      "field_count": 7623,
+      "field_pct": 4.4718,
+      "THEORETICAL_CEILING_pp": 0.419,
+      "REALISTIC_RECOVERY_RATE": 0.6,
+      "REALISTIC_RECOVERY_RATE_pct": "60.00%",
+      "REALISTIC_EXPECTED_GAIN_pp": 0.2514,
+      "recommended_next_step": "Deterministic refinement"
+    },
+    {
+      "rank": 6,
+      "failure_class": "NON_TEXT_BOOLEAN_GROUNDING",
+      "field_count": 2594,
+      "field_pct": 1.5217,
+      "THEORETICAL_CEILING_pp": 0.1426,
+      "REALISTIC_RECOVERY_RATE": 0.4,
+      "REALISTIC_RECOVERY_RATE_pct": "40.00%",
+      "REALISTIC_EXPECTED_GAIN_pp": 0.057,
+      "recommended_next_step": "Neural VLM model"
+    },
+    {
+      "rank": 7,
+      "failure_class": "MULTI_LINE_SPLIT",
+      "field_count": 558,
+      "field_pct": 0.3273,
+      "THEORETICAL_CEILING_pp": 0.0307,
+      "REALISTIC_RECOVERY_RATE": 0.3,
+      "REALISTIC_RECOVERY_RATE_pct": "30.00%",
+      "REALISTIC_EXPECTED_GAIN_pp": 0.0092,
+      "recommended_next_step": "Neural VLM model"
+    },
+    {
+      "rank": 8,
+      "failure_class": "DATE_INDEX_MISS",
+      "field_count": 0,
+      "field_pct": 0.0,
+      "THEORETICAL_CEILING_pp": 0.0,
+      "REALISTIC_RECOVERY_RATE": 0.5,
+      "REALISTIC_RECOVERY_RATE_pct": "50.00%",
+      "REALISTIC_EXPECTED_GAIN_pp": 0.0,
+      "recommended_next_step": "Neural VLM model"
+    }
+  ]
+}

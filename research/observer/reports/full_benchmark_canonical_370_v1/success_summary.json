@@ -1,0 +1,338 @@
+{
+  "total_successes": 307373,
+  "success_rate_pct": 61.7041,
+  "mechanisms": [
+    {
+      "mechanism": "EXACT_TEXT_MATCH",
+      "count": 239169,
+      "pct": 77.81
+    },
+    {
+      "mechanism": "TABLE_CELL_ALIGNMENT",
+      "count": 66779,
+      "pct": 21.73
+    },
+    {
+      "mechanism": "NORMALIZED_NUMERIC_MATCH",
+      "count": 890,
+      "pct": 0.29
+    },
+    {
+      "mechanism": "APPROXIMATE_GEOMETRY_MATCH",
+      "count": 535,
+      "pct": 0.17
+    }
+  ],
+  "representative_examples": [
+    {
+      "document_id": "long/real_credit_strategies_full",
+      "field_path": "holdings[0].asset_class",
+      "gold_value": "Asset-Backed Securities",
+      "predicted_value": "Asset-Backed Securities",
+      "gold_page": 8,
+      "predicted_page": 8,
+      "gold_bbox": [
+        0.0303,
+        0.12269,
+        0.14148,
+        0.0093
+      ],
+      "predicted_bbox": [
+        0.030303030303030304,
+        0.1226821623415294,
+        0.14148109769981718,
+        0.009293036251413117
+      ],
+      "iou": 0.9975,
+      "candidate_count": 0,
+      "grounding_success": true,
+      "failure_class": "ALREADY_RESOLVED",
+      "evidence": {
+        "gold_page": 8,
+        "predicted_page": 8,
+        "iou": 0.9975,
+        "same_page": true
+      },
+      "experiment_run": "canonical_370_v1"
+    },
+    {
+      "document_id": "long/real_credit_strategies_full",
+      "field_path": "holdings[0].series",
+      "gold_value": "2022-1A",
+      "predicted_value": "2022-1A",
+      "gold_page": 8,
+      "predicted_page": 8,
+      "gold_bbox": [
+        0.17448,
+        0.13722,
+        0.04584,
+        0.0093
+      ],
+      "predicted_bbox": [
+        0.17448474100543193,
+        0.13721704606245963,
+        0.0491849083691735,
+        0.009293036251413117
+      ],
+      "iou": 0.9306,
+      "candidate_count": 0,
+      "grounding_success": true,
+      "failure_class": "ALREADY_RESOLVED",
+      "evidence": {
+        "gold_page": 8,
+        "predicted_page": 8,
+        "iou": 0.9306,
+        "same_page": true
+      },
+      "experiment_run": "canonical_370_v1"
+    },
+    {
+      "document_id": "long/real_credit_strategies_full",
+      "field_path": "holdings[0].tranche_class",
+      "gold_value": "CR",
+      "predicted_value": "CR,",
+      "gold_page": 8,
+      "predicted_page": 8,
+      "gold_bbox": [
+        0.0303,
+        0.14885,
+        0.01751,
+        0.0093
+      ],
+      "predicted_bbox": [
+        0.030303030303030304,
+        0.1488449530392038,
+        0.020864647245567657,
+        0.009293036251413117
+      ],
+      "iou": 0.8376,
+      "candidate_count": 0,
+      "grounding_success": true,
+      "failure_class": "ALREADY_RESOLVED",
+      "evidence": {
+        "gold_page": 8,
+        "predicted_page": 8,
+        "iou": 0.8376,
+        "same_page": true
+      },
+      "experiment_run": "canonical_370_v1"
+    },
+    {
+      "document_id": "long/real_credit_strategies_full",
+      "field_path": "holdings[0].reference_rate",
+      "gold_value": "3-mo. CME Term SOFR + 1.90%",
+      "predicted_value": "(3-mo. CME Term SOFR",
+      "gold_page": 8,
+      "predicted_page": 8,
+      "gold_bbox": [
+        0.05859,
+        0.14885,
+        0.1766,
+        0.0093
+      ],
+      "predicted_bbox": [
+        0.05454539289378157,
+        0.1488449530392038,
+        0.1880282007082544,
+        0.009293036251413117
+      ],
+      "iou": 0.9376,
+      "candidate_count": 0,
+      "grounding_success": true,
+      "failure_class": "ALREADY_RESOLVED",
+      "evidence": {
+        "gold_page": 8,
+        "predicted_page": 8,
+        "iou": 0.9376,
+        "same_page": true
+      },
+      "experiment_run": "canonical_370_v1"
+    },
+    {
+      "document_id": "long/real_credit_strategies_full",
+      "field_path": "holdings[0].coupon_percent",
+      "gold_value": 5.78,
+      "predicted_value": "5.78%,",
+      "gold_page": 8,
+      "predicted_page": 8,
+      "gold_bbox": [
+        0.0303,
+        0.16048,
+        0.03436,
+        0.0093
+      ],
+      "predicted_bbox": [
+        0.030303030303030304,
+        0.160472860015948,
+        0.025151061155445513,
+        0.009293036251413114
+      ],
+      "iou": 0.7305,
+      "candidate_count": 0,
+      "grounding_success": true,
+      "failure_class": "ALREADY_RESOLVED",
+      "evidence": {
+        "gold_page": 8,
+        "predicted_page": 8,
+        "iou": 0.7305,
+        "same_page": true
+      },
+      "experiment_run": "canonical_370_v1"
+    },
+    {
+      "document_id": "long/real_credit_strategies_full",
+      "field_path": "holdings[0].maturity_date",
+      "gold_value": "01/20/38",
+      "predicted_value": "01/20/38",
+      "gold_page": 8,
+      "predicted_page": 8,
+      "gold_bbox": [
+        0.07141,
+        0.16048,
+        0.04717,
+        0.0093
+      ],
+      "predicted_bbox": [
+        0.07140733738138218,
+        0.160472860015948,
+        0.04718081156412761,
+        0.009293036251413117
+      ],
+      "iou": 0.9975,
+      "candidate_count": 0,
+      "grounding_success": true,
+      "failure_class": "ALREADY_RESOLVED",
+      "evidence": {
+        "gold_page": 8,
+        "predicted_page": 8,
+        "iou": 0.9975,
+        "same_page": true
+      },
+      "experiment_run": "canonical_370_v1"
+    },
+    {
+      "document_id": "long/real_credit_strategies_full",
+      "field_path": "holdings[0].shares_or_par_thousands",
+      "gold_value": 1000,
+      "predicted_value": "1,000",
+      "gold_page": 8,
+      "predicted_page": 8,
+      "gold_bbox": [
+        0.34337,
+        0.17211,
+        0.03034,
+        0.0093
+      ],
+      "predicted_bbox": [
+        0.343375,
+        0.170368,
+        0.030331,
+        0.012759
+      ],
+      "iou": 0.7287,
+      "candidate_count": 0,
+      "grounding_success": true,
+      "failure_class": "ALREADY_RESOLVED",
+      "evidence": {
+        "gold_page": 8,
+        "predicted_page": 8,
+        "iou": 0.7287,
+        "same_page": true
+      },
+      "experiment_run": "canonical_370_v1"
+    },
+    {
+      "document_id": "long/real_credit_strategies_full",
+      "field_path": "holdings[0].value_usd",
+      "gold_value": 1003418,
+      "predicted_value": "1,003,418",
+      "gold_page": 8,
+      "predicted_page": 8,
+      "gold_bbox": [
+        0.42416,
+        0.17211,
+        0.05392,
+        0.0093
+      ],
+      "predicted_bbox": [
+        0.424152,
+        0.170368,
+        0.053922,
+        0.012759
+      ],
+      "iou": 0.7287,
+      "candidate_count": 0,
+      "grounding_success": true,
+      "failure_class": "ALREADY_RESOLVED",
+      "evidence": {
+        "gold_page": 8,
+        "predicted_page": 8,
+        "iou": 0.7287,
+        "same_page": true
+      },
+      "experiment_run": "canonical_370_v1"
+    },
+    {
+      "document_id": "long/real_credit_strategies_full",
+      "field_path": "holdings[1].asset_class",
+      "gold_value": "Asset-Backed Securities",
+      "predicted_value": "Asset-Backed Securities",
+      "gold_page": 8,
+      "predicted_page": 8,
+      "gold_bbox": [
+        0.0303,
+        0.12269,
+        0.14148,
+        0.0093
+      ],
+      "predicted_bbox": [
+        0.030303030303030304,
+        0.1226821623415294,
+        0.14148109769981718,
+        0.009293036251413117
+      ],
+      "iou": 0.9975,
+      "candidate_count": 0,
+      "grounding_success": true,
+      "failure_class": "ALREADY_RESOLVED",
+      "evidence": {
+        "gold_page": 8,
+        "predicted_page": 8,
+        "iou": 0.9975,
+        "same_page": true
+      },
+      "experiment_run": "canonical_370_v1"
+    },
+    {
+      "document_id": "long/real_credit_strategies_full",
+      "field_path": "holdings[1].reference_rate",
+      "gold_value": "3-mo. CME Term SOFR + 2.10%",
+      "predicted_value": "(3-mo. CME Term SOFR",
+      "gold_page": 8,
+      "predicted_page": 8,
+      "gold_bbox": [
+        0.10507,
+        0.1973,
+        0.13886,
+        0.0093
+      ],
+      "predicted_bbox": [
+        0.10102965615012428,
+        0.1972945654423046,
+        0.13244926247131145,
+        0.009293036251413117
+      ],
+      "iou": 0.8969,
+      "candidate_count": 0,
+      "grounding_success": true,
+      "failure_class": "ALREADY_RESOLVED",
+      "evidence": {
+        "gold_page": 8,
+        "predicted_page": 8,
+        "iou": 0.8969,
+        "same_page": true
+      },
+      "experiment_run": "canonical_370_v1"
+    }
+  ]
+}

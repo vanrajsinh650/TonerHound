@@ -1,0 +1,763 @@
+{
+  "net_rescued_fields": 6586,
+  "word_f1_gain_pp": 11.0209,
+  "page_f1_gain_pp": 1.0136,
+  "rescued_by_phase": {
+    "standard_resolver": 1327,
+    "phase_e_visual_fallback": 1636,
+    "phase_f_global_assignment": 3511,
+    "phase_b_table_cells": 112
+  },
+  "sample_rescued_records": [
+    {
+      "document_id": "long/real_imedia_full",
+      "field_path": "report_title",
+      "gold_value": "Creditor Matrix",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.46633,
+        0.0408,
+        0.06735,
+        0.01225
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.9982,
+      "phase": "standard_resolver"
+    },
+    {
+      "document_id": "long/real_oklahoma_unclaimed_2024",
+      "field_path": "publication",
+      "gold_value": "March 2024 \u2022 Unclaimed Property",
+      "gold_page": 2,
+      "gold_bbox": [
+        0.38304,
+        0.000405,
+        0.2339,
+        0.010229
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.9987,
+      "phase": "standard_resolver"
+    },
+    {
+      "document_id": "long/real_sm0801_ae_full",
+      "field_path": "listing_title",
+      "gold_value": "Listing 16.2.7-1 Adverse Events by Subject",
+      "gold_page": 2,
+      "gold_bbox": [
+        0.07576,
+        0.17662,
+        0.21982,
+        0.01809
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.8131,
+      "phase": "standard_resolver"
+    },
+    {
+      "document_id": "long/real_sm0801_ae_full",
+      "field_path": "population",
+      "gold_value": "Study Population: ITT",
+      "gold_page": 2,
+      "gold_bbox": [
+        0.07576,
+        0.21338,
+        0.11361,
+        0.01809
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.9995,
+      "phase": "standard_resolver"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "presidential_campaign_you_box",
+      "gold_value": "False",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.8251,
+        0.2531,
+        0.0288,
+        0.0161
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.6167,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "digital_assets_yes",
+      "gold_value": "False",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.9078,
+        0.3725,
+        0.0258,
+        0.0146
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.733,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "someone_can_claim_you_box",
+      "gold_value": "False",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.2755,
+        0.3847,
+        0.0301,
+        0.0164
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.6251,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "someone_can_claim_spouse_box",
+      "gold_value": "False",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.4559,
+        0.3865,
+        0.0249,
+        0.0152
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.7716,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "spouse_itemizes_box",
+      "gold_value": "False",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.1354,
+        0.3993,
+        0.0266,
+        0.0177
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.6203,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "you_blind_box",
+      "gold_value": "False",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.4344,
+        0.4273,
+        0.0266,
+        0.0158
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.6949,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "spouse_born_before_jan2_1959_box",
+      "gold_value": "False",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.6071,
+        0.4285,
+        0.0266,
+        0.0183
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.624,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "spouse_blind_box",
+      "gold_value": "False",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.8855,
+        0.4316,
+        0.0275,
+        0.0164
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.6475,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "more_than_four_dependents_box",
+      "gold_value": "False",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.0899,
+        0.5241,
+        0.0275,
+        0.0164
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.6872,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "dependents[0].child_tax_credit_box",
+      "gold_value": "True",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.7677,
+        0.4774,
+        0.0234,
+        0.0134
+      ],
+      "base_iou": 0.0152,
+      "after_iou": 0.8301,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "dependents[1].child_tax_credit_box",
+      "gold_value": "False",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.7672,
+        0.4932,
+        0.0239,
+        0.0146
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.7497,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "dependents[1].credit_for_other_dependents_box",
+      "gold_value": "False",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.9074,
+        0.4952,
+        0.025,
+        0.0154
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.7567,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "dependents[2].child_tax_credit_box",
+      "gold_value": "False",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.766,
+        0.5109,
+        0.0246,
+        0.0142
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.8012,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "dependents[2].credit_for_other_dependents_box",
+      "gold_value": "False",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.9063,
+        0.5123,
+        0.0255,
+        0.0147
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.7629,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "dependents[3].child_tax_credit_box",
+      "gold_value": "False",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.7665,
+        0.5283,
+        0.0239,
+        0.0142
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.7888,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "dependents[3].credit_for_other_dependents_box",
+      "gold_value": "False",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.9073,
+        0.5296,
+        0.0237,
+        0.014
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.8251,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "line_6c_lump_sum_election_box",
+      "gold_value": "False",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.7643,
+        0.7585,
+        0.0241,
+        0.0164
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.775,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "line_7_schedule_d_not_required_box",
+      "gold_value": "False",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.7643,
+        0.7762,
+        0.0249,
+        0.0164
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.7279,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "line_16_form_8814_box",
+      "gold_value": "False",
+      "gold_page": 2,
+      "gold_bbox": [
+        0.4714,
+        0.0851,
+        0.0275,
+        0.0183
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.7197,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "line_16_form_4972_box",
+      "gold_value": "False",
+      "gold_page": 2,
+      "gold_bbox": [
+        0.5573,
+        0.087,
+        0.0249,
+        0.0183
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.7618,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "line_16_other_form_box",
+      "gold_value": "False",
+      "gold_page": 2,
+      "gold_bbox": [
+        0.6303,
+        0.0882,
+        0.0258,
+        0.0177
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.7873,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "line_35a_form_8888_box",
+      "gold_value": "False",
+      "gold_page": 2,
+      "gold_bbox": [
+        0.7781,
+        0.4188,
+        0.0275,
+        0.0189
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.6803,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "third_party_designee_yes",
+      "gold_value": "True",
+      "gold_page": 2,
+      "gold_bbox": [
+        0.6844,
+        0.5314,
+        0.0266,
+        0.0195
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.7188,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "preparer_self_employed_box",
+      "gold_value": "True",
+      "gold_page": 2,
+      "gold_bbox": [
+        0.8554,
+        0.694,
+        0.0249,
+        0.014
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.759,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "schedule_2.line_8_form_5329_not_required_box",
+      "gold_value": "False",
+      "gold_page": 5,
+      "gold_bbox": [
+        0.7652,
+        0.3896,
+        0.0266,
+        0.0177
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.7646,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "form_8879.taxpayer_pin_authorize_ero_box",
+      "gold_value": "True",
+      "gold_page": 16,
+      "gold_bbox": [
+        0.065,
+        0.4973,
+        0.0249,
+        0.0189
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.7376,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "form_8879.taxpayer_pin_self_entered_box",
+      "gold_value": "False",
+      "gold_page": 16,
+      "gold_bbox": [
+        0.0659,
+        0.546,
+        0.0232,
+        0.0195
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.7676,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "form_8879.spouse_pin_self_entered_box",
+      "gold_value": "False",
+      "gold_page": 16,
+      "gold_bbox": [
+        0.065,
+        0.6842,
+        0.0266,
+        0.0201
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.6377,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "schedule_8812.line_12_no_box",
+      "gold_value": "False",
+      "gold_page": 12,
+      "gold_bbox": [
+        0.0873,
+        0.5095,
+        0.0284,
+        0.0152
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.7632,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "schedule_8812.line_12_yes_box",
+      "gold_value": "True",
+      "gold_page": 12,
+      "gold_bbox": [
+        0.0856,
+        0.5369,
+        0.0309,
+        0.0219
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.5038,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "schedule_8812.line_15_decline_additional_ctc_box",
+      "gold_value": "False",
+      "gold_page": 13,
+      "gold_bbox": [
+        0.9336,
+        0.118,
+        0.0249,
+        0.0177
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.8309,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "schedule_8812.line_19_no_box",
+      "gold_value": "False",
+      "gold_page": 13,
+      "gold_bbox": [
+        0.0933,
+        0.2708,
+        0.0275,
+        0.0195
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.6358,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "schedule_8812.line_19_yes_box",
+      "gold_value": "True",
+      "gold_page": 13,
+      "gold_bbox": [
+        0.0942,
+        0.2903,
+        0.0275,
+        0.0164
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.7089,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "schedule_8812.next_line16b_4500_no_box",
+      "gold_value": "True",
+      "gold_page": 13,
+      "gold_bbox": [
+        0.0959,
+        0.3323,
+        0.0249,
+        0.0158
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.8059,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "schedule_8812.next_line16b_4500_yes_box",
+      "gold_value": "False",
+      "gold_page": 13,
+      "gold_bbox": [
+        0.0951,
+        0.3573,
+        0.0249,
+        0.017
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.7322,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "schedule_c.line_g_material_participation",
+      "gold_value": "True",
+      "gold_page": 7,
+      "gold_bbox": [
+        0.8245,
+        0.2617,
+        0.0309,
+        0.0152
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.6818,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "schedule_c.line_h_started_or_acquired_box",
+      "gold_value": "False",
+      "gold_page": 7,
+      "gold_bbox": [
+        0.8253,
+        0.2775,
+        0.0292,
+        0.0177
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.6343,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "schedule_c.line_i_payments_requiring_1099",
+      "gold_value": "False",
+      "gold_page": 7,
+      "gold_bbox": [
+        0.8971,
+        0.2939,
+        0.0257,
+        0.0151
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.7521,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "schedule_c.line_j_filed_required_1099",
+      "gold_value": "False",
+      "gold_page": 7,
+      "gold_bbox": [
+        0.8264,
+        0.3101,
+        0.0271,
+        0.0165
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.762,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "schedule_c.line_1_statutory_employee_box",
+      "gold_value": "False",
+      "gold_page": 7,
+      "gold_bbox": [
+        0.7136,
+        0.353,
+        0.0215,
+        0.0201
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.6428,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "schedule_c.line_45_vehicle_available_personal_use",
+      "gold_value": "True",
+      "gold_page": 8,
+      "gold_bbox": [
+        0.7875,
+        0.5302,
+        0.0292,
+        0.0177
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.6592,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "schedule_c.line_46_another_vehicle_available",
+      "gold_value": "True",
+      "gold_page": 8,
+      "gold_bbox": [
+        0.7875,
+        0.5588,
+        0.0266,
+        0.0183
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.6735,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "schedule_c.line_47a_evidence_to_support_deduction",
+      "gold_value": "True",
+      "gold_page": 8,
+      "gold_bbox": [
+        0.7884,
+        0.5856,
+        0.0284,
+        0.0201
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.5862,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "schedule_c.line_47b_evidence_written",
+      "gold_value": "True",
+      "gold_page": 8,
+      "gold_bbox": [
+        0.7884,
+        0.6136,
+        0.0266,
+        0.0164
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.7671,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "schedule_e.line_27_prior_year_unallowed_loss_no_box",
+      "gold_value": "False",
+      "gold_page": 9,
+      "gold_bbox": [
+        0.9044,
+        0.2209,
+        0.0258,
+        0.017
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.7328,
+      "phase": "phase_e_visual_fallback"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "schedule_e.partnerships_s_corps[0].foreign_partnership_box",
+      "gold_value": "False",
+      "gold_page": 9,
+      "gold_bbox": [
+        0.5272,
+        0.2635,
+        0.0275,
+        0.0152
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.7228,
+      "phase": "phase_e_visual_fallback"
+    }
+  ]
+}

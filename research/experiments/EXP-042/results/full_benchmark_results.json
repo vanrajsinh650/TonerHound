@@ -1,0 +1,3002 @@
+{
+  "experiment_id": "EXP-042",
+  "run_id": "exp042_full_run_v1",
+  "timestamp": "2026-10-04T10:11:34.909450+00:00",
+  "total_documents": 370,
+  "evaluated_documents": 236,
+  "total_gradeable_fields": 498140,
+  "passing_fields": 327671,
+  "failing_fields": 170469,
+  "official_metrics": {
+    "word_grounding_f1": 72.6179,
+    "page_grounding_f1": 83.849,
+    "word_precision": 77.7935,
+    "word_recall": 68.9729
+  },
+  "baseline_exp041_comparison": {
+    "baseline_word_f1": 70.5761,
+    "baseline_page_f1": 83.5993,
+    "delta_word_f1_pp": 2.0418,
+    "delta_page_f1_pp": 0.2497,
+    "fields_rescued": 4559,
+    "fields_regressed": 0
+  },
+  "canonical_baseline_v1_comparison": {
+    "baseline_word_f1": 56.0477,
+    "delta_word_f1_pp": 16.5702
+  },
+  "attribution": {
+    "rescued_total": 4559,
+    "regressed_total": 0,
+    "rescued_by_phase": {
+      "phase_g_multi_region": 21,
+      "phase_c_date_variants": 3690,
+      "phase_e_visual_checkbox": 246,
+      "phase_f_global_assignment": 584,
+      "phase_h_char_level": 13,
+      "phase_d_multiline": 5
+    }
+  },
+  "per_document": [
+    {
+      "test_id": "long/dd1155_schedule_continuation_0011",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 26.8293,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "long/dd1155_schedule_continuation_0012",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "long/gov_clin_schedule_0005",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 50.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "long/gov_clin_schedule_0031",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 0.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "long/real_credit_strategies_full",
+      "modified": false,
+      "word_f1": 73.7237,
+      "page_f1": 87.9287,
+      "precision": 74.1532,
+      "recall": 73.2992
+    },
+    {
+      "test_id": "long/real_freer_register_full",
+      "modified": false,
+      "word_f1": 91.8517,
+      "page_f1": 97.1806,
+      "precision": 91.9418,
+      "recall": 91.7619
+    },
+    {
+      "test_id": "long/real_ftx_full",
+      "modified": false,
+      "word_f1": 96.7197,
+      "page_f1": 99.8037,
+      "precision": 96.7197,
+      "recall": 96.7197
+    },
+    {
+      "test_id": "long/real_ftx_full_corrupted",
+      "modified": false,
+      "word_f1": 53.4778,
+      "page_f1": 99.9971,
+      "precision": 53.4778,
+      "recall": 53.4778
+    },
+    {
+      "test_id": "long/real_imedia_full",
+      "modified": false,
+      "word_f1": 94.0247,
+      "page_f1": 99.2095,
+      "precision": 94.0247,
+      "recall": 94.0247
+    },
+    {
+      "test_id": "long/real_imedia_full_corrupted",
+      "modified": false,
+      "word_f1": 0.9692,
+      "page_f1": 95.909,
+      "precision": 0.97,
+      "recall": 0.9684
+    },
+    {
+      "test_id": "long/real_ishares_iboxx_bond_etfs",
+      "modified": false,
+      "word_f1": 70.3395,
+      "page_f1": 80.3141,
+      "precision": 71.2431,
+      "recall": 69.4586
+    },
+    {
+      "test_id": "long/real_ofac_ssi_full",
+      "modified": false,
+      "word_f1": 26.7771,
+      "page_f1": 91.6539,
+      "precision": 26.7771,
+      "recall": 26.7771
+    },
+    {
+      "test_id": "long/real_oklahoma_unclaimed_2024",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "long/real_sm0801_ae_full",
+      "modified": false,
+      "word_f1": 59.5167,
+      "page_f1": 95.7745,
+      "precision": 59.7881,
+      "recall": 59.2478
+    },
+    {
+      "test_id": "long/real_sm0801_eco_full",
+      "modified": false,
+      "word_f1": 92.4961,
+      "page_f1": 97.5815,
+      "precision": 92.503,
+      "recall": 92.4891
+    },
+    {
+      "test_id": "long/real_sm0801_eco_full_corrupted",
+      "modified": false,
+      "word_f1": 75.7268,
+      "page_f1": 91.4947,
+      "precision": 77.5887,
+      "recall": 73.9522
+    },
+    {
+      "test_id": "long/sec_13f_0010_renaissance_technologies",
+      "modified": true,
+      "word_f1": 74.3748,
+      "page_f1": 93.1698,
+      "precision": 74.6489,
+      "recall": 74.1027
+    },
+    {
+      "test_id": "long/sec_13f_0026_brown_brothers_harriman",
+      "modified": true,
+      "word_f1": 84.6663,
+      "page_f1": 100.0,
+      "precision": 84.6663,
+      "recall": 84.6663
+    },
+    {
+      "test_id": "long/sf1449_supplies_services_0042",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "long/sf1449_supplies_services_0059",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 7.1429,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/13f__leonteq_securities_2025q4",
+      "modified": false,
+      "word_f1": 99.8458,
+      "page_f1": 100.0,
+      "precision": 99.8458,
+      "recall": 99.8458
+    },
+    {
+      "test_id": "medium/13f__nalls_sherbakoff_2025q4",
+      "modified": false,
+      "word_f1": 95.7472,
+      "page_f1": 100.0,
+      "precision": 95.7472,
+      "recall": 95.7472
+    },
+    {
+      "test_id": "medium/1G1PC5SB6E7111015_professional_valuation",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 75.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/1G1PC5SB6E7111015_professional_valuation_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 75.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/arif-2023",
+      "modified": true,
+      "word_f1": 62.7027,
+      "page_f1": 85.4054,
+      "precision": 64.4444,
+      "recall": 61.0526
+    },
+    {
+      "test_id": "medium/baker_hughes_earnings_deck_q4fy25",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 50.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/bar-lev-2021",
+      "modified": true,
+      "word_f1": 50.5747,
+      "page_f1": 87.4046,
+      "precision": 51.9685,
+      "recall": 49.2537
+    },
+    {
+      "test_id": "medium/bar-lev-2022",
+      "modified": true,
+      "word_f1": 54.2797,
+      "page_f1": 81.6667,
+      "precision": 55.5556,
+      "recall": 53.0612
+    },
+    {
+      "test_id": "medium/bar-lev-2023",
+      "modified": true,
+      "word_f1": 54.6237,
+      "page_f1": 85.2248,
+      "precision": 55.4585,
+      "recall": 53.8136
+    },
+    {
+      "test_id": "medium/bar-lev-2024",
+      "modified": true,
+      "word_f1": 47.0842,
+      "page_f1": 83.3693,
+      "precision": 48.0176,
+      "recall": 46.1864
+    },
+    {
+      "test_id": "medium/becerra-2021",
+      "modified": true,
+      "word_f1": 41.4573,
+      "page_f1": 66.0804,
+      "precision": 45.7064,
+      "recall": 37.931
+    },
+    {
+      "test_id": "medium/becerra-2022",
+      "modified": true,
+      "word_f1": 48.1818,
+      "page_f1": 71.2206,
+      "precision": 53.1328,
+      "recall": 44.0748
+    },
+    {
+      "test_id": "medium/becerra-2023",
+      "modified": true,
+      "word_f1": 55.9598,
+      "page_f1": 76.6917,
+      "precision": 60.929,
+      "recall": 51.7401
+    },
+    {
+      "test_id": "medium/becerra-2024",
+      "modified": true,
+      "word_f1": 46.3816,
+      "page_f1": 69.7368,
+      "precision": 52.4164,
+      "recall": 41.5929
+    },
+    {
+      "test_id": "medium/bianco-2021",
+      "modified": true,
+      "word_f1": 67.3684,
+      "page_f1": 89.4737,
+      "precision": 69.5652,
+      "recall": 65.3061
+    },
+    {
+      "test_id": "medium/bianco-2022",
+      "modified": true,
+      "word_f1": 64.7887,
+      "page_f1": 84.507,
+      "precision": 68.3168,
+      "recall": 61.6071
+    },
+    {
+      "test_id": "medium/byline_bancorp_investor_deck_q2_2023",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 0.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/cabrera-2021",
+      "modified": true,
+      "word_f1": 52.9262,
+      "page_f1": 79.3893,
+      "precision": 55.914,
+      "recall": 50.2415
+    },
+    {
+      "test_id": "medium/cabrera-2022",
+      "modified": true,
+      "word_f1": 43.6975,
+      "page_f1": 63.0252,
+      "precision": 47.0588,
+      "recall": 40.7843
+    },
+    {
+      "test_id": "medium/cabrera-2023",
+      "modified": true,
+      "word_f1": 38.8406,
+      "page_f1": 68.9855,
+      "precision": 42.4051,
+      "recall": 35.8289
+    },
+    {
+      "test_id": "medium/ccc_online_0003_geico_ford_crown_victoria",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 100.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/ccc_online_0003_geico_ford_crown_victoria_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 50.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/ccc_online_0004_liberty_dodge_journey",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 100.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/ccc_online_0004_liberty_dodge_journey_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 50.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/ccc_online_0008_state_farm_genesis_gv80",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 57.1429,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/ccc_online_0008_state_farm_genesis_gv80_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 28.5714,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/ccc_online_0009_travelers_ford_f150",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 100.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/ccc_online_0009_travelers_ford_f150_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 100.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/ccc_online_0010_travelers_ford_explorer",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 100.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/ccc_online_0010_travelers_ford_explorer_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 100.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/ccc_online_0011_infinity_toyota_tacoma",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 50.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/ccc_online_0011_infinity_toyota_tacoma_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 50.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/ccc_online_0012_chubb_dodge_durango",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 100.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/ccc_online_0012_chubb_dodge_durango_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 0.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/coreweave_earnings_deck_q4fy25",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 85.7143,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/crh_results_deck_q4fy25",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 88.8889,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/dd1155_schedule_continuation_0007",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/erie_county_2017_single_audit",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/gov_clin_schedule_0033",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 100.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/gov_clin_schedule_0035",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/gov_clin_schedule_0038",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/gsa_mas_it_labor_0003",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/gsa_mas_it_labor_0005",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/gsa_mas_it_labor_0006",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/gsa_mas_it_labor_0007",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/gsa_mas_it_labor_0008",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/gsa_mas_it_labor_0010",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/gsa_mas_it_labor_0011",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/gsa_mas_it_labor_0014",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/gsa_mas_it_labor_0016",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/gsa_mas_it_labor_0018",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/gsa_mas_it_labor_0019",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/hpe_earnings_deck_q4fy25",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 22.2222,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/jackson_college_2024_federal_awards_audit",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/nport__advisors_inner_circle_fund",
+      "modified": true,
+      "word_f1": 100.0,
+      "page_f1": 100.0,
+      "precision": 100.0,
+      "recall": 100.0
+    },
+    {
+      "test_id": "medium/nport__dunham_funds",
+      "modified": false,
+      "word_f1": 95.8809,
+      "page_f1": 98.4714,
+      "precision": 95.9028,
+      "recall": 95.859
+    },
+    {
+      "test_id": "medium/nport__sei_etf_2025q4",
+      "modified": false,
+      "word_f1": 97.8997,
+      "page_f1": 98.7517,
+      "precision": 97.8997,
+      "recall": 97.8997
+    },
+    {
+      "test_id": "medium/q4-2025-earnings-press-release",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 0.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/real_bbb_service_list",
+      "modified": true,
+      "word_f1": 77.7455,
+      "page_f1": 99.9657,
+      "precision": 77.7778,
+      "recall": 77.7133
+    },
+    {
+      "test_id": "medium/real_bbb_service_list_corrupted",
+      "modified": false,
+      "word_f1": 30.5843,
+      "page_f1": 99.2104,
+      "precision": 30.597,
+      "recall": 30.5717
+    },
+    {
+      "test_id": "medium/real_blackrock_muni_bmn",
+      "modified": true,
+      "word_f1": 93.5833,
+      "page_f1": 97.3023,
+      "precision": 96.4339,
+      "recall": 90.8964
+    },
+    {
+      "test_id": "medium/real_blackrock_schedule_full",
+      "modified": true,
+      "word_f1": 85.8757,
+      "page_f1": 100.0,
+      "precision": 87.4191,
+      "recall": 84.3858
+    },
+    {
+      "test_id": "medium/real_cooke_co_tx_2024",
+      "modified": true,
+      "word_f1": 96.5111,
+      "page_f1": 96.8377,
+      "precision": 99.7761,
+      "recall": 93.4529
+    },
+    {
+      "test_id": "medium/real_dcd_sumf_full",
+      "modified": true,
+      "word_f1": 99.7613,
+      "page_f1": 100.0,
+      "precision": 99.7613,
+      "recall": 99.7613
+    },
+    {
+      "test_id": "medium/real_dcd_sumf_full_corrupted",
+      "modified": false,
+      "word_f1": 94.1035,
+      "page_f1": 96.1722,
+      "precision": 94.9029,
+      "recall": 93.3174
+    },
+    {
+      "test_id": "medium/real_enotes_deviations",
+      "modified": true,
+      "word_f1": 89.2927,
+      "page_f1": 98.7013,
+      "precision": 89.2927,
+      "recall": 89.2927
+    },
+    {
+      "test_id": "medium/real_enotes_deviations_corrupted",
+      "modified": false,
+      "word_f1": 72.5307,
+      "page_f1": 93.7799,
+      "precision": 72.5664,
+      "recall": 72.4951
+    },
+    {
+      "test_id": "medium/real_fidelity_northstar",
+      "modified": false,
+      "word_f1": 62.9079,
+      "page_f1": 72.1827,
+      "precision": 63.4421,
+      "recall": 62.3826
+    },
+    {
+      "test_id": "medium/real_franklin_sep_2025",
+      "modified": true,
+      "word_f1": 100.0,
+      "page_f1": 100.0,
+      "precision": 100.0,
+      "recall": 100.0
+    },
+    {
+      "test_id": "medium/real_penn_hills_pa_2023",
+      "modified": true,
+      "word_f1": 94.8083,
+      "page_f1": 96.6197,
+      "precision": 97.2462,
+      "recall": 92.4897
+    },
+    {
+      "test_id": "medium/real_pueblo_oct_2025",
+      "modified": true,
+      "word_f1": 100.0,
+      "page_f1": 100.0,
+      "precision": 100.0,
+      "recall": 100.0
+    },
+    {
+      "test_id": "medium/real_sm0801_dispositions_full",
+      "modified": false,
+      "word_f1": 100.0,
+      "page_f1": 100.0,
+      "precision": 100.0,
+      "recall": 100.0
+    },
+    {
+      "test_id": "medium/real_sm0801_dispositions_full_corrupted",
+      "modified": false,
+      "word_f1": 98.8646,
+      "page_f1": 99.1049,
+      "precision": 99.0376,
+      "recall": 98.6922
+    },
+    {
+      "test_id": "medium/real_vg_divappr_full",
+      "modified": true,
+      "word_f1": 99.9371,
+      "page_f1": 99.9816,
+      "precision": 99.9581,
+      "recall": 99.9161
+    },
+    {
+      "test_id": "medium/real_vg_divgrowth_full",
+      "modified": true,
+      "word_f1": 100.0,
+      "page_f1": 90.0901,
+      "precision": 100.0,
+      "recall": 100.0
+    },
+    {
+      "test_id": "medium/real_vg_equity_income_full",
+      "modified": false,
+      "word_f1": 100.0,
+      "page_f1": 100.0,
+      "precision": 100.0,
+      "recall": 100.0
+    },
+    {
+      "test_id": "medium/real_vg_esg_full",
+      "modified": true,
+      "word_f1": 99.4595,
+      "page_f1": 87.8357,
+      "precision": 99.639,
+      "recall": 99.2806
+    },
+    {
+      "test_id": "medium/real_vg_gcc_full",
+      "modified": true,
+      "word_f1": 99.8331,
+      "page_f1": 100.0,
+      "precision": 99.8331,
+      "recall": 99.8331
+    },
+    {
+      "test_id": "medium/real_vg_healthcare_full",
+      "modified": true,
+      "word_f1": 100.0,
+      "page_f1": 88.1773,
+      "precision": 100.0,
+      "recall": 100.0
+    },
+    {
+      "test_id": "medium/real_vg_megacap_full",
+      "modified": true,
+      "word_f1": 99.6466,
+      "page_f1": 99.8968,
+      "precision": 99.7642,
+      "recall": 99.5294
+    },
+    {
+      "test_id": "medium/real_vg_primecap_full",
+      "modified": true,
+      "word_f1": 99.9214,
+      "page_f1": 100.0,
+      "precision": 99.9214,
+      "recall": 99.9214
+    },
+    {
+      "test_id": "medium/real_vg_reit2_full",
+      "modified": true,
+      "word_f1": 99.663,
+      "page_f1": 92.6829,
+      "precision": 99.9035,
+      "recall": 99.4236
+    },
+    {
+      "test_id": "medium/real_vg_reit_full",
+      "modified": true,
+      "word_f1": 99.8576,
+      "page_f1": 100.0,
+      "precision": 100.0,
+      "recall": 99.7156
+    },
+    {
+      "test_id": "medium/real_wright_co_mn",
+      "modified": true,
+      "word_f1": 69.0747,
+      "page_f1": 77.8789,
+      "precision": 69.246,
+      "recall": 68.9042
+    },
+    {
+      "test_id": "medium/sched_i__akron_community_foundation_ty2024",
+      "modified": true,
+      "word_f1": 99.4032,
+      "page_f1": 99.8508,
+      "precision": 99.4328,
+      "recall": 99.3735
+    },
+    {
+      "test_id": "medium/sched_i__united_way_worldwide_ty2024",
+      "modified": true,
+      "word_f1": 99.4752,
+      "page_f1": 100.0,
+      "precision": 99.4752,
+      "recall": 99.4752
+    },
+    {
+      "test_id": "medium/schwab_dana_jones_2012",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/sec_13f_0031_loomis_sayles",
+      "modified": true,
+      "word_f1": 86.8883,
+      "page_f1": 94.3661,
+      "precision": 87.5536,
+      "recall": 86.2329
+    },
+    {
+      "test_id": "medium/sf1449_supplies_services_0003",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/sf1449_supplies_services_0046",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/sf1449_supplies_services_0047",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/smfg-kessan-tanshin-2024-ja",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 66.6667,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/sunoco_investor_deck_march_2026",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 0.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/synchrony_investor_deck_q1_2026",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 66.6667,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/sysco_earnings_deck_q2fy26",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 0.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/transunion_earnings_deck_q4fy25",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/united_way_san_antonio_fy23_single_audit",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "medium/veralto_earnings_deck_q4fy25",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 0.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/00581-2011-p0050",
+      "modified": false,
+      "word_f1": 66.6667,
+      "page_f1": 100.0,
+      "precision": 70.3704,
+      "recall": 63.3333
+    },
+    {
+      "test_id": "short/00581-2011-p0052",
+      "modified": false,
+      "word_f1": 73.0159,
+      "page_f1": 100.0,
+      "precision": 74.1935,
+      "recall": 71.875
+    },
+    {
+      "test_id": "short/00581-2011-p0098",
+      "modified": false,
+      "word_f1": 59.2593,
+      "page_f1": 100.0,
+      "precision": 84.2105,
+      "recall": 45.7143
+    },
+    {
+      "test_id": "short/00581-2011-p0102",
+      "modified": false,
+      "word_f1": 62.5,
+      "page_f1": 98.5915,
+      "precision": 71.4286,
+      "recall": 55.5556
+    },
+    {
+      "test_id": "short/02-10121 H-12 7-2-2024 F-22628",
+      "modified": true,
+      "word_f1": 69.3548,
+      "page_f1": 93.8776,
+      "precision": 74.1379,
+      "recall": 65.1515
+    },
+    {
+      "test_id": "short/07021-2016-p0014",
+      "modified": false,
+      "word_f1": 45.8333,
+      "page_f1": 100.0,
+      "precision": 52.381,
+      "recall": 40.7407
+    },
+    {
+      "test_id": "short/07021-2016-p0016",
+      "modified": true,
+      "word_f1": 43.9024,
+      "page_f1": 100.0,
+      "precision": 64.2857,
+      "recall": 33.3333
+    },
+    {
+      "test_id": "short/07021-2016-p0018",
+      "modified": true,
+      "word_f1": 46.8085,
+      "page_f1": 100.0,
+      "precision": 55.0,
+      "recall": 40.7407
+    },
+    {
+      "test_id": "short/07021-2016-p0026",
+      "modified": true,
+      "word_f1": 66.6667,
+      "page_f1": 100.0,
+      "precision": 76.1905,
+      "recall": 59.2593
+    },
+    {
+      "test_id": "short/07021-2016-p0029",
+      "modified": true,
+      "word_f1": 60.0,
+      "page_f1": 100.0,
+      "precision": 65.2174,
+      "recall": 55.5556
+    },
+    {
+      "test_id": "short/07021-2016-p0032",
+      "modified": false,
+      "word_f1": 54.1667,
+      "page_f1": 100.0,
+      "precision": 61.9048,
+      "recall": 48.1481
+    },
+    {
+      "test_id": "short/07021-2016-p0038",
+      "modified": false,
+      "word_f1": 83.3333,
+      "page_f1": 100.0,
+      "precision": 90.9091,
+      "recall": 76.9231
+    },
+    {
+      "test_id": "short/07021-2016-p0039",
+      "modified": true,
+      "word_f1": 100.0,
+      "page_f1": 100.0,
+      "precision": 100.0,
+      "recall": 100.0
+    },
+    {
+      "test_id": "short/07021-2016-p0040",
+      "modified": true,
+      "word_f1": 100.0,
+      "page_f1": 100.0,
+      "precision": 100.0,
+      "recall": 100.0
+    },
+    {
+      "test_id": "short/07021-2016-p0051",
+      "modified": false,
+      "word_f1": 92.3077,
+      "page_f1": 100.0,
+      "precision": 92.3077,
+      "recall": 92.3077
+    },
+    {
+      "test_id": "short/07021-2016-p0052",
+      "modified": true,
+      "word_f1": 100.0,
+      "page_f1": 100.0,
+      "precision": 100.0,
+      "recall": 100.0
+    },
+    {
+      "test_id": "short/07021-2016-p0053",
+      "modified": true,
+      "word_f1": 100.0,
+      "page_f1": 100.0,
+      "precision": 100.0,
+      "recall": 100.0
+    },
+    {
+      "test_id": "short/07021-2016-p0074",
+      "modified": true,
+      "word_f1": 48.0,
+      "page_f1": 100.0,
+      "precision": 66.6667,
+      "recall": 37.5
+    },
+    {
+      "test_id": "short/07021-2016-p0078",
+      "modified": false,
+      "word_f1": 45.4545,
+      "page_f1": 100.0,
+      "precision": 55.5556,
+      "recall": 38.4615
+    },
+    {
+      "test_id": "short/07021-2016-p0082",
+      "modified": false,
+      "word_f1": 47.0588,
+      "page_f1": 100.0,
+      "precision": 80.0,
+      "recall": 33.3333
+    },
+    {
+      "test_id": "short/08-15427 H-12 1-21-2003 F-01341",
+      "modified": true,
+      "word_f1": 76.0331,
+      "page_f1": 94.4444,
+      "precision": 82.1429,
+      "recall": 70.7692
+    },
+    {
+      "test_id": "short/08-20813 H-12 10-17-2008 F-01094A",
+      "modified": true,
+      "word_f1": 76.4228,
+      "page_f1": 94.5946,
+      "precision": 83.9286,
+      "recall": 70.1493
+    },
+    {
+      "test_id": "short/08-37943 H-12 09-25-2014 F-01249",
+      "modified": true,
+      "word_f1": 69.0909,
+      "page_f1": 91.5493,
+      "precision": 79.1667,
+      "recall": 61.2903
+    },
+    {
+      "test_id": "short/08-43259 H-12 3-18-2024 F-22737",
+      "modified": false,
+      "word_f1": 80.3419,
+      "page_f1": 92.3077,
+      "precision": 87.037,
+      "recall": 74.6032
+    },
+    {
+      "test_id": "short/08-51344 H-12 10-2-2023 F-22666",
+      "modified": true,
+      "word_f1": 81.6667,
+      "page_f1": 92.9577,
+      "precision": 85.9649,
+      "recall": 77.7778
+    },
+    {
+      "test_id": "short/13f__audent_global_2025q4",
+      "modified": true,
+      "word_f1": 100.0,
+      "page_f1": 100.0,
+      "precision": 100.0,
+      "recall": 100.0
+    },
+    {
+      "test_id": "short/13f__dedeker_financial_llc",
+      "modified": true,
+      "word_f1": 99.8024,
+      "page_f1": 100.0,
+      "precision": 99.8024,
+      "recall": 99.8024
+    },
+    {
+      "test_id": "short/13f__radnor_capital_management_llc",
+      "modified": false,
+      "word_f1": 99.9352,
+      "page_f1": 100.0,
+      "precision": 99.9352,
+      "recall": 99.9352
+    },
+    {
+      "test_id": "short/13f__sl_advisors_llc",
+      "modified": false,
+      "word_f1": 99.8024,
+      "page_f1": 100.0,
+      "precision": 99.8024,
+      "recall": 99.8024
+    },
+    {
+      "test_id": "short/2A-27-103150_116454",
+      "modified": true,
+      "word_f1": 22.5806,
+      "page_f1": 60.2564,
+      "precision": 28.0,
+      "recall": 18.9189
+    },
+    {
+      "test_id": "short/2A-9-136008_97695",
+      "modified": false,
+      "word_f1": 18.3486,
+      "page_f1": 42.4658,
+      "precision": 25.641,
+      "recall": 14.2857
+    },
+    {
+      "test_id": "short/2A-9-156032_107792",
+      "modified": true,
+      "word_f1": 25.7426,
+      "page_f1": 55.4054,
+      "precision": 34.2105,
+      "recall": 20.6349
+    },
+    {
+      "test_id": "short/2A-9-160248_109904",
+      "modified": false,
+      "word_f1": 21.3592,
+      "page_f1": 49.6644,
+      "precision": 29.7297,
+      "recall": 16.6667
+    },
+    {
+      "test_id": "short/2A-9-160258_109909",
+      "modified": false,
+      "word_f1": 42.2018,
+      "page_f1": 63.7681,
+      "precision": 46.0,
+      "recall": 38.9831
+    },
+    {
+      "test_id": "short/2A-9-160266_109913",
+      "modified": true,
+      "word_f1": 39.2157,
+      "page_f1": 64.2857,
+      "precision": 45.4545,
+      "recall": 34.4828
+    },
+    {
+      "test_id": "short/2A-9-160268_109914",
+      "modified": false,
+      "word_f1": 27.451,
+      "page_f1": 46.2687,
+      "precision": 30.4348,
+      "recall": 25.0
+    },
+    {
+      "test_id": "short/2A-9-160282_109921",
+      "modified": false,
+      "word_f1": 43.6364,
+      "page_f1": 54.2857,
+      "precision": 46.1538,
+      "recall": 41.3793
+    },
+    {
+      "test_id": "short/2A-9-160294_109927",
+      "modified": true,
+      "word_f1": 56.5217,
+      "page_f1": 50.4854,
+      "precision": 65.0,
+      "recall": 50.0
+    },
+    {
+      "test_id": "short/2A-9-160298_109929",
+      "modified": false,
+      "word_f1": 51.9231,
+      "page_f1": 63.3094,
+      "precision": 58.6957,
+      "recall": 46.5517
+    },
+    {
+      "test_id": "short/2A-9-160318_109939",
+      "modified": false,
+      "word_f1": 36.8932,
+      "page_f1": 52.5547,
+      "precision": 41.3043,
+      "recall": 33.3333
+    },
+    {
+      "test_id": "short/3N1AB7AP8FY283932_professional_valuation",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 69.5652,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/3N1AB7AP8FY283932_professional_valuation_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 47.619,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/593338187_200912_990PF-p0023",
+      "modified": false,
+      "word_f1": 88.4488,
+      "page_f1": 99.6721,
+      "precision": 89.3333,
+      "recall": 87.5817
+    },
+    {
+      "test_id": "short/593338187_200912_990PF-p0024",
+      "modified": true,
+      "word_f1": 74.3902,
+      "page_f1": 99.7067,
+      "precision": 77.707,
+      "recall": 71.345
+    },
+    {
+      "test_id": "short/593338187_200912_990PF-p0025",
+      "modified": true,
+      "word_f1": 81.8182,
+      "page_f1": 99.7067,
+      "precision": 84.9057,
+      "recall": 78.9474
+    },
+    {
+      "test_id": "short/593338187_200912_990PF-p0026",
+      "modified": true,
+      "word_f1": 88.8158,
+      "page_f1": 100.0,
+      "precision": 89.404,
+      "recall": 88.2353
+    },
+    {
+      "test_id": "short/593338187_200912_990PF-p0027",
+      "modified": true,
+      "word_f1": 82.5,
+      "page_f1": 100.0,
+      "precision": 83.5443,
+      "recall": 81.4815
+    },
+    {
+      "test_id": "short/593338187_200912_990PF-p0030",
+      "modified": true,
+      "word_f1": 78.806,
+      "page_f1": 99.7015,
+      "precision": 79.0419,
+      "recall": 78.5714
+    },
+    {
+      "test_id": "short/593338187_200912_990PF-p0031",
+      "modified": true,
+      "word_f1": 83.9437,
+      "page_f1": 99.4413,
+      "precision": 85.1429,
+      "recall": 82.7778
+    },
+    {
+      "test_id": "short/593338187_200912_990PF-p0032",
+      "modified": true,
+      "word_f1": 79.7468,
+      "page_f1": 99.6865,
+      "precision": 80.7692,
+      "recall": 78.75
+    },
+    {
+      "test_id": "short/593338187_200912_990PF-p0033",
+      "modified": true,
+      "word_f1": 82.5843,
+      "page_f1": 100.0,
+      "precision": 83.5227,
+      "recall": 81.6667
+    },
+    {
+      "test_id": "short/593338187_200912_990PF-p0034",
+      "modified": true,
+      "word_f1": 89.3855,
+      "page_f1": 99.7214,
+      "precision": 89.8876,
+      "recall": 88.8889
+    },
+    {
+      "test_id": "short/593338187_200912_990PF-p0035",
+      "modified": true,
+      "word_f1": 91.3649,
+      "page_f1": 99.7214,
+      "precision": 91.6201,
+      "recall": 91.1111
+    },
+    {
+      "test_id": "short/593338187_200912_990PF-p0036",
+      "modified": true,
+      "word_f1": 84.3575,
+      "page_f1": 99.4413,
+      "precision": 84.8315,
+      "recall": 83.8889
+    },
+    {
+      "test_id": "short/593338187_200912_990PF-p0037",
+      "modified": true,
+      "word_f1": 88.9552,
+      "page_f1": 98.5163,
+      "precision": 90.8537,
+      "recall": 87.1345
+    },
+    {
+      "test_id": "short/593338187_200912_990PF-p0038",
+      "modified": true,
+      "word_f1": 88.8268,
+      "page_f1": 99.7214,
+      "precision": 89.3258,
+      "recall": 88.3333
+    },
+    {
+      "test_id": "short/7C-02014 H-12 5-20-2013 F-01083",
+      "modified": false,
+      "word_f1": 71.6418,
+      "page_f1": 96.0,
+      "precision": 73.8462,
+      "recall": 69.5652
+    },
+    {
+      "test_id": "short/7C-04947 H-12 12-7-2009 F-01079",
+      "modified": true,
+      "word_f1": 69.4215,
+      "page_f1": 85.7143,
+      "precision": 77.7778,
+      "recall": 62.6866
+    },
+    {
+      "test_id": "short/H9-53-1621_1656",
+      "modified": true,
+      "word_f1": 84.7826,
+      "page_f1": 96.2264,
+      "precision": 92.8571,
+      "recall": 78.0
+    },
+    {
+      "test_id": "short/H9-53-2119_2144",
+      "modified": true,
+      "word_f1": 45.0,
+      "page_f1": 94.5455,
+      "precision": 62.069,
+      "recall": 35.2941
+    },
+    {
+      "test_id": "short/H9-53-23_23",
+      "modified": true,
+      "word_f1": 46.6667,
+      "page_f1": 97.2973,
+      "precision": 58.3333,
+      "recall": 38.8889
+    },
+    {
+      "test_id": "short/H9-53-24_24",
+      "modified": true,
+      "word_f1": 40.9091,
+      "page_f1": 94.4444,
+      "precision": 48.6486,
+      "recall": 35.2941
+    },
+    {
+      "test_id": "short/H9-53-30_30",
+      "modified": true,
+      "word_f1": 59.5238,
+      "page_f1": 96.2963,
+      "precision": 75.7576,
+      "recall": 49.0196
+    },
+    {
+      "test_id": "short/H9-53-319_311",
+      "modified": true,
+      "word_f1": 49.4118,
+      "page_f1": 93.4579,
+      "precision": 60.0,
+      "recall": 42.0
+    },
+    {
+      "test_id": "short/H9-53-31_31",
+      "modified": true,
+      "word_f1": 60.4651,
+      "page_f1": 96.2963,
+      "precision": 74.2857,
+      "recall": 50.9804
+    },
+    {
+      "test_id": "short/H9-53-32_32",
+      "modified": true,
+      "word_f1": 50.0,
+      "page_f1": 97.2973,
+      "precision": 60.5263,
+      "recall": 42.5926
+    },
+    {
+      "test_id": "short/H9-53-514_1043",
+      "modified": false,
+      "word_f1": 55.6701,
+      "page_f1": 96.8254,
+      "precision": 72.973,
+      "recall": 45.0
+    },
+    {
+      "test_id": "short/H9-53-59_60",
+      "modified": true,
+      "word_f1": 56.1798,
+      "page_f1": 97.2973,
+      "precision": 71.4286,
+      "recall": 46.2963
+    },
+    {
+      "test_id": "short/H9-53-7226_7240",
+      "modified": true,
+      "word_f1": 50.0,
+      "page_f1": 97.2973,
+      "precision": 62.8571,
+      "recall": 41.5094
+    },
+    {
+      "test_id": "short/H9-53-7234_7248",
+      "modified": true,
+      "word_f1": 51.7647,
+      "page_f1": 94.5455,
+      "precision": 64.7059,
+      "recall": 43.1373
+    },
+    {
+      "test_id": "short/H9-53-7239_7253",
+      "modified": true,
+      "word_f1": 51.1111,
+      "page_f1": 94.5455,
+      "precision": 58.9744,
+      "recall": 45.098
+    },
+    {
+      "test_id": "short/H9-53-9349_9509",
+      "modified": true,
+      "word_f1": 40.9091,
+      "page_f1": 96.4286,
+      "precision": 51.4286,
+      "recall": 33.9623
+    },
+    {
+      "test_id": "short/H9-53-9386_9545",
+      "modified": false,
+      "word_f1": 57.5,
+      "page_f1": 95.4128,
+      "precision": 82.1429,
+      "recall": 44.2308
+    },
+    {
+      "test_id": "short/P18-28-1547",
+      "modified": false,
+      "word_f1": 56.338,
+      "page_f1": 73.3945,
+      "precision": 62.5,
+      "recall": 51.2821
+    },
+    {
+      "test_id": "short/P18-28-21_77",
+      "modified": false,
+      "word_f1": 47.0588,
+      "page_f1": 74.3363,
+      "precision": 61.5385,
+      "recall": 38.0952
+    },
+    {
+      "test_id": "short/P18-28-35_39",
+      "modified": false,
+      "word_f1": 62.1622,
+      "page_f1": 75.4386,
+      "precision": 74.1935,
+      "recall": 53.4884
+    },
+    {
+      "test_id": "short/P18-28-43_44",
+      "modified": false,
+      "word_f1": 62.3377,
+      "page_f1": 74.5455,
+      "precision": 66.6667,
+      "recall": 58.5366
+    },
+    {
+      "test_id": "short/P18-28-44_45",
+      "modified": false,
+      "word_f1": 60.6061,
+      "page_f1": 67.9612,
+      "precision": 64.5161,
+      "recall": 57.1429
+    },
+    {
+      "test_id": "short/P18-28-50_51",
+      "modified": false,
+      "word_f1": 25.3968,
+      "page_f1": 72.8814,
+      "precision": 40.0,
+      "recall": 18.6047
+    },
+    {
+      "test_id": "short/P18-28-52_53",
+      "modified": false,
+      "word_f1": 24.1379,
+      "page_f1": 71.028,
+      "precision": 35.0,
+      "recall": 18.4211
+    },
+    {
+      "test_id": "short/P18-28-54_55",
+      "modified": false,
+      "word_f1": 53.3333,
+      "page_f1": 69.8113,
+      "precision": 69.5652,
+      "recall": 43.2432
+    },
+    {
+      "test_id": "short/P18-28-55_56",
+      "modified": false,
+      "word_f1": 11.3208,
+      "page_f1": 72.2222,
+      "precision": 21.4286,
+      "recall": 7.6923
+    },
+    {
+      "test_id": "short/P18-28-56_57",
+      "modified": false,
+      "word_f1": 45.4545,
+      "page_f1": 69.8113,
+      "precision": 51.7241,
+      "recall": 40.5405
+    },
+    {
+      "test_id": "short/P18-28-62_62",
+      "modified": false,
+      "word_f1": 47.0588,
+      "page_f1": 71.028,
+      "precision": 53.3333,
+      "recall": 42.1053
+    },
+    {
+      "test_id": "short/P4-27-51022_74198",
+      "modified": true,
+      "word_f1": 80.4124,
+      "page_f1": 75.9259,
+      "precision": 82.9787,
+      "recall": 78.0
+    },
+    {
+      "test_id": "short/P4-27-51094_74234",
+      "modified": true,
+      "word_f1": 79.1209,
+      "page_f1": 88.6792,
+      "precision": 85.7143,
+      "recall": 73.4694
+    },
+    {
+      "test_id": "short/P4-27-51220_74625",
+      "modified": true,
+      "word_f1": 85.1064,
+      "page_f1": 85.7143,
+      "precision": 86.9565,
+      "recall": 83.3333
+    },
+    {
+      "test_id": "short/P4-27-51300_74665",
+      "modified": false,
+      "word_f1": 85.3659,
+      "page_f1": 94.7368,
+      "precision": 92.1053,
+      "recall": 79.5455
+    },
+    {
+      "test_id": "short/P4-27-51318_74674",
+      "modified": true,
+      "word_f1": 85.3333,
+      "page_f1": 89.8876,
+      "precision": 88.8889,
+      "recall": 82.0513
+    },
+    {
+      "test_id": "short/P4-83-199_29",
+      "modified": true,
+      "word_f1": 82.9268,
+      "page_f1": 92.7835,
+      "precision": 89.4737,
+      "recall": 77.2727
+    },
+    {
+      "test_id": "short/P4-83-201_30",
+      "modified": true,
+      "word_f1": 78.6517,
+      "page_f1": 92.4528,
+      "precision": 85.3659,
+      "recall": 72.9167
+    },
+    {
+      "test_id": "short/P4-83-211_35",
+      "modified": true,
+      "word_f1": 74.6988,
+      "page_f1": 93.0693,
+      "precision": 83.7838,
+      "recall": 67.3913
+    },
+    {
+      "test_id": "short/P4-83-433_147",
+      "modified": false,
+      "word_f1": 73.9726,
+      "page_f1": 95.5556,
+      "precision": 87.0968,
+      "recall": 64.2857
+    },
+    {
+      "test_id": "short/P4-83-443_152",
+      "modified": true,
+      "word_f1": 88.0,
+      "page_f1": 93.3333,
+      "precision": 97.0588,
+      "recall": 80.4878
+    },
+    {
+      "test_id": "short/P4-83-449_155",
+      "modified": true,
+      "word_f1": 60.274,
+      "page_f1": 99.0099,
+      "precision": 91.6667,
+      "recall": 44.898
+    },
+    {
+      "test_id": "short/P4-83-457_159",
+      "modified": false,
+      "word_f1": 84.3373,
+      "page_f1": 84.3137,
+      "precision": 89.7436,
+      "recall": 79.5455
+    },
+    {
+      "test_id": "short/P4-83-631_246",
+      "modified": true,
+      "word_f1": 81.4815,
+      "page_f1": 70.9677,
+      "precision": 86.8421,
+      "recall": 76.7442
+    },
+    {
+      "test_id": "short/P4-83-693_277",
+      "modified": false,
+      "word_f1": 82.9268,
+      "page_f1": 92.4731,
+      "precision": 85.0,
+      "recall": 80.9524
+    },
+    {
+      "test_id": "short/P4-Historical Single Signature83-10963_5480",
+      "modified": false,
+      "word_f1": 81.0811,
+      "page_f1": 91.1111,
+      "precision": 88.2353,
+      "recall": 75.0
+    },
+    {
+      "test_id": "short/P4-Historical Single Signature83-223_41",
+      "modified": false,
+      "word_f1": 68.6567,
+      "page_f1": 91.6667,
+      "precision": 95.8333,
+      "recall": 53.4884
+    },
+    {
+      "test_id": "short/P4-Historical Single Signature83-257_58",
+      "modified": false,
+      "word_f1": 57.1429,
+      "page_f1": 92.4731,
+      "precision": 85.7143,
+      "recall": 42.8571
+    },
+    {
+      "test_id": "short/REDACTED_2007_NISSAN_MURANO_professional_valuation",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 61.5385,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/ROGER-WINFIELD-SCOTT-FOUNDATION-INC-2009-580655183-p0023",
+      "modified": false,
+      "word_f1": 89.9696,
+      "page_f1": 100.0,
+      "precision": 92.5,
+      "recall": 87.574
+    },
+    {
+      "test_id": "short/ROGER-WINFIELD-SCOTT-FOUNDATION-INC-2009-580655183-p0024",
+      "modified": true,
+      "word_f1": 86.4407,
+      "page_f1": 99.723,
+      "precision": 88.4393,
+      "recall": 84.5304
+    },
+    {
+      "test_id": "short/ROGER-WINFIELD-SCOTT-FOUNDATION-INC-2009-580655183-p0025",
+      "modified": true,
+      "word_f1": 94.6058,
+      "page_f1": 99.1803,
+      "precision": 96.6102,
+      "recall": 92.6829
+    },
+    {
+      "test_id": "short/W-1-9-258_260",
+      "modified": true,
+      "word_f1": 88.0597,
+      "page_f1": 97.8723,
+      "precision": 90.7692,
+      "recall": 85.5072
+    },
+    {
+      "test_id": "short/W-1-9-260_262",
+      "modified": true,
+      "word_f1": 86.1538,
+      "page_f1": 97.8723,
+      "precision": 91.8033,
+      "recall": 81.1594
+    },
+    {
+      "test_id": "short/W-1-9-261_263",
+      "modified": true,
+      "word_f1": 69.7674,
+      "page_f1": 98.5915,
+      "precision": 76.2712,
+      "recall": 64.2857
+    },
+    {
+      "test_id": "short/W14-2nd Sub 53269 Revised W14",
+      "modified": true,
+      "word_f1": 83.908,
+      "page_f1": 64.539,
+      "precision": 86.9048,
+      "recall": 81.1111
+    },
+    {
+      "test_id": "short/W14-2nd Sub 55975 Revised W14 ADMIN REVIEWED",
+      "modified": true,
+      "word_f1": 81.6092,
+      "page_f1": 64.7887,
+      "precision": 85.5422,
+      "recall": 78.022
+    },
+    {
+      "test_id": "short/W14-52342_W14",
+      "modified": true,
+      "word_f1": 32.0,
+      "page_f1": 65.9574,
+      "precision": 41.3793,
+      "recall": 26.087
+    },
+    {
+      "test_id": "short/W14-53632_W14 ADMIN REVIEWED",
+      "modified": true,
+      "word_f1": 61.8182,
+      "page_f1": 65.4804,
+      "precision": 69.863,
+      "recall": 55.4348
+    },
+    {
+      "test_id": "short/W14-54500_W14 admin reviewed",
+      "modified": true,
+      "word_f1": 73.2984,
+      "page_f1": 70.1031,
+      "precision": 78.6517,
+      "recall": 68.6275
+    },
+    {
+      "test_id": "short/W14-55311_W14 reviewed",
+      "modified": true,
+      "word_f1": 70.5882,
+      "page_f1": 64.539,
+      "precision": 75.9494,
+      "recall": 65.9341
+    },
+    {
+      "test_id": "short/W14-55711_W14 ADMIN REVIEWED",
+      "modified": true,
+      "word_f1": 70.1754,
+      "page_f1": 65.0177,
+      "precision": 75.9494,
+      "recall": 65.2174
+    },
+    {
+      "test_id": "short/W14-57077_W14",
+      "modified": true,
+      "word_f1": 75.1381,
+      "page_f1": 66.6667,
+      "precision": 78.1609,
+      "recall": 72.3404
+    },
+    {
+      "test_id": "short/W14-57728_W14_REVISED",
+      "modified": true,
+      "word_f1": 61.5385,
+      "page_f1": 68.6047,
+      "precision": 66.0194,
+      "recall": 57.6271
+    },
+    {
+      "test_id": "short/W14-58025_W14 Admin Reviewed",
+      "modified": true,
+      "word_f1": 80.2139,
+      "page_f1": 68.0702,
+      "precision": 83.3333,
+      "recall": 77.3196
+    },
+    {
+      "test_id": "short/W14-58509_W14 2nd sub revised",
+      "modified": true,
+      "word_f1": 92.5926,
+      "page_f1": 66.4688,
+      "precision": 96.1538,
+      "recall": 89.2857
+    },
+    {
+      "test_id": "short/W14-58549_W14",
+      "modified": true,
+      "word_f1": 74.1117,
+      "page_f1": 65.6627,
+      "precision": 82.0225,
+      "recall": 67.5926
+    },
+    {
+      "test_id": "short/W14-Atascosa SWD Well No. 4 - W-14 (Updated 01.22.2025)",
+      "modified": true,
+      "word_f1": 82.0513,
+      "page_f1": 61.0909,
+      "precision": 87.6712,
+      "recall": 77.1084
+    },
+    {
+      "test_id": "short/W2-27-216874_212740",
+      "modified": true,
+      "word_f1": 33.3333,
+      "page_f1": 41.6667,
+      "precision": 40.3226,
+      "recall": 28.4091
+    },
+    {
+      "test_id": "short/W2-27-217184_213122",
+      "modified": true,
+      "word_f1": 50.2793,
+      "page_f1": 76.5517,
+      "precision": 55.5556,
+      "recall": 45.9184
+    },
+    {
+      "test_id": "short/W2-27-217314_213200",
+      "modified": false,
+      "word_f1": 26.8908,
+      "page_f1": 39.5257,
+      "precision": 37.2093,
+      "recall": 21.0526
+    },
+    {
+      "test_id": "short/W2-27-217884_213729",
+      "modified": true,
+      "word_f1": 38.3562,
+      "page_f1": 66.9261,
+      "precision": 48.2759,
+      "recall": 31.8182
+    },
+    {
+      "test_id": "short/WVWJK73C19P047779_professional_valuation",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 63.6364,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/WVWJK73C19P047779_professional_valuation_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 57.1429,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/YV4952BL2C1140915_professional_valuation",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 42.8571,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/YV4952BL2C1140915_professional_valuation_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 0.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/aclu_cdwg_invoice",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 100.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/arif-2021",
+      "modified": true,
+      "word_f1": 59.8039,
+      "page_f1": 81.3725,
+      "precision": 63.5417,
+      "recall": 56.4815
+    },
+    {
+      "test_id": "short/arif-2022",
+      "modified": true,
+      "word_f1": 69.5238,
+      "page_f1": 84.7619,
+      "precision": 73.7374,
+      "recall": 65.7658
+    },
+    {
+      "test_id": "short/arif-2024",
+      "modified": true,
+      "word_f1": 64.4068,
+      "page_f1": 82.2034,
+      "precision": 71.6981,
+      "recall": 58.4615
+    },
+    {
+      "test_id": "short/bianco-2024",
+      "modified": true,
+      "word_f1": 63.5452,
+      "page_f1": 86.2876,
+      "precision": 65.9722,
+      "recall": 61.2903
+    },
+    {
+      "test_id": "short/brand_price_list_lifescience_2024",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/brand_price_list_lifescience_2024_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/budget_appendix_doe",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/budget_appendix_legis",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/ca_rad_crossover_inpatient_p5",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/ca_rad_crossover_inpatient_p5_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/ca_rad_crossover_outpatient_p5",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/ca_rad_crossover_outpatient_p5_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/caterpillar_spec_sheet_312c_excavator",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/caterpillar_spec_sheet_312c_excavator_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/caterpillar_spec_sheet_330_excavator",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/caterpillar_spec_sheet_330_excavator_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/cbp_7501_continuation_0001",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/cbp_7501_continuation_0002",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/cbp_7501_continuation_0007",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/cbp_7501_continuation_0016",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/cbp_7501_continuation_0018",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 82.6667,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/ccc_online_0005_american_family_chevrolet_sonic",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 66.6667,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/ccc_online_0005_american_family_chevrolet_sonic_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 66.6667,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/ccc_online_0006_esurance_toyota_rav4",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 80.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/ccc_online_0006_esurance_toyota_rav4_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 80.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/census_statab",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/census_statab_12s0035",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/census_statab_12s0711",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/census_statab_employment",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/census_statab_income_by_state",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/cfpb_closing-disclosure_H25E",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/cfpb_closing-disclosure_H25E_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/cfpb_closing-disclosure_H25F",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/cfpb_closing-disclosure_H25F_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/cfpb_closing-disclosure_filled-sample",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/cfpb_closing-disclosure_filled-sample_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/dc-pepco-residential-bill",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/dd1155_schedule_continuation_0002",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/dd1155_schedule_continuation_0008",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/fidelity_0002_sample",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/fort_bend_operativeiq_invoice",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 100.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/golden_corral_receipt_refugio_county_auditor",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 100.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/grafton_isotrope_invoice_19503",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 0.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/gsa_mas_it_labor_0004",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/gsa_mas_it_labor_0020",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/h5Filing-45659-1",
+      "modified": false,
+      "word_f1": 96.9697,
+      "page_f1": 97.0588,
+      "precision": 96.9697,
+      "recall": 96.9697
+    },
+    {
+      "test_id": "short/h5Filing-45884-1",
+      "modified": true,
+      "word_f1": 100.0,
+      "page_f1": 94.5205,
+      "precision": 100.0,
+      "recall": 100.0
+    },
+    {
+      "test_id": "short/h5Filing-45887-1",
+      "modified": true,
+      "word_f1": 98.5507,
+      "page_f1": 94.5205,
+      "precision": 98.5507,
+      "recall": 98.5507
+    },
+    {
+      "test_id": "short/h5Filing-45919-1",
+      "modified": true,
+      "word_f1": 91.5033,
+      "page_f1": 95.0617,
+      "precision": 92.1053,
+      "recall": 90.9091
+    },
+    {
+      "test_id": "short/h5Filing-46302-1",
+      "modified": true,
+      "word_f1": 84.0909,
+      "page_f1": 97.2376,
+      "precision": 84.0909,
+      "recall": 84.0909
+    },
+    {
+      "test_id": "short/h5Filing-46383-1",
+      "modified": true,
+      "word_f1": 99.2,
+      "page_f1": 92.6471,
+      "precision": 100.0,
+      "recall": 98.4127
+    },
+    {
+      "test_id": "short/h5Filing-46384-1",
+      "modified": true,
+      "word_f1": 93.6508,
+      "page_f1": 92.6471,
+      "precision": 93.6508,
+      "recall": 93.6508
+    },
+    {
+      "test_id": "short/h5Filing-46780-1",
+      "modified": true,
+      "word_f1": 95.082,
+      "page_f1": 91.0448,
+      "precision": 95.082,
+      "recall": 95.082
+    },
+    {
+      "test_id": "short/h5Filing-47175-1",
+      "modified": true,
+      "word_f1": 95.7143,
+      "page_f1": 95.2381,
+      "precision": 95.7143,
+      "recall": 95.7143
+    },
+    {
+      "test_id": "short/h5Filing-48982-1",
+      "modified": true,
+      "word_f1": 95.5882,
+      "page_f1": 93.7931,
+      "precision": 95.5882,
+      "recall": 95.5882
+    },
+    {
+      "test_id": "short/h5Filing-49070-1",
+      "modified": true,
+      "word_f1": 92.7536,
+      "page_f1": 93.2432,
+      "precision": 92.7536,
+      "recall": 92.7536
+    },
+    {
+      "test_id": "short/h5Filing-50745-2",
+      "modified": false,
+      "word_f1": 97.1429,
+      "page_f1": 95.2381,
+      "precision": 97.1429,
+      "recall": 97.1429
+    },
+    {
+      "test_id": "short/h5Filing-66006-1",
+      "modified": false,
+      "word_f1": 98.5507,
+      "page_f1": 93.2432,
+      "precision": 98.5507,
+      "recall": 98.5507
+    },
+    {
+      "test_id": "short/hingham-grainger-invoice",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 100.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/hingham-wbmason-invoice",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 0.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/hingham_lowes_receipt",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/lancaster_county_ne_requisition_po_husker_steel",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/lancaster_county_ne_requisition_po_husker_steel_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/mcdonalds_receipt_chicago_documentcloud",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/mission-tx-tyler-invoice",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/ms_medicaid_ra_adjustments",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/ms_medicaid_ra_adjustments_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/ms_medicaid_ra_paid_denied_claims",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/ms_medicaid_ra_paid_denied_claims_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/nport__bullfinch_fund_inc",
+      "modified": true,
+      "word_f1": 100.0,
+      "page_f1": 100.0,
+      "precision": 100.0,
+      "recall": 100.0
+    },
+    {
+      "test_id": "short/nport__gabelli_growth_fund_2025q4",
+      "modified": true,
+      "word_f1": 100.0,
+      "page_f1": 100.0,
+      "precision": 100.0,
+      "recall": 100.0
+    },
+    {
+      "test_id": "short/nport__oak_associates_funds",
+      "modified": true,
+      "word_f1": 100.0,
+      "page_f1": 100.0,
+      "precision": 100.0,
+      "recall": 100.0
+    },
+    {
+      "test_id": "short/oklahoma_county_purchase_order_avl_systems",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 100.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/oklahoma_county_purchase_order_avl_systems_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 100.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/passcoag-2020-w2-p0002-r1",
+      "modified": false,
+      "word_f1": 61.5385,
+      "page_f1": 100.0,
+      "precision": 69.5652,
+      "recall": 55.1724
+    },
+    {
+      "test_id": "short/passcoag-2020-w2-p0002-r2",
+      "modified": false,
+      "word_f1": 57.7778,
+      "page_f1": 100.0,
+      "precision": 65.0,
+      "recall": 52.0
+    },
+    {
+      "test_id": "short/passcoag-2020-w2-p0002-r3",
+      "modified": false,
+      "word_f1": 64.0,
+      "page_f1": 100.0,
+      "precision": 76.1905,
+      "recall": 55.1724
+    },
+    {
+      "test_id": "short/passcoag-2020-w2-p0002-r4",
+      "modified": false,
+      "word_f1": 54.5455,
+      "page_f1": 100.0,
+      "precision": 70.5882,
+      "recall": 44.4444
+    },
+    {
+      "test_id": "short/passcoag-2020-w2-p0003-r1",
+      "modified": false,
+      "word_f1": 65.3061,
+      "page_f1": 100.0,
+      "precision": 80.0,
+      "recall": 55.1724
+    },
+    {
+      "test_id": "short/passcoag-2020-w2-p0003-r2",
+      "modified": false,
+      "word_f1": 47.8261,
+      "page_f1": 100.0,
+      "precision": 57.8947,
+      "recall": 40.7407
+    },
+    {
+      "test_id": "short/passcoag-2020-w2-p0003-r3",
+      "modified": false,
+      "word_f1": 68.0851,
+      "page_f1": 100.0,
+      "precision": 80.0,
+      "recall": 59.2593
+    },
+    {
+      "test_id": "short/passcoag-2020-w2-p0003-r4",
+      "modified": false,
+      "word_f1": 66.6667,
+      "page_f1": 100.0,
+      "precision": 77.2727,
+      "recall": 58.6207
+    },
+    {
+      "test_id": "short/passcoag-2020-w2-p0004-r1",
+      "modified": false,
+      "word_f1": 79.2453,
+      "page_f1": 100.0,
+      "precision": 87.5,
+      "recall": 72.4138
+    },
+    {
+      "test_id": "short/passcoag-2020-w2-p0004-r2",
+      "modified": false,
+      "word_f1": 69.3878,
+      "page_f1": 100.0,
+      "precision": 85.0,
+      "recall": 58.6207
+    },
+    {
+      "test_id": "short/passcoag-2020-w2-p0004-r3",
+      "modified": false,
+      "word_f1": 66.6667,
+      "page_f1": 100.0,
+      "precision": 77.2727,
+      "recall": 58.6207
+    },
+    {
+      "test_id": "short/passcoag-2020-w2-p0004-r4",
+      "modified": false,
+      "word_f1": 76.9231,
+      "page_f1": 100.0,
+      "precision": 86.9565,
+      "recall": 68.9655
+    },
+    {
+      "test_id": "short/passcoag-2020-w2-p0005-r1",
+      "modified": false,
+      "word_f1": 45.4545,
+      "page_f1": 100.0,
+      "precision": 66.6667,
+      "recall": 34.4828
+    },
+    {
+      "test_id": "short/passcoag-2020-w2-p0005-r2",
+      "modified": false,
+      "word_f1": 65.3061,
+      "page_f1": 100.0,
+      "precision": 80.0,
+      "recall": 55.1724
+    },
+    {
+      "test_id": "short/passcoag-2020-w2-p0005-r3",
+      "modified": false,
+      "word_f1": 56.0,
+      "page_f1": 100.0,
+      "precision": 66.6667,
+      "recall": 48.2759
+    },
+    {
+      "test_id": "short/passcoag-2020-w2-p0005-r4",
+      "modified": false,
+      "word_f1": 65.3061,
+      "page_f1": 100.0,
+      "precision": 80.0,
+      "recall": 55.1724
+    },
+    {
+      "test_id": "short/passcoag-2020-w2-p0006-r1",
+      "modified": false,
+      "word_f1": 66.6667,
+      "page_f1": 100.0,
+      "precision": 77.2727,
+      "recall": 58.6207
+    },
+    {
+      "test_id": "short/passcoag-2020-w2-p0006-r2",
+      "modified": false,
+      "word_f1": 55.3191,
+      "page_f1": 100.0,
+      "precision": 72.2222,
+      "recall": 44.8276
+    },
+    {
+      "test_id": "short/passcoag-2020-w2-p0006-r3",
+      "modified": false,
+      "word_f1": 76.9231,
+      "page_f1": 100.0,
+      "precision": 86.9565,
+      "recall": 68.9655
+    },
+    {
+      "test_id": "short/passcoag-2020-w2-p0006-r4",
+      "modified": false,
+      "word_f1": 68.0,
+      "page_f1": 100.0,
+      "precision": 80.9524,
+      "recall": 58.6207
+    },
+    {
+      "test_id": "short/pershing_0001",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/ppl-two-bill-example",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 0.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/real_clinton_property_25_11073",
+      "modified": true,
+      "word_f1": 76.4912,
+      "page_f1": 99.6825,
+      "precision": 76.7606,
+      "recall": 76.2238
+    },
+    {
+      "test_id": "short/real_clinton_property_25_11073_corrupted",
+      "modified": false,
+      "word_f1": 57.554,
+      "page_f1": 98.7342,
+      "precision": 59.2593,
+      "recall": 55.9441
+    },
+    {
+      "test_id": "short/real_franklin_aug_2025",
+      "modified": true,
+      "word_f1": 100.0,
+      "page_f1": 100.0,
+      "precision": 100.0,
+      "recall": 100.0
+    },
+    {
+      "test_id": "short/real_franklin_nov_2025",
+      "modified": true,
+      "word_f1": 100.0,
+      "page_f1": 100.0,
+      "precision": 100.0,
+      "recall": 100.0
+    },
+    {
+      "test_id": "short/real_wyo_Goshen_2024",
+      "modified": false,
+      "word_f1": 100.0,
+      "page_f1": 100.0,
+      "precision": 100.0,
+      "recall": 100.0
+    },
+    {
+      "test_id": "short/real_wyo_Niobrara_2024",
+      "modified": false,
+      "word_f1": 100.0,
+      "page_f1": 100.0,
+      "precision": 100.0,
+      "recall": 100.0
+    },
+    {
+      "test_id": "short/real_wyo_Weston_2024",
+      "modified": true,
+      "word_f1": 100.0,
+      "page_f1": 100.0,
+      "precision": 100.0,
+      "recall": 100.0
+    },
+    {
+      "test_id": "short/sched_i__after_violence_project_ty2024",
+      "modified": false,
+      "word_f1": 93.9394,
+      "page_f1": 100.0,
+      "precision": 93.9394,
+      "recall": 93.9394
+    },
+    {
+      "test_id": "short/sched_i__idaho_humanities_council_inc_ty2023",
+      "modified": true,
+      "word_f1": 95.0,
+      "page_f1": 100.0,
+      "precision": 95.0,
+      "recall": 95.0
+    },
+    {
+      "test_id": "short/sched_i__rotary_club_ty2024",
+      "modified": false,
+      "word_f1": 97.1429,
+      "page_f1": 100.0,
+      "precision": 97.1429,
+      "recall": 97.1429
+    },
+    {
+      "test_id": "short/sched_i__the_women_s_foundation_of_colorado_inc_ty2024",
+      "modified": true,
+      "word_f1": 96.4819,
+      "page_f1": 99.6802,
+      "precision": 96.4819,
+      "recall": 96.4819
+    },
+    {
+      "test_id": "short/sec_13f_0009_coatue_management",
+      "modified": true,
+      "word_f1": 99.882,
+      "page_f1": 99.9292,
+      "precision": 99.9528,
+      "recall": 99.8113
+    },
+    {
+      "test_id": "short/sec_13f_0019_soros_fund_management",
+      "modified": true,
+      "word_f1": 99.8791,
+      "page_f1": 99.9827,
+      "precision": 99.8963,
+      "recall": 99.8618
+    },
+    {
+      "test_id": "short/southampton-ny-york-env-invoice",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 66.6667,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/stephenville-axon-invoice",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 57.1429,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/texas_facilities_commission_purchase_order_shelton-keller",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 100.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/texas_facilities_commission_purchase_order_shelton-keller_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": 100.0,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/ti_spec_sheet_ne555_timer",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/ti_spec_sheet_ne555_timer_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/uillinois_rate_card_carpool_2024",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/uillinois_rate_card_carpool_2024_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/utah_fleet_rate_schedule_fy2024",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/utah_fleet_rate_schedule_fy2024_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/viega_price_list_propress_2026",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/viega_price_list_propress_2026_corrupted",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "test_id": "short/we-energies-sample-bill",
+      "modified": false,
+      "word_f1": null,
+      "page_f1": null,
+      "precision": null,
+      "recall": null
+    }
+  ]
+}

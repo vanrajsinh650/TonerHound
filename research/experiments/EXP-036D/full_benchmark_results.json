@@ -1,0 +1,33 @@
+{
+  "experiment": "EXP-036D",
+  "description": "Full 370-Document Official Benchmark with Deterministic Visual Provider Policy A/D",
+  "timestamp": "2026-10-03T08:23:25.784036+00:00",
+  "total_documents": 370,
+  "overall_metrics": {
+    "word_grounding_f1": 56.823654127406634,
+    "word_grounding_precision": 62.180977536719936,
+    "word_grounding_recall": 53.55216437646969,
+    "page_grounding_f1": 81.69545278395928,
+    "baseline_word_grounding_f1": 56.047665608944754,
+    "baseline_page_grounding_f1": 81.66390206483347,
+    "delta_word_grounding_f1_pp": 0.7759885184618796,
+    "delta_page_grounding_f1_pp": 0.03155071912581775,
+    "delta_word_precision_pp": 0.4534418294343254,
+    "delta_word_recall_pp": 0.9835187078044214
+  },
+  "subsystem_recovery": {
+    "total_target_fields": 286,
+    "rescued_fields": 185,
+    "regressed_fields": 0,
+    "net_field_change": 185,
+    "recovery_rate": 0.6468531468531469,
+    "documents_improved": 48,
+    "documents_regressed": 22,
+    "documents_neutral": 1
+  },
+  "performance": {
+    "detection_runtime_sec": 50.42,
+    "evaluation_runtime_sec": 180.06,
+    "total_runtime_sec": 230.54
+  }
+}

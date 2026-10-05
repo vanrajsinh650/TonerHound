@@ -1,0 +1,77 @@
+{
+  "total_alleged_fields": 572,
+  "total_alleged_macro_pp": 3.4991,
+  "grounded_benchmark_documents": 236,
+  "mechanisms": [
+    {
+      "failure_mechanism": "WRONG_CLASSIFICATION",
+      "fields_affected": 286,
+      "documents_affected": 71,
+      "macro_weighted_f1_contribution_pp": 1.2162,
+      "percentage_of_alleged_gap": 34.76
+    },
+    {
+      "failure_mechanism": "OCR_CORRUPTION",
+      "fields_affected": 148,
+      "documents_affected": 68,
+      "macro_weighted_f1_contribution_pp": 0.9649,
+      "percentage_of_alleged_gap": 27.58
+    },
+    {
+      "failure_mechanism": "DATE_INDEX_MISS",
+      "fields_affected": 38,
+      "documents_affected": 33,
+      "macro_weighted_f1_contribution_pp": 0.4499,
+      "percentage_of_alleged_gap": 12.86
+    },
+    {
+      "failure_mechanism": "REAL_INDEXING_MISS",
+      "fields_affected": 25,
+      "documents_affected": 19,
+      "macro_weighted_f1_contribution_pp": 0.2293,
+      "percentage_of_alleged_gap": 6.55
+    },
+    {
+      "failure_mechanism": "NORMALIZATION_MISMATCH",
+      "fields_affected": 22,
+      "documents_affected": 12,
+      "macro_weighted_f1_contribution_pp": 0.1428,
+      "percentage_of_alleged_gap": 4.08
+    },
+    {
+      "failure_mechanism": "VERIFICATION_REJECTION",
+      "fields_affected": 16,
+      "documents_affected": 16,
+      "macro_weighted_f1_contribution_pp": 0.1842,
+      "percentage_of_alleged_gap": 5.26
+    },
+    {
+      "failure_mechanism": "ALREADY_RESOLVED",
+      "fields_affected": 15,
+      "documents_affected": 13,
+      "macro_weighted_f1_contribution_pp": 0.1401,
+      "percentage_of_alleged_gap": 4.0
+    },
+    {
+      "failure_mechanism": "BBOX_RECONSTRUCTION",
+      "fields_affected": 12,
+      "documents_affected": 8,
+      "macro_weighted_f1_contribution_pp": 0.0913,
+      "percentage_of_alleged_gap": 2.61
+    },
+    {
+      "failure_mechanism": "HYPHENATION",
+      "fields_affected": 5,
+      "documents_affected": 4,
+      "macro_weighted_f1_contribution_pp": 0.041,
+      "percentage_of_alleged_gap": 1.17
+    },
+    {
+      "failure_mechanism": "PAGE_ROUTING",
+      "fields_affected": 5,
+      "documents_affected": 2,
+      "macro_weighted_f1_contribution_pp": 0.0395,
+      "percentage_of_alleged_gap": 1.13
+    }
+  ]
+}

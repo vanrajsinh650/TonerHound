@@ -1,0 +1,81 @@
+{
+  "experiment": "EXP-034R",
+  "description": "True Official Text/OCR Oracle Re-Measurement on Full 370 Benchmark",
+  "timestamp": "2026-10-02T10:19:08Z",
+  "runtime_seconds": 22.56,
+  "memory_mb": 1404.82,
+  "evaluator": "extract_bench.evaluation.evaluators.extract.ExtractEvaluator",
+  "reference_points": {
+    "production_baseline_f1": 56.0477,
+    "current_pool_selection_oracle_f1": 60.9591,
+    "historical_claimed_true_text_oracle_f1": 75.1243,
+    "target_llamaextract_f1": 58.11,
+    "target_stretch_f1": 90.0
+  },
+  "official_results": {
+    "full_370": {
+      "word_f1": 75.1243,
+      "word_precision": 81.2264,
+      "word_recall": 71.258,
+      "page_f1": 83.8499,
+      "value_f1": 100.0,
+      "false_grounding_rate": 18.7736,
+      "abstention_rate": 28.742,
+      "grounded_docs_count": 236,
+      "total_evaluated": 370
+    },
+    "cohort_b": {
+      "word_f1": 77.051,
+      "word_precision": 80.4936,
+      "word_recall": 74.6827,
+      "page_f1": 91.3781,
+      "value_f1": 100.0,
+      "false_grounding_rate": 19.5064,
+      "abstention_rate": 25.3173,
+      "grounded_docs_count": 32,
+      "total_evaluated": 32
+    },
+    "splits": {
+      "short": {
+        "word_f1": 71.5448,
+        "word_precision": 79.5065,
+        "word_recall": 66.5654,
+        "page_f1": 85.8341,
+        "value_f1": 100.0,
+        "false_grounding_rate": 20.4935,
+        "abstention_rate": 33.4346,
+        "grounded_docs_count": 175,
+        "total_evaluated": 252
+      },
+      "medium": {
+        "word_f1": 84.7544,
+        "word_precision": 85.6606,
+        "word_recall": 83.9624,
+        "page_f1": 79.2205,
+        "value_f1": 100.0,
+        "false_grounding_rate": 14.3394,
+        "abstention_rate": 16.0376,
+        "grounded_docs_count": 48,
+        "total_evaluated": 98
+      },
+      "long": {
+        "word_f1": 87.7526,
+        "word_precision": 88.0053,
+        "word_recall": 87.5181,
+        "page_f1": 81.2024,
+        "value_f1": 100.0,
+        "false_grounding_rate": 11.9947,
+        "abstention_rate": 12.4819,
+        "grounded_docs_count": 13,
+        "total_evaluated": 20
+      }
+    }
+  },
+  "ceiling_decomposition": {
+    "selection_headroom_pp": 4.9114,
+    "expanded_pool_headroom_pp": 19.0766,
+    "candidate_quality_gap_pp": 14.1652,
+    "gap_to_90_target_pp": 14.8757,
+    "delta_vs_llamaextract_pp": 17.0143
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "run_id": "run_2",
+  "families": {
+    "IRS_TAX_RETURNS": {
+      "total_fields": 241,
+      "total_success": 61,
+      "total_failures": 180,
+      "failure_classes": {
+        "NON_TEXT_BOOLEAN_GROUNDING": 90,
+        "NO_TEXT_AT_GOLD_REGION": 90
+      }
+    },
+    "TEXAS_RRC_OTHER": {
+      "total_fields": 117,
+      "total_success": 25,
+      "total_failures": 92,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 40,
+        "NON_TEXT_BOOLEAN_GROUNDING": 22,
+        "NO_TEXT_AT_GOLD_REGION": 12,
+        "PAGE_ROUTING": 5,
+        "BBOX_TOO_NARROW": 4,
+        "BBOX_RECONSTRUCTION": 3,
+        "NORMALIZATION_MISMATCH": 2,
+        "BBOX_TOO_WIDE": 1,
+        "HYPHENATION": 1,
+        "OTHER": 1,
+        "DATE_INDEX_MISS": 1
+      }
+    },
+    "TEXAS_RRC_W14": {
+      "total_fields": 112,
+      "total_success": 75,
+      "total_failures": 37,
+      "failure_classes": {
+        "NON_TEXT_BOOLEAN_GROUNDING": 29,
+        "BBOX_RECONSTRUCTION": 5,
+        "REAL_INDEXING_MISS": 1,
+        "BBOX_TOO_NARROW": 1,
+        "NORMALIZATION_MISMATCH": 1
+      }
+    }
+  }
+}

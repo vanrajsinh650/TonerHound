@@ -79,3 +79,25 @@ scratch/
 # OS
 .DS_Store
 Thumbs.db
+
+# Research caches and prediction outputs
+research/**/*.pkl
+research/**/predictions/
+research/**/eval_cache/
+research/**/*.parquet
+research/legacy_analysis/
+
+# Temporary diagnostic files
+*.tmp.json
+*.debug.json
+scratch/
+research/research/
+# ExtractBench evaluation caches & prediction outputs
+*.eval.json
+*.result.json
+research/**/heldout*
+research/**/targeted_predictions/
+research/**/oracle_predictions/
+research/**/predictions*/
+research/**/field_level.json
+research/observer/golden_set/

@@ -14,7 +14,9 @@ from tonerhound.benchmark.correlation import (
 @pytest.fixture
 def registry() -> FailureRegistry:
     """Load baseline failure registry for real_ftx_full_corrupted."""
-    reg_path = Path("experiments/EXP-005-ftx-failure-registry.json")
+    reg_path = Path("research/experiments/archive/EXP-005-ftx-failure-registry.json")
+    if not reg_path.exists():
+        reg_path = Path("experiments/EXP-005-ftx-failure-registry.json")
     assert reg_path.exists(), "Failure registry file must exist."
     return FailureRegistry.load(reg_path)
 

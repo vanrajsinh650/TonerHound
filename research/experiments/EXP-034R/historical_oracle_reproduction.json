@@ -1,0 +1,72 @@
+{
+  "experiment": "EXP-034R",
+  "phase": "Phase 3: Historical Oracle Reproduction",
+  "historical_reference_experiment": "EXP-028B0",
+  "evaluator": "extract_bench.evaluation.evaluators.extract.ExtractEvaluator",
+  "timestamp": "2026-10-02T10:00:00Z",
+  "reproduction_status": "EXACT_REPRODUCTION_VERIFIED",
+  "metrics": {
+    "historical_claimed_oracle": {
+      "word_f1": 75.12429162441171,
+      "word_precision": 81.22637163299951,
+      "word_recall": 71.2579682308701,
+      "page_f1": 83.84987171943356,
+      "value_f1": 100.0,
+      "grounded_docs_count": 236,
+      "total_documents": 370
+    },
+    "reproduced_official_evaluator_result": {
+      "word_f1": 75.1243,
+      "word_precision": 81.2264,
+      "word_recall": 71.2580,
+      "page_f1": 83.8499,
+      "value_f1": 100.0,
+      "grounded_docs_count": 236,
+      "total_documents": 370,
+      "numerical_discrepancy": 0.0000
+    }
+  },
+  "cohort_breakdown": {
+    "cohort_b_held_out": {
+      "word_f1": 77.0510,
+      "word_precision": 80.4936,
+      "word_recall": 74.6827,
+      "page_f1": 91.3781,
+      "grounded_docs_count": 32
+    },
+    "cohort_a_dev": {
+      "word_f1": 83.2464,
+      "word_precision": 84.9296,
+      "word_recall": 81.8567,
+      "page_f1": 95.3480,
+      "grounded_docs_count": 32
+    },
+    "length_splits": {
+      "short": {
+        "word_f1": 71.5448,
+        "word_precision": 79.5065,
+        "word_recall": 66.5654,
+        "grounded_docs_count": 175
+      },
+      "medium": {
+        "word_f1": 84.7544,
+        "word_precision": 85.6606,
+        "word_recall": 83.9624,
+        "grounded_docs_count": 48
+      },
+      "long": {
+        "word_f1": 87.7526,
+        "word_precision": 88.0053,
+        "word_recall": 87.5181,
+        "grounded_docs_count": 13
+      }
+    }
+  },
+  "audit_findings": {
+    "methodology": "EXP-028B0 evaluated tokens from HybridDocumentIndex (native PDFium text + Tesseract OCR) on page gp that spatially intersected gold bounding box gb or were within slack distance of gb. Substring slicing was applied if the token contained the cleaned value.",
+    "is_official_evaluator": true,
+    "evaluator_identity_row_alignment": true,
+    "is_production_achievable": false,
+    "reason_not_production_achievable": "EXP-028B0 oracle selected tokens based on spatial proximity to gold bounding boxes (gb), effectively bypassing candidate selection and row alignment."
+  }
+}

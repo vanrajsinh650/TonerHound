@@ -1,0 +1,122 @@
+{
+  "experiment": "EXP-034R",
+  "description": "Macro-Weighted Contribution Analysis of the 14.1652 pp Candidate-Quality Gap",
+  "timestamp": "2026-10-02T14:02:52Z",
+  "total_gap_fields": 47334,
+  "total_candidate_quality_gap_pp": 14.1652,
+  "grounded_benchmark_documents": 236,
+  "ranked_failure_classes": [
+    {
+      "rank": 1,
+      "failure_class": "INDEXING_MISS",
+      "fields_affected": 571,
+      "documents_affected": 136,
+      "macro_weighted_f1_contribution_pp": 3.4991,
+      "percentage_of_gap_explained": 24.7
+    },
+    {
+      "rank": 2,
+      "failure_class": "OTHER",
+      "fields_affected": 561,
+      "documents_affected": 99,
+      "macro_weighted_f1_contribution_pp": 1.9231,
+      "percentage_of_gap_explained": 13.58
+    },
+    {
+      "rank": 3,
+      "failure_class": "BBOX_TOO_NARROW",
+      "fields_affected": 1454,
+      "documents_affected": 112,
+      "macro_weighted_f1_contribution_pp": 1.5683,
+      "percentage_of_gap_explained": 11.07
+    },
+    {
+      "rank": 4,
+      "failure_class": "PAGE_PRUNING",
+      "fields_affected": 2964,
+      "documents_affected": 60,
+      "macro_weighted_f1_contribution_pp": 1.4728,
+      "percentage_of_gap_explained": 10.4
+    },
+    {
+      "rank": 5,
+      "failure_class": "WRONG_ROW",
+      "fields_affected": 24138,
+      "documents_affected": 82,
+      "macro_weighted_f1_contribution_pp": 1.3384,
+      "percentage_of_gap_explained": 9.45
+    },
+    {
+      "rank": 6,
+      "failure_class": "GLOBAL_ROUTING",
+      "fields_affected": 162,
+      "documents_affected": 99,
+      "macro_weighted_f1_contribution_pp": 1.0496,
+      "percentage_of_gap_explained": 7.41
+    },
+    {
+      "rank": 7,
+      "failure_class": "BBOX_TOO_WIDE",
+      "fields_affected": 1121,
+      "documents_affected": 107,
+      "macro_weighted_f1_contribution_pp": 0.9485,
+      "percentage_of_gap_explained": 6.7
+    },
+    {
+      "rank": 8,
+      "failure_class": "WRONG_COLUMN",
+      "fields_affected": 11577,
+      "documents_affected": 65,
+      "macro_weighted_f1_contribution_pp": 0.7027,
+      "percentage_of_gap_explained": 4.96
+    },
+    {
+      "rank": 9,
+      "failure_class": "TOKEN_SLICING",
+      "fields_affected": 296,
+      "documents_affected": 72,
+      "macro_weighted_f1_contribution_pp": 0.546,
+      "percentage_of_gap_explained": 3.85
+    },
+    {
+      "rank": 10,
+      "failure_class": "TOP_K_TRUNCATION",
+      "fields_affected": 1890,
+      "documents_affected": 54,
+      "macro_weighted_f1_contribution_pp": 0.5425,
+      "percentage_of_gap_explained": 3.83
+    },
+    {
+      "rank": 11,
+      "failure_class": "WRONG_PAGE",
+      "fields_affected": 645,
+      "documents_affected": 35,
+      "macro_weighted_f1_contribution_pp": 0.293,
+      "percentage_of_gap_explained": 2.07
+    },
+    {
+      "rank": 12,
+      "failure_class": "OCR_COVERAGE",
+      "fields_affected": 1870,
+      "documents_affected": 8,
+      "macro_weighted_f1_contribution_pp": 0.28,
+      "percentage_of_gap_explained": 1.98
+    },
+    {
+      "rank": 13,
+      "failure_class": "DEDUPLICATION_COLLAPSE",
+      "fields_affected": 66,
+      "documents_affected": 14,
+      "macro_weighted_f1_contribution_pp": 0.077,
+      "percentage_of_gap_explained": 0.54
+    },
+    {
+      "rank": 14,
+      "failure_class": "OCR_GEOMETRY",
+      "fields_affected": 19,
+      "documents_affected": 3,
+      "macro_weighted_f1_contribution_pp": 0.005,
+      "percentage_of_gap_explained": 0.04
+    }
+  ]
+}

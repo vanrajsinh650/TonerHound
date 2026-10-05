@@ -1,0 +1,67 @@
+{
+  "experiment_id": "EXP-037",
+  "baseline_run_id": "canonical_370_v1",
+  "after_run_id": "exp037_full_run_v1",
+  "target_population": {
+    "initial_no_text_at_gold_region": 58778,
+    "initial_affected_documents": 130,
+    "after_no_text_at_gold_region": 16886,
+    "net_reduction": 41892
+  },
+  "migration_matrix": {
+    "ALREADY_RESOLVED": {
+      "ALREADY_RESOLVED": 24668
+    },
+    "NO_TEXT_AT_GOLD_REGION": {
+      "REAL_INDEXING_MISS": 39038,
+      "NORMALIZATION_MISMATCH": 1154,
+      "NO_TEXT_AT_GOLD_REGION": 16884,
+      "DATE_INDEX_MISS": 215,
+      "HYPHENATION": 314,
+      "TOKEN_SLICING": 791,
+      "ALREADY_RESOLVED": 124,
+      "MULTI_LINE_SPLIT": 258
+    },
+    "NON_TEXT_BOOLEAN_GROUNDING": {
+      "NON_TEXT_BOOLEAN_GROUNDING": 2443,
+      "ALREADY_RESOLVED": 2
+    },
+    "REAL_INDEXING_MISS": {
+      "REAL_INDEXING_MISS": 292,
+      "ALREADY_RESOLVED": 7,
+      "NO_TEXT_AT_GOLD_REGION": 1,
+      "TOKEN_SLICING": 1,
+      "NORMALIZATION_MISMATCH": 1
+    },
+    "TOKEN_SLICING": {
+      "TOKEN_SLICING": 91,
+      "ALREADY_RESOLVED": 4,
+      "REAL_INDEXING_MISS": 1
+    },
+    "NORMALIZATION_MISMATCH": {
+      "ALREADY_RESOLVED": 2,
+      "NORMALIZATION_MISMATCH": 82,
+      "REAL_INDEXING_MISS": 7,
+      "NO_TEXT_AT_GOLD_REGION": 1,
+      "TOKEN_SLICING": 1
+    },
+    "DATE_INDEX_MISS": {
+      "DATE_INDEX_MISS": 36,
+      "ALREADY_RESOLVED": 1
+    },
+    "HYPHENATION": {
+      "HYPHENATION": 9,
+      "ALREADY_RESOLVED": 1
+    }
+  },
+  "after_full_benchmark_classes": {
+    "REAL_INDEXING_MISS": 90255,
+    "NORMALIZATION_MISMATCH": 46158,
+    "TOKEN_SLICING": 23646,
+    "NO_TEXT_AT_GOLD_REGION": 16886,
+    "HYPHENATION": 7623,
+    "NON_TEXT_BOOLEAN_GROUNDING": 2845,
+    "DATE_INDEX_MISS": 2650,
+    "MULTI_LINE_SPLIT": 563
+  }
+}

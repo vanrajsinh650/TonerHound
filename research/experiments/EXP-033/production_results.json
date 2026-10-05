@@ -1,0 +1,168 @@
+{
+  "experiment": "EXP-033",
+  "description": "Candidate Generation Reconciliation Audit + Productionization",
+  "timestamp": "2026-10-02T09:30:49.520074+00:00",
+  "runtime_seconds": 276.39,
+  "memory_mb": 498.87,
+  "flags": {
+    "enable_exp033_candidate_expansion": true,
+    "enable_boolean_expansion": true,
+    "enable_token_strip_recovery": true,
+    "enable_global_search_relaxation": true,
+    "enable_multi_line_recovery": true
+  },
+  "upgraded_fields_total": 34,
+  "re_evaluated_docs_count": 24,
+  "baseline": {
+    "full_370_f1": 56.0477,
+    "cohort_b_f1": 59.3588
+  },
+  "target": {
+    "llamaextract_f1": 58.11
+  },
+  "results": {
+    "full_370": {
+      "word_f1": 56.05480894045225,
+      "word_precision": 61.713254083529364,
+      "word_recall": 52.588873829867325,
+      "page_f1": 81.66062712969511,
+      "value_f1": 100.0,
+      "grounded_docs_count": 236,
+      "total_evaluated": 370
+    },
+    "cohort_b": {
+      "word_f1": 59.38237712044039,
+      "word_precision": 63.77771170956314,
+      "word_recall": 56.56266710001277,
+      "page_f1": 85.45729533644277,
+      "value_f1": 100.0,
+      "grounded_docs_count": 32,
+      "total_evaluated": 32
+    },
+    "delta_vs_baseline_pp": 0.0071,
+    "delta_vs_llamaextract_pp": -2.0552,
+    "beat_target": false
+  },
+  "per_document_upgrades": [
+    {
+      "test_id": "long/real_freer_register_full",
+      "upgraded": 3,
+      "word_f1": 0.9185172232907851
+    },
+    {
+      "test_id": "long/real_imedia_full",
+      "upgraded": 1,
+      "word_f1": 0.9402474268620392
+    },
+    {
+      "test_id": "long/real_ofac_ssi_full",
+      "upgraded": 1,
+      "word_f1": 0.2677707006369427
+    },
+    {
+      "test_id": "long/real_oklahoma_unclaimed_2024",
+      "upgraded": 1,
+      "word_f1": null
+    },
+    {
+      "test_id": "long/real_sm0801_ae_full",
+      "upgraded": 2,
+      "word_f1": 0.5951671328350681
+    },
+    {
+      "test_id": "long/real_sm0801_eco_full",
+      "upgraded": 2,
+      "word_f1": 0.9249605648614136
+    },
+    {
+      "test_id": "long/real_sm0801_eco_full_corrupted",
+      "upgraded": 1,
+      "word_f1": 0.7572681125980619
+    },
+    {
+      "test_id": "medium/ccc_online_0003_geico_ford_crown_victoria",
+      "upgraded": 1,
+      "word_f1": null
+    },
+    {
+      "test_id": "medium/gov_clin_schedule_0033",
+      "upgraded": 1,
+      "word_f1": null
+    },
+    {
+      "test_id": "medium/real_bbb_service_list",
+      "upgraded": 1,
+      "word_f1": 0.7716535433070866
+    },
+    {
+      "test_id": "medium/real_bbb_service_list_corrupted",
+      "upgraded": 1,
+      "word_f1": 0.31081641110650643
+    },
+    {
+      "test_id": "medium/real_cooke_co_tx_2024",
+      "upgraded": 1,
+      "word_f1": 0.4394451567781793
+    },
+    {
+      "test_id": "medium/real_enotes_deviations",
+      "upgraded": 1,
+      "word_f1": 0.7406679764243614
+    },
+    {
+      "test_id": "medium/real_pueblo_oct_2025",
+      "upgraded": 2,
+      "word_f1": 0.9962736225712004
+    },
+    {
+      "test_id": "medium/real_sm0801_dispositions_full",
+      "upgraded": 1,
+      "word_f1": 0.997384481255449
+    },
+    {
+      "test_id": "medium/real_sm0801_dispositions_full_corrupted",
+      "upgraded": 2,
+      "word_f1": 0.9868995633187774
+    },
+    {
+      "test_id": "short/3N1AB7AP8FY283932_professional_valuation_corrupted",
+      "upgraded": 1,
+      "word_f1": null
+    },
+    {
+      "test_id": "short/P4-27-51094_74234",
+      "upgraded": 1,
+      "word_f1": 0.22857142857142856
+    },
+    {
+      "test_id": "short/W14-Atascosa SWD Well No. 4 - W-14 (Updated 01.22.2025)",
+      "upgraded": 1,
+      "word_f1": 0.5362318840579711
+    },
+    {
+      "test_id": "short/W2-27-217884_213729",
+      "upgraded": 1,
+      "word_f1": 0.10526315789473685
+    },
+    {
+      "test_id": "short/oklahoma_county_purchase_order_avl_systems",
+      "upgraded": 2,
+      "word_f1": null
+    },
+    {
+      "test_id": "short/real_wyo_Goshen_2024",
+      "upgraded": 2,
+      "word_f1": 0.9982905982905983
+    },
+    {
+      "test_id": "short/real_wyo_Niobrara_2024",
+      "upgraded": 2,
+      "word_f1": 0.9946524064171123
+    },
+    {
+      "test_id": "short/real_wyo_Weston_2024",
+      "upgraded": 2,
+      "word_f1": 0.9967845659163987
+    }
+  ]
+}

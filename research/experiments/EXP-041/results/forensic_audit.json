@@ -1,0 +1,505 @@
+{
+  "REAL_INDEXING_MISS": {
+    "total": 84826,
+    "sample_size": 500,
+    "subclass_distribution": {
+      "SUB_MULTI_TOKEN": {
+        "sample_count": 386,
+        "sample_pct": "77.2%",
+        "estimated_total_fields": 65486
+      },
+      "SUB_COLUMN_DRIFT": {
+        "sample_count": 46,
+        "sample_pct": "9.2%",
+        "estimated_total_fields": 7804
+      },
+      "SUB_SHORT_VALUE": {
+        "sample_count": 26,
+        "sample_pct": "5.2%",
+        "estimated_total_fields": 4411
+      },
+      "SUB_OTHER": {
+        "sample_count": 22,
+        "sample_pct": "4.4%",
+        "estimated_total_fields": 3732
+      },
+      "SUB_ROW_DRIFT": {
+        "sample_count": 18,
+        "sample_pct": "3.6%",
+        "estimated_total_fields": 3054
+      },
+      "SUB_SPECIAL_CHARS": {
+        "sample_count": 2,
+        "sample_pct": "0.4%",
+        "estimated_total_fields": 339
+      }
+    },
+    "largest_subclass": "SUB_MULTI_TOKEN",
+    "largest_subclass_sample_count": 386,
+    "largest_subclass_count": 65486,
+    "sample_records": [
+      {
+        "document_id": "long/real_credit_strategies_full",
+        "field_path": "holdings[0].par_currency",
+        "gold_value": "USD",
+        "gold_bbox": [
+          0.25926,
+          0.17211,
+          0.02559,
+          0.0093
+        ],
+        "gold_page": 8,
+        "predicted_bbox": [
+          0.030303,
+          0.170368,
+          0.254539,
+          0.012759
+        ],
+        "predicted_page": 8,
+        "candidate_count": 0,
+        "tokens_in_gold_count": 1,
+        "tokens_in_gold_text": "....................................................................USD",
+        "gold_bbox_width": 0.0256,
+        "gold_bbox_height": 0.0093,
+        "value_length": 3,
+        "value_type": "string",
+        "document_type": "long",
+        "subclass": "SUB_COLUMN_DRIFT"
+      },
+      {
+        "document_id": "long/real_credit_strategies_full",
+        "field_path": "holdings[1].tranche_class",
+        "gold_value": "C",
+        "gold_bbox": [
+          0.08554,
+          0.1973,
+          0.00875,
+          0.0093
+        ],
+        "gold_page": 8,
+        "predicted_bbox": [
+          0.555556,
+          0.218924,
+          0.027606,
+          0.012546
+        ],
+        "predicted_page": 8,
+        "candidate_count": 0,
+        "tokens_in_gold_count": 1,
+        "tokens_in_gold_text": "C,",
+        "gold_bbox_width": 0.0088,
+        "gold_bbox_height": 0.0093,
+        "value_length": 1,
+        "value_type": "string",
+        "document_type": "long",
+        "subclass": "SUB_SHORT_VALUE"
+      },
+      {
+        "document_id": "long/real_credit_strategies_full",
+        "field_path": "holdings[5].shares_or_par_thousands",
+        "gold_value": "1000",
+        "gold_bbox": [
+          0.34337,
+          0.41435,
+          0.03034,
+          0.0093
+        ],
+        "gold_page": 8,
+        "predicted_bbox": [
+          0.343375,
+          0.364273,
+          0.030331,
+          0.012546
+        ],
+        "predicted_page": 8,
+        "candidate_count": 0,
+        "tokens_in_gold_count": 1,
+        "tokens_in_gold_text": "1,000",
+        "gold_bbox_width": 0.0303,
+        "gold_bbox_height": 0.0093,
+        "value_length": 4,
+        "value_type": "numeric",
+        "document_type": "long",
+        "subclass": "SUB_ROW_DRIFT"
+      },
+      {
+        "document_id": "long/real_credit_strategies_full",
+        "field_path": "holdings[6].tranche_class",
+        "gold_value": "B",
+        "gold_bbox": [
+          0.06397,
+          0.43955,
+          0.0081,
+          0.0093
+        ],
+        "gold_page": 8,
+        "predicted_bbox": [
+          0.555556,
+          0.381715,
+          0.005721,
+          0.012546
+        ],
+        "predicted_page": 8,
+        "candidate_count": 0,
+        "tokens_in_gold_count": 1,
+        "tokens_in_gold_text": "B,",
+        "gold_bbox_width": 0.0081,
+        "gold_bbox_height": 0.0093,
+        "value_length": 1,
+        "value_type": "string",
+        "document_type": "long",
+        "subclass": "SUB_SHORT_VALUE"
+      },
+      {
+        "document_id": "long/real_credit_strategies_full",
+        "field_path": "holdings[6].shares_or_par_thousands",
+        "gold_value": "1500",
+        "gold_bbox": [
+          0.34337,
+          0.4628,
+          0.03034,
+          0.0093
+        ],
+        "gold_page": 8,
+        "predicted_bbox": [
+          0.834951,
+          0.404971,
+          0.030331,
+          0.012546
+        ],
+        "predicted_page": 8,
+        "candidate_count": 0,
+        "tokens_in_gold_count": 1,
+        "tokens_in_gold_text": "1,500",
+        "gold_bbox_width": 0.0303,
+        "gold_bbox_height": 0.0093,
+        "value_length": 4,
+        "value_type": "numeric",
+        "document_type": "long",
+        "subclass": "SUB_OTHER"
+      }
+    ]
+  },
+  "NORMALIZATION_MISMATCH": {
+    "total": 46158,
+    "sample_size": 500,
+    "subclass_distribution": {
+      "SUB_PERCENT_DECIMAL": {
+        "sample_count": 410,
+        "sample_pct": "82.0%",
+        "estimated_total_fields": 37850
+      },
+      "SUB_OTHER": {
+        "sample_count": 74,
+        "sample_pct": "14.8%",
+        "estimated_total_fields": 6831
+      },
+      "SUB_CURRENCY_PREFIX": {
+        "sample_count": 15,
+        "sample_pct": "3.0%",
+        "estimated_total_fields": 1385
+      },
+      "SUB_TRAILING_PUNCT": {
+        "sample_count": 1,
+        "sample_pct": "0.2%",
+        "estimated_total_fields": 92
+      }
+    },
+    "largest_subclass": "SUB_PERCENT_DECIMAL",
+    "largest_subclass_sample_count": 410,
+    "largest_subclass_count": 37850,
+    "sample_records": [
+      {
+        "document_id": "long/real_credit_strategies_full",
+        "field_path": "holdings[4].reference_rate",
+        "gold_value": "3-mo. CME Term SOFR + 2.40%",
+        "gold_bbox": [
+          0.13315,
+          0.34265,
+          0.09138,
+          0.0093
+        ],
+        "gold_page": 8,
+        "predicted_bbox": [
+          0.614173,
+          0.331538,
+          0.132449,
+          0.016
+        ],
+        "predicted_page": 8,
+        "candidate_count": 0,
+        "tokens_in_gold_count": 3,
+        "tokens_in_gold_text": "(3-mo. CME Term",
+        "gold_bbox_width": 0.0914,
+        "gold_bbox_height": 0.0093,
+        "value_length": 27,
+        "value_type": "string",
+        "document_type": "long",
+        "subclass": "SUB_PERCENT_DECIMAL"
+      },
+      {
+        "document_id": "long/real_credit_strategies_full",
+        "field_path": "holdings[5].reference_rate",
+        "gold_value": "3-mo. CME Term SOFR + 2.20%",
+        "gold_bbox": [
+          0.09226,
+          0.3911,
+          0.13887,
+          0.0093
+        ],
+        "gold_page": 8,
+        "predicted_bbox": [
+          0.570376,
+          0.381715,
+          0.132449,
+          0.012546
+        ],
+        "predicted_page": 8,
+        "candidate_count": 0,
+        "tokens_in_gold_count": 5,
+        "tokens_in_gold_text": "(3-mo. CME Term SOFR +",
+        "gold_bbox_width": 0.1389,
+        "gold_bbox_height": 0.0093,
+        "value_length": 27,
+        "value_type": "string",
+        "document_type": "long",
+        "subclass": "SUB_PERCENT_DECIMAL"
+      },
+      {
+        "document_id": "long/real_credit_strategies_full",
+        "field_path": "holdings[6].reference_rate",
+        "gold_value": "3-mo. CME Term SOFR + 2.35%",
+        "gold_bbox": [
+          0.08283,
+          0.43955,
+          0.13887,
+          0.0093
+        ],
+        "gold_page": 8,
+        "predicted_bbox": [
+          0.570376,
+          0.381715,
+          0.132449,
+          0.012546
+        ],
+        "predicted_page": 8,
+        "candidate_count": 0,
+        "tokens_in_gold_count": 5,
+        "tokens_in_gold_text": "(3-mo. CME Term SOFR +",
+        "gold_bbox_width": 0.1389,
+        "gold_bbox_height": 0.0093,
+        "value_length": 27,
+        "value_type": "string",
+        "document_type": "long",
+        "subclass": "SUB_PERCENT_DECIMAL"
+      },
+      {
+        "document_id": "long/real_credit_strategies_full",
+        "field_path": "holdings[7].shares_or_par_thousands",
+        "gold_value": "500",
+        "gold_bbox": [
+          0.35347,
+          0.51125,
+          0.02024,
+          0.0093
+        ],
+        "gold_page": 8,
+        "predicted_bbox": null,
+        "predicted_page": 8,
+        "candidate_count": 0,
+        "tokens_in_gold_count": 1,
+        "tokens_in_gold_text": "500",
+        "gold_bbox_width": 0.0202,
+        "gold_bbox_height": 0.0093,
+        "value_length": 3,
+        "value_type": "numeric",
+        "document_type": "long",
+        "subclass": "SUB_OTHER"
+      },
+      {
+        "document_id": "long/real_credit_strategies_full",
+        "field_path": "holdings[9].reference_rate",
+        "gold_value": "3-mo. CME Term SOFR + 2.46%",
+        "gold_bbox": [
+          0.0835,
+          0.5849,
+          0.13887,
+          0.0093
+        ],
+        "gold_page": 8,
+        "predicted_bbox": [
+          0.552863,
+          0.430164,
+          0.132449,
+          0.012546
+        ],
+        "predicted_page": 8,
+        "candidate_count": 0,
+        "tokens_in_gold_count": 5,
+        "tokens_in_gold_text": "(3-mo. CME Term SOFR +",
+        "gold_bbox_width": 0.1389,
+        "gold_bbox_height": 0.0093,
+        "value_length": 27,
+        "value_type": "string",
+        "document_type": "long",
+        "subclass": "SUB_PERCENT_DECIMAL"
+      }
+    ]
+  },
+  "NO_TEXT_AT_GOLD_REGION": {
+    "total": 15382,
+    "sample_size": 500,
+    "subclass_distribution": {
+      "SUB_MULTI_REGION": {
+        "sample_count": 500,
+        "sample_pct": "100.0%",
+        "estimated_total_fields": 15382
+      }
+    },
+    "largest_subclass": "SUB_MULTI_REGION",
+    "largest_subclass_sample_count": 500,
+    "largest_subclass_count": 15382,
+    "sample_records": [
+      {
+        "document_id": "long/real_ftx_full_corrupted",
+        "field_path": "creditors[6].postal_code",
+        "gold_value": "94105",
+        "gold_bbox": [
+          0.79959,
+          0.15189,
+          0.017343,
+          0.009057
+        ],
+        "gold_page": 2,
+        "predicted_bbox": [
+          0.7959,
+          0.150005,
+          0.01825,
+          0.0094
+        ],
+        "predicted_page": 2,
+        "candidate_count": 0,
+        "tokens_in_gold_count": 0,
+        "tokens_in_gold_text": "",
+        "gold_bbox_width": 0.0173,
+        "gold_bbox_height": 0.0091,
+        "value_length": 5,
+        "value_type": "numeric",
+        "document_type": "long",
+        "subclass": "SUB_MULTI_REGION"
+      },
+      {
+        "document_id": "long/real_ftx_full_corrupted",
+        "field_path": "creditors[7].address_1",
+        "gold_value": "C/O HINES",
+        "gold_bbox": [
+          0.258314,
+          0.159502,
+          0.02908,
+          0.009216
+        ],
+        "gold_page": 2,
+        "predicted_bbox": [
+          0.2548,
+          0.155987,
+          0.02925,
+          0.0106
+        ],
+        "predicted_page": 2,
+        "candidate_count": 0,
+        "tokens_in_gold_count": 0,
+        "tokens_in_gold_text": "",
+        "gold_bbox_width": 0.0291,
+        "gold_bbox_height": 0.0092,
+        "value_length": 9,
+        "value_type": "string",
+        "document_type": "long",
+        "subclass": "SUB_MULTI_REGION"
+      },
+      {
+        "document_id": "long/real_ftx_full_corrupted",
+        "field_path": "creditors[7].address_3",
+        "gold_value": "101 SECOND STREET, SUITE 1225",
+        "gold_bbox": [
+          0.524026,
+          0.161675,
+          0.057589,
+          0.009626
+        ],
+        "gold_page": 2,
+        "predicted_bbox": [
+          0.5214,
+          0.158901,
+          0.068,
+          0.0205
+        ],
+        "predicted_page": 2,
+        "candidate_count": 0,
+        "tokens_in_gold_count": 0,
+        "tokens_in_gold_text": "",
+        "gold_bbox_width": 0.0576,
+        "gold_bbox_height": 0.0096,
+        "value_length": 29,
+        "value_type": "string",
+        "document_type": "long",
+        "subclass": "SUB_MULTI_REGION"
+      },
+      {
+        "document_id": "long/real_ftx_full_corrupted",
+        "field_path": "creditors[7].city",
+        "gold_value": "SAN FRANCISCO",
+        "gold_bbox": [
+          0.645253,
+          0.16274,
+          0.044742,
+          0.009444
+        ],
+        "gold_page": 2,
+        "predicted_bbox": [
+          0.6426,
+          0.159804,
+          0.04255,
+          0.0099
+        ],
+        "predicted_page": 2,
+        "candidate_count": 0,
+        "tokens_in_gold_count": 0,
+        "tokens_in_gold_text": "",
+        "gold_bbox_width": 0.0447,
+        "gold_bbox_height": 0.0094,
+        "value_length": 13,
+        "value_type": "string",
+        "document_type": "long",
+        "subclass": "SUB_MULTI_REGION"
+      },
+      {
+        "document_id": "long/real_ftx_full_corrupted",
+        "field_path": "creditors[7].state",
+        "gold_value": "CA",
+        "gold_bbox": [
+          0.736281,
+          0.163619,
+          0.00767,
+          0.008918
+        ],
+        "gold_page": 2,
+        "predicted_bbox": [
+          0.73398,
+          0.160916,
+          0.0105,
+          0.009
+        ],
+        "predicted_page": 2,
+        "candidate_count": 0,
+        "tokens_in_gold_count": 0,
+        "tokens_in_gold_text": "",
+        "gold_bbox_width": 0.0077,
+        "gold_bbox_height": 0.0089,
+        "value_length": 2,
+        "value_type": "string",
+        "document_type": "long",
+        "subclass": "SUB_MULTI_REGION"
+      }
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "experiment": "EXP-036D_ABLATION_AND_POLICY_STUDY",
+  "held_out_population": {
+    "total_documents": 32,
+    "target_fields": 25
+  },
+  "policy_ablations": {
+    "Policy_A_Visual_Fallback_When_No_Prod": {
+      "policy_id": "A",
+      "description": "Visual candidate accepted only when production citation is absent",
+      "rescued": 20,
+      "regressed": 0,
+      "net_change": 20,
+      "recovery_pct": 80.0,
+      "mean_iou": 0.5516,
+      "state_accuracy": 0.96,
+      "runtime_seconds": 16.09
+    },
+    "Policy_B_Deterministic_Threshold_Replacement": {
+      "policy_id": "B",
+      "description": "Visual candidate replaces production candidate if confidence >= 0.80 and state matches",
+      "rescued": 19,
+      "regressed": 0,
+      "net_change": 19,
+      "recovery_pct": 76.0,
+      "mean_iou": 0.5301,
+      "state_accuracy": 0.96,
+      "runtime_seconds": 16.20
+    },
+    "Policy_C_Explicit_Confidence_Competition": {
+      "policy_id": "C",
+      "description": "Visual candidate competes with production citation using scaled confidence",
+      "rescued": 20,
+      "regressed": 0,
+      "net_change": 20,
+      "recovery_pct": 80.0,
+      "mean_iou": 0.5516,
+      "state_accuracy": 0.96,
+      "runtime_seconds": 16.15
+    },
+    "Policy_D_Strict_Boolean_Gating": {
+      "policy_id": "D",
+      "description": "Visual candidate restricted strictly to boolean fields with Section 9 bool type checking",
+      "rescued": 20,
+      "regressed": 0,
+      "net_change": 20,
+      "recovery_pct": 80.0,
+      "mean_iou": 0.5516,
+      "state_accuracy": 0.96,
+      "runtime_seconds": 16.05
+    }
+  },
+  "detector_component_ablations": {
+    "morphological_wireframe": {
+      "included": true,
+      "impact": "Enables detection of light and broken borders in low-contrast scans"
+    },
+    "hough_diagonal_cross_filter": {
+      "included": true,
+      "impact": "Distinguishes handwritten X marks from solid check marks and dark fills"
+    },
+    "core_occupancy_ratio": {
+      "included": true,
+      "impact": "Excludes bounding border pixels to prevent border-thickness bias in state calculation"
+    },
+    "aspect_ratio_square_filter": {
+      "included": true,
+      "impact": "Excludes wide rectangular signature lines and narrative form slots (0.80 <= aspect_ratio <= 1.25)"
+    }
+  },
+  "canonical_selection": "Policy A + Policy D (Policy A with strict boolean gating)"
+}

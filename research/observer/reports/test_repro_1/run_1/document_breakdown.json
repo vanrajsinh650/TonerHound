@@ -1,0 +1,57 @@
+{
+  "run_id": "run_1",
+  "documents": {
+    "short/W14-58509_W14 2nd sub revised": {
+      "total_fields": 112,
+      "total_failures": 37,
+      "failure_classes": {
+        "NON_TEXT_BOOLEAN_GROUNDING": 29,
+        "BBOX_RECONSTRUCTION": 5,
+        "REAL_INDEXING_MISS": 1,
+        "BBOX_TOO_NARROW": 1,
+        "NORMALIZATION_MISMATCH": 1
+      }
+    },
+    "short/W2-27-216874_212740": {
+      "total_fields": 88,
+      "total_failures": 78,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 40,
+        "NON_TEXT_BOOLEAN_GROUNDING": 17,
+        "PAGE_ROUTING": 5,
+        "BBOX_TOO_NARROW": 4,
+        "BBOX_RECONSTRUCTION": 3,
+        "NO_TEXT_AT_GOLD_REGION": 3,
+        "NORMALIZATION_MISMATCH": 2,
+        "BBOX_TOO_WIDE": 1,
+        "HYPHENATION": 1,
+        "OTHER": 1,
+        "DATE_INDEX_MISS": 1
+      }
+    },
+    "short/arif-2022": {
+      "total_fields": 111,
+      "total_failures": 83,
+      "failure_classes": {
+        "NON_TEXT_BOOLEAN_GROUNDING": 43,
+        "NO_TEXT_AT_GOLD_REGION": 40
+      }
+    },
+    "short/arif-2024": {
+      "total_fields": 130,
+      "total_failures": 97,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 50,
+        "NON_TEXT_BOOLEAN_GROUNDING": 47
+      }
+    },
+    "short/passcoag-2020-w2-p0002-r1": {
+      "total_fields": 29,
+      "total_failures": 14,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 9,
+        "NON_TEXT_BOOLEAN_GROUNDING": 5
+      }
+    }
+  }
+}

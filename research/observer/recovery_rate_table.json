@@ -1,0 +1,104 @@
+{
+  "version": "1.0",
+  "description": "Empirical recovery rate table for TonerHound Failure Microscope V4",
+  "rates": {
+    "NO_TEXT_AT_GOLD_REGION": {
+      "fix_type": "OCR recovery (scanned pages)",
+      "historical_recovery_rate": 0.0265,
+      "confidence": "HIGH",
+      "source": "EXP-037 (141 rescued / 5,311 true target fields = 2.65%)",
+      "recommended_next_step": "Higher-DPI OCR retry (300 DPI) + adaptive binarization"
+    },
+    "NON_TEXT_BOOLEAN_GROUNDING": {
+      "fix_type": "Checkbox visual detection",
+      "historical_recovery_rate": 0.0470,
+      "confidence": "HIGH",
+      "source": "EXP-036D (185 rescued / 2,847 fields, +0.776 pp / +16.45 pp = 4.7%)",
+      "recommended_next_step": "Extended deterministic checkbox CV provider across all 160 docs"
+    },
+    "REAL_INDEXING_MISS": {
+      "fix_type": "Indexing improvement",
+      "historical_recovery_rate": 0.0650,
+      "confidence": "HIGH",
+      "source": "EXP-035 (+0.2293 pp / +3.4991 pp = 6.55%)",
+      "recommended_next_step": "OCR noise-tolerant bounded n-gram/fuzzy index on OCR pages"
+    },
+    "DATE_INDEX_MISS": {
+      "fix_type": "Date normalization",
+      "historical_recovery_rate": 0.6000,
+      "confidence": "MEDIUM",
+      "source": "EXP-032 / EXP-035 deterministic pattern evaluation",
+      "recommended_next_step": "Deterministic multi-format regex patterns (YYYY-MMM-DD, DD-MM-YYYY)"
+    },
+    "MULTI_LINE_SPLIT": {
+      "fix_type": "Multi-line assembly",
+      "historical_recovery_rate": 0.3500,
+      "confidence": "LOW",
+      "source": "EXP-033 multi-line recovery estimate",
+      "recommended_next_step": "VisualLine clustering union bbox for vertically adjacent lines"
+    },
+    "HYPHENATION": {
+      "fix_type": "Hyphenation join",
+      "historical_recovery_rate": 0.7000,
+      "confidence": "MEDIUM",
+      "source": "EXP-033 hyphenation analysis",
+      "recommended_next_step": "Trailing hyphen join with next-line token"
+    },
+    "NORMALIZATION_MISMATCH": {
+      "fix_type": "Normalization expansion",
+      "historical_recovery_rate": 0.1000,
+      "confidence": "LOW",
+      "source": "Conservative prior (10%)",
+      "recommended_next_step": "Parenthesized negative numbers + currency code normalization"
+    },
+    "TOKEN_SLICING": {
+      "fix_type": "Token slicing refinement",
+      "historical_recovery_rate": 0.1000,
+      "confidence": "LOW",
+      "source": "Conservative prior (10%)",
+      "recommended_next_step": "Narrow character-span reconstruction on wide table cells"
+    },
+    "BBOX_TOO_WIDE": {
+      "fix_type": "Bbox geometry refinement",
+      "historical_recovery_rate": 0.2500,
+      "confidence": "LOW",
+      "source": "EXP-026 estimate (20-30%)",
+      "recommended_next_step": "Boundary snapping to word edge"
+    },
+    "BBOX_TOO_NARROW": {
+      "fix_type": "Bbox geometry refinement",
+      "historical_recovery_rate": 0.2500,
+      "confidence": "LOW",
+      "source": "EXP-026 estimate (20-30%)",
+      "recommended_next_step": "Multi-token union expansion"
+    },
+    "WRONG_ROW": {
+      "fix_type": "Table cell disambiguation",
+      "historical_recovery_rate": 0.1000,
+      "confidence": "LOW",
+      "source": "Conservative prior (10%)",
+      "recommended_next_step": "Structural row header anchoring"
+    },
+    "WRONG_COLUMN": {
+      "fix_type": "Table cell disambiguation",
+      "historical_recovery_rate": 0.1000,
+      "confidence": "LOW",
+      "source": "Conservative prior (10%)",
+      "recommended_next_step": "Column header vertical projection alignment"
+    },
+    "PAGE_ROUTING": {
+      "fix_type": "Page selection reranking",
+      "historical_recovery_rate": 0.1000,
+      "confidence": "LOW",
+      "source": "Conservative prior (10%)",
+      "recommended_next_step": "Document structure global page priors"
+    }
+  },
+  "default_fallback": {
+    "fix_type": "General heuristic",
+    "historical_recovery_rate": 0.1000,
+    "confidence": "LOW",
+    "source": "Conservative prior (10%)",
+    "recommended_next_step": "Targeted forensic audit"
+  }
+}

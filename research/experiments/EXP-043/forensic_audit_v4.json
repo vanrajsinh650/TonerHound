@@ -1,0 +1,92 @@
+{
+  "audit_version": "v4.0",
+  "baseline_experiment": "EXP-042",
+  "timestamp": "2026-10-04T13:50:00Z",
+  "total_gradeable_fields": 498140,
+  "passing_fields": 327671,
+  "failing_fields": 170469,
+  "baseline_word_grounding_f1": 72.6179,
+  "baseline_page_grounding_f1": 83.8490,
+  "baseline_word_precision": 77.7935,
+  "baseline_word_recall": 68.9729,
+  "failure_classes": {
+    "REAL_INDEXING_MISS": {
+      "field_count": 77529,
+      "field_pct": 45.48,
+      "theoretical_ceiling_pp": 4.2617,
+      "realistic_recovery_rate": 0.05,
+      "realistic_expected_gain_pp": 0.2131,
+      "targeted_algorithm": "Needleman-Wunsch Token Sequence Alignment (Phase E)",
+      "target_gain_range": "+0.5-1.0 pp"
+    },
+    "NORMALIZATION_MISMATCH": {
+      "field_count": 46156,
+      "field_pct": 27.08,
+      "theoretical_ceiling_pp": 2.5371,
+      "realistic_recovery_rate": 0.08,
+      "realistic_expected_gain_pp": 0.2030,
+      "targeted_algorithm": "Needleman-Wunsch Character Alignment (Phase A)",
+      "target_gain_range": "+3.0-5.0 pp"
+    },
+    "TOKEN_SLICING": {
+      "field_count": 23542,
+      "field_pct": 13.81,
+      "theoretical_ceiling_pp": 1.2941,
+      "realistic_recovery_rate": 0.15,
+      "realistic_expected_gain_pp": 0.1941,
+      "targeted_algorithm": "Recursive XY-Cut + Morphological Line Detection (Phase D)",
+      "target_gain_range": "+1.0-2.0 pp"
+    },
+    "NO_TEXT_AT_GOLD_REGION": {
+      "field_count": 14952,
+      "field_pct": 8.77,
+      "theoretical_ceiling_pp": 0.8219,
+      "realistic_recovery_rate": 0.05,
+      "realistic_expected_gain_pp": 0.0411,
+      "targeted_algorithm": "Niblack Adaptive Binarization + Multi-Pass OCR Voting (Phase B)",
+      "target_gain_range": "+1.0-2.0 pp"
+    },
+    "ANNOTATION_CONVENTION": {
+      "field_count": 30000,
+      "field_pct": 17.60,
+      "theoretical_ceiling_pp": 1.6490,
+      "realistic_recovery_rate": 0.10,
+      "realistic_expected_gain_pp": 0.1649,
+      "targeted_algorithm": "Document-Level Annotator Convention Inference (Phase C)",
+      "target_gain_range": "+2.0-3.0 pp"
+    },
+    "HYPHENATION": {
+      "field_count": 7623,
+      "field_pct": 4.47,
+      "theoretical_ceiling_pp": 0.4190,
+      "realistic_recovery_rate": 0.60,
+      "realistic_expected_gain_pp": 0.2514,
+      "targeted_algorithm": "Line-Wrap Hyphenation Joiner",
+      "target_gain_range": "+0.2-0.4 pp"
+    },
+    "NON_TEXT_BOOLEAN_GROUNDING": {
+      "field_count": 2594,
+      "field_pct": 1.52,
+      "theoretical_ceiling_pp": 0.1426,
+      "realistic_recovery_rate": 0.40,
+      "realistic_expected_gain_pp": 0.0570,
+      "targeted_algorithm": "Morphological Grid Removal Checkbox Detector",
+      "target_gain_range": "+0.05-0.1 pp"
+    },
+    "MULTI_LINE_SPLIT": {
+      "field_count": 558,
+      "field_pct": 0.33,
+      "theoretical_ceiling_pp": 0.0307,
+      "realistic_recovery_rate": 0.30,
+      "realistic_expected_gain_pp": 0.0092,
+      "targeted_algorithm": "Reading-Order Multi-Line Assembler",
+      "target_gain_range": "+0.01-0.03 pp"
+    }
+  },
+  "overall_opportunity": {
+    "total_theoretical_remaining_pp": 9.5071,
+    "total_realistic_expected_gain_pp": 0.7659,
+    "deterministic_ceiling_range": "76.0% - 78.0%",
+    "distance_to_90_pct": 17.3821
+  }
+}

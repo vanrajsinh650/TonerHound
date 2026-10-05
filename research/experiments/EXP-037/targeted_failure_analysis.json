@@ -1,0 +1,874 @@
+{
+  "experiment_id": "EXP-037",
+  "phase": "PHASE_C_TARGETED_FEASIBILITY",
+  "before_class_counts": {
+    "ALREADY_RESOLVED": 24668,
+    "NO_TEXT_AT_GOLD_REGION": 58778,
+    "NON_TEXT_BOOLEAN_GROUNDING": 2445,
+    "REAL_INDEXING_MISS": 302,
+    "TOKEN_SLICING": 96,
+    "NORMALIZATION_MISMATCH": 93,
+    "DATE_INDEX_MISS": 37,
+    "HYPHENATION": 10
+  },
+  "after_class_counts": {
+    "ALREADY_RESOLVED": 24809,
+    "REAL_INDEXING_MISS": 39338,
+    "NORMALIZATION_MISMATCH": 1237,
+    "NO_TEXT_AT_GOLD_REGION": 16886,
+    "DATE_INDEX_MISS": 251,
+    "HYPHENATION": 323,
+    "TOKEN_SLICING": 884,
+    "NON_TEXT_BOOLEAN_GROUNDING": 2443,
+    "MULTI_LINE_SPLIT": 258
+  },
+  "migration_matrix": {
+    "ALREADY_RESOLVED": {
+      "ALREADY_RESOLVED": 24668
+    },
+    "NO_TEXT_AT_GOLD_REGION": {
+      "REAL_INDEXING_MISS": 39038,
+      "NORMALIZATION_MISMATCH": 1154,
+      "NO_TEXT_AT_GOLD_REGION": 16884,
+      "DATE_INDEX_MISS": 215,
+      "HYPHENATION": 314,
+      "TOKEN_SLICING": 791,
+      "ALREADY_RESOLVED": 124,
+      "MULTI_LINE_SPLIT": 258
+    },
+    "NON_TEXT_BOOLEAN_GROUNDING": {
+      "NON_TEXT_BOOLEAN_GROUNDING": 2443,
+      "ALREADY_RESOLVED": 2
+    },
+    "REAL_INDEXING_MISS": {
+      "REAL_INDEXING_MISS": 292,
+      "ALREADY_RESOLVED": 7,
+      "NO_TEXT_AT_GOLD_REGION": 1,
+      "TOKEN_SLICING": 1,
+      "NORMALIZATION_MISMATCH": 1
+    },
+    "TOKEN_SLICING": {
+      "TOKEN_SLICING": 91,
+      "ALREADY_RESOLVED": 4,
+      "REAL_INDEXING_MISS": 1
+    },
+    "NORMALIZATION_MISMATCH": {
+      "ALREADY_RESOLVED": 2,
+      "NORMALIZATION_MISMATCH": 82,
+      "REAL_INDEXING_MISS": 7,
+      "NO_TEXT_AT_GOLD_REGION": 1,
+      "TOKEN_SLICING": 1
+    },
+    "DATE_INDEX_MISS": {
+      "DATE_INDEX_MISS": 36,
+      "ALREADY_RESOLVED": 1
+    },
+    "HYPHENATION": {
+      "HYPHENATION": 9,
+      "ALREADY_RESOLVED": 1
+    }
+  },
+  "rescued_fields_sample": [
+    {
+      "document_id": "long/real_sm0801_eco_full_corrupted",
+      "field_path": "listing_title",
+      "value": "Expired Carbon Monoxide by Subject",
+      "gold_page": 2,
+      "gold_bbox": [
+        0.181313,
+        0.196584,
+        0.205782,
+        0.020372
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.825,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "schedule_2.names_shown",
+      "value": "MOHAMMAD ARIF",
+      "gold_page": 5,
+      "gold_bbox": [
+        0.045,
+        0.1428,
+        0.1452,
+        0.0134
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.5113,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "form_8995.businesses[0].name_of_business",
+      "value": "LEGAL AND IMMIGRATION SERVICES",
+      "gold_page": 15,
+      "gold_bbox": [
+        0.10763889,
+        0.30062494,
+        0.30127818,
+        0.0109424
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.6981,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "field_path": "form_8995.businesses[1].qbi_amount",
+      "value": 9200,
+      "gold_page": 15,
+      "gold_bbox": [
+        0.90824611,
+        0.33187197,
+        0.05072464,
+        0.01186912
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.6606,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/bar-lev-2021",
+      "field_path": "schedule_e.properties[0].physical_address",
+      "value": "2244 2ND AVE #39, SAN DIEGO, CA 92101",
+      "gold_page": 9,
+      "gold_bbox": [
+        0.0883,
+        0.2163,
+        0.3714,
+        0.0245
+      ],
+      "base_iou": 0.4553,
+      "after_iou": 0.7137,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/bar-lev-2022",
+      "field_path": "form_1116.name",
+      "value": "NAOMI BAR-LEV",
+      "gold_page": 10,
+      "gold_bbox": [
+        0.08936489,
+        0.12458333,
+        0.12971114,
+        0.01539141
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.6539,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/bar-lev-2022",
+      "field_path": "form_4952.names_shown",
+      "value": "NAOMI BAR-LEV",
+      "gold_page": 12,
+      "gold_bbox": [
+        0.0585,
+        0.1084,
+        0.1311,
+        0.014
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.687,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/bar-lev-2022",
+      "field_path": "form_8582.part_viii_total_loss",
+      "value": 194985,
+      "gold_page": 16,
+      "gold_bbox": [
+        0.5589,
+        0.6836,
+        0.069,
+        0.0153
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.6786,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/bar-lev-2022",
+      "field_path": "schedule_c.line_48_total_other_expenses",
+      "value": 4196,
+      "gold_page": 8,
+      "gold_bbox": [
+        0.8591,
+        0.8977,
+        0.0509,
+        0.0133
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.7076,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/bar-lev-2023",
+      "field_path": "form_4952.names_shown",
+      "value": "NAOMI BAR-LEV",
+      "gold_page": 12,
+      "gold_bbox": [
+        0.063,
+        0.1195,
+        0.126,
+        0.0105
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.9927,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/bar-lev-2023",
+      "field_path": "form_8582.part_iv_activities[0].current_year_net_loss",
+      "value": 115505,
+      "gold_page": 13,
+      "gold_bbox": [
+        0.4923,
+        0.7473,
+        0.0722,
+        0.0109
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.8733,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/bar-lev-2023",
+      "field_path": "schedule_c.line_48_total_other_expenses",
+      "value": 1136,
+      "gold_page": 8,
+      "gold_bbox": [
+        0.8488,
+        0.9089,
+        0.0655,
+        0.0157
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.5662,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/becerra-2021",
+      "field_path": "schedule_2.line_21_total_other_taxes",
+      "value": 5622,
+      "gold_page": 6,
+      "gold_bbox": [
+        0.8974,
+        0.6008,
+        0.0786,
+        0.0143
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.5393,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/becerra-2021",
+      "field_path": "form_4562.line_1_maximum_amount",
+      "value": 1050000,
+      "gold_page": 29,
+      "gold_bbox": [
+        0.8648,
+        0.2131,
+        0.1226,
+        0.0183
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.548,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/becerra-2021",
+      "field_path": "form_8582.part_iv_activities[0].current_year_net_income",
+      "value": 18079,
+      "gold_page": 37,
+      "gold_bbox": [
+        0.3354,
+        0.2054,
+        0.0707,
+        0.0152
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.573,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/becerra-2021",
+      "field_path": "form_8582.part_iv_activities[4].name_of_activity",
+      "value": "Total",
+      "gold_page": 37,
+      "gold_bbox": [
+        0.1052,
+        0.2979,
+        0.0554,
+        0.0111
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.7497,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/becerra-2021",
+      "field_path": "form_8582.part_iv_activities[4].current_year_net_loss",
+      "value": 17697,
+      "gold_page": 37,
+      "gold_bbox": [
+        0.4644,
+        0.304,
+        0.0686,
+        0.0146
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.6447,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/becerra-2021",
+      "field_path": "form_8949.part1_short_term_transactions[0].date_acquired",
+      "value": "Various",
+      "gold_page": 15,
+      "gold_bbox": [
+        0.188,
+        0.4252,
+        0.0732,
+        0.0146
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.5684,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/becerra-2021",
+      "field_path": "form_8949.line_2_short_term_totals_cost_basis",
+      "value": 15000,
+      "gold_page": 15,
+      "gold_bbox": [
+        0.5417,
+        0.8601,
+        0.0633,
+        0.0134
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.6011,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/becerra-2021",
+      "field_path": "schedule_c.other_expenses[0].description",
+      "value": "Cell Phone",
+      "gold_page": 12,
+      "gold_bbox": [
+        0.0371,
+        0.6085,
+        0.1302,
+        0.0152
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.6977,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/becerra-2022",
+      "field_path": "form_6251.line_2a_taxes_from_schedule_a",
+      "value": 25900,
+      "gold_page": 22,
+      "gold_bbox": [
+        0.8944,
+        0.2435,
+        0.0718,
+        0.0135
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.6864,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/becerra-2022",
+      "field_path": "form_8582.part_iv_activities[0].name_of_activity",
+      "value": "S.F.R.-Mooney",
+      "gold_page": 33,
+      "gold_bbox": [
+        0.0436,
+        0.2144,
+        0.1452,
+        0.015
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.6789,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/becerra-2022",
+      "field_path": "form_8582.part_iv_total_current_year_net_income",
+      "value": 53181,
+      "gold_page": 33,
+      "gold_bbox": [
+        0.3262,
+        0.322,
+        0.0643,
+        0.0141
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.7051,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/becerra-2022",
+      "field_path": "form_8949.names_shown",
+      "value": "Xavier Becerra & Carolyn Reyes",
+      "gold_page": 15,
+      "gold_bbox": [
+        0.0485,
+        0.1528,
+        0.3708,
+        0.0138
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.8119,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/becerra-2022",
+      "field_path": "form_8949.part1_short_term_transactions[0].date_acquired",
+      "value": "01/14/22",
+      "gold_page": 15,
+      "gold_bbox": [
+        0.18476583,
+        0.45323638,
+        0.08116948,
+        0.01008697
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.8521,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/becerra-2022",
+      "field_path": "form_8949.part1_short_term_transactions[1].date_sold_or_disposed",
+      "value": "12/14/22",
+      "gold_page": 15,
+      "gold_bbox": [
+        0.2712,
+        0.481,
+        0.0835,
+        0.0118
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.7267,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/becerra-2022",
+      "field_path": "form_8949.part1_short_term_transactions[1].proceeds",
+      "value": 8000,
+      "gold_page": 15,
+      "gold_bbox": [
+        0.4352,
+        0.4814,
+        0.0505,
+        0.012
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.6155,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/becerra-2022",
+      "field_path": "form_8949.line_2_long_term_totals_cost_basis",
+      "value": 60673,
+      "gold_page": 16,
+      "gold_bbox": [
+        0.5529,
+        0.8373,
+        0.0612,
+        0.012
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.7331,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/becerra-2022",
+      "field_path": "form_8959.line_8_self_employment_income",
+      "value": 59901,
+      "gold_page": 24,
+      "gold_bbox": [
+        0.6996,
+        0.3687,
+        0.07,
+        0.0145
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.6424,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/becerra-2022",
+      "field_path": "schedule_c.line_48_total_other_expenses",
+      "value": 420,
+      "gold_page": 12,
+      "gold_bbox": [
+        0.9287,
+        0.9242,
+        0.0412,
+        0.0131
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.558,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/becerra-2023",
+      "field_path": "form_6251.line_2a_taxes_from_schedule_a",
+      "value": 29200,
+      "gold_page": 22,
+      "gold_bbox": [
+        0.8895,
+        0.2444,
+        0.0858,
+        0.019
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.5192,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/becerra-2023",
+      "field_path": "form_6251.line_12_amount_from_line_6",
+      "value": 353991,
+      "gold_page": 23,
+      "gold_bbox": [
+        0.8738,
+        0.1568,
+        0.0978,
+        0.017
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.5621,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/becerra-2023",
+      "field_path": "form_8949.names_shown",
+      "value": "Xavier Becerra & Carolyn Reyes",
+      "gold_page": 14,
+      "gold_bbox": [
+        0.0449,
+        0.1548,
+        0.3784,
+        0.019
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.519,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/becerra-2023",
+      "field_path": "form_8949.part2_long_term_transactions[3].date_acquired",
+      "value": "02/17/22",
+      "gold_page": 15,
+      "gold_bbox": [
+        0.1861,
+        0.5111,
+        0.0831,
+        0.015
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.6316,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/becerra-2023",
+      "field_path": "form_8949.line_2_long_term_totals_proceeds",
+      "value": 74296,
+      "gold_page": 15,
+      "gold_bbox": [
+        0.4206,
+        0.8373,
+        0.0711,
+        0.0163
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.5188,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/becerra-2023",
+      "field_path": "form_8949.line_2_long_term_totals_cost_basis",
+      "value": 83344,
+      "gold_page": 15,
+      "gold_bbox": [
+        0.5634,
+        0.842,
+        0.0565,
+        0.0099
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.9659,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/becerra-2023",
+      "field_path": "form_8949.line_2_long_term_totals_gain_or_loss",
+      "value": -9048,
+      "gold_page": 15,
+      "gold_bbox": [
+        0.9111,
+        0.8432,
+        0.0565,
+        0.0095
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.9601,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/becerra-2023",
+      "field_path": "form_8959.line_8_self_employment_income",
+      "value": 171259,
+      "gold_page": 24,
+      "gold_bbox": [
+        0.6845,
+        0.3745,
+        0.0988,
+        0.0131
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.6322,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/becerra-2024",
+      "field_path": "form_6251.line_27_qdcgt_or_schedule_d_line_21_amount",
+      "value": 421343,
+      "gold_page": 21,
+      "gold_bbox": [
+        0.8755,
+        0.6376,
+        0.1004,
+        0.0144
+      ],
+      "base_iou": 0.0389,
+      "after_iou": 0.7074,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/cabrera-2021",
+      "field_path": "schedule_1.names_shown",
+      "value": "JOSEPH & JODI CABRERA",
+      "gold_page": 3,
+      "gold_bbox": [
+        0.0395,
+        0.113,
+        0.2534,
+        0.0139
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.791,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/cabrera-2022",
+      "field_path": "designee_name",
+      "value": "JOSEPH AYOUB, CPA, EA",
+      "gold_page": 2,
+      "gold_bbox": [
+        0.21390845,
+        0.53068182,
+        0.23793688,
+        0.02218434
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.7639,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/cabrera-2022",
+      "field_path": "form_7203.debt_columns[1].debt_label",
+      "value": "Debt 2",
+      "gold_page": 19,
+      "gold_bbox": [
+        0.5188,
+        0.7682,
+        0.0505,
+        0.0139
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.6901,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/cabrera-2022",
+      "field_path": "form_8582.line_5_150000_or_mfs_amount",
+      "value": 150000,
+      "gold_page": 16,
+      "gold_bbox": [
+        0.6466,
+        0.5112,
+        0.081,
+        0.0143
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.7933,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/cabrera-2022",
+      "field_path": "schedule_e.names_shown",
+      "value": "JOSEPH & JODI CABRERA",
+      "gold_page": 15,
+      "gold_bbox": [
+        0.08431142,
+        0.15186869,
+        0.23800209,
+        0.01875
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.8166,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/real_bbb_service_list_corrupted",
+      "field_path": "parties[0].address",
+      "value": "ATTN: GENERAL COUNSEL\n2093 PHILADELPHIA PIKE # 1971\nCLAYMONT DE 19703",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.513839,
+        0.135188,
+        0.094209,
+        0.010558
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.63,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/real_bbb_service_list_corrupted",
+      "field_path": "parties[233].address",
+      "value": "ATTN: JASON A. STARKS\nP.O. BOX 1748\nAUSTIN TX 78767",
+      "gold_page": 16,
+      "gold_bbox": [
+        0.510306,
+        0.73277,
+        0.085676,
+        0.010763
+      ],
+      "base_iou": 0.2701,
+      "after_iou": 0.6519,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/real_bbb_service_list_corrupted",
+      "field_path": "report_title",
+      "value": "Master Service List",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.460432,
+        0.068605,
+        0.088376,
+        0.01364
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.7095,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/real_dcd_sumf_full_corrupted",
+      "field_path": "facts[166].fact_number",
+      "value": 167,
+      "gold_page": 22,
+      "gold_bbox": [
+        0.166774,
+        0.794137,
+        0.034749,
+        0.017499
+      ],
+      "base_iou": 0.2702,
+      "after_iou": 0.567,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/real_enotes_deviations_corrupted",
+      "field_path": "deviation_entries[6].subcategory",
+      "value": "Other Study Restrictions/Requirements",
+      "gold_page": 5,
+      "gold_bbox": [
+        0.174602,
+        0.14673,
+        0.229193,
+        0.016179
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.8118,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    },
+    {
+      "document_id": "medium/real_enotes_deviations_corrupted",
+      "field_path": "deviation_entries[7].subcategory",
+      "value": "Other Study Restrictions/Requirements",
+      "gold_page": 5,
+      "gold_bbox": [
+        0.174602,
+        0.14673,
+        0.229193,
+        0.016179
+      ],
+      "base_iou": 0.0,
+      "after_iou": 0.8118,
+      "base_class": "NO_TEXT_AT_GOLD_REGION",
+      "after_class": "ALREADY_RESOLVED"
+    }
+  ],
+  "regressed_fields_sample": []
+}

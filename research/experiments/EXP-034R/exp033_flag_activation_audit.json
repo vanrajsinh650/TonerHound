@@ -1,0 +1,29 @@
+{
+  "experiment": "EXP-034R",
+  "audit_target": "EXP-033 Feature Flag Activation & Ablation Invariance Root Cause",
+  "timestamp": "2026-10-02T10:15:00Z",
+  "audit_summary": {
+    "total_upgraded_fields_in_exp033": 34,
+    "total_upgraded_docs_in_exp033": 24,
+    "cohort_b_upgraded_fields": 12,
+    "cohort_b_upgraded_docs": 7
+  },
+  "root_cause_of_identical_ablation_f1": {
+    "primary_cause": "Preexisting Baseline Candidate Recovery Masking",
+    "mechanism": [
+      "1. In EXP-033 run_ablations.py, EvidenceResolver was instantiated with enable_candidate_recovery=True across all ablation configurations including A0_baseline.",
+      "2. For 28 of the 34 upgraded fields (and all 12 in Cohort B), the preexisting baseline recovery engine (EXP-013/EXP-028F) already resolved the fields under A0_baseline without needing any of the 4 new flags.",
+      "3. In Held-Out Cohort B, the ground-truth schema contained zero boolean checkbox fields with non-standard names, zero depth-unit tokens (e.g. 5482'), and zero newline-split strings.",
+      "4. Consequently, the 4 new feature flags (ENABLE_BOOLEAN_EXPANSION, ENABLE_TOKEN_STRIP_RECOVERY, ENABLE_GLOBAL_SEARCH_RELAXATION, ENABLE_MULTI_LINE_RECOVERY) had exactly zero activation events on ungrounded scalar fields across the 32 documents of Cohort B.",
+      "5. Because the generated candidates were identical across A0, A1, A2, and A3 on Cohort B, the official evaluator produced identical Word Grounding F1 (59.3824%) for all 7 ablation runs."
+    ]
+  },
+  "flag_execution_verification": {
+    "flags_syntactically_and_logically_valid": true,
+    "flags_executed": true,
+    "synthetic_unit_tests_pass": true,
+    "real_corpus_activation_rate_on_scalar_cohort_b": 0.0,
+    "real_corpus_activation_rate_on_full_370": 0.0014,
+    "interpretation": "The ablation invariance was NOT due to a caching bug or code error, but because the 4 candidate expansion fixes targeted edge cases (checkboxes, apostrophes, newline breaks) that do not exist in Cohort B's ungrounded scalar fields, while baseline recovery was already solving the clean scalar fields."
+  }
+}
