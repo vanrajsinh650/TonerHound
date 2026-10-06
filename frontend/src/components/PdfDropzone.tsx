@@ -30,6 +30,7 @@ export function PdfDropzone({ file, onFileChange, disabled }: PdfDropzoneProps) 
     onDrop,
     accept: { "application/pdf": [".pdf"] },
     maxFiles: 1,
+    maxSize: 25 * 1024 * 1024, // 25 MB
     disabled,
   });
 
