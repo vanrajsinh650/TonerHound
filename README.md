@@ -167,19 +167,6 @@ TonerHound/
 
 ---
 
-## Limitations
-
-TonerHound is honest about what it cannot do:
-
-- **Page grounding is 83.8%.** 16.2% of values land on the wrong page. Fixing this requires visual page selection — a VLM task.
-- **The remaining 27.4% of failures are not deterministically solvable.** They require semantic reasoning (LLM), visual perception (VLM), or convention learning (supervised model).
-- **Frontier ML systems reach ~82% Word F1.** TonerHound is 9.6 pp behind. The deterministic ceiling is ~72.7%, confirmed by 7 experiments with 0 regressions.
-- **The benchmark is vendor-run.** ExtractBench is maintained by LlamaIndex. Validate against independent benchmarks (OmniDocBench, DocVQA) before production use.
-
-If you need maximum grounding accuracy, use a neural system. If you need provable grounding — reproducible, auditable, free — use TonerHound.
-
----
-
 ## Contributing
 
 Contributions welcome. Before opening a PR:
