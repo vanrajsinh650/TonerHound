@@ -1,0 +1,33 @@
+export type VerifyStatus =
+  | "idle"
+  | "validating"
+  | "uploading"
+  | "verifying"
+  | "success"
+  | "error";
+
+export type FieldStatus = "VERIFIED" | "HALLUCINATION" | "MISMATCH";
+
+export interface ResolutionResult {
+  field: string;
+  value: string;
+  status: FieldStatus;
+  page: number | null;
+  bbox: [number, number, number, number] | null;
+  is_grounded: boolean;
+  matched_text?: string | null;
+  confidence?: number;
+}
+
+export interface VerifyResponse {
+  results: ResolutionResult[];
+  meta: {
+    fields_processed: number;
+    duration_ms: number;
+  };
+}
+
+export interface ExtractionField {
+  field: string;
+  value: string;
+}
