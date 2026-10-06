@@ -1,168 +1,225 @@
-# TonerHound 🐕🔎
+# TonerHound
 
-**TonerHound** is a high-precision, model-agnostic **document evidence grounding and provenance engine**.
+**Deterministic evidence grounding for LLM document extraction.**
 
-AI systems are often good at extracting the correct value from a document, but much worse at proving exactly where that value came from. Leading Vision-Language Models (such as OpenAI Codex, GPT-4o/Astra, Gemini 1.5/2.0 Flash, and Qwen2.5-VL) score **0.00% Word Grounding F1** on the official [ExtractBench](https://github.com/run-llama/ExtractBench) benchmark because they lack pixel-level token spatial indexation.
+TonerHound resolves extracted values to exact physical PDF coordinates — no coordinate hallucination, no neural networks, no cloud APIs. Given any extracted JSON and its source PDF, it returns the precise bounding box for every value, or tells you the value cannot be grounded.
 
-TonerHound acts as an independent evidence-resolution layer: it takes extracted structured data from any LLM, VLM, or heuristic parser, indexes the physical document character and token geometry via `pypdfium2`, resolves canonical normalizations (dates, currencies, numbers), and disambiguates candidate regions using 2D spatial context and strict ambiguity gating.
-
----
-
-## 🏆 ExtractBench Official Benchmark Results
-
-Evaluated directly with ExtractBench's official evaluator across the full 370-document benchmark suite (498,140 total gradeable fields):
-
-| System | Word Grounding F1 | Word Precision | Word Recall | Page Grounding F1 | Value F1 |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| **Ungrounded VLM Baseline (Codex / Flash / Astra)** | 0.00% | 0.00% | 0.00% | 0.00% | 100.00% |
-| **LlamaExtract Agentic Plus (#1 Public Leader)** | 46.43% | — | — | 84.92% | 84.77% |
-| **TonerHound v0.0.1 (Initial Baseline)** | 45.31% | 51.20% | 40.63% | 82.11% | 100.00% |
-| **TonerHound v0.3.0 (Deterministic Engine)** | **72.6179%** | **77.7935%** | **68.9729%** | **83.8490%** | **100.00%** |
-
-*TonerHound v0.3.0 achieves **72.6179% Word Grounding F1** (+26.19 pp over LlamaExtract, +27.31 pp over initial baseline) across 370 complex financial, legal, and governmental documents (498,140 fields) with **zero neural models, zero LLMs, zero VLMs, and zero regressions**.*
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue.svg)](https://www.python.org/downloads/)
+[![Tests](https://img.shields.io/badge/tests-261%20passing-brightgreen.svg)](tests/)
+[![Word F1](https://img.shields.io/badge/ExtractBench%20Word%20F1-72.6179%25-orange.svg)](docs/benchmark-results.md)
 
 ---
 
-## 📐 Architecture & Key Innovations
+## What It Does
+
+LLMs extract values from documents. They rarely say *where* those values came from. TonerHound closes that gap.
 
 ```
-                          ┌──────────────────────────┐
-                          │   Extracted JSON Data    │
-                          │   (from any LLM / VLM)   │
-                          └─────────────┬────────────┘
-                                        │
-                                        ▼
-┌──────────────────┐      ┌──────────────────────────┐
-│   Source PDF     │ ───► │  TonerHound DocumentIndex│
-│  (Vector/Raster) │      │  (Character & Line BBox) │
-└──────────────────┘      └─────────────┬────────────┘
-                                        │
-                                        ▼
-                          ┌──────────────────────────┐
-                          │   EvidenceResolver       │
-                          │ 1. Quote Exact Match     │
-                          │ 2. Canonical Normalizers │
-                          │ 3. Spatial Context Bonus │
-                          │ 4. Strict Ambiguity Gate │
-                          └─────────────┬────────────┘
-                                        │
-                                        ▼
-                          ┌──────────────────────────┐
-                          │ Official ExtractBench    │
-                          │ Field Citations & BBoxes │
-                          │    (COCO [x, y, w, h])   │
-                          └──────────────────────────┘
+Extracted: {"total_revenue": "$8,420.50"}
+     ↓ TonerHound
+Grounded:  {"total_revenue": {"value": "$8,420.50",
+                              "page": 47,
+                              "bbox": [0.412, 0.318, 0.089, 0.011],
+                              "status": "VERIFIED"}}
 ```
 
-1. **Physical Character Geometry Extraction** (`tonerhound.document`):
-   - Directly extracts character-level bounding boxes via `pypdfium2` display lists.
-   - Robustly converts bottom-left PDF points into normalized top-left display COCO coordinates `[x, y, w, h]` in `[0.0, 1.0]`.
-   - Clusters words into horizontal `VisualLine` structures based on vertical overlap.
-
-2. **Reversible Canonical Normalization** (`tonerhound.normalization`):
-   - **Currency & Numbers**: Normalizes `$25.00`, `25`, `(25.00)`, and commas with strict word/digit boundary enforcement (preventing sub-number false matches like `5.0` matching `25.00`).
-   - **Dates**: Normalizes ISO, RFC, and natural date expressions (`2026-03-15`, `March 15, 2026`) with minimal-window pruning to eliminate label text absorption.
-
-3. **Spatial Context & Sibling Disambiguation** (`tonerhound.resolution`):
-   - When identical values repeat (e.g. `0` votes, repeated prices, duplicate names), TonerHound leverages surrounding record keys, horizontal line collinearity, and Euclidean proximity to ground the exact cell.
-
-4. **Zero Silent False-Grounding Policy**:
-   - Refuses to hallucinate: if candidates are ambiguous, TonerHound returns `status="ambiguous"` with `bbox=None`. If unprinted calculations are detected, returns `status="derived"`.
-
-5. **Automated Document Page Offset Calibration** (`tonerhound.benchmark.adapter`):
-   - Detects shifts between reported internal listing pages (e.g. `source_page: 1`) and physical PDF canvas pages (due to cover sheets or TOCs) via consensus voting, ensuring cross-page alignment.
+Every bounding box is deterministic: same input, same output, every time. No sampling, no temperature, no API calls. Runs on a laptop, offline.
 
 ---
 
-## 🚀 Quickstart & Usage
+## Why Deterministic Grounding
 
-### 1. Installation
+| Property | TonerHound | Typical VLM grounding |
+|---|---|---|
+| Reproducible | ✅ Same output every run | ❌ Varies with sampling |
+| Auditable | ✅ Traceable to character offsets | ❌ Black-box neural net |
+| Offline | ✅ No network required | ❌ Cloud API |
+| Cost | ✅ $0.00 per page | ⚠️ $0.01–$0.40 per page |
+| Accuracy (ExtractBench) | 72.62% Word F1 | 82.2% Word F1 (frontier) |
+
+TonerHound trades ~10 points of grounding accuracy for reproducibility, auditability, and zero cost. That trade is worth it when you need to *prove* where a number came from.
+
+---
+
+## Quick Start
+
+### Install
 
 ```bash
-git clone https://github.com/vanrajsinh650/TonerHound.git
+git clone https://github.com/vanrajsinh650/TonerHound
 cd TonerHound
 uv sync
 ```
 
-### 2. Python API
+Requires Python 3.12+ and Tesseract OCR. Install Tesseract via `brew install tesseract` (macOS) or `apt install tesseract-ocr` (Linux).
+
+### Resolve Evidence for Extracted Fields
 
 ```python
-from pathlib import Path
-from tonerhound import DocumentIndex, EvidenceResolver, ExtractionInput
+import tonerhound
 
-# 1. Index the PDF document geometry (cached and fast)
-doc_index = DocumentIndex.from_pdf(Path("invoice.pdf"))
-
-# 2. Initialize resolver
-resolver = EvidenceResolver(doc_index)
-
-# 3. Ground an extracted field
-query = ExtractionInput(
-    field="invoice_total",
-    value=1450.50,
-    field_context="Total Amount Due",
-    page_hint=1,
+results = tonerhound.resolve(
+    document="invoice.pdf",
+    extraction=[
+        {"field": "invoice_number", "value": "INV-2024-0847"},
+        {"field": "total", "value": "$8,420.50"},
+        {"field": "due_date", "value": "2024-03-15"},
+    ],
 )
-result = resolver.resolve(query)
 
-print(f"Status: {result.status}")           # ProvenanceStatus.NORMALIZED
-print(f"Page: {result.page}")               # 1
-print(f"BBox: {result.bbox.to_coco()}")     # [x, y, w, h] in [0.0, 1.0]
-print(f"Matched text: {result.matched_text}") # "$1,450.50"
+for res in results:
+    if res.is_grounded:
+        print(f"{res.field}: {res.status.value} → page {res.page}, bbox {res.bbox}")
+    else:
+        print(f"{res.field}: UNGROUNDED ({res.status.value})")
 ```
 
-### 3. Running the Test Suite
-
-```bash
-# Run unit & adversarial test suites (22 tests)
-uv run pytest
-
-# Check linter and code style
-uv run ruff check src tests
+Output:
+```
+invoice_number: exact → page 1, bbox [0.12, 0.08, 0.21, 0.02]
+total:          normalized → page 3, bbox [0.41, 0.32, 0.09, 0.01]
+due_date:       exact → page 1, bbox [0.68, 0.08, 0.14, 0.02]
 ```
 
-### 4. Running the ExtractBench Benchmark
+If a value cannot be grounded, `res.is_grounded` is `False` with status `not_found` or `ambiguous`, and `res.bbox` is `None`.
+
+### Run the benchmark
 
 ```bash
-# Download official test cases (if needed)
-uv run extract-bench download --test --data_dir=research/data/test
-
-# Run benchmark suite and generate structured JSON & Markdown reports
-uv run python -m tonerhound.benchmark \
-    --data-dir research/data/test \
-    --exp-id EXP-001 \
-    --output-json research/experiments/EXP-001.json \
-    --output-md research/experiments/EXP-001.md
+python -m tonerhound.benchmark --data-dir research/data/full --exp-id VERIFY
+# Expected: Word Grounding F1 = 72.6179%
 ```
 
 ---
 
-## 📁 Repository Structure
+## Benchmark Summary
+
+Evaluated on the official ExtractBench 370-document corpus (498,140 fields). Full results in [docs/benchmark-results.md](docs/benchmark-results.md).
+
+| Metric | Score |
+|---|---|
+| Word Grounding F1 | **72.6179%** |
+| Page Grounding F1 | 83.8490% |
+| Word Precision | 77.7935% |
+| Word Recall | 68.9729% |
+| Passing Fields | 327,671 / 498,140 |
+| Regressions (across 7 experiments) | **0** |
+
+**What drove the score (three techniques did ~75% of the work):**
+- **Hungarian bipartite table assignment** — globally optimal value-to-cell matching eliminates cascading row-swap errors. +5,845 fields.
+- **Date literal variants** — exact matching of 18 canonical date renderings. +3,690 fields.
+- **Visual pixel-statistics fallback** — deterministic checkbox detection via morphology and edge density. +1,882 fields.
+
+**What didn't work (and why it matters):** semantic normalization (2/37,850), column rail constraints (0), hyphen joiner v2 (0), Needleman-Wunsch alignment (13). These negative results define the deterministic ceiling. See [docs/how-tonerhound-reached-72.md](docs/how-tonerhound-reached-72.md) for the full research narrative.
+
+---
+
+## Architecture
 
 ```
-tonerhound/
-├── src/tonerhound/
-│   ├── geometry/        # Normalized BBox, coordinate transforms, IoU
-│   ├── models/          # ProvenanceStatus, DocumentToken, VisualLine, Types
-│   ├── normalization/   # Unicode, currency, numeric, and date normalizers
-│   ├── document/        # DocumentIndex with pypdfium2 parser & line clustering
-│   ├── matching/        # EvidenceMatcher exact, numeric, date, and fuzzy search
-│   ├── resolution/      # EvidenceResolver spatial disambiguation & gating
-│   └── benchmark/       # Official ExtractBench adapter, evaluator, runner
-├── tests/               # Unit, adversarial, and official benchmark tests
+PDF ──► pypdfium2 ──► character stream
+          │
+          ├──► inverted token index
+          ├──► numeric index
+          ├──► date index
+          └──► OCR noise 3-gram index
+          │
+Extracted JSON ──► Evidence Resolver
+                     │
+                     ├── Hungarian table assignment
+                     ├── Multi-token sequence matching
+                     ├── Visual pixel-statistics fallback
+                     ├── Date literal variants
+                     └── Multi-region assembly
+                     │
+                     ▼
+             Grounded JSON + bounding boxes
+```
+
+**Stack:** `pypdfium2` · `pytesseract` · `numpy` · `scipy` · `OpenCV` · `PyMuPDF` · `rapidfuzz` · `python-dateutil`  
+**No PyTorch. No TensorFlow. No models. No training. No GPU.**
+
+---
+
+## Repository Structure
+
+```
+TonerHound/
+├── src/tonerhound/          # Production code
+│   ├── document/            # PDF parsing, indexing, OCR routing
+│   ├── resolution/          # Evidence resolver, Hungarian assignment
+│   ├── matching/            # Token matching, date variants
+│   ├── geometry/            # Bounding box assembly, multi-region
+│   └── vision/              # Deterministic checkbox detection
+├── tests/                   # 261 unit tests (~20s)
+├── benchmarks/              # Official ExtractBench runners
 ├── research/
-│   ├── baseline-report.md       # ExtractBench leaderboard analysis
-│   ├── competitive-analysis.md  # 10-question audit of competing systems
-│   ├── algorithm-comparison.md  # Algorithm trade-offs & spatial designs
-│   ├── failure-analysis.md      # Error taxonomy & edge-case mitigations
-│   ├── final-report.md          # Comprehensive research & engineering report
-│   └── experiments/             # Structured JSON & Markdown experiment logs
+│   ├── experiments/         # EXP-001 through EXP-043
+│   └── observer/            # Failure Microscope V4
+├── docs/
+│   ├── benchmark-results.md
+│   └── how-tonerhound-reached-72.md
 ├── pyproject.toml
-└── README.md
+├── uv.lock
+└── LICENSE
 ```
 
 ---
 
-## 📄 License
+## Limitations
 
-Apache 2.0. See `LICENSE` for details.
+TonerHound is honest about what it cannot do:
+
+- **Page grounding is 83.8%.** 16.2% of values land on the wrong page. Fixing this requires visual page selection — a VLM task.
+- **The remaining 27.4% of failures are not deterministically solvable.** They require semantic reasoning (LLM), visual perception (VLM), or convention learning (supervised model).
+- **Frontier ML systems reach ~82% Word F1.** TonerHound is 9.6 pp behind. The deterministic ceiling is ~72.7%, confirmed by 7 experiments with 0 regressions.
+- **The benchmark is vendor-run.** ExtractBench is maintained by LlamaIndex. Validate against independent benchmarks (OmniDocBench, DocVQA) before production use.
+
+If you need maximum grounding accuracy, use a neural system. If you need provable grounding — reproducible, auditable, free — use TonerHound.
+
+---
+
+## Contributing
+
+Contributions welcome. Before opening a PR:
+
+```bash
+pytest tests/ -v  # 261 tests must pass
+python -m tonerhound.benchmark --exp-id YOUR-EXP  # Score must not regress below 72.6179%
+```
+
+- Keep it deterministic. No neural networks, no LLMs, no embeddings.
+- One experiment per PR. Document the delta in `research/experiments/`.
+- Negative results are welcome. They're the most valuable part of the research.
+
+---
+
+## License
+
+MIT License. See [LICENSE](LICENSE) for details.
+
+You can use TonerHound commercially, modify it, redistribute it, or embed it in proprietary software. Attribution is appreciated but not required.
+
+---
+
+## Citation
+
+If you use TonerHound in research, cite:
+
+```bibtex
+@software{tonerhound2026,
+  title = {TonerHound: Deterministic Evidence Grounding for LLM Document Extraction},
+  author = {Vanrajsinh},
+  year = {2026},
+  url = {https://github.com/vanrajsinh650/TonerHound}
+}
+```
+
+---
+
+## Acknowledgments
+
+ExtractBench (LlamaIndex) for the benchmark corpus. `pypdfium2` for fast PDF character extraction. Tesseract for the OCR fallback. The `scipy` team for `linear_sum_assignment`.
+
+Built without neural networks, by choice.
