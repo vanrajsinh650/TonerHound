@@ -9,6 +9,10 @@ TonerHound resolves extracted values to exact physical PDF coordinates — no co
 [![Tests](https://img.shields.io/badge/tests-261%20passing-brightgreen.svg)](tests/)
 [![Word F1](https://img.shields.io/badge/ExtractBench%20Word%20F1-72.6179%25-orange.svg)](docs/benchmark-results.md)
 
+<p align="center">
+  <img src="docs/images/tonerhound-ui-preview.png" alt="TonerHound Interactive Grounding Workbench" width="100%" />
+</p>
+
 ---
 
 ## What It Does
@@ -83,6 +87,20 @@ due_date:       exact → page 1, bbox [0.68, 0.08, 0.14, 0.02]
 ```
 
 If a value cannot be grounded, `res.is_grounded` is `False` with status `not_found` or `ambiguous`, and `res.bbox` is `None`.
+
+### Web UI (Interactive Verification Workbench)
+
+Run the local web interface to inspect evidence grounding and document coverage visually:
+
+```bash
+# Terminal 1: Backend API
+uv run uvicorn backend.server:app --reload --port 8000
+
+# Terminal 2: Web Interface
+cd frontend && npm run dev
+```
+
+Open `http://localhost:3000` to upload documents, review bounding boxes, and discover unmapped text.
 
 ### Run the benchmark
 
