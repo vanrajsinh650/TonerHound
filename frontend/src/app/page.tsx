@@ -10,8 +10,18 @@ import { JsonEditor } from "@/components/JsonEditor";
 import { ProcessingOverlay } from "@/components/ProcessingOverlay";
 import { SummaryCard } from "@/components/SummaryCard";
 import { FieldList } from "@/components/FieldList";
-import { FileSearch, RotateCcw, FileText, Code2, ListOrdered, Sparkles } from "lucide-react";
+import { UnmappedList } from "@/components/UnmappedList";
+import {
+  FileSearch,
+  RotateCcw,
+  FileText,
+  Code2,
+  ListOrdered,
+  Sparkles,
+  ScanText,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
+import type { UnmappedLine } from "@/lib/types";
 
 // react-pdf uses pdfjs-dist which accesses window/document at module init.
 // Must be loaded client-only to avoid SSR crash.
@@ -29,7 +39,9 @@ const PdfViewer = dynamic(
 
 export default function VerifyPage() {
   const store = useVerifyStore();
-  const [activeTab, setActiveTab] = useState<"results" | "input">("results");
+  const [activeTab, setActiveTab] = useState<"results" | "unmapped" | "input">(
+    "results"
+  );
 
   const canVerify =
     store.pdfFile !== null &&
@@ -41,48 +53,58 @@ export default function VerifyPage() {
     store.status === "uploading" ||
     store.status === "verifying";
 
-  const handleVerify = useCallback(async () => {
-    if (!store.pdfFile || !store.extractionJson.trim()) return;
+  const runVerification = useCallback(
+    async (jsonOverride?: string) => {
+      const jsonToUse = jsonOverride ?? store.extractionJson;
+      if (!store.pdfFile || !jsonToUse.trim()) return;
 
-    // Validate JSON
-    store.setStatus("validating");
-    store.setProgress(10);
+      // Validate JSON
+      store.setStatus("validating");
+      store.setProgress(10);
 
-    try {
-      JSON.parse(store.extractionJson);
-    } catch {
-      store.setError("Invalid JSON format. Please fix and try again.");
-      return;
-    }
-
-    // Upload & verify
-    store.setStatus("uploading");
-    store.setProgress(30);
-
-    try {
-      store.setStatus("verifying");
-      store.setProgress(60);
-
-      const response = await verifyDocument(
-        store.pdfFile,
-        store.extractionJson
-      );
-
-      store.setResults(response.results, response.meta.duration_ms);
-      setActiveTab("results");
-
-      // Jump to the first grounded field's page
-      const firstGrounded = response.results.find((r) => r.is_grounded && r.page);
-      if (firstGrounded && firstGrounded.page) {
-        store.setPdfPageIndex(firstGrounded.page - 1);
-        store.setSelectedField(firstGrounded.field);
+      try {
+        JSON.parse(jsonToUse);
+      } catch {
+        store.setError("Invalid JSON format. Please fix and try again.");
+        return;
       }
-    } catch (err: unknown) {
-      const message =
-        err instanceof Error ? err.message : "Verification failed. Is the backend running?";
-      store.setError(message);
-    }
-  }, [store]);
+
+      // Upload & verify
+      store.setStatus("uploading");
+      store.setProgress(30);
+
+      try {
+        store.setStatus("verifying");
+        store.setProgress(60);
+
+        const response = await verifyDocument(store.pdfFile, jsonToUse);
+
+        store.setResults(
+          response.results,
+          response.meta.duration_ms,
+          response.meta.coverage
+        );
+
+        // Jump to first grounded field if none selected
+        const firstGrounded = response.results.find((r) => r.is_grounded && r.page);
+        if (firstGrounded && firstGrounded.page) {
+          store.setPdfPageIndex(firstGrounded.page - 1);
+          store.setSelectedField(firstGrounded.field);
+        }
+      } catch (err: unknown) {
+        const message =
+          err instanceof Error
+            ? err.message
+            : "Verification failed. Is the backend running?";
+        store.setError(message);
+      }
+    },
+    [store]
+  );
+
+  const handleVerify = useCallback(() => {
+    runVerification();
+  }, [runVerification]);
 
   const handleFieldSelect = useCallback(
     (field: string) => {
@@ -95,7 +117,16 @@ export default function VerifyPage() {
     [store]
   );
 
+  const handleAddUnmappedLine = useCallback(
+    async (line: UnmappedLine) => {
+      const newJson = store.addUnmappedLineToExtraction(line);
+      await runVerification(newJson);
+    },
+    [store, runVerification]
+  );
+
   const hasResults = store.status === "success" && store.results !== null;
+  const unmappedLines = store.coverage?.unmapped_lines || [];
 
   return (
     <div className="flex h-screen flex-col bg-gray-50 overflow-hidden">
@@ -124,48 +155,69 @@ export default function VerifyPage() {
                 </button>
               </div>
 
-              {/* Compact Metrics */}
+              {/* Compact Metrics + Coverage */}
               <SummaryCard
                 results={store.results!}
                 durationMs={store.durationMs}
+                coverage={store.coverage}
                 compact
               />
             </div>
 
             {/* Main Workbench Split View */}
             <div className="flex-1 min-h-0 grid grid-cols-1 lg:grid-cols-12 gap-3 overflow-hidden">
-              {/* Left Pane: Field List or Edit Inputs */}
+              {/* Left Pane: Field List / Unmapped Text / Edit Inputs */}
               <div className="lg:col-span-5 xl:col-span-4 flex flex-col min-h-0 bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
                 {/* View Switcher Tabs */}
-                <div className="flex border-b border-gray-200 bg-gray-50/80 px-2 pt-2 shrink-0">
+                <div className="flex border-b border-gray-200 bg-gray-50/80 px-2 pt-2 shrink-0 gap-1 overflow-x-auto">
                   <button
                     type="button"
                     onClick={() => setActiveTab("results")}
                     className={cn(
-                      "flex items-center gap-1.5 rounded-t-lg px-3 py-1.5 text-xs font-medium border-t border-x -mb-px transition-colors",
+                      "flex items-center gap-1.5 rounded-t-lg px-2.5 py-1.5 text-xs font-medium border-t border-x -mb-px transition-colors shrink-0",
                       activeTab === "results"
                         ? "border-gray-200 bg-white text-gray-900 shadow-xs"
                         : "border-transparent text-gray-500 hover:text-gray-800"
                     )}
                   >
                     <ListOrdered className="h-3.5 w-3.5 text-blue-600" />
-                    <span>Grounding Results</span>
+                    <span>Results</span>
                     <span className="rounded-full bg-gray-100 px-1.5 py-0.2 text-[10px] text-gray-600">
                       {store.results!.length}
                     </span>
                   </button>
+
+                  <button
+                    type="button"
+                    onClick={() => setActiveTab("unmapped")}
+                    className={cn(
+                      "flex items-center gap-1.5 rounded-t-lg px-2.5 py-1.5 text-xs font-medium border-t border-x -mb-px transition-colors shrink-0",
+                      activeTab === "unmapped"
+                        ? "border-gray-200 bg-white text-indigo-950 shadow-xs font-semibold"
+                        : "border-transparent text-gray-500 hover:text-gray-800"
+                    )}
+                  >
+                    <ScanText className="h-3.5 w-3.5 text-indigo-600" />
+                    <span>Unmapped</span>
+                    {unmappedLines.length > 0 && (
+                      <span className="rounded-full bg-indigo-50 border border-indigo-200 px-1.5 py-0.2 text-[10px] text-indigo-700 font-bold">
+                        {unmappedLines.length}
+                      </span>
+                    )}
+                  </button>
+
                   <button
                     type="button"
                     onClick={() => setActiveTab("input")}
                     className={cn(
-                      "flex items-center gap-1.5 rounded-t-lg px-3 py-1.5 text-xs font-medium border-t border-x -mb-px transition-colors",
+                      "flex items-center gap-1.5 rounded-t-lg px-2.5 py-1.5 text-xs font-medium border-t border-x -mb-px transition-colors shrink-0",
                       activeTab === "input"
                         ? "border-gray-200 bg-white text-gray-900 shadow-xs"
                         : "border-transparent text-gray-500 hover:text-gray-800"
                     )}
                   >
                     <Code2 className="h-3.5 w-3.5 text-gray-500" />
-                    <span>Edit Query JSON</span>
+                    <span>Query JSON</span>
                   </button>
                 </div>
 
@@ -175,6 +227,13 @@ export default function VerifyPage() {
                     results={store.results!}
                     selectedField={store.selectedField}
                     onSelect={handleFieldSelect}
+                  />
+                ) : activeTab === "unmapped" ? (
+                  <UnmappedList
+                    unmappedLines={unmappedLines}
+                    currentPage={store.pdfPageIndex + 1}
+                    onJumpToPage={(p) => store.setPdfPageIndex(p - 1)}
+                    onAddLine={handleAddUnmappedLine}
                   />
                 ) : (
                   <div className="flex-1 min-h-0 flex flex-col p-3 space-y-3 overflow-y-auto">
@@ -204,8 +263,14 @@ export default function VerifyPage() {
                     pageIndex={store.pdfPageIndex}
                     onPageChange={store.setPdfPageIndex}
                     results={store.results!}
+                    unmappedLines={unmappedLines}
+                    showUnmapped={store.showUnmapped}
+                    onToggleUnmapped={() =>
+                      store.setShowUnmapped((prev) => !prev)
+                    }
                     selectedField={store.selectedField}
                     onSelectField={handleFieldSelect}
+                    onSelectUnmappedText={() => setActiveTab("unmapped")}
                   />
                 )}
               </div>
@@ -222,7 +287,7 @@ export default function VerifyPage() {
                     Verify Document Grounding
                   </h2>
                   <p className="text-xs text-gray-500 mt-0.5">
-                    Map extracted JSON values to exact PDF bounding boxes with zero neural networks.
+                    Map extracted JSON values to exact PDF bounding boxes and detect omitted text.
                   </p>
                 </div>
 
@@ -288,7 +353,7 @@ export default function VerifyPage() {
                     Deterministic Evidence Resolver
                   </h3>
                   <p className="mt-1 text-xs text-gray-500 max-w-sm">
-                    Upload a PDF and supply extracted fields. TonerHound physically grounds evidence using exact geometry and Kuhn-Munkres matching.
+                    Upload a PDF and supply extracted fields. TonerHound verifies exact physical coordinates and reveals unextracted document content.
                   </p>
                   <div className="mt-5 grid grid-cols-2 gap-3 text-left max-w-sm w-full">
                     <div className="rounded-lg border border-gray-100 bg-gray-50 p-2.5">
@@ -296,8 +361,8 @@ export default function VerifyPage() {
                       <p className="text-[10px] text-gray-500">Zero hallucination from AI models</p>
                     </div>
                     <div className="rounded-lg border border-gray-100 bg-gray-50 p-2.5">
-                      <p className="text-[11px] font-semibold text-gray-800">Ultra Fast</p>
-                      <p className="text-[10px] text-gray-500">Sub-millisecond resolution time</p>
+                      <p className="text-[11px] font-semibold text-gray-800">Coverage Tracking</p>
+                      <p className="text-[10px] text-gray-500">Detects text omitted by extractors</p>
                     </div>
                   </div>
                 </div>

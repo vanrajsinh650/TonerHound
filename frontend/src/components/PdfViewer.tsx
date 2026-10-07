@@ -2,9 +2,17 @@
 
 import { useState, useRef, useEffect } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
-import { ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Maximize2 } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  ZoomIn,
+  ZoomOut,
+  Maximize2,
+  ScanText,
+} from "lucide-react";
 import { BboxOverlay } from "./BboxOverlay";
-import type { ResolutionResult } from "@/lib/types";
+import type { ResolutionResult, UnmappedLine } from "@/lib/types";
+import { cn } from "@/lib/utils";
 
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
@@ -16,8 +24,12 @@ interface PdfViewerProps {
   pageIndex: number;
   onPageChange: (index: number) => void;
   results: ResolutionResult[];
+  unmappedLines?: UnmappedLine[];
+  showUnmapped?: boolean;
+  onToggleUnmapped?: () => void;
   selectedField: string | null;
   onSelectField: (field: string) => void;
+  onSelectUnmappedText?: (text: string) => void;
 }
 
 export function PdfViewer({
@@ -25,8 +37,12 @@ export function PdfViewer({
   pageIndex,
   onPageChange,
   results,
+  unmappedLines = [],
+  showUnmapped = false,
+  onToggleUnmapped,
   selectedField,
   onSelectField,
+  onSelectUnmappedText,
 }: PdfViewerProps) {
   const [numPages, setNumPages] = useState<number>(0);
   const [scale, setScale] = useState<number>(1.0);
@@ -53,6 +69,14 @@ export function PdfViewer({
       field: r.field,
       bbox: r.bbox as [number, number, number, number],
       status: r.status,
+    }));
+
+  const currentUnmappedBoxes = unmappedLines
+    .filter((u) => u.page === currentPage)
+    .map((u) => ({
+      id: u.id,
+      bbox: u.bbox,
+      text: u.text,
     }));
 
   const selectedResult = results.find((r) => r.field === selectedField);
@@ -90,7 +114,7 @@ export function PdfViewer({
           </button>
         </div>
 
-        {/* Selected Field Indicator */}
+        {/* Selected Field or Unmapped indicator */}
         <div className="hidden sm:flex items-center gap-1.5 truncate max-w-[280px]">
           {selectedField ? (
             <span className="inline-flex items-center gap-1.5 rounded-md bg-blue-50 px-2 py-0.5 text-xs text-blue-700 font-mono truncate border border-blue-200">
@@ -101,12 +125,29 @@ export function PdfViewer({
               )}
             </span>
           ) : (
-            <span className="text-xs text-gray-400">Select a field to highlight</span>
+            <span className="text-xs text-gray-400">Select a field to locate</span>
           )}
         </div>
 
-        {/* Zoom Controls */}
+        {/* Controls: Unmapped toggle + Zoom */}
         <div className="flex items-center gap-1">
+          {unmappedLines.length > 0 && onToggleUnmapped && (
+            <button
+              type="button"
+              onClick={onToggleUnmapped}
+              className={cn(
+                "flex items-center gap-1 rounded-md px-2 py-1 text-xs font-medium transition-colors mr-1 border",
+                showUnmapped
+                  ? "bg-indigo-50 border-indigo-200 text-indigo-700"
+                  : "bg-white border-gray-200 text-gray-600 hover:bg-gray-50"
+              )}
+              title="Toggle dashed boxes for text found in PDF but omitted from JSON"
+            >
+              <ScanText className="h-3.5 w-3.5" />
+              <span className="hidden md:inline">Unmapped ({currentUnmappedBoxes.length})</span>
+            </button>
+          )}
+
           <button
             type="button"
             onClick={() => setScale((s) => Math.max(0.6, Number((s - 0.15).toFixed(2))))}
@@ -115,7 +156,7 @@ export function PdfViewer({
           >
             <ZoomOut className="h-4 w-4" />
           </button>
-          <span className="text-xs font-mono text-gray-500 min-w-[40px] text-center">
+          <span className="text-xs font-mono text-gray-500 min-w-[38px] text-center">
             {Math.round(scale * 100)}%
           </span>
           <button
@@ -166,8 +207,11 @@ export function PdfViewer({
             />
             <BboxOverlay
               boxes={visibleBoxes}
+              unmappedBoxes={currentUnmappedBoxes}
+              showUnmapped={showUnmapped}
               selectedField={selectedField}
               onSelect={onSelectField}
+              onSelectUnmapped={onSelectUnmappedText}
             />
           </div>
         </Document>

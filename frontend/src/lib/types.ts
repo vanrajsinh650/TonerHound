@@ -19,11 +19,26 @@ export interface ResolutionResult {
   confidence?: number;
 }
 
+export interface UnmappedLine {
+  id: string;
+  page: number;
+  text: string;
+  bbox: [number, number, number, number];
+}
+
+export interface DocumentCoverage {
+  total_lines: number;
+  mapped_lines: number;
+  coverage_percent: number;
+  unmapped_lines: UnmappedLine[];
+}
+
 export interface VerifyResponse {
   results: ResolutionResult[];
   meta: {
     fields_processed: number;
     duration_ms: number;
+    coverage?: DocumentCoverage;
   };
 }
 

@@ -1,15 +1,21 @@
 "use client";
 
-import { CheckCircle2, XCircle, AlertTriangle, Clock } from "lucide-react";
-import type { ResolutionResult } from "@/lib/types";
+import { CheckCircle2, XCircle, AlertTriangle, Clock, Layers } from "lucide-react";
+import type { DocumentCoverage, ResolutionResult } from "@/lib/types";
 
 interface SummaryCardProps {
   results: ResolutionResult[];
   durationMs: number | null;
+  coverage?: DocumentCoverage | null;
   compact?: boolean;
 }
 
-export function SummaryCard({ results, durationMs, compact = false }: SummaryCardProps) {
+export function SummaryCard({
+  results,
+  durationMs,
+  coverage,
+  compact = false,
+}: SummaryCardProps) {
   const verified = results.filter((r) => r.status === "VERIFIED").length;
   const hallucinated = results.filter((r) => r.status === "HALLUCINATION").length;
   const mismatched = results.filter((r) => r.status === "MISMATCH").length;
@@ -32,6 +38,18 @@ export function SummaryCard({ results, durationMs, compact = false }: SummaryCar
             <AlertTriangle className="h-3.5 w-3.5 text-amber-600" />
             <span className="font-semibold text-amber-800">{mismatched}</span>
             <span className="text-amber-700">Mismatch</span>
+          </div>
+        )}
+        {coverage && (
+          <div
+            className="flex items-center gap-1.5 rounded-lg border border-indigo-200 bg-indigo-50 px-2.5 py-1 text-xs"
+            title={`${coverage.mapped_lines} of ${coverage.total_lines} lines mapped`}
+          >
+            <Layers className="h-3.5 w-3.5 text-indigo-600" />
+            <span className="font-semibold text-indigo-800">
+              {coverage.coverage_percent}%
+            </span>
+            <span className="text-indigo-700 hidden sm:inline">Coverage</span>
           </div>
         )}
         <div className="flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-2.5 py-1 text-xs text-gray-600">
