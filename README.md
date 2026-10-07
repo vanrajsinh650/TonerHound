@@ -124,6 +124,24 @@ Evaluated on the official ExtractBench 370-document corpus (498,140 fields). Ful
 | Passing Fields | 327,671 / 498,140 |
 | Regressions (across 7 experiments) | **0** |
 
+### ExtractBench Leaderboard (370 Documents)
+
+| Rank | Provider | Word Grounding F1 | Short | Medium | Long | Page Grounding F1 | Cost / Nature |
+|:---:|:---|:---:|:---:|:---:|:---:|:---:|:---:|
+| 1 | LlamaExtract Agentic Plus | **81.26%** | **81.63%** | 81.18% | 75.22% | 89.94% | Paid ($0.081/page) |
+| 2 | LlamaExtract Agentic | 78.89% | 77.63% | **81.86%** | **80.89%** | **90.64%** | Paid ($0.050/page) |
+| 3 | Codex (GPT-6 Sol Evidence) | 77.11% | 77.61% | 75.53% | 78.31% | 86.50% | Cloud LLM |
+| **4** | **TonerHound** | **72.62%** | **70.72%** | **80.58%** | **68.82%** | **83.85%** | **$0.00 (Zero Neural)** |
+| 5 | Claude Code (Opus 5.5 Evidence) | 71.55% | 73.57% | 65.54% | 74.87% | 76.95% | Cloud LLM |
+| 6 | Codex (GPT-6 Luna Evidence) | 65.70% | 62.91% | 71.11% | 74.36% | 83.93% | Cloud LLM |
+| 7 | Claude Code (Sonnet 5.5 Evidence) | 64.61% | 64.59% | 63.18% | 71.22% | 75.99% | Cloud LLM |
+| 8 | Reducto Extract (v4) | 54.97% | 60.53% | 49.35% | 16.30% | 75.28% | Commercial API |
+| 9 | Codex (GPT-5.6 Sol Evidence) | 54.66% | 50.87% | 64.58% | 69.01% | 83.62% | Cloud LLM |
+| 10 | LlamaExtract Cost-Effective | 53.65% | 49.20% | 64.84% | 55.66% | 80.09% | Cloud LLM |
+| 11 | Codex (GPT-5.5 Evidence) | 52.57% | 53.13% | 48.01% | 61.87% | 80.64% | Cloud LLM |
+
+TonerHound places **#4 globally**, outperforming Claude Code (Opus 5.5) and Codex (GPT-6 Luna) purely using classical geometry and Hungarian bipartite matching at zero cost.
+
 **What drove the score (three techniques did ~75% of the work):**
 - **Hungarian bipartite table assignment** — globally optimal value-to-cell matching eliminates cascading row-swap errors. +5,845 fields.
 - **Date literal variants** — exact matching of 18 canonical date renderings. +3,690 fields.
