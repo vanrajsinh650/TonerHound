@@ -183,8 +183,11 @@ def run_benchmark_suite(
     print(f"=== Starting TonerHound Benchmark: {experiment_id} ===")
     print(f"Loaded {len(cases)} test cases from {data_dir}\n")
 
-    for case in cases:
-        print(f"Evaluating: {case.test_id} ({case.file_path.name})...")
+    import gc
+
+    total_cases = len(cases)
+    for idx, case in enumerate(cases, 1):
+        print(f"[{idx}/{total_cases}] Evaluating: {case.test_id} ({case.file_path.name})...")
         try:
             m = run_case_evaluation(
                 case,
@@ -204,6 +207,7 @@ def run_benchmark_suite(
             )
         except (RuntimeError, ValueError, KeyError, OSError, TypeError) as e:
             print(f"  -> Error evaluating {case.test_id}: {e}")
+        gc.collect()
 
     # Compute aggregate metrics over cases that have bbox ground truth
     valid_word_cases = [m for m in case_results if m.word_f1 is not None]
