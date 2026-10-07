@@ -140,6 +140,15 @@ Evaluated on the official ExtractBench 370-document corpus (498,140 fields). Ful
 | 10 | LlamaExtract Cost-Effective | 53.65% | 49.20% | 64.84% | 55.66% | 80.09% | Cloud LLM |
 | 11 | Codex (GPT-5.5 Evidence) | 52.57% | 53.13% | 48.01% | 61.87% | 80.64% | Cloud LLM |
 
+
+<p align="center">
+  <img src="docs/benchmark_leaderboard.png" alt="ExtractBench Leaderboard — TonerHound vs Frontier Models" width="100%" />
+</p>
+
+<p align="center">
+  <img src="docs/benchmark_splits.png" alt="ExtractBench Performance by Document Length" width="100%" />
+</p>
+
 TonerHound places **#4 globally**, outperforming Claude Code (Opus 5.5) and Codex (GPT-6 Luna) purely using classical geometry and Hungarian bipartite matching at zero cost.
 
 **What drove the score (three techniques did ~75% of the work):**
