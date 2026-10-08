@@ -38,11 +38,14 @@ Every bounding box is deterministic: same input, same output, every time. No sam
 |---|---|---|
 | Reproducible | ✅ Same output every run | ❌ Varies with sampling |
 | Auditable | ✅ Traceable to character offsets | ❌ Black-box neural net |
+| Language | ✅ Any script / UTF-8 | ⚠️ Dependent on model training |
 | Offline | ✅ No network required | ❌ Cloud API |
 | Cost | ✅ $0.00 per page | ⚠️ $0.01–$0.40 per page |
 | Accuracy (ExtractBench) | 72.62% Word F1 | 82.2% Word F1 (frontier) |
 
 TonerHound trades ~10 points of grounding accuracy for reproducibility, auditability, and zero cost. That trade is worth it when you need to *prove* where a number came from.
+
+**Language support:** Because resolution operates on physical glyph coordinates and Unicode (NFKC) normalization rather than a language-specific neural net, it works with any language or script on digital PDFs — Latin, Cyrillic, Devanagari, Gujarati, CJK, etc., including native numerals (`૧૨૫૦`, `१२५०`). For scanned-image PDFs, install the appropriate Tesseract language pack (`tesseract-ocr-<lang>`).
 
 ---
 
