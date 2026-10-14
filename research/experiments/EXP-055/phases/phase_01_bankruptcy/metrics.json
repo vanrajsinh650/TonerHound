@@ -1,0 +1,30 @@
+{
+  "phase": "phase_01_bankruptcy",
+  "fix_file": "research/experiments/EXP-055/fixes/fix_07_bankruptcy_row_tracker.py",
+  "target_documents": ["long/real_imedia_full", "long/real_ftx_full"],
+  "target_failure_class": "WRONG_ROW",
+  "acceptance_threshold": 5000,
+  "rescued_fields": 16031,
+  "regressions": 0,
+  "document_breakdown": {
+    "long/real_imedia_full": {
+      "before_f1": 28.41,
+      "after_f1": 91.20,
+      "delta_pp": 62.79,
+      "rescued_fields": 9302
+    },
+    "long/real_ftx_full": {
+      "before_f1": 25.08,
+      "after_f1": 79.35,
+      "delta_pp": 54.27,
+      "rescued_fields": 6729
+    }
+  },
+  "corpus_metrics_post_phase_1": {
+    "macro_word_f1_237": 75.7038,
+    "delta_vs_baseline": 0.4939,
+    "passing_fields": 427129,
+    "failing_fields": 71011
+  },
+  "status": "ACCEPTED"
+}

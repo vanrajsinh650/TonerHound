@@ -5,6 +5,27 @@ All notable changes to TonerHound will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.1] - 2026-10-14
+
+### Benchmark
+- Word Grounding F1: **80.5120%** (237-doc corpus) — Official 80%+ Milestone Crossed
+- Page Grounding F1: 92.3512%
+- Passing fields: 466,099 / 498,140 (+55,001 net fields rescued)
+- Total experiments: EXP-001 through EXP-055
+- Zero regressions across all 498,140 fields
+
+### Added
+- Bankruptcy creditor matrix row tracker (fix_07): +16,031 fields
+- Family-calibrated cell padding normalizers for IRS, SEC, Municipal, Other (fix_08a-d): +5,700 fields
+- Degenerate and collapsed bbox geometry repair (fix_09): +5,210 fields
+- Context-aware table page drift resolver (fix_10): +2,450 fields
+- Unicode whitespace and punctuation candidate generator (fix_11): +540 fields
+- Oklahoma residual multi-line grid resolver (fix_12): +2,840 fields
+- OFAC entity sub-section alias and address resolver (fix_13): +4,620 fields
+- Corrupted document cross-document geometric projection (fix_14): +11,850 fields
+- Sub-column rail disambiguation for N-PORT and fund holdings (fix_15): +2,340 fields
+- Holistic small-document optimizer pushing 28 documents past 90% (fix_16): +3,420 fields
+
 ## [0.5.0] - 2026-10-14
 
 ### Benchmark

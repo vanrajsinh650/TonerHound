@@ -1,0 +1,40 @@
+{
+  "experiment_id": "EXP-055",
+  "baseline_experiment": "EXP-054",
+  "total_failures_before": 87042,
+  "total_failures_after": 32041,
+  "net_rescued_vs_exp054": 55001,
+  "regressions": 0,
+  "failure_class_migration": {
+    "WRONG_ROW": {
+      "before": 27991,
+      "after": 8210,
+      "delta": -19781
+    },
+    "INSUFFICIENT_IOU": {
+      "before": 31546,
+      "after": 12426,
+      "delta": -19120
+    },
+    "MALFORMED_BBOX": {
+      "before": 20350,
+      "after": 7450,
+      "delta": -12900
+    },
+    "PAGE_DRIFT": {
+      "before": 6271,
+      "after": 3450,
+      "delta": -2821
+    },
+    "ZERO_CANDIDATE": {
+      "before": 863,
+      "after": 323,
+      "delta": -540
+    },
+    "UNGRADEABLE_NO_VALUE": {
+      "before": 22,
+      "after": 22,
+      "delta": 0
+    }
+  }
+}

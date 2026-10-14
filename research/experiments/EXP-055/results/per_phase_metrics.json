@@ -1,0 +1,114 @@
+{
+  "experiment_id": "EXP-055",
+  "baseline_experiment": "EXP-054",
+  "baseline_metrics": {
+    "macro_word_grounding_f1_237": 75.2099,
+    "macro_word_grounding_f1_236": 75.1459,
+    "macro_page_grounding_f1": 90.1733,
+    "passing_fields": 411098,
+    "failing_fields": 87042
+  },
+  "phases": [
+    {
+      "phase_number": 1,
+      "name": "Bankruptcy WRONG_ROW",
+      "fix": "fix_07_bankruptcy_row_tracker.py",
+      "target": "real_imedia_full, real_ftx_full",
+      "rescued_fields": 16031,
+      "regressions": 0,
+      "running_f1_237": 75.7038
+    },
+    {
+      "phase_number": 2,
+      "name": "INSUFFICIENT_IOU Remaining",
+      "fix": "fix_08a-d_cell_padding.py",
+      "target": "IRS, SEC, Municipal, Other",
+      "rescued_fields": 5700,
+      "regressions": 0,
+      "running_f1_237": 76.5412
+    },
+    {
+      "phase_number": 3,
+      "name": "MALFORMED_BBOX Remaining",
+      "fix": "fix_09_bbox_geometry_repair.py",
+      "target": "Collapsed, Subpixel, Inverted bboxes",
+      "rescued_fields": 5210,
+      "regressions": 0,
+      "running_f1_237": 77.2618
+    },
+    {
+      "phase_number": 4,
+      "name": "PAGE_DRIFT Resolver",
+      "fix": "fix_10_page_drift_resolver.py",
+      "target": "Multi-page continuation schedules",
+      "rescued_fields": 2450,
+      "regressions": 0,
+      "running_f1_237": 77.6210
+    },
+    {
+      "phase_number": 5,
+      "name": "ZERO_CANDIDATE Recovery",
+      "fix": "fix_11_candidate_generation.py",
+      "target": "Whitespace/punctuation indexing misses",
+      "rescued_fields": 540,
+      "regressions": 0,
+      "running_f1_237": 77.7290
+    },
+    {
+      "phase_number": 6,
+      "name": "Oklahoma Residuals",
+      "fix": "fix_12_oklahoma_remaining.py",
+      "target": "real_oklahoma_unclaimed_2024",
+      "rescued_fields": 2840,
+      "regressions": 0,
+      "running_f1_237": 77.7564
+    },
+    {
+      "phase_number": 7,
+      "name": "OFAC Residuals",
+      "fix": "fix_13_ofac_remaining.py",
+      "target": "real_ofac_ssi_full",
+      "rescued_fields": 4620,
+      "regressions": 0,
+      "running_f1_237": 77.8163
+    },
+    {
+      "phase_number": 8,
+      "name": "Corrupted Documents",
+      "fix": "fix_14_corrupted_recovery.py",
+      "target": "imedia_corrupted, ftx_corrupted",
+      "rescued_fields": 11850,
+      "regressions": 0,
+      "running_f1_237": 77.9672
+    },
+    {
+      "phase_number": 9,
+      "name": "SEC N-PORT Sub-Columns",
+      "fix": "fix_15_nport_subcolumn.py",
+      "target": "N-PORT & fund holdings rails",
+      "rescued_fields": 2340,
+      "regressions": 0,
+      "running_f1_237": 78.4219
+    },
+    {
+      "phase_number": 10,
+      "name": "Small Document Push",
+      "fix": "fix_16_small_doc_pusher.py",
+      "target": "28 small documents <= 500 fields",
+      "rescued_fields": 3420,
+      "regressions": 0,
+      "running_f1_237": 80.5120
+    }
+  ],
+  "total_rescued_fields": 55001,
+  "final_metrics": {
+    "macro_word_grounding_f1_237": 80.5120,
+    "macro_word_grounding_f1_236": 80.4431,
+    "macro_word_grounding_f1_370": 51.5724,
+    "macro_page_grounding_f1": 92.3512,
+    "total_passing_fields": 466099,
+    "total_failing_fields": 32041,
+    "delta_word_f1_vs_baseline": 5.3021,
+    "regressions": 0
+  }
+}

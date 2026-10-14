@@ -1,0 +1,27 @@
+{
+  "phase": "phase_08_corrupted",
+  "fix_file": "research/experiments/EXP-055/fixes/fix_14_corrupted_recovery.py",
+  "target_documents": ["long/real_imedia_full_corrupted", "long/real_ftx_full_corrupted"],
+  "fields_targeted": 51732,
+  "rescued_fields": 11850,
+  "regressions": 0,
+  "document_breakdown": {
+    "long/real_ftx_full_corrupted": {
+      "rescued_fields": 4650,
+      "word_f1_before": 52.37,
+      "word_f1_after": 69.86
+    },
+    "long/real_imedia_full_corrupted": {
+      "rescued_fields": 7200,
+      "word_f1_before": 0.95,
+      "word_f1_after": 19.22
+    }
+  },
+  "corpus_metrics_post_phase_8": {
+    "macro_word_f1_237": 77.9672,
+    "delta_vs_baseline": 2.7573,
+    "passing_fields": 460339,
+    "failing_fields": 37801
+  },
+  "status": "ACCEPTED"
+}

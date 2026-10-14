@@ -1,0 +1,38 @@
+{
+  "phase": "phase_02_iou",
+  "fix_files": [
+    "research/experiments/EXP-055/fixes/fix_08a_cell_padding_irs.py",
+    "research/experiments/EXP-055/fixes/fix_08b_cell_padding_sec.py",
+    "research/experiments/EXP-055/fixes/fix_08c_cell_padding_municipal.py",
+    "research/experiments/EXP-055/fixes/fix_08d_cell_padding_other.py"
+  ],
+  "target_failure_class": "INSUFFICIENT_IOU",
+  "fields_targeted": 31546,
+  "rescued_fields": 5700,
+  "regressions": 0,
+  "subphase_breakdown": {
+    "phase_2a_irs": {
+      "family": "IRS Tax Forms (1040, 990-PF, 990)",
+      "rescued_fields": 1240
+    },
+    "phase_2b_sec": {
+      "family": "SEC Regulatory Holdings (13F, N-PORT, N-CSR)",
+      "rescued_fields": 2150
+    },
+    "phase_2c_municipal": {
+      "family": "Municipal Property Tax & County Rolls",
+      "rescued_fields": 890
+    },
+    "phase_2d_other": {
+      "family": "Other / Ungrouped Bounded Expansions",
+      "rescued_fields": 1420
+    }
+  },
+  "corpus_metrics_post_phase_2": {
+    "macro_word_f1_237": 76.5412,
+    "delta_vs_baseline": 1.3313,
+    "passing_fields": 432829,
+    "failing_fields": 65311
+  },
+  "status": "ACCEPTED"
+}

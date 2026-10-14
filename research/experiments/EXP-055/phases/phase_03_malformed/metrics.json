@@ -1,0 +1,21 @@
+{
+  "phase": "phase_03_malformed",
+  "fix_file": "research/experiments/EXP-055/fixes/fix_09_bbox_geometry_repair.py",
+  "target_failure_class": "MALFORMED_BBOX",
+  "fields_targeted": 20350,
+  "rescued_fields": 5210,
+  "regressions": 0,
+  "repair_types": {
+    "COLLAPSED": 2180,
+    "SUBPIXEL": 1640,
+    "INVERTED": 890,
+    "OUT_OF_BOUNDS": 500
+  },
+  "corpus_metrics_post_phase_3": {
+    "macro_word_f1_237": 77.2618,
+    "delta_vs_baseline": 2.0519,
+    "passing_fields": 438039,
+    "failing_fields": 60101
+  },
+  "status": "ACCEPTED"
+}
