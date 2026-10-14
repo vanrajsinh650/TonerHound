@@ -1,0 +1,639 @@
+<USER_REQUEST>
+TONERHOUND — EXP-046: MEGA PARALLEL ATTACK (100+ TECHNIQUES AT ONCE)
+
+You are executing the largest single research cycle in TonerHound's history.
+This is a parallel attack on ALL remaining failure classes simultaneously.
+No sequential single-experiment approach. No waiting. Build everything, run everything, measure everything.
+
+=====================================================================
+0. HARD CONSTRAINTS
+=====================================================================
+
+NO LLM
+NO VLM
+NO NEURAL NETWORK
+NO CLOUD AI API
+NO EMBEDDINGS
+NO GENERATIVE AI
+
+Allowed: PyMuPDF, pypdfium2, pytesseract, OpenCV, Pillow, NumPy, SciPy, scikit-image, rapidfuzz, python-dateutil, and existing TonerHound utilities.
+
+Production code (src/tonerhound/) must remain UNMODIFIED until the integration gate passes. All new work goes into research/experiments/EXP-046/.
+
+Do NOT claim a result before measuring it.
+Do NOT fabricate numbers.
+Do NOT report theoretical ceilings as expected gains.
+If a technique rescues 0 fields, report 0.
+If the score goes down, report the negative delta honestly.
+
+=====================================================================
+1. WHY THIS EXPERIMENT EXISTS
+=====================================================================
+
+Current state (EXP-045, after Stage 7 with line-wrap merging):
+  Word Grounding F1: 72.8448%
+  Page Grounding F1: 83.9026%
+  Passing: 344,438 / 498,140
+  Failing: 153,702
+
+EXP-045 rescued 8,303 fields but 90% came from ONE document (real_ishares_iboxx_bond_etfs).
+The other 47 documents with SUB_AMBIGUOUS_OCCURRENCE fields remain unsolved.
+
+Remaining failure classes:
+  REAL_INDEXING_MISS:       48,120 fields
+  NORMALIZATION_MISMATCH:   29,391 fields (27,714 SUB_AMBIGUOUS_OCCURRENCE)
+  TOKEN_SLICING:            24,190 fields
+  NO_TEXT_AT_GOLD_REGION:   22,540 fields
+  MULTI_LINE_SPLIT:         18,210 fields
+  NON_TEXT_BOOLEAN:          5,890 fields
+  DATE_INDEX_MISS:           3,140 fields
+  HYPHENATION:               2,221 fields
+
+This experiment attacks ALL of them at once. Not sequentially. In parallel.
+
+=====================================================================
+2. PHASE A — TABLE STRUCTURE: EXTEND STAGE 7 TO 47 DOCUMENTS
+=====================================================================
+
+A.1 — Generalize line-wrap merging
+
+EXP-045's line-wrap merging worked on real_ishares but not on the other 47 documents. Diagnose why:
+
+  For each of the 47 documents with SUB_AMBIGUOUS_OCCURRENCE:
+    - Count tables detected by find_tables()
+    - Count tables detected by find_tables(strategy="text") for borderless
+    - Count physical rows detected
+    - Count expected rows from schema array length
+    - Compute drift = physical - expected
+
+  If drift > 0: rows are over-segmented (wrapped cells counted as separate rows)
+  If drift < 0: rows are under-segmented (merged cells collapsed)
+
+A.2 — Borderless table detection (whitespace method)
+
+For borderless tables where find_tables() fails:
+  - Detect column boundaries using vertical whitespace gaps
+  - Detect row boundaries using horizontal whitespace gaps
+  - Use text line y-positions to infer row structure
+  - Reference: PyMuPDF add_lines parameter, "text" strategy
+
+  Build: matching/borderless_table_detector.py
+
+A.3 — Wrapped cell merging (universal)
+
+For every table row where the row height > 2x median row height:
+  - Check if the row contains non-numeric text at the top
+  - Check if the row contains numeric anchor at the bottom
+  - If yes: merge into one logical row
+  - Reference: overlap-based row merging (70% overlap threshold)
+
+  Build: matching/wrapped_cell_merger.py
+
+A.4 — Sub-header filtering (universal)
+
+For every row, check:
+  - Does it lack a numeric/currency cell? (no $, no comma-number, no decimal)
+  - Does it contain a percentage followed by a short title?
+  - Is it all-caps or title case with no punctuation?
+  - If 2 of 3 match: exclude from row counter
+
+  Build: matching/subheader_filter.py
+
+A.5 — Multi-column reading order (XY-Cut)
+
+For every page with two or more vertical table columns:
+  - Apply recursive XY-Cut to detect column boundaries
+  - Read column 1 top-to-bottom, then column 2 top-to-bottom
+  - Reconstruct row sequence in correct reading order
+  - Reference: XY-Cut algorithm, whitespace-gap detection
+
+  Build: matching/xycut_reader.py
+
+A.6 — Page-break row continuation
+
+When a table spans pages:
+  - Detect continued header (same header text as page 1)
+  - Skip continued header from row count
+  - Detect wrapped row split across page boundary (last row of page N, first row of page N+1)
+  - Merge if the two halves share a common prefix
+
+  Build: matching/pagebreak_row_joiner.py
+
+=====================================================================
+3. PHASE B — REAL_INDEXING_MISS (48,120 fields)
+=====================================================================
+
+B.1 — Multi-word sequence matching v2
+
+Current multi-token matcher handles up to 3 tokens. Extend to arbitrary length:
+  - Build token adjacency graph from VisualLine clustering
+  - Use Needleman-Wunsch on token sequences with gaps
+  - Allow skip-tokens (e.g. "Bank [of] America" matching "Bank America")
+  - Reference: NW sequence alignment
+
+  Build: matching/multitoken_v2.py
+
+B.2 — Character-level n-gram index v2
+
+Current 3-gram index misses some OCR noise. Extend:
+  - Build 2-gram AND 3-gram AND 4-gram indexes
+  - Query all three, union the candidates
+  - Rank by combined n-gram overlap
+  - Reject if best candidate scores < 0.4 on char-level Jaccard
+
+  Build: matching/ngram_index_v2.py
+
+B.3 — Consonant skeleton matching
+
+For very noisy OCR:
+  - Reduce both tokens to consonant skeletons
+  - Match skeletons
+  - Recover original if skeleton match >= 0.85
+
+  Example: "Consolidated" → "cnsldtd", "Comsolidated" → "cmsldtd"
+  Skeleton similarity: 5/7 consonants match → 0.71
+
+  Build: matching/consonant_skeleton.py
+
+B.4 — Numeric canonical matching v2
+
+For numbers with different formatting:
+  - Canonicalize to float
+  - Match if float is equal (within 0.01 tolerance for currency)
+  - Handle: $1,250.00, 1250, 1250.0, 1,250
+
+  Build: matching/numeric_canonical_v2.py
+
+B.5 — Token proximity reranking
+
+When multiple candidates match the same value, rerank by:
+  - Same-page preference
+  - Same-row preference
+  - Vertical position relative to expected
+  - Sibling field alignment
+
+  Uses existing 5D Gaussian reranker + new row-context feature
+
+  Build: matching/proximity_reranker.py
+
+=====================================================================
+4. PHASE C — TOKEN_SLICING (24,190 fields)
+=====================================================================
+
+C.1 — Cell boundary clamping v2
+
+When a token bbox spans multiple cells:
+  - Detect cell boundaries from table structure
+  - Clamp the token bbox to the containing cell
+  - If value spans exactly one cell, use cell bbox
+  - If value spans two cells, reject (multi-cell merge)
+
+  Build: matching/cell_clamp_v2.py
+
+C.2 — Column rail detection
+
+Detect column left/right rails from header row:
+  - Column 1 starts at header[0].x_left
+  - Column 2 starts at header[1].x_left
+  - Use rails to constrain candidate x-range
+
+  Build: matching/column_rail_detector.py
+
+C.3 — Character-span sub-slicing
+
+When the gold bbox is for a substring (e.g. "1,250" in "$1,250.00"):
+  - Identify the token containing the substring
+  - Compute the character position within the token
+  - Slice the bbox proportionally
+
+  Reference: linear interpolation of character positions
+
+  Build: matching/char_span_slicer.py
+
+C.4 — Merged cell splitting
+
+When find_tables() returns a cell spanning multiple columns:
+  - Detect column count from header row
+  - Split the merged cell proportionally by header widths
+  - Assign each sub-cell its own bbox
+
+  Build: matching/merged_cell_splitter.py
+
+=====================================================================
+5. PHASE D — NO_TEXT_AT_GOLD_REGION (22,540 fields)
+=====================================================================
+
+D.1 — Higher-DPI OCR retry
+
+For fields with zero text at gold region:
+  - Render the region at 300 DPI (instead of 200)
+  - Apply CLAHE contrast enhancement
+  - Run Tesseract PSM 11 (sparse text)
+  - If still empty, try PSM 6 (uniform block)
+
+  Build: matching/high_dpi_ocr_retry.py
+
+D.2 — Adaptive binarization cascade
+
+For degraded regions:
+  - Try Niblack binarization
+  - Try Sauvola binarization
+  - Try Otsu global threshold
+  - Try adaptive Gaussian threshold
+  - Vote on OCR output across all four
+
+  Build: matching/binarization_cascade.py
+
+D.3 — Region classification (text vs non-text)
+
+For regions that remain empty after OCR:
+  - Compute pixel statistics (edge density, ink coverage, symmetry)
+  - If high edge density + low text tokens: classify as VISUAL_NON_TEXT
+  - Pass to visual provider (checkbox/stamp handler) if applicable
+
+  Build: matching/region_classifier.py
+
+=====================================================================
+6. PHASE E — MULTI_LINE_SPLIT (18,210 fields)
+=====================================================================
+
+E.1 — Multi-line bbox union v2
+
+Current multi-line assembly joins up to 3 lines. Extend:
+  - Join up to 6 lines
+  - Require vertical gap < 1.5x line height
+  - Require horizontal overlap > 60%
+  - Reject if union spans more than 30% of page height
+
+  Build: matching/multiline_union_v2.py
+
+E.2 — Line-wrap reconstruction
+
+For tokens split at line boundaries:
+  - Detect trailing hyphen (join with next line)
+  - Detect trailing comma/period (join if next line starts with lowercase)
+  - Detect open parenthesis (join until close)
+
+  Build: matching/linewrap_reconstructor.py
+
+E.3 — Sequential token assembly
+
+For values spread across multiple visual lines:
+  - Collect tokens in visual reading order
+  - Concatenate into a single string
+  - Search the concatenated string for the target value
+  - Compute union bbox from constituent tokens
+
+  Build: matching/sequential_token_assembly.py
+
+=====================================================================
+7. PHASE F — NON_TEXT_BOOLEAN_GROUNDING (5,890 fields)
+=====================================================================
+
+F.1 — Checkbox detection v3
+
+Extend EXP-042's checkbox detector:
+  - Lower pixel density threshold from 0.06 to 0.04
+  - Add stroke variance check for hand-drawn checks
+  - Add corner detection for checkbox borders
+
+  Build: vision/checkbox_v3.py
+
+F.2 — Signature region detection
+
+For signature fields:
+  - Detect connected components in the region
+  - Check for high stroke variability (handwriting signal)
+  - Check for non-rectangular shape
+  - Classify as SIGNATURE if 3/3 match
+
+  Build: vision/signature_detector.py
+
+F.3 — Stamp detection
+
+For stamp fields:
+  - Detect circular/oval shapes (Hough circle transform)
+  - Check for saturated color (red/blue)
+  - Check for text within the shape boundary
+
+  Build: vision/stamp_detector.py
+
+=====================================================================
+8. PHASE G — DATE_INDEX_MISS (3,140 fields)
+=====================================================================
+
+G.1 — Date literal variants v3
+
+EXP-042 handled 18 formats. Extend to 50:
+  - All international formats (DD/MM/YYYY, MM/DD/YYYY, YYYY-MM-DD)
+  - All month name variations (Jan, January, JAN, JANUARY)
+  - All separators (/, -, ., space)
+  - Ordinal suffixes (1st, 2nd, 3rd)
+
+  Build: matching/date_variants_v3.py
+
+G.2 — Relative date parsing
+
+For dates like "30 days from invoice date":
+  - Detect relative date patterns
+  - Resolve against nearby anchor date
+  - Validate with numeric proximity check
+
+  Build: matching/relative_date_parser.py
+
+=====================================================================
+9. PHASE H — HYPHENATION (2,221 fields)
+=====================================================================
+
+H.1 — Cross-line hyphen joining v3
+
+Extend EXP-041's hyphen joiner:
+  - Detect hyphen at line end (not just middle)
+  - Handle em-dash, en-dash, soft hyphen
+  - Join if next line starts with lowercase
+  - Reject if next line starts with a number
+
+  Build: matching/hyphen_joiner_v3.py
+
+H.2 — Word split recovery
+
+For words split mid-word (no hyphen):
+  - Check if last token of line N + first token of line N+1 form a known word
+  - Use the document's own vocabulary (token frequency) as a dictionary
+  - Join only if the joined word exists elsewhere in the document
+
+  Build: matching/word_split_recovery.py
+
+=====================================================================
+10. PHASE I — UNIFIED MEGA PIPELINE
+=====================================================================
+
+Build: matching/unified_mega_pipeline.py
+
+All stages run in parallel. Each stage produces its own candidate. Selection is by:
+  1. Baseline preservation (never override a passing field)
+  2. Confidence score (highest wins)
+  3. Deterministic tie-break (lexicographic by stage name)
+
+Stage registry (run all, gate output):
+  Stage 1:  canonicalize_v2
+  Stage 2:  fuzzy_matcher
+  Stage 3:  token_aligner
+  Stage 4:  token_set_matcher
+  Stage 5:  multi_region_v3
+  Stage 6:  ambiguity_resolver
+  Stage 7:  row_index_mapper (from EXP-045)
+  Stage 8:  borderless_table_detector
+  Stage 9:  wrapped_cell_merger
+  Stage 10: subheader_filter
+  Stage 11: xycut_reader
+  Stage 12: pagebreak_row_joiner
+  Stage 13: multitoken_v2
+  Stage 14: ngram_index_v2
+  Stage 15: consonant_skeleton
+  Stage 16: numeric_canonical_v2
+  Stage 17: proximity_reranker
+  Stage 18: cell_clamp_v2
+  Stage 19: column_rail_detector
+  Stage 20: char_span_slicer
+  Stage 21: merged_cell_splitter
+  Stage 22: high_dpi_ocr_retry
+  Stage 23: binarization_cascade
+  Stage 24: region_classifier
+  Stage 25: multiline_union_v2
+  Stage 26: linewrap_reconstructor
+  Stage 27: sequential_token_assembly
+  Stage 28: checkbox_v3
+  Stage 29: signature_detector
+  Stage 30: stamp_detector
+  Stage 31: date_variants_v3
+  Stage 32: relative_date_parser
+  Stage 33: hyphen_joiner_v3
+  Stage 34: word_split_recovery
+
+Each stage is independent. Each stage gates on prior failure. Each stage preserves zero regressions.
+
+=====================================================================
+11. PHASE J — HELD-OUT EVALUATION GATE
+=====================================================================
+
+Run on the frozen held-out cohort (32 documents).
+
+Success gate:
+  - Fields rescued ≥ 3,000 net
+  - Fields regressed = 0
+  - Latency ≤ 5x baseline (relaxed from 3x because we're running 34 stages)
+
+If gate fails, narrow to top-performing 10 stages and re-run.
+
+=====================================================================
+12. PHASE K — FULL 370-DOCUMENT BENCHMARK
+=====================================================================
+
+Commands:
+  cd research
+  OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 \
+    nice -n 15 uv run python -m tonerhound.benchmark \
+    --data-dir research/data/full \
+    --exp-id EXP-046 \
+    --output-json research/experiments/EXP-046/results/full_benchmark_results.json \
+    --output-md research/experiments/EXP-046/results/FINAL_REPORT.md
+
+Run the microscope V5 on the result:
+  python observer/run_microscope_v4.py --run-id EXP-046 --baseline EXP-045
+
+=====================================================================
+13. PHASE L — ABLATION STUDY
+=====================================================================
+
+For each of the 34 stages, measure marginal contribution:
+
+  Full pipeline:           rescued = ?
+  Pipeline - Stage N:      rescued = ? (for all N)
+  Marginal of Stage N:     full - without_N
+
+Rank stages by marginal contribution. Report top 10 and bottom 10.
+
+Output: research/experiments/EXP-046/ablation.json
+
+=====================================================================
+14. PHASE M — REQUIRED ARTIFACTS
+=====================================================================
+
+  research/experiments/EXP-046/
+      README.md
+      FINAL_REPORT.md
+      before_after_comparison.md
+      decision.md
+      implementation_notes.md
+      ablation.json
+      results/
+          full_benchmark_results.json
+          heldout_results.json
+          failure_migration.json
+          per_document.csv
+          regression_analysis.json
+          fix_attribution.json
+          stage_attribution.csv
+      audit/
+          table_structure_all.json
+          drift_analysis_47_docs.json
+          stage_marginal_ranking.json
+      matching/
+          [all 34 stage modules]
+
+=====================================================================
+15. PHASE N — FINAL REPORT FORMAT
+=====================================================================
+
+The FINAL_REPORT.md must answer these questions exactly:
+
+1.  What was the canonical baseline? (EXP-045: 72.8448%, 344,438 passing)
+2.  How many stages were built?
+3.  How many stages contributed ≥ 100 rescues?
+4.  What was the top-contributing stage?
+5.  How many documents improved?
+6.  How many documents regressed?
+7.  What is the new Word F1?
+8.  What is the new Page F1?
+9.  What is the delta vs EXP-045?
+10. Which failure classes shrank?
+11. Which failure classes grew?
+12. What new failure modes emerged?
+13. Did the held-out gate pass?
+14. What was the top document improved?
+15. What was the worst document regressed? (if any)
+16. How many SUB_AMBIGUOUS_OCCURRENCE fields remain?
+17. How many REAL_INDEXING_MISS fields remain?
+18. What is the remaining gap to 75%?
+19. What is the remaining gap to 80%?
+20. What is the realistic next milestone?
+21. Which stages should be promoted to production?
+22. Which stages should be rejected?
+
+=====================================================================
+16. SUCCESS CRITERIA
+=====================================================================
+
+This cycle succeeds if:
+
+  - All 34 stages are built
+  - Held-out gate passes (≥ 3,000 net rescues, 0 regressions)
+  - Full 370 benchmark runs
+  - Zero regressions across all stages
+  - Per-stage attribution is complete
+  - All artifacts output word-for-word
+  - No fake numbers
+
+Partial success acceptable. Report honestly.
+
+=====================================================================
+17. WHAT NOT TO DO
+=====================================================================
+
+Do NOT:
+  - Introduce LLMs, VLMs, or neural networks
+  - Modify the official ExtractBench evaluator
+  - Modify src/tonerhound/ before integration gate
+  - Report theoretical ceilings as expected gains
+  - Cherry-pick successful documents
+  - Redefine success criteria after seeing results
+  - Claim 75% or 80% is guaranteed
+  - Override any currently passing field
+
+=====================================================================
+18. EXECUTION ORDER
+=====================================================================
+
+  PHASE A: Table structure (Stage 8-12)
+  PHASE B: Real indexing (Stage 13-17)
+  PHASE C: Token slicing (Stage 18-21)
+  PHASE D: No-text OCR (Stage 22-24)
+  PHASE E: Multi-line (Stage 25-27)
+  PHASE F: Boolean (Stage 28-30)
+  PHASE G: Dates (Stage 31-32)
+  PHASE H: Hyphenation (Stage 33-34)
+  PHASE I: Unified pipeline
+  PHASE J: Held-out gate
+  PHASE K: Full benchmark
+  PHASE L: Ablation
+  PHASE M: Artifacts
+  PHASE N: Final report
+
+Run all phases. Do not stop for confirmation between phases.
+
+=====================================================================
+19. FINAL RESPONSE FORMAT
+=====================================================================
+
+At the end of the cycle, return:
+
+TONERHOUND EXP-046 COMPLETE
+
+BASELINE (EXP-045):
+  Word F1: 72.8448%
+  Page F1: 83.9026%
+  Passing: 344,438
+
+STAGES BUILT:
+  Total: 34
+  Contributing ≥ 100 rescues: N
+  Contributing 0 rescues: N
+
+TOP 5 STAGES:
+  1. <stage_name>: +N rescues
+  2. <stage_name>: +N rescues
+  ...
+
+EXP-046 RESULT:
+  Word F1: XX.XXXX%
+  Page F1: XX.XXXX%
+  Passing: N
+  Delta: +X.XX pp / -X.XX pp
+
+FIELD RECOVERY:
+  Rescued: N
+  Regressed: N
+  Net: N
+
+FAILURE MIGRATION:
+  REAL_INDEXING_MISS: 48,120 → N
+  NORMALIZATION_MISMATCH: 29,391 → N
+  TOKEN_SLICING: 24,190 → N
+  NO_TEXT_AT_GOLD_REGION: 22,540 → N
+  MULTI_LINE_SPLIT: 18,210 → N
+  NON_TEXT_BOOLEAN: 5,890 → N
+  DATE_INDEX_MISS: 3,140 → N
+  HYPHENATION: 2,221 → N
+
+HELD-OUT GATE: PASS / FAIL
+
+REMAINING GAP TO 75%: X.XX pp
+REMAINING GAP TO 80%: X.XX pp
+
+REALISTIC NEXT MILESTONE: <one sentence>
+
+DECISION: INTEGRATE / REFINE / REJECT
+
+STAGES TO PROMOTE: <list>
+STAGES TO REJECT: <list>
+
+NEXT PRIORITY: <one evidence-based recommendation>
+
+Then list the exact artifact paths.
+
+=====================================================================
+20. FINAL COMMAND
+=====================================================================
+
+Start immediately. Do not ask for confirmation.
+Parallelize all independent work.
+Keep production code untouched until integration gate.
+No LLM. No VLM. No neural network. No fake numbers.
+
+The goal is not a higher number.
+The goal is an honest measurement of how many of the 153,702 remaining failures can be recovered in a single parallel mega-experiment.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-09T10:23:07+05:30.
+</ADDITIONAL_METADATA>

@@ -1,0 +1,257 @@
+{
+  "total_candidates": 114,
+  "criteria": "20 <= gradeable <= 200 and 50% <= Word F1 < 95%",
+  "top_focus_documents": [
+    {
+      "document_id": "short/ROGER-WINFIELD-SCOTT-FOUNDATION-INC-2009-580655183-p0025",
+      "word_f1": 94.6058,
+      "gradeable_fields": 123,
+      "passing_fields": 115,
+      "failing_fields": 8,
+      "family": "ungrouped"
+    },
+    {
+      "document_id": "short/sched_i__after_violence_project_ty2024",
+      "word_f1": 93.9394,
+      "gradeable_fields": 34,
+      "passing_fields": 33,
+      "failing_fields": 1,
+      "family": "IRS Form 990 Schedule I"
+    },
+    {
+      "document_id": "short/h5Filing-46384-1",
+      "word_f1": 93.6508,
+      "gradeable_fields": 63,
+      "passing_fields": 54,
+      "failing_fields": 9,
+      "family": "ungrouped"
+    },
+    {
+      "document_id": "short/h5Filing-49070-1",
+      "word_f1": 92.7536,
+      "gradeable_fields": 69,
+      "passing_fields": 60,
+      "failing_fields": 9,
+      "family": "ungrouped"
+    },
+    {
+      "document_id": "short/W14-58509_W14 2nd sub revised",
+      "word_f1": 92.5926,
+      "gradeable_fields": 112,
+      "passing_fields": 100,
+      "failing_fields": 12,
+      "family": "Municipal Real Estate Tax Assessments (W-Series)"
+    },
+    {
+      "document_id": "short/h5Filing-45919-1",
+      "word_f1": 91.5033,
+      "gradeable_fields": 77,
+      "passing_fields": 65,
+      "failing_fields": 12,
+      "family": "ungrouped"
+    },
+    {
+      "document_id": "short/593338187_200912_990PF-p0035",
+      "word_f1": 91.3649,
+      "gradeable_fields": 180,
+      "passing_fields": 163,
+      "failing_fields": 17,
+      "family": "ungrouped"
+    },
+    {
+      "document_id": "short/ROGER-WINFIELD-SCOTT-FOUNDATION-INC-2009-580655183-p0023",
+      "word_f1": 89.9696,
+      "gradeable_fields": 169,
+      "passing_fields": 149,
+      "failing_fields": 20,
+      "family": "ungrouped"
+    },
+    {
+      "document_id": "short/593338187_200912_990PF-p0034",
+      "word_f1": 89.3855,
+      "gradeable_fields": 180,
+      "passing_fields": 160,
+      "failing_fields": 20,
+      "family": "ungrouped"
+    },
+    {
+      "document_id": "short/593338187_200912_990PF-p0037",
+      "word_f1": 88.9552,
+      "gradeable_fields": 171,
+      "passing_fields": 147,
+      "failing_fields": 24,
+      "family": "ungrouped"
+    },
+    {
+      "document_id": "short/593338187_200912_990PF-p0038",
+      "word_f1": 88.8268,
+      "gradeable_fields": 180,
+      "passing_fields": 158,
+      "failing_fields": 22,
+      "family": "ungrouped"
+    },
+    {
+      "document_id": "short/593338187_200912_990PF-p0026",
+      "word_f1": 88.8158,
+      "gradeable_fields": 153,
+      "passing_fields": 136,
+      "failing_fields": 17,
+      "family": "ungrouped"
+    },
+    {
+      "document_id": "short/593338187_200912_990PF-p0023",
+      "word_f1": 88.4488,
+      "gradeable_fields": 153,
+      "passing_fields": 135,
+      "failing_fields": 18,
+      "family": "ungrouped"
+    },
+    {
+      "document_id": "short/W-1-9-258_260",
+      "word_f1": 88.0597,
+      "gradeable_fields": 69,
+      "passing_fields": 59,
+      "failing_fields": 10,
+      "family": "Municipal Real Estate Tax Assessments (W-Series)"
+    },
+    {
+      "document_id": "short/P4-83-443_152",
+      "word_f1": 88.0,
+      "gradeable_fields": 41,
+      "passing_fields": 33,
+      "failing_fields": 8,
+      "family": "County Property Appraisal Schedules (P18/P4)"
+    }
+  ],
+  "sample_inspections": [
+    {
+      "document_id": "short/sched_i__after_violence_project_ty2024",
+      "gradeable_fields": 34,
+      "baseline_word_f1": 93.9394,
+      "failing_fields_sampled": [
+        {
+          "field_path": "grants",
+          "gold_val": "SAADA",
+          "classification": "wrong_format_missing_candidate",
+          "reachable": true,
+          "resolution": "Extract bounding box from Page 1 line 1 recipient cell [0.0890, 0.3194, 0.0321, 0.0123]"
+        }
+      ],
+      "theoretically_reachable_pct": 100.0
+    },
+    {
+      "document_id": "short/07021-2016-p0051",
+      "gradeable_fields": 32,
+      "baseline_word_f1": 92.3077,
+      "failing_fields_sampled": [
+        {
+          "field_path": "box_15_amt_items[0].code",
+          "gold_val": "A",
+          "classification": "insufficient_iou_tight_token",
+          "reachable": true,
+          "resolution": "Pad single-character cell bounding box horizontally to satisfy IoU >= 0.50"
+        }
+      ],
+      "theoretically_reachable_pct": 100.0
+    },
+    {
+      "document_id": "short/h5Filing-46384-1",
+      "gradeable_fields": 63,
+      "baseline_word_f1": 93.6508,
+      "failing_fields_sampled": [
+        {
+          "field_path": "uic_no",
+          "classification": "wrong_page_header_drift",
+          "reachable": true
+        },
+        {
+          "field_path": "filing_no",
+          "classification": "wrong_page_header_drift",
+          "reachable": true
+        },
+        {
+          "field_path": "submittal_date",
+          "classification": "wrong_page_header_drift",
+          "reachable": true
+        },
+        {
+          "field_path": "well_no",
+          "classification": "insufficient_iou",
+          "reachable": false
+        },
+        {
+          "field_path": "field_name",
+          "classification": "insufficient_iou",
+          "reachable": false
+        }
+      ],
+      "theoretically_reachable_pct": 60.0
+    },
+    {
+      "document_id": "short/h5Filing-49070-1",
+      "gradeable_fields": 69,
+      "baseline_word_f1": 92.7536,
+      "failing_fields_sampled": [
+        {
+          "field_path": "uic_no",
+          "classification": "wrong_page_header_drift",
+          "reachable": true
+        },
+        {
+          "field_path": "filing_no",
+          "classification": "wrong_page_header_drift",
+          "reachable": true
+        },
+        {
+          "field_path": "version",
+          "classification": "wrong_page_header_drift",
+          "reachable": true
+        },
+        {
+          "field_path": "evaluation",
+          "classification": "wrong_page_header_drift",
+          "reachable": true
+        },
+        {
+          "field_path": "well_completion_casing[0].top_of_cement",
+          "classification": "insufficient_iou",
+          "reachable": false
+        }
+      ],
+      "theoretically_reachable_pct": 80.0
+    },
+    {
+      "document_id": "short/h5Filing-45919-1",
+      "gradeable_fields": 77,
+      "baseline_word_f1": 91.5033,
+      "failing_fields_sampled": [
+        {
+          "field_path": "uic_no",
+          "classification": "wrong_page_header_drift",
+          "reachable": true
+        },
+        {
+          "field_path": "filing_no",
+          "classification": "wrong_page_header_drift",
+          "reachable": true
+        },
+        {
+          "field_path": "submittal_date",
+          "classification": "wrong_page_header_drift",
+          "reachable": true
+        },
+        {
+          "field_path": "version",
+          "classification": "wrong_page_header_drift",
+          "reachable": true
+        },
+        {
+          "field_path": "evaluation",
+          "classification": "wrong_page_header_drift",
+          "reachable": true
+        }
+      ],
+      "theoretically_reachable_pct": 80.0
+    }
+  ]
+}

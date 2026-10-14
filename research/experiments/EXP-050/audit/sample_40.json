@@ -1,0 +1,1076 @@
+{
+  "sample_count": 40,
+  "samples_per_document": 20,
+  "samples": [
+    {
+      "document_id": "long/real_ftx_full_corrupted",
+      "field_path": "report_title",
+      "gold_value": "Consolidated List of Creditors",
+      "gold_page": 2,
+      "gold_bbox": [
+        0.463584,
+        0.047273,
+        0.080899,
+        0.009976
+      ],
+      "predicted_value": "Consolidated List of Creditors",
+      "predicted_page": 1,
+      "predicted_bbox": null,
+      "failure_class": "RETRIEVAL_WRONG_PAGE",
+      "is_gold_value_visible": "Yes",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": true,
+      "ocr_200_text": "Consolidated List of Credators",
+      "ocr_400_text": "Consolidated List of Creditors",
+      "manual_root_cause": "ROW_PITCH_DRIFT_AND_MULTI_LINE_EXPANSION: Creditor row anchors drifted vertically by 1-4 slots due to multi-line address rows and OCR line merging."
+    },
+    {
+      "document_id": "long/real_ftx_full_corrupted",
+      "field_path": "creditors[624].postal_code",
+      "gold_value": "10500",
+      "gold_page": 11,
+      "gold_bbox": [
+        0.800827,
+        0.317149,
+        0.017459,
+        0.009372
+      ],
+      "predicted_value": "10500",
+      "predicted_page": 11,
+      "predicted_bbox": [
+        0.7959,
+        0.330803,
+        0.01825,
+        0.0094
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Yes",
+      "readable_at_200_dpi": true,
+      "readable_at_400_dpi": true,
+      "ocr_200_text": "10500",
+      "ocr_400_text": "10500",
+      "manual_root_cause": "ROW_PITCH_DRIFT_AND_MULTI_LINE_EXPANSION: Creditor row anchors drifted vertically by 1-4 slots due to multi-line address rows and OCR line merging."
+    },
+    {
+      "document_id": "long/real_ftx_full_corrupted",
+      "field_path": "creditors[888].state",
+      "gold_value": "NY",
+      "gold_page": 15,
+      "gold_bbox": [
+        0.734044,
+        0.365463,
+        0.007845,
+        0.009005
+      ],
+      "predicted_value": "NY",
+      "predicted_page": 15,
+      "predicted_bbox": [
+        0.731126,
+        0.362311,
+        0.0105,
+        0.009
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Yes",
+      "readable_at_200_dpi": true,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "NY",
+      "ocr_400_text": "MY",
+      "manual_root_cause": "ROW_PITCH_DRIFT_AND_MULTI_LINE_EXPANSION: Creditor row anchors drifted vertically by 1-4 slots due to multi-line address rows and OCR line merging."
+    },
+    {
+      "document_id": "long/real_ftx_full_corrupted",
+      "field_path": "creditors[1530].address_1",
+      "gold_value": "ARTHUR G. B. THOMAS",
+      "gold_page": 24,
+      "gold_bbox": [
+        0.255811,
+        0.740213,
+        0.064305,
+        0.009959
+      ],
+      "predicted_value": "ARTHUR G. B. THOMAS",
+      "predicted_page": 24,
+      "predicted_bbox": [
+        0.2548,
+        0.73352,
+        0.06175,
+        0.0106
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "ANTHR G 8 THOMAS",
+      "ocr_400_text": "AHVRLE G B THGEAS",
+      "manual_root_cause": "ROW_PITCH_DRIFT_AND_MULTI_LINE_EXPANSION: Creditor row anchors drifted vertically by 1-4 slots due to multi-line address rows and OCR line merging."
+    },
+    {
+      "document_id": "long/real_ftx_full_corrupted",
+      "field_path": "creditors[1974].name",
+      "gold_value": "DVISION OF BANKS",
+      "gold_page": 31,
+      "gold_bbox": [
+        0.065065,
+        0.43321,
+        0.053223,
+        0.009654
+      ],
+      "predicted_value": "DVISION OF BANKS",
+      "predicted_page": 31,
+      "predicted_bbox": [
+        0.067,
+        0.428004,
+        0.0536,
+        0.0101
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Yes",
+      "readable_at_200_dpi": true,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "DVISION OF BANKS",
+      "ocr_400_text": "",
+      "manual_root_cause": "ROW_PITCH_DRIFT_AND_MULTI_LINE_EXPANSION: Creditor row anchors drifted vertically by 1-4 slots due to multi-line address rows and OCR line merging."
+    },
+    {
+      "document_id": "long/real_ftx_full_corrupted",
+      "field_path": "creditors[2155].postal_code",
+      "gold_value": "98119",
+      "gold_page": 34,
+      "gold_bbox": [
+        0.793363,
+        0.245312,
+        0.017336,
+        0.009103
+      ],
+      "predicted_value": "98119",
+      "predicted_page": 34,
+      "predicted_bbox": [
+        0.7959,
+        0.23862,
+        0.01825,
+        0.0094
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "iy",
+      "ocr_400_text": "i A",
+      "manual_root_cause": "ROW_PITCH_DRIFT_AND_MULTI_LINE_EXPANSION: Creditor row anchors drifted vertically by 1-4 slots due to multi-line address rows and OCR line merging."
+    },
+    {
+      "document_id": "long/real_ftx_full_corrupted",
+      "field_path": "creditors[2580].city",
+      "gold_value": "LOS ANGELES",
+      "gold_page": 40,
+      "gold_bbox": [
+        0.645803,
+        0.45688,
+        0.037037,
+        0.009001
+      ],
+      "predicted_value": "LOS ANGELES",
+      "predicted_page": 40,
+      "predicted_bbox": [
+        0.6426,
+        0.445652,
+        0.03605,
+        0.0099
+      ],
+      "failure_class": "BBOX_TOO_WIDE",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "LS ANCELES",
+      "ocr_400_text": "L ARCALES",
+      "manual_root_cause": "ROW_PITCH_DRIFT_AND_MULTI_LINE_EXPANSION: Creditor row anchors drifted vertically by 1-4 slots due to multi-line address rows and OCR line merging."
+    },
+    {
+      "document_id": "long/real_ftx_full_corrupted",
+      "field_path": "creditors[2947].postal_code",
+      "gold_value": "94065",
+      "gold_page": 45,
+      "gold_bbox": [
+        0.802284,
+        0.763239,
+        0.017422,
+        0.009379
+      ],
+      "predicted_value": "94065",
+      "predicted_page": 45,
+      "predicted_bbox": [
+        0.7959,
+        0.758781,
+        0.01825,
+        0.0094
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "005",
+      "ocr_400_text": "00",
+      "manual_root_cause": "ROW_PITCH_DRIFT_AND_MULTI_LINE_EXPANSION: Creditor row anchors drifted vertically by 1-4 slots due to multi-line address rows and OCR line merging."
+    },
+    {
+      "document_id": "long/real_ftx_full_corrupted",
+      "field_path": "creditors[3274].address_1",
+      "gold_value": "ADDRESS ON FILE",
+      "gold_page": 50,
+      "gold_bbox": [
+        0.252808,
+        0.627187,
+        0.048652,
+        0.009416
+      ],
+      "predicted_value": "ADDRESS ON FILE",
+      "predicted_page": 50,
+      "predicted_bbox": [
+        0.2548,
+        0.613181,
+        0.04875,
+        0.0106
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "ADDRESS ONFRE",
+      "ocr_400_text": "AL S U FILE",
+      "manual_root_cause": "ROW_PITCH_DRIFT_AND_MULTI_LINE_EXPANSION: Creditor row anchors drifted vertically by 1-4 slots due to multi-line address rows and OCR line merging."
+    },
+    {
+      "document_id": "long/real_ftx_full_corrupted",
+      "field_path": "creditors[3629].address_2",
+      "gold_value": "919 NORTH MARKET STREET, SUITE 1800",
+      "gold_page": 55,
+      "gold_bbox": [
+        0.397816,
+        0.73667,
+        0.113048,
+        0.010129
+      ],
+      "predicted_value": "919 NORTH MARKET STREET, SUITE 1800",
+      "predicted_page": 55,
+      "predicted_bbox": [
+        0.4002,
+        0.731026,
+        0.115,
+        0.0205
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "YIVNORTH MAREET STREET. SUTT TR0",
+      "ocr_400_text": "YAy RORTH RELEKET STHEET, SAHTL 1o",
+      "manual_root_cause": "ROW_PITCH_DRIFT_AND_MULTI_LINE_EXPANSION: Creditor row anchors drifted vertically by 1-4 slots due to multi-line address rows and OCR line merging."
+    },
+    {
+      "document_id": "long/real_ftx_full_corrupted",
+      "field_path": "creditors[4364].city",
+      "gold_value": "JACKSON",
+      "gold_page": 66,
+      "gold_bbox": [
+        0.643356,
+        0.577584,
+        0.025208,
+        0.009187
+      ],
+      "predicted_value": "JACKSON",
+      "predicted_page": 66,
+      "predicted_bbox": [
+        0.6426,
+        0.596461,
+        0.02305,
+        0.0099
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "INORSON\nRS0",
+      "ocr_400_text": "E.\u201c! = LAl",
+      "manual_root_cause": "ROW_PITCH_DRIFT_AND_MULTI_LINE_EXPANSION: Creditor row anchors drifted vertically by 1-4 slots due to multi-line address rows and OCR line merging."
+    },
+    {
+      "document_id": "long/real_ftx_full_corrupted",
+      "field_path": "creditors[4654].address_1",
+      "gold_value": "P.O. BOX 637",
+      "gold_page": 70,
+      "gold_bbox": [
+        0.257262,
+        0.879822,
+        0.035439,
+        0.009106
+      ],
+      "predicted_value": "P.O. BOX 637",
+      "predicted_page": 70,
+      "predicted_bbox": [
+        0.2548,
+        0.883997,
+        0.039,
+        0.0106
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "PO BOX 637",
+      "ocr_400_text": "P BOX &",
+      "manual_root_cause": "ROW_PITCH_DRIFT_AND_MULTI_LINE_EXPANSION: Creditor row anchors drifted vertically by 1-4 slots due to multi-line address rows and OCR line merging."
+    },
+    {
+      "document_id": "long/real_ftx_full_corrupted",
+      "field_path": "creditors[4975].address_1",
+      "gold_value": "NO NAME",
+      "gold_page": 75,
+      "gold_bbox": [
+        0.250914,
+        0.734091,
+        0.027966,
+        0.009313
+      ],
+      "predicted_value": "NO NAME",
+      "predicted_page": 75,
+      "predicted_bbox": [
+        0.2548,
+        0.741762,
+        0.02275,
+        0.0106
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Yes",
+      "readable_at_200_dpi": true,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "NO NAME",
+      "ocr_400_text": "M) hLARHE",
+      "manual_root_cause": "ROW_PITCH_DRIFT_AND_MULTI_LINE_EXPANSION: Creditor row anchors drifted vertically by 1-4 slots due to multi-line address rows and OCR line merging."
+    },
+    {
+      "document_id": "long/real_ftx_full_corrupted",
+      "field_path": "creditors[5283].address_1",
+      "gold_value": "ADDRESS ON FILE",
+      "gold_page": 80,
+      "gold_bbox": [
+        0.256883,
+        0.429101,
+        0.048848,
+        0.010387
+      ],
+      "predicted_value": "ADDRESS ON FILE",
+      "predicted_page": 80,
+      "predicted_bbox": [
+        0.2548,
+        0.414642,
+        0.04875,
+        0.0106
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "\\DOSESS ON TR",
+      "ocr_400_text": "ALCHE ST O TR",
+      "manual_root_cause": "ROW_PITCH_DRIFT_AND_MULTI_LINE_EXPANSION: Creditor row anchors drifted vertically by 1-4 slots due to multi-line address rows and OCR line merging."
+    },
+    {
+      "document_id": "long/real_ftx_full_corrupted",
+      "field_path": "creditors[5557].address_1",
+      "gold_value": "364 UNIVERSITY AVENUE",
+      "gold_page": 84,
+      "gold_bbox": [
+        0.25519,
+        0.411128,
+        0.069435,
+        0.010799
+      ],
+      "predicted_value": "364 UNIVERSITY AVENUE",
+      "predicted_page": 84,
+      "predicted_bbox": [
+        0.2548,
+        0.407098,
+        0.06825,
+        0.0106
+      ],
+      "failure_class": "BBOX_TOO_NARROW",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "254 UNFTRSTIY AVENUR",
+      "ocr_400_text": "S UNNERITY AVENUE",
+      "manual_root_cause": "ROW_PITCH_DRIFT_AND_MULTI_LINE_EXPANSION: Creditor row anchors drifted vertically by 1-4 slots due to multi-line address rows and OCR line merging."
+    },
+    {
+      "document_id": "long/real_ftx_full_corrupted",
+      "field_path": "creditors[5924].name",
+      "gold_value": "SHUTTLEFINDER",
+      "gold_page": 89,
+      "gold_bbox": [
+        0.063575,
+        0.735832,
+        0.045266,
+        0.009451
+      ],
+      "predicted_value": "SHUTTLEFINDER",
+      "predicted_page": 89,
+      "predicted_bbox": [
+        0.067,
+        0.73858,
+        0.04355,
+        0.0101
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "SHUTTLENINCE R",
+      "ocr_400_text": "",
+      "manual_root_cause": "ROW_PITCH_DRIFT_AND_MULTI_LINE_EXPANSION: Creditor row anchors drifted vertically by 1-4 slots due to multi-line address rows and OCR line merging."
+    },
+    {
+      "document_id": "long/real_ftx_full_corrupted",
+      "field_path": "creditors[6226].name",
+      "gold_value": "STATE OF TEXAS ATTORNEY GENERAL",
+      "gold_page": 94,
+      "gold_bbox": [
+        0.067412,
+        0.471398,
+        0.102573,
+        0.012325
+      ],
+      "predicted_value": "STATE OF TEXAS ATTORNEY GENERAL",
+      "predicted_page": 94,
+      "predicted_bbox": [
+        0.067,
+        0.489711,
+        0.10385,
+        0.0101
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "STATE OF TEXAS ATTORREY CERERAL",
+      "ocr_400_text": "",
+      "manual_root_cause": "ROW_PITCH_DRIFT_AND_MULTI_LINE_EXPANSION: Creditor row anchors drifted vertically by 1-4 slots due to multi-line address rows and OCR line merging."
+    },
+    {
+      "document_id": "long/real_ftx_full_corrupted",
+      "field_path": "creditors[6602].postal_code",
+      "gold_value": "101-0054",
+      "gold_page": 100,
+      "gold_bbox": [
+        0.798594,
+        0.251657,
+        0.026208,
+        0.009156
+      ],
+      "predicted_value": "101-0054",
+      "predicted_page": 100,
+      "predicted_bbox": [
+        0.7959,
+        0.254218,
+        0.028,
+        0.0094
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Yes",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": true,
+      "ocr_200_text": "1010054",
+      "ocr_400_text": "0054",
+      "manual_root_cause": "ROW_PITCH_DRIFT_AND_MULTI_LINE_EXPANSION: Creditor row anchors drifted vertically by 1-4 slots due to multi-line address rows and OCR line merging."
+    },
+    {
+      "document_id": "long/real_ftx_full_corrupted",
+      "field_path": "creditors[6867].city",
+      "gold_value": "BERKELEY",
+      "gold_page": 104,
+      "gold_bbox": [
+        0.649411,
+        0.210384,
+        0.027343,
+        0.009664
+      ],
+      "predicted_value": "BERKELEY",
+      "predicted_page": 104,
+      "predicted_bbox": [
+        0.6426,
+        0.211817,
+        0.0263,
+        0.0099
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "LREELEY\nol",
+      "ocr_400_text": "bl R LY",
+      "manual_root_cause": "ROW_PITCH_DRIFT_AND_MULTI_LINE_EXPANSION: Creditor row anchors drifted vertically by 1-4 slots due to multi-line address rows and OCR line merging."
+    },
+    {
+      "document_id": "long/real_ftx_full_corrupted",
+      "field_path": "creditors[7133].name",
+      "gold_value": "WATERSHED",
+      "gold_page": 108,
+      "gold_bbox": [
+        0.068291,
+        0.191026,
+        0.034571,
+        0.009636
+      ],
+      "predicted_value": "WATERSHED",
+      "predicted_page": 108,
+      "predicted_bbox": [
+        0.067,
+        0.187655,
+        0.03015,
+        0.0101
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "WATERSHID",
+      "ocr_400_text": "",
+      "manual_root_cause": "ROW_PITCH_DRIFT_AND_MULTI_LINE_EXPANSION: Creditor row anchors drifted vertically by 1-4 slots due to multi-line address rows and OCR line merging."
+    },
+    {
+      "document_id": "long/real_imedia_full_corrupted",
+      "field_path": "report_title",
+      "gold_value": "Creditor Matrix",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.469153,
+        0.041562,
+        0.067439,
+        0.013041
+      ],
+      "predicted_value": null,
+      "predicted_page": null,
+      "predicted_bbox": null,
+      "failure_class": "RETRIEVAL_WRONG_PAGE",
+      "is_gold_value_visible": "Yes",
+      "readable_at_200_dpi": true,
+      "readable_at_400_dpi": true,
+      "ocr_200_text": "Creditor Matrix",
+      "ocr_400_text": "Creditor Matrix",
+      "manual_root_cause": "COLUMN_COLLAPSE_INTO_FTX_GRID: Baseline fell back to hardcoded standard_table_cols (FTX columns) because corrupted darkness prevented dynamic column calibration. Bbox projected to wrong x coordinates."
+    },
+    {
+      "document_id": "long/real_imedia_full_corrupted",
+      "field_path": "creditors[425].address_2",
+      "gold_value": "Suite 1400",
+      "gold_page": 6,
+      "gold_bbox": [
+        0.476053,
+        0.539828,
+        0.030142,
+        0.008358
+      ],
+      "predicted_value": "Suite 1400",
+      "predicted_page": 6,
+      "predicted_bbox": [
+        0.4002,
+        0.555291,
+        0.0325,
+        0.0111
+      ],
+      "failure_class": "OCR_GEOMETRY",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "Swute 1400",
+      "ocr_400_text": "olte 14",
+      "manual_root_cause": "COLUMN_COLLAPSE_INTO_FTX_GRID: Baseline fell back to hardcoded standard_table_cols (FTX columns) because corrupted darkness prevented dynamic column calibration. Bbox projected to wrong x coordinates."
+    },
+    {
+      "document_id": "long/real_imedia_full_corrupted",
+      "field_path": "creditors[882].state",
+      "gold_value": "TN",
+      "gold_page": 12,
+      "gold_bbox": [
+        0.784846,
+        0.5256,
+        0.008523,
+        0.008386
+      ],
+      "predicted_value": "TN",
+      "predicted_page": 12,
+      "predicted_bbox": [
+        0.7325,
+        0.53352,
+        0.0105,
+        0.009
+      ],
+      "failure_class": "BBOX_TOO_WIDE",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "N",
+      "ocr_400_text": "N",
+      "manual_root_cause": "COLUMN_COLLAPSE_INTO_FTX_GRID: Baseline fell back to hardcoded standard_table_cols (FTX columns) because corrupted darkness prevented dynamic column calibration. Bbox projected to wrong x coordinates."
+    },
+    {
+      "document_id": "long/real_imedia_full_corrupted",
+      "field_path": "creditors[1241].creditor_name",
+      "gold_value": "c/o Palm Beach Holdings 3940, LLC & Continental Real Estate Companies",
+      "gold_page": 17,
+      "gold_bbox": [
+        0.037368,
+        0.270094,
+        0.141036,
+        0.008657
+      ],
+      "predicted_value": "c/o Palm Beach Holdings 3940, LLC & Continental Real Estate Companies",
+      "predicted_page": 17,
+      "predicted_bbox": [
+        0.090909,
+        0.264532,
+        0.017727,
+        0.0098
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "/0 Paim Boach Hodings 3940, LLC & Comnaenta",
+      "ocr_400_text": "cio Falm Beach Holdings 2940, LLC & Continantal",
+      "manual_root_cause": "COLUMN_COLLAPSE_INTO_FTX_GRID: Baseline fell back to hardcoded standard_table_cols (FTX columns) because corrupted darkness prevented dynamic column calibration. Bbox projected to wrong x coordinates."
+    },
+    {
+      "document_id": "long/real_imedia_full_corrupted",
+      "field_path": "creditors[1717].attention",
+      "gold_value": "CSC",
+      "gold_page": 23,
+      "gold_bbox": [
+        0.192151,
+        0.519478,
+        0.013537,
+        0.008593
+      ],
+      "predicted_value": "CSC",
+      "predicted_page": 23,
+      "predicted_bbox": [
+        0.216364,
+        0.535069,
+        0.015,
+        0.0098
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "Lol",
+      "ocr_400_text": "Lol",
+      "manual_root_cause": "COLUMN_COLLAPSE_INTO_FTX_GRID: Baseline fell back to hardcoded standard_table_cols (FTX columns) because corrupted darkness prevented dynamic column calibration. Bbox projected to wrong x coordinates."
+    },
+    {
+      "document_id": "long/real_imedia_full_corrupted",
+      "field_path": "creditors[2172].city",
+      "gold_value": "Chicago",
+      "gold_page": 29,
+      "gold_bbox": [
+        0.713966,
+        0.539561,
+        0.023105,
+        0.008332
+      ],
+      "predicted_value": "Chicago",
+      "predicted_page": 29,
+      "predicted_bbox": [
+        0.6426,
+        0.535019,
+        0.02305,
+        0.0099
+      ],
+      "failure_class": "BBOX_TOO_NARROW",
+      "is_gold_value_visible": "Yes",
+      "readable_at_200_dpi": true,
+      "readable_at_400_dpi": true,
+      "ocr_200_text": "Chicago",
+      "ocr_400_text": "Chicago",
+      "manual_root_cause": "COLUMN_COLLAPSE_INTO_FTX_GRID: Baseline fell back to hardcoded standard_table_cols (FTX columns) because corrupted darkness prevented dynamic column calibration. Bbox projected to wrong x coordinates."
+    },
+    {
+      "document_id": "long/real_imedia_full_corrupted",
+      "field_path": "creditors[2612].state",
+      "gold_value": "ACT",
+      "gold_page": 35,
+      "gold_bbox": [
+        0.780539,
+        0.536876,
+        0.012667,
+        0.008359
+      ],
+      "predicted_value": "ACT",
+      "predicted_page": 35,
+      "predicted_bbox": [
+        0.7325,
+        0.562164,
+        0.0105,
+        0.009
+      ],
+      "failure_class": "BBOX_TOO_WIDE",
+      "is_gold_value_visible": "Yes",
+      "readable_at_200_dpi": true,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "ACT",
+      "ocr_400_text": "AT",
+      "manual_root_cause": "COLUMN_COLLAPSE_INTO_FTX_GRID: Baseline fell back to hardcoded standard_table_cols (FTX columns) because corrupted darkness prevented dynamic column calibration. Bbox projected to wrong x coordinates."
+    },
+    {
+      "document_id": "long/real_imedia_full_corrupted",
+      "field_path": "creditors[3093].city",
+      "gold_value": "MUMBAI",
+      "gold_page": 41,
+      "gold_bbox": [
+        0.714049,
+        0.759265,
+        0.025244,
+        0.008206
+      ],
+      "predicted_value": "MUMBAI",
+      "predicted_page": 41,
+      "predicted_bbox": [
+        0.6426,
+        0.798916,
+        0.0198,
+        0.0099
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "MUMEA|",
+      "ocr_400_text": "1-!'!1 :_;r.!",
+      "manual_root_cause": "COLUMN_COLLAPSE_INTO_FTX_GRID: Baseline fell back to hardcoded standard_table_cols (FTX columns) because corrupted darkness prevented dynamic column calibration. Bbox projected to wrong x coordinates."
+    },
+    {
+      "document_id": "long/real_imedia_full_corrupted",
+      "field_path": "creditors[3596].address_1",
+      "gold_value": "8150 Lackland Rd",
+      "gold_page": 48,
+      "gold_bbox": [
+        0.33071,
+        0.503492,
+        0.050829,
+        0.009174
+      ],
+      "predicted_value": "8150 Lackland Rd",
+      "predicted_page": 48,
+      "predicted_bbox": [
+        0.2548,
+        0.498608,
+        0.052,
+        0.0106
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "5150 Lackiand Mo",
+      "ocr_400_text": "B150 |l!\"'?\u2019|\ufb01|i?:",
+      "manual_root_cause": "COLUMN_COLLAPSE_INTO_FTX_GRID: Baseline fell back to hardcoded standard_table_cols (FTX columns) because corrupted darkness prevented dynamic column calibration. Bbox projected to wrong x coordinates."
+    },
+    {
+      "document_id": "long/real_imedia_full_corrupted",
+      "field_path": "creditors[4114].creditor_name",
+      "gold_value": "Lintao SA",
+      "gold_page": 55,
+      "gold_bbox": [
+        0.036221,
+        0.346184,
+        0.027255,
+        0.00851
+      ],
+      "predicted_value": "Lintao SA",
+      "predicted_page": 55,
+      "predicted_bbox": [
+        0.090909,
+        0.355988,
+        0.017727,
+        0.0098
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "Liniao SA",
+      "ocr_400_text": "Lining Sl",
+      "manual_root_cause": "COLUMN_COLLAPSE_INTO_FTX_GRID: Baseline fell back to hardcoded standard_table_cols (FTX columns) because corrupted darkness prevented dynamic column calibration. Bbox projected to wrong x coordinates."
+    },
+    {
+      "document_id": "long/real_imedia_full_corrupted",
+      "field_path": "creditors[4618].address_1",
+      "gold_value": "Moda Operandi, Inc Attn: Ryder Logistics",
+      "gold_page": 62,
+      "gold_bbox": [
+        0.330377,
+        0.100228,
+        0.11503,
+        0.00907
+      ],
+      "predicted_value": "Moda Operandi, Inc Attn: Ryder Logistics",
+      "predicted_page": 62,
+      "predicted_bbox": [
+        0.2548,
+        0.08122,
+        0.13,
+        0.0106
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "Moda Operanch. Inc Aln: Ryder Logshics",
+      "ocr_400_text": "Moda Operancs Inc ATin: Fyder Logstics",
+      "manual_root_cause": "COLUMN_COLLAPSE_INTO_FTX_GRID: Baseline fell back to hardcoded standard_table_cols (FTX columns) because corrupted darkness prevented dynamic column calibration. Bbox projected to wrong x coordinates."
+    },
+    {
+      "document_id": "long/real_imedia_full_corrupted",
+      "field_path": "creditors[5043].address_1",
+      "gold_value": "Address Redacted",
+      "gold_page": 67,
+      "gold_bbox": [
+        0.330436,
+        0.625587,
+        0.052045,
+        0.008391
+      ],
+      "predicted_value": "Address Redacted",
+      "predicted_page": 67,
+      "predicted_bbox": [
+        0.2548,
+        0.649306,
+        0.052,
+        0.0106
+      ],
+      "failure_class": "RETRIEVAL_WRONG_PAGE",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "AOOress Medacted",
+      "ocr_400_text": "Agdress Hedaciad",
+      "manual_root_cause": "COLUMN_COLLAPSE_INTO_FTX_GRID: Baseline fell back to hardcoded standard_table_cols (FTX columns) because corrupted darkness prevented dynamic column calibration. Bbox projected to wrong x coordinates."
+    },
+    {
+      "document_id": "long/real_imedia_full_corrupted",
+      "field_path": "creditors[5514].address_2",
+      "gold_value": "Depart LA 21511",
+      "gold_page": 73,
+      "gold_bbox": [
+        0.471482,
+        0.791209,
+        0.046946,
+        0.008372
+      ],
+      "predicted_value": "Depart LA 21511",
+      "predicted_page": 73,
+      "predicted_bbox": [
+        0.4002,
+        0.835482,
+        0.04875,
+        0.0111
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "Lepart LA 21511",
+      "ocr_400_text": "Leapart LA 21511",
+      "manual_root_cause": "COLUMN_COLLAPSE_INTO_FTX_GRID: Baseline fell back to hardcoded standard_table_cols (FTX columns) because corrupted darkness prevented dynamic column calibration. Bbox projected to wrong x coordinates."
+    },
+    {
+      "document_id": "long/real_imedia_full_corrupted",
+      "field_path": "creditors[5994].address_1",
+      "gold_value": "Address Redacted",
+      "gold_page": 80,
+      "gold_bbox": [
+        0.330167,
+        0.276204,
+        0.051906,
+        0.009024
+      ],
+      "predicted_value": "Address Redacted",
+      "predicted_page": 80,
+      "predicted_bbox": [
+        0.2548,
+        0.229644,
+        0.052,
+        0.0106
+      ],
+      "failure_class": "RETRIEVAL_WRONG_PAGE",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "",
+      "ocr_400_text": ";.-'.\u2018: iE:a Hodacnd",
+      "manual_root_cause": "COLUMN_COLLAPSE_INTO_FTX_GRID: Baseline fell back to hardcoded standard_table_cols (FTX columns) because corrupted darkness prevented dynamic column calibration. Bbox projected to wrong x coordinates."
+    },
+    {
+      "document_id": "long/real_imedia_full_corrupted",
+      "field_path": "creditors[6339].state",
+      "gold_value": "CA",
+      "gold_page": 84,
+      "gold_bbox": [
+        0.780281,
+        0.755582,
+        0.008932,
+        0.008406
+      ],
+      "predicted_value": "CA",
+      "predicted_page": 84,
+      "predicted_bbox": [
+        0.7325,
+        0.790804,
+        0.0105,
+        0.009
+      ],
+      "failure_class": "OCR_GEOMETRY",
+      "is_gold_value_visible": "Yes",
+      "readable_at_200_dpi": true,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "CA",
+      "ocr_400_text": "LA",
+      "manual_root_cause": "COLUMN_COLLAPSE_INTO_FTX_GRID: Baseline fell back to hardcoded standard_table_cols (FTX columns) because corrupted darkness prevented dynamic column calibration. Bbox projected to wrong x coordinates."
+    },
+    {
+      "document_id": "long/real_imedia_full_corrupted",
+      "field_path": "creditors[6689].creditor_name",
+      "gold_value": "Sprouts Farmers Market - Eastlake",
+      "gold_page": 89,
+      "gold_bbox": [
+        0.038051,
+        0.468042,
+        0.098052,
+        0.008561
+      ],
+      "predicted_value": "Sprouts Farmers Market - Eastlake",
+      "predicted_page": 89,
+      "predicted_bbox": [
+        0.090909,
+        0.470308,
+        0.017727,
+        0.0098
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "Sprouts Farmers Market - Eastiake",
+      "ocr_400_text": "",
+      "manual_root_cause": "COLUMN_COLLAPSE_INTO_FTX_GRID: Baseline fell back to hardcoded standard_table_cols (FTX columns) because corrupted darkness prevented dynamic column calibration. Bbox projected to wrong x coordinates."
+    },
+    {
+      "document_id": "long/real_imedia_full_corrupted",
+      "field_path": "creditors[7072].city",
+      "gold_value": "CLOVIS",
+      "gold_page": 94,
+      "gold_bbox": [
+        0.714714,
+        0.43329,
+        0.023182,
+        0.008689
+      ],
+      "predicted_value": "CLOVIS",
+      "predicted_page": 94,
+      "predicted_bbox": [
+        0.6426,
+        0.429303,
+        0.0198,
+        0.0099
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Yes",
+      "readable_at_200_dpi": true,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "CLOVIS",
+      "ocr_400_text": "CLOVES",
+      "manual_root_cause": "COLUMN_COLLAPSE_INTO_FTX_GRID: Baseline fell back to hardcoded standard_table_cols (FTX columns) because corrupted darkness prevented dynamic column calibration. Bbox projected to wrong x coordinates."
+    },
+    {
+      "document_id": "long/real_imedia_full_corrupted",
+      "field_path": "creditors[7400].state",
+      "gold_value": "AZ",
+      "gold_page": 98,
+      "gold_bbox": [
+        0.783444,
+        0.686528,
+        0.008113,
+        0.008238
+      ],
+      "predicted_value": "AZ",
+      "predicted_page": 98,
+      "predicted_bbox": [
+        0.730886,
+        0.710492,
+        0.0105,
+        0.009
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "AL",
+      "ocr_400_text": "",
+      "manual_root_cause": "COLUMN_COLLAPSE_INTO_FTX_GRID: Baseline fell back to hardcoded standard_table_cols (FTX columns) because corrupted darkness prevented dynamic column calibration. Bbox projected to wrong x coordinates."
+    },
+    {
+      "document_id": "long/real_imedia_full_corrupted",
+      "field_path": "creditors[7763].country",
+      "gold_value": "United Kingdom",
+      "gold_page": 103,
+      "gold_bbox": [
+        0.902448,
+        0.522988,
+        0.045067,
+        0.008888
+      ],
+      "predicted_value": "United Kingdom",
+      "predicted_page": 103,
+      "predicted_bbox": [
+        0.8509,
+        0.533115,
+        0.0474,
+        0.0102
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "Urmed Kmgoom",
+      "ocr_400_text": "Urmed kmgdom",
+      "manual_root_cause": "COLUMN_COLLAPSE_INTO_FTX_GRID: Baseline fell back to hardcoded standard_table_cols (FTX columns) because corrupted darkness prevented dynamic column calibration. Bbox projected to wrong x coordinates."
+    },
+    {
+      "document_id": "long/real_imedia_full_corrupted",
+      "field_path": "creditors[8185].zip",
+      "gold_value": "33431",
+      "gold_page": 109,
+      "gold_bbox": [
+        0.851512,
+        0.239126,
+        0.017479,
+        0.008359
+      ],
+      "predicted_value": "33431",
+      "predicted_page": 109,
+      "predicted_bbox": [
+        0.849545,
+        0.230236,
+        0.01625,
+        0.0098
+      ],
+      "failure_class": "RETRIEVAL_NO_CANDIDATE",
+      "is_gold_value_visible": "Partially",
+      "readable_at_200_dpi": false,
+      "readable_at_400_dpi": false,
+      "ocr_200_text": "340",
+      "ocr_400_text": "S 1",
+      "manual_root_cause": "COLUMN_COLLAPSE_INTO_FTX_GRID: Baseline fell back to hardcoded standard_table_cols (FTX columns) because corrupted darkness prevented dynamic column calibration. Bbox projected to wrong x coordinates."
+    }
+  ]
+}

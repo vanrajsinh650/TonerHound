@@ -1,0 +1,39 @@
+{
+  "fix_name": "fix_03_oklahoma_owners_grid",
+  "target_document": "long/real_oklahoma_unclaimed_2024",
+  "document_family": "Other/ungrouped",
+  "status": "ACCEPTED",
+  "total_fields": 52145,
+  "baseline_failing": 43758,
+  "baseline_passing": 8387,
+  "baseline_word_f1_pct": 16.08,
+  "rescued_fields": 38698,
+  "regressed_fields": 0,
+  "post_fix_passing": 47085,
+  "post_fix_failing": 5060,
+  "post_fix_word_f1_pct": 90.30,
+  "word_f1_lift_pp": 74.22,
+  "runtime_seconds": 3.44,
+  "acceptance_criteria": {
+    "rescues_ge_5000": true,
+    "regressions_eq_0": true
+  },
+  "failure_cluster_breakdown": {
+    "owners[].name": {
+      "targeted": 22244,
+      "rescued": 19482,
+      "dominant_prior_class": "MALFORMED_BBOX"
+    },
+    "owners[].locale": {
+      "targeted": 21513,
+      "rescued": 19215,
+      "dominant_prior_class": "MALFORMED_BBOX"
+    },
+    "report_title": {
+      "targeted": 1,
+      "rescued": 1,
+      "dominant_prior_class": "INSUFFICIENT_IOU"
+    }
+  },
+  "mechanical_diagnosis": "In 7-column directories, character span collapse occurred due to multi-column rail confusion in the legacy tokenizer. Sequential ordered charbox reconstruction with canonical row padding recovers 38,698 fields with verified IoU >= 0.50."
+}

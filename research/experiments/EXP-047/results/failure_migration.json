@@ -1,0 +1,52 @@
+{
+  "experiment_id": "EXP-047",
+  "baseline_experiment": "EXP-046",
+  "total_failures_before": 153670,
+  "total_failures_after": 152679,
+  "net_rescued": 991,
+  "net_regressed": 0,
+  "failure_class_migration": {
+    "REAL_INDEXING_MISS": {
+      "before": 48120,
+      "after": 48120,
+      "delta": 0,
+      "recovery_pct": 0.0
+    },
+    "NORMALIZATION_MISMATCH": {
+      "before": 29363,
+      "after": 28372,
+      "delta": -991,
+      "recovery_pct": 3.375
+    },
+    "TOKEN_SLICING": {
+      "before": 24186,
+      "after": 24186,
+      "delta": 0,
+      "recovery_pct": 0.0
+    },
+    "NO_TEXT_AT_GOLD_REGION": {
+      "before": 22540,
+      "after": 22540,
+      "delta": 0,
+      "recovery_pct": 0.0
+    },
+    "MULTI_LINE_SPLIT": {
+      "before": 18210,
+      "after": 18210,
+      "delta": 0,
+      "recovery_pct": 0.0
+    },
+    "NON_TEXT_BOOLEAN": {
+      "before": 5890,
+      "after": 5890,
+      "delta": 0,
+      "recovery_pct": 0.0
+    },
+    "DATE_INDEX_MISS": {
+      "before": 3140,
+      "after": 3140,
+      "delta": 0,
+      "recovery_pct": 0.0
+    }
+  }
+}

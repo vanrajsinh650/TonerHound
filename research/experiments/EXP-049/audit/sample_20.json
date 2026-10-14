@@ -1,0 +1,415 @@
+{
+  "sample_count": 20,
+  "samples": [
+    {
+      "document_id": "medium/bar-lev-2024",
+      "field_path": "presidential_campaign_spouse_box",
+      "gold_value": "False",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.8343,
+        0.2282,
+        0.0246,
+        0.0234
+      ],
+      "predicted_value": "[ ]",
+      "predicted_page": 1,
+      "predicted_bbox": [
+        0.8626,
+        0.1903,
+        0.018,
+        0.018
+      ],
+      "why_failed": "WRONG_ROW: Predicted on gold page but wrong vertical row (y=0.1903 vs gold y=0.2282). Value collision between identical line items."
+    },
+    {
+      "document_id": "medium/bar-lev-2024",
+      "field_path": "filing_status",
+      "gold_value": "Single",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.1576,
+        0.241,
+        0.0164,
+        0.0169
+      ],
+      "predicted_value": "Single",
+      "predicted_page": 1,
+      "predicted_bbox": [
+        0.057,
+        0.2434,
+        0.016,
+        0.016
+      ],
+      "why_failed": "WRONG_ROW: Predicted on gold page but wrong vertical row (y=0.2434 vs gold y=0.2410). Value collision between identical line items."
+    },
+    {
+      "document_id": "medium/bar-lev-2024",
+      "field_path": "someone_can_claim_spouse_box",
+      "gold_value": "False",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.4512,
+        0.3585,
+        0.0269,
+        0.0191
+      ],
+      "predicted_value": "[ ]",
+      "predicted_page": 1,
+      "predicted_bbox": [
+        0.4271,
+        0.2878,
+        0.018,
+        0.018
+      ],
+      "why_failed": "WRONG_ROW: Predicted on gold page but wrong vertical row (y=0.2878 vs gold y=0.3585). Value collision between identical line items."
+    },
+    {
+      "document_id": "medium/bar-lev-2024",
+      "field_path": "spouse_itemizes_box",
+      "gold_value": "False",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.1453,
+        0.368,
+        0.0235,
+        0.0217
+      ],
+      "predicted_value": "[ ]",
+      "predicted_page": 1,
+      "predicted_bbox": [
+        0.1672,
+        0.3546,
+        0.018,
+        0.018
+      ],
+      "why_failed": "INSUFFICIENT_IOU: Partial bbox overlap (IoU = 0.009 < 0.50)."
+    },
+    {
+      "document_id": "medium/bar-lev-2024",
+      "field_path": "line_2b_taxable_interest",
+      "gold_value": "3",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.8915,
+        0.6737,
+        0.0359,
+        0.0174
+      ],
+      "predicted_value": "3.",
+      "predicted_page": 1,
+      "predicted_bbox": [
+        0.9003,
+        0.6757,
+        0.0147,
+        0.015
+      ],
+      "why_failed": "INSUFFICIENT_IOU: Partial bbox overlap (IoU = 0.352 < 0.50)."
+    },
+    {
+      "document_id": "medium/bar-lev-2024",
+      "field_path": "line_7_schedule_d_not_required_box",
+      "gold_value": "False",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.7234,
+        0.7849,
+        0.0235,
+        0.0174
+      ],
+      "predicted_value": "[ ]",
+      "predicted_page": 1,
+      "predicted_bbox": [
+        0.7549,
+        0.783,
+        0.018,
+        0.018
+      ],
+      "why_failed": "WRONG_ROW: Predicted on gold page but wrong vertical row (y=0.7830 vs gold y=0.7849). Value collision between identical line items."
+    },
+    {
+      "document_id": "medium/bar-lev-2024",
+      "field_path": "line_11_adjusted_gross_income",
+      "gold_value": "-187497",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.8259,
+        0.855,
+        0.0894,
+        0.0145
+      ],
+      "predicted_value": "~-187,497.",
+      "predicted_page": 1,
+      "predicted_bbox": [
+        0.8317,
+        0.8218,
+        0.0815,
+        0.015
+      ],
+      "why_failed": "WRONG_ROW: Predicted on gold page but wrong vertical row (y=0.8218 vs gold y=0.8550). Value collision between identical line items."
+    },
+    {
+      "document_id": "medium/bar-lev-2024",
+      "field_path": "line_15_taxable_income",
+      "gold_value": "0",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.8848,
+        0.9351,
+        0.0359,
+        0.0156
+      ],
+      "predicted_value": "0.",
+      "predicted_page": 1,
+      "predicted_bbox": [
+        0.8979,
+        0.9345,
+        0.0141,
+        0.015
+      ],
+      "why_failed": "INSUFFICIENT_IOU: Partial bbox overlap (IoU = 0.358 < 0.50)."
+    },
+    {
+      "document_id": "medium/bar-lev-2024",
+      "field_path": "line_16_tax",
+      "gold_value": "0",
+      "gold_page": 2,
+      "gold_bbox": [
+        0.8881,
+        0.0797,
+        0.0381,
+        0.02
+      ],
+      "predicted_value": "0.",
+      "predicted_page": 2,
+      "predicted_bbox": [
+        0.9015,
+        0.0825,
+        0.0141,
+        0.015
+      ],
+      "why_failed": "INSUFFICIENT_IOU: Partial bbox overlap (IoU = 0.277 < 0.50)."
+    },
+    {
+      "document_id": "medium/bar-lev-2024",
+      "field_path": "line_18_lines_16_plus_17",
+      "gold_value": "0",
+      "gold_page": 2,
+      "gold_bbox": [
+        0.8893,
+        0.1153,
+        0.0347,
+        0.0165
+      ],
+      "predicted_value": "0.",
+      "predicted_page": 2,
+      "predicted_bbox": [
+        0.9015,
+        0.0825,
+        0.0141,
+        0.015
+      ],
+      "why_failed": "WRONG_ROW: Predicted on gold page but wrong vertical row (y=0.0825 vs gold y=0.1153). Value collision between identical line items."
+    },
+    {
+      "document_id": "medium/bar-lev-2024",
+      "field_path": "line_21_lines_19_plus_20",
+      "gold_value": "0",
+      "gold_page": 2,
+      "gold_bbox": [
+        0.8926,
+        0.164,
+        0.0359,
+        0.0208
+      ],
+      "predicted_value": "0.",
+      "predicted_page": 2,
+      "predicted_bbox": [
+        0.9009,
+        0.1166,
+        0.0147,
+        0.015
+      ],
+      "why_failed": "WRONG_ROW: Predicted on gold page but wrong vertical row (y=0.1166 vs gold y=0.1640). Value collision between identical line items."
+    },
+    {
+      "document_id": "medium/bar-lev-2024",
+      "field_path": "line_22_subtract_21_from_18",
+      "gold_value": "0",
+      "gold_page": 2,
+      "gold_bbox": [
+        0.8926,
+        0.1865,
+        0.0426,
+        0.0156
+      ],
+      "predicted_value": "0.",
+      "predicted_page": 2,
+      "predicted_bbox": [
+        0.9009,
+        0.1166,
+        0.0147,
+        0.015
+      ],
+      "why_failed": "WRONG_ROW: Predicted on gold page but wrong vertical row (y=0.1166 vs gold y=0.1865). Value collision between identical line items."
+    },
+    {
+      "document_id": "medium/bar-lev-2024",
+      "field_path": "line_24_total_tax",
+      "gold_value": "0",
+      "gold_page": 2,
+      "gold_bbox": [
+        0.8904,
+        0.2152,
+        0.0381,
+        0.0226
+      ],
+      "predicted_value": "0.",
+      "predicted_page": 2,
+      "predicted_bbox": [
+        0.9009,
+        0.1675,
+        0.0141,
+        0.015
+      ],
+      "why_failed": "WRONG_ROW: Predicted on gold page but wrong vertical row (y=0.1675 vs gold y=0.2152). Value collision between identical line items."
+    },
+    {
+      "document_id": "medium/bar-lev-2024",
+      "field_path": "line_25b_withholding_1099",
+      "gold_value": "120",
+      "gold_page": 2,
+      "gold_bbox": [
+        0.7077,
+        0.2682,
+        0.0493,
+        0.0191
+      ],
+      "predicted_value": "120",
+      "predicted_page": 2,
+      "predicted_bbox": [
+        0.7554,
+        0.1509,
+        0.0194,
+        0.015
+      ],
+      "why_failed": "WRONG_ROW: Predicted on gold page but wrong vertical row (y=0.1509 vs gold y=0.2682). Value collision between identical line items."
+    },
+    {
+      "document_id": "medium/bar-lev-2024",
+      "field_path": "line_25d_total_withholding",
+      "gold_value": "120",
+      "gold_page": 2,
+      "gold_bbox": [
+        0.8713,
+        0.3003,
+        0.0493,
+        0.02
+      ],
+      "predicted_value": "120.",
+      "predicted_page": 2,
+      "predicted_bbox": [
+        0.8809,
+        0.3034,
+        0.0328,
+        0.015
+      ],
+      "why_failed": "INSUFFICIENT_IOU: Partial bbox overlap (IoU = 0.500 < 0.50)."
+    },
+    {
+      "document_id": "medium/bar-lev-2024",
+      "field_path": "line_33_total_payments",
+      "gold_value": "120",
+      "gold_page": 2,
+      "gold_bbox": [
+        0.8668,
+        0.4488,
+        0.0527,
+        0.0217
+      ],
+      "predicted_value": "120.",
+      "predicted_page": 2,
+      "predicted_bbox": [
+        0.8809,
+        0.3034,
+        0.0328,
+        0.015
+      ],
+      "why_failed": "WRONG_ROW: Predicted on gold page but wrong vertical row (y=0.3034 vs gold y=0.4488). Value collision between identical line items."
+    },
+    {
+      "document_id": "medium/bar-lev-2024",
+      "field_path": "line_34_overpaid",
+      "gold_value": "120",
+      "gold_page": 2,
+      "gold_bbox": [
+        0.8724,
+        0.4688,
+        0.0471,
+        0.0156
+      ],
+      "predicted_value": "120,",
+      "predicted_page": 2,
+      "predicted_bbox": [
+        0.8804,
+        0.4527,
+        0.0323,
+        0.015
+      ],
+      "why_failed": "WRONG_ROW: Predicted on gold page but wrong vertical row (y=0.4527 vs gold y=0.4688). Value collision between identical line items."
+    },
+    {
+      "document_id": "medium/bar-lev-2024",
+      "field_path": "line_35a_refund_amount",
+      "gold_value": "120",
+      "gold_page": 2,
+      "gold_bbox": [
+        0.868,
+        0.4861,
+        0.0549,
+        0.02
+      ],
+      "predicted_value": "120,",
+      "predicted_page": 2,
+      "predicted_bbox": [
+        0.8804,
+        0.4527,
+        0.0323,
+        0.015
+      ],
+      "why_failed": "WRONG_ROW: Predicted on gold page but wrong vertical row (y=0.4527 vs gold y=0.4861). Value collision between identical line items."
+    },
+    {
+      "document_id": "medium/bar-lev-2024",
+      "field_path": "line_35b_routing_number",
+      "gold_value": "XXXXXXXXXX",
+      "gold_page": 2,
+      "gold_bbox": [
+        0.3626,
+        0.4974,
+        0.1087,
+        0.0174
+      ],
+      "predicted_value": "None",
+      "predicted_page": null,
+      "predicted_bbox": null,
+      "why_failed": "ZERO_CANDIDATE: Field completely omitted from baseline citations."
+    },
+    {
+      "document_id": "medium/bar-lev-2024",
+      "field_path": "line_35d_account_number",
+      "gold_value": "XXXXXXXXXXXXXXXXXXXXXXXX",
+      "gold_page": 2,
+      "gold_bbox": [
+        0.3638,
+        0.5104,
+        0.242,
+        0.0156
+      ],
+      "predicted_value": "None",
+      "predicted_page": null,
+      "predicted_bbox": null,
+      "why_failed": "ZERO_CANDIDATE: Field completely omitted from baseline citations."
+    }
+  ]
+}

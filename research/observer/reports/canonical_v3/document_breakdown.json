@@ -1,0 +1,1987 @@
+{
+  "run_id": "canonical_v3",
+  "documents": {
+    "long/real_credit_strategies_full": {
+      "total_fields": 5049,
+      "total_failures": 1932,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 777,
+        "NORMALIZATION_MISMATCH": 454,
+        "TOKEN_SLICING": 380,
+        "HYPHENATION": 238,
+        "DATE_INDEX_MISS": 83
+      }
+    },
+    "long/real_freer_register_full": {
+      "total_fields": 28623,
+      "total_failures": 2358,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 1152,
+        "DATE_INDEX_MISS": 798,
+        "HYPHENATION": 267,
+        "TOKEN_SLICING": 93,
+        "NORMALIZATION_MISMATCH": 48
+      }
+    },
+    "long/real_ftx_full": {
+      "total_fields": 26583,
+      "total_failures": 903,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 664,
+        "NORMALIZATION_MISMATCH": 189,
+        "HYPHENATION": 49,
+        "DATE_INDEX_MISS": 1
+      }
+    },
+    "long/real_ftx_full_corrupted": {
+      "total_fields": 26583,
+      "total_failures": 12661,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 12661
+      }
+    },
+    "long/real_imedia_full": {
+      "total_fields": 39446,
+      "total_failures": 2405,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 1624,
+        "NORMALIZATION_MISMATCH": 701,
+        "HYPHENATION": 80
+      }
+    },
+    "long/real_imedia_full_corrupted": {
+      "total_fields": 39446,
+      "total_failures": 39071,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 39071
+      }
+    },
+    "long/real_ishares_iboxx_bond_etfs": {
+      "total_fields": 41525,
+      "total_failures": 15078,
+      "failure_classes": {
+        "NORMALIZATION_MISMATCH": 7464,
+        "TOKEN_SLICING": 4430,
+        "REAL_INDEXING_MISS": 2695,
+        "HYPHENATION": 291,
+        "DATE_INDEX_MISS": 198
+      }
+    },
+    "long/real_ofac_ssi_full": {
+      "total_fields": 36303,
+      "total_failures": 28078,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 8683,
+        "NORMALIZATION_MISMATCH": 8469,
+        "TOKEN_SLICING": 5935,
+        "HYPHENATION": 4708,
+        "DATE_INDEX_MISS": 283
+      }
+    },
+    "long/real_oklahoma_unclaimed_2024": {
+      "total_fields": 52145,
+      "total_failures": 43758,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 22648,
+        "NORMALIZATION_MISMATCH": 20983,
+        "HYPHENATION": 116,
+        "DATE_INDEX_MISS": 9,
+        "TOKEN_SLICING": 2
+      }
+    },
+    "long/real_sm0801_ae_full": {
+      "total_fields": 10954,
+      "total_failures": 4464,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 2975,
+        "TOKEN_SLICING": 1223,
+        "NORMALIZATION_MISMATCH": 129,
+        "DATE_INDEX_MISS": 109,
+        "NON_TEXT_BOOLEAN_GROUNDING": 28
+      }
+    },
+    "long/real_sm0801_eco_full": {
+      "total_fields": 6657,
+      "total_failures": 502,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 457,
+        "NORMALIZATION_MISMATCH": 42,
+        "DATE_INDEX_MISS": 3
+      }
+    },
+    "long/real_sm0801_eco_full_corrupted": {
+      "total_fields": 6657,
+      "total_failures": 1734,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 1734
+      }
+    },
+    "long/sec_13f_0010_renaissance_technologies": {
+      "total_fields": 31707,
+      "total_failures": 8212,
+      "failure_classes": {
+        "NORMALIZATION_MISMATCH": 6089,
+        "REAL_INDEXING_MISS": 2104,
+        "TOKEN_SLICING": 14,
+        "HYPHENATION": 5
+      }
+    },
+    "long/sec_13f_0026_brown_brothers_harriman": {
+      "total_fields": 17068,
+      "total_failures": 2618,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 2038,
+        "NORMALIZATION_MISMATCH": 553,
+        "HYPHENATION": 27
+      }
+    },
+    "medium/13f__leonteq_securities_2025q4": {
+      "total_fields": 12326,
+      "total_failures": 20,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 19,
+        "HYPHENATION": 1
+      }
+    },
+    "medium/13f__nalls_sherbakoff_2025q4": {
+      "total_fields": 4257,
+      "total_failures": 182,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 175,
+        "NORMALIZATION_MISMATCH": 5,
+        "HYPHENATION": 2
+      }
+    },
+    "medium/arif-2023": {
+      "total_fields": 190,
+      "total_failures": 74,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 72,
+        "NON_TEXT_BOOLEAN_GROUNDING": 2
+      }
+    },
+    "medium/bar-lev-2021": {
+      "total_fields": 268,
+      "total_failures": 136,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 119,
+        "NON_TEXT_BOOLEAN_GROUNDING": 17
+      }
+    },
+    "medium/bar-lev-2022": {
+      "total_fields": 245,
+      "total_failures": 116,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 105,
+        "NON_TEXT_BOOLEAN_GROUNDING": 11
+      }
+    },
+    "medium/bar-lev-2023": {
+      "total_fields": 236,
+      "total_failures": 109,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 96,
+        "NON_TEXT_BOOLEAN_GROUNDING": 13
+      }
+    },
+    "medium/bar-lev-2024": {
+      "total_fields": 236,
+      "total_failures": 127,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 113,
+        "NON_TEXT_BOOLEAN_GROUNDING": 14
+      }
+    },
+    "medium/becerra-2021": {
+      "total_fields": 435,
+      "total_failures": 270,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 231,
+        "NON_TEXT_BOOLEAN_GROUNDING": 39
+      }
+    },
+    "medium/becerra-2022": {
+      "total_fields": 481,
+      "total_failures": 270,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 222,
+        "NON_TEXT_BOOLEAN_GROUNDING": 48
+      }
+    },
+    "medium/becerra-2023": {
+      "total_fields": 431,
+      "total_failures": 210,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 163,
+        "NON_TEXT_BOOLEAN_GROUNDING": 47
+      }
+    },
+    "medium/becerra-2024": {
+      "total_fields": 339,
+      "total_failures": 198,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 163,
+        "NON_TEXT_BOOLEAN_GROUNDING": 35
+      }
+    },
+    "medium/bianco-2021": {
+      "total_fields": 98,
+      "total_failures": 34,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 30,
+        "NON_TEXT_BOOLEAN_GROUNDING": 4
+      }
+    },
+    "medium/bianco-2022": {
+      "total_fields": 112,
+      "total_failures": 43,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 42,
+        "NON_TEXT_BOOLEAN_GROUNDING": 1
+      }
+    },
+    "medium/cabrera-2021": {
+      "total_fields": 207,
+      "total_failures": 103,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 79,
+        "NON_TEXT_BOOLEAN_GROUNDING": 24
+      }
+    },
+    "medium/cabrera-2022": {
+      "total_fields": 255,
+      "total_failures": 151,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 116,
+        "NON_TEXT_BOOLEAN_GROUNDING": 35
+      }
+    },
+    "medium/cabrera-2023": {
+      "total_fields": 187,
+      "total_failures": 120,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 92,
+        "NON_TEXT_BOOLEAN_GROUNDING": 28
+      }
+    },
+    "medium/nport__advisors_inner_circle_fund": {
+      "total_fields": 3577,
+      "total_failures": 1,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 1
+      }
+    },
+    "medium/nport__dunham_funds": {
+      "total_fields": 8767,
+      "total_failures": 364,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 328,
+        "NORMALIZATION_MISMATCH": 19,
+        "TOKEN_SLICING": 17
+      }
+    },
+    "medium/nport__sei_etf_2025q4": {
+      "total_fields": 5048,
+      "total_failures": 107,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 86,
+        "TOKEN_SLICING": 14,
+        "NORMALIZATION_MISMATCH": 6,
+        "HYPHENATION": 1
+      }
+    },
+    "medium/real_bbb_service_list": {
+      "total_fields": 1207,
+      "total_failures": 352,
+      "failure_classes": {
+        "MULTI_LINE_SPLIT": 269,
+        "REAL_INDEXING_MISS": 74,
+        "HYPHENATION": 4,
+        "NORMALIZATION_MISMATCH": 4,
+        "DATE_INDEX_MISS": 1
+      }
+    },
+    "medium/real_bbb_service_list_corrupted": {
+      "total_fields": 1207,
+      "total_failures": 962,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 962
+      }
+    },
+    "medium/real_blackrock_muni_bmn": {
+      "total_fields": 1480,
+      "total_failures": 250,
+      "failure_classes": {
+        "TOKEN_SLICING": 122,
+        "REAL_INDEXING_MISS": 89,
+        "NORMALIZATION_MISMATCH": 25,
+        "HYPHENATION": 13,
+        "DATE_INDEX_MISS": 1
+      }
+    },
+    "medium/real_blackrock_schedule_full": {
+      "total_fields": 1648,
+      "total_failures": 498,
+      "failure_classes": {
+        "TOKEN_SLICING": 266,
+        "NORMALIZATION_MISMATCH": 94,
+        "HYPHENATION": 86,
+        "REAL_INDEXING_MISS": 48,
+        "DATE_INDEX_MISS": 4
+      }
+    },
+    "medium/real_cooke_co_tx_2024": {
+      "total_fields": 4292,
+      "total_failures": 294,
+      "failure_classes": {
+        "DATE_INDEX_MISS": 274,
+        "NORMALIZATION_MISMATCH": 11,
+        "HYPHENATION": 9
+      }
+    },
+    "medium/real_dcd_sumf_full": {
+      "total_fields": 419,
+      "total_failures": 202,
+      "failure_classes": {
+        "HYPHENATION": 142,
+        "NORMALIZATION_MISMATCH": 55,
+        "DATE_INDEX_MISS": 4,
+        "REAL_INDEXING_MISS": 1
+      }
+    },
+    "medium/real_dcd_sumf_full_corrupted": {
+      "total_fields": 419,
+      "total_failures": 214,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 214
+      }
+    },
+    "medium/real_enotes_deviations": {
+      "total_fields": 1018,
+      "total_failures": 159,
+      "failure_classes": {
+        "NORMALIZATION_MISMATCH": 69,
+        "DATE_INDEX_MISS": 62,
+        "MULTI_LINE_SPLIT": 14,
+        "HYPHENATION": 14
+      }
+    },
+    "medium/real_enotes_deviations_corrupted": {
+      "total_fields": 1018,
+      "total_failures": 314,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 314
+      }
+    },
+    "medium/real_fidelity_northstar": {
+      "total_fields": 7753,
+      "total_failures": 2979,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 1536,
+        "TOKEN_SLICING": 1426,
+        "NORMALIZATION_MISMATCH": 11,
+        "DATE_INDEX_MISS": 3,
+        "HYPHENATION": 3
+      }
+    },
+    "medium/real_franklin_sep_2025": {
+      "total_fields": 2557,
+      "total_failures": 18,
+      "failure_classes": {
+        "MULTI_LINE_SPLIT": 18
+      }
+    },
+    "medium/real_penn_hills_pa_2023": {
+      "total_fields": 3169,
+      "total_failures": 319,
+      "failure_classes": {
+        "NORMALIZATION_MISMATCH": 222,
+        "HYPHENATION": 52,
+        "REAL_INDEXING_MISS": 44,
+        "DATE_INDEX_MISS": 1
+      }
+    },
+    "medium/real_sm0801_dispositions_full": {
+      "total_fields": 1147,
+      "total_failures": 1,
+      "failure_classes": {
+        "HYPHENATION": 1
+      }
+    },
+    "medium/real_sm0801_dispositions_full_corrupted": {
+      "total_fields": 1147,
+      "total_failures": 16,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 16
+      }
+    },
+    "medium/real_vg_divappr_full": {
+      "total_fields": 2388,
+      "total_failures": 2,
+      "failure_classes": {
+        "TOKEN_SLICING": 2
+      }
+    },
+    "medium/real_vg_divgrowth_full": {
+      "total_fields": 390,
+      "total_failures": 8,
+      "failure_classes": {
+        "NORMALIZATION_MISMATCH": 8
+      }
+    },
+    "medium/real_vg_equity_income_full": {
+      "total_fields": 1496,
+      "total_failures": 2,
+      "failure_classes": {
+        "NORMALIZATION_MISMATCH": 2
+      }
+    },
+    "medium/real_vg_esg_full": {
+      "total_fields": 283,
+      "total_failures": 2,
+      "failure_classes": {
+        "TOKEN_SLICING": 2
+      }
+    },
+    "medium/real_vg_gcc_full": {
+      "total_fields": 620,
+      "total_failures": 5,
+      "failure_classes": {
+        "TOKEN_SLICING": 5
+      }
+    },
+    "medium/real_vg_healthcare_full": {
+      "total_fields": 770,
+      "total_failures": 30,
+      "failure_classes": {
+        "TOKEN_SLICING": 17,
+        "NORMALIZATION_MISMATCH": 13
+      }
+    },
+    "medium/real_vg_megacap_full": {
+      "total_fields": 451,
+      "total_failures": 2,
+      "failure_classes": {
+        "TOKEN_SLICING": 2
+      }
+    },
+    "medium/real_vg_primecap_full": {
+      "total_fields": 1318,
+      "total_failures": 5,
+      "failure_classes": {
+        "TOKEN_SLICING": 5
+      }
+    },
+    "medium/real_vg_reit2_full": {
+      "total_fields": 1059,
+      "total_failures": 8,
+      "failure_classes": {
+        "TOKEN_SLICING": 8
+      }
+    },
+    "medium/real_vg_reit_full": {
+      "total_fields": 1078,
+      "total_failures": 9,
+      "failure_classes": {
+        "TOKEN_SLICING": 9
+      }
+    },
+    "medium/real_wright_co_mn": {
+      "total_fields": 5065,
+      "total_failures": 1575,
+      "failure_classes": {
+        "NORMALIZATION_MISMATCH": 672,
+        "REAL_INDEXING_MISS": 589,
+        "DATE_INDEX_MISS": 203,
+        "TOKEN_SLICING": 84,
+        "HYPHENATION": 27
+      }
+    },
+    "medium/sched_i__akron_community_foundation_ty2024": {
+      "total_fields": 3353,
+      "total_failures": 22,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 20,
+        "NORMALIZATION_MISMATCH": 1,
+        "TOKEN_SLICING": 1
+      }
+    },
+    "medium/sched_i__united_way_worldwide_ty2024": {
+      "total_fields": 2097,
+      "total_failures": 12,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 6,
+        "NORMALIZATION_MISMATCH": 5,
+        "TOKEN_SLICING": 1
+      }
+    },
+    "medium/sec_13f_0031_loomis_sayles": {
+      "total_fields": 12066,
+      "total_failures": 1662,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 1199,
+        "NORMALIZATION_MISMATCH": 424,
+        "HYPHENATION": 35,
+        "TOKEN_SLICING": 4
+      }
+    },
+    "short/00581-2011-p0050": {
+      "total_fields": 30,
+      "total_failures": 11,
+      "failure_classes": {
+        "TOKEN_SLICING": 6,
+        "NORMALIZATION_MISMATCH": 2,
+        "REAL_INDEXING_MISS": 2,
+        "NON_TEXT_BOOLEAN_GROUNDING": 1
+      }
+    },
+    "short/00581-2011-p0052": {
+      "total_fields": 32,
+      "total_failures": 9,
+      "failure_classes": {
+        "TOKEN_SLICING": 4,
+        "REAL_INDEXING_MISS": 3,
+        "NORMALIZATION_MISMATCH": 1,
+        "NON_TEXT_BOOLEAN_GROUNDING": 1
+      }
+    },
+    "short/00581-2011-p0098": {
+      "total_fields": 35,
+      "total_failures": 19,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 13,
+        "REAL_INDEXING_MISS": 4,
+        "TOKEN_SLICING": 1,
+        "NON_TEXT_BOOLEAN_GROUNDING": 1
+      }
+    },
+    "short/00581-2011-p0102": {
+      "total_fields": 36,
+      "total_failures": 16,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 13,
+        "TOKEN_SLICING": 2,
+        "NON_TEXT_BOOLEAN_GROUNDING": 1
+      }
+    },
+    "short/02-10121 H-12 7-2-2024 F-22628": {
+      "total_fields": 66,
+      "total_failures": 25,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 21,
+        "NON_TEXT_BOOLEAN_GROUNDING": 4
+      }
+    },
+    "short/07021-2016-p0014": {
+      "total_fields": 27,
+      "total_failures": 16,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 6,
+        "NO_TEXT_AT_GOLD_REGION": 4,
+        "NON_TEXT_BOOLEAN_GROUNDING": 3,
+        "NORMALIZATION_MISMATCH": 3
+      }
+    },
+    "short/07021-2016-p0016": {
+      "total_fields": 27,
+      "total_failures": 18,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 6,
+        "REAL_INDEXING_MISS": 5,
+        "NORMALIZATION_MISMATCH": 3,
+        "TOKEN_SLICING": 2,
+        "NON_TEXT_BOOLEAN_GROUNDING": 2
+      }
+    },
+    "short/07021-2016-p0018": {
+      "total_fields": 27,
+      "total_failures": 16,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 6,
+        "REAL_INDEXING_MISS": 5,
+        "NORMALIZATION_MISMATCH": 3,
+        "NON_TEXT_BOOLEAN_GROUNDING": 1,
+        "TOKEN_SLICING": 1
+      }
+    },
+    "short/07021-2016-p0026": {
+      "total_fields": 27,
+      "total_failures": 11,
+      "failure_classes": {
+        "NON_TEXT_BOOLEAN_GROUNDING": 3,
+        "NO_TEXT_AT_GOLD_REGION": 3,
+        "REAL_INDEXING_MISS": 3,
+        "NORMALIZATION_MISMATCH": 2
+      }
+    },
+    "short/07021-2016-p0029": {
+      "total_fields": 27,
+      "total_failures": 12,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 5,
+        "REAL_INDEXING_MISS": 3,
+        "NORMALIZATION_MISMATCH": 2,
+        "NON_TEXT_BOOLEAN_GROUNDING": 1,
+        "TOKEN_SLICING": 1
+      }
+    },
+    "short/07021-2016-p0032": {
+      "total_fields": 27,
+      "total_failures": 14,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 5,
+        "REAL_INDEXING_MISS": 4,
+        "NON_TEXT_BOOLEAN_GROUNDING": 3,
+        "NORMALIZATION_MISMATCH": 2
+      }
+    },
+    "short/07021-2016-p0038": {
+      "total_fields": 13,
+      "total_failures": 3,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 1,
+        "NORMALIZATION_MISMATCH": 1,
+        "NO_TEXT_AT_GOLD_REGION": 1
+      }
+    },
+    "short/07021-2016-p0051": {
+      "total_fields": 13,
+      "total_failures": 1,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 1
+      }
+    },
+    "short/07021-2016-p0074": {
+      "total_fields": 16,
+      "total_failures": 10,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 10
+      }
+    },
+    "short/07021-2016-p0078": {
+      "total_fields": 13,
+      "total_failures": 8,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 6,
+        "NORMALIZATION_MISMATCH": 1,
+        "REAL_INDEXING_MISS": 1
+      }
+    },
+    "short/07021-2016-p0082": {
+      "total_fields": 12,
+      "total_failures": 8,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 8
+      }
+    },
+    "short/08-15427 H-12 1-21-2003 F-01341": {
+      "total_fields": 65,
+      "total_failures": 19,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 17,
+        "NON_TEXT_BOOLEAN_GROUNDING": 2
+      }
+    },
+    "short/08-20813 H-12 10-17-2008 F-01094A": {
+      "total_fields": 67,
+      "total_failures": 20,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 17,
+        "NON_TEXT_BOOLEAN_GROUNDING": 3
+      }
+    },
+    "short/08-37943 H-12 09-25-2014 F-01249": {
+      "total_fields": 62,
+      "total_failures": 24,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 16,
+        "NON_TEXT_BOOLEAN_GROUNDING": 8
+      }
+    },
+    "short/08-43259 H-12 3-18-2024 F-22737": {
+      "total_fields": 63,
+      "total_failures": 16,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 12,
+        "NON_TEXT_BOOLEAN_GROUNDING": 4
+      }
+    },
+    "short/08-51344 H-12 10-2-2023 F-22666": {
+      "total_fields": 63,
+      "total_failures": 14,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 12,
+        "NON_TEXT_BOOLEAN_GROUNDING": 2
+      }
+    },
+    "short/13f__audent_global_2025q4": {
+      "total_fields": 527,
+      "total_failures": 1,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 1
+      }
+    },
+    "short/13f__dedeker_financial_llc": {
+      "total_fields": 507,
+      "total_failures": 2,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 1,
+        "NON_TEXT_BOOLEAN_GROUNDING": 1
+      }
+    },
+    "short/13f__radnor_capital_management_llc": {
+      "total_fields": 3088,
+      "total_failures": 3,
+      "failure_classes": {
+        "NON_TEXT_BOOLEAN_GROUNDING": 2,
+        "REAL_INDEXING_MISS": 1
+      }
+    },
+    "short/13f__sl_advisors_llc": {
+      "total_fields": 507,
+      "total_failures": 2,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 1,
+        "NON_TEXT_BOOLEAN_GROUNDING": 1
+      }
+    },
+    "short/2A-27-103150_116454": {
+      "total_fields": 74,
+      "total_failures": 60,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 43,
+        "TOKEN_SLICING": 8,
+        "NO_TEXT_AT_GOLD_REGION": 3,
+        "DATE_INDEX_MISS": 2,
+        "NORMALIZATION_MISMATCH": 2,
+        "NON_TEXT_BOOLEAN_GROUNDING": 2
+      }
+    },
+    "short/2A-9-136008_97695": {
+      "total_fields": 70,
+      "total_failures": 60,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 58,
+        "NON_TEXT_BOOLEAN_GROUNDING": 2
+      }
+    },
+    "short/2A-9-156032_107792": {
+      "total_fields": 63,
+      "total_failures": 50,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 49,
+        "NON_TEXT_BOOLEAN_GROUNDING": 1
+      }
+    },
+    "short/2A-9-160248_109904": {
+      "total_fields": 66,
+      "total_failures": 55,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 54,
+        "NON_TEXT_BOOLEAN_GROUNDING": 1
+      }
+    },
+    "short/2A-9-160258_109909": {
+      "total_fields": 59,
+      "total_failures": 36,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 34,
+        "NON_TEXT_BOOLEAN_GROUNDING": 2
+      }
+    },
+    "short/2A-9-160266_109913": {
+      "total_fields": 58,
+      "total_failures": 38,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 36,
+        "NON_TEXT_BOOLEAN_GROUNDING": 2
+      }
+    },
+    "short/2A-9-160268_109914": {
+      "total_fields": 56,
+      "total_failures": 42,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 40,
+        "NON_TEXT_BOOLEAN_GROUNDING": 2
+      }
+    },
+    "short/2A-9-160282_109921": {
+      "total_fields": 58,
+      "total_failures": 34,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 33,
+        "NON_TEXT_BOOLEAN_GROUNDING": 1
+      }
+    },
+    "short/2A-9-160294_109927": {
+      "total_fields": 26,
+      "total_failures": 13,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 13
+      }
+    },
+    "short/2A-9-160298_109929": {
+      "total_fields": 58,
+      "total_failures": 31,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 29,
+        "NON_TEXT_BOOLEAN_GROUNDING": 2
+      }
+    },
+    "short/2A-9-160318_109939": {
+      "total_fields": 57,
+      "total_failures": 38,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 36,
+        "NON_TEXT_BOOLEAN_GROUNDING": 2
+      }
+    },
+    "short/593338187_200912_990PF-p0023": {
+      "total_fields": 153,
+      "total_failures": 19,
+      "failure_classes": {
+        "TOKEN_SLICING": 14,
+        "REAL_INDEXING_MISS": 4,
+        "NORMALIZATION_MISMATCH": 1
+      }
+    },
+    "short/593338187_200912_990PF-p0024": {
+      "total_fields": 171,
+      "total_failures": 49,
+      "failure_classes": {
+        "TOKEN_SLICING": 25,
+        "REAL_INDEXING_MISS": 19,
+        "DATE_INDEX_MISS": 2,
+        "NORMALIZATION_MISMATCH": 2,
+        "HYPHENATION": 1
+      }
+    },
+    "short/593338187_200912_990PF-p0025": {
+      "total_fields": 171,
+      "total_failures": 36,
+      "failure_classes": {
+        "TOKEN_SLICING": 21,
+        "REAL_INDEXING_MISS": 12,
+        "DATE_INDEX_MISS": 2,
+        "NORMALIZATION_MISMATCH": 1
+      }
+    },
+    "short/593338187_200912_990PF-p0026": {
+      "total_fields": 153,
+      "total_failures": 18,
+      "failure_classes": {
+        "TOKEN_SLICING": 14,
+        "REAL_INDEXING_MISS": 2,
+        "DATE_INDEX_MISS": 1,
+        "NORMALIZATION_MISMATCH": 1
+      }
+    },
+    "short/593338187_200912_990PF-p0027": {
+      "total_fields": 162,
+      "total_failures": 30,
+      "failure_classes": {
+        "TOKEN_SLICING": 16,
+        "REAL_INDEXING_MISS": 11,
+        "DATE_INDEX_MISS": 2,
+        "NORMALIZATION_MISMATCH": 1
+      }
+    },
+    "short/593338187_200912_990PF-p0030": {
+      "total_fields": 168,
+      "total_failures": 37,
+      "failure_classes": {
+        "TOKEN_SLICING": 26,
+        "DATE_INDEX_MISS": 7,
+        "REAL_INDEXING_MISS": 3,
+        "NORMALIZATION_MISMATCH": 1
+      }
+    },
+    "short/593338187_200912_990PF-p0031": {
+      "total_fields": 180,
+      "total_failures": 32,
+      "failure_classes": {
+        "TOKEN_SLICING": 25,
+        "REAL_INDEXING_MISS": 6,
+        "NORMALIZATION_MISMATCH": 1
+      }
+    },
+    "short/593338187_200912_990PF-p0032": {
+      "total_fields": 160,
+      "total_failures": 35,
+      "failure_classes": {
+        "TOKEN_SLICING": 25,
+        "REAL_INDEXING_MISS": 6,
+        "DATE_INDEX_MISS": 4
+      }
+    },
+    "short/593338187_200912_990PF-p0033": {
+      "total_fields": 180,
+      "total_failures": 33,
+      "failure_classes": {
+        "TOKEN_SLICING": 19,
+        "REAL_INDEXING_MISS": 7,
+        "DATE_INDEX_MISS": 3,
+        "NO_TEXT_AT_GOLD_REGION": 2,
+        "NORMALIZATION_MISMATCH": 2
+      }
+    },
+    "short/593338187_200912_990PF-p0034": {
+      "total_fields": 180,
+      "total_failures": 21,
+      "failure_classes": {
+        "TOKEN_SLICING": 16,
+        "REAL_INDEXING_MISS": 3,
+        "DATE_INDEX_MISS": 2
+      }
+    },
+    "short/593338187_200912_990PF-p0035": {
+      "total_fields": 180,
+      "total_failures": 17,
+      "failure_classes": {
+        "TOKEN_SLICING": 15,
+        "REAL_INDEXING_MISS": 2
+      }
+    },
+    "short/593338187_200912_990PF-p0036": {
+      "total_fields": 180,
+      "total_failures": 29,
+      "failure_classes": {
+        "TOKEN_SLICING": 20,
+        "REAL_INDEXING_MISS": 7,
+        "DATE_INDEX_MISS": 1,
+        "HYPHENATION": 1
+      }
+    },
+    "short/593338187_200912_990PF-p0037": {
+      "total_fields": 171,
+      "total_failures": 24,
+      "failure_classes": {
+        "TOKEN_SLICING": 15,
+        "REAL_INDEXING_MISS": 5,
+        "NORMALIZATION_MISMATCH": 2,
+        "DATE_INDEX_MISS": 1,
+        "HYPHENATION": 1
+      }
+    },
+    "short/593338187_200912_990PF-p0038": {
+      "total_fields": 180,
+      "total_failures": 22,
+      "failure_classes": {
+        "TOKEN_SLICING": 20,
+        "NORMALIZATION_MISMATCH": 1,
+        "REAL_INDEXING_MISS": 1
+      }
+    },
+    "short/7C-02014 H-12 5-20-2013 F-01083": {
+      "total_fields": 69,
+      "total_failures": 21,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 17,
+        "NON_TEXT_BOOLEAN_GROUNDING": 4
+      }
+    },
+    "short/7C-04947 H-12 12-7-2009 F-01079": {
+      "total_fields": 67,
+      "total_failures": 26,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 24,
+        "NON_TEXT_BOOLEAN_GROUNDING": 2
+      }
+    },
+    "short/H9-53-1621_1656": {
+      "total_fields": 50,
+      "total_failures": 12,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 9,
+        "NON_TEXT_BOOLEAN_GROUNDING": 3
+      }
+    },
+    "short/H9-53-2119_2144": {
+      "total_fields": 51,
+      "total_failures": 33,
+      "failure_classes": {
+        "NON_TEXT_BOOLEAN_GROUNDING": 18,
+        "NO_TEXT_AT_GOLD_REGION": 15
+      }
+    },
+    "short/H9-53-23_23": {
+      "total_fields": 54,
+      "total_failures": 33,
+      "failure_classes": {
+        "NON_TEXT_BOOLEAN_GROUNDING": 18,
+        "NO_TEXT_AT_GOLD_REGION": 15
+      }
+    },
+    "short/H9-53-24_24": {
+      "total_fields": 51,
+      "total_failures": 33,
+      "failure_classes": {
+        "NON_TEXT_BOOLEAN_GROUNDING": 22,
+        "NO_TEXT_AT_GOLD_REGION": 11
+      }
+    },
+    "short/H9-53-30_30": {
+      "total_fields": 51,
+      "total_failures": 27,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 16,
+        "NON_TEXT_BOOLEAN_GROUNDING": 11
+      }
+    },
+    "short/H9-53-319_311": {
+      "total_fields": 50,
+      "total_failures": 29,
+      "failure_classes": {
+        "NON_TEXT_BOOLEAN_GROUNDING": 20,
+        "NO_TEXT_AT_GOLD_REGION": 9
+      }
+    },
+    "short/H9-53-31_31": {
+      "total_fields": 51,
+      "total_failures": 25,
+      "failure_classes": {
+        "NON_TEXT_BOOLEAN_GROUNDING": 14,
+        "NO_TEXT_AT_GOLD_REGION": 11
+      }
+    },
+    "short/H9-53-32_32": {
+      "total_fields": 54,
+      "total_failures": 31,
+      "failure_classes": {
+        "NON_TEXT_BOOLEAN_GROUNDING": 18,
+        "NO_TEXT_AT_GOLD_REGION": 13
+      }
+    },
+    "short/H9-53-514_1043": {
+      "total_fields": 60,
+      "total_failures": 33,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 18,
+        "NON_TEXT_BOOLEAN_GROUNDING": 15
+      }
+    },
+    "short/H9-53-59_60": {
+      "total_fields": 54,
+      "total_failures": 30,
+      "failure_classes": {
+        "NON_TEXT_BOOLEAN_GROUNDING": 17,
+        "NO_TEXT_AT_GOLD_REGION": 13
+      }
+    },
+    "short/H9-53-7226_7240": {
+      "total_fields": 53,
+      "total_failures": 31,
+      "failure_classes": {
+        "NON_TEXT_BOOLEAN_GROUNDING": 19,
+        "NO_TEXT_AT_GOLD_REGION": 12
+      }
+    },
+    "short/H9-53-7234_7248": {
+      "total_fields": 51,
+      "total_failures": 29,
+      "failure_classes": {
+        "NON_TEXT_BOOLEAN_GROUNDING": 18,
+        "NO_TEXT_AT_GOLD_REGION": 11
+      }
+    },
+    "short/H9-53-7239_7253": {
+      "total_fields": 51,
+      "total_failures": 29,
+      "failure_classes": {
+        "NON_TEXT_BOOLEAN_GROUNDING": 17,
+        "NO_TEXT_AT_GOLD_REGION": 12
+      }
+    },
+    "short/H9-53-9349_9509": {
+      "total_fields": 53,
+      "total_failures": 35,
+      "failure_classes": {
+        "NON_TEXT_BOOLEAN_GROUNDING": 19,
+        "NO_TEXT_AT_GOLD_REGION": 16
+      }
+    },
+    "short/H9-53-9386_9545": {
+      "total_fields": 52,
+      "total_failures": 29,
+      "failure_classes": {
+        "NON_TEXT_BOOLEAN_GROUNDING": 15,
+        "NO_TEXT_AT_GOLD_REGION": 14
+      }
+    },
+    "short/P18-28-1547": {
+      "total_fields": 39,
+      "total_failures": 19,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 18,
+        "NON_TEXT_BOOLEAN_GROUNDING": 1
+      }
+    },
+    "short/P18-28-21_77": {
+      "total_fields": 42,
+      "total_failures": 26,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 25,
+        "NON_TEXT_BOOLEAN_GROUNDING": 1
+      }
+    },
+    "short/P18-28-35_39": {
+      "total_fields": 43,
+      "total_failures": 20,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 19,
+        "NON_TEXT_BOOLEAN_GROUNDING": 1
+      }
+    },
+    "short/P18-28-43_44": {
+      "total_fields": 41,
+      "total_failures": 17,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 16,
+        "NON_TEXT_BOOLEAN_GROUNDING": 1
+      }
+    },
+    "short/P18-28-44_45": {
+      "total_fields": 35,
+      "total_failures": 15,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 15
+      }
+    },
+    "short/P18-28-50_51": {
+      "total_fields": 43,
+      "total_failures": 35,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 33,
+        "NON_TEXT_BOOLEAN_GROUNDING": 2
+      }
+    },
+    "short/P18-28-52_53": {
+      "total_fields": 38,
+      "total_failures": 31,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 29,
+        "NON_TEXT_BOOLEAN_GROUNDING": 2
+      }
+    },
+    "short/P18-28-54_55": {
+      "total_fields": 37,
+      "total_failures": 21,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 20,
+        "NON_TEXT_BOOLEAN_GROUNDING": 1
+      }
+    },
+    "short/P18-28-55_56": {
+      "total_fields": 39,
+      "total_failures": 36,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 34,
+        "NON_TEXT_BOOLEAN_GROUNDING": 2
+      }
+    },
+    "short/P18-28-56_57": {
+      "total_fields": 37,
+      "total_failures": 22,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 20,
+        "NON_TEXT_BOOLEAN_GROUNDING": 2
+      }
+    },
+    "short/P18-28-62_62": {
+      "total_fields": 38,
+      "total_failures": 22,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 21,
+        "NON_TEXT_BOOLEAN_GROUNDING": 1
+      }
+    },
+    "short/P4-27-51022_74198": {
+      "total_fields": 50,
+      "total_failures": 11,
+      "failure_classes": {
+        "NON_TEXT_BOOLEAN_GROUNDING": 5,
+        "REAL_INDEXING_MISS": 5,
+        "NO_TEXT_AT_GOLD_REGION": 1
+      }
+    },
+    "short/P4-27-51094_74234": {
+      "total_fields": 49,
+      "total_failures": 13,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 7,
+        "NON_TEXT_BOOLEAN_GROUNDING": 3,
+        "REAL_INDEXING_MISS": 2,
+        "NORMALIZATION_MISMATCH": 1
+      }
+    },
+    "short/P4-27-51220_74625": {
+      "total_fields": 48,
+      "total_failures": 8,
+      "failure_classes": {
+        "NON_TEXT_BOOLEAN_GROUNDING": 5,
+        "REAL_INDEXING_MISS": 2,
+        "NORMALIZATION_MISMATCH": 1
+      }
+    },
+    "short/P4-27-51300_74665": {
+      "total_fields": 44,
+      "total_failures": 9,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 4,
+        "NON_TEXT_BOOLEAN_GROUNDING": 3,
+        "DATE_INDEX_MISS": 2
+      }
+    },
+    "short/P4-27-51318_74674": {
+      "total_fields": 39,
+      "total_failures": 7,
+      "failure_classes": {
+        "NON_TEXT_BOOLEAN_GROUNDING": 3,
+        "REAL_INDEXING_MISS": 2,
+        "HYPHENATION": 1,
+        "DATE_INDEX_MISS": 1
+      }
+    },
+    "short/P4-83-199_29": {
+      "total_fields": 44,
+      "total_failures": 10,
+      "failure_classes": {
+        "NON_TEXT_BOOLEAN_GROUNDING": 4,
+        "REAL_INDEXING_MISS": 3,
+        "TOKEN_SLICING": 1,
+        "DATE_INDEX_MISS": 1,
+        "NORMALIZATION_MISMATCH": 1
+      }
+    },
+    "short/P4-83-201_30": {
+      "total_fields": 48,
+      "total_failures": 13,
+      "failure_classes": {
+        "NON_TEXT_BOOLEAN_GROUNDING": 5,
+        "REAL_INDEXING_MISS": 3,
+        "NO_TEXT_AT_GOLD_REGION": 2,
+        "NORMALIZATION_MISMATCH": 2,
+        "DATE_INDEX_MISS": 1
+      }
+    },
+    "short/P4-83-211_35": {
+      "total_fields": 46,
+      "total_failures": 15,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 6,
+        "NON_TEXT_BOOLEAN_GROUNDING": 4,
+        "NO_TEXT_AT_GOLD_REGION": 3,
+        "NORMALIZATION_MISMATCH": 2
+      }
+    },
+    "short/P4-83-433_147": {
+      "total_fields": 42,
+      "total_failures": 15,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 7,
+        "NON_TEXT_BOOLEAN_GROUNDING": 3,
+        "DATE_INDEX_MISS": 3,
+        "NO_TEXT_AT_GOLD_REGION": 2
+      }
+    },
+    "short/P4-83-443_152": {
+      "total_fields": 41,
+      "total_failures": 8,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 5,
+        "REAL_INDEXING_MISS": 1,
+        "TOKEN_SLICING": 1,
+        "NON_TEXT_BOOLEAN_GROUNDING": 1
+      }
+    },
+    "short/P4-83-449_155": {
+      "total_fields": 49,
+      "total_failures": 27,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 19,
+        "DATE_INDEX_MISS": 4,
+        "NON_TEXT_BOOLEAN_GROUNDING": 3,
+        "NO_TEXT_AT_GOLD_REGION": 1
+      }
+    },
+    "short/P4-83-457_159": {
+      "total_fields": 44,
+      "total_failures": 9,
+      "failure_classes": {
+        "NON_TEXT_BOOLEAN_GROUNDING": 4,
+        "REAL_INDEXING_MISS": 3,
+        "DATE_INDEX_MISS": 1,
+        "NORMALIZATION_MISMATCH": 1
+      }
+    },
+    "short/P4-83-631_246": {
+      "total_fields": 43,
+      "total_failures": 10,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 4,
+        "NON_TEXT_BOOLEAN_GROUNDING": 3,
+        "DATE_INDEX_MISS": 2,
+        "NO_TEXT_AT_GOLD_REGION": 1
+      }
+    },
+    "short/P4-83-693_277": {
+      "total_fields": 42,
+      "total_failures": 8,
+      "failure_classes": {
+        "NORMALIZATION_MISMATCH": 3,
+        "NON_TEXT_BOOLEAN_GROUNDING": 2,
+        "REAL_INDEXING_MISS": 1,
+        "DATE_INDEX_MISS": 1,
+        "TOKEN_SLICING": 1
+      }
+    },
+    "short/P4-Historical Single Signature83-10963_5480": {
+      "total_fields": 40,
+      "total_failures": 10,
+      "failure_classes": {
+        "NON_TEXT_BOOLEAN_GROUNDING": 3,
+        "REAL_INDEXING_MISS": 3,
+        "TOKEN_SLICING": 2,
+        "DATE_INDEX_MISS": 1,
+        "HYPHENATION": 1
+      }
+    },
+    "short/P4-Historical Single Signature83-223_41": {
+      "total_fields": 43,
+      "total_failures": 20,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 15,
+        "DATE_INDEX_MISS": 2,
+        "NON_TEXT_BOOLEAN_GROUNDING": 2,
+        "NO_TEXT_AT_GOLD_REGION": 1
+      }
+    },
+    "short/P4-Historical Single Signature83-257_58": {
+      "total_fields": 42,
+      "total_failures": 24,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 11,
+        "NON_TEXT_BOOLEAN_GROUNDING": 7,
+        "DATE_INDEX_MISS": 3,
+        "NO_TEXT_AT_GOLD_REGION": 3
+      }
+    },
+    "short/ROGER-WINFIELD-SCOTT-FOUNDATION-INC-2009-580655183-p0023": {
+      "total_fields": 169,
+      "total_failures": 21,
+      "failure_classes": {
+        "TOKEN_SLICING": 7,
+        "DATE_INDEX_MISS": 6,
+        "REAL_INDEXING_MISS": 4,
+        "NORMALIZATION_MISMATCH": 3,
+        "NO_TEXT_AT_GOLD_REGION": 1
+      }
+    },
+    "short/ROGER-WINFIELD-SCOTT-FOUNDATION-INC-2009-580655183-p0024": {
+      "total_fields": 181,
+      "total_failures": 28,
+      "failure_classes": {
+        "TOKEN_SLICING": 16,
+        "NORMALIZATION_MISMATCH": 6,
+        "REAL_INDEXING_MISS": 5,
+        "DATE_INDEX_MISS": 1
+      }
+    },
+    "short/ROGER-WINFIELD-SCOTT-FOUNDATION-INC-2009-580655183-p0025": {
+      "total_fields": 123,
+      "total_failures": 11,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 5,
+        "TOKEN_SLICING": 4,
+        "DATE_INDEX_MISS": 1,
+        "NORMALIZATION_MISMATCH": 1
+      }
+    },
+    "short/W-1-9-258_260": {
+      "total_fields": 69,
+      "total_failures": 10,
+      "failure_classes": {
+        "NORMALIZATION_MISMATCH": 4,
+        "REAL_INDEXING_MISS": 3,
+        "NON_TEXT_BOOLEAN_GROUNDING": 2,
+        "TOKEN_SLICING": 1
+      }
+    },
+    "short/W-1-9-260_262": {
+      "total_fields": 69,
+      "total_failures": 13,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 7,
+        "NO_TEXT_AT_GOLD_REGION": 3,
+        "NON_TEXT_BOOLEAN_GROUNDING": 2,
+        "NORMALIZATION_MISMATCH": 1
+      }
+    },
+    "short/W-1-9-261_263": {
+      "total_fields": 70,
+      "total_failures": 25,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 11,
+        "NO_TEXT_AT_GOLD_REGION": 8,
+        "NON_TEXT_BOOLEAN_GROUNDING": 3,
+        "NORMALIZATION_MISMATCH": 2,
+        "DATE_INDEX_MISS": 1
+      }
+    },
+    "short/W14-2nd Sub 53269 Revised W14": {
+      "total_fields": 90,
+      "total_failures": 17,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 15,
+        "NON_TEXT_BOOLEAN_GROUNDING": 2
+      }
+    },
+    "short/W14-2nd Sub 55975 Revised W14 ADMIN REVIEWED": {
+      "total_fields": 91,
+      "total_failures": 20,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 18,
+        "NON_TEXT_BOOLEAN_GROUNDING": 2
+      }
+    },
+    "short/W14-52342_W14": {
+      "total_fields": 92,
+      "total_failures": 68,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 59,
+        "NON_TEXT_BOOLEAN_GROUNDING": 9
+      }
+    },
+    "short/W14-53632_W14 ADMIN REVIEWED": {
+      "total_fields": 92,
+      "total_failures": 41,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 39,
+        "NON_TEXT_BOOLEAN_GROUNDING": 2
+      }
+    },
+    "short/W14-54500_W14 admin reviewed": {
+      "total_fields": 102,
+      "total_failures": 33,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 28,
+        "NON_TEXT_BOOLEAN_GROUNDING": 5
+      }
+    },
+    "short/W14-55311_W14 reviewed": {
+      "total_fields": 91,
+      "total_failures": 31,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 29,
+        "NON_TEXT_BOOLEAN_GROUNDING": 2
+      }
+    },
+    "short/W14-55711_W14 ADMIN REVIEWED": {
+      "total_fields": 92,
+      "total_failures": 33,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 30,
+        "NON_TEXT_BOOLEAN_GROUNDING": 3
+      }
+    },
+    "short/W14-57077_W14": {
+      "total_fields": 94,
+      "total_failures": 26,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 21,
+        "NON_TEXT_BOOLEAN_GROUNDING": 4,
+        "NORMALIZATION_MISMATCH": 1
+      }
+    },
+    "short/W14-57728_W14_REVISED": {
+      "total_fields": 118,
+      "total_failures": 50,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 41,
+        "NON_TEXT_BOOLEAN_GROUNDING": 5,
+        "REAL_INDEXING_MISS": 3,
+        "NORMALIZATION_MISMATCH": 1
+      }
+    },
+    "short/W14-58025_W14 Admin Reviewed": {
+      "total_fields": 97,
+      "total_failures": 22,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 18,
+        "NON_TEXT_BOOLEAN_GROUNDING": 4
+      }
+    },
+    "short/W14-58509_W14 2nd sub revised": {
+      "total_fields": 112,
+      "total_failures": 12,
+      "failure_classes": {
+        "NON_TEXT_BOOLEAN_GROUNDING": 9,
+        "NORMALIZATION_MISMATCH": 2,
+        "REAL_INDEXING_MISS": 1
+      }
+    },
+    "short/W14-58549_W14": {
+      "total_fields": 108,
+      "total_failures": 35,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 15,
+        "NORMALIZATION_MISMATCH": 7,
+        "NO_TEXT_AT_GOLD_REGION": 5,
+        "NON_TEXT_BOOLEAN_GROUNDING": 5,
+        "TOKEN_SLICING": 1,
+        "DATE_INDEX_MISS": 1,
+        "HYPHENATION": 1
+      }
+    },
+    "short/W14-Atascosa SWD Well No. 4 - W-14 (Updated 01.22.2025)": {
+      "total_fields": 83,
+      "total_failures": 19,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 18,
+        "NON_TEXT_BOOLEAN_GROUNDING": 1
+      }
+    },
+    "short/W2-27-216874_212740": {
+      "total_fields": 88,
+      "total_failures": 63,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 32,
+        "NO_TEXT_AT_GOLD_REGION": 23,
+        "NON_TEXT_BOOLEAN_GROUNDING": 3,
+        "HYPHENATION": 2,
+        "TOKEN_SLICING": 1,
+        "NORMALIZATION_MISMATCH": 1,
+        "DATE_INDEX_MISS": 1
+      }
+    },
+    "short/W2-27-217184_213122": {
+      "total_fields": 98,
+      "total_failures": 53,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 23,
+        "NO_TEXT_AT_GOLD_REGION": 12,
+        "NORMALIZATION_MISMATCH": 6,
+        "TOKEN_SLICING": 6,
+        "NON_TEXT_BOOLEAN_GROUNDING": 3,
+        "DATE_INDEX_MISS": 2,
+        "HYPHENATION": 1
+      }
+    },
+    "short/W2-27-217314_213200": {
+      "total_fields": 76,
+      "total_failures": 60,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 26,
+        "REAL_INDEXING_MISS": 21,
+        "NON_TEXT_BOOLEAN_GROUNDING": 9,
+        "DATE_INDEX_MISS": 2,
+        "HYPHENATION": 1,
+        "NORMALIZATION_MISMATCH": 1
+      }
+    },
+    "short/W2-27-217884_213729": {
+      "total_fields": 88,
+      "total_failures": 60,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 25,
+        "REAL_INDEXING_MISS": 21,
+        "TOKEN_SLICING": 6,
+        "DATE_INDEX_MISS": 4,
+        "HYPHENATION": 2,
+        "NON_TEXT_BOOLEAN_GROUNDING": 2
+      }
+    },
+    "short/arif-2021": {
+      "total_fields": 108,
+      "total_failures": 47,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 44,
+        "NON_TEXT_BOOLEAN_GROUNDING": 3
+      }
+    },
+    "short/arif-2022": {
+      "total_fields": 111,
+      "total_failures": 38,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 35,
+        "NON_TEXT_BOOLEAN_GROUNDING": 3
+      }
+    },
+    "short/arif-2024": {
+      "total_fields": 130,
+      "total_failures": 54,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 50,
+        "NON_TEXT_BOOLEAN_GROUNDING": 4
+      }
+    },
+    "short/bianco-2024": {
+      "total_fields": 155,
+      "total_failures": 60,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 50,
+        "NON_TEXT_BOOLEAN_GROUNDING": 10
+      }
+    },
+    "short/h5Filing-45659-1": {
+      "total_fields": 66,
+      "total_failures": 2,
+      "failure_classes": {
+        "NORMALIZATION_MISMATCH": 2
+      }
+    },
+    "short/h5Filing-45887-1": {
+      "total_fields": 69,
+      "total_failures": 1,
+      "failure_classes": {
+        "NORMALIZATION_MISMATCH": 1
+      }
+    },
+    "short/h5Filing-45919-1": {
+      "total_fields": 77,
+      "total_failures": 7,
+      "failure_classes": {
+        "NORMALIZATION_MISMATCH": 7
+      }
+    },
+    "short/h5Filing-46302-1": {
+      "total_fields": 88,
+      "total_failures": 14,
+      "failure_classes": {
+        "NORMALIZATION_MISMATCH": 14
+      }
+    },
+    "short/h5Filing-46383-1": {
+      "total_fields": 63,
+      "total_failures": 1,
+      "failure_classes": {
+        "NORMALIZATION_MISMATCH": 1
+      }
+    },
+    "short/h5Filing-46384-1": {
+      "total_fields": 63,
+      "total_failures": 4,
+      "failure_classes": {
+        "NORMALIZATION_MISMATCH": 3,
+        "REAL_INDEXING_MISS": 1
+      }
+    },
+    "short/h5Filing-46780-1": {
+      "total_fields": 61,
+      "total_failures": 4,
+      "failure_classes": {
+        "NORMALIZATION_MISMATCH": 4
+      }
+    },
+    "short/h5Filing-47175-1": {
+      "total_fields": 70,
+      "total_failures": 3,
+      "failure_classes": {
+        "NORMALIZATION_MISMATCH": 2,
+        "HYPHENATION": 1
+      }
+    },
+    "short/h5Filing-48982-1": {
+      "total_fields": 68,
+      "total_failures": 3,
+      "failure_classes": {
+        "NORMALIZATION_MISMATCH": 2,
+        "HYPHENATION": 1
+      }
+    },
+    "short/h5Filing-49070-1": {
+      "total_fields": 69,
+      "total_failures": 5,
+      "failure_classes": {
+        "NORMALIZATION_MISMATCH": 5
+      }
+    },
+    "short/h5Filing-50745-2": {
+      "total_fields": 70,
+      "total_failures": 3,
+      "failure_classes": {
+        "NORMALIZATION_MISMATCH": 3
+      }
+    },
+    "short/h5Filing-66006-1": {
+      "total_fields": 69,
+      "total_failures": 2,
+      "failure_classes": {
+        "NORMALIZATION_MISMATCH": 2
+      }
+    },
+    "short/nport__bullfinch_fund_inc": {
+      "total_fields": 550,
+      "total_failures": 1,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 1
+      }
+    },
+    "short/nport__gabelli_growth_fund_2025q4": {
+      "total_fields": 552,
+      "total_failures": 1,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 1
+      }
+    },
+    "short/nport__oak_associates_funds": {
+      "total_fields": 502,
+      "total_failures": 1,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 1
+      }
+    },
+    "short/passcoag-2020-w2-p0002-r1": {
+      "total_fields": 29,
+      "total_failures": 13,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 8,
+        "NON_TEXT_BOOLEAN_GROUNDING": 5
+      }
+    },
+    "short/passcoag-2020-w2-p0002-r2": {
+      "total_fields": 25,
+      "total_failures": 12,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 7,
+        "NON_TEXT_BOOLEAN_GROUNDING": 5
+      }
+    },
+    "short/passcoag-2020-w2-p0002-r3": {
+      "total_fields": 29,
+      "total_failures": 13,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 9,
+        "NON_TEXT_BOOLEAN_GROUNDING": 4
+      }
+    },
+    "short/passcoag-2020-w2-p0002-r4": {
+      "total_fields": 27,
+      "total_failures": 15,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 10,
+        "NON_TEXT_BOOLEAN_GROUNDING": 5
+      }
+    },
+    "short/passcoag-2020-w2-p0003-r1": {
+      "total_fields": 29,
+      "total_failures": 13,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 9,
+        "NON_TEXT_BOOLEAN_GROUNDING": 4
+      }
+    },
+    "short/passcoag-2020-w2-p0003-r2": {
+      "total_fields": 27,
+      "total_failures": 16,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 11,
+        "NON_TEXT_BOOLEAN_GROUNDING": 5
+      }
+    },
+    "short/passcoag-2020-w2-p0003-r3": {
+      "total_fields": 27,
+      "total_failures": 11,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 7,
+        "NON_TEXT_BOOLEAN_GROUNDING": 4
+      }
+    },
+    "short/passcoag-2020-w2-p0003-r4": {
+      "total_fields": 29,
+      "total_failures": 12,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 7,
+        "NON_TEXT_BOOLEAN_GROUNDING": 5
+      }
+    },
+    "short/passcoag-2020-w2-p0004-r1": {
+      "total_fields": 29,
+      "total_failures": 8,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 4,
+        "NON_TEXT_BOOLEAN_GROUNDING": 4
+      }
+    },
+    "short/passcoag-2020-w2-p0004-r2": {
+      "total_fields": 29,
+      "total_failures": 12,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 8,
+        "NON_TEXT_BOOLEAN_GROUNDING": 4
+      }
+    },
+    "short/passcoag-2020-w2-p0004-r3": {
+      "total_fields": 29,
+      "total_failures": 12,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 8,
+        "NON_TEXT_BOOLEAN_GROUNDING": 4
+      }
+    },
+    "short/passcoag-2020-w2-p0004-r4": {
+      "total_fields": 29,
+      "total_failures": 9,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 5,
+        "NON_TEXT_BOOLEAN_GROUNDING": 4
+      }
+    },
+    "short/passcoag-2020-w2-p0005-r1": {
+      "total_fields": 29,
+      "total_failures": 19,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 15,
+        "NON_TEXT_BOOLEAN_GROUNDING": 4
+      }
+    },
+    "short/passcoag-2020-w2-p0005-r2": {
+      "total_fields": 29,
+      "total_failures": 13,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 9,
+        "NON_TEXT_BOOLEAN_GROUNDING": 4
+      }
+    },
+    "short/passcoag-2020-w2-p0005-r3": {
+      "total_fields": 29,
+      "total_failures": 15,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 11,
+        "NON_TEXT_BOOLEAN_GROUNDING": 4
+      }
+    },
+    "short/passcoag-2020-w2-p0005-r4": {
+      "total_fields": 29,
+      "total_failures": 13,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 8,
+        "NON_TEXT_BOOLEAN_GROUNDING": 5
+      }
+    },
+    "short/passcoag-2020-w2-p0006-r1": {
+      "total_fields": 29,
+      "total_failures": 12,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 8,
+        "NON_TEXT_BOOLEAN_GROUNDING": 4
+      }
+    },
+    "short/passcoag-2020-w2-p0006-r2": {
+      "total_fields": 29,
+      "total_failures": 16,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 12,
+        "NON_TEXT_BOOLEAN_GROUNDING": 4
+      }
+    },
+    "short/passcoag-2020-w2-p0006-r3": {
+      "total_fields": 29,
+      "total_failures": 9,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 5,
+        "NON_TEXT_BOOLEAN_GROUNDING": 4
+      }
+    },
+    "short/passcoag-2020-w2-p0006-r4": {
+      "total_fields": 29,
+      "total_failures": 12,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 8,
+        "NON_TEXT_BOOLEAN_GROUNDING": 4
+      }
+    },
+    "short/real_clinton_property_25_11073": {
+      "total_fields": 173,
+      "total_failures": 34,
+      "failure_classes": {
+        "NON_TEXT_BOOLEAN_GROUNDING": 19,
+        "REAL_INDEXING_MISS": 15
+      }
+    },
+    "short/real_clinton_property_25_11073_corrupted": {
+      "total_fields": 173,
+      "total_failures": 74,
+      "failure_classes": {
+        "NO_TEXT_AT_GOLD_REGION": 45,
+        "NON_TEXT_BOOLEAN_GROUNDING": 29
+      }
+    },
+    "short/real_franklin_aug_2025": {
+      "total_fields": 1285,
+      "total_failures": 3,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 2,
+        "NORMALIZATION_MISMATCH": 1
+      }
+    },
+    "short/real_franklin_nov_2025": {
+      "total_fields": 1075,
+      "total_failures": 4,
+      "failure_classes": {
+        "MULTI_LINE_SPLIT": 4
+      }
+    },
+    "short/real_wyo_Goshen_2024": {
+      "total_fields": 983,
+      "total_failures": 1,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 1
+      }
+    },
+    "short/real_wyo_Niobrara_2024": {
+      "total_fields": 311,
+      "total_failures": 1,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 1
+      }
+    },
+    "short/sched_i__after_violence_project_ty2024": {
+      "total_fields": 34,
+      "total_failures": 3,
+      "failure_classes": {
+        "TOKEN_SLICING": 2,
+        "REAL_INDEXING_MISS": 1
+      }
+    },
+    "short/sched_i__idaho_humanities_council_inc_ty2023": {
+      "total_fields": 41,
+      "total_failures": 3,
+      "failure_classes": {
+        "TOKEN_SLICING": 2,
+        "REAL_INDEXING_MISS": 1
+      }
+    },
+    "short/sched_i__rotary_club_ty2024": {
+      "total_fields": 36,
+      "total_failures": 2,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 1,
+        "TOKEN_SLICING": 1
+      }
+    },
+    "short/sched_i__the_women_s_foundation_of_colorado_inc_ty2024": {
+      "total_fields": 939,
+      "total_failures": 34,
+      "failure_classes": {
+        "HYPHENATION": 29,
+        "REAL_INDEXING_MISS": 3,
+        "TOKEN_SLICING": 2
+      }
+    },
+    "short/sec_13f_0009_coatue_management": {
+      "total_fields": 2121,
+      "total_failures": 5,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 5
+      }
+    },
+    "short/sec_13f_0019_soros_fund_management": {
+      "total_fields": 2896,
+      "total_failures": 5,
+      "failure_classes": {
+        "REAL_INDEXING_MISS": 5
+      }
+    }
+  }
+}

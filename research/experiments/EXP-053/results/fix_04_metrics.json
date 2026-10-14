@@ -1,0 +1,30 @@
+{
+  "fix_name": "fix_04_ofac_stream_order",
+  "target_document": "long/real_ofac_ssi_full",
+  "document_family": "OFAC Sanctions",
+  "status": "ACCEPTED_PARTIAL",
+  "total_fields": 36303,
+  "baseline_failing": 26562,
+  "baseline_passing": 9741,
+  "baseline_word_f1_pct": 26.78,
+  "rescued_fields": 1100,
+  "regressed_fields": 0,
+  "post_fix_passing": 10841,
+  "post_fix_failing": 25462,
+  "post_fix_word_f1_pct": 29.86,
+  "word_f1_lift_pp": 3.08,
+  "runtime_seconds": 4.25,
+  "acceptance_criteria": {
+    "rescues_ge_3000": false,
+    "regressions_eq_0": true
+  },
+  "mechanical_diagnosis": "Repetitive schema tokens (a.k.a., DOB, Secondary sanctions risk:, Russia) appeared dozens of times per page, causing fixed-index binding to lock onto the first token on the page. Monotonic top-to-bottom spatial ordering unlocks 1,100 rescues with 0 regressions, lifting document F1 by +3.08 pp.",
+  "top_rescued_token_types": {
+    "a.k.a.": 357,
+    "Secondary sanctions risk:": 214,
+    "Tax ID No.": 142,
+    "Registration ID": 118,
+    "Russia": 98,
+    "Executive Order directives": 171
+  }
+}

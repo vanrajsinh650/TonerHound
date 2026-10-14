@@ -1,0 +1,48 @@
+{
+  "total_bugs": 7,
+  "bugs_fixed": 7,
+  "bugs": [
+    {
+      "bug_id": 1,
+      "title": "Wrong Next-Experiment Strategy",
+      "status": "FIXED",
+      "fix_summary": "Replaced large corrupted document targeting with small-document cohort targeting (50-800 fields, 30-70% F1)."
+    },
+    {
+      "bug_id": 2,
+      "title": "Held-Out Gate Miscalibration",
+      "status": "FIXED",
+      "fix_summary": "Recalibrated gate to min(300, floor(0.25 * total_reachable_fields_in_cohort))."
+    },
+    {
+      "bug_id": 3,
+      "title": "Blank Checkbox Math Error",
+      "status": "FIXED",
+      "fix_summary": "Recomputed strictly to 708/1268 = 55.84% blank checkboxes with zero OCR tokens."
+    },
+    {
+      "bug_id": 4,
+      "title": "Unexplained Zero-Rescue Documents",
+      "status": "FIXED",
+      "fix_summary": "Completed forensic breakdown of Cabrera 2022 (line-height IoU margin) and Arif 2022 (pre-passing income totals)."
+    },
+    {
+      "bug_id": 5,
+      "title": "Held-Out vs Full Benchmark Recovery Rate Disparity",
+      "status": "FIXED",
+      "fix_summary": "Reconciled cohort composition showing held-out split was enriched for high-yield multi-schedule returns."
+    },
+    {
+      "bug_id": 6,
+      "title": "Unclassified 134 Unextractable Documents",
+      "status": "FIXED",
+      "fix_summary": "Classified all 134: 57 page-only evidence test cases and 77 value-only test cases with zero gold bboxes."
+    },
+    {
+      "bug_id": 7,
+      "title": "Naming Inconsistency WRONG_PAGE vs PAGE_DRIFT",
+      "status": "FIXED",
+      "fix_summary": "Standardized all failure references to PAGE_DRIFT."
+    }
+  ]
+}

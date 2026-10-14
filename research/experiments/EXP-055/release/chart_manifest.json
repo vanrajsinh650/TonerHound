@@ -1,0 +1,58 @@
+{
+  "release_version": "v0.5.0",
+  "generated_at": "2026-10-14T09:26:00Z",
+  "charts": [
+    {
+      "name": "leaderboard_v050.png",
+      "path": "docs/images/leaderboard_v050.png",
+      "description": "ExtractBench leaderboard Word F1 comparison highlighting TonerHound at 75.21%",
+      "metrics": {
+        "LlamaExtract Agentic Plus": 81.26,
+        "LlamaExtract Agentic": 78.89,
+        "Codex GPT-6 Sol": 77.11,
+        "TonerHound v0.5.0": 75.21,
+        "Claude Opus 5.5": 71.55,
+        "Reducto v4": 54.97
+      }
+    },
+    {
+      "name": "progression_v050.png",
+      "path": "docs/images/progression_v050.png",
+      "description": "Historical score progression across experiments EXP-001 through EXP-054 (56.05% -> 75.21%)",
+      "milestones": [
+        {"exp": "EXP-001", "f1": 56.05},
+        {"exp": "EXP-039", "f1": 69.13},
+        {"exp": "EXP-042", "f1": 72.62},
+        {"exp": "EXP-052", "f1": 74.95},
+        {"exp": "EXP-053", "f1": 75.02},
+        {"exp": "EXP-054", "f1": 75.21}
+      ]
+    },
+    {
+      "name": "failure_distribution_v050.png",
+      "path": "docs/images/failure_distribution_v050.png",
+      "description": "Reconciled failure classification pie chart across all 87,042 failing fields",
+      "distribution": {
+        "INSUFFICIENT_IOU": 31546,
+        "WRONG_ROW": 27991,
+        "MALFORMED_BBOX": 20350,
+        "PAGE_DRIFT": 6271,
+        "ZERO_CANDIDATE": 863,
+        "UNGRADEABLE": 22
+      }
+    },
+    {
+      "name": "ceiling_v050.png",
+      "path": "docs/images/ceiling_v050.png",
+      "description": "Theoretical ceiling diagram showing 75.21% current vs 99.9956% ceiling (24.78 pp addressable)",
+      "current_f1": 75.21,
+      "ceiling_f1": 99.9956,
+      "addressable_gap_pp": 24.78
+    },
+    {
+      "name": "per_document_v050.png",
+      "path": "docs/images/per_document_v050.png",
+      "description": "Stacked bar chart of top 20 documents by total field count showing passing vs failing fields"
+    }
+  ]
+}

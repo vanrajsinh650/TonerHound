@@ -1,0 +1,27 @@
+{
+  "fix_name": "fix_06_malformed_bbox_repair",
+  "status": "ACCEPTED",
+  "total_malformed_fields_targeted": 35918,
+  "non_oklahoma_malformed_targeted": 3139,
+  "rescued_fields": 34934,
+  "rescued_fields_non_oklahoma": 2155,
+  "regressed_fields": 0,
+  "runtime_seconds": 0.22,
+  "acceptance_criteria": {
+    "rescues_ge_5000": true,
+    "regressions_eq_0": true
+  },
+  "top_rescued_documents": {
+    "long/real_oklahoma_unclaimed_2024": 32779,
+    "long/real_ishares_iboxx_bond_etfs": 1071,
+    "long/real_sm0801_eco_full_corrupted": 310,
+    "long/real_sm0801_ae_full": 99,
+    "medium/real_fidelity_northstar": 68,
+    "long/real_imedia_full_corrupted": 54,
+    "medium/real_blackrock_schedule_full": 37,
+    "medium/sec_13f_0031_loomis_sayles": 36,
+    "short/W14-52342_W14": 34,
+    "short/W2-27-217314_213200": 33
+  },
+  "mechanical_diagnosis": "Degenerate and collapsed bounding boxes for single characters, numerical zeros, and unanchored tokens are expanded to minimum canonical line heights and token spans, recovering valid IoU >= 0.50 without spatial drift."
+}

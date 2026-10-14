@@ -1,0 +1,479 @@
+{
+  "top_5_root_causes": [
+    {
+      "cluster_rank": 1,
+      "cluster_id": "CLUST_SEC_13F_VOTING_AUTHORITY",
+      "name": "SEC 13F Table Voting Authority Column Misalignment & '0' Zero Matching",
+      "failure_class": "NORMALIZATION_MISMATCH",
+      "affected_fields": 6331,
+      "affected_documents": [
+        "long/sec_13f_0010_renaissance_technologies",
+        "long/sec_13f_0026_brown_brothers_harriman",
+        "medium/sec_13f_0031_loomis_sayles"
+      ],
+      "sample_traces": [
+        {
+          "field_path": "holdings[0].voting_authority.shared",
+          "gold_value": 0,
+          "gold_page": 1,
+          "gold_bbox": [
+            0.901489,
+            0.310767,
+            0.006164,
+            0.009527
+          ],
+          "predicted_value": null,
+          "predicted_page": 1,
+          "predicted_bbox": [
+            0.9015996596392464,
+            0.3114149305555556,
+            0.005572649388531414,
+            0.006573532566879758
+          ],
+          "iou": 0.6238
+        },
+        {
+          "field_path": "holdings[0].voting_authority.none",
+          "gold_value": 0,
+          "gold_page": 1,
+          "gold_bbox": [
+            0.944699,
+            0.310767,
+            0.006164,
+            0.009527
+          ],
+          "predicted_value": "0",
+          "predicted_page": 1,
+          "predicted_bbox": [
+            0.901489,
+            0.3091,
+            0.006164,
+            0.012861
+          ],
+          "iou": 0.0
+        },
+        {
+          "field_path": "holdings[1].voting_authority.shared",
+          "gold_value": 0,
+          "gold_page": 1,
+          "gold_bbox": [
+            0.901489,
+            0.334218,
+            0.006164,
+            0.009527
+          ],
+          "predicted_value": "0",
+          "predicted_page": 1,
+          "predicted_bbox": [
+            0.723268,
+            0.332551,
+            0.006164,
+            0.012861
+          ],
+          "iou": 0.0
+        },
+        {
+          "field_path": "holdings[1].voting_authority.none",
+          "gold_value": 0,
+          "gold_page": 1,
+          "gold_bbox": [
+            0.944699,
+            0.334218,
+            0.006164,
+            0.009527
+          ],
+          "predicted_value": "0",
+          "predicted_page": 1,
+          "predicted_bbox": [
+            0.901489,
+            0.332551,
+            0.006164,
+            0.012861
+          ],
+          "iou": 0.0
+        },
+        {
+          "field_path": "holdings[2].voting_authority.shared",
+          "gold_value": 0,
+          "gold_page": 1,
+          "gold_bbox": [
+            0.901489,
+            0.362066,
+            0.006164,
+            0.009527
+          ],
+          "predicted_value": "0",
+          "predicted_page": 1,
+          "predicted_bbox": [
+            0.723268,
+            0.360398,
+            0.006164,
+            0.012861
+          ],
+          "iou": 0.0
+        }
+      ],
+      "mechanical_root_cause": "SEC 13F table rows represent voting authority under 3 sub-columns (Sole, Shared, None); when voting authority is '0' or '-', the pipeline either rejects zero-value tokens or matches the wrong sub-column offset rail.",
+      "mechanical_fix": "Extract explicit column rails for 13F Form voting sub-columns (Sole, Shared, None) and map zero/dash values directly to the corresponding column x-interval on each table row.",
+      "estimate_potential": {
+        "fields_affected": 6331,
+        "conservative_rescue_rate": 0.3,
+        "realistic_rescue_rate": 0.65,
+        "optimistic_rescue_rate": 0.85,
+        "expected_rescues_realistic": 4115,
+        "expected_pp_gain": 0.035
+      }
+    },
+    {
+      "cluster_rank": 2,
+      "cluster_id": "CLUST_FIDELITY_HOLDINGS_MARKS",
+      "name": "Mutual Fund Holdings Footnote Reference Marks Slicing",
+      "failure_class": "TOKEN_SLICING",
+      "affected_fields": 3404,
+      "affected_documents": [
+        "medium/real_fidelity_northstar"
+      ],
+      "sample_traces": [],
+      "mechanical_root_cause": "Footnote reference marks (e.g., '(a)', '(b)', '*', dagger) in investment schedules are attached to security names as trailing superscript tokens, causing token slicing when parsed as separate array elements.",
+      "mechanical_fix": "Detect single-character parenthesized and symbolic footnote markers within security name bounding boxes and align their bboxes to the exact trailing symbol glyph.",
+      "estimate_potential": {
+        "fields_affected": 3404,
+        "conservative_rescue_rate": 0.4,
+        "realistic_rescue_rate": 0.7,
+        "optimistic_rescue_rate": 0.9,
+        "expected_rescues_realistic": 2382,
+        "expected_pp_gain": 0.1302
+      }
+    },
+    {
+      "cluster_rank": 3,
+      "cluster_id": "CLUST_SEC_13F_TITLE_OF_CLASS",
+      "name": "SEC 13F Title of Class Abbreviation Indexing Misses",
+      "failure_class": "REAL_INDEXING_MISS",
+      "affected_fields": 2009,
+      "affected_documents": [
+        "long/sec_13f_0010_renaissance_technologies",
+        "long/sec_13f_0026_brown_brothers_harriman",
+        "medium/sec_13f_0031_loomis_sayles",
+        "medium/13f__nalls_sherbakoff_2025q4"
+      ],
+      "sample_traces": [
+        {
+          "field_path": "holdings[0].title_of_class",
+          "gold_value": "Common Stock",
+          "gold_page": 1,
+          "gold_bbox": [
+            0.252269,
+            0.306506,
+            0.045432,
+            0.02031
+          ],
+          "predicted_value": "Common Stock",
+          "predicted_page": 1,
+          "predicted_bbox": [
+            0.252269,
+            0.310658,
+            0.045396,
+            0.01273
+          ],
+          "iou": 0.6263
+        },
+        {
+          "field_path": "holdings[1].title_of_class",
+          "gold_value": "Common Stock",
+          "gold_page": 1,
+          "gold_bbox": [
+            0.252269,
+            0.334069,
+            0.045432,
+            0.02031
+          ],
+          "predicted_value": "Common Stock",
+          "predicted_page": 1,
+          "predicted_bbox": [
+            0.252269,
+            0.338222,
+            0.045396,
+            0.01273
+          ],
+          "iou": 0.6263
+        },
+        {
+          "field_path": "holdings[2].title_of_class",
+          "gold_value": "Common Stock",
+          "gold_page": 1,
+          "gold_bbox": [
+            0.252269,
+            0.361633,
+            0.045432,
+            0.02031
+          ],
+          "predicted_value": "Common Stock",
+          "predicted_page": 1,
+          "predicted_bbox": [
+            0.252269,
+            0.365786,
+            0.045396,
+            0.01273
+          ],
+          "iou": 0.6263
+        },
+        {
+          "field_path": "holdings[3].title_of_class",
+          "gold_value": "Common Stock",
+          "gold_page": 1,
+          "gold_bbox": [
+            0.252269,
+            0.389197,
+            0.045432,
+            0.02031
+          ],
+          "predicted_value": "Common Stock",
+          "predicted_page": 1,
+          "predicted_bbox": [
+            0.252269,
+            0.39335,
+            0.045396,
+            0.01273
+          ],
+          "iou": 0.6263
+        },
+        {
+          "field_path": "holdings[4].title_of_class",
+          "gold_value": "Common Stock",
+          "gold_page": 1,
+          "gold_bbox": [
+            0.252269,
+            0.416761,
+            0.045432,
+            0.02031
+          ],
+          "predicted_value": "Common Stock",
+          "predicted_page": 1,
+          "predicted_bbox": [
+            0.252269,
+            0.420914,
+            0.045396,
+            0.01273
+          ],
+          "iou": 0.6263
+        }
+      ],
+      "mechanical_root_cause": "Standard stock class abbreviations (e.g. 'COM', 'SHS', 'CL A', 'COMMON STOCK') are located immediately adjacent to CUSIP and issuer name; character index misses them due to token boundary splits and whitespace contraction.",
+      "mechanical_fix": "Anchor title_of_class candidates strictly between the issuer name bounding box right rail and the CUSIP bounding box left rail in the 13F table grid.",
+      "estimate_potential": {
+        "fields_affected": 2009,
+        "conservative_rescue_rate": 0.25,
+        "realistic_rescue_rate": 0.5,
+        "optimistic_rescue_rate": 0.75,
+        "expected_rescues_realistic": 1004,
+        "expected_pp_gain": 0.0085
+      }
+    },
+    {
+      "cluster_rank": 4,
+      "cluster_id": "CLUST_OFAC_ALIASES_REGISTRATION",
+      "name": "OFAC Sanctions Multi-Line Suffix & Registration Tokens",
+      "failure_class": "REAL_INDEXING_MISS",
+      "affected_fields": 4942,
+      "affected_documents": [
+        "long/real_ofac_ssi_full"
+      ],
+      "sample_traces": [
+        {
+          "field_path": "entities[0].aliases[0].type",
+          "gold_value": "a.k.a.",
+          "gold_page": 1,
+          "gold_bbox": [
+            0.78348,
+            0.27705,
+            0.02796,
+            0.00986
+          ],
+          "predicted_value": "a.k.a.",
+          "predicted_page": 1,
+          "predicted_bbox": [
+            0.7796678730085784,
+            0.2770419650607639,
+            0.031762715258629504,
+            0.009860183253432742
+          ],
+          "iou": 0.8784
+        },
+        {
+          "field_path": "entities[0].aliases[0].name",
+          "gold_value": "AKTSIONERNOE OBSHCHESTVO 'AGROKREDIT-INFORM'",
+          "gold_page": 1,
+          "gold_bbox": [
+            0.63773,
+            0.2922,
+            0.18172,
+            0.00986
+          ],
+          "predicted_value": "AKTSIONERNOE OBSHCHESTVO 'AGROKREDIT-INFORM'",
+          "predicted_page": 1,
+          "predicted_bbox": [
+            0.457749,
+            0.444824,
+            0.03917,
+            0.013311
+          ],
+          "iou": 0.0
+        },
+        {
+          "field_path": "entities[0].aliases[0].name_cyrillic",
+          "gold_value": null,
+          "gold_page": null,
+          "gold_bbox": null,
+          "predicted_value": null,
+          "predicted_page": null,
+          "predicted_bbox": null,
+          "iou": 0.0
+        },
+        {
+          "field_path": "entities[0].aliases[1].type",
+          "gold_value": "a.k.a.",
+          "gold_page": 1,
+          "gold_bbox": [
+            0.77232,
+            0.3083,
+            0.02797,
+            0.00986
+          ],
+          "predicted_value": "a.k.a.",
+          "predicted_page": 1,
+          "predicted_bbox": [
+            0.488114,
+            0.444824,
+            0.023296,
+            0.013311
+          ],
+          "iou": 0.0
+        },
+        {
+          "field_path": "entities[0].aliases[1].name",
+          "gold_value": "CLOSED JOINT-STOCK COMPANY 'AGROCREDIT-INFORM'",
+          "gold_page": 1,
+          "gold_bbox": [
+            0.80346,
+            0.3083,
+            0.04701,
+            0.00986
+          ],
+          "predicted_value": "CLOSED JOINT-STOCK COMPANY 'AGROCREDIT-INFORM'",
+          "predicted_page": 1,
+          "predicted_bbox": [
+            0.457749,
+            0.444824,
+            0.03917,
+            0.013311
+          ],
+          "iou": 0.0
+        }
+      ],
+      "mechanical_root_cause": "OFAC entity records span multi-line wrapped text blocks with semicolons separating aliases and registration IDs; candidate generator stops after line 1 of the entity block.",
+      "mechanical_fix": "Expand OFAC entity bounding block to encompass full continuation lines until the next numbered entity header, and resolve aliases and registration tokens within that block.",
+      "estimate_potential": {
+        "fields_affected": 4942,
+        "conservative_rescue_rate": 0.2,
+        "realistic_rescue_rate": 0.45,
+        "optimistic_rescue_rate": 0.65,
+        "expected_rescues_realistic": 2223,
+        "expected_pp_gain": 0.026
+      }
+    },
+    {
+      "cluster_rank": 5,
+      "cluster_id": "CLUST_CORRUPTED_CREDITOR_MATRICES",
+      "name": "Corrupted Creditor Matrix Cell Coordinate Offset",
+      "failure_class": "NO_TEXT_AT_GOLD_REGION",
+      "affected_fields": 34575,
+      "affected_documents": [
+        "long/real_ftx_full_corrupted",
+        "long/real_imedia_full_corrupted"
+      ],
+      "sample_traces": [
+        {
+          "field_path": "creditors[0].address_1",
+          "gold_value": "ADDRESS ON FILE",
+          "gold_page": 2,
+          "gold_bbox": [
+            0.259087,
+            0.078715,
+            0.04856,
+            0.009502
+          ],
+          "predicted_value": "ADDRESS ON FILE",
+          "predicted_page": 2,
+          "predicted_bbox": [
+            0.2548,
+            0.077046,
+            0.04875,
+            0.0106
+          ],
+          "iou": 0.6834
+        },
+        {
+          "field_path": "creditors[0].city",
+          "gold_value": null,
+          "gold_page": null,
+          "gold_bbox": null,
+          "predicted_value": null,
+          "predicted_page": null,
+          "predicted_bbox": null,
+          "iou": 0.0
+        },
+        {
+          "field_path": "creditors[0].state",
+          "gold_value": null,
+          "gold_page": null,
+          "gold_bbox": null,
+          "predicted_value": null,
+          "predicted_page": null,
+          "predicted_bbox": null,
+          "iou": 0.0
+        },
+        {
+          "field_path": "creditors[1].address_1",
+          "gold_value": "ADDRESS ON FILE",
+          "gold_page": 2,
+          "gold_bbox": [
+            0.258981,
+            0.089725,
+            0.048559,
+            0.009501
+          ],
+          "predicted_value": "ADDRESS ON FILE",
+          "predicted_page": 2,
+          "predicted_bbox": [
+            0.2548,
+            0.088335,
+            0.04875,
+            0.0106
+          ],
+          "iou": 0.7231
+        },
+        {
+          "field_path": "creditors[1].city",
+          "gold_value": null,
+          "gold_page": null,
+          "gold_bbox": null,
+          "predicted_value": null,
+          "predicted_page": null,
+          "predicted_bbox": null,
+          "iou": 0.0
+        }
+      ],
+      "mechanical_root_cause": "Artificially corrupted documents undergo image degradation/resolution skew that shifts physical token bounding boxes relative to uncorrupted gold annotations.",
+      "mechanical_fix": "Compute document-level affine registration transformation between degraded token stream and layout grid to project predicted bboxes into gold target coordinates.",
+      "estimate_potential": {
+        "fields_affected": 34575,
+        "conservative_rescue_rate": 0.05,
+        "realistic_rescue_rate": 0.15,
+        "optimistic_rescue_rate": 0.35,
+        "expected_rescues_realistic": 5186,
+        "expected_pp_gain": 0.0557
+      }
+    }
+  ]
+}

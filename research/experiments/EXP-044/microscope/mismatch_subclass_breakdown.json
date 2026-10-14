@@ -1,0 +1,292 @@
+[
+  {
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "field_count": 36017,
+    "field_pct": 76.8,
+    "affected_documents": 48,
+    "examples": [
+      "long/real_credit_strategies_full::holdings[123].security_name",
+      "long/real_credit_strategies_full::holdings[136].shares_or_par_thousands",
+      "long/real_credit_strategies_full::holdings[140].shares_or_par_thousands",
+      "long/real_credit_strategies_full::holdings[16].shares_or_par_thousands",
+      "long/real_credit_strategies_full::holdings[17].shares_or_par_thousands"
+    ],
+    "sample_manual_labels": [
+      {
+        "field": "holdings[123].security_name",
+        "gold": "6.50%",
+        "extracted": "6.50%",
+        "tokens_at_gold": "6.50%",
+        "matchable": true
+      },
+      {
+        "field": "holdings[136].shares_or_par_thousands",
+        "gold": 2,
+        "extracted": "2",
+        "tokens_at_gold": "2",
+        "matchable": true
+      },
+      {
+        "field": "holdings[140].shares_or_par_thousands",
+        "gold": 15,
+        "extracted": "15",
+        "tokens_at_gold": "15",
+        "matchable": true
+      }
+    ],
+    "out_of_scope": false
+  },
+  {
+    "subclass": "SUB_OTHER",
+    "field_count": 8097,
+    "field_pct": 17.27,
+    "affected_documents": 51,
+    "examples": [
+      "long/real_credit_strategies_full::holdings[106].security_name",
+      "long/real_credit_strategies_full::holdings[111].security_name",
+      "long/real_credit_strategies_full::holdings[122].security_name",
+      "long/real_credit_strategies_full::holdings[142].security_name",
+      "long/real_credit_strategies_full::holdings[148].security_name"
+    ],
+    "sample_manual_labels": [
+      {
+        "field": "holdings[106].security_name",
+        "gold": "Freedom Mortgage Holdings LLC, 6.88%, 05/01/31",
+        "extracted": "Freedom Mortgage Holdings LLC, 6.88%, 05/01/31",
+        "tokens_at_gold": "Freedom Mortgage Holdings LLC, 6.88%,",
+        "matchable": false
+      },
+      {
+        "field": "holdings[111].security_name",
+        "gold": "Diversified Healthcare Trust, 4.75%, 02/15/28",
+        "extracted": "Diversified Healthcare Trust, 4.75%, 02/15/28",
+        "tokens_at_gold": "Diversified Healthcare Trust, 4.75%,",
+        "matchable": false
+      },
+      {
+        "field": "holdings[122].security_name",
+        "gold": "Panther Escrow Issuer LLC, 7.13%, 06/01/31",
+        "extracted": "Panther Escrow Issuer LLC, 7.13%, 06/01/31",
+        "tokens_at_gold": "Panther Escrow Issuer LLC, 7.13%,",
+        "matchable": false
+      }
+    ],
+    "out_of_scope": true
+  },
+  {
+    "subclass": "SUB_PERCENT_DECIMAL",
+    "field_count": 2512,
+    "field_pct": 5.36,
+    "affected_documents": 5,
+    "examples": [
+      "long/real_credit_strategies_full::holdings[11].reference_rate",
+      "long/real_credit_strategies_full::holdings[129].security_name",
+      "long/real_credit_strategies_full::holdings[12].reference_rate",
+      "long/real_credit_strategies_full::holdings[13].reference_rate",
+      "long/real_credit_strategies_full::holdings[14].reference_rate"
+    ],
+    "sample_manual_labels": [
+      {
+        "field": "holdings[11].reference_rate",
+        "gold": "3-mo. CME Term SOFR + 4.88%",
+        "extracted": "(3-mo. CME Term SOFR",
+        "tokens_at_gold": "(3-mo.",
+        "matchable": true
+      },
+      {
+        "field": "holdings[129].security_name",
+        "gold": "Advantage Sales & Marketing, Inc., 6.50%, 11/15/28",
+        "extracted": "Advantage Sales & Marketing, Inc., 6.50%, 11/15/28",
+        "tokens_at_gold": "Advantage Sales & Marketing, Inc.,",
+        "matchable": true
+      },
+      {
+        "field": "holdings[12].reference_rate",
+        "gold": "3-mo. CME Term SOFR + 6.01%",
+        "extracted": "(3-mo. CME Term SOFR",
+        "tokens_at_gold": "(3-mo.",
+        "matchable": true
+      }
+    ],
+    "out_of_scope": false
+  },
+  {
+    "subclass": "SUB_ORDER_SWAP",
+    "field_count": 262,
+    "field_pct": 0.56,
+    "affected_documents": 2,
+    "examples": [
+      "long/real_imedia_full::creditors[3491].attention",
+      "long/real_imedia_full::creditors[713].creditor_name",
+      "long/real_oklahoma_unclaimed_2024::owners[1000].locale",
+      "long/real_oklahoma_unclaimed_2024::owners[1003].locale",
+      "long/real_oklahoma_unclaimed_2024::owners[10373].locale"
+    ],
+    "sample_manual_labels": [
+      {
+        "field": "creditors[3491].attention",
+        "gold": "Duchess / Jenn Streicher DBA Scout by Jenn Streicher",
+        "extracted": "Streicher DBA Scout by Jenn Streicher",
+        "tokens_at_gold": "Duchess / Jenn Streicher DBA Scout by Jenn",
+        "matchable": true
+      },
+      {
+        "field": "creditors[713].creditor_name",
+        "gold": "Barnes Artists Management LLC dba Exclusive Artists Management",
+        "extracted": "Barnes Artists Management LLC dba Exclusive 510 S Hewitt Street",
+        "tokens_at_gold": "Barnes Artists Management LLC dba Exclusive",
+        "matchable": true
+      },
+      {
+        "field": "owners[1000].locale",
+        "gold": "1500 N EUZELLA TER",
+        "extracted": "1500 N EUZELLA TER",
+        "tokens_at_gold": "N EUZELLA TER 1500",
+        "matchable": true
+      }
+    ],
+    "out_of_scope": false
+  },
+  {
+    "subclass": "SUB_CURRENCY_CODE",
+    "field_count": 3,
+    "field_pct": 0.01,
+    "affected_documents": 3,
+    "examples": [
+      "long/real_credit_strategies_full::holdings[584].security_name",
+      "medium/nport__dunham_funds::holdings",
+      "medium/real_dcd_sumf_full::facts[72].text"
+    ],
+    "sample_manual_labels": [
+      {
+        "field": "holdings[584].security_name",
+        "gold": "Research Now, Inc., (Issued 07/15/24, Exercisable 07/15/29, Expires 07/15/29, Strike Price USD 37.72)",
+        "extracted": "Research Now, Inc., (Issued 07/15/24, Exercisable 07/15/29, Expires 07/15/29, Strike Price USD 37.72)",
+        "tokens_at_gold": "Research Now, Inc., (Issued 07/15/24,",
+        "matchable": true
+      },
+      {
+        "field": "holdings",
+        "gold": {
+          "issuer_name": "ATP Tower Holdings / Andean Telecom Partners Chile SpA / Andean Tower Partners C",
+          "issuer_lei": "254900CIKL1FQZ45N873",
+          "security_title": "ATPTOW 7 7/8 02/03/30",
+          "cusip": "00193BAA0",
+          "isin": "US00193BAA08",
+          "ticker": null,
+          "balance": 420000.0,
+          "units": "PA",
+          "currency_code": "USD",
+          "value_usd": 433252.68,
+          "percent_of_net_assets": 0.3579,
+          "payoff_profile": "Long",
+          "asset_category": "DBT",
+          "issuer_category": "CORP",
+          "investment_country": "US",
+          "is_restricted": "Y",
+          "fair_value_level": "2"
+        },
+        "extracted": null,
+        "tokens_at_gold": "ATP Tower Holdings / Andean Telecom",
+        "matchable": true
+      },
+      {
+        "field": "facts[72].text",
+        "gold": "DHS sent a transfer and reprogramming notification to Congress on June 13, 2025, increasing CRCL\u2019s funding allocation for FY2025 to $48,405,000, with the additional funds coming from OIDO, whose allocation for FY2025 was reduced to $20,862,000. Tipton Decl. \u00b6 3.",
+        "extracted": "sent a transfer and reprogramming notification to Congress on June 13, 2025, increasing CRCL's funding allocation for FY2025 to $48,405,000, with the additional funds coming from OIDO, whose allocation for FY2025 was reduced to $20,862,000. Tipton Decl. \u00b6 3.",
+        "tokens_at_gold": "DHS sent a transfer and reprogramming notification to Congress on",
+        "matchable": true
+      }
+    ],
+    "out_of_scope": false
+  },
+  {
+    "subclass": "SUB_NUMBER_GROUPING",
+    "field_count": 3,
+    "field_pct": 0.01,
+    "affected_documents": 3,
+    "examples": [
+      "short/07021-2016-p0026::capital_current_year_increase_decrease",
+      "short/07021-2016-p0029::capital_current_year_increase_decrease",
+      "short/07021-2016-p0032::capital_current_year_increase_decrease"
+    ],
+    "sample_manual_labels": [
+      {
+        "field": "capital_current_year_increase_decrease",
+        "gold": -3186,
+        "extracted": "$-3,186",
+        "tokens_at_gold": "-3,186",
+        "matchable": true
+      },
+      {
+        "field": "capital_current_year_increase_decrease",
+        "gold": -3186,
+        "extracted": "$-3,186",
+        "tokens_at_gold": "-3,186",
+        "matchable": true
+      },
+      {
+        "field": "capital_current_year_increase_decrease",
+        "gold": -3186,
+        "extracted": "$-3,186",
+        "tokens_at_gold": "-3,186",
+        "matchable": true
+      }
+    ],
+    "out_of_scope": false
+  },
+  {
+    "subclass": "SUB_ACCOUNTING_NEGATIVE",
+    "field_count": 2,
+    "field_pct": 0.0,
+    "affected_documents": 2,
+    "examples": [
+      "short/00581-2011-p0050::box_14_self_employment_earnings[0].amount",
+      "short/W14-57728_W14_REVISED::longitude_review"
+    ],
+    "sample_manual_labels": [
+      {
+        "field": "box_14_self_employment_earnings[0].amount",
+        "gold": -5307,
+        "extracted": "-5,307.",
+        "tokens_at_gold": "14Sjlf-emPloyment earnings (loss) 5,307.",
+        "matchable": true
+      },
+      {
+        "field": "longitude_review",
+        "gold": "-98.793015 (NAD 83)",
+        "extracted": "-98.793015 (NAD 83)",
+        "tokens_at_gold": "-98.793015 (NAD83)",
+        "matchable": true
+      }
+    ],
+    "out_of_scope": false
+  },
+  {
+    "subclass": "SUB_DATE_FORMAT",
+    "field_count": 0,
+    "field_pct": 0.0,
+    "affected_documents": 0,
+    "examples": [],
+    "sample_manual_labels": [],
+    "out_of_scope": false
+  },
+  {
+    "subclass": "SUB_PRECISION_STRIP",
+    "field_count": 0,
+    "field_pct": 0.0,
+    "affected_documents": 0,
+    "examples": [],
+    "sample_manual_labels": [],
+    "out_of_scope": false
+  },
+  {
+    "subclass": "SUB_DERIVED_VALUE",
+    "field_count": 0,
+    "field_pct": 0.0,
+    "affected_documents": 0,
+    "examples": [],
+    "sample_manual_labels": [],
+    "out_of_scope": true
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "document_id": "long/real_ofac_ssi_full",
+  "extractor": "liteparse",
+  "extraction_duration_seconds": 4.9,
+  "total_gold_fields": 36303,
+  "extractor_passes": 24365,
+  "tonerhound_passes": 8886,
+  "both_pass": 6041,
+  "both_fail": 9093,
+  "extractor_unique_rescues": 18324,
+  "tonerhound_unique_rescues": 2845,
+  "geometry_diagnosis": {
+    "extractor_bbox_type": "word_and_line_tight_bounds",
+    "gold_bbox_type": "table_cell_bounds",
+    "insufficient_iou_cause": "Gold annotations in OFAC span full table column cell width, while both extractors return tight textual bounding boxes.",
+    "cell_detection_port_needed": false,
+    "port_fix_built": false,
+    "port_fix_rationale": "Free extractor also outputs tight word bounding boxes; cell expansion is already handled deterministically by fix_01 cell padding normalizer."
+  },
+  "key_finding": "Free spatial extractor (LiteParse) confirms that raw PDF text items are token-tight glyph boxes; the gap to gold is cell padding rather than OCR recognition."
+}

@@ -1,0 +1,61 @@
+{
+  "experiment_id": "EXP-046",
+  "baseline_experiment": "EXP-045",
+  "total_failures_before": 153702,
+  "total_failures_after": 153670,
+  "net_rescued": 32,
+  "net_regressed": 0,
+  "failure_class_migration": {
+    "REAL_INDEXING_MISS": {
+      "before": 48120,
+      "after": 48120,
+      "delta": 0,
+      "recovery_pct": 0.0
+    },
+    "NORMALIZATION_MISMATCH": {
+      "before": 29391,
+      "after": 29363,
+      "delta": -28,
+      "recovery_pct": 0.095,
+      "sub_ambiguous_occurrence_before": 27714,
+      "sub_ambiguous_occurrence_after": 27690,
+      "sub_ambiguous_occurrence_delta": -24
+    },
+    "TOKEN_SLICING": {
+      "before": 24190,
+      "after": 24186,
+      "delta": -4,
+      "recovery_pct": 0.017
+    },
+    "NO_TEXT_AT_GOLD_REGION": {
+      "before": 22540,
+      "after": 22540,
+      "delta": 0,
+      "recovery_pct": 0.0
+    },
+    "MULTI_LINE_SPLIT": {
+      "before": 18210,
+      "after": 18210,
+      "delta": 0,
+      "recovery_pct": 0.0
+    },
+    "NON_TEXT_BOOLEAN": {
+      "before": 5890,
+      "after": 5890,
+      "delta": 0,
+      "recovery_pct": 0.0
+    },
+    "DATE_INDEX_MISS": {
+      "before": 3140,
+      "after": 3140,
+      "delta": 0,
+      "recovery_pct": 0.0
+    },
+    "HYPHENATION": {
+      "before": 2221,
+      "after": 2221,
+      "delta": 0,
+      "recovery_pct": 0.0
+    }
+  }
+}

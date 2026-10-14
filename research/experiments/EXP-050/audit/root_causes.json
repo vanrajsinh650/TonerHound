@@ -1,0 +1,29 @@
+{
+  "sample_size": 40,
+  "readable_at_200_dpi": 9,
+  "readable_at_400_dpi": 5,
+  "unreadable_at_any_dpi": 29,
+  "top_3_failure_patterns": [
+    {
+      "pattern": "IMEDIA_CROSS_FAMILY_COLUMN_FALLBACK_MISMATCH",
+      "affected_document": "long/real_imedia_full_corrupted",
+      "affected_fields_estimate": 39071,
+      "description": "When background darkness prevented col_samples calibration, the pipeline fell back to standard_table_cols['creditors'], which are the physical column coordinates of FTX. Because IMedia has completely different column coordinates (Name at x=0.036 vs FTX x=0.067; Address at x=0.329 vs FTX x=0.255; City at x=0.713 vs FTX x=0.643), all 39k fields suffered IoU=0.",
+      "mechanical_fix": "Detect the IMedia creditor schedule format from header text and project cells into true IMedia column rails (Name: [0.036, 0.28], Address: [0.329, 0.65], City: [0.713, 0.81], State: [0.816, 0.85], Zip: [0.858, 0.95])."
+    },
+    {
+      "pattern": "FTX_ROW_PITCH_DRIFT_FROM_MULTILINE_ADDRESSES",
+      "affected_document": "long/real_ftx_full_corrupted",
+      "affected_fields_estimate": 12661,
+      "description": "FTX table pages contain 71 vertical slots, but multi-line addresses consume 2 slots instead of 1. Uniform linear interpolation drifts by 1-4 rows as the page proceeds, dropping bounding box IoU below 0.50.",
+      "mechanical_fix": "Dynamically budget 71 vertical slots across page records by detecting 2-line address blocks from token heights."
+    },
+    {
+      "pattern": "OCR_GLYPH_FRAGMENTATION_ON_DIVIDER_LINES",
+      "affected_document": "both",
+      "affected_fields_estimate": 3500,
+      "description": "Raster horizontal lines slice through fine numeric/text characters (e.g. zip codes, suite numbers), causing standard n-gram token retrieval to return zero candidates.",
+      "mechanical_fix": "Apply CLAHE contrast normalization and morphological horizontal line suppression before OCR retry on unresolved cells."
+    }
+  ]
+}

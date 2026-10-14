@@ -1,0 +1,315 @@
+{
+  "experiment_id": "EXP-046",
+  "total_stages": 34,
+  "total_fields_rescued": 32,
+  "stages": {
+    "stage_01_canonicalize_v2": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    "stage_02_fuzzy_matcher": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 31,
+      "marginal_rescues": 1,
+      "marginal_share_pct": 3.12
+    },
+    "stage_03_token_aligner": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    "stage_04_token_set_matcher": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    "stage_05_multi_region_v3": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    "stage_06_ambiguity_resolver": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    "stage_07_row_index_mapper": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 8,
+      "marginal_rescues": 24,
+      "marginal_share_pct": 75.0
+    },
+    "stage_08_borderless_table_detector": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    "stage_09_wrapped_cell_merger": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    "stage_10_subheader_filter": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    "stage_11_xycut_reader": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    "stage_12_pagebreak_row_joiner": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    "stage_13_multitoken_v2": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    "stage_14_ngram_index_v2": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    "stage_15_consonant_skeleton": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 31,
+      "marginal_rescues": 1,
+      "marginal_share_pct": 3.12
+    },
+    "stage_16_numeric_canonical_v2": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 30,
+      "marginal_rescues": 2,
+      "marginal_share_pct": 6.25
+    },
+    "stage_17_proximity_reranker": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    "stage_18_cell_clamp_v2": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    "stage_19_column_rail_detector": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    "stage_20_char_span_slicer": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 28,
+      "marginal_rescues": 4,
+      "marginal_share_pct": 12.5
+    },
+    "stage_21_merged_cell_splitter": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    "stage_22_high_dpi_ocr_retry": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    "stage_23_binarization_cascade": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    "stage_24_region_classifier": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    "stage_25_multiline_union_v2": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    "stage_26_linewrap_reconstructor": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    "stage_27_sequential_token_assembly": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    "stage_28_checkbox_v3": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    "stage_29_signature_detector": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    "stage_30_stamp_detector": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    "stage_31_date_variants_v3": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    "stage_32_relative_date_parser": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    "stage_33_hyphen_joiner_v3": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    "stage_34_word_split_recovery": {
+      "full_pipeline_rescued": 32,
+      "without_stage_rescued": 32,
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    }
+  },
+  "top_10_stages": [
+    {
+      "stage_name": "stage_07_row_index_mapper",
+      "marginal_rescues": 24,
+      "marginal_share_pct": 75.0
+    },
+    {
+      "stage_name": "stage_20_char_span_slicer",
+      "marginal_rescues": 4,
+      "marginal_share_pct": 12.5
+    },
+    {
+      "stage_name": "stage_16_numeric_canonical_v2",
+      "marginal_rescues": 2,
+      "marginal_share_pct": 6.25
+    },
+    {
+      "stage_name": "stage_02_fuzzy_matcher",
+      "marginal_rescues": 1,
+      "marginal_share_pct": 3.12
+    },
+    {
+      "stage_name": "stage_15_consonant_skeleton",
+      "marginal_rescues": 1,
+      "marginal_share_pct": 3.12
+    },
+    {
+      "stage_name": "stage_01_canonicalize_v2",
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    {
+      "stage_name": "stage_03_token_aligner",
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    {
+      "stage_name": "stage_04_token_set_matcher",
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    {
+      "stage_name": "stage_05_multi_region_v3",
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    {
+      "stage_name": "stage_06_ambiguity_resolver",
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    }
+  ],
+  "bottom_10_stages": [
+    {
+      "stage_name": "stage_25_multiline_union_v2",
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    {
+      "stage_name": "stage_26_linewrap_reconstructor",
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    {
+      "stage_name": "stage_27_sequential_token_assembly",
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    {
+      "stage_name": "stage_28_checkbox_v3",
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    {
+      "stage_name": "stage_29_signature_detector",
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    {
+      "stage_name": "stage_30_stamp_detector",
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    {
+      "stage_name": "stage_31_date_variants_v3",
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    {
+      "stage_name": "stage_32_relative_date_parser",
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    {
+      "stage_name": "stage_33_hyphen_joiner_v3",
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    },
+    {
+      "stage_name": "stage_34_word_split_recovery",
+      "marginal_rescues": 0,
+      "marginal_share_pct": 0.0
+    }
+  ]
+}

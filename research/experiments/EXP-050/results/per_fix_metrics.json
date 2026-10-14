@@ -1,0 +1,268 @@
+{
+  "experiment_id": "EXP-050",
+  "total_fixes_built": 5,
+  "fixes_accepted": 1,
+  "fixes_rejected": 4,
+  "fixes": [
+    {
+      "fix_name": "fix_01_form_1040_schedule_continuation",
+      "status": "ACCEPTED",
+      "rejection_reason": null,
+      "rescued_fields": 117,
+      "regressed_fields": 0,
+      "net_rescued": 117,
+      "documents_affected": 13,
+      "documents_evaluated": 15,
+      "runtime_seconds": 5.74,
+      "acceptance_criteria": {
+        "rescues_ge_100": true,
+        "regressions_eq_0": true,
+        "docs_affected_ge_3": true,
+        "runtime_le_10s": true
+      },
+      "per_document": [
+        {
+          "document_id": "medium/cabrera-2023",
+          "rescued": 3,
+          "regressed": 0
+        },
+        {
+          "document_id": "medium/becerra-2021",
+          "rescued": 9,
+          "regressed": 0
+        },
+        {
+          "document_id": "medium/cabrera-2022",
+          "rescued": 0,
+          "regressed": 0
+        },
+        {
+          "document_id": "medium/becerra-2024",
+          "rescued": 2,
+          "regressed": 0
+        },
+        {
+          "document_id": "medium/bar-lev-2024",
+          "rescued": 33,
+          "regressed": 0
+        },
+        {
+          "document_id": "medium/becerra-2022",
+          "rescued": 8,
+          "regressed": 0
+        },
+        {
+          "document_id": "medium/bar-lev-2021",
+          "rescued": 12,
+          "regressed": 0
+        },
+        {
+          "document_id": "medium/cabrera-2021",
+          "rescued": 8,
+          "regressed": 0
+        },
+        {
+          "document_id": "medium/bar-lev-2022",
+          "rescued": 6,
+          "regressed": 0
+        },
+        {
+          "document_id": "medium/bar-lev-2023",
+          "rescued": 22,
+          "regressed": 0
+        },
+        {
+          "document_id": "medium/becerra-2023",
+          "rescued": 9,
+          "regressed": 0
+        },
+        {
+          "document_id": "short/arif-2021",
+          "rescued": 1,
+          "regressed": 0
+        },
+        {
+          "document_id": "short/arif-2022",
+          "rescued": 0,
+          "regressed": 0
+        },
+        {
+          "document_id": "medium/arif-2023",
+          "rescued": 1,
+          "regressed": 0
+        },
+        {
+          "document_id": "short/arif-2024",
+          "rescued": 3,
+          "regressed": 0
+        }
+      ]
+    },
+    {
+      "fix_name": "fix_02_nport_multi_column_holdings",
+      "status": "REJECTED",
+      "rejection_reason": "Rescues (0) < 100 threshold",
+      "rescued_fields": 0,
+      "regressed_fields": 0,
+      "net_rescued": 0,
+      "documents_affected": 0,
+      "documents_evaluated": 3,
+      "runtime_seconds": 0.05,
+      "acceptance_criteria": {
+        "rescues_ge_100": false,
+        "regressions_eq_0": true,
+        "docs_affected_ge_3": false,
+        "runtime_le_10s": true
+      },
+      "per_document": [
+        {
+          "document_id": "short/nport__bullfinch_fund_inc",
+          "rescued": 0,
+          "regressed": 0
+        },
+        {
+          "document_id": "short/nport__gabelli_growth_fund_2025q4",
+          "rescued": 0,
+          "regressed": 0
+        },
+        {
+          "document_id": "short/nport__oak_associates_funds",
+          "rescued": 0,
+          "regressed": 0
+        }
+      ]
+    },
+    {
+      "fix_name": "fix_03_ncsr_investment_schedule",
+      "status": "REJECTED",
+      "rejection_reason": "Rescues (1) < 100 threshold",
+      "rescued_fields": 1,
+      "regressed_fields": 0,
+      "net_rescued": 1,
+      "documents_affected": 1,
+      "documents_evaluated": 9,
+      "runtime_seconds": 0.01,
+      "acceptance_criteria": {
+        "rescues_ge_100": false,
+        "regressions_eq_0": true,
+        "docs_affected_ge_3": false,
+        "runtime_le_10s": true
+      },
+      "per_document": [
+        {
+          "document_id": "short/07021-2016-p0014",
+          "rescued": 0,
+          "regressed": 0
+        },
+        {
+          "document_id": "short/07021-2016-p0016",
+          "rescued": 0,
+          "regressed": 0
+        },
+        {
+          "document_id": "short/07021-2016-p0018",
+          "rescued": 0,
+          "regressed": 0
+        },
+        {
+          "document_id": "short/07021-2016-p0026",
+          "rescued": 0,
+          "regressed": 0
+        },
+        {
+          "document_id": "short/07021-2016-p0029",
+          "rescued": 0,
+          "regressed": 0
+        },
+        {
+          "document_id": "short/07021-2016-p0032",
+          "rescued": 0,
+          "regressed": 0
+        },
+        {
+          "document_id": "short/07021-2016-p0051",
+          "rescued": 1,
+          "regressed": 0
+        },
+        {
+          "document_id": "short/00581-2011-p0050",
+          "rescued": 0,
+          "regressed": 0
+        },
+        {
+          "document_id": "short/00581-2011-p0098",
+          "rescued": 0,
+          "regressed": 0
+        }
+      ]
+    },
+    {
+      "fix_name": "fix_04_municipal_filing_grid",
+      "status": "REJECTED",
+      "rejection_reason": "Rescues (0) < 100 threshold",
+      "rescued_fields": 0,
+      "regressed_fields": 0,
+      "net_rescued": 0,
+      "documents_affected": 0,
+      "documents_evaluated": 4,
+      "runtime_seconds": 0.01,
+      "acceptance_criteria": {
+        "rescues_ge_100": false,
+        "regressions_eq_0": true,
+        "docs_affected_ge_3": false,
+        "runtime_le_10s": true
+      },
+      "per_document": [
+        {
+          "document_id": "short/H9-53-24_24",
+          "rescued": 0,
+          "regressed": 0
+        },
+        {
+          "document_id": "short/H9-53-23_23",
+          "rescued": 0,
+          "regressed": 0
+        },
+        {
+          "document_id": "short/H9-53-30_30",
+          "rescued": 0,
+          "regressed": 0
+        },
+        {
+          "document_id": "short/H9-53-31_31",
+          "rescued": 0,
+          "regressed": 0
+        }
+      ]
+    },
+    {
+      "fix_name": "fix_05_bankruptcy_schedule_continuation",
+      "status": "REJECTED",
+      "rejection_reason": "Rescues (0) < 100 threshold",
+      "rescued_fields": 0,
+      "regressed_fields": 0,
+      "net_rescued": 0,
+      "documents_affected": 0,
+      "documents_evaluated": 2,
+      "runtime_seconds": 0.01,
+      "acceptance_criteria": {
+        "rescues_ge_100": false,
+        "regressions_eq_0": true,
+        "docs_affected_ge_3": false,
+        "runtime_le_10s": true
+      },
+      "per_document": [
+        {
+          "document_id": "long/dd1155_schedule_continuation_0011",
+          "rescued": 0,
+          "regressed": 0
+        },
+        {
+          "document_id": "long/dd1155_schedule_continuation_0012",
+          "rescued": 0,
+          "regressed": 0
+        }
+      ]
+    }
+  ]
+}

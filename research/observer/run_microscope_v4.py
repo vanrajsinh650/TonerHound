@@ -85,6 +85,10 @@ def _audit_document(task: dict[str, Any]) -> dict[str, Any]:
             pred_data = json.load(f)
 
         tc = load_test_case(pdf_path)
+        field_rules = tc.get_extract_field_rules()
+        if not field_rules:
+            return {"test_id": test_id, "error": None, "fields": []}
+
         raw_cits = pred_data.get("output", {}).get("field_citations", [])
         pred_cits_by_path = {
             c["field_path"]: c
@@ -93,12 +97,10 @@ def _audit_document(task: dict[str, Any]) -> dict[str, Any]:
         }
 
         # Build ground truth rule indexes
-        field_rules = tc.get_extract_field_rules()
         alt_values, ev_boxes, ev_pages, normalizers = build_rule_indexes(field_rules)
 
-        # Build document index for causal candidate inspection
-        is_corrupted = "corrupted" in test_id
-        doc_index = DocumentIndex.from_pdf(pdf_path, enable_ocr=is_corrupted, backend="hybrid")
+        # Build document index for causal candidate inspection (fast pdfium backend, no heavy OCR)
+        doc_index = DocumentIndex.from_pdf(pdf_path, enable_ocr=False, backend="pdfium")
         resolver = EvidenceResolver(doc_index)
         classifier = FailureMicroscopeClassifier(doc_index=doc_index, resolver=resolver)
 
@@ -146,12 +148,12 @@ class MicroscopeV4Runner:
         pred_dir: Path | str,
         output_dir: Path | str,
         run_id: str,
-        data_dir: Path | str = "research/data/full",
+        data_dir: Path | str | None = None,
     ) -> None:
         self.pred_dir = Path(pred_dir)
         self.output_dir = Path(output_dir)
         self.run_id = run_id
-        self.data_dir = Path(data_dir)
+        self.data_dir = Path(data_dir) if data_dir else (repo_root / "research" / "data" / "full")
 
     def run(self, max_workers: int = 1, sample_docs: list[str] | None = None) -> dict[str, Path]:
         print(f"=== Running Failure Microscope V4 [{self.run_id}] ===")
@@ -179,38 +181,76 @@ class MicroscopeV4Runner:
         print(f"Auditing {len(tasks)} documents...")
         all_records: list[dict[str, Any]] = []
 
-        for idx, task in enumerate(tasks):
-            t_doc = time.perf_counter()
-            res = _audit_document(task)
-            if res.get("error"):
-                print(f"  [{idx+1}/{len(tasks)}] {task['test_id']}: ERROR {res['error']}")
-            else:
-                all_records.extend(res["fields"])
-                if (idx + 1) % 25 == 0 or (idx + 1) == len(tasks):
-                    dt = time.perf_counter() - t_doc
-                    print(f"  [{idx+1}/{len(tasks)}] {task['test_id']} ({len(res['fields'])} fields, {dt:.2f}s)")
-            gc.collect()
+        if max_workers > 1 and len(tasks) > 1:
+            with ProcessPoolExecutor(max_workers=max_workers) as executor:
+                futures = {executor.submit(_audit_document, task): task for task in tasks}
+                done_count = 0
+                for fut in as_completed(futures):
+                    done_count += 1
+                    task = futures[fut]
+                    try:
+                        res = fut.result()
+                        if res.get("error"):
+                            print(f"  [{done_count}/{len(tasks)}] {task['test_id']}: ERROR {res['error']}")
+                        else:
+                            all_records.extend(res["fields"])
+                            if done_count % 25 == 0 or done_count == len(tasks):
+                                print(f"  [{done_count}/{len(tasks)}] {task['test_id']} ({len(res['fields'])} fields)")
+                    except Exception as e:
+                        print(f"  [{done_count}/{len(tasks)}] {task['test_id']}: EXCEPTION {e}")
+        else:
+            for idx, task in enumerate(tasks):
+                t_doc = time.perf_counter()
+                res = _audit_document(task)
+                if res.get("error"):
+                    print(f"  [{idx+1}/{len(tasks)}] {task['test_id']}: ERROR {res['error']}", flush=True)
+                else:
+                    all_records.extend(res["fields"])
+                    if (idx + 1) % 25 == 0 or (idx + 1) == len(tasks):
+                        dt = time.perf_counter() - t_doc
+                        print(f"  [{idx+1}/{len(tasks)}] {task['test_id']} ({len(res['fields'])} fields, {dt:.2f}s)", flush=True)
+                gc.collect()
 
         t_audit = time.perf_counter() - t0
-        print(f"Causal audit completed in {t_audit:.2f}s ({len(all_records)} total fields).")
+        print(f"Causal audit completed in {t_audit:.2f}s ({len(all_records)} total fields).", flush=True)
 
         # Generate reports via FailureMicroscopeReporter
         reporter = FailureMicroscopeReporter(run_id=self.run_id, output_dir=self.output_dir)
         paths = reporter.generate_reports(all_records, total_benchmark_docs=236)
-        print(f"Microscope V4 reports generated under: {self.output_dir}")
+        print(f"Microscope V4 reports generated under: {self.output_dir}", flush=True)
         return paths
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run Failure Microscope V4")
-    parser.add_argument("--pred-dir", required=True, help="Directory containing .result.json predictions")
-    parser.add_argument("--output-dir", required=True, help="Output directory for reports")
+    parser.add_argument("--pred-dir", required=False, default=None, help="Directory containing .result.json predictions")
+    parser.add_argument("--output-dir", required=False, default=None, help="Output directory for reports")
     parser.add_argument("--run-id", required=True, help="Run identifier")
+    parser.add_argument("--baseline", required=False, default=None, help="Baseline experiment ID (e.g. EXP-042)")
+    parser.add_argument("--max-workers", required=False, type=int, default=1, help="Worker processes")
     args = parser.parse_args()
 
+    pred_dir = args.pred_dir
+    if not pred_dir and args.baseline:
+        candidates = [
+            repo_root / "research" / "experiments" / args.baseline / "predictions" / "tonerhound",
+            repo_root / "research" / "experiments" / args.baseline / "predictions",
+        ]
+        for c in candidates:
+            if c.exists() and list(c.glob("**/*.result.json")):
+                pred_dir = c
+                break
+    if not pred_dir:
+        raise ValueError("Must specify either --pred-dir or --baseline with existing predictions")
+
+    output_dir = args.output_dir
+    if not output_dir:
+        output_dir = repo_root / "research" / "observer" / "reports" / args.run_id
+
     runner = MicroscopeV4Runner(
-        pred_dir=args.pred_dir,
-        output_dir=args.output_dir,
+        pred_dir=pred_dir,
+        output_dir=output_dir,
         run_id=args.run_id,
     )
-    runner.run()
+    runner.run(max_workers=args.max_workers)
+

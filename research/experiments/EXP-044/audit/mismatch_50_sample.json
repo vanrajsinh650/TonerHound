@@ -1,0 +1,1407 @@
+[
+  {
+    "sample_id": 1,
+    "document_id": "long/sec_13f_0010_renaissance_technologies",
+    "field_path": "holdings[2619].voting_authority.shared",
+    "gold_value": 0,
+    "extracted_value": "0",
+    "gold_page": 69,
+    "predicted_page": 70,
+    "gold_bbox": [
+      0.901489,
+      0.606832,
+      0.006164,
+      0.009527
+    ],
+    "predicted_bbox": [
+      0.723268,
+      0.438281,
+      0.006164,
+      0.009527
+    ],
+    "tokens_in_gold_bbox": "0",
+    "is_value_present_as_string": "yes",
+    "different_format": "exact string present (occurs 334x on p.69, predicted on p.70)",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: exact string present (occurs 334x on p.69, predicted on p.70). Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 2,
+    "document_id": "long/real_ishares_iboxx_bond_etfs",
+    "field_path": "holdings[4003].asset_class",
+    "gold_value": "Corporate Bonds & Notes",
+    "extracted_value": "Corporate Bonds & Notes",
+    "gold_page": 21,
+    "predicted_page": 49,
+    "gold_bbox": [
+      0.05051,
+      0.12963,
+      0.12476,
+      0.01097
+    ],
+    "predicted_bbox": [
+      0.050505050505050504,
+      0.12963267875888243,
+      0.12476757319286619,
+      0.010949186576429265
+    ],
+    "tokens_in_gold_bbox": "Corporate Bonds & Notes",
+    "is_value_present_as_string": "yes",
+    "different_format": "exact string present (occurs 1x on p.21, predicted on p.49)",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: exact string present (occurs 1x on p.21, predicted on p.49). Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 3,
+    "document_id": "long/real_ishares_iboxx_bond_etfs",
+    "field_path": "holdings[1129].asset_class",
+    "gold_value": "Corporate Bonds & Notes",
+    "extracted_value": "Corporate Bonds & Notes",
+    "gold_page": 3,
+    "predicted_page": 17,
+    "gold_bbox": [
+      0.05051,
+      0.12963,
+      0.12476,
+      0.01097
+    ],
+    "predicted_bbox": [
+      0.050505050505050504,
+      0.12963267875888243,
+      0.12476757319286619,
+      0.010949186576429265
+    ],
+    "tokens_in_gold_bbox": "Corporate Bonds & Notes",
+    "is_value_present_as_string": "yes",
+    "different_format": "exact string present (occurs 1x on p.3, predicted on p.17)",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: exact string present (occurs 1x on p.3, predicted on p.17). Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 4,
+    "document_id": "long/real_oklahoma_unclaimed_2024",
+    "field_path": "owners[10905].locale",
+    "gold_value": "2901 NE 132ND ST",
+    "extracted_value": "2901 NE 132ND ST",
+    "gold_page": 25,
+    "predicted_page": 25,
+    "gold_bbox": [
+      0.73401,
+      0.61061,
+      0.08047,
+      0.00629
+    ],
+    "predicted_bbox": null,
+    "tokens_in_gold_bbox": "2901 NE 132ND ST",
+    "is_value_present_as_string": "yes",
+    "different_format": "repeated table cell entry",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: repeated table cell entry. Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 5,
+    "document_id": "long/real_ofac_ssi_full",
+    "field_path": "entities[78].addresses[0]",
+    "gold_value": "6 Mulyavina Boulevard, Minsk 220005, Belarus",
+    "extracted_value": "6 Mulyavina Boulevard, Minsk 220005, Belarus",
+    "gold_page": 16,
+    "predicted_page": 16,
+    "gold_bbox": [
+      0.47047,
+      0.36322,
+      0.11886,
+      0.00986
+    ],
+    "predicted_bbox": [
+      0.450597,
+      0.654104,
+      0.04174,
+      0.013311
+    ],
+    "tokens_in_gold_bbox": "http://www.treasury.gov/resource\ufffecenter/sanctions/Programs/Pages/ukraine.aspx 6 Mulyavina Boulevard,",
+    "is_value_present_as_string": "yes",
+    "different_format": "text fragment mismatch: \"http://www.treasury.gov/resour\"",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_OTHER",
+    "human_classification": "[SUB_OTHER] Value present as string: partial. Format: text fragment mismatch: \"http://www.treasury.gov/resour\". Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 6,
+    "document_id": "long/real_ofac_ssi_full",
+    "field_path": "entities[567].features[3].label",
+    "gold_value": "Executive Order 13662 Directive Determination -",
+    "extracted_value": "fogela@nvr.transneft.ru; Executive Order 13662",
+    "gold_page": 98,
+    "predicted_page": 98,
+    "gold_bbox": [
+      0.45523,
+      0.54788,
+      0.11694,
+      0.00986
+    ],
+    "predicted_bbox": [
+      0.637734,
+      0.361491,
+      0.242319,
+      0.013311
+    ],
+    "tokens_in_gold_bbox": "http://www.treasury.gov/resource\ufffecenter/sanctions/Programs/Pages/ukraine.aspx Executive Order 13662",
+    "is_value_present_as_string": "yes",
+    "different_format": "text fragment mismatch: \"http://www.treasury.gov/resour\"",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_OTHER",
+    "human_classification": "[SUB_OTHER] Value present as string: partial. Format: text fragment mismatch: \"http://www.treasury.gov/resour\". Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 7,
+    "document_id": "long/real_ofac_ssi_full",
+    "field_path": "entities[1062].aliases[1].type",
+    "gold_value": "a.k.a.",
+    "extracted_value": "(a.k.a.",
+    "gold_page": 168,
+    "predicted_page": 167,
+    "gold_bbox": [
+      0.15227,
+      0.14731,
+      0.02796,
+      0.00986
+    ],
+    "predicted_bbox": [
+      0.793105,
+      0.407892,
+      0.022688,
+      0.013311
+    ],
+    "tokens_in_gold_bbox": "a.k.a.",
+    "is_value_present_as_string": "yes",
+    "different_format": "exact string present (occurs 22x on p.168, predicted on p.167)",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: exact string present (occurs 22x on p.168, predicted on p.167). Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 8,
+    "document_id": "long/real_ishares_iboxx_bond_etfs",
+    "field_path": "holdings[3766].asset_class",
+    "gold_value": "Corporate Bonds & Notes",
+    "extracted_value": "Corporate Bonds & Notes",
+    "gold_page": 21,
+    "predicted_page": 46,
+    "gold_bbox": [
+      0.05051,
+      0.12963,
+      0.12476,
+      0.01097
+    ],
+    "predicted_bbox": [
+      0.050505050505050504,
+      0.12963267875888243,
+      0.12476757319286619,
+      0.010949186576429265
+    ],
+    "tokens_in_gold_bbox": "Corporate Bonds & Notes",
+    "is_value_present_as_string": "yes",
+    "different_format": "exact string present (occurs 1x on p.21, predicted on p.46)",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: exact string present (occurs 1x on p.21, predicted on p.46). Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 9,
+    "document_id": "long/sec_13f_0010_renaissance_technologies",
+    "field_path": "holdings[901].voting_authority.none",
+    "gold_value": 0,
+    "extracted_value": "0",
+    "gold_page": 23,
+    "predicted_page": 23,
+    "gold_bbox": [
+      0.944699,
+      0.855999,
+      0.006164,
+      0.009527
+    ],
+    "predicted_bbox": [
+      0.901489,
+      0.854333,
+      0.006164,
+      0.012861
+    ],
+    "tokens_in_gold_bbox": "0",
+    "is_value_present_as_string": "yes",
+    "different_format": "exact string present (occurs 341x on p.23, predicted on p.23)",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: exact string present (occurs 341x on p.23, predicted on p.23). Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 10,
+    "document_id": "long/real_oklahoma_unclaimed_2024",
+    "field_path": "owners[7445].locale",
+    "gold_value": "269 NW 1018TH AVE",
+    "extracted_value": "269 NW 1018TH AVE",
+    "gold_page": 18,
+    "predicted_page": 18,
+    "gold_bbox": [
+      0.29931,
+      0.1137,
+      0.08739,
+      0.00629
+    ],
+    "predicted_bbox": [
+      0.498464,
+      0.871697,
+      0.019222,
+      0.0102
+    ],
+    "tokens_in_gold_bbox": "269 NW 1018TH AVE",
+    "is_value_present_as_string": "yes",
+    "different_format": "repeated table cell entry",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: repeated table cell entry. Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 11,
+    "document_id": "long/real_ishares_iboxx_bond_etfs",
+    "field_path": "holdings[327].security_name",
+    "gold_value": "OneMain Finance Corp., 7.88%, 03/15/30",
+    "extracted_value": "CMT + 7.88%, 03/15/30",
+    "gold_page": 7,
+    "predicted_page": 7,
+    "gold_bbox": [
+      0.05051,
+      0.44963,
+      0.0724,
+      0.01068
+    ],
+    "predicted_bbox": [
+      0.050505,
+      0.442853,
+      0.674684,
+      0.017443
+    ],
+    "tokens_in_gold_bbox": "7.88%, 03/15/30",
+    "is_value_present_as_string": "yes",
+    "different_format": "partial string at bbox: \"7.88%, 03/15/30\" vs \"OneMain Finance Corp., 7.88%, 03/15/30\"",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_OTHER",
+    "human_classification": "[SUB_OTHER] Value present as string: partial. Format: partial string at bbox: \"7.88%, 03/15/30\" vs \"OneMain Finance Corp., 7.88%, 03/15/30\". Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 12,
+    "document_id": "long/sec_13f_0010_renaissance_technologies",
+    "field_path": "holdings[1099].voting_authority.none",
+    "gold_value": 0,
+    "extracted_value": "0",
+    "gold_page": 29,
+    "predicted_page": 29,
+    "gold_bbox": [
+      0.944699,
+      0.521824,
+      0.006164,
+      0.009527
+    ],
+    "predicted_bbox": [
+      0.901489,
+      0.520156,
+      0.006164,
+      0.012861
+    ],
+    "tokens_in_gold_bbox": "0",
+    "is_value_present_as_string": "yes",
+    "different_format": "exact string present (occurs 292x on p.29, predicted on p.29)",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: exact string present (occurs 292x on p.29, predicted on p.29). Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 13,
+    "document_id": "long/real_oklahoma_unclaimed_2024",
+    "field_path": "owners[21467].locale",
+    "gold_value": "2508 S CINCINNATTI",
+    "extracted_value": "2508 S CINCINNATTI",
+    "gold_page": 49,
+    "predicted_page": 49,
+    "gold_bbox": [
+      0.01042,
+      0.25773,
+      0.08837,
+      0.00629
+    ],
+    "predicted_bbox": [
+      0.498464,
+      0.182082,
+      0.019222,
+      0.0092
+    ],
+    "tokens_in_gold_bbox": "2508 S CINCINNATTI",
+    "is_value_present_as_string": "yes",
+    "different_format": "repeated table cell entry",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: repeated table cell entry. Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 14,
+    "document_id": "long/real_ishares_iboxx_bond_etfs",
+    "field_path": "holdings[1444].industry_percent",
+    "gold_value": "1.5%",
+    "extracted_value": "1.5%",
+    "gold_page": 21,
+    "predicted_page": 22,
+    "gold_bbox": [
+      0.58364,
+      0.56881,
+      0.02264,
+      0.01068
+    ],
+    "predicted_bbox": [
+      0.5836291072344539,
+      0.5688217123657542,
+      0.022656219174163494,
+      0.010660452436107026
+    ],
+    "tokens_in_gold_bbox": "1.5%",
+    "is_value_present_as_string": "yes",
+    "different_format": "exact string present (occurs 1x on p.21, predicted on p.22)",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: exact string present (occurs 1x on p.21, predicted on p.22). Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 15,
+    "document_id": "long/real_ishares_iboxx_bond_etfs",
+    "field_path": "holdings[129].asset_class",
+    "gold_value": "Corporate Bonds & Notes",
+    "extracted_value": "Corporate Bonds & Notes",
+    "gold_page": 3,
+    "predicted_page": 4,
+    "gold_bbox": [
+      0.05051,
+      0.12963,
+      0.12476,
+      0.01097
+    ],
+    "predicted_bbox": [
+      0.050505050505050504,
+      0.12963267875888243,
+      0.12476757319286619,
+      0.010949186576429265
+    ],
+    "tokens_in_gold_bbox": "Corporate Bonds & Notes",
+    "is_value_present_as_string": "yes",
+    "different_format": "exact string present (occurs 1x on p.3, predicted on p.4)",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: exact string present (occurs 1x on p.3, predicted on p.4). Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 16,
+    "document_id": "long/real_ishares_iboxx_bond_etfs",
+    "field_path": "holdings[3478].asset_class",
+    "gold_value": "Corporate Bonds & Notes",
+    "extracted_value": "Corporate Bonds & Notes",
+    "gold_page": 21,
+    "predicted_page": 43,
+    "gold_bbox": [
+      0.05051,
+      0.12963,
+      0.12476,
+      0.01097
+    ],
+    "predicted_bbox": [
+      0.050505050505050504,
+      0.12963267875888243,
+      0.12476757319286619,
+      0.010949186576429265
+    ],
+    "tokens_in_gold_bbox": "Corporate Bonds & Notes",
+    "is_value_present_as_string": "yes",
+    "different_format": "exact string present (occurs 1x on p.21, predicted on p.43)",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: exact string present (occurs 1x on p.21, predicted on p.43). Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 17,
+    "document_id": "long/real_ofac_ssi_full",
+    "field_path": "entities[53].aliases[8].type",
+    "gold_value": "f.k.a.",
+    "extracted_value": "f.k.a.",
+    "gold_page": 12,
+    "predicted_page": 12,
+    "gold_bbox": [
+      0.28082,
+      0.45602,
+      0.02479,
+      0.00986
+    ],
+    "predicted_bbox": [
+      0.288666,
+      0.654104,
+      0.020644,
+      0.013311
+    ],
+    "tokens_in_gold_bbox": "f.k.a.",
+    "is_value_present_as_string": "yes",
+    "different_format": "exact string present (occurs 46x on p.12, predicted on p.12)",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: exact string present (occurs 46x on p.12, predicted on p.12). Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 18,
+    "document_id": "long/real_ofac_ssi_full",
+    "field_path": "entities[665].features[1].label",
+    "gold_value": "Secondary sanctions risk:",
+    "extracted_value": "Secondary sanctions risk:",
+    "gold_page": 111,
+    "predicted_page": 111,
+    "gold_bbox": [
+      0.63773,
+      0.22496,
+      0.13028,
+      0.00986
+    ],
+    "predicted_bbox": [
+      0.698096,
+      0.484597,
+      0.130268,
+      0.013311
+    ],
+    "tokens_in_gold_bbox": "http://www.treasury.gov/resource\ufffecenter/sanctions/Programs/Pages/ukraine.aspx Secondary Ukraine-/Russia\ufffeRelated sanctions risk:",
+    "is_value_present_as_string": "yes",
+    "different_format": "exact string present (occurs 8x on p.111, predicted on p.111)",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: exact string present (occurs 8x on p.111, predicted on p.111). Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 19,
+    "document_id": "long/real_oklahoma_unclaimed_2024",
+    "field_path": "owners[4614].locale",
+    "gold_value": "442606 E 250 RD",
+    "extracted_value": "442606 E 250 RD",
+    "gold_page": 12,
+    "predicted_page": 12,
+    "gold_bbox": [
+      0.01042,
+      0.61884,
+      0.07239,
+      0.00629
+    ],
+    "predicted_bbox": [
+      0.498464,
+      0.532846,
+      0.019222,
+      0.0102
+    ],
+    "tokens_in_gold_bbox": "E RD 442606 250",
+    "is_value_present_as_string": "yes",
+    "different_format": "repeated table cell entry",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: repeated table cell entry. Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 20,
+    "document_id": "long/sec_13f_0010_renaissance_technologies",
+    "field_path": "holdings[142].voting_authority.none",
+    "gold_value": 0,
+    "extracted_value": "0",
+    "gold_page": 4,
+    "predicted_page": 4,
+    "gold_bbox": [
+      0.944699,
+      0.795904,
+      0.006164,
+      0.009527
+    ],
+    "predicted_bbox": [
+      0.901489,
+      0.794237,
+      0.006164,
+      0.012861
+    ],
+    "tokens_in_gold_bbox": "0",
+    "is_value_present_as_string": "yes",
+    "different_format": "exact string present (occurs 375x on p.4, predicted on p.4)",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: exact string present (occurs 375x on p.4, predicted on p.4). Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 21,
+    "document_id": "long/real_ishares_iboxx_bond_etfs",
+    "field_path": "holdings[1189].industry_percent",
+    "gold_value": "4.7%",
+    "extracted_value": "4.75%,",
+    "gold_page": 17,
+    "predicted_page": 18,
+    "gold_bbox": [
+      0.55768,
+      0.85466,
+      0.02266,
+      0.01068
+    ],
+    "predicted_bbox": [
+      0.5576821786385996,
+      0.8546744255440488,
+      0.022656167797769355,
+      0.010660491864502575
+    ],
+    "tokens_in_gold_bbox": "4.7%",
+    "is_value_present_as_string": "yes",
+    "different_format": "exact string present (occurs 1x on p.17, predicted on p.18)",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: exact string present (occurs 1x on p.17, predicted on p.18). Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 22,
+    "document_id": "long/real_oklahoma_unclaimed_2024",
+    "field_path": "owners[8519].locale",
+    "gold_value": "107 N MONROE AVE",
+    "extracted_value": "107 N MONROE AVE",
+    "gold_page": 20,
+    "predicted_page": 20,
+    "gold_bbox": [
+      0.58958,
+      0.5602,
+      0.08739,
+      0.00629
+    ],
+    "predicted_bbox": null,
+    "tokens_in_gold_bbox": "107 N MONROE AVE",
+    "is_value_present_as_string": "yes",
+    "different_format": "repeated table cell entry",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: repeated table cell entry. Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 23,
+    "document_id": "long/real_ofac_ssi_full",
+    "field_path": "entities[43].features[6].label",
+    "gold_value": "Secondary sanctions risk:",
+    "extracted_value": "Secondary sanctions risk:",
+    "gold_page": 10,
+    "predicted_page": 9,
+    "gold_bbox": [
+      0.21106,
+      0.64068,
+      0.10614,
+      0.00986
+    ],
+    "predicted_bbox": [
+      0.436796,
+      0.77721,
+      0.044472,
+      0.013311
+    ],
+    "tokens_in_gold_bbox": "Secondary sanctions",
+    "is_value_present_as_string": "yes",
+    "different_format": "exact string present (occurs 2x on p.10, predicted on p.9)",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: exact string present (occurs 2x on p.10, predicted on p.9). Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 24,
+    "document_id": "long/sec_13f_0010_renaissance_technologies",
+    "field_path": "holdings[2890].voting_authority.shared",
+    "gold_value": 0,
+    "extracted_value": "0",
+    "gold_page": 76,
+    "predicted_page": 76,
+    "gold_bbox": [
+      0.901489,
+      0.854533,
+      0.006164,
+      0.009527
+    ],
+    "predicted_bbox": [
+      0.723268,
+      0.852866,
+      0.006164,
+      0.012861
+    ],
+    "tokens_in_gold_bbox": "0",
+    "is_value_present_as_string": "yes",
+    "different_format": "exact string present (occurs 350x on p.76, predicted on p.76)",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: exact string present (occurs 350x on p.76, predicted on p.76). Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 25,
+    "document_id": "medium/real_wright_co_mn",
+    "field_path": "line_items[230].vendor_number",
+    "gold_value": "1383",
+    "extracted_value": "1383",
+    "gold_page": 24,
+    "predicted_page": 26,
+    "gold_bbox": [
+      0.04545,
+      0.79944,
+      0.02245,
+      0.01459
+    ],
+    "predicted_bbox": [
+      0.045454545454545456,
+      0.7994518404692607,
+      0.022455191371416813,
+      0.014579124700010215
+    ],
+    "tokens_in_gold_bbox": "1383",
+    "is_value_present_as_string": "yes",
+    "different_format": "exact string present (occurs 1x on p.24, predicted on p.26)",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: exact string present (occurs 1x on p.24, predicted on p.26). Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 26,
+    "document_id": "long/real_oklahoma_unclaimed_2024",
+    "field_path": "owners[741].locale",
+    "gold_value": "PO BOX 223",
+    "extracted_value": "PO BOX 223",
+    "gold_page": 3,
+    "predicted_page": 3,
+    "gold_bbox": [
+      0.58958,
+      0.66719,
+      0.05265,
+      0.00629
+    ],
+    "predicted_bbox": [
+      0.589583,
+      0.66234,
+      0.052647,
+      0.016
+    ],
+    "tokens_in_gold_bbox": "PO BOX 223",
+    "is_value_present_as_string": "yes",
+    "different_format": "repeated table cell entry",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: repeated table cell entry. Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 27,
+    "document_id": "long/real_oklahoma_unclaimed_2024",
+    "field_path": "owners[2128].locale",
+    "gold_value": "2620 POLE RD",
+    "extracted_value": "2620 POLE RD",
+    "gold_page": 6,
+    "predicted_page": 6,
+    "gold_bbox": [
+      0.58958,
+      0.77625,
+      0.06276,
+      0.00629
+    ],
+    "predicted_bbox": null,
+    "tokens_in_gold_bbox": "2620 POLE RD",
+    "is_value_present_as_string": "yes",
+    "different_format": "repeated table cell entry",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: repeated table cell entry. Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 28,
+    "document_id": "long/real_ofac_ssi_full",
+    "field_path": "entities[549].features[1].label",
+    "gold_value": "Executive Order 13662 Directive Determination -",
+    "extracted_value": "Executive Order 13662 Directive Determination -",
+    "gold_page": 95,
+    "predicted_page": 95,
+    "gold_bbox": [
+      0.72923,
+      0.47117,
+      0.11694,
+      0.00986
+    ],
+    "predicted_bbox": [
+      0.436796,
+      0.299938,
+      0.044472,
+      0.013311
+    ],
+    "tokens_in_gold_bbox": "Executive Order 13662",
+    "is_value_present_as_string": "yes",
+    "different_format": "partial string at bbox: \"Executive Order 13662\" vs \"Executive Order 13662 Directive Determination -\"",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_OTHER",
+    "human_classification": "[SUB_OTHER] Value present as string: partial. Format: partial string at bbox: \"Executive Order 13662\" vs \"Executive Order 13662 Directive Determination -\". Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 29,
+    "document_id": "long/real_oklahoma_unclaimed_2024",
+    "field_path": "owners[23575].locale",
+    "gold_value": "3312 S 115TH EAST AVE",
+    "extracted_value": "3312 S 115TH EAST AVE",
+    "gold_page": 53,
+    "predicted_page": 53,
+    "gold_bbox": [
+      0.73401,
+      0.25156,
+      0.10379,
+      0.00629
+    ],
+    "predicted_bbox": null,
+    "tokens_in_gold_bbox": "3312 S 115TH EAST AVE",
+    "is_value_present_as_string": "yes",
+    "different_format": "repeated table cell entry",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: repeated table cell entry. Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 30,
+    "document_id": "long/sec_13f_0010_renaissance_technologies",
+    "field_path": "holdings[1062].voting_authority.none",
+    "gold_value": 0,
+    "extracted_value": "0",
+    "gold_page": 27,
+    "predicted_page": 27,
+    "gold_bbox": [
+      0.944699,
+      0.795902,
+      0.006164,
+      0.009527
+    ],
+    "predicted_bbox": [
+      0.901489,
+      0.794235,
+      0.006164,
+      0.012861
+    ],
+    "tokens_in_gold_bbox": "0",
+    "is_value_present_as_string": "yes",
+    "different_format": "exact string present (occurs 341x on p.27, predicted on p.27)",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: exact string present (occurs 341x on p.27, predicted on p.27). Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 31,
+    "document_id": "long/real_oklahoma_unclaimed_2024",
+    "field_path": "owners[11132].name",
+    "gold_value": "BOB PATTERSON & LOU",
+    "extracted_value": "BOB PATTERSON & LOU",
+    "gold_page": 26,
+    "predicted_page": 26,
+    "gold_bbox": [
+      0.1486,
+      0.94806,
+      0.10594,
+      0.00629
+    ],
+    "predicted_bbox": [
+      0.471616,
+      0.911682,
+      0.033384,
+      0.0092
+    ],
+    "tokens_in_gold_bbox": "BOB PATTERSON & LOU",
+    "is_value_present_as_string": "yes",
+    "different_format": "repeated table cell entry",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: repeated table cell entry. Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 32,
+    "document_id": "long/real_credit_strategies_full",
+    "field_path": "holdings[545].reference_rate",
+    "gold_value": "3-mo. CME Term SOFR + 9.00%",
+    "extracted_value": "(3-mo. CME Term SOFR",
+    "gold_page": 24,
+    "predicted_page": 24,
+    "gold_bbox": [
+      0.69737,
+      0.85815,
+      0.03098,
+      0.0093
+    ],
+    "predicted_bbox": [
+      0.076629,
+      0.897429,
+      0.132449,
+      0.016
+    ],
+    "tokens_in_gold_bbox": "(3-mo.",
+    "is_value_present_as_string": "yes",
+    "different_format": "percent vs decimal/fraction",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_PERCENT_DECIMAL",
+    "human_classification": "[SUB_PERCENT_DECIMAL] Value present as string: partial. Format: percent vs decimal/fraction. Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 33,
+    "document_id": "long/real_ofac_ssi_full",
+    "field_path": "entities[160].features[4].value",
+    "gold_value": "See Section 11 of Executive Order 14024.",
+    "extracted_value": "Enterprise; Executive Order 14024",
+    "gold_page": 28,
+    "predicted_page": 28,
+    "gold_bbox": [
+      0.78962,
+      0.20886,
+      0.08941,
+      0.00986
+    ],
+    "predicted_bbox": [
+      0.677138,
+      0.284786,
+      0.175408,
+      0.013311
+    ],
+    "tokens_in_gold_bbox": "See Section 11 of",
+    "is_value_present_as_string": "yes",
+    "different_format": "partial string at bbox: \"See Section 11 of\" vs \"See Section 11 of Executive Order 14024.\"",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_OTHER",
+    "human_classification": "[SUB_OTHER] Value present as string: partial. Format: partial string at bbox: \"See Section 11 of\" vs \"See Section 11 of Executive Order 14024.\". Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 34,
+    "document_id": "medium/real_wright_co_mn",
+    "field_path": "line_items[132].department_number",
+    "gold_value": "201",
+    "extracted_value": "201",
+    "gold_page": 14,
+    "predicted_page": 16,
+    "gold_bbox": [
+      0.04545,
+      0.17322,
+      0.01684,
+      0.01459
+    ],
+    "predicted_bbox": [
+      0.045454545454545456,
+      0.1732263502731822,
+      0.016841007001472244,
+      0.014579124700010215
+    ],
+    "tokens_in_gold_bbox": "201",
+    "is_value_present_as_string": "yes",
+    "different_format": "exact string present (occurs 36x on p.14, predicted on p.16)",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: exact string present (occurs 36x on p.14, predicted on p.16). Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 35,
+    "document_id": "long/real_oklahoma_unclaimed_2024",
+    "field_path": "owners[21510].locale",
+    "gold_value": "6704 S GRANITE AVE",
+    "extracted_value": "S GRANITE AVE",
+    "gold_page": 49,
+    "predicted_page": 49,
+    "gold_bbox": [
+      0.01042,
+      0.9316,
+      0.09144,
+      0.00629
+    ],
+    "predicted_bbox": [
+      0.467922,
+      0.059437,
+      0.068648,
+      0.009872
+    ],
+    "tokens_in_gold_bbox": "6704 S GRANITE AVE",
+    "is_value_present_as_string": "yes",
+    "different_format": "repeated table cell entry",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: repeated table cell entry. Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 36,
+    "document_id": "long/real_oklahoma_unclaimed_2024",
+    "field_path": "owners[15778].locale",
+    "gold_value": "908 NW 12TH ST",
+    "extracted_value": "908 NW 12TH ST",
+    "gold_page": 36,
+    "predicted_page": 36,
+    "gold_bbox": [
+      0.58958,
+      0.9316,
+      0.07185,
+      0.00629
+    ],
+    "predicted_bbox": null,
+    "tokens_in_gold_bbox": "908 NW 12TH ST",
+    "is_value_present_as_string": "yes",
+    "different_format": "repeated table cell entry",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: repeated table cell entry. Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 37,
+    "document_id": "long/real_oklahoma_unclaimed_2024",
+    "field_path": "owners[11114].locale",
+    "gold_value": "8617 E RENO AVE 4",
+    "extracted_value": "8617 E RENO AVE 4",
+    "gold_page": 26,
+    "predicted_page": 26,
+    "gold_bbox": [
+      0.15485,
+      0.69497,
+      0.08488,
+      0.00629
+    ],
+    "predicted_bbox": [
+      0.498464,
+      0.706482,
+      0.019222,
+      0.0092
+    ],
+    "tokens_in_gold_bbox": "8617 E RENO AVE 4",
+    "is_value_present_as_string": "yes",
+    "different_format": "repeated table cell entry",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: repeated table cell entry. Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 38,
+    "document_id": "long/real_ofac_ssi_full",
+    "field_path": "entities[1236].addresses[0]",
+    "gold_value": "65/1 Suschevsky Val, Moscow 129594, Russia",
+    "extracted_value": "65/1 Suschevsky Val, Moscow 129594, Russia",
+    "gold_page": 192,
+    "predicted_page": 192,
+    "gold_bbox": [
+      0.28221,
+      0.31682,
+      0.02225,
+      0.00986
+    ],
+    "predicted_bbox": [
+      0.450597,
+      0.084029,
+      0.04174,
+      0.013311
+    ],
+    "tokens_in_gold_bbox": "65/1",
+    "is_value_present_as_string": "yes",
+    "different_format": "partial string at bbox: \"65/1\" vs \"65/1 Suschevsky Val, Moscow 129594, Russia\"",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_OTHER",
+    "human_classification": "[SUB_OTHER] Value present as string: partial. Format: partial string at bbox: \"65/1\" vs \"65/1 Suschevsky Val, Moscow 129594, Russia\". Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 39,
+    "document_id": "long/real_ofac_ssi_full",
+    "field_path": "entities[518].registration_documents[0].number",
+    "gold_value": "1027700462514",
+    "extracted_value": "1027700462514",
+    "gold_page": 90,
+    "predicted_page": 90,
+    "gold_bbox": [
+      0.16848,
+      0.74864,
+      0.08268,
+      0.00986
+    ],
+    "predicted_bbox": [
+      0.54501,
+      0.115279,
+      0.066757,
+      0.013311
+    ],
+    "tokens_in_gold_bbox": "1027700462514",
+    "is_value_present_as_string": "yes",
+    "different_format": "exact string present (occurs 2x on p.90, predicted on p.90)",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: exact string present (occurs 2x on p.90, predicted on p.90). Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 40,
+    "document_id": "long/real_oklahoma_unclaimed_2024",
+    "field_path": "owners[15514].locale",
+    "gold_value": "3933 NW 52ND ST",
+    "extracted_value": "3933 NW 52ND ST",
+    "gold_page": 36,
+    "predicted_page": 36,
+    "gold_bbox": [
+      0.01042,
+      0.70629,
+      0.07793,
+      0.00629
+    ],
+    "predicted_bbox": [
+      0.498464,
+      0.568653,
+      0.019222,
+      0.0092
+    ],
+    "tokens_in_gold_bbox": "3933 NW 52ND ST",
+    "is_value_present_as_string": "yes",
+    "different_format": "repeated table cell entry",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: repeated table cell entry. Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 41,
+    "document_id": "long/real_ishares_iboxx_bond_etfs",
+    "field_path": "holdings[3756].security_name",
+    "gold_value": "Simon Property Group LP, 2.65%, 07/15/30",
+    "extracted_value": "Simon Property Group LP",
+    "gold_page": 46,
+    "predicted_page": 46,
+    "gold_bbox": [
+      0.51515,
+      0.50389,
+      0.08255,
+      0.01068
+    ],
+    "predicted_bbox": [
+      0.515152,
+      0.474829,
+      0.113803,
+      0.01066
+    ],
+    "tokens_in_gold_bbox": "2.65%, 07/15/30(a)",
+    "is_value_present_as_string": "yes",
+    "different_format": "percent vs decimal/fraction",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_PERCENT_DECIMAL",
+    "human_classification": "[SUB_PERCENT_DECIMAL] Value present as string: partial. Format: percent vs decimal/fraction. Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 42,
+    "document_id": "long/real_ishares_iboxx_bond_etfs",
+    "field_path": "holdings[3457].security_name",
+    "gold_value": "Merck & Co., Inc., 4.00%, 03/07/49",
+    "extracted_value": "Merck & Co., Inc.",
+    "gold_page": 43,
+    "predicted_page": 43,
+    "gold_bbox": [
+      0.51515,
+      0.40505,
+      0.07241,
+      0.01068
+    ],
+    "predicted_bbox": [
+      0.515152,
+      0.255837,
+      0.076236,
+      0.01066
+    ],
+    "tokens_in_gold_bbox": "4.00%, 03/07/49",
+    "is_value_present_as_string": "yes",
+    "different_format": "partial string at bbox: \"4.00%, 03/07/49\" vs \"Merck & Co., Inc., 4.00%, 03/07/49\"",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_OTHER",
+    "human_classification": "[SUB_OTHER] Value present as string: partial. Format: partial string at bbox: \"4.00%, 03/07/49\" vs \"Merck & Co., Inc., 4.00%, 03/07/49\". Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 43,
+    "document_id": "long/real_oklahoma_unclaimed_2024",
+    "field_path": "owners[18506].locale",
+    "gold_value": "27700 E ADMIRAL PL",
+    "extracted_value": "27700 E ADMIRAL PL",
+    "gold_page": 42,
+    "predicted_page": 42,
+    "gold_bbox": [
+      0.58958,
+      0.73818,
+      0.08976,
+      0.00629
+    ],
+    "predicted_bbox": [
+      0.498464,
+      0.442307,
+      0.019222,
+      0.01265
+    ],
+    "tokens_in_gold_bbox": "27700 E ADMIRAL PL",
+    "is_value_present_as_string": "yes",
+    "different_format": "repeated table cell entry",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: repeated table cell entry. Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 44,
+    "document_id": "long/real_ishares_iboxx_bond_etfs",
+    "field_path": "holdings[3575].asset_class",
+    "gold_value": "Corporate Bonds & Notes",
+    "extracted_value": "Corporate Bonds & Notes",
+    "gold_page": 21,
+    "predicted_page": 44,
+    "gold_bbox": [
+      0.05051,
+      0.12963,
+      0.12476,
+      0.01097
+    ],
+    "predicted_bbox": [
+      0.050505050505050504,
+      0.12963267875888243,
+      0.12476757319286619,
+      0.010949186576429265
+    ],
+    "tokens_in_gold_bbox": "Corporate Bonds & Notes",
+    "is_value_present_as_string": "yes",
+    "different_format": "exact string present (occurs 1x on p.21, predicted on p.44)",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: exact string present (occurs 1x on p.21, predicted on p.44). Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 45,
+    "document_id": "long/real_oklahoma_unclaimed_2024",
+    "field_path": "owners[17043].locale",
+    "gold_value": "251 E HIGHWAY 33, B3",
+    "extracted_value": "251 E HIGHWAY 33, B3",
+    "gold_page": 39,
+    "predicted_page": 39,
+    "gold_bbox": [
+      0.44514,
+      0.34518,
+      0.09753,
+      0.00629
+    ],
+    "predicted_bbox": null,
+    "tokens_in_gold_bbox": "251 E HIGHWAY 33, B3",
+    "is_value_present_as_string": "yes",
+    "different_format": "repeated table cell entry",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: repeated table cell entry. Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 46,
+    "document_id": "long/real_oklahoma_unclaimed_2024",
+    "field_path": "owners[16037].locale",
+    "gold_value": "13504 STEEPLE CHASE CIR",
+    "extracted_value": "13504 STEEPLE CHASE CIR",
+    "gold_page": 37,
+    "predicted_page": 37,
+    "gold_bbox": [
+      0.29931,
+      0.11473,
+      0.10274,
+      0.00629
+    ],
+    "predicted_bbox": null,
+    "tokens_in_gold_bbox": "13504 STEEPLE CHASE",
+    "is_value_present_as_string": "yes",
+    "different_format": "partial string at bbox: \"13504 STEEPLE CHASE\" vs \"13504 STEEPLE CHASE CIR\"",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_OTHER",
+    "human_classification": "[SUB_OTHER] Value present as string: partial. Format: partial string at bbox: \"13504 STEEPLE CHASE\" vs \"13504 STEEPLE CHASE CIR\". Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 47,
+    "document_id": "long/sec_13f_0010_renaissance_technologies",
+    "field_path": "holdings[1480].voting_authority.none",
+    "gold_value": 0,
+    "extracted_value": "0",
+    "gold_page": 39,
+    "predicted_page": 39,
+    "gold_bbox": [
+      0.944699,
+      0.832546,
+      0.006164,
+      0.009527
+    ],
+    "predicted_bbox": [
+      0.901489,
+      0.830879,
+      0.006164,
+      0.012861
+    ],
+    "tokens_in_gold_bbox": "0",
+    "is_value_present_as_string": "yes",
+    "different_format": "exact string present (occurs 317x on p.39, predicted on p.39)",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: exact string present (occurs 317x on p.39, predicted on p.39). Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 48,
+    "document_id": "long/real_oklahoma_unclaimed_2024",
+    "field_path": "owners[10014].locale",
+    "gold_value": "4601 LAKE FRONT DRIVE",
+    "extracted_value": "4601 LAKE FRONT DRIVE",
+    "gold_page": 23,
+    "predicted_page": 23,
+    "gold_bbox": [
+      0.87847,
+      0.20835,
+      0.11015,
+      0.00629
+    ],
+    "predicted_bbox": null,
+    "tokens_in_gold_bbox": "4601 LAKE FRONT DRIVE",
+    "is_value_present_as_string": "yes",
+    "different_format": "repeated table cell entry",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: repeated table cell entry. Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 49,
+    "document_id": "long/real_ishares_iboxx_bond_etfs",
+    "field_path": "holdings[1828].asset_class",
+    "gold_value": "Corporate Bonds & Notes",
+    "extracted_value": "Corporate Bonds & Notes",
+    "gold_page": 21,
+    "predicted_page": 26,
+    "gold_bbox": [
+      0.05051,
+      0.12963,
+      0.12476,
+      0.01097
+    ],
+    "predicted_bbox": [
+      0.050505050505050504,
+      0.12963267875888243,
+      0.12476757319286619,
+      0.010949186576429265
+    ],
+    "tokens_in_gold_bbox": "Corporate Bonds & Notes",
+    "is_value_present_as_string": "yes",
+    "different_format": "exact string present (occurs 1x on p.21, predicted on p.26)",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_AMBIGUOUS_OCCURRENCE",
+    "human_classification": "[SUB_AMBIGUOUS_OCCURRENCE] Value present as string: yes. Format: exact string present (occurs 1x on p.21, predicted on p.26). Bbox correct: yes. Annotation error: no."
+  },
+  {
+    "sample_id": 50,
+    "document_id": "long/real_oklahoma_unclaimed_2024",
+    "field_path": "owners[24305].locale",
+    "gold_value": "3937 S NORFOLK AVE APT 3",
+    "extracted_value": "3937 S NORFOLK AVE APT 3",
+    "gold_page": 55,
+    "predicted_page": 55,
+    "gold_bbox": [
+      0.29931,
+      0.67337,
+      0.11472,
+      0.00629
+    ],
+    "predicted_bbox": null,
+    "tokens_in_gold_bbox": "3937 S NORFOLK AVE APT",
+    "is_value_present_as_string": "yes",
+    "different_format": "partial string at bbox: \"3937 S NORFOLK AVE APT\" vs \"3937 S NORFOLK AVE APT 3\"",
+    "is_derived_value": "no",
+    "is_gold_bbox_overlapping_correct_region": "yes",
+    "is_benchmark_annotation_error": "no",
+    "subclass": "SUB_OTHER",
+    "human_classification": "[SUB_OTHER] Value present as string: partial. Format: partial string at bbox: \"3937 S NORFOLK AVE APT\" vs \"3937 S NORFOLK AVE APT 3\". Bbox correct: yes. Annotation error: no."
+  }
+]

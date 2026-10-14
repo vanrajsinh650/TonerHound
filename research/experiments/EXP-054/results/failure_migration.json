@@ -1,0 +1,46 @@
+{
+  "experiment_id": "EXP-054",
+  "baseline_experiment": "EXP-053",
+  "total_failures_before": 103231,
+  "total_failures_after": 87042,
+  "net_rescued_vs_exp053": 16189,
+  "regressions": 0,
+  "failure_class_migration": {
+    "WRONG_ROW": {
+      "before": 42025,
+      "after": 27991,
+      "delta": -14034,
+      "description": "14034 WRONG_ROW failures resolved by fix_05 localized entity row tracking on OFAC"
+    },
+    "MALFORMED_BBOX": {
+      "before": 22505,
+      "after": 20350,
+      "delta": -2155,
+      "description": "2155 MALFORMED_BBOX failures resolved by fix_06 degenerate bbox repair across institutional holdings and schedules"
+    },
+    "INSUFFICIENT_IOU": {
+      "before": 31546,
+      "after": 31546,
+      "delta": 0,
+      "description": "Stable"
+    },
+    "PAGE_DRIFT": {
+      "before": 6271,
+      "after": 6271,
+      "delta": 0,
+      "description": "Targeted for subsequent multi-page cross-referencing experiments"
+    },
+    "ZERO_CANDIDATE": {
+      "before": 863,
+      "after": 863,
+      "delta": 0,
+      "description": "Stable"
+    },
+    "UNGRADEABLE_NO_VALUE": {
+      "before": 22,
+      "after": 22,
+      "delta": 0,
+      "description": "Empty/whitespace ground truth values"
+    }
+  }
+}

@@ -1,0 +1,855 @@
+{
+  "target_document": "long/real_ofac_ssi_full",
+  "extractor_engine": "liteparse",
+  "total_fields": 36303,
+  "metrics": {
+    "extractor_passes": 24365,
+    "tonerhound_passes": 8886,
+    "both_pass": 6041,
+    "both_fail": 9093,
+    "extractor_only_pass": 18324,
+    "tonerhound_only_pass": 2845
+  },
+  "samples": [
+    {
+      "field_path": "entities[0].aliases[0].name",
+      "gold_page": 1,
+      "gold_val": "AKTSIONERNOE OBSHCHESTVO 'AGROKREDIT-INFORM'",
+      "gold_bbox": [
+        0.63773,
+        0.2922,
+        0.18172,
+        0.00986
+      ],
+      "th_status": "WRONG_ROW",
+      "th_iou": 0.0,
+      "th_bbox": [
+        0.457749,
+        0.444824,
+        0.03917,
+        0.013311
+      ],
+      "ext_status": "INSUFFICIENT_IOU",
+      "ext_iou": 0.4991,
+      "ext_bbox": [
+        0.63773,
+        0.29219,
+        0.09084,
+        0.00986
+      ],
+      "ext_val": "AKTSIONERNOE"
+    },
+    {
+      "field_path": "entities[0].aliases[1].type",
+      "gold_page": 1,
+      "gold_val": "a.k.a.",
+      "gold_bbox": [
+        0.77232,
+        0.3083,
+        0.02797,
+        0.00986
+      ],
+      "th_status": "WRONG_ROW",
+      "th_iou": 0.0,
+      "th_bbox": [
+        0.488114,
+        0.444824,
+        0.023296,
+        0.013311
+      ],
+      "ext_status": "PASS",
+      "ext_iou": 0.9976,
+      "ext_bbox": [
+        0.77232,
+        0.30829,
+        0.02796,
+        0.00986
+      ],
+      "ext_val": "a.k.a."
+    },
+    {
+      "field_path": "entities[0].aliases[1].name",
+      "gold_page": 1,
+      "gold_val": "CLOSED JOINT-STOCK COMPANY 'AGROCREDIT-INFORM'",
+      "gold_bbox": [
+        0.80346,
+        0.3083,
+        0.04701,
+        0.00986
+      ],
+      "th_status": "WRONG_ROW",
+      "th_iou": 0.0,
+      "th_bbox": [
+        0.457749,
+        0.444824,
+        0.03917,
+        0.013311
+      ],
+      "ext_status": "PASS",
+      "ext_iou": 0.9978,
+      "ext_bbox": [
+        0.80346,
+        0.30829,
+        0.04702,
+        0.00986
+      ],
+      "ext_val": "CLOSED"
+    },
+    {
+      "field_path": "entities[0].addresses[0]",
+      "gold_page": 1,
+      "gold_val": "3 per. Gagarinski, Moscow 119034, Russia",
+      "gold_bbox": [
+        0.69516,
+        0.3386,
+        0.17838,
+        0.00986
+      ],
+      "th_status": "PASS",
+      "th_iou": 0.9989,
+      "th_bbox": [
+        0.695170583288654,
+        0.33859499536379417,
+        0.17837005814695672,
+        0.009860183253432742
+      ],
+      "ext_status": "INSUFFICIENT_IOU",
+      "ext_iou": 0.3237,
+      "ext_bbox": [
+        0.72695,
+        0.33859,
+        0.05782,
+        0.00986
+      ],
+      "ext_val": "Gagarinski,"
+    },
+    {
+      "field_path": "entities[0].addresses[1]",
+      "gold_page": 1,
+      "gold_val": "3 Gagarinsky Pereulok, Moscow, Russia",
+      "gold_bbox": [
+        0.67904,
+        0.35375,
+        0.1665,
+        0.00986
+      ],
+      "th_status": "PASS",
+      "th_iou": 0.942,
+      "th_bbox": [
+        0.6885715559417126,
+        0.35374654904760494,
+        0.15695394877514812,
+        0.009860106188841533
+      ],
+      "ext_status": "INSUFFICIENT_IOU",
+      "ext_iou": 0.3473,
+      "ext_bbox": [
+        0.68857,
+        0.35375,
+        0.05783,
+        0.00986
+      ],
+      "ext_val": "Gagarinsky"
+    },
+    {
+      "field_path": "entities[0].features[0].label",
+      "gold_page": 1,
+      "gold_val": "Executive Order 13662 Directive Determination -",
+      "gold_bbox": [
+        0.67904,
+        0.36985,
+        0.16459,
+        0.00986
+      ],
+      "th_status": "WRONG_ROW",
+      "th_iou": 0.0,
+      "th_bbox": [
+        0.436796,
+        0.444824,
+        0.044472,
+        0.013311
+      ],
+      "ext_status": "INSUFFICIENT_IOU",
+      "ext_iou": 0.3012,
+      "ext_bbox": [
+        0.67904,
+        0.36985,
+        0.04957,
+        0.00986
+      ],
+      "ext_val": "Executive"
+    },
+    {
+      "field_path": "entities[0].features[0].value",
+      "gold_page": 1,
+      "gold_val": "Subject to Directive 1",
+      "gold_bbox": [
+        0.71907,
+        0.385,
+        0.10804,
+        0.00986
+      ],
+      "th_status": "PASS",
+      "th_iou": 0.9709,
+      "th_bbox": [
+        0.7190709332235499,
+        0.38499654904760494,
+        0.11120201559627751,
+        0.009860106188841533
+      ],
+      "ext_status": "INSUFFICIENT_IOU",
+      "ext_iou": 0.4116,
+      "ext_bbox": [
+        0.7731,
+        0.385,
+        0.04447,
+        0.00986
+      ],
+      "ext_val": "Directive"
+    },
+    {
+      "field_path": "entities[0].features[1].label",
+      "gold_page": 1,
+      "gold_val": "Secondary sanctions risk:",
+      "gold_bbox": [
+        0.63773,
+        0.40015,
+        0.13028,
+        0.00986
+      ],
+      "th_status": "PASS",
+      "th_iou": 0.9995,
+      "th_bbox": [
+        0.6377336090686274,
+        0.40014806419912013,
+        0.1302676232032527,
+        0.009860106188841533
+      ],
+      "ext_status": "INSUFFICIENT_IOU",
+      "ext_iou": 0.4196,
+      "ext_bbox": [
+        0.63773,
+        0.40015,
+        0.05466,
+        0.00986
+      ],
+      "ext_val": "Secondary"
+    },
+    {
+      "field_path": "entities[0].features[1].value",
+      "gold_page": 1,
+      "gold_val": "Ukraine-/Russia-Related Sanctions Regulations, 31 CFR 589.201 and/or 589.209",
+      "gold_bbox": [
+        0.77119,
+        0.40015,
+        0.08513,
+        0.00986
+      ],
+      "th_status": "WRONG_ROW",
+      "th_iou": 0.0,
+      "th_bbox": [
+        0.428534,
+        0.444824,
+        0.044472,
+        0.013311
+      ],
+      "ext_status": "PASS",
+      "ext_iou": 0.9999,
+      "ext_bbox": [
+        0.77119,
+        0.40015,
+        0.08514,
+        0.00986
+      ],
+      "ext_val": "Ukraine-/Russia-"
+    },
+    {
+      "field_path": "entities[0].registration_documents[1].type",
+      "gold_page": 1,
+      "gold_val": "Tax ID No.",
+      "gold_bbox": [
+        0.72655,
+        0.44655,
+        0.05337,
+        0.00986
+      ],
+      "th_status": "PASS",
+      "th_iou": 0.7406,
+      "th_bbox": [
+        0.726546,
+        0.444824,
+        0.053363,
+        0.013311
+      ],
+      "ext_status": "INSUFFICIENT_IOU",
+      "ext_iou": 0.3333,
+      "ext_bbox": [
+        0.72655,
+        0.44655,
+        0.01779,
+        0.00986
+      ],
+      "ext_val": "Tax"
+    },
+    {
+      "field_path": "entities[0].registration_documents[2].type",
+      "gold_page": 1,
+      "gold_val": "Government Gazette Number",
+      "gold_bbox": [
+        0.63773,
+        0.4617,
+        0.14998,
+        0.00986
+      ],
+      "th_status": "PASS",
+      "th_iou": 0.7399,
+      "th_bbox": [
+        0.637734,
+        0.459976,
+        0.150134,
+        0.013311
+      ],
+      "ext_status": "INSUFFICIENT_IOU",
+      "ext_iou": 0.4194,
+      "ext_bbox": [
+        0.63773,
+        0.4617,
+        0.0629,
+        0.00986
+      ],
+      "ext_val": "Government"
+    },
+    {
+      "field_path": "entities[0].directives_comment",
+      "gold_page": 1,
+      "gold_val": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
+      "gold_bbox": [
+        0.8481,
+        0.4617,
+        0.01716,
+        0.00986
+      ],
+      "th_status": "WRONG_ROW",
+      "th_iou": 0.0,
+      "th_bbox": [
+        0.441274,
+        0.444824,
+        0.044488,
+        0.013311
+      ],
+      "ext_status": "PASS",
+      "ext_iou": 0.9902,
+      "ext_bbox": [
+        0.84811,
+        0.4617,
+        0.01731,
+        0.00986
+      ],
+      "ext_val": "For"
+    },
+    {
+      "field_path": "entities[0].linked_to[0]",
+      "gold_page": 1,
+      "gold_val": "JOINT STOCK COMPANY RUSSIAN AGRICULTURAL BANK",
+      "gold_bbox": [
+        0.63773,
+        0.53936,
+        0.18912,
+        0.00986
+      ],
+      "th_status": "WRONG_ROW",
+      "th_iou": 0.0,
+      "th_bbox": [
+        0.444199,
+        0.444824,
+        0.03917,
+        0.013311
+      ],
+      "ext_status": "INSUFFICIENT_IOU",
+      "ext_iou": 0.3007,
+      "ext_bbox": [
+        0.71609,
+        0.53935,
+        0.05695,
+        0.00986
+      ],
+      "ext_val": "COMPANY"
+    },
+    {
+      "field_path": "entities[1].aliases[0].type",
+      "gold_page": 1,
+      "gold_val": "a.k.a.",
+      "gold_bbox": [
+        0.81337,
+        0.56966,
+        0.02797,
+        0.00986
+      ],
+      "th_status": "WRONG_ROW",
+      "th_iou": 0.0,
+      "th_bbox": [
+        0.787054,
+        0.691036,
+        0.023296,
+        0.013311
+      ],
+      "ext_status": "PASS",
+      "ext_iou": 0.8795,
+      "ext_bbox": [
+        0.80956,
+        0.56966,
+        0.03176,
+        0.00986
+      ],
+      "ext_val": "(a.k.a."
+    },
+    {
+      "field_path": "entities[1].aliases[0].name",
+      "gold_page": 1,
+      "gold_val": "LIMITED LIABILITY COMPANY ACTIVE BUSINESS CONSULT",
+      "gold_bbox": [
+        0.63773,
+        0.58481,
+        0.20397,
+        0.00986
+      ],
+      "th_status": "WRONG_ROW",
+      "th_iou": 0.0,
+      "th_bbox": [
+        0.457749,
+        0.691036,
+        0.03917,
+        0.013311
+      ],
+      "ext_status": "INSUFFICIENT_IOU",
+      "ext_iou": 0.2792,
+      "ext_bbox": [
+        0.7411,
+        0.58481,
+        0.05695,
+        0.00986
+      ],
+      "ext_val": "COMPANY"
+    },
+    {
+      "field_path": "entities[1].aliases[1].type",
+      "gold_page": 1,
+      "gold_val": "a.k.a.",
+      "gold_bbox": [
+        0.7576,
+        0.60091,
+        0.02797,
+        0.00986
+      ],
+      "th_status": "WRONG_ROW",
+      "th_iou": 0.0,
+      "th_bbox": [
+        0.787054,
+        0.691036,
+        0.023296,
+        0.013311
+      ],
+      "ext_status": "PASS",
+      "ext_iou": 0.9996,
+      "ext_bbox": [
+        0.7576,
+        0.60091,
+        0.02796,
+        0.00986
+      ],
+      "ext_val": "a.k.a."
+    },
+    {
+      "field_path": "entities[1].aliases[1].name",
+      "gold_page": 1,
+      "gold_val": "LIMITED LIABILITY COMPANY ACTIVEBUSINESSCOLLECTION",
+      "gold_bbox": [
+        0.78874,
+        0.60091,
+        0.04511,
+        0.00986
+      ],
+      "th_status": "WRONG_ROW",
+      "th_iou": 0.0,
+      "th_bbox": [
+        0.457749,
+        0.691036,
+        0.03917,
+        0.013311
+      ],
+      "ext_status": "PASS",
+      "ext_iou": 0.9998,
+      "ext_bbox": [
+        0.78875,
+        0.60091,
+        0.0451,
+        0.00986
+      ],
+      "ext_val": "LIMITED"
+    },
+    {
+      "field_path": "entities[1].aliases[2].type",
+      "gold_page": 1,
+      "gold_val": "a.k.a.",
+      "gold_bbox": [
+        0.81627,
+        0.63121,
+        0.02796,
+        0.00986
+      ],
+      "th_status": "WRONG_ROW",
+      "th_iou": 0.0,
+      "th_bbox": [
+        0.787054,
+        0.691036,
+        0.023296,
+        0.013311
+      ],
+      "ext_status": "PASS",
+      "ext_iou": 1.0,
+      "ext_bbox": [
+        0.81627,
+        0.63121,
+        0.02796,
+        0.00986
+      ],
+      "ext_val": "a.k.a."
+    },
+    {
+      "field_path": "entities[1].aliases[2].name",
+      "gold_page": 1,
+      "gold_val": "LLC ACTIVEBUSINESSCOLLECTION",
+      "gold_bbox": [
+        0.84742,
+        0.63121,
+        0.02096,
+        0.00986
+      ],
+      "th_status": "WRONG_ROW",
+      "th_iou": 0.0,
+      "th_bbox": [
+        0.457749,
+        0.691036,
+        0.03917,
+        0.013311
+      ],
+      "ext_status": "PASS",
+      "ext_iou": 0.9995,
+      "ext_bbox": [
+        0.84741,
+        0.63121,
+        0.02097,
+        0.00986
+      ],
+      "ext_val": "LLC"
+    },
+    {
+      "field_path": "entities[1].aliases[3].type",
+      "gold_page": 1,
+      "gold_val": "a.k.a.",
+      "gold_bbox": [
+        0.81627,
+        0.64731,
+        0.02796,
+        0.00986
+      ],
+      "th_status": "WRONG_ROW",
+      "th_iou": 0.0,
+      "th_bbox": [
+        0.787054,
+        0.691036,
+        0.023296,
+        0.013311
+      ],
+      "ext_status": "PASS",
+      "ext_iou": 1.0,
+      "ext_bbox": [
+        0.81627,
+        0.64731,
+        0.02796,
+        0.00986
+      ],
+      "ext_val": "a.k.a."
+    },
+    {
+      "field_path": "entities[1].aliases[3].name",
+      "gold_page": 1,
+      "gold_val": "OBSHCHESTVO S OGRANICHENNOI OTVETSTVENNOSTYU AKTIVBIZNESKOLLEKSHN",
+      "gold_bbox": [
+        0.63773,
+        0.66246,
+        0.19949,
+        0.00986
+      ],
+      "th_status": "WRONG_ROW",
+      "th_iou": 0.0,
+      "th_bbox": [
+        0.457749,
+        0.691036,
+        0.03917,
+        0.013311
+      ],
+      "ext_status": "INSUFFICIENT_IOU",
+      "ext_iou": 0.4904,
+      "ext_bbox": [
+        0.73939,
+        0.66246,
+        0.09782,
+        0.00986
+      ],
+      "ext_val": "OGRANICHENNOI"
+    },
+    {
+      "field_path": "entities[1].aliases[4].name",
+      "gold_page": 1,
+      "gold_val": "ABC LLC",
+      "gold_bbox": [
+        0.82225,
+        0.69277,
+        0.04766,
+        0.00986
+      ],
+      "th_status": "PASS",
+      "th_iou": 0.6479,
+      "th_bbox": [
+        0.8239,
+        0.691036,
+        0.039934,
+        0.013311
+      ],
+      "ext_status": "MISS",
+      "ext_iou": 0.0,
+      "ext_bbox": [
+        0.8362,
+        0.18519,
+        0.00636,
+        0.00986
+      ],
+      "ext_val": "a"
+    },
+    {
+      "field_path": "entities[1].addresses[0]",
+      "gold_page": 1,
+      "gold_val": "19 Vavilova St., Moscow 117997, Russia",
+      "gold_bbox": [
+        0.63773,
+        0.70886,
+        0.20549,
+        0.00986
+      ],
+      "th_status": "PASS",
+      "th_iou": 0.6338,
+      "th_bbox": [
+        0.637734,
+        0.707135,
+        0.167355,
+        0.013311
+      ],
+      "ext_status": "INSUFFICIENT_IOU",
+      "ext_iou": 0.2062,
+      "ext_bbox": [
+        0.65363,
+        0.70886,
+        0.04237,
+        0.00986
+      ],
+      "ext_val": "Vavilova"
+    },
+    {
+      "field_path": "entities[1].features[0].value",
+      "gold_page": 1,
+      "gold_val": "Subject to Directive 1",
+      "gold_bbox": [
+        0.64472,
+        0.73917,
+        0.10802,
+        0.00986
+      ],
+      "th_status": "WRONG_ROW",
+      "th_iou": 0.0,
+      "th_bbox": [
+        0.446108,
+        0.722286,
+        0.121137,
+        0.013311
+      ],
+      "ext_status": "INSUFFICIENT_IOU",
+      "ext_iou": 0.4111,
+      "ext_bbox": [
+        0.69874,
+        0.73916,
+        0.04447,
+        0.00986
+      ],
+      "ext_val": "Directive"
+    },
+    {
+      "field_path": "entities[1].features[1].label",
+      "gold_page": 1,
+      "gold_val": "Secondary sanctions risk:",
+      "gold_bbox": [
+        0.7591,
+        0.73917,
+        0.10614,
+        0.00986
+      ],
+      "th_status": "WRONG_ROW",
+      "th_iou": 0.0,
+      "th_bbox": [
+        0.436796,
+        0.691036,
+        0.044472,
+        0.013311
+      ],
+      "ext_status": "PASS",
+      "ext_iou": 0.5142,
+      "ext_bbox": [
+        0.75911,
+        0.73916,
+        0.05466,
+        0.00986
+      ],
+      "ext_val": "Secondary"
+    },
+    {
+      "field_path": "entities[1].features[1].value",
+      "gold_page": 1,
+      "gold_val": "Ukraine-/Russia-Related Sanctions Regulations, 31 CFR 589.201 and/or 589.209",
+      "gold_bbox": [
+        0.66186,
+        0.75432,
+        0.17794,
+        0.00986
+      ],
+      "th_status": "WRONG_ROW",
+      "th_iou": 0.0,
+      "th_bbox": [
+        0.5688237707599316,
+        0.770413177181976,
+        0.3028185975317861,
+        0.009860106188841589
+      ],
+      "ext_status": "PASS",
+      "ext_iou": 0.6987,
+      "ext_bbox": [
+        0.66187,
+        0.75431,
+        0.12455,
+        0.00986
+      ],
+      "ext_val": "Ukraine-/Russia-Related"
+    },
+    {
+      "field_path": "entities[1].features[2].label",
+      "gold_page": 1,
+      "gold_val": "Secondary sanctions risk:",
+      "gold_bbox": [
+        0.65616,
+        0.78557,
+        0.13028,
+        0.00986
+      ],
+      "th_status": "PASS",
+      "th_iou": 0.8396,
+      "th_bbox": [
+        0.6566772959590738,
+        0.7870313663675328,
+        0.12875839931512967,
+        0.008375803629557255
+      ],
+      "ext_status": "INSUFFICIENT_IOU",
+      "ext_iou": 0.419,
+      "ext_bbox": [
+        0.65616,
+        0.78556,
+        0.05466,
+        0.00986
+      ],
+      "ext_val": "Secondary"
+    },
+    {
+      "field_path": "entities[1].features[2].value",
+      "gold_page": 1,
+      "gold_val": "See Section 11 of Executive Order 14024.",
+      "gold_bbox": [
+        0.78962,
+        0.78557,
+        0.08941,
+        0.00986
+      ],
+      "th_status": "WRONG_ROW",
+      "th_iou": 0.0,
+      "th_bbox": [
+        0.428534,
+        0.691036,
+        0.044472,
+        0.013311
+      ],
+      "ext_status": "INSUFFICIENT_IOU",
+      "ext_iou": 0.426,
+      "ext_bbox": [
+        0.81314,
+        0.78556,
+        0.03814,
+        0.00986
+      ],
+      "ext_val": "Section"
+    },
+    {
+      "field_path": "entities[1].registration_documents[0].type",
+      "gold_page": 1,
+      "gold_val": "Registration ID",
+      "gold_bbox": [
+        0.76422,
+        0.80072,
+        0.0756,
+        0.00986
+      ],
+      "th_status": "WRONG_ROW",
+      "th_iou": 0.0,
+      "th_bbox": [
+        0.488114,
+        0.691036,
+        0.027955,
+        0.013311
+      ],
+      "ext_status": "PASS",
+      "ext_iou": 0.8068,
+      "ext_bbox": [
+        0.76421,
+        0.80072,
+        0.06101,
+        0.00986
+      ],
+      "ext_val": "Registration"
+    },
+    {
+      "field_path": "entities[1].registration_documents[0].country",
+      "gold_page": 1,
+      "gold_val": "Russia",
+      "gold_bbox": [
+        0.72654,
+        0.81587,
+        0.03495,
+        0.00986
+      ],
+      "th_status": "WRONG_ROW",
+      "th_iou": 0.0,
+      "th_bbox": [
+        0.808275,
+        0.707135,
+        0.032671,
+        0.013311
+      ],
+      "ext_status": "PASS",
+      "ext_iou": 0.7643,
+      "ext_bbox": [
+        0.72273,
+        0.81587,
+        0.04573,
+        0.00986
+      ],
+      "ext_val": "(Russia);"
+    }
+  ]
+}

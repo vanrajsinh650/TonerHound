@@ -1,0 +1,371 @@
+document_id,status,gradeable,passing,failing,word_f1,page_f1,precision,recall,family,top_pattern_1,top_pattern_2,top_pattern_3,top_class_1,top_class_2,top_class_3
+long/dd1155_schedule_continuation_0011,unextractable,126,0,126,,26.8293,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+long/dd1155_schedule_continuation_0012,skipped,36,0,36,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+long/gov_clin_schedule_0005,unextractable,160,0,160,,50.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+long/gov_clin_schedule_0031,unextractable,280,0,280,,0.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+long/real_credit_strategies_full,evaluated,5049,4029,1020,79.3396,90.5086,79.3396,79.3396,ungrouped,holdings[].source_page,holdings[].reference_rate,holdings[].security_name,INSUFFICIENT_IOU,WRONG_ROW,MALFORMED_BBOX
+long/real_freer_register_full,evaluated,28623,28295,328,94.1000,96.6717,94.1893,92.9882,ungrouped,checks[].line_no,checks[].source_page,checks[].check_date,INSUFFICIENT_IOU,MALFORMED_BBOX,PAGE_DRIFT
+long/real_ftx_full,evaluated,26583,25971,612,96.7197,99.8037,96.7197,96.7197,Bankruptcy Creditor Schedules,creditors[].source_page,creditors[].address_1,creditors[].country,INSUFFICIENT_IOU,MALFORMED_BBOX,PAGE_DRIFT
+long/real_ftx_full_corrupted,evaluated,26583,13922,12661,53.4778,99.9971,53.4778,53.4778,Bankruptcy Creditor Schedules,creditors[].source_page,creditors[].name,creditors[].address_1,INSUFFICIENT_IOU,MALFORMED_BBOX,WRONG_ROW
+long/real_imedia_full,evaluated,39446,37159,2287,94.0247,99.2095,94.0247,94.0247,Bankruptcy Creditor Schedules,creditors[].source_page,creditors[].address_1,creditors[].city,INSUFFICIENT_IOU,MALFORMED_BBOX,PAGE_DRIFT
+long/real_imedia_full_corrupted,evaluated,39446,375,39071,0.9692,95.9090,0.9700,0.9684,Bankruptcy Creditor Schedules,creditors[].source_page,creditors[].creditor_name,creditors[].address_1,INSUFFICIENT_IOU,WRONG_ROW,MALFORMED_BBOX
+long/real_ishares_iboxx_bond_etfs,evaluated,41525,36164,5361,99.0968,96.8294,99.0968,99.0968,ungrouped,holdings[].fund_ticker,holdings[].source_page,holdings[].marks[],INSUFFICIENT_IOU,WRONG_ROW,MALFORMED_BBOX
+long/real_ofac_ssi_full,evaluated,36303,8886,27417,26.7771,91.6539,26.7771,26.7771,OFAC Sanctions Entities,entities[].aliases[],entities[].features[],entities[].registration_documents[],WRONG_ROW,INSUFFICIENT_IOU,PAGE_DRIFT
+long/real_oklahoma_unclaimed_2024,skipped,80177,0,80177,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+long/real_sm0801_ae_full,evaluated,10954,7142,3812,59.5167,95.7745,59.7881,59.2478,ungrouped,adverse_events[].source_page,adverse_events[].action,adverse_events[].relationship,INSUFFICIENT_IOU,WRONG_ROW,MALFORMED_BBOX
+long/real_sm0801_eco_full,evaluated,6657,6466,191,92.4961,97.5815,92.5030,92.4891,ungrouped,measurements[].source_page,measurements[].study_product,measurements[].eco_ppm,INSUFFICIENT_IOU,MALFORMED_BBOX,WRONG_ROW
+long/real_sm0801_eco_full_corrupted,evaluated,6657,4923,1734,75.7268,91.4947,77.5887,73.9522,ungrouped,measurements[].source_page,measurements[].study_product,measurements[].subject_number,MALFORMED_BBOX,WRONG_ROW,PAGE_DRIFT
+long/sec_13f_0010_renaissance_technologies,evaluated,31707,24363,7344,93.0145,98.1381,93.0145,93.0145,SEC Form 13F Holdings Report,holdings[].voting_authority,holdings[].name_of_issuer,holdings[].title_of_class,PAGE_DRIFT,INSUFFICIENT_IOU,ZERO_CANDIDATE
+long/sec_13f_0026_brown_brothers_harriman,evaluated,17068,14558,2510,84.7457,100.0000,84.7457,84.7457,SEC Form 13F Holdings Report,holdings[].title_of_class,holdings[].voting_authority,holdings[].sh_prn,WRONG_ROW,INSUFFICIENT_IOU,ZERO_CANDIDATE
+long/sf1449_supplies_services_0042,skipped,47,0,47,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+long/sf1449_supplies_services_0059,unextractable,567,0,567,,7.1429,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+medium/13f__leonteq_securities_2025q4,evaluated,12326,12309,17,99.8458,100.0000,99.8458,99.8458,SEC Form 13F Holdings Report,holdings[].title_of_class,holdings[].shares_or_principal_type,holdings,INSUFFICIENT_IOU,ZERO_CANDIDATE,none
+medium/13f__nalls_sherbakoff_2025q4,evaluated,4257,4077,180,95.7472,100.0000,95.7472,95.7472,SEC Form 13F Holdings Report,holdings[].title_of_class,holdings[].issuer_name,holdings,INSUFFICIENT_IOU,ZERO_CANDIDATE,none
+medium/1G1PC5SB6E7111015_professional_valuation,unextractable,337,0,337,,75.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+medium/1G1PC5SB6E7111015_professional_valuation_corrupted,unextractable,337,0,337,,75.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+medium/arif-2023,evaluated,190,116,74,62.7027,85.4054,64.4444,61.0526,IRS Form 1040 / Individual Tax Return,line_items,schedule_e.partnerships_s_corps[],schedule_e.estates_trusts[],WRONG_ROW,PAGE_DRIFT,INSUFFICIENT_IOU
+medium/baker_hughes_earnings_deck_q4fy25,unextractable,21,0,21,,50.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+medium/bar-lev-2021,evaluated,268,132,136,50.5747,87.4046,51.9685,49.2537,IRS Form 1040 / Individual Tax Return,line_items,form_1116.foreign_taxes[],form_8582.part_viii_allowed_losses[],WRONG_ROW,INSUFFICIENT_IOU,PAGE_DRIFT
+medium/bar-lev-2022,evaluated,245,129,116,54.2797,81.6667,55.5556,53.0612,IRS Form 1040 / Individual Tax Return,form_1116.foreign_taxes[],line_items,form_1116.countries[],WRONG_ROW,PAGE_DRIFT,INSUFFICIENT_IOU
+medium/bar-lev-2023,evaluated,236,127,109,54.6237,85.2248,55.4585,53.8136,IRS Form 1040 / Individual Tax Return,line_items,schedule_e.properties[],form_1116.foreign_taxes[],WRONG_ROW,PAGE_DRIFT,INSUFFICIENT_IOU
+medium/bar-lev-2024,evaluated,236,109,127,47.0842,83.3693,48.0176,46.1864,IRS Form 1040 / Individual Tax Return,line_items,form_1116.foreign_taxes[],schedule_e.properties[],WRONG_ROW,PAGE_DRIFT,INSUFFICIENT_IOU
+medium/becerra-2021,evaluated,435,165,270,41.4573,66.0804,45.7064,37.9310,IRS Form 1040 / Individual Tax Return,schedule_e.properties[],form_1116.countries[],line_items,PAGE_DRIFT,ZERO_CANDIDATE,WRONG_ROW
+medium/becerra-2022,evaluated,481,211,270,48.1818,71.2206,53.1328,44.0748,IRS Form 1040 / Individual Tax Return,schedule_e.properties[],form_8949.part2_long_term_transactions[],form_1116.countries[],PAGE_DRIFT,ZERO_CANDIDATE,WRONG_ROW
+medium/becerra-2023,evaluated,431,221,210,55.9598,76.6917,60.9290,51.7401,IRS Form 1040 / Individual Tax Return,schedule_e.properties[],form_8949.part2_long_term_transactions[],form_1116.countries[],ZERO_CANDIDATE,PAGE_DRIFT,WRONG_ROW
+medium/becerra-2024,evaluated,339,141,198,46.3816,69.7368,52.4164,41.5929,IRS Form 1040 / Individual Tax Return,schedule_e.properties[],schedule_c.other_expenses[],form_1116.countries[],ZERO_CANDIDATE,PAGE_DRIFT,WRONG_ROW
+medium/bianco-2021,evaluated,98,64,34,67.3684,89.4737,69.5652,65.3061,ungrouped,line_items,spouse_last_name,presidential_campaign_you_box,WRONG_ROW,PAGE_DRIFT,ZERO_CANDIDATE
+medium/bianco-2022,evaluated,112,69,43,64.7887,84.5070,68.3168,61.6071,ungrouped,line_items,presidential_campaign_spouse_box,filing_status,WRONG_ROW,ZERO_CANDIDATE,PAGE_DRIFT
+medium/byline_bancorp_investor_deck_q2_2023,unextractable,15,0,15,,0.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+medium/cabrera-2021,evaluated,207,104,103,52.9262,79.3893,55.9140,50.2415,IRS Form 1040 / Individual Tax Return,schedule_e.properties[],line_items,schedule_e.partnerships_s_corps[],WRONG_ROW,PAGE_DRIFT,ZERO_CANDIDATE
+medium/cabrera-2022,evaluated,255,104,151,43.6975,63.0252,47.0588,40.7843,IRS Form 1040 / Individual Tax Return,schedule_e.properties[],line_items,form_8283.section_a_rows[],PAGE_DRIFT,ZERO_CANDIDATE,WRONG_ROW
+medium/cabrera-2023,evaluated,187,67,120,38.8406,68.9855,42.4051,35.8289,IRS Form 1040 / Individual Tax Return,schedule_e.properties[],line_items,schedule_e.partnerships_s_corps[],PAGE_DRIFT,WRONG_ROW,ZERO_CANDIDATE
+medium/ccc_online_0003_geico_ford_crown_victoria,unextractable,315,0,315,,100.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+medium/ccc_online_0003_geico_ford_crown_victoria_corrupted,unextractable,315,0,315,,50.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+medium/ccc_online_0004_liberty_dodge_journey,unextractable,189,0,189,,100.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+medium/ccc_online_0004_liberty_dodge_journey_corrupted,unextractable,189,0,189,,50.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+medium/ccc_online_0008_state_farm_genesis_gv80,unextractable,270,0,270,,57.1429,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+medium/ccc_online_0008_state_farm_genesis_gv80_corrupted,unextractable,270,0,270,,28.5714,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+medium/ccc_online_0009_travelers_ford_f150,unextractable,147,0,147,,100.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+medium/ccc_online_0009_travelers_ford_f150_corrupted,unextractable,147,0,147,,100.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+medium/ccc_online_0010_travelers_ford_explorer,unextractable,201,0,201,,100.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+medium/ccc_online_0010_travelers_ford_explorer_corrupted,unextractable,201,0,201,,100.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+medium/ccc_online_0011_infinity_toyota_tacoma,unextractable,221,0,221,,50.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+medium/ccc_online_0011_infinity_toyota_tacoma_corrupted,unextractable,221,0,221,,50.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+medium/ccc_online_0012_chubb_dodge_durango,unextractable,126,0,126,,100.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+medium/ccc_online_0012_chubb_dodge_durango_corrupted,unextractable,126,0,126,,0.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+medium/coreweave_earnings_deck_q4fy25,unextractable,15,0,15,,85.7143,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+medium/crh_results_deck_q4fy25,unextractable,24,0,24,,88.8889,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+medium/dd1155_schedule_continuation_0007,skipped,12,0,12,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+medium/erie_county_2017_single_audit,skipped,1516,0,1516,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+medium/gov_clin_schedule_0033,unextractable,112,0,112,,100.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+medium/gov_clin_schedule_0035,skipped,16,0,16,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+medium/gov_clin_schedule_0038,skipped,88,0,88,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+medium/gsa_mas_it_labor_0003,skipped,874,0,874,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+medium/gsa_mas_it_labor_0005,skipped,654,0,654,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+medium/gsa_mas_it_labor_0006,skipped,164,0,164,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+medium/gsa_mas_it_labor_0007,skipped,264,0,264,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+medium/gsa_mas_it_labor_0008,skipped,484,0,484,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+medium/gsa_mas_it_labor_0010,skipped,34,0,34,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+medium/gsa_mas_it_labor_0011,skipped,1064,0,1064,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+medium/gsa_mas_it_labor_0014,skipped,154,0,154,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+medium/gsa_mas_it_labor_0016,skipped,394,0,394,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+medium/gsa_mas_it_labor_0018,skipped,784,0,784,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+medium/gsa_mas_it_labor_0019,skipped,984,0,984,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+medium/hpe_earnings_deck_q4fy25,unextractable,30,0,30,,22.2222,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+medium/jackson_college_2024_federal_awards_audit,skipped,92,0,92,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+medium/nport__advisors_inner_circle_fund,evaluated,3577,3576,1,100.0000,100.0000,100.0000,100.0000,SEC Form N-PORT Portfolio Investments,holdings,none,none,ZERO_CANDIDATE,none,none
+medium/nport__dunham_funds,evaluated,8767,8513,254,95.8809,98.4714,95.9028,95.8590,SEC Form N-PORT Portfolio Investments,holdings[].investment_country,holdings[].payoff_profile,holdings[].issuer_lei,INSUFFICIENT_IOU,WRONG_ROW,PAGE_DRIFT
+medium/nport__sei_etf_2025q4,evaluated,5048,5005,43,98.9002,99.5938,98.9100,98.8904,SEC Form N-PORT Portfolio Investments,holdings[].issuer_name,holdings[].security_title,holdings[].fair_value_level,INSUFFICIENT_IOU,WRONG_ROW,PAGE_DRIFT
+medium/q4-2025-earnings-press-release,unextractable,15,0,15,,0.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+medium/real_bbb_service_list,evaluated,1207,875,332,79.3203,99.9657,79.3532,79.2875,ungrouped,parties[].source_page,parties[].address,parties[].name,INSUFFICIENT_IOU,WRONG_ROW,MALFORMED_BBOX
+medium/real_bbb_service_list_corrupted,evaluated,1207,245,962,30.5843,99.2104,30.5970,30.5717,ungrouped,parties[].source_page,parties[].method_of_service,parties[].address,INSUFFICIENT_IOU,WRONG_ROW,MALFORMED_BBOX
+medium/real_blackrock_muni_bmn,evaluated,1480,1346,134,95.7754,97.7653,95.7754,95.7754,ungrouped,holdings[].source_page,holdings[].security_name,state_subtotals[].state,INSUFFICIENT_IOU,MALFORMED_BBOX,WRONG_ROW
+medium/real_blackrock_schedule_full,evaluated,1648,1237,411,90.1235,100.0000,90.1235,90.1235,ungrouped,holdings[].source_page,holdings[].security_name,holdings[].footnotes[],INSUFFICIENT_IOU,WRONG_ROW,MALFORMED_BBOX
+medium/real_cooke_co_tx_2024,evaluated,4292,4286,6,96.5111,96.8377,99.7761,93.4529,ungrouped,checks[].source_page,checks[].line_items[],period_end,INSUFFICIENT_IOU,MALFORMED_BBOX,ZERO_CANDIDATE
+medium/real_dcd_sumf_full,evaluated,419,217,202,99.7613,100.0000,99.7613,99.7613,ungrouped,facts[].source_page,facts[].text,court,INSUFFICIENT_IOU,MALFORMED_BBOX,WRONG_ROW
+medium/real_dcd_sumf_full_corrupted,evaluated,419,205,214,94.1035,96.1722,94.9029,93.3174,ungrouped,facts[].source_page,facts[].text,facts[].fact_number,INSUFFICIENT_IOU,MALFORMED_BBOX,WRONG_ROW
+medium/real_enotes_deviations,evaluated,1018,963,55,89.2927,98.7013,89.2927,89.2927,ungrouped,communications[].comment_index,communications[].source_page,deviation_entries[].source_page,INSUFFICIENT_IOU,MALFORMED_BBOX,PAGE_DRIFT
+medium/real_enotes_deviations_corrupted,evaluated,1018,704,314,72.5307,93.7799,72.5664,72.4951,ungrouped,communications[].comment_index,communications[].source_page,communications[].author,INSUFFICIENT_IOU,WRONG_ROW,MALFORMED_BBOX
+medium/real_fidelity_northstar,evaluated,7753,7461,292,67.7350,75.8028,67.7350,67.7350,ungrouped,holdings[].source_page,holdings[].sector,holdings[].country_percent,INSUFFICIENT_IOU,WRONG_ROW,MALFORMED_BBOX
+medium/real_franklin_sep_2025,evaluated,2557,2539,18,100.0000,100.0000,100.0000,100.0000,ungrouped,checks[].source_page,checks[].description,none,INSUFFICIENT_IOU,MALFORMED_BBOX,none
+medium/real_penn_hills_pa_2023,evaluated,3169,3054,115,95.0348,96.8016,97.4784,92.7106,ungrouped,checks[].source_page,checks[].lines[],checks[].vendor_name,INSUFFICIENT_IOU,WRONG_ROW,PAGE_DRIFT
+medium/real_pueblo_oct_2025,evaluated,3757,3757,0,100.0000,100.0000,100.0000,100.0000,ungrouped,checks[].source_page,none,none,INSUFFICIENT_IOU,MALFORMED_BBOX,none
+medium/real_sm0801_dispositions_full,evaluated,1147,1146,1,100.0000,100.0000,100.0000,100.0000,"Invoices, Purchase Orders & Receipts",dispositions[].source_page,dispositions[].specify,none,INSUFFICIENT_IOU,none,none
+medium/real_sm0801_dispositions_full_corrupted,evaluated,1147,1131,16,98.8646,99.1049,99.0376,98.6922,"Invoices, Purchase Orders & Receipts",dispositions[].source_page,dispositions[].study_day,dispositions[].status,INSUFFICIENT_IOU,MALFORMED_BBOX,PAGE_DRIFT
+medium/real_vg_divappr_full,evaluated,2388,2386,2,99.9790,99.9816,100.0000,99.9581,ungrouped,holdings[].source_page,holdings[].group_percent,fund_name,MALFORMED_BBOX,INSUFFICIENT_IOU,ZERO_CANDIDATE
+medium/real_vg_divgrowth_full,evaluated,390,381,9,100.0000,90.0901,100.0000,100.0000,ungrouped,holdings[].source_page,holdings[].security_name,fund_name,PAGE_DRIFT,MALFORMED_BBOX,INSUFFICIENT_IOU
+medium/real_vg_equity_income_full,evaluated,1496,1494,2,100.0000,100.0000,100.0000,100.0000,ungrouped,holdings[].source_page,holdings[].security_name,none,MALFORMED_BBOX,INSUFFICIENT_IOU,none
+medium/real_vg_esg_full,evaluated,283,281,2,99.4595,87.8357,99.6390,99.2806,ungrouped,holdings[].source_page,holdings[].inline_cost_thousands,fund_name,PAGE_DRIFT,INSUFFICIENT_IOU,MALFORMED_BBOX
+medium/real_vg_gcc_full,evaluated,620,614,6,99.8331,100.0000,99.8331,99.8331,ungrouped,holdings[].source_page,holdings[].marks[],holdings[].inline_cost_thousands,MALFORMED_BBOX,INSUFFICIENT_IOU,PAGE_DRIFT
+medium/real_vg_healthcare_full,evaluated,770,739,31,100.0000,88.1773,100.0000,100.0000,ungrouped,holdings[].source_page,holdings[].marks[],holdings[].security_name,PAGE_DRIFT,INSUFFICIENT_IOU,none
+medium/real_vg_megacap_full,evaluated,451,451,0,99.8822,99.8968,100.0000,99.7647,ungrouped,holdings[].source_page,none,none,MALFORMED_BBOX,none,none
+medium/real_vg_primecap_full,evaluated,1318,1314,4,100.0000,100.0000,100.0000,100.0000,ungrouped,holdings[].source_page,holdings[].marks[],none,MALFORMED_BBOX,INSUFFICIENT_IOU,none
+medium/real_vg_reit2_full,evaluated,1059,1051,8,100.0000,92.6829,99.9036,99.5197,ungrouped,holdings[].source_page,holdings[].group_percent,holdings[].marks[],PAGE_DRIFT,MALFORMED_BBOX,WRONG_ROW
+medium/real_vg_reit_full,evaluated,1078,1069,9,99.9051,100.0000,100.0000,99.8104,ungrouped,holdings[].source_page,holdings[].marks[],holdings[].group_percent,MALFORMED_BBOX,INSUFFICIENT_IOU,PAGE_DRIFT
+medium/real_wright_co_mn,evaluated,5065,3869,1196,69.0747,77.8789,69.2460,68.9042,ungrouped,line_items[].fund_number,line_items[].source_page,line_items[].fund_name,PAGE_DRIFT,INSUFFICIENT_IOU,WRONG_ROW
+medium/sched_i__akron_community_foundation_ty2024,evaluated,3353,3335,18,99.4628,99.8508,99.4925,99.4332,IRS Form 990 Schedule I,grants[].zip_code,grants[].irc_section,grants,WRONG_ROW,PAGE_DRIFT,INSUFFICIENT_IOU
+medium/sched_i__united_way_worldwide_ty2024,evaluated,2097,2093,4,100.0000,100.0000,99.6183,99.6183,IRS Form 990 Schedule I,grants[].zip_code,grants,none,WRONG_ROW,ZERO_CANDIDATE,INSUFFICIENT_IOU
+medium/schwab_dana_jones_2012,skipped,352,0,352,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+medium/sec_13f_0031_loomis_sayles,evaluated,12066,11415,651,87.6939,94.7123,87.6939,87.6939,SEC Form 13F Holdings Report,holdings[].name_of_issuer,holdings[].voting_authority,holdings[].title_of_class,INSUFFICIENT_IOU,WRONG_ROW,PAGE_DRIFT
+medium/sf1449_supplies_services_0003,skipped,134,0,134,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+medium/sf1449_supplies_services_0046,skipped,6,0,6,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+medium/sf1449_supplies_services_0047,skipped,86,0,86,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+medium/smfg-kessan-tanshin-2024-ja,unextractable,30,0,30,,66.6667,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+medium/sunoco_investor_deck_march_2026,unextractable,15,0,15,,0.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+medium/synchrony_investor_deck_q1_2026,unextractable,15,0,15,,66.6667,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+medium/sysco_earnings_deck_q2fy26,unextractable,30,0,30,,0.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+medium/transunion_earnings_deck_q4fy25,skipped,21,0,21,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+medium/united_way_san_antonio_fy23_single_audit,skipped,244,0,244,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+medium/veralto_earnings_deck_q4fy25,unextractable,21,0,21,,0.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+short/00581-2011-p0050,evaluated,30,19,11,66.6667,100.0000,70.3704,63.3333,SEC Form N-SAR Semi-Annual Reports,box_14_self_employment_earnings[].code,is_general_partner,loss_share_beginning,WRONG_ROW,INSUFFICIENT_IOU,MALFORMED_BBOX
+short/00581-2011-p0052,evaluated,32,23,9,73.0159,100.0000,74.1935,71.8750,SEC Form N-SAR Semi-Annual Reports,box_14_self_employment_earnings[].code,is_general_partner,loss_share_beginning,WRONG_ROW,INSUFFICIENT_IOU,MALFORMED_BBOX
+short/00581-2011-p0098,evaluated,35,16,19,59.2593,100.0000,84.2105,45.7143,SEC Form N-SAR Semi-Annual Reports,box_14_self_employment_earnings[].code,box_14_self_employment_earnings[].amount,is_general_partner,MALFORMED_BBOX,WRONG_ROW,none
+short/00581-2011-p0102,evaluated,36,24,12,69.6970,98.5915,76.6667,63.8889,SEC Form N-SAR Semi-Annual Reports,box_14_self_employment_earnings[].code,is_general_partner,partner_entity_type,MALFORMED_BBOX,INSUFFICIENT_IOU,WRONG_ROW
+short/02-10121 H-12 7-2-2024 F-22628,evaluated,66,41,25,69.3548,93.8776,74.1379,65.1515,ungrouped,operator_p5_no,rrc_district_no_and_county,recovery_other_specify,INSUFFICIENT_IOU,ZERO_CANDIDATE,MALFORMED_BBOX
+short/07021-2016-p0014,evaluated,27,12,15,45.8333,100.0000,52.3810,40.7407,SEC Form N-SAR Semi-Annual Reports,final_k1,amended_k1,partnership_ein,WRONG_ROW,MALFORMED_BBOX,INSUFFICIENT_IOU
+short/07021-2016-p0016,evaluated,27,10,17,43.9024,100.0000,64.2857,33.3333,SEC Form N-SAR Semi-Annual Reports,final_k1,partnership_ein,partnership_name,MALFORMED_BBOX,WRONG_ROW,none
+short/07021-2016-p0018,evaluated,27,11,16,46.8085,100.0000,55.0000,40.7407,SEC Form N-SAR Semi-Annual Reports,final_k1,partnership_ein,irs_center,MALFORMED_BBOX,WRONG_ROW,INSUFFICIENT_IOU
+short/07021-2016-p0026,evaluated,27,17,10,66.6667,100.0000,76.1905,59.2593,SEC Form N-SAR Semi-Annual Reports,final_k1,amended_k1,irs_center,MALFORMED_BBOX,WRONG_ROW,none
+short/07021-2016-p0029,evaluated,27,15,12,60.0000,100.0000,65.2174,55.5556,SEC Form N-SAR Semi-Annual Reports,final_k1,irs_center,partner_id,MALFORMED_BBOX,WRONG_ROW,INSUFFICIENT_IOU
+short/07021-2016-p0032,evaluated,27,13,14,54.1667,100.0000,61.9048,48.1481,SEC Form N-SAR Semi-Annual Reports,final_k1,amended_k1,irs_center,MALFORMED_BBOX,WRONG_ROW,INSUFFICIENT_IOU
+short/07021-2016-p0038,evaluated,13,11,2,88.0000,100.0000,91.6667,84.6154,SEC Form N-SAR Semi-Annual Reports,irs_center,box_15_amt_items[].code,none,MALFORMED_BBOX,INSUFFICIENT_IOU,none
+short/07021-2016-p0039,evaluated,13,13,0,100.0000,100.0000,100.0000,100.0000,SEC Form N-SAR Semi-Annual Reports,none,none,none,none,none,none
+short/07021-2016-p0040,evaluated,13,13,0,100.0000,100.0000,100.0000,100.0000,SEC Form N-SAR Semi-Annual Reports,none,none,none,none,none,none
+short/07021-2016-p0051,evaluated,13,12,1,92.3077,100.0000,92.3077,92.3077,SEC Form N-SAR Semi-Annual Reports,box_15_amt_items[].code,none,none,INSUFFICIENT_IOU,none,none
+short/07021-2016-p0052,evaluated,13,13,0,100.0000,100.0000,100.0000,100.0000,SEC Form N-SAR Semi-Annual Reports,none,none,none,none,none,none
+short/07021-2016-p0053,evaluated,13,13,0,100.0000,100.0000,100.0000,100.0000,SEC Form N-SAR Semi-Annual Reports,none,none,none,none,none,none
+short/07021-2016-p0074,evaluated,16,6,10,48.0000,100.0000,66.6667,37.5000,SEC Form N-SAR Semi-Annual Reports,corporation_ein,irs_center,shareholder_id,MALFORMED_BBOX,WRONG_ROW,none
+short/07021-2016-p0078,evaluated,13,5,8,45.4545,100.0000,55.5556,38.4615,SEC Form N-SAR Semi-Annual Reports,corporation_ein,corporation_address,irs_center,MALFORMED_BBOX,INSUFFICIENT_IOU,WRONG_ROW
+short/07021-2016-p0082,evaluated,12,4,8,47.0588,100.0000,80.0000,33.3333,SEC Form N-SAR Semi-Annual Reports,corporation_ein,corporation_address,irs_center,MALFORMED_BBOX,WRONG_ROW,none
+short/08-15427 H-12 1-21-2003 F-01341,evaluated,65,46,19,76.0331,94.4444,82.1429,70.7692,ungrouped,mailing_address,recovery_other_specify,change_previous_method,MALFORMED_BBOX,ZERO_CANDIDATE,INSUFFICIENT_IOU
+short/08-20813 H-12 10-17-2008 F-01094A,evaluated,67,47,20,76.4228,94.5946,83.9286,70.1493,ungrouped,operator_name,operator_p5_no,rrc_district_no_and_county,MALFORMED_BBOX,ZERO_CANDIDATE,INSUFFICIENT_IOU
+short/08-37943 H-12 09-25-2014 F-01249,evaluated,62,38,24,69.0909,91.5493,79.1667,61.2903,ungrouped,rrc_district_no_and_county,mailing_address,recovery_other_specify,MALFORMED_BBOX,ZERO_CANDIDATE,INSUFFICIENT_IOU
+short/08-43259 H-12 3-18-2024 F-22737,evaluated,63,47,16,80.3419,92.3077,87.0370,74.6032,ungrouped,operator_p5_no,rrc_district_no_and_county,recovery_other_specify,MALFORMED_BBOX,ZERO_CANDIDATE,INSUFFICIENT_IOU
+short/08-51344 H-12 10-2-2023 F-22666,evaluated,63,49,14,81.6667,92.9577,85.9649,77.7778,ungrouped,operator_name,operator_p5_no,rrc_district_no_and_county,ZERO_CANDIDATE,MALFORMED_BBOX,INSUFFICIENT_IOU
+short/13f__audent_global_2025q4,evaluated,527,526,1,100.0000,100.0000,100.0000,100.0000,SEC Form 13F Holdings Report,holdings,none,none,ZERO_CANDIDATE,none,none
+short/13f__dedeker_financial_llc,evaluated,507,505,2,99.8024,100.0000,99.8024,99.8024,SEC Form 13F Holdings Report,is_amendment,holdings,none,WRONG_ROW,ZERO_CANDIDATE,none
+short/13f__radnor_capital_management_llc,evaluated,3088,3085,3,99.9352,100.0000,99.9352,99.9352,SEC Form 13F Holdings Report,is_amendment,is_confidential_omitted,holdings,INSUFFICIENT_IOU,WRONG_ROW,ZERO_CANDIDATE
+short/13f__sl_advisors_llc,evaluated,507,505,2,99.8024,100.0000,99.8024,99.8024,SEC Form 13F Holdings Report,is_confidential_omitted,holdings,none,WRONG_ROW,ZERO_CANDIDATE,none
+short/2A-27-103150_116454,evaluated,74,14,60,22.5806,60.2564,28.0000,18.9189,County Assessment Appeals & Petitions (Form 2A),p1_district_no,p1_company,p1_sec_no,PAGE_DRIFT,WRONG_ROW,MALFORMED_BBOX
+short/2A-9-136008_97695,evaluated,70,10,60,18.3486,42.4658,25.6410,14.2857,County Assessment Appeals & Petitions (Form 2A),p1_file_no,p1_district_no,p1_address,PAGE_DRIFT,MALFORMED_BBOX,WRONG_ROW
+short/2A-9-156032_107792,evaluated,63,13,50,25.7426,55.4054,34.2105,20.6349,County Assessment Appeals & Petitions (Form 2A),p1_file_no,p1_district_no,p1_company,PAGE_DRIFT,ZERO_CANDIDATE,WRONG_ROW
+short/2A-9-160248_109904,evaluated,66,11,55,21.3592,49.6644,29.7297,16.6667,County Assessment Appeals & Petitions (Form 2A),p1_file_no,p1_district_no,p1_company,PAGE_DRIFT,ZERO_CANDIDATE,MALFORMED_BBOX
+short/2A-9-160258_109909,evaluated,59,23,36,42.2018,63.7681,46.0000,38.9831,County Assessment Appeals & Petitions (Form 2A),p1_file_no,p1_district_no,p1_address,ZERO_CANDIDATE,PAGE_DRIFT,WRONG_ROW
+short/2A-9-160266_109913,evaluated,58,20,38,39.2157,64.2857,45.4545,34.4828,County Assessment Appeals & Petitions (Form 2A),p1_file_no,p1_district_no,p1_company,ZERO_CANDIDATE,PAGE_DRIFT,WRONG_ROW
+short/2A-9-160268_109914,evaluated,56,14,42,27.4510,46.2687,30.4348,25.0000,County Assessment Appeals & Petitions (Form 2A),p1_file_no,p1_district_no,p1_address,PAGE_DRIFT,ZERO_CANDIDATE,INSUFFICIENT_IOU
+short/2A-9-160282_109921,evaluated,58,24,34,43.6364,54.2857,46.1538,41.3793,County Assessment Appeals & Petitions (Form 2A),p1_file_no,p1_district_no,p1_address,ZERO_CANDIDATE,PAGE_DRIFT,INSUFFICIENT_IOU
+short/2A-9-160294_109927,evaluated,26,13,13,56.5217,50.4854,65.0000,50.0000,County Assessment Appeals & Petitions (Form 2A),p1_file_no,p1_district_no,p1_company,ZERO_CANDIDATE,MALFORMED_BBOX,INSUFFICIENT_IOU
+short/2A-9-160298_109929,evaluated,58,27,31,51.9231,63.3094,58.6957,46.5517,County Assessment Appeals & Petitions (Form 2A),p1_file_no,p1_company,p1_address,ZERO_CANDIDATE,PAGE_DRIFT,MALFORMED_BBOX
+short/2A-9-160318_109939,evaluated,57,19,38,36.8932,52.5547,41.3043,33.3333,County Assessment Appeals & Petitions (Form 2A),p1_file_no,p1_district_no,p1_company,ZERO_CANDIDATE,PAGE_DRIFT,INSUFFICIENT_IOU
+short/3N1AB7AP8FY283932_professional_valuation,unextractable,148,0,148,,69.5652,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+short/3N1AB7AP8FY283932_professional_valuation_corrupted,unextractable,148,0,148,,47.6190,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+short/593338187_200912_990PF-p0023,evaluated,153,135,18,88.4488,99.6721,89.3333,87.5817,ungrouped,transactions[].number_of_shares,transactions[].federal_income_tax_withheld,transactions[].cusip,INSUFFICIENT_IOU,WRONG_ROW,MALFORMED_BBOX
+short/593338187_200912_990PF-p0024,evaluated,171,123,48,75.0000,99.7067,78.3439,71.9298,ungrouped,transactions[].federal_income_tax_withheld,transactions[].number_of_shares,transactions[].proceeds,INSUFFICIENT_IOU,WRONG_ROW,MALFORMED_BBOX
+short/593338187_200912_990PF-p0025,evaluated,171,136,35,81.8182,99.7067,84.9057,78.9474,ungrouped,transactions[].federal_income_tax_withheld,transactions[].number_of_shares,transactions[].proceeds,INSUFFICIENT_IOU,MALFORMED_BBOX,WRONG_ROW
+short/593338187_200912_990PF-p0026,evaluated,153,136,17,88.8158,100.0000,89.4040,88.2353,ungrouped,transactions[].number_of_shares,transactions[].federal_income_tax_withheld,account_number,INSUFFICIENT_IOU,MALFORMED_BBOX,WRONG_ROW
+short/593338187_200912_990PF-p0027,evaluated,162,134,28,83.1250,100.0000,84.1772,82.0988,ungrouped,transactions[].federal_income_tax_withheld,transactions[].number_of_shares,transactions[].proceeds,INSUFFICIENT_IOU,WRONG_ROW,MALFORMED_BBOX
+short/593338187_200912_990PF-p0030,evaluated,168,132,36,78.8060,99.7015,79.0419,78.5714,ungrouped,transactions[].number_of_shares,transactions[].federal_income_tax_withheld,transactions[].date_acquired,INSUFFICIENT_IOU,WRONG_ROW,ZERO_CANDIDATE
+short/593338187_200912_990PF-p0031,evaluated,180,148,32,83.9437,99.4413,85.1429,82.7778,ungrouped,transactions[].number_of_shares,transactions[].federal_income_tax_withheld,transactions[].cost_or_other_basis,INSUFFICIENT_IOU,WRONG_ROW,MALFORMED_BBOX
+short/593338187_200912_990PF-p0032,evaluated,160,129,31,79.7468,99.6865,80.7692,78.7500,ungrouped,transactions[].number_of_shares,transactions[].federal_income_tax_withheld,transactions[].date_acquired,INSUFFICIENT_IOU,WRONG_ROW,MALFORMED_BBOX
+short/593338187_200912_990PF-p0033,evaluated,180,147,33,82.5843,100.0000,83.5227,81.6667,ungrouped,transactions[].number_of_shares,transactions[].federal_income_tax_withheld,transactions[].cost_or_other_basis,INSUFFICIENT_IOU,WRONG_ROW,MALFORMED_BBOX
+short/593338187_200912_990PF-p0034,evaluated,180,160,20,89.3855,99.7214,89.8876,88.8889,ungrouped,transactions[].number_of_shares,transactions[].federal_income_tax_withheld,transactions[].date_acquired,INSUFFICIENT_IOU,WRONG_ROW,ZERO_CANDIDATE
+short/593338187_200912_990PF-p0035,evaluated,180,163,17,91.3649,99.7214,91.6201,91.1111,ungrouped,transactions[].number_of_shares,transactions[].federal_income_tax_withheld,transactions[].cost_or_other_basis,INSUFFICIENT_IOU,WRONG_ROW,ZERO_CANDIDATE
+short/593338187_200912_990PF-p0036,evaluated,180,151,29,84.3575,99.4413,84.8315,83.8889,ungrouped,transactions[].federal_income_tax_withheld,transactions[].number_of_shares,transactions[].description,INSUFFICIENT_IOU,WRONG_ROW,ZERO_CANDIDATE
+short/593338187_200912_990PF-p0037,evaluated,171,147,24,88.9552,98.5163,90.8537,87.1345,ungrouped,transactions[].number_of_shares,transactions[].federal_income_tax_withheld,transactions[].net_gain_or_loss,INSUFFICIENT_IOU,WRONG_ROW,ZERO_CANDIDATE
+short/593338187_200912_990PF-p0038,evaluated,180,158,22,88.8268,99.7214,89.3258,88.3333,ungrouped,transactions[].number_of_shares,transactions[].federal_income_tax_withheld,transactions[].description,INSUFFICIENT_IOU,WRONG_ROW,MALFORMED_BBOX
+short/7C-02014 H-12 5-20-2013 F-01083,evaluated,69,48,21,71.6418,96.0000,73.8462,69.5652,ungrouped,operator_name,operator_p5_no,rrc_district_no_and_county,INSUFFICIENT_IOU,MALFORMED_BBOX,ZERO_CANDIDATE
+short/7C-04947 H-12 12-7-2009 F-01079,evaluated,67,41,26,69.4215,85.7143,77.7778,62.6866,ungrouped,operator_name,operator_p5_no,rrc_district_no_and_county,MALFORMED_BBOX,PAGE_DRIFT,ZERO_CANDIDATE
+short/H9-53-1621_1656,evaluated,50,38,12,84.7826,96.2264,92.8571,78.0000,State Property Tax Valuations & Hearings (H9-53),state,operation_type_other_explanation,roe_100ppm,MALFORMED_BBOX,ZERO_CANDIDATE,INSUFFICIENT_IOU
+short/H9-53-2119_2144,evaluated,51,18,33,45.0000,94.5455,62.0690,35.2941,State Property Tax Valuations & Hearings (H9-53),rrc_district,street_or_po_box,city,MALFORMED_BBOX,WRONG_ROW,ZERO_CANDIDATE
+short/H9-53-23_23,evaluated,54,21,33,46.6667,97.2973,58.3333,38.8889,State Property Tax Valuations & Hearings (H9-53),rrc_district,city,state,MALFORMED_BBOX,WRONG_ROW,ZERO_CANDIDATE
+short/H9-53-24_24,evaluated,51,18,33,40.9091,94.4444,48.6486,35.2941,State Property Tax Valuations & Hearings (H9-53),street_or_po_box,state,optype_a_oil_field,MALFORMED_BBOX,WRONG_ROW,INSUFFICIENT_IOU
+short/H9-53-30_30,evaluated,51,24,27,59.5238,96.2963,75.7576,49.0196,State Property Tax Valuations & Hearings (H9-53),operator,operator_number,rrc_district,MALFORMED_BBOX,WRONG_ROW,INSUFFICIENT_IOU
+short/H9-53-319_311,evaluated,50,21,29,49.4118,93.4579,60.0000,42.0000,State Property Tax Valuations & Hearings (H9-53),state,optype_a_oil_field,optype_b_gas_field,MALFORMED_BBOX,WRONG_ROW,INSUFFICIENT_IOU
+short/H9-53-31_31,evaluated,51,26,25,60.4651,96.2963,74.2857,50.9804,State Property Tax Valuations & Hearings (H9-53),operator,operator_number,state,MALFORMED_BBOX,WRONG_ROW,INSUFFICIENT_IOU
+short/H9-53-32_32,evaluated,54,23,31,50.0000,97.2973,60.5263,42.5926,State Property Tax Valuations & Hearings (H9-53),rrc_district,city,state,MALFORMED_BBOX,WRONG_ROW,INSUFFICIENT_IOU
+short/H9-53-514_1043,evaluated,60,27,33,55.6701,96.8254,72.9730,45.0000,State Property Tax Valuations & Hearings (H9-53),operations_covered[].type_id_code,operations_covered[].storage_yes,operations_covered[].storage_no,MALFORMED_BBOX,WRONG_ROW,INSUFFICIENT_IOU
+short/H9-53-59_60,evaluated,54,24,30,56.1798,97.2973,71.4286,46.2963,State Property Tax Valuations & Hearings (H9-53),rrc_district,state,optype_a_oil_field,MALFORMED_BBOX,INSUFFICIENT_IOU,WRONG_ROW
+short/H9-53-7226_7240,evaluated,53,22,31,50.0000,97.2973,62.8571,41.5094,State Property Tax Valuations & Hearings (H9-53),city,state,optype_a_oil_field,MALFORMED_BBOX,WRONG_ROW,INSUFFICIENT_IOU
+short/H9-53-7234_7248,evaluated,51,22,29,51.7647,94.5455,64.7059,43.1373,State Property Tax Valuations & Hearings (H9-53),rrc_district,street_or_po_box,city,MALFORMED_BBOX,INSUFFICIENT_IOU,WRONG_ROW
+short/H9-53-7239_7253,evaluated,51,22,29,51.1111,94.5455,58.9744,45.0980,State Property Tax Valuations & Hearings (H9-53),rrc_district,state,zip_code,INSUFFICIENT_IOU,MALFORMED_BBOX,ZERO_CANDIDATE
+short/H9-53-9349_9509,evaluated,53,18,35,40.9091,96.4286,51.4286,33.9623,State Property Tax Valuations & Hearings (H9-53),operator,operator_number,rrc_district,MALFORMED_BBOX,WRONG_ROW,INSUFFICIENT_IOU
+short/H9-53-9386_9545,evaluated,52,23,29,57.5000,95.4128,82.1429,44.2308,State Property Tax Valuations & Hearings (H9-53),street_or_po_box,city,field_or_area_name,MALFORMED_BBOX,ZERO_CANDIDATE,INSUFFICIENT_IOU
+short/P18-28-1547,evaluated,39,20,19,56.3380,73.3945,62.5000,51.2821,County Property Appraisal Schedules (P18/P4),operator_no,address_state,purpose_monthly_report,ZERO_CANDIDATE,WRONG_ROW,MALFORMED_BBOX
+short/P18-28-21_77,evaluated,42,16,26,47.0588,74.3363,61.5385,38.0952,County Property Appraisal Schedules (P18/P4),reporting_period,address_city,address_zip_code,ZERO_CANDIDATE,MALFORMED_BBOX,INSUFFICIENT_IOU
+short/P18-28-35_39,evaluated,43,23,20,62.1622,75.4386,74.1935,53.4884,County Property Appraisal Schedules (P18/P4),operator_no,address_zip_code,purpose_monthly_report,ZERO_CANDIDATE,MALFORMED_BBOX,INSUFFICIENT_IOU
+short/P18-28-43_44,evaluated,41,24,17,62.3377,74.5455,66.6667,58.5366,County Property Appraisal Schedules (P18/P4),purpose_monthly_report,purpose_initial_report,purpose_final_report,ZERO_CANDIDATE,INSUFFICIENT_IOU,MALFORMED_BBOX
+short/P18-28-44_45,evaluated,35,20,15,60.6061,67.9612,64.5161,57.1429,County Property Appraisal Schedules (P18/P4),address_zip_code,purpose_monthly_report,purpose_initial_report,ZERO_CANDIDATE,INSUFFICIENT_IOU,MALFORMED_BBOX
+short/P18-28-50_51,evaluated,43,8,35,25.3968,72.8814,40.0000,18.6047,County Property Appraisal Schedules (P18/P4),gatherer_entries[].amt,gatherer_entries[].rrc_id_no,reporting_period,ZERO_CANDIDATE,MALFORMED_BBOX,WRONG_ROW
+short/P18-28-52_53,evaluated,38,7,31,24.1379,71.0280,35.0000,18.4211,County Property Appraisal Schedules (P18/P4),reporting_period,operator,operator_no,ZERO_CANDIDATE,MALFORMED_BBOX,WRONG_ROW
+short/P18-28-54_55,evaluated,37,16,21,53.3333,69.8113,69.5652,43.2432,County Property Appraisal Schedules (P18/P4),address_state,purpose_monthly_report,purpose_initial_report,ZERO_CANDIDATE,MALFORMED_BBOX,INSUFFICIENT_IOU
+short/P18-28-55_56,evaluated,39,3,36,11.3208,72.2222,21.4286,7.6923,County Property Appraisal Schedules (P18/P4),reporting_period,operator_no,address_street_or_box,ZERO_CANDIDATE,MALFORMED_BBOX,WRONG_ROW
+short/P18-28-56_57,evaluated,37,15,22,45.4545,69.8113,51.7241,40.5405,County Property Appraisal Schedules (P18/P4),address_state,purpose_monthly_report,purpose_corrected_report,ZERO_CANDIDATE,INSUFFICIENT_IOU,MALFORMED_BBOX
+short/P18-28-62_62,evaluated,38,16,22,47.0588,71.0280,53.3333,42.1053,County Property Appraisal Schedules (P18/P4),reporting_period,purpose_monthly_report,purpose_initial_report,ZERO_CANDIDATE,MALFORMED_BBOX,WRONG_ROW
+short/P4-27-51022_74198,evaluated,50,39,11,80.4124,75.9259,82.9787,78.0000,County Property Appraisal Schedules (P18/P4),oil_lse_gas_id_no,well_nos,change_operator,PAGE_DRIFT,ZERO_CANDIDATE,MALFORMED_BBOX
+short/P4-27-51094_74234,evaluated,49,36,13,79.1209,88.6792,85.7143,73.4694,County Property Appraisal Schedules (P18/P4),current_operator_name,operator_p5_no,oil_lse_gas_id_no,ZERO_CANDIDATE,MALFORMED_BBOX,WRONG_ROW
+short/P4-27-51220_74625,evaluated,48,40,8,85.1064,85.7143,86.9565,83.3333,County Property Appraisal Schedules (P18/P4),change_operator,change_field_name_from,change_field_name_docket,ZERO_CANDIDATE,PAGE_DRIFT,WRONG_ROW
+short/P4-27-51300_74665,evaluated,44,35,9,85.3659,94.7368,92.1053,79.5455,County Property Appraisal Schedules (P18/P4),oil_lse_gas_id_no,change_field_name_from,change_field_name_docket,MALFORMED_BBOX,ZERO_CANDIDATE,WRONG_ROW
+short/P4-27-51318_74674,evaluated,39,32,7,85.3333,89.8876,88.8889,82.0513,County Property Appraisal Schedules (P18/P4),oil_lse_gas_id_no,rrc_district,well_nos,ZERO_CANDIDATE,MALFORMED_BBOX,INSUFFICIENT_IOU
+short/P4-83-199_29,evaluated,44,34,10,82.9268,92.7835,89.4737,77.2727,County Property Appraisal Schedules (P18/P4),field_name,operator_p5_no,rrc_district,MALFORMED_BBOX,ZERO_CANDIDATE,INSUFFICIENT_IOU
+short/P4-83-201_30,evaluated,48,35,13,78.6517,92.4528,85.3659,72.9167,County Property Appraisal Schedules (P18/P4),rrc_district,well_nos,effective_date,MALFORMED_BBOX,ZERO_CANDIDATE,WRONG_ROW
+short/P4-83-211_35,evaluated,46,31,15,74.6988,93.0693,83.7838,67.3913,County Property Appraisal Schedules (P18/P4),field_name,lease_name,current_operator_name,MALFORMED_BBOX,ZERO_CANDIDATE,WRONG_ROW
+short/P4-83-433_147,evaluated,42,27,15,73.9726,95.5556,87.0968,64.2857,County Property Appraisal Schedules (P18/P4),lease_name,oil_lse_gas_id_no,rrc_district,MALFORMED_BBOX,WRONG_ROW,ZERO_CANDIDATE
+short/P4-83-443_152,evaluated,41,33,8,88.0000,93.3333,97.0588,80.4878,County Property Appraisal Schedules (P18/P4),current_operator_name,operator_p5_no,oil_lse_gas_id_no,MALFORMED_BBOX,ZERO_CANDIDATE,WRONG_ROW
+short/P4-83-449_155,evaluated,49,22,27,60.2740,99.0099,91.6667,44.8980,County Property Appraisal Schedules (P18/P4),field_name,lease_name,current_operator_name,MALFORMED_BBOX,INSUFFICIENT_IOU,WRONG_ROW
+short/P4-83-457_159,evaluated,44,35,9,84.3373,84.3137,89.7436,79.5455,County Property Appraisal Schedules (P18/P4),rrc_district,well_nos,change_field_name_from,ZERO_CANDIDATE,MALFORMED_BBOX,PAGE_DRIFT
+short/P4-83-631_246,evaluated,43,33,10,81.4815,70.9677,86.8421,76.7442,County Property Appraisal Schedules (P18/P4),rrc_district,well_nos,change_field_name_from,PAGE_DRIFT,ZERO_CANDIDATE,none
+short/P4-83-693_277,evaluated,42,34,8,82.9268,92.4731,85.0000,80.9524,County Property Appraisal Schedules (P18/P4),operator_p5_no,oil_lse_gas_id_no,rrc_district,ZERO_CANDIDATE,INSUFFICIENT_IOU,MALFORMED_BBOX
+short/P4-Historical Single Signature83-10963_5480,evaluated,40,30,10,81.0811,91.1111,88.2353,75.0000,County Property Appraisal Schedules (P18/P4),current_operator_name,operator_p5_no,oil_lse_gas_id_no,ZERO_CANDIDATE,MALFORMED_BBOX,WRONG_ROW
+short/P4-Historical Single Signature83-223_41,evaluated,43,23,20,68.6567,91.6667,95.8333,53.4884,County Property Appraisal Schedules (P18/P4),field_name,lease_name,current_operator_name,MALFORMED_BBOX,ZERO_CANDIDATE,WRONG_ROW
+short/P4-Historical Single Signature83-257_58,evaluated,42,18,24,57.1429,92.4731,85.7143,42.8571,County Property Appraisal Schedules (P18/P4),field_name,lease_name,current_operator_name,MALFORMED_BBOX,ZERO_CANDIDATE,WRONG_ROW
+short/REDACTED_2007_NISSAN_MURANO_professional_valuation,unextractable,190,0,190,,61.5385,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+short/ROGER-WINFIELD-SCOTT-FOUNDATION-INC-2009-580655183-p0023,evaluated,169,149,20,89.9696,100.0000,92.5000,87.5740,ungrouped,transactions[].number_of_shares,transactions[].date_of_sale,transactions[].net_gain_or_loss,MALFORMED_BBOX,WRONG_ROW,INSUFFICIENT_IOU
+short/ROGER-WINFIELD-SCOTT-FOUNDATION-INC-2009-580655183-p0024,evaluated,181,157,24,87.8187,99.4444,90.1163,85.6354,ungrouped,transactions[].federal_income_tax_withheld,transactions[].net_gain_or_loss,transactions[].number_of_shares,INSUFFICIENT_IOU,MALFORMED_BBOX,WRONG_ROW
+short/ROGER-WINFIELD-SCOTT-FOUNDATION-INC-2009-580655183-p0025,evaluated,123,115,8,94.6058,99.1803,96.6102,92.6829,ungrouped,transactions[].proceeds,transactions[].number_of_shares,transactions[].federal_income_tax_withheld,MALFORMED_BBOX,INSUFFICIENT_IOU,ZERO_CANDIDATE
+short/W-1-9-258_260,evaluated,69,59,10,88.0597,97.8723,90.7692,85.5072,Municipal Real Estate Tax Assessments (W-Series),api_no,drilling_permit_no,well_no,INSUFFICIENT_IOU,MALFORMED_BBOX,ZERO_CANDIDATE
+short/W-1-9-260_262,evaluated,69,56,13,86.1538,97.8723,91.8033,81.1594,Municipal Real Estate Tax Assessments (W-Series),completion_fields[].field_name,api_no,drilling_permit_no,MALFORMED_BBOX,INSUFFICIENT_IOU,ZERO_CANDIDATE
+short/W-1-9-261_263,evaluated,70,45,25,69.7674,98.5915,76.2712,64.2857,Municipal Real Estate Tax Assessments (W-Series),completion_fields[].field_name,completion_fields[].well_type,api_no,MALFORMED_BBOX,WRONG_ROW,INSUFFICIENT_IOU
+short/W14-2nd Sub 53269 Revised W14,evaluated,90,73,17,83.9080,64.5390,86.9048,81.1111,Municipal Real Estate Tax Assessments (W-Series),casing_records[].size_review,casing_records[].setting_depths_review,casing_records[].hole_size_review,ZERO_CANDIDATE,INSUFFICIENT_IOU,MALFORMED_BBOX
+short/W14-2nd Sub 55975 Revised W14 ADMIN REVIEWED,evaluated,91,71,20,81.6092,64.7887,85.5422,78.0220,Municipal Real Estate Tax Assessments (W-Series),casing_records[].size_review,casing_records[].setting_depths_review,casing_records[].hole_size_review,ZERO_CANDIDATE,INSUFFICIENT_IOU,MALFORMED_BBOX
+short/W14-52342_W14,evaluated,92,24,68,32.0000,65.9574,41.3793,26.0870,Municipal Real Estate Tax Assessments (W-Series),casing_records[].size,casing_records[].size_review,casing_records[].setting_depths,ZERO_CANDIDATE,MALFORMED_BBOX,WRONG_ROW
+short/W14-53632_W14 ADMIN REVIEWED,evaluated,92,51,41,61.8182,65.4804,69.8630,55.4348,Municipal Real Estate Tax Assessments (W-Series),casing_records[].casing_type,casing_records[].size,casing_records[].size_review,ZERO_CANDIDATE,MALFORMED_BBOX,WRONG_ROW
+short/W14-54500_W14 admin reviewed,evaluated,102,69,33,73.2984,70.1031,78.6517,68.6275,Municipal Real Estate Tax Assessments (W-Series),casing_records[].size,casing_records[].size_review,casing_records[].setting_depths_review,ZERO_CANDIDATE,MALFORMED_BBOX,INSUFFICIENT_IOU
+short/W14-55311_W14 reviewed,evaluated,91,60,31,70.5882,64.5390,75.9494,65.9341,Municipal Real Estate Tax Assessments (W-Series),casing_records[].casing_type,casing_records[].size_review,casing_records[].setting_depths_review,ZERO_CANDIDATE,INSUFFICIENT_IOU,MALFORMED_BBOX
+short/W14-55711_W14 ADMIN REVIEWED,evaluated,92,59,33,70.1754,65.0177,75.9494,65.2174,Municipal Real Estate Tax Assessments (W-Series),casing_records[].size,casing_records[].size_review,casing_records[].setting_depths,ZERO_CANDIDATE,MALFORMED_BBOX,INSUFFICIENT_IOU
+short/W14-57077_W14,evaluated,94,68,26,75.1381,66.6667,78.1609,72.3404,Municipal Real Estate Tax Assessments (W-Series),casing_records[].casing_type,casing_records[].size_review,casing_records[].setting_depths_review,ZERO_CANDIDATE,INSUFFICIENT_IOU,MALFORMED_BBOX
+short/W14-57728_W14_REVISED,evaluated,118,69,49,61.5385,68.6047,66.0194,57.6271,Municipal Real Estate Tax Assessments (W-Series),casing_records[].size,casing_records[].size_review,casing_records[].setting_depths_review,ZERO_CANDIDATE,INSUFFICIENT_IOU,WRONG_ROW
+short/W14-58025_W14 Admin Reviewed,evaluated,97,75,22,80.2139,68.0702,83.3333,77.3196,Municipal Real Estate Tax Assessments (W-Series),casing_records[].size_review,casing_records[].setting_depths_review,casing_records[].hole_size_review,ZERO_CANDIDATE,INSUFFICIENT_IOU,MALFORMED_BBOX
+short/W14-58509_W14 2nd sub revised,evaluated,112,100,12,92.5926,66.4688,96.1538,89.2857,Municipal Real Estate Tax Assessments (W-Series),casing_records[].size_review,casing_records[].setting_depths_review,casing_records[].hole_size_review,ZERO_CANDIDATE,MALFORMED_BBOX,INSUFFICIENT_IOU
+short/W14-58549_W14,evaluated,108,73,35,74.1117,65.6627,82.0225,67.5926,Municipal Real Estate Tax Assessments (W-Series),casing_records[].size_review,casing_records[].setting_depths_review,casing_records[].hole_size_review,ZERO_CANDIDATE,MALFORMED_BBOX,INSUFFICIENT_IOU
+short/W14-Atascosa SWD Well No. 4 - W-14 (Updated 01.22.2025),evaluated,83,64,19,82.0513,61.0909,87.6712,77.1084,Municipal Real Estate Tax Assessments (W-Series),casing_records[].casing_type,casing_records[].size,casing_records[].size_review,ZERO_CANDIDATE,MALFORMED_BBOX,INSUFFICIENT_IOU
+short/W2-27-216874_212740,evaluated,88,25,63,33.3333,41.6667,40.3226,28.4091,Municipal Real Estate Tax Assessments (W-Series),formation_record[].markers_formation_tops,formation_record[].depth_tvd,formation_record[].depth_md,PAGE_DRIFT,ZERO_CANDIDATE,INSUFFICIENT_IOU
+short/W2-27-217184_213122,evaluated,98,47,51,52.5140,76.5517,58.0247,47.9592,Municipal Real Estate Tax Assessments (W-Series),formation_record[].depth_tvd,formation_record[].formation_type,formation_record[].formation_isolated,ZERO_CANDIDATE,INSUFFICIENT_IOU,WRONG_ROW
+short/W2-27-217314_213200,evaluated,76,16,60,26.8908,39.5257,37.2093,21.0526,Municipal Real Estate Tax Assessments (W-Series),item39_multiple_completion_reservoirs[].field_reservoir,item39_multiple_completion_reservoirs[].gas_id_or_oil_lease_no,item39_multiple_completion_reservoirs[].oil_or_gas,ZERO_CANDIDATE,PAGE_DRIFT,MALFORMED_BBOX
+short/W2-27-217884_213729,evaluated,88,28,60,38.3562,66.9261,48.2759,31.8182,Municipal Real Estate Tax Assessments (W-Series),casing_record[].type_of_casing,casing_record[].casing_size,casing_record[].weight_per_ft,ZERO_CANDIDATE,MALFORMED_BBOX,PAGE_DRIFT
+short/WVWJK73C19P047779_professional_valuation,unextractable,148,0,148,,63.6364,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+short/WVWJK73C19P047779_professional_valuation_corrupted,unextractable,148,0,148,,57.1429,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+short/YV4952BL2C1140915_professional_valuation,unextractable,106,0,106,,42.8571,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+short/YV4952BL2C1140915_professional_valuation_corrupted,unextractable,106,0,106,,0.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+short/aclu_cdwg_invoice,unextractable,45,0,45,,100.0000,,,"Invoices, Purchase Orders & Receipts",none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+short/arif-2021,evaluated,108,61,47,59.8039,81.3725,63.5417,56.4815,IRS Form 1040 / Individual Tax Return,line_items,schedule_e.partnerships_s_corps[],schedule_e.estates_trusts[],WRONG_ROW,PAGE_DRIFT,ZERO_CANDIDATE
+short/arif-2022,evaluated,111,73,38,69.5238,84.7619,73.7374,65.7658,IRS Form 1040 / Individual Tax Return,line_items,schedule_e.partnerships_s_corps[],schedule_e.estates_trusts[],WRONG_ROW,ZERO_CANDIDATE,PAGE_DRIFT
+short/arif-2024,evaluated,130,76,54,64.4068,82.2034,71.6981,58.4615,IRS Form 1040 / Individual Tax Return,line_items,schedule_e.partnerships_s_corps[],spouse_last_name,ZERO_CANDIDATE,WRONG_ROW,PAGE_DRIFT
+short/bianco-2024,evaluated,155,95,60,63.5452,86.2876,65.9722,61.2903,ungrouped,line_items,form_8283.section_a_rows[],form_8283.section_b_rows[],WRONG_ROW,PAGE_DRIFT,ZERO_CANDIDATE
+short/brand_price_list_lifescience_2024,skipped,682,0,682,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/brand_price_list_lifescience_2024_corrupted,skipped,682,0,682,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/budget_appendix_doe,skipped,663,0,663,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/budget_appendix_legis,skipped,489,0,489,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/ca_rad_crossover_inpatient_p5,skipped,86,0,86,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/ca_rad_crossover_inpatient_p5_corrupted,skipped,86,0,86,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/ca_rad_crossover_outpatient_p5,skipped,86,0,86,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/ca_rad_crossover_outpatient_p5_corrupted,skipped,86,0,86,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/caterpillar_spec_sheet_312c_excavator,skipped,388,0,388,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/caterpillar_spec_sheet_312c_excavator_corrupted,skipped,388,0,388,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/caterpillar_spec_sheet_330_excavator,skipped,377,0,377,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/caterpillar_spec_sheet_330_excavator_corrupted,skipped,377,0,377,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/cbp_7501_continuation_0001,skipped,207,0,207,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/cbp_7501_continuation_0002,skipped,122,0,122,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/cbp_7501_continuation_0007,skipped,87,0,87,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/cbp_7501_continuation_0016,skipped,72,0,72,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/cbp_7501_continuation_0018,unextractable,1179,0,1179,,82.6667,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+short/ccc_online_0005_american_family_chevrolet_sonic,unextractable,111,0,111,,66.6667,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+short/ccc_online_0005_american_family_chevrolet_sonic_corrupted,unextractable,111,0,111,,66.6667,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+short/ccc_online_0006_esurance_toyota_rav4,unextractable,135,0,135,,80.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+short/ccc_online_0006_esurance_toyota_rav4_corrupted,unextractable,135,0,135,,80.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+short/census_statab,skipped,409,0,409,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/census_statab_12s0035,skipped,301,0,301,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/census_statab_12s0711,skipped,467,0,467,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/census_statab_employment,skipped,552,0,552,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/census_statab_income_by_state,skipped,421,0,421,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/cfpb_closing-disclosure_H25E,skipped,249,0,249,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/cfpb_closing-disclosure_H25E_corrupted,skipped,249,0,249,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/cfpb_closing-disclosure_H25F,skipped,63,0,63,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/cfpb_closing-disclosure_H25F_corrupted,skipped,65,0,65,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/cfpb_closing-disclosure_filled-sample,skipped,321,0,321,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/cfpb_closing-disclosure_filled-sample_corrupted,skipped,313,0,313,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/dc-pepco-residential-bill,skipped,22,0,22,,,,,"Invoices, Purchase Orders & Receipts",none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/dd1155_schedule_continuation_0002,skipped,12,0,12,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/dd1155_schedule_continuation_0008,skipped,12,0,12,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/fidelity_0002_sample,skipped,145,0,145,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/fort_bend_operativeiq_invoice,unextractable,50,0,50,,100.0000,,,"Invoices, Purchase Orders & Receipts",none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+short/golden_corral_receipt_refugio_county_auditor,unextractable,39,0,39,,100.0000,,,"Invoices, Purchase Orders & Receipts",none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+short/grafton_isotrope_invoice_19503,unextractable,42,0,42,,0.0000,,,"Invoices, Purchase Orders & Receipts",none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+short/gsa_mas_it_labor_0004,skipped,94,0,94,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/gsa_mas_it_labor_0020,skipped,94,0,94,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/h5Filing-45659-1,evaluated,66,64,2,96.9697,97.0588,96.9697,96.9697,ungrouped,test_pressures[].tubing_or_hanging_string,retest_date_of_previous_test,remedial_actions_prior_to,ZERO_CANDIDATE,INSUFFICIENT_IOU,none
+short/h5Filing-45884-1,evaluated,69,63,6,100.0000,94.5205,100.0000,100.0000,ungrouped,uic_no,filing_no,submittal_date,ZERO_CANDIDATE,PAGE_DRIFT,none
+short/h5Filing-45887-1,evaluated,69,62,7,98.5507,94.5205,98.5507,98.5507,ungrouped,well_completion_casing[].top_of_cement,uic_no,filing_no,ZERO_CANDIDATE,PAGE_DRIFT,INSUFFICIENT_IOU
+short/h5Filing-45919-1,evaluated,77,65,12,91.5033,95.0617,92.1053,90.9091,ungrouped,well_completion_casing[].top_of_cement,test_pressures[].tubing_or_hanging_string,test_pressures[].surface_casing,ZERO_CANDIDATE,PAGE_DRIFT,INSUFFICIENT_IOU
+short/h5Filing-46302-1,evaluated,88,69,19,84.0909,97.2376,84.0909,84.0909,ungrouped,test_pressures[].tubing_or_hanging_string,test_pressures[].surface_casing,well_completion_casing[].top_of_cement,INSUFFICIENT_IOU,PAGE_DRIFT,ZERO_CANDIDATE
+short/h5Filing-46383-1,evaluated,63,58,5,99.2000,92.6471,100.0000,98.4127,ungrouped,test_pressures[].surface_casing,uic_no,filing_no,ZERO_CANDIDATE,PAGE_DRIFT,MALFORMED_BBOX
+short/h5Filing-46384-1,evaluated,63,54,9,93.6508,92.6471,93.6508,93.6508,ungrouped,test_pressures[].surface_casing,well_completion_casing[].top_of_cement,uic_no,ZERO_CANDIDATE,PAGE_DRIFT,INSUFFICIENT_IOU
+short/h5Filing-46780-1,evaluated,61,53,8,95.0820,91.0448,95.0820,95.0820,ungrouped,test_pressures[].surface_casing,uic_no,filing_no,ZERO_CANDIDATE,PAGE_DRIFT,INSUFFICIENT_IOU
+short/h5Filing-47175-1,evaluated,70,62,8,95.7143,95.2381,95.7143,95.7143,ungrouped,well_completion_casing[].top_of_cement,uic_no,filing_no,ZERO_CANDIDATE,PAGE_DRIFT,INSUFFICIENT_IOU
+short/h5Filing-48982-1,evaluated,68,60,8,95.5882,93.7931,95.5882,95.5882,ungrouped,well_completion_casing[].top_of_cement,uic_no,filing_no,ZERO_CANDIDATE,PAGE_DRIFT,INSUFFICIENT_IOU
+short/h5Filing-49070-1,evaluated,69,60,9,92.7536,93.2432,92.7536,92.7536,ungrouped,well_completion_casing[].top_of_cement,injection_intervals[].bottom,uic_no,ZERO_CANDIDATE,PAGE_DRIFT,INSUFFICIENT_IOU
+short/h5Filing-50745-2,evaluated,70,63,7,97.1429,95.2381,97.1429,97.1429,ungrouped,well_completion_casing[].top_of_cement,uic_no,filing_no,ZERO_CANDIDATE,PAGE_DRIFT,INSUFFICIENT_IOU
+short/h5Filing-66006-1,evaluated,69,62,7,98.5507,93.2432,98.5507,98.5507,ungrouped,well_completion_casing[].top_of_cement,injection_intervals[].bottom,uic_no,ZERO_CANDIDATE,PAGE_DRIFT,INSUFFICIENT_IOU
+short/hingham-grainger-invoice,unextractable,42,0,42,,100.0000,,,"Invoices, Purchase Orders & Receipts",none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+short/hingham-wbmason-invoice,unextractable,42,0,42,,0.0000,,,"Invoices, Purchase Orders & Receipts",none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+short/hingham_lowes_receipt,skipped,43,0,43,,,,,"Invoices, Purchase Orders & Receipts",none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/lancaster_county_ne_requisition_po_husker_steel,skipped,40,0,40,,,,,"Invoices, Purchase Orders & Receipts",none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/lancaster_county_ne_requisition_po_husker_steel_corrupted,skipped,40,0,40,,,,,"Invoices, Purchase Orders & Receipts",none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/mcdonalds_receipt_chicago_documentcloud,skipped,55,0,55,,,,,"Invoices, Purchase Orders & Receipts",none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/mission-tx-tyler-invoice,skipped,98,0,98,,,,,"Invoices, Purchase Orders & Receipts",none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/ms_medicaid_ra_adjustments,skipped,61,0,61,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/ms_medicaid_ra_adjustments_corrupted,skipped,61,0,61,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/ms_medicaid_ra_paid_denied_claims,skipped,146,0,146,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/ms_medicaid_ra_paid_denied_claims_corrupted,skipped,146,0,146,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/nport__bullfinch_fund_inc,evaluated,550,549,1,100.0000,100.0000,100.0000,100.0000,SEC Form N-PORT Portfolio Investments,holdings,none,none,ZERO_CANDIDATE,none,none
+short/nport__gabelli_growth_fund_2025q4,evaluated,552,551,1,100.0000,100.0000,100.0000,100.0000,SEC Form N-PORT Portfolio Investments,holdings,none,none,ZERO_CANDIDATE,none,none
+short/nport__oak_associates_funds,evaluated,502,501,1,100.0000,100.0000,100.0000,100.0000,SEC Form N-PORT Portfolio Investments,holdings,none,none,ZERO_CANDIDATE,none,none
+short/oklahoma_county_purchase_order_avl_systems,unextractable,24,0,24,,100.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+short/oklahoma_county_purchase_order_avl_systems_corrupted,unextractable,24,0,24,,100.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+short/passcoag-2020-w2-p0002-r1,evaluated,29,16,13,61.5385,100.0000,69.5652,55.1724,Municipal Real Estate Tax Assessments (W-Series),box_12[].code,box_13_retirement_plan,box_13_statutory_employee,MALFORMED_BBOX,WRONG_ROW,INSUFFICIENT_IOU
+short/passcoag-2020-w2-p0002-r2,evaluated,25,13,12,57.7778,100.0000,65.0000,52.0000,Municipal Real Estate Tax Assessments (W-Series),box_13_retirement_plan,box_13_statutory_employee,box_13_subtotal,MALFORMED_BBOX,INSUFFICIENT_IOU,WRONG_ROW
+short/passcoag-2020-w2-p0002-r3,evaluated,29,16,13,64.0000,100.0000,76.1905,55.1724,Municipal Real Estate Tax Assessments (W-Series),box_12[].code,employee_ssn,employer_ein,MALFORMED_BBOX,WRONG_ROW,INSUFFICIENT_IOU
+short/passcoag-2020-w2-p0002-r4,evaluated,27,12,15,54.5455,100.0000,70.5882,44.4444,Municipal Real Estate Tax Assessments (W-Series),employer_address,void,employee_address,MALFORMED_BBOX,WRONG_ROW,INSUFFICIENT_IOU
+short/passcoag-2020-w2-p0003-r1,evaluated,29,16,13,65.3061,100.0000,80.0000,55.1724,Municipal Real Estate Tax Assessments (W-Series),box_12[].code,employee_ssn,employer_name,MALFORMED_BBOX,INSUFFICIENT_IOU,WRONG_ROW
+short/passcoag-2020-w2-p0003-r2,evaluated,27,11,16,47.8261,100.0000,57.8947,40.7407,Municipal Real Estate Tax Assessments (W-Series),employee_ssn,employer_ein,employer_name,MALFORMED_BBOX,WRONG_ROW,none
+short/passcoag-2020-w2-p0003-r3,evaluated,27,16,11,68.0851,100.0000,80.0000,59.2593,Municipal Real Estate Tax Assessments (W-Series),employee_ssn,void,box_2_federal_income_tax_withheld,MALFORMED_BBOX,WRONG_ROW,INSUFFICIENT_IOU
+short/passcoag-2020-w2-p0003-r4,evaluated,29,17,12,66.6667,100.0000,77.2727,58.6207,Municipal Real Estate Tax Assessments (W-Series),employee_ssn,void,box_1_wages,MALFORMED_BBOX,WRONG_ROW,INSUFFICIENT_IOU
+short/passcoag-2020-w2-p0004-r1,evaluated,29,21,8,79.2453,100.0000,87.5000,72.4138,Municipal Real Estate Tax Assessments (W-Series),employee_ssn,void,employee_address,MALFORMED_BBOX,WRONG_ROW,INSUFFICIENT_IOU
+short/passcoag-2020-w2-p0004-r2,evaluated,29,17,12,69.3878,100.0000,85.0000,58.6207,Municipal Real Estate Tax Assessments (W-Series),employee_ssn,employer_name,employer_address,MALFORMED_BBOX,WRONG_ROW,INSUFFICIENT_IOU
+short/passcoag-2020-w2-p0004-r3,evaluated,29,17,12,66.6667,100.0000,77.2727,58.6207,Municipal Real Estate Tax Assessments (W-Series),box_12[].code,employee_ssn,employer_address,MALFORMED_BBOX,WRONG_ROW,INSUFFICIENT_IOU
+short/passcoag-2020-w2-p0004-r4,evaluated,29,20,9,76.9231,100.0000,86.9565,68.9655,Municipal Real Estate Tax Assessments (W-Series),employer_ein,void,employee_address,MALFORMED_BBOX,WRONG_ROW,none
+short/passcoag-2020-w2-p0005-r1,evaluated,29,10,19,45.4545,100.0000,66.6667,34.4828,Municipal Real Estate Tax Assessments (W-Series),box_12[].code,box_12[].amount,employee_ssn,MALFORMED_BBOX,WRONG_ROW,none
+short/passcoag-2020-w2-p0005-r2,evaluated,29,16,13,65.3061,100.0000,80.0000,55.1724,Municipal Real Estate Tax Assessments (W-Series),employee_ssn,employer_name,employer_address,MALFORMED_BBOX,WRONG_ROW,INSUFFICIENT_IOU
+short/passcoag-2020-w2-p0005-r3,evaluated,29,14,15,56.0000,100.0000,66.6667,48.2759,Municipal Real Estate Tax Assessments (W-Series),employee_ssn,employer_ein,void,MALFORMED_BBOX,WRONG_ROW,INSUFFICIENT_IOU
+short/passcoag-2020-w2-p0005-r4,evaluated,29,16,13,65.3061,100.0000,80.0000,55.1724,Municipal Real Estate Tax Assessments (W-Series),employee_ssn,employer_name,employer_address,MALFORMED_BBOX,INSUFFICIENT_IOU,WRONG_ROW
+short/passcoag-2020-w2-p0006-r1,evaluated,29,17,12,66.6667,100.0000,77.2727,58.6207,Municipal Real Estate Tax Assessments (W-Series),employee_ssn,employer_ein,employer_name,MALFORMED_BBOX,WRONG_ROW,INSUFFICIENT_IOU
+short/passcoag-2020-w2-p0006-r2,evaluated,29,13,16,55.3191,100.0000,72.2222,44.8276,Municipal Real Estate Tax Assessments (W-Series),box_12[].code,box_12[].amount,employee_ssn,MALFORMED_BBOX,WRONG_ROW,INSUFFICIENT_IOU
+short/passcoag-2020-w2-p0006-r3,evaluated,29,20,9,76.9231,100.0000,86.9565,68.9655,Municipal Real Estate Tax Assessments (W-Series),employee_ssn,employer_name,employer_address,MALFORMED_BBOX,WRONG_ROW,INSUFFICIENT_IOU
+short/passcoag-2020-w2-p0006-r4,evaluated,29,17,12,68.0000,100.0000,80.9524,58.6207,Municipal Real Estate Tax Assessments (W-Series),employee_ssn,void,employee_address,MALFORMED_BBOX,WRONG_ROW,none
+short/pershing_0001,skipped,672,0,672,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/ppl-two-bill-example,unextractable,22,0,22,,0.0000,,,"Invoices, Purchase Orders & Receipts",none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+short/real_clinton_property_25_11073,evaluated,173,139,34,76.4912,99.6825,76.7606,76.2238,ungrouped,creditors[].part,creditors[].disputed,creditors[].source_page,INSUFFICIENT_IOU,WRONG_ROW,MALFORMED_BBOX
+short/real_clinton_property_25_11073_corrupted,evaluated,173,99,74,57.5540,98.7342,59.2593,55.9441,ungrouped,creditors[].part,creditors[].source_page,creditors[].mailing_address[],INSUFFICIENT_IOU,WRONG_ROW,MALFORMED_BBOX
+short/real_franklin_aug_2025,evaluated,1285,1282,3,100.0000,100.0000,100.0000,100.0000,ungrouped,checks[].source_page,checks[].description,none,INSUFFICIENT_IOU,MALFORMED_BBOX,none
+short/real_franklin_nov_2025,evaluated,1075,1071,4,100.0000,100.0000,100.0000,100.0000,ungrouped,checks[].source_page,checks[].description,none,INSUFFICIENT_IOU,MALFORMED_BBOX,none
+short/real_wyo_Goshen_2024,evaluated,983,982,1,100.0000,100.0000,100.0000,100.0000,ungrouped,precinct_results[].source_page,contests[].columns[],none,MALFORMED_BBOX,INSUFFICIENT_IOU,WRONG_ROW
+short/real_wyo_Niobrara_2024,evaluated,311,310,1,100.0000,100.0000,100.0000,100.0000,ungrouped,precinct_results[].source_page,contests[].columns[],none,MALFORMED_BBOX,INSUFFICIENT_IOU,WRONG_ROW
+short/real_wyo_Weston_2024,evaluated,516,516,0,100.0000,100.0000,100.0000,100.0000,ungrouped,precinct_results[].source_page,none,none,INSUFFICIENT_IOU,MALFORMED_BBOX,none
+short/sched_i__after_violence_project_ty2024,evaluated,34,33,1,93.9394,100.0000,93.9394,93.9394,IRS Form 990 Schedule I,grants,none,none,ZERO_CANDIDATE,none,none
+short/sched_i__idaho_humanities_council_inc_ty2023,evaluated,41,40,1,95.0000,100.0000,95.0000,95.0000,IRS Form 990 Schedule I,grants,none,none,ZERO_CANDIDATE,none,none
+short/sched_i__rotary_club_ty2024,evaluated,36,35,1,97.1429,100.0000,97.1429,97.1429,IRS Form 990 Schedule I,grants,none,none,ZERO_CANDIDATE,none,none
+short/sched_i__the_women_s_foundation_of_colorado_inc_ty2024,evaluated,939,938,1,96.4819,99.6802,96.4819,96.4819,IRS Form 990 Schedule I,grants,none,none,ZERO_CANDIDATE,none,none
+short/sec_13f_0009_coatue_management,evaluated,2121,2116,5,99.8820,99.9292,99.9528,99.8113,SEC Form 13F Holdings Report,holdings[].voting_authority,holdings[].name_of_issuer,holdings,ZERO_CANDIDATE,INSUFFICIENT_IOU,none
+short/sec_13f_0019_soros_fund_management,evaluated,2896,2891,5,99.8791,99.9827,99.8963,99.8618,SEC Form 13F Holdings Report,holdings[].title_of_class,holdings,holdings[].voting_authority,ZERO_CANDIDATE,INSUFFICIENT_IOU,WRONG_ROW
+short/southampton-ny-york-env-invoice,unextractable,66,0,66,,66.6667,,,"Invoices, Purchase Orders & Receipts",none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+short/stephenville-axon-invoice,unextractable,333,0,333,,57.1429,,,"Invoices, Purchase Orders & Receipts",none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+short/texas_facilities_commission_purchase_order_shelton-keller,unextractable,48,0,48,,100.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+short/texas_facilities_commission_purchase_order_shelton-keller_corrupted,unextractable,48,0,48,,100.0000,,,ungrouped,none,none,none,NO_GOLD_BBOX_PAGE_ONLY,none,none
+short/ti_spec_sheet_ne555_timer,skipped,177,0,177,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/ti_spec_sheet_ne555_timer_corrupted,skipped,179,0,179,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/uillinois_rate_card_carpool_2024,skipped,115,0,115,,,,,"Invoices, Purchase Orders & Receipts",none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/uillinois_rate_card_carpool_2024_corrupted,skipped,115,0,115,,,,,"Invoices, Purchase Orders & Receipts",none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/utah_fleet_rate_schedule_fy2024,skipped,171,0,171,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/utah_fleet_rate_schedule_fy2024_corrupted,skipped,171,0,171,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/viega_price_list_propress_2026,skipped,1390,0,1390,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/viega_price_list_propress_2026_corrupted,skipped,1390,0,1390,,,,,ungrouped,none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none
+short/we-energies-sample-bill,skipped,28,0,28,,,,,"Invoices, Purchase Orders & Receipts",none,none,none,NO_GOLD_EVIDENCE_VALUE_ONLY,none,none

@@ -1,0 +1,190 @@
+{
+  "experiment_id": "EXP-050",
+  "timestamp": "2026-10-11T14:45:00Z",
+  "documents": {
+    "long/real_ftx_full_corrupted": {
+      "document_id": "long/real_ftx_full_corrupted",
+      "sibling_id": "long/real_ftx_full",
+      "total_pages": 114,
+      "degradation_severity": "Moderate",
+      "severity_class": "b",
+      "diagnosis": "Raster scan with noise artifacts. Character glyphs are intact and fully readable at 200/400 DPI. Main degradation is OCR segmentation splitting and vertical row registration drift.",
+      "page_1_stats": {
+        "corrupted_200_dpi": {
+          "dpi": 200,
+          "width": 2199,
+          "height": 1700,
+          "mean_intensity": 226.26,
+          "std_intensity": 21.61,
+          "edge_density": 0.0128,
+          "connected_components_count": 2164,
+          "estimated_rotation_deg": 0.0
+        },
+        "corrupted_400_dpi": {
+          "dpi": 400,
+          "width": 4398,
+          "height": 3400,
+          "mean_intensity": 227.1,
+          "std_intensity": 22.87,
+          "edge_density": 0.0139,
+          "connected_components_count": 2980,
+          "estimated_rotation_deg": 0.0
+        },
+        "clean_200_dpi": {
+          "dpi": 200,
+          "width": 2200,
+          "height": 1700,
+          "mean_intensity": 251.51,
+          "std_intensity": 27.59,
+          "edge_density": 0.011,
+          "connected_components_count": 536,
+          "estimated_rotation_deg": 0.0
+        },
+        "clean_400_dpi": {
+          "dpi": 400,
+          "width": 4400,
+          "height": 3400,
+          "mean_intensity": 251.51,
+          "std_intensity": 28.61,
+          "edge_density": 0.006,
+          "connected_components_count": 559,
+          "estimated_rotation_deg": 0.0
+        }
+      },
+      "page_2_table_stats": {
+        "corrupted_200_dpi": {
+          "dpi": 200,
+          "width": 2199,
+          "height": 1700,
+          "mean_intensity": 211.37,
+          "std_intensity": 52.21,
+          "edge_density": 0.1037,
+          "connected_components_count": 1659,
+          "estimated_rotation_deg": 0.0
+        },
+        "corrupted_400_dpi": {
+          "dpi": 400,
+          "width": 4398,
+          "height": 3400,
+          "mean_intensity": 212.22,
+          "std_intensity": 56.49,
+          "edge_density": 0.0895,
+          "connected_components_count": 2524,
+          "estimated_rotation_deg": 0.0
+        },
+        "clean_200_dpi": {
+          "dpi": 200,
+          "width": 2200,
+          "height": 1700,
+          "mean_intensity": 228.98,
+          "std_intensity": 68.24,
+          "edge_density": 0.1018,
+          "connected_components_count": 1599,
+          "estimated_rotation_deg": 0.0
+        },
+        "clean_400_dpi": {
+          "dpi": 400,
+          "width": 4400,
+          "height": 3400,
+          "mean_intensity": 228.96,
+          "std_intensity": 72.67,
+          "edge_density": 0.0554,
+          "connected_components_count": 2499,
+          "estimated_rotation_deg": 0.0
+        }
+      }
+    },
+    "long/real_imedia_full_corrupted": {
+      "document_id": "long/real_imedia_full_corrupted",
+      "sibling_id": "long/real_imedia_full",
+      "total_pages": 114,
+      "degradation_severity": "Moderate",
+      "severity_class": "b",
+      "diagnosis": "Synthetic darkening noise (mean drop from 226 to 137) and -1.0 degree slight skew. Text characters are still visually distinct and readable under contrast thresholding/DPI 200/400. Crucially, the 0.97% baseline failure was caused by falling back to the wrong table column coordinates (FTX grid).",
+      "page_1_stats": {
+        "corrupted_200_dpi": {
+          "dpi": 200,
+          "width": 2200,
+          "height": 1700,
+          "mean_intensity": 137.5,
+          "std_intensity": 54.64,
+          "edge_density": 0.129,
+          "connected_components_count": 2139,
+          "estimated_rotation_deg": 0.0
+        },
+        "corrupted_400_dpi": {
+          "dpi": 400,
+          "width": 4400,
+          "height": 3400,
+          "mean_intensity": 138.34,
+          "std_intensity": 57.59,
+          "edge_density": 0.0913,
+          "connected_components_count": 3002,
+          "estimated_rotation_deg": 0.0
+        },
+        "clean_200_dpi": {
+          "dpi": 200,
+          "width": 2200,
+          "height": 1700,
+          "mean_intensity": 225.77,
+          "std_intensity": 67.85,
+          "edge_density": 0.1247,
+          "connected_components_count": 1937,
+          "estimated_rotation_deg": 0.0
+        },
+        "clean_400_dpi": {
+          "dpi": 400,
+          "width": 4400,
+          "height": 3400,
+          "mean_intensity": 225.77,
+          "std_intensity": 72.13,
+          "edge_density": 0.0686,
+          "connected_components_count": 3359,
+          "estimated_rotation_deg": 0.0
+        }
+      },
+      "page_2_table_stats": {
+        "corrupted_200_dpi": {
+          "dpi": 200,
+          "width": 2200,
+          "height": 1700,
+          "mean_intensity": 137.65,
+          "std_intensity": 54.25,
+          "edge_density": 0.1282,
+          "connected_components_count": 2733,
+          "estimated_rotation_deg": -1.0
+        },
+        "corrupted_400_dpi": {
+          "dpi": 400,
+          "width": 4400,
+          "height": 3400,
+          "mean_intensity": 138.54,
+          "std_intensity": 57.04,
+          "edge_density": 0.0925,
+          "connected_components_count": 3872,
+          "estimated_rotation_deg": -1.0
+        },
+        "clean_200_dpi": {
+          "dpi": 200,
+          "width": 2200,
+          "height": 1700,
+          "mean_intensity": 226.0,
+          "std_intensity": 67.66,
+          "edge_density": 0.124,
+          "connected_components_count": 2086,
+          "estimated_rotation_deg": 0.0
+        },
+        "clean_400_dpi": {
+          "dpi": 400,
+          "width": 4400,
+          "height": 3400,
+          "mean_intensity": 225.99,
+          "std_intensity": 71.94,
+          "edge_density": 0.0683,
+          "connected_components_count": 3476,
+          "estimated_rotation_deg": 0.0
+        }
+      }
+    }
+  }
+}

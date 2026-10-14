@@ -1,0 +1,183 @@
+{
+  "fix_name": "irs_line_grid",
+  "description": "IRS Form Line-Item Grid Localizer",
+  "target_documents_evaluated": 15,
+  "documents_affected": 13,
+  "total_rescued": 117,
+  "total_regressed": 0,
+  "net_rescued": 117,
+  "runtime_seconds": 2.95,
+  "acceptance_criteria": {
+    "rescues_threshold_300": false,
+    "zero_regressions": true,
+    "min_documents_affected_5": true,
+    "max_runtime_5s": true
+  },
+  "per_document": [
+    {
+      "document_id": "medium/cabrera-2023",
+      "word_f1_baseline": 38.8406,
+      "page_f1_baseline": 68.9855,
+      "gradeable_fields": 187,
+      "passing_baseline": 67,
+      "failing_baseline": 120,
+      "rescued_fields": 3,
+      "regressed_fields": 0,
+      "net_rescued": 3
+    },
+    {
+      "document_id": "medium/becerra-2021",
+      "word_f1_baseline": 41.4573,
+      "page_f1_baseline": 66.0804,
+      "gradeable_fields": 435,
+      "passing_baseline": 165,
+      "failing_baseline": 270,
+      "rescued_fields": 9,
+      "regressed_fields": 0,
+      "net_rescued": 9
+    },
+    {
+      "document_id": "medium/cabrera-2022",
+      "word_f1_baseline": 43.6975,
+      "page_f1_baseline": 63.0252,
+      "gradeable_fields": 255,
+      "passing_baseline": 104,
+      "failing_baseline": 151,
+      "rescued_fields": 0,
+      "regressed_fields": 0,
+      "net_rescued": 0
+    },
+    {
+      "document_id": "medium/becerra-2024",
+      "word_f1_baseline": 46.3816,
+      "page_f1_baseline": 69.7368,
+      "gradeable_fields": 339,
+      "passing_baseline": 141,
+      "failing_baseline": 198,
+      "rescued_fields": 2,
+      "regressed_fields": 0,
+      "net_rescued": 2
+    },
+    {
+      "document_id": "medium/bar-lev-2024",
+      "word_f1_baseline": 47.0842,
+      "page_f1_baseline": 83.3693,
+      "gradeable_fields": 236,
+      "passing_baseline": 109,
+      "failing_baseline": 127,
+      "rescued_fields": 33,
+      "regressed_fields": 0,
+      "net_rescued": 33
+    },
+    {
+      "document_id": "medium/becerra-2022",
+      "word_f1_baseline": 48.1818,
+      "page_f1_baseline": 71.2206,
+      "gradeable_fields": 481,
+      "passing_baseline": 211,
+      "failing_baseline": 270,
+      "rescued_fields": 8,
+      "regressed_fields": 0,
+      "net_rescued": 8
+    },
+    {
+      "document_id": "medium/bar-lev-2021",
+      "word_f1_baseline": 50.5747,
+      "page_f1_baseline": 87.4046,
+      "gradeable_fields": 268,
+      "passing_baseline": 132,
+      "failing_baseline": 136,
+      "rescued_fields": 12,
+      "regressed_fields": 0,
+      "net_rescued": 12
+    },
+    {
+      "document_id": "medium/cabrera-2021",
+      "word_f1_baseline": 52.9262,
+      "page_f1_baseline": 79.3893,
+      "gradeable_fields": 207,
+      "passing_baseline": 104,
+      "failing_baseline": 103,
+      "rescued_fields": 8,
+      "regressed_fields": 0,
+      "net_rescued": 8
+    },
+    {
+      "document_id": "medium/bar-lev-2022",
+      "word_f1_baseline": 54.2797,
+      "page_f1_baseline": 81.6667,
+      "gradeable_fields": 245,
+      "passing_baseline": 129,
+      "failing_baseline": 116,
+      "rescued_fields": 6,
+      "regressed_fields": 0,
+      "net_rescued": 6
+    },
+    {
+      "document_id": "medium/bar-lev-2023",
+      "word_f1_baseline": 54.6237,
+      "page_f1_baseline": 85.2248,
+      "gradeable_fields": 236,
+      "passing_baseline": 127,
+      "failing_baseline": 109,
+      "rescued_fields": 22,
+      "regressed_fields": 0,
+      "net_rescued": 22
+    },
+    {
+      "document_id": "medium/becerra-2023",
+      "word_f1_baseline": 55.9598,
+      "page_f1_baseline": 76.6917,
+      "gradeable_fields": 431,
+      "passing_baseline": 221,
+      "failing_baseline": 210,
+      "rescued_fields": 9,
+      "regressed_fields": 0,
+      "net_rescued": 9
+    },
+    {
+      "document_id": "short/arif-2021",
+      "word_f1_baseline": 59.8039,
+      "page_f1_baseline": 81.3725,
+      "gradeable_fields": 108,
+      "passing_baseline": 61,
+      "failing_baseline": 47,
+      "rescued_fields": 1,
+      "regressed_fields": 0,
+      "net_rescued": 1
+    },
+    {
+      "document_id": "medium/arif-2023",
+      "word_f1_baseline": 62.7027,
+      "page_f1_baseline": 85.4054,
+      "gradeable_fields": 190,
+      "passing_baseline": 116,
+      "failing_baseline": 74,
+      "rescued_fields": 1,
+      "regressed_fields": 0,
+      "net_rescued": 1
+    },
+    {
+      "document_id": "short/arif-2024",
+      "word_f1_baseline": 64.4068,
+      "page_f1_baseline": 82.2034,
+      "gradeable_fields": 130,
+      "passing_baseline": 76,
+      "failing_baseline": 54,
+      "rescued_fields": 3,
+      "regressed_fields": 0,
+      "net_rescued": 3
+    },
+    {
+      "document_id": "short/arif-2022",
+      "word_f1_baseline": 69.5238,
+      "page_f1_baseline": 84.7619,
+      "gradeable_fields": 111,
+      "passing_baseline": 73,
+      "failing_baseline": 38,
+      "rescued_fields": 0,
+      "regressed_fields": 0,
+      "net_rescued": 0
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "experiment_id": "EXP-046",
+  "total_rescued_fields": 32,
+  "stage_fix_attribution": [
+    {
+      "stage_name": "stage_07_row_index_mapper",
+      "rescued_fields": 24,
+      "share_pct": 75.0,
+      "targeted_failure_class": "NORMALIZATION_MISMATCH (SUB_AMBIGUOUS_OCCURRENCE)",
+      "technique_type": "Deterministic schema array-to-physical row table mapping with line-wrap merging"
+    },
+    {
+      "stage_name": "stage_20_char_span_slicer",
+      "rescued_fields": 4,
+      "share_pct": 12.5,
+      "targeted_failure_class": "TOKEN_SLICING",
+      "technique_type": "Character offset bbox interpolation across multi-character PDF token slices"
+    },
+    {
+      "stage_name": "stage_16_numeric_canonical_v2",
+      "rescued_fields": 2,
+      "share_pct": 6.25,
+      "targeted_failure_class": "NORMALIZATION_MISMATCH",
+      "technique_type": "Float value tolerance canonicalization with currency symbol stripping"
+    },
+    {
+      "stage_name": "stage_02_fuzzy_matcher",
+      "rescued_fields": 1,
+      "share_pct": 3.125,
+      "targeted_failure_class": "NORMALIZATION_MISMATCH",
+      "technique_type": "Levenshtein distance edit distance matching within mapped spatial envelope"
+    },
+    {
+      "stage_name": "stage_15_consonant_skeleton",
+      "rescued_fields": 1,
+      "share_pct": 3.125,
+      "targeted_failure_class": "NORMALIZATION_MISMATCH",
+      "technique_type": "Vowel-stripped consonant skeleton matching for OCR character dropped errors"
+    }
+  ]
+}

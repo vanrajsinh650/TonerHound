@@ -1,0 +1,72 @@
+{
+  "total_failures_analyzed_in_target_docs": 1143,
+  "failure_mode_breakdown": {
+    "WRONG_ROW": 351,
+    "INSUFFICIENT_IOU": 102,
+    "ZERO_CANDIDATE": 299,
+    "WRONG_PAGE": 386,
+    "MALFORMED_BBOX": 5
+  },
+  "most_frequent_failing_lines": [
+    [
+      "7",
+      28
+    ],
+    [
+      "16",
+      27
+    ],
+    [
+      "11",
+      26
+    ],
+    [
+      "8",
+      25
+    ],
+    [
+      "2",
+      24
+    ],
+    [
+      "21",
+      23
+    ],
+    [
+      "9",
+      23
+    ],
+    [
+      "15",
+      22
+    ],
+    [
+      "18",
+      22
+    ],
+    [
+      "6",
+      21
+    ]
+  ],
+  "top_3_failure_patterns": [
+    {
+      "pattern": "IDENTICAL_NUMERIC_VALUE_ROW_COLLISION",
+      "count": 351,
+      "description": "Form 1040 transfers totals across multiple lines (e.g. line 1a -> line 1z; line 16 -> line 18 -> line 22 -> line 24). When identical dollar figures appear on multiple rows, the unguided extractor collapses citations to a single row, failing the other rows.",
+      "mechanical_fix": "Anchor each schema field to its specific line-number y-band (y in [anchor_y - 0.008, anchor_y + 0.008]), forcing candidate selection onto the correct row."
+    },
+    {
+      "pattern": "PAGE_DRIFT_TO_SUBSEQUENT_SCHEDULES",
+      "count": 386,
+      "description": "Core tax numbers (Adjusted Gross Income, Total Income, Taxable Refunds) recur on subsequent supporting schedules (Schedule 1, Schedule A/B/D, Form 8995, state tax forms). The extractor drifts to later pages (e.g. page 24) instead of grounding to the primary Form 1040 page (page 1 or 2).",
+      "mechanical_fix": "Restrict line item candidates for Form 1040 schema fields to Page 1 (lines 1-15) and Page 2 (lines 16-38), falling back to Schedule 1 (Page 3-4) only for schedule_1 prefixed fields."
+    },
+    {
+      "pattern": "ZERO_CANDIDATE_MISSING_OMISSION",
+      "count": 299,
+      "description": "Fields are completely omitted by the baseline pipeline because the generic token search fails to localize the line item value box within dense tabular OCR text.",
+      "mechanical_fix": "Extract values directly from the localized right-rail bounding box (x in [0.75, 0.95]) aligned vertically with the detected line anchor."
+    }
+  ]
+}

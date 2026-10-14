@@ -1,0 +1,123 @@
+<USER_REQUEST>
+TONERHOUND — EXP-045: AMBIGUOUS OCCURRENCE ASSAULT
+
+You are executing a full research cycle. Read every instruction before writing code.
+
+=====================================================================
+0. HARD CONSTRAINTS
+=====================================================================
+
+NO LLM
+NO VLM
+NO NEURAL NETWORK
+NO CLOUD AI API
+NO EMBEDDINGS (unless explicitly gated and disabled by default)
+NO GENERATIVE AI
+
+Allowed: PyMuPDF, pypdfium2, pytesseract, OpenCV, Pillow, NumPy, SciPy, scikit-image, rapidfuzz, python-dateutil, networkx, and existing TonerHound utilities.
+
+Production code (src/tonerhound/) must remain UNMODIFIED until a validated integration gate passes. All new work goes into research/experiments/EXP-045/.
+
+Do NOT claim a result before measuring it.
+Do NOT fabricate numbers.
+Do NOT report theoretical ceilings as expected gains.
+If a phase rescues 0 fields, report 0.
+If the score goes down, report the negative delta honestly.
+
+=====================================================================
+1. WHY THIS EXPERIMENT EXISTS
+=====================================================================
+
+Current state (EXP-044 result):
+  Word Grounding F1: 72.8081%
+  Page Grounding F1: 83.9026%
+  Passing fields: 336,135 / 498,140
+  Failing fields: 162,005
+
+EXP-044 decomposed the NORMALIZATION_MISMATCH bucket (46,158 fields) and discovered:
+
+  SUB_AMBIGUOUS_OCCURRENCE: 36,017 fields (76.80% of the bucket)
+  SUB_OTHER: 8,097 fields (17.27% of the bucket)
+  SUB_PERCENT_DECIMAL: 2,512 fields
+  SUB_ORDER_SWAP: 262 fields
+  Everything else: < 10 fields combined
+
+The single biggest remaining failure class is SUB_AMBIGUOUS_OCCURRENCE — 36,017 fields where the value exists verbatim on the page, but the system picked the wrong occurrence (wrong row, wrong column, wrong instance in a table).
+
+EXP-044's Stage 6 (ambiguity resolver) only recovered 797 of these 36,017 fields. That is a 2.2% recovery rate.
+
+This experiment targets the remaining ~35,220 fields. The goal is to push the recovery 
+<truncated 13882 bytes>
+ FINAL RESPONSE FORMAT
+=====================================================================
+
+At the end of the cycle, return:
+
+TONERHOUND EXP-045 COMPLETE
+
+AUDIT:
+  Samples analyzed: 200
+  Deterministically solvable: N (N.N%)
+  Genuinely ambiguous: N (N.N%)
+  Realistic upper bound for this class: +X.XX pp
+
+SUBCLASS BREAKDOWN (from audit):
+  SUB_ROW_CONTEXT:          N fields
+  SUB_COLUMN_CONTEXT:       N fields
+  SUB_SECTION_CONTEXT:      N fields
+  SUB_PAGE_POSITION:        N fields
+  SUB_VALUE_MAGNITUDE:      N fields
+  SUB_DATE_PROXIMITY:       N fields
+  SUB_REPETITION_PATTERN:   N fields
+  SUB_UNKNOWABLE:           N fields
+
+BASELINE (EXP-044):
+  Word F1: 72.8081%
+  Page F1: 83.9026%
+  Passing: 336,135
+
+EXP-045 RESULT:
+  Word F1: XX.XXXX%
+  Page F1: XX.XXXX%
+  Passing: N
+  Delta: +X.XX pp / -X.XX pp
+
+PER-STAGE ATTRIBUTION:
+  Stage 1 (Column context):   N fields
+  Stage 2 (Row context):      N fields
+  Stage 3 (Global row assign): N fields
+  Stage 4 (Constraint solver): N fields
+  Stage 5 (Optimal transport): N fields
+  Stage 6 (Baseline preserve): N fields
+
+FIELD RECOVERY:
+  Rescued: N
+  Regressed: N
+  Net: N
+
+HELD-OUT GATE: PASS / FAIL
+
+REMAINING GAP TO 80%: X.XX pp
+
+REALISTIC NEXT MILESTONE: <one sentence>
+
+DECISION: INTEGRATE / REFINE / REJECT
+
+NEXT PRIORITY: <one evidence-based recommendation>
+
+Then list the exact artifact paths.
+
+=====================================================================
+14. FINAL COMMAND
+=====================================================================
+
+Start immediately. Do not ask for confirmation.
+Parallelize independent work.
+Keep production code untouched until the integration gate passes.
+No LLM. No VLM. No neural network. No fake numbers.
+
+The goal is not a higher number. The goal is an honest measurement of what SUB_AMBIGUOUS_OCCURRENCE can actually yield with deterministic methods, and a clear answer to whether 80% is reachable on this class alone.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-08T15:15:04+05:30.
+</ADDITIONAL_METADATA>

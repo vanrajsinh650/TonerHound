@@ -1,0 +1,52 @@
+{
+  "experiment_id": "EXP-047",
+  "phase": "H_ablation",
+  "baseline_exp046_rescued": 32,
+  "configurations": [
+    {
+      "name": "full",
+      "label": "Full (char + numeric + table + global)",
+      "rescued": 729,
+      "regressed": 0,
+      "net_rescued": 729,
+      "gate_pass": false,
+      "elapsed_s": 639.5030868350004
+    },
+    {
+      "name": "no_char",
+      "label": "Without char_index",
+      "rescued": 219,
+      "regressed": 0,
+      "net_rescued": 219,
+      "gate_pass": false,
+      "elapsed_s": 44.244617565000226
+    },
+    {
+      "name": "no_numeric",
+      "label": "Without numeric_index",
+      "rescued": 729,
+      "regressed": 0,
+      "net_rescued": 729,
+      "gate_pass": false,
+      "elapsed_s": 625.6638339439996
+    },
+    {
+      "name": "no_table",
+      "label": "Without table_localizer",
+      "rescued": 767,
+      "regressed": 0,
+      "net_rescued": 767,
+      "gate_pass": false,
+      "elapsed_s": 645.6459246679988
+    },
+    {
+      "name": "no_global_assigner",
+      "label": "Without global_assigner (EXP-046 field-by-field)",
+      "rescued": 32,
+      "regressed": 0,
+      "net_rescued": 32,
+      "note": "EXP-046 final result \u2014 field-by-field 34-stage pipeline"
+    }
+  ],
+  "total_elapsed_s": 1315.8627504450014
+}

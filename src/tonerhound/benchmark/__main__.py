@@ -44,6 +44,11 @@ def main() -> None:
         action="store_true",
         help="Disable two-pass structural row disambiguation",
     )
+    parser.add_argument(
+        "--force-include-all",
+        action="store_true",
+        help="Force include all 370 documents, using chunked evaluation for large arrays exceeding memory guards",
+    )
     args = parser.parse_args()
 
     data_dir = Path(args.data_dir)
@@ -57,6 +62,7 @@ def main() -> None:
         output_md=out_md,
         enable_ocr=args.enable_ocr,
         enable_structural_disambiguation=not args.disable_structural_disambiguation,
+        force_include_all=args.force_include_all,
     )
 
 

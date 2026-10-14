@@ -1,0 +1,92 @@
+{
+  "total_sampled": 200,
+  "solvable_count": 200,
+  "solvable_pct": 100.0,
+  "genuinely_ambiguous_count": 0,
+  "genuinely_ambiguous_pct": 0.0,
+  "realistic_upper_bound_pp": 1.9661,
+  "categories": {
+    "SUB_ROW_CONTEXT": {
+      "count": 18,
+      "pct": 9.0
+    },
+    "SUB_COLUMN_CONTEXT": {
+      "count": 1,
+      "pct": 0.5
+    },
+    "SUB_SECTION_CONTEXT": {
+      "count": 2,
+      "pct": 1.0
+    },
+    "SUB_PAGE_POSITION": {
+      "count": 152,
+      "pct": 76.0
+    },
+    "SUB_VALUE_MAGNITUDE": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "SUB_DATE_PROXIMITY": {
+      "count": 2,
+      "pct": 1.0
+    },
+    "SUB_REPETITION_PATTERN": {
+      "count": 25,
+      "pct": 12.5
+    },
+    "SUB_UNKNOWABLE": {
+      "count": 0,
+      "pct": 0.0
+    }
+  },
+  "examples": [
+    {
+      "field_path": "holdings[1819].issuer",
+      "gold_value": "Morgan Stanley",
+      "total_occurrences": 0,
+      "page_occurrences": 0,
+      "distinguishing_signal": "SUB_PAGE_POSITION",
+      "human_can_pick": true
+    },
+    {
+      "field_path": "holdings[1152].voting_authority.shared",
+      "gold_value": "0",
+      "total_occurrences": 1906,
+      "page_occurrences": 56,
+      "distinguishing_signal": "SUB_REPETITION_PATTERN",
+      "human_can_pick": true
+    },
+    {
+      "field_path": "owners[15708].name",
+      "gold_value": "TELEFLORA",
+      "total_occurrences": 2,
+      "page_occurrences": 1,
+      "distinguishing_signal": "SUB_ROW_CONTEXT",
+      "human_can_pick": true
+    },
+    {
+      "field_path": "holdings[188].cusip",
+      "gold_value": "141788109",
+      "total_occurrences": 2,
+      "page_occurrences": 2,
+      "distinguishing_signal": "SUB_COLUMN_CONTEXT",
+      "human_can_pick": true
+    },
+    {
+      "field_path": "line_items[57].service_date_to",
+      "gold_value": "01/19/2017",
+      "total_occurrences": 7,
+      "page_occurrences": 2,
+      "distinguishing_signal": "SUB_DATE_PROXIMITY",
+      "human_can_pick": true
+    },
+    {
+      "field_path": "holdings[1572].industry_group",
+      "gold_value": "Banks",
+      "total_occurrences": 14,
+      "page_occurrences": 2,
+      "distinguishing_signal": "SUB_SECTION_CONTEXT",
+      "human_can_pick": true
+    }
+  ]
+}

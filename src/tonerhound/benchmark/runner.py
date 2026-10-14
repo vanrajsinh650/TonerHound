@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import json
 import time
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, field
 from pathlib import Path
 from typing import Any
 
@@ -71,7 +71,9 @@ class BenchmarkSuiteSummary:
     leaderboard_leader_name: str
     leaderboard_leader_word_f1: float
     delta_over_leader_percentage_points: float
-    case_metrics: list[TestCaseMetrics]
+    num_evaluated_documents: int = 0
+    avg_word_grounding_f1_370: float = 0.0
+    case_metrics: list[TestCaseMetrics] = field(default_factory=list)
 
 
 def run_case_evaluation(
@@ -81,6 +83,7 @@ def run_case_evaluation(
     enable_verification: bool = True,
     score_margin_threshold: float = 0.05,
     enable_bbox_precision: bool = True,
+    force_include_all: bool = False,
 ) -> TestCaseMetrics:
     """Run controlled benchmark on a single ExtractTestCase."""
     pdf_path = Path(case.file_path)
@@ -120,6 +123,7 @@ def run_case_evaluation(
         field_rules=case.test_rules,
         field_citations=[],
         data_schema=case.data_schema,
+        force_include_all=force_include_all,
     )
 
     # 4. Evaluate TonerHound
@@ -130,6 +134,7 @@ def run_case_evaluation(
         field_rules=case.test_rules,
         field_citations=citations,
         data_schema=case.data_schema,
+        force_include_all=force_include_all,
     )
     eval_time = time.perf_counter() - t2
 
@@ -173,6 +178,7 @@ def run_benchmark_suite(
     enable_verification: bool = True,
     score_margin_threshold: float = 0.05,
     enable_bbox_precision: bool = True,
+    force_include_all: bool = False,
 ) -> BenchmarkSuiteSummary:
     """Load test cases from data_dir and run evaluation across documents."""
     from extract_bench.test_cases.loader import load_test_cases
@@ -196,6 +202,7 @@ def run_benchmark_suite(
                 enable_verification=enable_verification,
                 score_margin_threshold=score_margin_threshold,
                 enable_bbox_precision=enable_bbox_precision,
+                force_include_all=force_include_all,
             )
             case_results.append(m)
             w_f1 = f"{m.word_f1 * 100:.2f}%" if m.word_f1 is not None else "N/A"
@@ -219,6 +226,8 @@ def run_benchmark_suite(
         avg_ambiguity = sum(m.ambiguity_rate or 0.0 for m in valid_word_cases) / len(valid_word_cases)
     else:
         avg_word_f1 = avg_word_prec = avg_word_rec = avg_false_grounding = avg_ambiguity = 0.0
+
+    avg_word_f1_370 = sum(m.word_f1 or 0.0 for m in case_results) / len(case_results) if case_results else 0.0
 
     valid_page_cases = [m for m in case_results if m.page_f1 is not None]
     if valid_page_cases:
@@ -252,6 +261,8 @@ def run_benchmark_suite(
         leaderboard_leader_name="LlamaExtract Agentic Plus",
         leaderboard_leader_word_f1=LLAMAEXTRACT_AGENTIC_PLUS_WORD_F1,
         delta_over_leader_percentage_points=delta,
+        num_evaluated_documents=len(valid_word_cases),
+        avg_word_grounding_f1_370=avg_word_f1_370,
         case_metrics=case_results,
     )
 

@@ -1,0 +1,454 @@
+<USER_REQUEST>
+TONERHOUND — EXP-045: AMBIGUOUS OCCURRENCE ASSAULT
+
+You are executing a full research cycle. Read every instruction before writing code.
+
+=====================================================================
+0. HARD CONSTRAINTS
+=====================================================================
+
+NO LLM
+NO VLM
+NO NEURAL NETWORK
+NO CLOUD AI API
+NO EMBEDDINGS (unless explicitly gated and disabled by default)
+NO GENERATIVE AI
+
+Allowed: PyMuPDF, pypdfium2, pytesseract, OpenCV, Pillow, NumPy, SciPy, scikit-image, rapidfuzz, python-dateutil, networkx, and existing TonerHound utilities.
+
+Production code (src/tonerhound/) must remain UNMODIFIED until a validated integration gate passes. All new work goes into research/experiments/EXP-045/.
+
+Do NOT claim a result before measuring it.
+Do NOT fabricate numbers.
+Do NOT report theoretical ceilings as expected gains.
+If a phase rescues 0 fields, report 0.
+If the score goes down, report the negative delta honestly.
+
+=====================================================================
+1. WHY THIS EXPERIMENT EXISTS
+=====================================================================
+
+Current state (EXP-044 result):
+  Word Grounding F1: 72.8081%
+  Page Grounding F1: 83.9026%
+  Passing fields: 336,135 / 498,140
+  Failing fields: 162,005
+
+EXP-044 decomposed the NORMALIZATION_MISMATCH bucket (46,158 fields) and discovered:
+
+  SUB_AMBIGUOUS_OCCURRENCE: 36,017 fields (76.80% of the bucket)
+  SUB_OTHER: 8,097 fields (17.27% of the bucket)
+  SUB_PERCENT_DECIMAL: 2,512 fields
+  SUB_ORDER_SWAP: 262 fields
+  Everything else: < 10 fields combined
+
+The single biggest remaining failure class is SUB_AMBIGUOUS_OCCURRENCE — 36,017 fields where the value exists verbatim on the page, but the system picked the wrong occurrence (wrong row, wrong column, wrong instance in a table).
+
+EXP-044's Stage 6 (ambiguity resolver) only recovered 797 of these 36,017 fields. That is a 2.2% recovery rate.
+
+This experiment targets the remaining ~35,220 fields. The goal is to push the recovery rate from 2.2% to a measurably higher number, with strict zero regressions.
+
+=====================================================================
+2. PHASE A — DEEP DIAGNOSTIC AUDIT
+=====================================================================
+
+Before writing any matching code, understand the failure deeply.
+
+PHASE A.1 — Sample and classify
+
+  Randomly sample 200 fields from SUB_AMBIGUOUS_OCCURRENCE across all affected documents.
+  For each field, write a one-line diagnosis:
+    - Is the value present verbatim on the page? (yes/no)
+    - How many times does the same value appear on the page? (N occurrences)
+    - How many times does the same value appear in the entire document? (N total)
+    - What distinguishes the correct occurrence from the others? (row context, column header, sibling field, section header, page position, value magnitude, date proximity)
+    - Can a human pick the correct one from the document text alone? (yes/no)
+
+  Save to: research/experiments/EXP-045/audit/ambiguous_200_sample.json
+
+PHASE A.2 — Categorize the distinguishing signal
+
+  From the 200 samples, categorize the primary disambiguating signal:
+
+    SUB_ROW_CONTEXT: The correct occurrence sits in a specific row, identifiable by adjacent cell values (sibling fields).
+    SUB_COLUMN_CONTEXT: The correct occurrence sits under a specific column header.
+    SUB_SECTION_CONTEXT: The correct occurrence sits under a section heading that repeats later in the document.
+    SUB_PAGE_POSITION: The correct occurrence sits at a predictable position (top of page, bottom of page, near a specific coordinate).
+    SUB_VALUE_MAGNITUDE: The correct occurrence is distinguishable by the value's magnitude or range relative to sibling fields.
+    SUB_DATE_PROXIMITY: The correct occurrence is near a specific date or period.
+    SUB_REPETITION_PATTERN: The correct occurrence is the Nth repetition (e.g., the 5th occurrence of "0" in a table).
+    SUB_UNKNOWABLE: No deterministic signal distinguishes the correct occurrence from the others.
+
+  Required output: research/experiments/EXP-045/audit/ambiguous_200_breakdown.json
+
+  Format:
+  {
+    "total_sampled": 200,
+    "categories": {
+      "SUB_ROW_CONTEXT": {"count": N, "pct": N.N},
+      "SUB_COLUMN_CONTEXT": {"count": N, "pct": N.N},
+      ...
+    },
+    "examples": [
+      {
+        "field_path": "...",
+        "gold_value": "...",
+        "total_occurrences": N,
+        "correct_occurrence": K,
+        "distinguishing_signal": "SUB_ROW_CONTEXT",
+        "human_can_pick": true
+      }
+    ]
+  }
+
+PHASE A.3 — Quantify the ceiling
+
+  From the 200 samples, compute:
+    - How many are deterministically solvable? (A human can pick the right occurrence using only text + geometry)
+    - How many are genuinely ambiguous? (Even a human cannot pick without domain knowledge)
+
+  The solvable fraction × 36,017 = the realistic upper bound for this class.
+
+=====================================================================
+3. PHASE B — ALGORITHMIC RESEARCH AND SELECTION
+=====================================================================
+
+Based on the diagnostic breakdown, select and implement the appropriate algorithms. Do not implement all of them. Pick the two or three that match the dominant signals in your 200-sample audit.
+
+ALGORITHM 1 — Row-Context Matching (for SUB_ROW_CONTEXT)
+
+  The core idea: The correct occurrence is the one whose surrounding row cells match the surrounding extracted values of the target field.
+
+  Build a row-level fingerprint for each candidate occurrence:
+    - The target value's token string
+    - The nearest sibling token to the left (if any)
+    - The nearest sibling token to the right (if any)
+    - The token directly above (same column)
+    - The token directly below (same column)
+
+  Score each candidate using a weighted similarity:
+    score = w1 × similarity(target) + w2 × similarity(left) + w3 × similarity(right) + w4 × similarity(above) + w5 × similarity(below)
+
+  Use a weighted dice coefficient or Jaccard similarity on character n-grams.
+
+  Recommended weights (tune empirically):
+    w1 = 1.0 (target value — must match)
+    w2 = 0.5 (left sibling)
+    w3 = 0.5 (right sibling)
+    w4 = 0.3 (above)
+    w5 = 0.3 (below)
+
+  File: research/experiments/EXP-045/matching/row_context_matcher.py
+
+ALGORITHM 2 — Column-Context Matching (for SUB_COLUMN_CONTEXT)
+
+  The core idea: The correct occurrence is the one whose column header matches the expected schema field name.
+
+  For each table, detect the header row using horizontal line density or font-weight analysis.
+  For each candidate occurrence, find the header cell directly above it (same column).
+  Score the header against the schema field name using token-set similarity.
+
+  score = similarity(header_text, schema_field_name)
+
+  Reject if score < 0.5.
+
+  File: research/experiments/EXP-045/matching/column_context_matcher.py
+
+ALGORITHM 3 — Global Row Assignment (for dense tables with many repeated values)
+
+  The core idea: Instead of matching each field independently, solve the entire table's row assignment as a global optimization problem.
+
+  This is the Hungarian algorithm applied at the row level, not the cell level.
+
+  Build a cost matrix between:
+    - Extracted records (schema rows)
+    - Visual rows in the table (detected via line clustering)
+
+  Cost between extracted record i and visual row j:
+    cost(i, j) = 1 - (similarity of sibling values + similarity of row position + similarity of column alignment)
+
+  Solve with scipy.optimize.linear_sum_assignment.
+
+  This guarantees the globally optimal assignment for the entire table. No local greedy errors.
+
+  File: research/experiments/EXP-045/matching/global_row_assigner.py
+
+ALGORITHM 4 — Constraint Satisfaction Filter (for SUB_SECTION_CONTEXT and SUB_PAGE_POSITION)
+
+  The core idea: Some disambiguation signals are hard constraints, not soft scores.
+
+  Build a constraint graph:
+    - Node = candidate occurrence
+    - Edge = "these two candidates cannot both be correct" (mutual exclusivity)
+
+  Apply hard constraints:
+    - Only one candidate per extracted field
+    - If two fields have the same gold value and they map to different schema paths, they must map to different occurrences
+    - If a field is expected on page N, reject candidates on other pages
+
+  Solve the constraint satisfaction problem using forward checking with backtracking.
+
+  This is a small, tractable CSP. The number of candidates per field is typically < 20.
+
+  File: research/experiments/EXP-045/matching/constraint_solver.py
+
+ALGORITHM 5 — Optimal Transport for Fuzzy Candidate Matching (for SUB_REPETITION_PATTERN)
+
+  The core idea: When the same value repeats N times, treat the candidate set as a distribution and find the optimal transport plan to the expected positions.
+
+  This is a softer version of the Hungarian assignment. It allows partial matches and handles uncertainty gracefully.
+
+  Use the Sinkhorn algorithm (fast approximation of OT) or the exact OT solver from POT (Python Optimal Transport).
+
+  File: research/experiments/EXP-045/matching/optimal_transport_matcher.py
+
+=====================================================================
+4. PHASE C — BUILD THE PIPELINE
+=====================================================================
+
+Build a gated pipeline. Each stage operates on fields the previous stage failed to resolve. Never override a passing field.
+
+  STAGE 1: Column-context matcher
+    Only applies to fields inside detected tables.
+    Rejects when the header similarity is below threshold.
+
+  STAGE 2: Row-context matcher
+    Only applies when sibling tokens are available.
+    Requires at least 2 of 5 sibling slots to be populated.
+
+  STAGE 3: Global row assignment (Hungarian)
+    Only applies to tables with ≥ 5 rows and ≥ 3 columns.
+    Solves the entire table at once. No greedy.
+
+  STAGE 4: Constraint satisfaction filter
+    Only applies when multiple candidates survive Stages 1–3.
+    Uses forward checking to prune the candidate space.
+
+  STAGE 5: Optimal transport fallback
+    Only applies when a field has > 5 candidate occurrences.
+    Uses Sinkhorn to find the best soft match.
+
+  STAGE 6: Preserve baseline
+    If all stages fail, keep the baseline citation (the one that already scored IoU < 0.50).
+
+=====================================================================
+5. PHASE D — ABLATION STUDY
+=====================================================================
+
+For every stage, run an ablation:
+
+  Full pipeline:      measure rescued count
+  Pipeline - Stage N: measure rescued count without stage N
+  Delta:              what did Stage N contribute?
+
+Required output: research/experiments/EXP-045/ablation.json
+
+=====================================================================
+6. PHASE E — HELD-OUT EVALUATION
+=====================================================================
+
+Before running the full 370-doc benchmark:
+
+  Run on the frozen held-out cohort (research/data/held_out/)
+  Success gate:
+    - Fields rescued ≥ 1000 net (higher than EXP-044's 8,402 because this is a focused class)
+    - Fields regressed = 0
+    - Latency increase ≤ 3x baseline
+
+If gate fails, narrow specific stages and re-run. Do not proceed to full benchmark.
+
+=====================================================================
+7. PHASE F — FULL 370-DOCUMENT BENCHMARK
+=====================================================================
+
+Run the full official ExtractBench 370-doc corpus with the new pipeline.
+
+Commands:
+  cd research
+  OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 \
+    nice -n 15 uv run python -m tonerhound.benchmark \
+    --data-dir research/data/full \
+    --exp-id EXP-045 \
+    --output-json research/experiments/EXP-045/results/full_benchmark_results.json \
+    --output-md research/experiments/EXP-045/results/FINAL_REPORT.md
+
+Run the fixed microscope on the result:
+  python observer/run_microscope_v5.py --run-id EXP-045 --baseline EXP-044
+
+=====================================================================
+8. PHASE G — REQUIRED ARTIFACTS
+=====================================================================
+
+Output every artifact word-for-word. Do not summarize.
+
+  research/experiments/EXP-045/
+      README.md
+      FINAL_REPORT.md
+      before_after_comparison.md
+      decision.md
+      implementation_notes.md
+      ablation.json
+      results/
+          full_benchmark_results.json
+          failure_migration.json
+          per_document.csv
+          regression_analysis.json
+          fix_attribution.json
+      audit/
+          ambiguous_200_sample.json
+          ambiguous_200_breakdown.json
+      matching/
+          row_context_matcher.py
+          column_context_matcher.py
+          global_row_assigner.py
+          constraint_solver.py
+          optimal_transport_matcher.py
+          unified_pipeline_v2.py
+
+=====================================================================
+9. PHASE H — FINAL REPORT FORMAT
+=====================================================================
+
+The FINAL_REPORT.md must answer these questions exactly:
+
+1.  What was the baseline? (Word F1, Page F1, passing fields — from EXP-044)
+2.  How many SUB_AMBIGUOUS_OCCURRENCE fields did the 200-sample audit find?
+3.  What is the breakdown by distinguishing signal?
+4.  What fraction is deterministically solvable?
+5.  What did each stage rescue?
+6.  What was the total rescued count?
+7.  What was the total regressed count?
+8.  What is the new Word F1?
+9.  What is the new Page F1?
+10. What is the delta vs EXP-044?
+11. Which documents improved? (top 10 with gains)
+12. Which documents regressed? (if any, with deltas)
+13. Did the ablation study confirm each stage's contribution?
+14. Did the held-out gate pass?
+15. What failure classes shrank?
+16. What new failure modes emerged?
+17. What is the remaining gap to 80%?
+18. What is the realistic next milestone?
+19. How many SUB_AMBIGUOUS_OCCURRENCE fields remain?
+20. Are they solvable with determinism, or do they require a different approach?
+
+=====================================================================
+10. SUCCESS CRITERIA
+=====================================================================
+
+This cycle succeeds if:
+
+  - 200-sample audit is completed and documented
+  - At least one stage contributes measurable recovery on this class
+  - Full 370 benchmark runs with zero regressions
+  - Per-document attribution is complete
+  - All artifacts are output word-for-word
+  - No fake numbers, no theoretical ceilings reported as gains
+
+Partial success is acceptable. If recovery is low, report it honestly.
+
+=====================================================================
+11. WHAT NOT TO DO
+=====================================================================
+
+Do NOT:
+  - Introduce LLMs, VLMs, or neural networks
+  - Modify the official ExtractBench evaluator
+  - Modify src/tonerhound/ before the integration gate
+  - Report theoretical ceilings as expected gains
+  - Cherry-pick successful documents
+  - Redefine success criteria after seeing results
+  - Add new failure classes without evidence
+  - Override any currently passing field
+  - Claim 100% recovery is guaranteed
+  - Claim anything is impossible without trying
+
+=====================================================================
+12. EXECUTION ORDER
+=====================================================================
+
+  PHASE A: Deep diagnostic audit (200 samples)
+  PHASE B: Algorithm selection and implementation
+  PHASE C: Build the 6-stage pipeline
+  PHASE D: Ablation study
+  PHASE E: Held-out evaluation gate
+  PHASE F: Full 370 benchmark + microscope
+  PHASE G: Output all artifacts
+  PHASE H: Final report
+
+Do not skip phases. Do not serialize work that can run in parallel.
+
+=====================================================================
+13. FINAL RESPONSE FORMAT
+=====================================================================
+
+At the end of the cycle, return:
+
+TONERHOUND EXP-045 COMPLETE
+
+AUDIT:
+  Samples analyzed: 200
+  Deterministically solvable: N (N.N%)
+  Genuinely ambiguous: N (N.N%)
+  Realistic upper bound for this class: +X.XX pp
+
+SUBCLASS BREAKDOWN (from audit):
+  SUB_ROW_CONTEXT:          N fields
+  SUB_COLUMN_CONTEXT:       N fields
+  SUB_SECTION_CONTEXT:      N fields
+  SUB_PAGE_POSITION:        N fields
+  SUB_VALUE_MAGNITUDE:      N fields
+  SUB_DATE_PROXIMITY:       N fields
+  SUB_REPETITION_PATTERN:   N fields
+  SUB_UNKNOWABLE:           N fields
+
+BASELINE (EXP-044):
+  Word F1: 72.8081%
+  Page F1: 83.9026%
+  Passing: 336,135
+
+EXP-045 RESULT:
+  Word F1: XX.XXXX%
+  Page F1: XX.XXXX%
+  Passing: N
+  Delta: +X.XX pp / -X.XX pp
+
+PER-STAGE ATTRIBUTION:
+  Stage 1 (Column context):   N fields
+  Stage 2 (Row context):      N fields
+  Stage 3 (Global row assign): N fields
+  Stage 4 (Constraint solver): N fields
+  Stage 5 (Optimal transport): N fields
+  Stage 6 (Baseline preserve): N fields
+
+FIELD RECOVERY:
+  Rescued: N
+  Regressed: N
+  Net: N
+
+HELD-OUT GATE: PASS / FAIL
+
+REMAINING GAP TO 80%: X.XX pp
+
+REALISTIC NEXT MILESTONE: <one sentence>
+
+DECISION: INTEGRATE / REFINE / REJECT
+
+NEXT PRIORITY: <one evidence-based recommendation>
+
+Then list the exact artifact paths.
+
+=====================================================================
+14. FINAL COMMAND
+=====================================================================
+
+Start immediately. Do not ask for confirmation.
+Parallelize independent work.
+Keep production code untouched until the integration gate passes.
+No LLM. No VLM. No neural network. No fake numbers.
+
+The goal is not a higher number. The goal is an honest measurement of what SUB_AMBIGUOUS_OCCURRENCE can actually yield with deterministic methods, and a clear answer to whether 80% is reachable on this class alone.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-08T15:15:04+05:30.
+</ADDITIONAL_METADATA>

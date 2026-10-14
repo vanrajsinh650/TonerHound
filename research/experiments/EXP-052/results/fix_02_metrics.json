@@ -1,0 +1,540 @@
+{
+  "fix_name": "fix_02_wrong_row_cluster",
+  "target_cluster": "SEC 13F & Institutional Holdings Tables (holdings[].*)",
+  "status": "ACCEPTED",
+  "rescued_fields": 1252,
+  "regressed_fields": 0,
+  "net_rescued": 1252,
+  "documents_affected": 11,
+  "documents_evaluated": 23,
+  "runtime_seconds": 5.12,
+  "acceptance_criteria": {
+    "rescues_ge_500": true,
+    "regressions_eq_0": true,
+    "docs_affected_ge_5": true
+  },
+  "mechanical_diagnosis": {
+    "failure_type": "Vertical Row Pitch Dilation and Wrapped Cell Slip",
+    "root_cause": "In institutional holdings tables (SEC 13F, N-PORT, ETFs), multi-line wrapped cells (e.g. fund issuer names or share descriptions) expand row height. Downstream column values are printed on the bottom baseline of the wrapped entry. Fixed-pitch row grid modeling causes vertical y-band slip by integer multiples of the table line pitch (+0.0276 dy).",
+    "solution": "Deterministic pitch-shift candidate generation (+/- 1 and 2 pitch units) and cell height normalization with verified IoU >= 0.50 threshold gate."
+  },
+  "sample_failing_fields_20": [
+    {
+      "document_id": "long/sec_13f_0026_brown_brothers_harriman",
+      "field_path": "holdings[10].title_of_class",
+      "gold_value": "Common Stock",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.2523,
+        0.5821,
+        0.0454,
+        0.0203
+      ],
+      "predicted_value": null,
+      "predicted_page": 1,
+      "predicted_bbox": [
+        0.0566,
+        0.6097,
+        0.2411,
+        0.0152
+      ],
+      "vertical_error_dy": 0.0276,
+      "baseline_iou": 0.0,
+      "failure_diagnosis": "Multi-line wrapped issuer cell caused single-line pitch dilation (+0.0276 dy); subsequent metadata column bound to preceding table row."
+    },
+    {
+      "document_id": "long/sec_13f_0026_brown_brothers_harriman",
+      "field_path": "holdings[17].title_of_class",
+      "gold_value": "Common Stock",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.2523,
+        0.8027,
+        0.0454,
+        0.0203
+      ],
+      "predicted_value": null,
+      "predicted_page": 1,
+      "predicted_bbox": [
+        0.2523,
+        0.7792,
+        0.0454,
+        0.0127
+      ],
+      "vertical_error_dy": 0.0234,
+      "baseline_iou": 0.0,
+      "failure_diagnosis": "Multi-line wrapped issuer cell caused single-line pitch dilation (+0.0276 dy); subsequent metadata column bound to preceding table row."
+    },
+    {
+      "document_id": "long/sec_13f_0026_brown_brothers_harriman",
+      "field_path": "holdings[17].sh_prn",
+      "gold_value": "SH",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.5546,
+        0.8085,
+        0.0156,
+        0.0094
+      ],
+      "predicted_value": null,
+      "predicted_page": 1,
+      "predicted_bbox": [
+        0.5546,
+        0.7792,
+        0.0156,
+        0.0127
+      ],
+      "vertical_error_dy": 0.0292,
+      "baseline_iou": 0.0,
+      "failure_diagnosis": "Multi-line wrapped issuer cell caused single-line pitch dilation (+0.0276 dy); subsequent metadata column bound to preceding table row."
+    },
+    {
+      "document_id": "long/sec_13f_0026_brown_brothers_harriman",
+      "field_path": "holdings[17].investment_discretion",
+      "gold_value": "SOLE",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.6259,
+        0.8085,
+        0.0305,
+        0.0094
+      ],
+      "predicted_value": null,
+      "predicted_page": 1,
+      "predicted_bbox": [
+        0.6259,
+        0.7792,
+        0.0305,
+        0.0127
+      ],
+      "vertical_error_dy": 0.0292,
+      "baseline_iou": 0.0,
+      "failure_diagnosis": "Multi-line wrapped issuer cell caused single-line pitch dilation (+0.0276 dy); subsequent metadata column bound to preceding table row."
+    },
+    {
+      "document_id": "long/sec_13f_0026_brown_brothers_harriman",
+      "field_path": "holdings[17].voting_authority.shared",
+      "gold_value": 0,
+      "gold_page": 1,
+      "gold_bbox": [
+        0.8885,
+        0.8085,
+        0.0061,
+        0.0094
+      ],
+      "predicted_value": null,
+      "predicted_page": 1,
+      "predicted_bbox": [
+        0.8885,
+        0.7792,
+        0.0061,
+        0.0127
+      ],
+      "vertical_error_dy": 0.0292,
+      "baseline_iou": 0.0,
+      "failure_diagnosis": "Multi-line wrapped issuer cell caused single-line pitch dilation (+0.0276 dy); subsequent metadata column bound to preceding table row."
+    },
+    {
+      "document_id": "long/sec_13f_0026_brown_brothers_harriman",
+      "field_path": "holdings[18].title_of_class",
+      "gold_value": "Common Stock",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.2523,
+        0.8302,
+        0.0454,
+        0.0203
+      ],
+      "predicted_value": null,
+      "predicted_page": 1,
+      "predicted_bbox": [
+        0.2523,
+        0.8068,
+        0.0454,
+        0.0127
+      ],
+      "vertical_error_dy": 0.0234,
+      "baseline_iou": 0.0,
+      "failure_diagnosis": "Multi-line wrapped issuer cell caused single-line pitch dilation (+0.0276 dy); subsequent metadata column bound to preceding table row."
+    },
+    {
+      "document_id": "long/sec_13f_0026_brown_brothers_harriman",
+      "field_path": "holdings[18].sh_prn",
+      "gold_value": "SH",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.5546,
+        0.836,
+        0.0156,
+        0.0094
+      ],
+      "predicted_value": null,
+      "predicted_page": 1,
+      "predicted_bbox": [
+        0.5546,
+        0.8068,
+        0.0156,
+        0.0127
+      ],
+      "vertical_error_dy": 0.0292,
+      "baseline_iou": 0.0,
+      "failure_diagnosis": "Multi-line wrapped issuer cell caused single-line pitch dilation (+0.0276 dy); subsequent metadata column bound to preceding table row."
+    },
+    {
+      "document_id": "long/sec_13f_0026_brown_brothers_harriman",
+      "field_path": "holdings[18].investment_discretion",
+      "gold_value": "SOLE",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.6259,
+        0.836,
+        0.0305,
+        0.0094
+      ],
+      "predicted_value": null,
+      "predicted_page": 1,
+      "predicted_bbox": [
+        0.6259,
+        0.8068,
+        0.0305,
+        0.0127
+      ],
+      "vertical_error_dy": 0.0292,
+      "baseline_iou": 0.0,
+      "failure_diagnosis": "Multi-line wrapped issuer cell caused single-line pitch dilation (+0.0276 dy); subsequent metadata column bound to preceding table row."
+    },
+    {
+      "document_id": "long/sec_13f_0026_brown_brothers_harriman",
+      "field_path": "holdings[18].voting_authority.shared",
+      "gold_value": 0,
+      "gold_page": 1,
+      "gold_bbox": [
+        0.8885,
+        0.836,
+        0.0061,
+        0.0094
+      ],
+      "predicted_value": null,
+      "predicted_page": 1,
+      "predicted_bbox": [
+        0.8885,
+        0.8068,
+        0.0061,
+        0.0127
+      ],
+      "vertical_error_dy": 0.0292,
+      "baseline_iou": 0.0,
+      "failure_diagnosis": "Multi-line wrapped issuer cell caused single-line pitch dilation (+0.0276 dy); subsequent metadata column bound to preceding table row."
+    },
+    {
+      "document_id": "long/sec_13f_0026_brown_brothers_harriman",
+      "field_path": "holdings[20].title_of_class",
+      "gold_value": "Common Stock",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.2523,
+        0.8853,
+        0.0454,
+        0.0203
+      ],
+      "predicted_value": null,
+      "predicted_page": 1,
+      "predicted_bbox": [
+        0.2523,
+        0.8619,
+        0.0454,
+        0.0127
+      ],
+      "vertical_error_dy": 0.0234,
+      "baseline_iou": 0.0,
+      "failure_diagnosis": "Multi-line wrapped issuer cell caused single-line pitch dilation (+0.0276 dy); subsequent metadata column bound to preceding table row."
+    },
+    {
+      "document_id": "long/sec_13f_0026_brown_brothers_harriman",
+      "field_path": "holdings[20].sh_prn",
+      "gold_value": "SH",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.5546,
+        0.8911,
+        0.0156,
+        0.0094
+      ],
+      "predicted_value": null,
+      "predicted_page": 1,
+      "predicted_bbox": [
+        0.5546,
+        0.8619,
+        0.0156,
+        0.0127
+      ],
+      "vertical_error_dy": 0.0292,
+      "baseline_iou": 0.0,
+      "failure_diagnosis": "Multi-line wrapped issuer cell caused single-line pitch dilation (+0.0276 dy); subsequent metadata column bound to preceding table row."
+    },
+    {
+      "document_id": "long/sec_13f_0026_brown_brothers_harriman",
+      "field_path": "holdings[20].investment_discretion",
+      "gold_value": "SOLE",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.6259,
+        0.8911,
+        0.0305,
+        0.0094
+      ],
+      "predicted_value": null,
+      "predicted_page": 1,
+      "predicted_bbox": [
+        0.6259,
+        0.8619,
+        0.0305,
+        0.0127
+      ],
+      "vertical_error_dy": 0.0292,
+      "baseline_iou": 0.0,
+      "failure_diagnosis": "Multi-line wrapped issuer cell caused single-line pitch dilation (+0.0276 dy); subsequent metadata column bound to preceding table row."
+    },
+    {
+      "document_id": "long/sec_13f_0026_brown_brothers_harriman",
+      "field_path": "holdings[20].voting_authority.shared",
+      "gold_value": 0,
+      "gold_page": 1,
+      "gold_bbox": [
+        0.8885,
+        0.8911,
+        0.0061,
+        0.0094
+      ],
+      "predicted_value": null,
+      "predicted_page": 1,
+      "predicted_bbox": [
+        0.8885,
+        0.8619,
+        0.0061,
+        0.0127
+      ],
+      "vertical_error_dy": 0.0292,
+      "baseline_iou": 0.0,
+      "failure_diagnosis": "Multi-line wrapped issuer cell caused single-line pitch dilation (+0.0276 dy); subsequent metadata column bound to preceding table row."
+    },
+    {
+      "document_id": "long/sec_13f_0026_brown_brothers_harriman",
+      "field_path": "holdings[21].sh_prn",
+      "gold_value": "SH",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.5546,
+        0.9187,
+        0.0156,
+        0.0094
+      ],
+      "predicted_value": null,
+      "predicted_page": 1,
+      "predicted_bbox": [
+        0.5546,
+        0.8895,
+        0.0156,
+        0.0127
+      ],
+      "vertical_error_dy": 0.0292,
+      "baseline_iou": 0.0,
+      "failure_diagnosis": "Multi-line wrapped issuer cell caused single-line pitch dilation (+0.0276 dy); subsequent metadata column bound to preceding table row."
+    },
+    {
+      "document_id": "long/sec_13f_0026_brown_brothers_harriman",
+      "field_path": "holdings[21].investment_discretion",
+      "gold_value": "SOLE",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.6259,
+        0.9187,
+        0.0305,
+        0.0094
+      ],
+      "predicted_value": null,
+      "predicted_page": 1,
+      "predicted_bbox": [
+        0.6259,
+        0.8895,
+        0.0305,
+        0.0127
+      ],
+      "vertical_error_dy": 0.0292,
+      "baseline_iou": 0.0,
+      "failure_diagnosis": "Multi-line wrapped issuer cell caused single-line pitch dilation (+0.0276 dy); subsequent metadata column bound to preceding table row."
+    },
+    {
+      "document_id": "long/sec_13f_0026_brown_brothers_harriman",
+      "field_path": "holdings[21].voting_authority.shared",
+      "gold_value": 0,
+      "gold_page": 1,
+      "gold_bbox": [
+        0.8885,
+        0.9187,
+        0.0061,
+        0.0094
+      ],
+      "predicted_value": null,
+      "predicted_page": 1,
+      "predicted_bbox": [
+        0.8885,
+        0.8895,
+        0.0061,
+        0.0127
+      ],
+      "vertical_error_dy": 0.0292,
+      "baseline_iou": 0.0,
+      "failure_diagnosis": "Multi-line wrapped issuer cell caused single-line pitch dilation (+0.0276 dy); subsequent metadata column bound to preceding table row."
+    },
+    {
+      "document_id": "long/sec_13f_0026_brown_brothers_harriman",
+      "field_path": "holdings[22].title_of_class",
+      "gold_value": "Common Stock",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.2523,
+        0.9405,
+        0.0454,
+        0.0203
+      ],
+      "predicted_value": null,
+      "predicted_page": 1,
+      "predicted_bbox": [
+        0.0566,
+        0.9129,
+        0.2411,
+        0.0152
+      ],
+      "vertical_error_dy": 0.0276,
+      "baseline_iou": 0.0,
+      "failure_diagnosis": "Multi-line wrapped issuer cell caused single-line pitch dilation (+0.0276 dy); subsequent metadata column bound to preceding table row."
+    },
+    {
+      "document_id": "long/sec_13f_0026_brown_brothers_harriman",
+      "field_path": "holdings[22].sh_prn",
+      "gold_value": "SH",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.5546,
+        0.9463,
+        0.0156,
+        0.0094
+      ],
+      "predicted_value": null,
+      "predicted_page": 1,
+      "predicted_bbox": [
+        0.5546,
+        0.9171,
+        0.0156,
+        0.0127
+      ],
+      "vertical_error_dy": 0.0292,
+      "baseline_iou": 0.0,
+      "failure_diagnosis": "Multi-line wrapped issuer cell caused single-line pitch dilation (+0.0276 dy); subsequent metadata column bound to preceding table row."
+    },
+    {
+      "document_id": "long/sec_13f_0026_brown_brothers_harriman",
+      "field_path": "holdings[22].investment_discretion",
+      "gold_value": "SOLE",
+      "gold_page": 1,
+      "gold_bbox": [
+        0.6259,
+        0.9463,
+        0.0305,
+        0.0094
+      ],
+      "predicted_value": null,
+      "predicted_page": 1,
+      "predicted_bbox": [
+        0.6259,
+        0.9171,
+        0.0305,
+        0.0127
+      ],
+      "vertical_error_dy": 0.0292,
+      "baseline_iou": 0.0,
+      "failure_diagnosis": "Multi-line wrapped issuer cell caused single-line pitch dilation (+0.0276 dy); subsequent metadata column bound to preceding table row."
+    },
+    {
+      "document_id": "long/sec_13f_0026_brown_brothers_harriman",
+      "field_path": "holdings[22].voting_authority.shared",
+      "gold_value": 0,
+      "gold_page": 1,
+      "gold_bbox": [
+        0.8885,
+        0.9463,
+        0.0061,
+        0.0094
+      ],
+      "predicted_value": null,
+      "predicted_page": 1,
+      "predicted_bbox": [
+        0.8885,
+        0.9171,
+        0.0061,
+        0.0127
+      ],
+      "vertical_error_dy": 0.0292,
+      "baseline_iou": 0.0,
+      "failure_diagnosis": "Multi-line wrapped issuer cell caused single-line pitch dilation (+0.0276 dy); subsequent metadata column bound to preceding table row."
+    }
+  ],
+  "per_document": [
+    {
+      "document_id": "long/real_credit_strategies_full",
+      "rescued_fields": 28,
+      "regressed_fields": 0
+    },
+    {
+      "document_id": "long/real_ishares_iboxx_bond_etfs",
+      "rescued_fields": 88,
+      "regressed_fields": 0
+    },
+    {
+      "document_id": "long/sec_13f_0010_renaissance_technologies",
+      "rescued_fields": 123,
+      "regressed_fields": 0
+    },
+    {
+      "document_id": "long/sec_13f_0026_brown_brothers_harriman",
+      "rescued_fields": 717,
+      "regressed_fields": 0
+    },
+    {
+      "document_id": "medium/13f__nalls_sherbakoff_2025q4",
+      "rescued_fields": 6,
+      "regressed_fields": 0
+    },
+    {
+      "document_id": "medium/nport__dunham_funds",
+      "rescued_fields": 7,
+      "regressed_fields": 0
+    },
+    {
+      "document_id": "medium/nport__sei_etf_2025q4",
+      "rescued_fields": 33,
+      "regressed_fields": 0
+    },
+    {
+      "document_id": "medium/real_blackrock_muni_bmn",
+      "rescued_fields": 10,
+      "regressed_fields": 0
+    },
+    {
+      "document_id": "medium/real_blackrock_schedule_full",
+      "rescued_fields": 11,
+      "regressed_fields": 0
+    },
+    {
+      "document_id": "medium/real_fidelity_northstar",
+      "rescued_fields": 10,
+      "regressed_fields": 0
+    },
+    {
+      "document_id": "medium/sec_13f_0031_loomis_sayles",
+      "rescued_fields": 219,
+      "regressed_fields": 0
+    }
+  ]
+}

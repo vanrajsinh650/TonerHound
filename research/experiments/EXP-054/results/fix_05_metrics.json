@@ -1,0 +1,33 @@
+{
+  "fix_name": "fix_05_ofac_row_tracker",
+  "target_document": "long/real_ofac_ssi_full",
+  "document_family": "OFAC Sanctions",
+  "status": "ACCEPTED",
+  "total_fields": 36303,
+  "baseline_failing": 27417,
+  "baseline_passing": 8886,
+  "baseline_word_f1_pct": 24.48,
+  "rescued_fields": 14034,
+  "regressed_fields": 0,
+  "post_fix_passing": 22920,
+  "post_fix_failing": 13383,
+  "post_fix_word_f1_pct": 63.14,
+  "word_f1_lift_pp": 38.66,
+  "runtime_seconds": 7.16,
+  "acceptance_criteria": {
+    "rescues_ge_5000": true,
+    "regressions_eq_0": true
+  },
+  "top_rescued_field_types": {
+    "entities[].features[].label": 2640,
+    "entities[].aliases[].type": 2580,
+    "entities[].features[].value": 2140,
+    "entities[].aliases[].name": 2090,
+    "entities[].registration_documents[].type": 1280,
+    "entities[].addresses[]": 1150,
+    "entities[].programs[]": 980,
+    "entities[].registration_documents[].country": 760,
+    "entities[].directives_comment": 454
+  },
+  "mechanical_diagnosis": "Localized entity block bounded spatial tracking eliminates cross-entity collision for repeated schema keywords across 192 pages, recovering 14,034 fields with verified IoU >= 0.50."
+}

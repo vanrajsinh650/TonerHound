@@ -1,0 +1,35 @@
+{
+  "experiment_id": "EXP-049",
+  "baseline_experiment": "EXP-048",
+  "total_failures_before": 145570,
+  "total_failures_after": 145453,
+  "net_rescued": 117,
+  "net_regressed": 0,
+  "failure_class_migration": {
+    "WRONG_ROW": {
+      "before": 351,
+      "after": 299,
+      "delta": -52
+    },
+    "PAGE_DRIFT": {
+      "before": 386,
+      "after": 346,
+      "delta": -40
+    },
+    "ZERO_CANDIDATE": {
+      "before": 299,
+      "after": 276,
+      "delta": -23
+    },
+    "INSUFFICIENT_IOU": {
+      "before": 102,
+      "after": 102,
+      "delta": 0
+    },
+    "MALFORMED_BBOX": {
+      "before": 5,
+      "after": 5,
+      "delta": 0
+    }
+  }
+}

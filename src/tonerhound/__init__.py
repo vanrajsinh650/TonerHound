@@ -19,7 +19,10 @@ from tonerhound.models.types import (
 )
 from tonerhound.resolution.resolver import EvidenceResolver
 
+__version__ = "0.5.0"
+
 __all__ = [
+    "__version__",
     "BBox",
     "CoordinateFrame",
     "DocumentIndex",

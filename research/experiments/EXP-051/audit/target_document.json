@@ -1,0 +1,14 @@
+{
+  "document_id": "long/real_ofac_ssi_full",
+  "pdf_path": "research/data/full/long/real_ofac_ssi_full.pdf",
+  "test_json_path": "research/data/full/long/real_ofac_ssi_full.test.json",
+  "page_count": 192,
+  "family": "OFAC Sanctions Entities",
+  "gradeable_fields": 36303,
+  "passing_fields": 8886,
+  "failing_fields": 27417,
+  "baseline_word_f1": 26.7771,
+  "baseline_page_f1": 91.6539,
+  "lift_potential_fields": 26590,
+  "selection_rationale": "Highest (100 - Word F1) * field_count in the corpus not already at 100% F1. Single largest opportunity for field recovery."
+}

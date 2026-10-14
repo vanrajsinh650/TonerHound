@@ -1,0 +1,154 @@
+{
+  "experiment_id": "EXP-048",
+  "description": "Isolated testing metrics per targeted fix against EXP-047 baseline",
+  "total_fixes_built": 5,
+  "total_fixes_accepted": 3,
+  "total_fixes_rejected": 2,
+  "acceptance_criteria": {
+    "min_rescued_fields": 100,
+    "max_regressed_fields": 0,
+    "min_affected_documents": 2
+  },
+  "per_fix_metrics": [
+    {
+      "fix_name": "fix_01_sec13f_voting_authority",
+      "description": "SEC Form 13F Voting Authority Rail Alignment",
+      "status": "ACCEPTED",
+      "rejection_reason": null,
+      "fields_rescued": 5395,
+      "fields_regressed": 0,
+      "documents_affected_count": 3,
+      "documents_affected": [
+        {
+          "test_id": "long/sec_13f_0010_renaissance_technologies",
+          "rescued": 5342,
+          "regressed": 0
+        },
+        {
+          "test_id": "long/sec_13f_0026_brown_brothers_harriman",
+          "rescued": 13,
+          "regressed": 0
+        },
+        {
+          "test_id": "medium/sec_13f_0031_loomis_sayles",
+          "rescued": 40,
+          "regressed": 0
+        }
+      ],
+      "runtime_overhead_seconds": 7.03
+    },
+    {
+      "fix_name": "fix_02_holdings_marks_precision",
+      "description": "Holdings Marks & Footnotes Character-Level Precision",
+      "status": "ACCEPTED",
+      "rejection_reason": null,
+      "fields_rescued": 1421,
+      "fields_regressed": 0,
+      "documents_affected_count": 5,
+      "documents_affected": [
+        {
+          "test_id": "long/real_credit_strategies_full",
+          "rescued": 30,
+          "regressed": 0
+        },
+        {
+          "test_id": "long/real_ishares_iboxx_bond_etfs",
+          "rescued": 1318,
+          "regressed": 0
+        },
+        {
+          "test_id": "medium/real_blackrock_muni_bmn",
+          "rescued": 6,
+          "regressed": 0
+        },
+        {
+          "test_id": "medium/real_blackrock_schedule_full",
+          "rescued": 45,
+          "regressed": 0
+        },
+        {
+          "test_id": "medium/real_fidelity_northstar",
+          "rescued": 22,
+          "regressed": 0
+        }
+      ],
+      "runtime_overhead_seconds": 9.53
+    },
+    {
+      "fix_name": "fix_03_fund_security_name_single_line",
+      "description": "Investment Fund Security Name Single-Line Clamping",
+      "status": "ACCEPTED",
+      "rejection_reason": null,
+      "fields_rescued": 293,
+      "fields_regressed": 0,
+      "documents_affected_count": 5,
+      "documents_affected": [
+        {
+          "test_id": "long/real_credit_strategies_full",
+          "rescued": 188,
+          "regressed": 0
+        },
+        {
+          "test_id": "long/real_ishares_iboxx_bond_etfs",
+          "rescued": 8,
+          "regressed": 0
+        },
+        {
+          "test_id": "medium/real_blackrock_muni_bmn",
+          "rescued": 17,
+          "regressed": 0
+        },
+        {
+          "test_id": "medium/real_blackrock_schedule_full",
+          "rescued": 64,
+          "regressed": 0
+        },
+        {
+          "test_id": "medium/real_fidelity_northstar",
+          "rescued": 16,
+          "regressed": 0
+        }
+      ],
+      "runtime_overhead_seconds": 4.18
+    },
+    {
+      "fix_name": "fix_04_sec13f_title_of_class",
+      "description": "SEC Form 13F Title of Class Grid Rail",
+      "status": "REJECTED",
+      "rejection_reason": "Insufficient rescues (5 < 100), Insufficient affected documents (1 < 2)",
+      "fields_rescued": 5,
+      "fields_regressed": 0,
+      "documents_affected_count": 1,
+      "documents_affected": [
+        {
+          "test_id": "long/sec_13f_0010_renaissance_technologies",
+          "rescued": 5,
+          "regressed": 0
+        }
+      ],
+      "runtime_overhead_seconds": 6.7
+    },
+    {
+      "fix_name": "fix_05_creditor_matrix_parser",
+      "description": "Bankruptcy Creditor Matrix Address Grid Alignment",
+      "status": "REJECTED",
+      "rejection_reason": "Insufficient rescues (9 < 100)",
+      "fields_rescued": 9,
+      "fields_regressed": 0,
+      "documents_affected_count": 2,
+      "documents_affected": [
+        {
+          "test_id": "long/real_ftx_full",
+          "rescued": 2,
+          "regressed": 0
+        },
+        {
+          "test_id": "long/real_imedia_full",
+          "rescued": 7,
+          "regressed": 0
+        }
+      ],
+      "runtime_overhead_seconds": 14.5
+    }
+  ]
+}

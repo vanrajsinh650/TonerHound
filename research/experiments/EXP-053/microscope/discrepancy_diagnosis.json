@@ -1,0 +1,87 @@
+{
+  "experiment_id": "EXP-053",
+  "timestamp": "2026-10-14T05:55:00Z",
+  "discrepancy_summary": {
+    "microscope_v6_passing": 363519,
+    "official_benchmark_passing": 355111,
+    "total_discrepancy_fields": 8408,
+    "resolved_discrepancy_fields": 8408,
+    "remaining_discrepancy": 0,
+    "resolution_status": "RESOLVED"
+  },
+  "root_cause_analysis": {
+    "primary_cause": "f. Gradeable definition / Document Evaluation Scope Mismatch (Oklahoma Excluded from Benchmark Grounding)",
+    "primary_cause_fields": 8387,
+    "primary_cause_percentage": 99.75,
+    "primary_explanation": "Microscope v6 evaluated long/real_oklahoma_unclaimed_2024 as an active evaluated document with 52,145 gradeable bbox-bearing fields and credited 8,387 passing fields (IoU >= 0.50). In contrast, the official benchmark suite marked Oklahoma as ungrounded/skipped (word_f1: None), counting 0 passing fields for it across 236 evaluated documents instead of 237.",
+    "secondary_cause": "a. Floating-Point IoU Boundary & Accumulator Drift Calibration",
+    "secondary_cause_fields": 21,
+    "secondary_cause_percentage": 0.25,
+    "secondary_explanation": "A 21-field offset across 6 municipal property tax documents where the official benchmark evaluator string assignment differed from raw bounding-box IoU >= 0.50 precision."
+  },
+  "document_breakdown": [
+    {
+      "document_id": "long/real_oklahoma_unclaimed_2024",
+      "family": "Other/ungrouped",
+      "gradeable_fields": 52145,
+      "microscope_passing_before": 8387,
+      "benchmark_passing": 0,
+      "discrepancy": 8387,
+      "status_in_benchmark": "skipped/ungrounded (word_f1: None)"
+    },
+    {
+      "document_id": "short/P18-28-44_45",
+      "family": "Municipal",
+      "gradeable_fields": 35,
+      "microscope_passing_before": 24,
+      "benchmark_passing": 20,
+      "discrepancy": 4,
+      "status_in_benchmark": "evaluated"
+    },
+    {
+      "document_id": "short/P18-28-62_62",
+      "family": "Municipal",
+      "gradeable_fields": 38,
+      "microscope_passing_before": 20,
+      "benchmark_passing": 16,
+      "discrepancy": 4,
+      "status_in_benchmark": "evaluated"
+    },
+    {
+      "document_id": "short/P18-28-43_44",
+      "family": "Municipal",
+      "gradeable_fields": 41,
+      "microscope_passing_before": 19,
+      "benchmark_passing": 16,
+      "discrepancy": 3,
+      "status_in_benchmark": "evaluated"
+    },
+    {
+      "document_id": "short/P4-83-693_277",
+      "family": "Municipal",
+      "gradeable_fields": 42,
+      "microscope_passing_before": 25,
+      "benchmark_passing": 22,
+      "discrepancy": 3,
+      "status_in_benchmark": "evaluated"
+    },
+    {
+      "document_id": "short/7C-02014 H-12 5-20-2013 F-01083",
+      "family": "Municipal",
+      "gradeable_fields": 69,
+      "microscope_passing_before": 45,
+      "benchmark_passing": 41,
+      "discrepancy": 4,
+      "status_in_benchmark": "evaluated"
+    },
+    {
+      "document_id": "short/02-10121 H-12 7-2-2024 F-22628",
+      "family": "Municipal",
+      "gradeable_fields": 66,
+      "microscope_passing_before": 44,
+      "benchmark_passing": 41,
+      "discrepancy": 3,
+      "status_in_benchmark": "evaluated"
+    }
+  ]
+}

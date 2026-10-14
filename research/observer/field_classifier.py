@@ -219,15 +219,22 @@ class FailureMicroscopeClassifier:
         gy2 = gy + gh
 
         matching: list[DocumentToken] = []
-        for tok in page_obj.tokens:
-            tb = tok.bbox
-            tx, ty, tw, th = tb.x, tb.y, tb.width, tb.height
-            tx2 = tx + tw
-            ty2 = ty + th
-
-            # Overlap check
-            if tx < gx2 and tx2 > gx and ty < gy2 and ty2 > gy:
-                matching.append(tok)
+        if page_obj.lines:
+            for line in page_obj.lines:
+                lb = line.bbox
+                ly, lh = lb.y, lb.height
+                if ly < gy2 and ly + lh > gy:
+                    for tok in line.tokens:
+                        tb = tok.bbox
+                        tx, ty, tw, th = tb.x, tb.y, tb.width, tb.height
+                        if tx < gx2 and tx + tw > gx and ty < gy2 and ty + th > gy:
+                            matching.append(tok)
+        else:
+            for tok in page_obj.tokens:
+                tb = tok.bbox
+                tx, ty, tw, th = tb.x, tb.y, tb.width, tb.height
+                if tx < gx2 and tx + tw > gx and ty < gy2 and ty + th > gy:
+                    matching.append(tok)
 
         return matching
 

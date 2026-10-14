@@ -1,0 +1,20 @@
+{
+  "document_id": "long/real_ofac_ssi_full",
+  "total_gold_fields": 36303,
+  "metrics": {
+    "baseline_tonerhound_passes": 8886,
+    "tonerhound_plus_fix_01_passes": 8886,
+    "liteparse_passes": 24365,
+    "fields_fix_01_closed_gap": 0,
+    "fields_gap_persists": 18324,
+    "liteparse_exclusive_passes": 18324,
+    "tonerhound_baseline_word_f1_pct": 24.48,
+    "tonerhound_plus_fix01_word_f1_pct": 24.48,
+    "liteparse_word_f1_pct": 67.12,
+    "performance_gap_pp": 42.64
+  },
+  "gap_closed": false,
+  "gap_closed_status": "NO",
+  "runtime_seconds": 0.12,
+  "key_finding": "Fix 01 rescues 0 fields on OFAC because 90.5% of persisting failures are WRONG_ROW alignment errors where text was bound to an incorrect line instance, rather than bbox tightness."
+}

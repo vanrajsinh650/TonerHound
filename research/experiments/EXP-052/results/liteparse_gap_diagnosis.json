@@ -1,0 +1,23 @@
+{
+  "document_id": "long/real_ofac_ssi_full",
+  "total_unrecovered_gap_fields": 18324,
+  "gap_classification": {
+    "wrong_row": {
+      "count": 16575,
+      "percentage": 90.46,
+      "description": "TonerHound extracted text matching the schema token but bound to an incorrect table row"
+    },
+    "missing_text": {
+      "count": 1720,
+      "percentage": 9.39,
+      "description": "LiteParse extracted text that TonerHound's text normalizer / token parser missed completely"
+    },
+    "wrong_bbox": {
+      "count": 29,
+      "percentage": 0.16,
+      "description": "Both extract text on correct row, but LiteParse's bbox meets IoU >= 0.50 while TonerHound falls below"
+    }
+  },
+  "primary_cause": "Wrong row (TonerHound binds to text on wrong table row)",
+  "explanation": "In 192-page multi-entity OFAC tables, repetitive schema tokens (e.g. 'a.k.a.', 'DOB', 'Individual') appear dozens of times per page. TonerHound binds to the first matching token on the page rather than maintaining monotonic row ordering, whereas LiteParse preserves document stream reading order."
+}

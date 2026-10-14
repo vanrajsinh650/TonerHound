@@ -1,0 +1,90 @@
+{
+  "version": "5.0",
+  "description": "Empirical calibrated recovery rate table for TonerHound Failure Microscope V5 (EXP-044)",
+  "subclass_rates": {
+    "SUB_PERCENT_DECIMAL": {
+      "historical_recovery_rate": 0.15,
+      "confidence": "HIGH",
+      "source": "EXP-044 Stage 1 Canonicalization rule benchmark"
+    },
+    "SUB_CURRENCY_CODE": {
+      "historical_recovery_rate": 0.25,
+      "confidence": "MEDIUM",
+      "source": "EXP-044 Stage 1 Currency normalization"
+    },
+    "SUB_ACCOUNTING_NEGATIVE": {
+      "historical_recovery_rate": 0.5,
+      "confidence": "HIGH",
+      "source": "EXP-044 Parenthetical negative number normalization"
+    },
+    "SUB_DATE_FORMAT": {
+      "historical_recovery_rate": 0.6,
+      "confidence": "HIGH",
+      "source": "EXP-042 Phase C date variant matching"
+    },
+    "SUB_NUMBER_GROUPING": {
+      "historical_recovery_rate": 0.35,
+      "confidence": "MEDIUM",
+      "source": "EXP-044 Commas strip/addition"
+    },
+    "SUB_ORDER_SWAP": {
+      "historical_recovery_rate": 0.25,
+      "confidence": "MEDIUM",
+      "source": "EXP-044 Stage 4 Hungarian token matching"
+    },
+    "SUB_PRECISION_STRIP": {
+      "historical_recovery_rate": 0.2,
+      "confidence": "MEDIUM",
+      "source": "EXP-044 Stage 1 .00 strip"
+    },
+    "SUB_AMBIGUOUS_OCCURRENCE": {
+      "historical_recovery_rate": 0.1,
+      "confidence": "HIGH",
+      "source": "EXP-044 Stage 6 Ambiguity resolver and Hungarian table assignment"
+    },
+    "SUB_DERIVED_VALUE": {
+      "historical_recovery_rate": 0.0,
+      "confidence": "HIGH",
+      "source": "Out of scope (computed values not present as text)"
+    },
+    "SUB_OTHER": {
+      "historical_recovery_rate": 0.0,
+      "confidence": "HIGH",
+      "source": "Out of scope (multi-line split or column bleed misclassifications)"
+    }
+  },
+  "production_class_rates": {
+    "REAL_INDEXING_MISS": {
+      "historical_recovery_rate": 0.065,
+      "source": "EXP-035 (+0.2293 pp / +3.4991 pp)"
+    },
+    "NORMALIZATION_MISMATCH": {
+      "historical_recovery_rate": 0.082,
+      "source": "EXP-044 Calibrated sub-class weighted expectation"
+    },
+    "TOKEN_SLICING": {
+      "historical_recovery_rate": 0.15,
+      "source": "EXP-042 Table cell rail clamp"
+    },
+    "NO_TEXT_AT_GOLD_REGION": {
+      "historical_recovery_rate": 0.0265,
+      "source": "EXP-037 OCR retry"
+    },
+    "HYPHENATION": {
+      "historical_recovery_rate": 0.6,
+      "source": "EXP-042 Hyphenation join"
+    },
+    "NON_TEXT_BOOLEAN_GROUNDING": {
+      "historical_recovery_rate": 0.4,
+      "source": "EXP-042 Checkbox visual detection"
+    },
+    "MULTI_LINE_SPLIT": {
+      "historical_recovery_rate": 0.3,
+      "source": "EXP-042 Multi-line assembler"
+    },
+    "DATE_INDEX_MISS": {
+      "historical_recovery_rate": 0.5,
+      "source": "EXP-042 Date literal variants"
+    }
+  }
+}

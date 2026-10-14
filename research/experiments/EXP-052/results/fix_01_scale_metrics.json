@@ -1,0 +1,132 @@
+{
+  "fix_name": "fix_01_cell_padding_normalizer",
+  "scope": "full_corpus_scale",
+  "total_insufficient_iou_fields": 92362,
+  "rescued_fields": 1512,
+  "still_failing_fields": 90850,
+  "recovery_rate_pct": 1.637,
+  "regressions": 0,
+  "documents_affected": 118,
+  "total_documents_evaluated": 236,
+  "acceptance_criteria": {
+    "recovery_rate_ge_15_pct": false,
+    "regressions_eq_0": true
+  },
+  "accepted_for_production": false,
+  "runtime_seconds": 8.12,
+  "stratification": {
+    "family": {
+      "Other/ungrouped": {
+        "targeted": 24993,
+        "rescued": 131,
+        "recovery_rate_pct": 0.52
+      },
+      "Bankruptcy": {
+        "targeted": 60663,
+        "rescued": 643,
+        "recovery_rate_pct": 1.06
+      },
+      "OFAC Sanctions": {
+        "targeted": 3518,
+        "rescued": 0,
+        "recovery_rate_pct": 0.0
+      },
+      "SEC 13F": {
+        "targeted": 1933,
+        "rescued": 401,
+        "recovery_rate_pct": 20.74
+      },
+      "IRS Form 1040": {
+        "targeted": 333,
+        "rescued": 101,
+        "recovery_rate_pct": 30.33
+      },
+      "SEC N-PORT": {
+        "targeted": 195,
+        "rescued": 22,
+        "recovery_rate_pct": 11.28
+      },
+      "IRS Form 990-PF": {
+        "targeted": 254,
+        "rescued": 125,
+        "recovery_rate_pct": 49.21
+      },
+      "Municipal": {
+        "targeted": 473,
+        "rescued": 89,
+        "recovery_rate_pct": 18.82
+      }
+    },
+    "field_type": {
+      "text name": {
+        "targeted": 46659,
+        "rescued": 1193,
+        "recovery_rate_pct": 2.56
+      },
+      "numeric amount": {
+        "targeted": 45244,
+        "rescued": 297,
+        "recovery_rate_pct": 0.66
+      },
+      "boolean": {
+        "targeted": 237,
+        "rescued": 14,
+        "recovery_rate_pct": 5.91
+      },
+      "date": {
+        "targeted": 222,
+        "rescued": 8,
+        "recovery_rate_pct": 3.6
+      }
+    },
+    "width_bucket": {
+      "> 0.05": {
+        "targeted": 19673,
+        "rescued": 552,
+        "recovery_rate_pct": 2.81
+      },
+      "< 0.01": {
+        "targeted": 8061,
+        "rescued": 181,
+        "recovery_rate_pct": 2.25
+      },
+      "0.01-0.03": {
+        "targeted": 55087,
+        "rescued": 392,
+        "recovery_rate_pct": 0.71
+      },
+      "0.03-0.05": {
+        "targeted": 9541,
+        "rescued": 387,
+        "recovery_rate_pct": 4.06
+      }
+    },
+    "f1_bucket": {
+      "70-90%": {
+        "targeted": 4083,
+        "rescued": 469,
+        "recovery_rate_pct": 11.49
+      },
+      "90%+": {
+        "targeted": 33172,
+        "rescued": 215,
+        "recovery_rate_pct": 0.65
+      },
+      "50-70%": {
+        "targeted": 25464,
+        "rescued": 568,
+        "recovery_rate_pct": 2.23
+      },
+      "0-30%": {
+        "targeted": 28700,
+        "rescued": 180,
+        "recovery_rate_pct": 0.63
+      },
+      "30-50%": {
+        "targeted": 943,
+        "rescued": 80,
+        "recovery_rate_pct": 8.48
+      }
+    }
+  }
+}

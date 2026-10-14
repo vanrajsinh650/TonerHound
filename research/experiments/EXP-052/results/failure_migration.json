@@ -1,0 +1,38 @@
+{
+  "experiment_id": "EXP-052",
+  "baseline_experiment": "EXP-051",
+  "total_failures_before": 144777,
+  "total_failures_after": 143029,
+  "net_rescued_vs_exp051": 1748,
+  "net_rescued_vs_exp050": 2411,
+  "regressions": 0,
+  "failure_class_migration": {
+    "INSUFFICIENT_IOU": {
+      "before": 91701,
+      "after": 91024,
+      "delta": -677,
+      "description": "Rescued by fix_01 cell padding normalizer at full corpus scale"
+    },
+    "WRONG_ROW": {
+      "before": 48535,
+      "after": 47285,
+      "delta": -1250,
+      "description": "Rescued by fix_02 row pitch realignment & dilation normalizer on holdings tables"
+    },
+    "MALFORMED_BBOX": {
+      "before": 14323,
+      "after": 14323,
+      "delta": 0
+    },
+    "PAGE_DRIFT": {
+      "before": 11796,
+      "after": 11796,
+      "delta": 0
+    },
+    "ZERO_CANDIDATE": {
+      "before": 3302,
+      "after": 3302,
+      "delta": 0
+    }
+  }
+}

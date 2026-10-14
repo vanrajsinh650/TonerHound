@@ -1,0 +1,39 @@
+{
+  "experiment_id": "EXP-050",
+  "fix_name": "creditor_matrix_localizer",
+  "description": "Bankruptcy Creditor Schedule Multi-Column Block Localizer",
+  "target_documents_evaluated": 2,
+  "documents_affected": 2,
+  "total_rescued": 17213,
+  "total_regressed": 0,
+  "net_rescued": 17213,
+  "runtime_seconds": 4.9,
+  "acceptance_criteria": {
+    "rescues_threshold_500": true,
+    "zero_regressions": true,
+    "min_documents_affected_2": true,
+    "max_runtime_30s": true
+  },
+  "per_document": [
+    {
+      "document_id": "long/real_imedia_full_corrupted",
+      "total_rules": 86242,
+      "passing_before": 375,
+      "failing_before": 85867,
+      "rescued_fields": 13054,
+      "regressed_fields": 0,
+      "passing_after": 13429,
+      "elapsed_seconds": 2.67
+    },
+    {
+      "document_id": "long/real_ftx_full_corrupted",
+      "total_rules": 75543,
+      "passing_before": 13922,
+      "failing_before": 61621,
+      "rescued_fields": 4159,
+      "regressed_fields": 0,
+      "passing_after": 18081,
+      "elapsed_seconds": 2.24
+    }
+  ]
+}

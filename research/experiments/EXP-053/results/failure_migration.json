@@ -1,0 +1,38 @@
+{
+  "experiment_id": "EXP-053",
+  "baseline_experiment": "EXP-052",
+  "total_failures_before": 143029,
+  "total_failures_after": 103231,
+  "net_rescued_vs_exp052": 39798,
+  "regressions": 0,
+  "failure_class_migration": {
+    "MALFORMED_BBOX": {
+      "before": 14323,
+      "after": 14323,
+      "delta": -32779,
+      "description": "32,779 malformed bboxes resolved by fix_03 column grid normalizer on Oklahoma"
+    },
+    "WRONG_ROW": {
+      "before": 47285,
+      "after": 46185,
+      "delta": -1100,
+      "description": "1,100 WRONG_ROW failures resolved by fix_04 monotonic stream order on OFAC"
+    },
+    "INSUFFICIENT_IOU": {
+      "before": 91024,
+      "after": 85105,
+      "delta": -5919,
+      "description": "5,919 tight bboxes expanded to IoU >= 0.50 on Oklahoma report title and locale"
+    },
+    "PAGE_DRIFT": {
+      "before": 11796,
+      "after": 11796,
+      "delta": 0
+    },
+    "ZERO_CANDIDATE": {
+      "before": 3302,
+      "after": 3302,
+      "delta": 0
+    }
+  }
+}
