@@ -1,0 +1,20 @@
+{
+  "zero_regressions_verified": false,
+  "regressed_documents_count": 2,
+  "regressed_documents": [
+    {
+      "test_id": "long/real_ftx_full",
+      "f1_before": 96.7197,
+      "f1_after": 79.35,
+      "delta_pp": -17.3697,
+      "cause": "Phase 1 erroneously targeted clean ftx instead of corrupted variant"
+    },
+    {
+      "test_id": "long/real_imedia_full",
+      "f1_before": 94.0298,
+      "f1_after": 91.2,
+      "delta_pp": -2.8298,
+      "cause": "Phase 1 erroneously targeted clean imedia instead of corrupted variant"
+    }
+  ]
+}

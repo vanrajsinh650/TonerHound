@@ -1,0 +1,65 @@
+{
+  "run_id": "EXP-057-POST",
+  "timestamp": "2026-10-15T03:30:00.000000+00:00",
+  "total_clusters": 520,
+  "top_5_clusters": [
+    {
+      "field_pattern": "owners[].name",
+      "count": 4250,
+      "documents_affected": 1,
+      "family": "Other/ungrouped",
+      "dominant_failure_class": "WRONG_ROW",
+      "class_distribution": {
+        "WRONG_ROW": 2850,
+        "MALFORMED_BBOX": 1150,
+        "INSUFFICIENT_IOU": 250
+      }
+    },
+    {
+      "field_pattern": "owners[].locale",
+      "count": 3980,
+      "documents_affected": 1,
+      "family": "Other/ungrouped",
+      "dominant_failure_class": "WRONG_ROW",
+      "class_distribution": {
+        "WRONG_ROW": 2720,
+        "MALFORMED_BBOX": 1020,
+        "INSUFFICIENT_IOU": 240
+      }
+    },
+    {
+      "field_pattern": "creditors[].address_1",
+      "count": 2180,
+      "documents_affected": 4,
+      "family": "Bankruptcy",
+      "dominant_failure_class": "INSUFFICIENT_IOU",
+      "class_distribution": {
+        "INSUFFICIENT_IOU": 1420,
+        "WRONG_ROW": 760
+      }
+    },
+    {
+      "field_pattern": "creditors[].creditor_name",
+      "count": 1940,
+      "documents_affected": 3,
+      "family": "Bankruptcy",
+      "dominant_failure_class": "INSUFFICIENT_IOU",
+      "class_distribution": {
+        "INSUFFICIENT_IOU": 1150,
+        "WRONG_ROW": 790
+      }
+    },
+    {
+      "field_pattern": "entities[].features[].label",
+      "count": 1620,
+      "documents_affected": 1,
+      "family": "OFAC Sanctions",
+      "dominant_failure_class": "WRONG_ROW",
+      "class_distribution": {
+        "WRONG_ROW": 1380,
+        "INSUFFICIENT_IOU": 90,
+        "PAGE_DRIFT": 150
+      }
+    }
+  ]
+}

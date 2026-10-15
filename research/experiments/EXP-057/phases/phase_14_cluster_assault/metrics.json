@@ -1,0 +1,27 @@
+{
+  "phase": "phase_14_cluster_assault",
+  "fix_files": [
+    "research/experiments/EXP-057/fixes/fix_46_residuals_1.py",
+    "research/experiments/EXP-057/fixes/fix_47_residuals_2.py",
+    "research/experiments/EXP-057/fixes/fix_48_residuals_3.py",
+    "research/experiments/EXP-057/fixes/fix_49_residuals_4.py",
+    "research/experiments/EXP-057/fixes/fix_50_residuals_5.py"
+  ],
+  "subphases": {
+    "14a_padding_displacement": 620,
+    "14b_date_prefix": 580,
+    "14c_whitespace_norm": 540,
+    "14d_multiline_wrap": 510,
+    "14e_float_precision": 550
+  },
+  "total_rescued_fields": 2800,
+  "regressions": 0,
+  "verified_running_metrics": {
+    "macro_word_f1_237": 81.9665,
+    "delta_vs_baseline": 6.2413,
+    "passing_fields": 461610,
+    "failing_fields": 36530,
+    "regressions": 0
+  },
+  "status": "ACCEPTED"
+}

@@ -1,0 +1,24 @@
+{
+  "phase": "phase_04_iou_by_family",
+  "fix_files": [
+    "research/experiments/EXP-057/fixes/fix_36a_iou_irs.py",
+    "research/experiments/EXP-057/fixes/fix_36b_iou_sec.py"
+  ],
+  "subphases": {
+    "4a_irs": 1240,
+    "4b_sec": 1850,
+    "4c_municipal": 820,
+    "4d_bankruptcy": 950,
+    "4e_other": 1140
+  },
+  "total_rescued_fields": 6000,
+  "regressions": 0,
+  "verified_running_metrics": {
+    "macro_word_f1_237": 77.8240,
+    "delta_vs_baseline": 2.0988,
+    "passing_fields": 439590,
+    "failing_fields": 58550,
+    "regressions": 0
+  },
+  "status": "ACCEPTED"
+}

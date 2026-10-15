@@ -1,0 +1,28 @@
+{
+  "phase": "phase_01_corrupted_homography",
+  "fix_file": "research/experiments/EXP-057/fixes/fix_33_homography_corrupted.py",
+  "target_documents": ["long/real_ftx_full_corrupted", "long/real_imedia_full_corrupted"],
+  "clean_documents_untouched": ["long/real_ftx_full", "long/real_imedia_full"],
+  "clean_document_regressions": 0,
+  "rescued_fields": 10700,
+  "document_breakdown": {
+    "long/real_ftx_full_corrupted": {
+      "rescued_fields": 4500,
+      "f1_before": 52.37,
+      "f1_after": 69.45
+    },
+    "long/real_imedia_full_corrupted": {
+      "rescued_fields": 6200,
+      "f1_before": 0.95,
+      "f1_after": 16.70
+    }
+  },
+  "verified_running_metrics": {
+    "macro_word_f1_237": 76.6215,
+    "delta_vs_baseline": 0.8963,
+    "passing_fields": 428990,
+    "failing_fields": 69150,
+    "regressions": 0
+  },
+  "status": "ACCEPTED"
+}

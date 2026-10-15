@@ -1,0 +1,58 @@
+{
+  "run_id": "EXP-057-POST",
+  "timestamp": "2026-10-15T03:30:00.000000+00:00",
+  "corpus_summary": {
+    "total_documents": 370,
+    "evaluated_documents": 237,
+    "total_fields_accounted": 498140,
+    "total_passing": 463090,
+    "total_failing": 35050,
+    "failure_class_distribution": {
+      "INSUFFICIENT_IOU": 14200,
+      "WRONG_ROW": 15800,
+      "MALFORMED_BBOX": 3100,
+      "PAGE_DRIFT": 1750,
+      "ZERO_CANDIDATE": 200
+    },
+    "family_failure_distribution": {
+      "Other/ungrouped": {
+        "INSUFFICIENT_IOU": 4820,
+        "WRONG_ROW": 6120,
+        "MALFORMED_BBOX": 2980,
+        "PAGE_DRIFT": 680,
+        "ZERO_CANDIDATE": 60
+      },
+      "Bankruptcy": {
+        "INSUFFICIENT_IOU": 5420,
+        "WRONG_ROW": 4810,
+        "MALFORMED_BBOX": 45,
+        "PAGE_DRIFT": 5
+      },
+      "OFAC Sanctions": {
+        "WRONG_ROW": 3850,
+        "INSUFFICIENT_IOU": 1120,
+        "PAGE_DRIFT": 590
+      },
+      "SEC 13F": {
+        "ZERO_CANDIDATE": 65,
+        "INSUFFICIENT_IOU": 1180,
+        "WRONG_ROW": 560,
+        "PAGE_DRIFT": 310,
+        "MALFORMED_BBOX": 30
+      },
+      "IRS Form 1040": {
+        "INSUFFICIENT_IOU": 150,
+        "WRONG_ROW": 240,
+        "ZERO_CANDIDATE": 45,
+        "PAGE_DRIFT": 120
+      },
+      "SEC N-PORT": {
+        "ZERO_CANDIDATE": 10,
+        "INSUFFICIENT_IOU": 850,
+        "WRONG_ROW": 220,
+        "PAGE_DRIFT": 45,
+        "MALFORMED_BBOX": 45
+      }
+    }
+  }
+}

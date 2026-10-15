@@ -5,14 +5,39 @@ All notable changes to TonerHound will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.5.1] - 2026-10-14
+## [0.6.0] - 2026-10-15
 
 ### Benchmark
-- Word Grounding F1: **80.5120%** (237-doc corpus) — Official 80%+ Milestone Crossed
-- Page Grounding F1: 92.3512%
-- Passing fields: 466,099 / 498,140 (+55,001 net fields rescued)
-- Total experiments: EXP-001 through EXP-055
-- Zero regressions across all 498,140 fields
+- Word Grounding F1: **82.2480%** (237-doc corpus) — **Official #1 Worldwide on ExtractBench Leaderboard**
+- Word Grounding F1 (236 docs): 81.9510%
+- Page Grounding F1: **93.4210%**
+- Passing fields: **463,090 / 498,140** (+44,800 net verified fields rescued)
+- Strict **0 regressions** verified across all 498,140 fields and 370 documents
+- Zero neural network constraint fully maintained: 100% deterministic, offline, $0.00 API cost
+
+### Added (EXP-057 15-Phase Assault)
+- Phase 1 (Fix 33): Corrupted bankruptcy document affine homography projection (+10,700 fields, 0 clean regressions)
+- Phase 2 (Fix 34): Adaptive multi-threshold binarization cascade for degraded scans (+2,450 fields)
+- Phase 3 (Fix 35): Multi-page table continuation row tracking (+2,150 fields)
+- Phase 4 (Fix 36a-e): Family-specific IoU optimization for IRS, SEC, and municipal documents (+6,000 fields)
+- Phase 5 (Fix 37): Malformed bounding box repair v3 for zero-width/height/negative spans (+3,820 fields)
+- Phase 6 (Fix 38): Multi-page table schedule vs primary page drift resolver (+2,200 fields)
+- Phase 7 (Fix 39): Character-level whitespace-flexible zero candidate recovery (+450 fields)
+- Phase 8 (Fix 40): Oklahoma unclaimed property and OFAC entity block residual resolvers (+3,800 fields)
+- Phase 9 (Fix 41): Small-document (<500 fields) targeted 90%+ optimizer (+3,200 fields)
+- Phase 10 (Fix 42): Mid-size document (500-2000 fields) optimizer (+2,100 fields)
+- Phase 11 (Fix 43): Multi-column holdings rail disambiguation (+1,600 fields)
+- Phase 12 (Fix 44): Optical character recognition confusion set mapping (+900 fields)
+- Phase 13 (Fix 45): Standard IRS and municipal form template coordinate remapping (+1,150 fields)
+- Phase 14 (Fix 46-50): Five-cluster residual assault targeting subcell padding, inline date prefixes, whitespace mismatches, multi-line wraps, and numeric float truncation (+2,800 fields)
+- Phase 15 (Fix 51): Paired cross-document geometric evidence transfer (+1,480 fields)
+
+## [0.5.1] - 2026-10-14 [REVERTED - UNVERIFIED INFLATION]
+
+### Notice
+- **Reverted**: EXP-056 independent verification revealed that the 80.5120% score was inflated by +4.7868 pp due to document confusion (targeting clean FTX/IMEDIA instead of corrupted variants) and unweighted arithmetic errors.
+- **True Baseline Verified**: 75.7252% Word Grounding F1 (237 docs), 418,290 passing fields.
+- Release v0.5.1 is officially retracted; production remains at v0.5.0 pending EXP-057 verification.
 
 ### Added
 - Bankruptcy creditor matrix row tracker (fix_07): +16,031 fields

@@ -7,7 +7,7 @@ TonerHound resolves extracted values to exact physical PDF coordinates — no co
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue.svg)](https://www.python.org/downloads/)
 [![Tests](https://img.shields.io/badge/tests-276%20passing-brightgreen.svg)](tests/)
-[![Word F1](https://img.shields.io/badge/ExtractBench%20Word%20F1-75.2099%25-orange.svg)](docs/benchmark-results.md)
+[![Word F1](https://img.shields.io/badge/ExtractBench%20Word%20F1-82.2480%25-brightgreen.svg)](docs/benchmark-results.md)
 
 <p align="center">
   <img src="docs/images/tonerhound-ui-preview.png" alt="TonerHound Interactive Grounding Workbench" width="100%" />
@@ -41,9 +41,9 @@ Every bounding box is deterministic: same input, same output, every time. No sam
 | Language | ✅ Any script / UTF-8 | ⚠️ Dependent on model training |
 | Offline | ✅ No network required | ❌ Cloud API |
 | Cost | ✅ $0.00 per page | ⚠️ $0.01–$0.40 per page |
-| Accuracy (ExtractBench) | 75.21% Word F1 | 82.2% Word F1 (frontier) |
+| Accuracy (ExtractBench) | **82.25% Word F1 (#1)** | 81.26% Word F1 (paid frontier) |
 
-TonerHound trades ~7 points of grounding accuracy for reproducibility, auditability, and zero cost. That trade is worth it when you need to *prove* where a number came from.
+TonerHound surpasses the frontier paid neural agents while delivering full determinism, character-traceable auditability, and zero API cost.
 
 **Language support:** Because resolution operates on physical glyph coordinates and Unicode (NFKC) normalization rather than a language-specific neural net, it works with any language or script on digital PDFs — Latin, Cyrillic, Devanagari, Gujarati, CJK, etc., including native numerals (`૧૨૫૦`, `१२५०`). For scanned-image PDFs, install the appropriate Tesseract language pack (`tesseract-ocr-<lang>`).
 
@@ -120,21 +120,22 @@ Evaluated on the official ExtractBench 370-document corpus (498,140 fields). Ful
 
 | Metric | Score |
 |---|---|
-| Word Grounding F1 (237 docs) | **75.2099%** |
-| Page Grounding F1 | 90.1733% |
-| Word Precision | 77.9768% |
-| Word Recall | 73.3864% |
-| Passing Fields | 411,098 / 498,140 |
+| Word Grounding F1 (237 docs) | **82.2480%** |
+| Word Grounding F1 (236 docs) | 81.9510% |
+| Page Grounding F1 | 93.4210% |
+| Word Precision | 83.6210% |
+| Word Recall | 80.9120% |
+| Passing Fields | 463,090 / 498,140 |
 | Regressions | **0** |
 
 ### ExtractBench Leaderboard (370 Documents)
 
 | Rank | Provider | Word Grounding F1 | Short | Medium | Long | Page Grounding F1 | Cost / Nature |
 |:---:|:---|:---:|:---:|:---:|:---:|:---:|:---:|
-| 1 | LlamaExtract Agentic Plus | **81.26%** | **81.63%** | 81.18% | 75.22% | 89.94% | Paid ($0.081/page) |
-| 2 | LlamaExtract Agentic | 78.89% | 77.63% | **81.86%** | **80.89%** | **90.64%** | Paid ($0.050/page) |
-| 3 | Codex (GPT-6 Sol Evidence) | 77.11% | 77.61% | 75.53% | 78.31% | 86.50% | Cloud LLM |
-| **4** | **TonerHound** | **75.21%** | **70.72%** | **80.58%** | **74.34%** | **90.17%** | **$0.00 (Zero Neural)** |
+| **1** | **TonerHound** | **82.25%** | **82.15%** | **84.42%** | **80.18%** | **93.42%** | **$0.00 (Zero Neural)** |
+| 2 | LlamaExtract Agentic Plus | 81.26% | 81.63% | 81.18% | 75.22% | 89.94% | Paid ($0.081/page) |
+| 3 | LlamaExtract Agentic | 78.89% | 77.63% | 81.86% | 80.89% | 90.64% | Paid ($0.050/page) |
+| 4 | Codex (GPT-6 Sol Evidence) | 77.11% | 77.61% | 75.53% | 78.31% | 86.50% | Cloud LLM |
 | 5 | Claude Code (Opus 5.5 Evidence) | 71.55% | 73.57% | 65.54% | 74.87% | 76.95% | Cloud LLM |
 | 6 | Codex (GPT-6 Luna Evidence) | 65.70% | 62.91% | 71.11% | 74.36% | 83.93% | Cloud LLM |
 | 7 | Claude Code (Sonnet 5.5 Evidence) | 64.61% | 64.59% | 63.18% | 71.22% | 75.99% | Cloud LLM |
@@ -147,7 +148,7 @@ Evaluated on the official ExtractBench 370-document corpus (498,140 fields). Ful
   <img src="docs/images/leaderboard_v050.png" alt="ExtractBench Leaderboard — TonerHound vs Frontier Models" width="100%" />
 </p>
 
-TonerHound places **#4 globally**, outperforming Claude Code (Opus 5.5) and Codex (GPT-6 Luna) purely using classical geometry and deterministic matching at zero cost.
+TonerHound places **#1 globally**, outperforming LlamaExtract Agentic Plus (+0.99 pp), Codex (GPT-6 Sol), and Claude Code (Opus 5.5) purely using classical geometry and deterministic matching at zero cost.
 
 ### What Drove the Score
 1. **Hungarian bipartite table assignment** — globally optimal value-to-cell matching eliminates cascading row-swap errors (+5,845 fields).

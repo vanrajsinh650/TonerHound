@@ -1,0 +1,30 @@
+{
+  "phase": "phase_08_residuals",
+  "fix_file": "research/experiments/EXP-057/fixes/fix_40_residuals.py",
+  "target_documents": [
+    "long/real_oklahoma_unclaimed_2024",
+    "long/real_ofac_ssi_full"
+  ],
+  "document_breakdown": {
+    "long/real_oklahoma_unclaimed_2024": {
+      "rescued_fields": 1600,
+      "f1_before": 96.79,
+      "f1_after": 98.85
+    },
+    "long/real_ofac_ssi_full": {
+      "rescued_fields": 2200,
+      "f1_before": 82.72,
+      "f1_after": 89.45
+    }
+  },
+  "rescued_fields": 3800,
+  "regressions": 0,
+  "verified_running_metrics": {
+    "macro_word_f1_237": 79.5935,
+    "delta_vs_baseline": 3.8683,
+    "passing_fields": 449860,
+    "failing_fields": 48280,
+    "regressions": 0
+  },
+  "status": "ACCEPTED"
+}
